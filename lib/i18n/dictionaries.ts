@@ -42,6 +42,8 @@ export const ar = {
 
   // ---------- features ----------
   "features.eyebrow": "القدرات",
+  "features.title1": "عمّال",
+  "features.title2": "أذكياء.",
   "features.intro":
     "شغّل وكلاء يعالجون المستندات على بنية موزّعة. كل خطوة مُتتبَّعة، وكل مخرَج يحتاج موافقتك قبل التصدير.",
   "features.1.title": "تنفيذ ذاتي",
@@ -77,7 +79,7 @@ export const ar = {
   "how.step3.title": "راقب",
   "how.step3.desc":
     "تابع التقدّم لحظة بلحظة، ثم صدّر النتائج بصيغة CSV أو JSON بعد موافقتك.",
-  "how.step3.sub": "ووسّع",
+  "how.step3.sub": "والتوسّع",
 
   // ---------- infrastructure ----------
   "infra.eyebrow": "البنية",

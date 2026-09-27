@@ -196,7 +196,7 @@ export function FeaturesSection() {
               <ParticleVisualization />
               <div className="relative z-10">
                 <span className="font-mono text-sm text-muted-foreground">{features[0].number}</span>
-                <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 group-hover:translate-x-2 rtl:group-hover:-translate-x-2 transition-transform duration-500">
                   {t("features.1.title", features[0].title)}
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
@@ -218,8 +218,8 @@ export function FeaturesSection() {
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 style={{ transform: "scaleX(-1)" }}
               />
-              {/* Fade left edge into black */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
+              {/* Fade into black: the mirrored image swaps sides under RTL */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent rtl:bg-gradient-to-l" />
             </div>
           </div>
         </div>

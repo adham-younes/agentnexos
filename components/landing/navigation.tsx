@@ -126,27 +126,31 @@ export function Navigation() {
           </div>
 
           {/* Bottom CTAs */}
-          <div className={`flex items-center gap-4 pt-8 border-t border-foreground/10 transition-all duration-500 ${
+          <div className={`pt-8 border-t border-foreground/10 transition-all duration-500 ${
             isMobileMenuOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
           }`}
           style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
+            {/* Switcher sits on its own row: sharing the CTA row overflowed the
+                viewport on narrow screens once a third item was added. */}
             <LocaleSwitcher />
-            <Button
-              variant="outline"
-              className="flex-1 rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.signIn", "Sign in")}
-            </Button>
-            <Button
-              className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.deployAgent", "Deploy agent")}
-            </Button>
+            <div className="flex items-center gap-4 mt-4">
+              <Button
+                variant="outline"
+                className="flex-1 rounded-full h-14 text-base"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.signIn", "Sign in")}
+              </Button>
+              <Button
+                className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.deployAgent", "Deploy agent")}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
