@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const logos: Record<string, React.ReactNode> = {
   OpenAI: (
@@ -80,7 +81,23 @@ const integrations = [
   { name: "Stripe", category: "Payments" },
 ];
 
+const categoryKey: Record<string, string> = {
+  LLM: "integrations.cat.llm",
+  Comms: "integrations.cat.comms",
+  Code: "integrations.cat.code",
+  PM: "integrations.cat.pm",
+  Storage: "integrations.cat.storage",
+  Docs: "integrations.cat.docs",
+  CRM: "integrations.cat.crm",
+  Marketing: "integrations.cat.marketing",
+  Auto: "integrations.cat.auto",
+  Data: "integrations.cat.data",
+  Payments: "integrations.cat.payments",
+};
+
 export function IntegrationsSection() {
+  const t = useT();
+  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
@@ -107,22 +124,24 @@ export function IntegrationsSection() {
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           <span className="w-12 h-px bg-foreground/20" />
-          Integrations
+          {t("integrations.eyebrow", "Integrations")}
           <span className="w-12 h-px bg-foreground/20" />
         </span>
 
         <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          Connect
+          {t("integrations.title1", "Connect")}
           <br />
-          <span className="text-muted-foreground">everything.</span>
+          <span className="text-muted-foreground">{t("integrations.title2", "everything.")}</span>
         </h2>
 
         <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-100 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          Your agents connect to 100+ tools and services. They read, write, and act autonomously across your entire stack.
+          {isRtl
+            ? `${t("integrations.lead", "")} ${t("integrations.leadRoadmap", "")}`
+            : "Your agents connect to 100+ tools and services. They read, write, and act autonomously across your entire stack."}
         </p>
       </div>
 
@@ -182,7 +201,7 @@ export function IntegrationsSection() {
                   ? "bg-foreground text-background"
                   : "bg-foreground/10 text-muted-foreground"
               }`}>
-                {integration.category}
+                {t(categoryKey[integration.category], integration.category)}
               </span>
 
               {/* Logo */}
@@ -209,21 +228,28 @@ export function IntegrationsSection() {
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           <div className="flex flex-wrap gap-12">
-            {[
-              { value: "100+", label: "Integrations" },
-              { value: "OAuth", label: "Auth built-in" },
-              { value: "Webhooks", label: "Real-time sync" },
-            ].map((stat) => (
-              <div key={stat.label} className="flex items-baseline gap-3">
+            {(isRtl
+              ? [
+                  { value: "REST", labelKey: "integrations.stat1", label: "APIs" },
+                  { value: "Webhooks", labelKey: "integrations.stat2", label: "Event sync" },
+                  { value: "OAuth", labelKey: "integrations.stat3", label: "Auth built-in" },
+                ]
+              : [
+                  { value: "100+", labelKey: "integrations.stat0", label: "Integrations" },
+                  { value: "OAuth", labelKey: "integrations.stat3", label: "Auth built-in" },
+                  { value: "Webhooks", labelKey: "integrations.stat2", label: "Real-time sync" },
+                ]
+            ).map((stat) => (
+              <div key={stat.labelKey} className="flex items-baseline gap-3">
                 <span className="text-3xl font-display">{stat.value}</span>
-                <span className="text-sm text-muted-foreground">{stat.label}</span>
+                <span className="text-sm text-muted-foreground">{t(stat.labelKey, stat.label)}</span>
               </div>
             ))}
           </div>
 
           <a href="#" className="group inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors">
-            View all integrations
-            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+            {t("integrations.viewAll", "View all integrations")}
+            <span className="group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180">&rarr;</span>
           </a>
         </div>
       </div>

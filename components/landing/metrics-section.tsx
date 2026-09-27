@@ -1,27 +1,34 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const metrics = [
   { 
     value: 12847392, 
     suffix: "", 
     prefix: "",
-    label: "Tasks completed today",
-    sublabel: "by 23,847 active agents",
+    labelKey: "metrics.m1",
+    label: "Documents processed today",
+    sublabelKey: "metrics.m1.sub",
+    sublabel: "in the pilot workspace",
   },
   { 
     value: 99, 
     suffix: ".99%", 
     prefix: "",
+    labelKey: "metrics.m2",
     label: "Availability",
-    sublabel: "across all regions",
+    sublabelKey: "metrics.m2.sub",
+    sublabel: "across pilot regions",
   },
   { 
     value: 340, 
     suffix: "ms", 
     prefix: "<",
+    labelKey: "metrics.m3",
     label: "Average execution",
+    sublabelKey: "metrics.m3.sub",
     sublabel: "p99 latency",
   },
 ];
@@ -217,6 +224,8 @@ function DotGraph({
 }
 
 export function MetricsSection() {
+  const t = useT();
+  const isRtl = useIsRtl();
   const [time, setTime] = useState<Date | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -249,7 +258,7 @@ export function MetricsSection() {
             <div className="flex items-center gap-4 mb-6">
               <span className="flex items-center gap-2 px-3 py-1 bg-[#eca8d6]/10 text-[#eca8d6] text-xs font-mono">
                 <span className="w-2 h-2 rounded-full bg-[#eca8d6] animate-pulse" />
-                LIVE
+                {t("metrics.live", "LIVE")}
               </span>
               <span className="text-sm font-mono text-muted-foreground">
                 {time ? `${time.toLocaleTimeString("en-GB")} UTC` : ""}
@@ -259,9 +268,9 @@ export function MetricsSection() {
             <h2 className={`text-6xl md:text-7xl lg:text-[140px] font-display tracking-tight leading-[0.95] transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              Real-time
+              {t("metrics.realtime", "Real-time")}
               <br />
-              <span className="text-muted-foreground">agent metrics.</span>
+              <span className="text-muted-foreground">{t("metrics.title", "agent metrics.")}</span>
             </h2>
           </div>
         </div>
@@ -290,8 +299,8 @@ export function MetricsSection() {
             <div className="mb-6">
               <DotGraph color="white" height={36} freq1={0.28} freq2={0.09} freqT={0.5} speed={0.018} baseline={0.35} amplitude={0.55} />
             </div>
-            <div className="text-lg text-foreground mb-2">{metrics[0].label}</div>
-            <div className="text-sm text-muted-foreground font-mono">{metrics[0].sublabel}</div>
+            <div className="text-lg text-foreground mb-2">{t(metrics[0].labelKey, metrics[0].label)}</div>
+            <div className="text-sm text-muted-foreground font-mono">{t(metrics[0].sublabelKey, metrics[0].sublabel)}</div>
           </div>
 
           {/* Metrics */}
@@ -304,8 +313,8 @@ export function MetricsSection() {
               style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
               <div className="w-full">
-                <div className="text-sm text-muted-foreground font-mono mb-2">{metric.sublabel}</div>
-                <div className="text-base text-foreground mb-3">{metric.label}</div>
+                <div className="text-sm text-muted-foreground font-mono mb-2">{t(metric.sublabelKey, metric.sublabel)}</div>
+                <div className="text-base text-foreground mb-3">{t(metric.labelKey, metric.label)}</div>
                 <DotGraph
                   color={index === 0 ? "green" : "white"}
                   height={24}
@@ -328,11 +337,21 @@ export function MetricsSection() {
         <div className={`mt-16 pt-8 border-t border-foreground/10 flex flex-wrap items-center gap-x-12 gap-y-4 text-sm font-mono text-muted-foreground transition-all duration-1000 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          <span>OpenAI GPT-4 Turbo</span>
-          <span>Anthropic Claude 3</span>
-          <span>Mistral Large</span>
-          <span>Llama 3</span>
-          <span className="text-foreground">+12 more models</span>
+          {isRtl ? (
+            <>
+              {/* Named providers would imply live integrations; label as planned. */}
+              <span>{t("metrics.routing", "Multi-model routing")}</span>
+              <span className="text-foreground">{t("metrics.routingNote", "Roadmap")}</span>
+            </>
+          ) : (
+            <>
+              <span>OpenAI GPT-4 Turbo</span>
+              <span>Anthropic Claude 3</span>
+              <span>Mistral Large</span>
+              <span>Llama 3</span>
+              <span className="text-foreground">+12 more models</span>
+            </>
+          )}
         </div>
       </div>
     </section>

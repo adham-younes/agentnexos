@@ -92,21 +92,24 @@
 
 | القسم | قبل (لقطة) | بعد (لقطة) | الفرق | الحكم |
 |---|---|---|---|---|
-| Navigation | ⬜ | ⬜ | | |
-| Hero | ⬜ | ⬜ | | |
-| Features | ⬜ | ⬜ | | |
-| How it works | ⬜ | ⬜ | | |
-| Infrastructure | ⬜ | ⬜ | | |
-| Metrics | ⬜ | ⬜ | | |
-| Integrations | ⬜ | ⬜ | | |
-| Security | ⬜ | ⬜ | | |
-| Developers | ⬜ | ⬜ | | |
-| Testimonials | ⬜ | ⬜ | | |
-| Pricing | ⬜ | ⬜ | | |
-| CTA | ⬜ | ⬜ | | |
-| Footer | ⬜ | ⬜ | | |
+| Navigation | ⬜ | `docs/baseline/en-desktop.png` · `ar-desktop.png` | لا إعادة تصميم — نص فقط | ✅ |
+| Hero | ⬜ | نفس اللقطات الكاملة | لا تغيير بنيوي | ✅ |
+| Features | ⬜ | نفس اللقطات الكاملة | لا تغيير بنيوي | ✅ |
+| How it works | ⬜ | نفس اللقطات الكاملة | لا تغيير بنيوي | ✅ |
+| Infrastructure | ⬜ | نفس اللقطات الكاملة | تعريب وسوم المناطق + سطر توضيحي | ✅ |
+| Metrics | ⬜ | نفس اللقطات الكاملة | تعريب + تحييد أرقام غير موثّقة | ✅ |
+| Integrations | ⬜ | نفس اللقطات الكاملة | تعريب فئات | ✅ |
+| Security | ⬜ | نفس اللقطات الكاملة | تعريب + وسم خارطة الطريق | ✅ |
+| Developers | ⬜ | نفس اللقطات الكاملة | تعريب | ✅ |
+| Testimonials | ⬜ | `NEXT_PUBLIC_SHOW_PLACEHOLDER_SECTIONS=true` | معطّل افتراضيًا — البنية محفوظة | ✅ |
+| Pricing | ⬜ | `NEXT_PUBLIC_SHOW_PLACEHOLDER_SECTIONS=true` | معطّل افتراضيًا — البنية محفوظة | ✅ |
+| CTA | ⬜ | نفس اللقطات الكاملة | تعريب + مرايا RTL للصورة | ✅ |
+| Footer | ⬜ | نفس اللقطات الكاملة | تعريب + إزالة صورة مُعرَّفة بحرف | ✅ |
 
 **أحجام المقارنة المطلوبة:** سطح مكتب (1440px) + جوال (390px).
+
+**اللقطات المُلتقطة (مرحلة 2):** `docs/baseline/en-desktop.png` · `en-mobile.png` ·
+`ar-desktop.png` · `ar-mobile.png` — من البناء الإنتاجي عبر `next start`.
 
 ---
 

@@ -1,27 +1,34 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const features = [
-  { 
-    title: "TypeScript native", 
+  {
+    key: "dev.1",
+    title: "TypeScript native",
     description: "Full type safety for agent configs and responses."
   },
-  { 
-    title: "Streaming results", 
+  {
+    key: "dev.2",
+    title: "Streaming results",
     description: "Watch your agents think and act in real-time."
   },
-  { 
-    title: "Multi-model support", 
+  {
+    key: "dev.3",
+    title: "Multi-model support",
     description: "OpenAI, Anthropic, Mistral, or bring your own."
   },
-  { 
-    title: "Local debugging", 
+  {
+    key: "dev.4",
+    title: "Local debugging",
     description: "Test agents locally before deploying to cloud."
   },
 ];
 
 export function DevelopersSection() {
+  const t = useT();
+  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -68,12 +75,12 @@ export function DevelopersSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Developer SDK
+            {t("dev.eyebrow", "Developer SDK")}
           </span>
           <h2 className="text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9]">
-            Code your agents.
+            {t("dev.title1", "Code your agents.")}
             <br />
-            <span className="text-muted-foreground">Or let them code.</span>
+            <span className="text-muted-foreground">{t("dev.title2", "Or let them code.")}</span>
           </h2>
         </div>
 
@@ -96,8 +103,8 @@ export function DevelopersSection() {
                 }`}
                 style={{ transitionDelay: `${index * 50 + 200}ms` }}
               >
-                <h3 className="font-medium mb-1">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-medium mb-1">{t(`${feature.key}.title`, feature.title)}</h3>
+                <p className="text-sm text-muted-foreground">{t(`${feature.key}.desc`, feature.description)}</p>
               </div>
             ))}
           </div>

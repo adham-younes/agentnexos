@@ -1,15 +1,18 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const regions = [
-  { name: "North America", nodes: 12, status: "operational" },
-  { name: "Europe", nodes: 8, status: "operational" },
-  { name: "Asia Pacific", nodes: 6, status: "operational" },
-  { name: "South America", nodes: 3, status: "operational" },
+  { nameKey: "infra.region.na", name: "North America", nodes: 12, status: "operational" },
+  { nameKey: "infra.region.eu", name: "Europe", nodes: 8, status: "operational" },
+  { nameKey: "infra.region.apac", name: "Asia Pacific", nodes: 6, status: "operational" },
+  { nameKey: "infra.region.sa", name: "South America", nodes: 3, status: "operational" },
 ];
 
 export function InfrastructureSection() {
+  const t = useT();
+  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const [activeRegion, setActiveRegion] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
@@ -44,7 +47,7 @@ export function InfrastructureSection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <span className="w-12 h-px bg-foreground/20" />
-            Global infrastructure
+            {t("infra.eyebrow", "Global infrastructure")}
           </span>
           
           <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-stretch">
@@ -64,16 +67,15 @@ export function InfrastructureSection() {
               <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}>
-                Global by
+                {t("infra.title1", "Global by")}
                 <br />
-                <span className="text-muted-foreground">default.</span>
+                <span className="text-muted-foreground">{t("infra.title2", "default.")}</span>
               </h2>
 
               <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg transition-all duration-1000 delay-100 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}>
-                Your agents run on distributed infrastructure across 29 regions.
-                Sub-50ms latency to 99% of the world.
+                {t("infra.lead", "Your agents run on distributed infrastructure across 29 regions. Sub-50ms latency to 99% of the world.")}
               </p>
             </div>
           </div>
@@ -145,11 +147,16 @@ export function InfrastructureSection() {
             <div className="relative z-10">
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-8xl lg:text-[10rem] font-display leading-none">29</span>
-                <span className="text-2xl text-muted-foreground">regions</span>
+                <span className="text-2xl text-muted-foreground">{t("infra.regionsWord", "regions")}</span>
               </div>
               <p className="text-muted-foreground max-w-md">
-                Compute nodes distributed globally for maximum redundancy and minimum latency.
+                {t("infra.card", "Compute nodes distributed globally for maximum redundancy and minimum latency.")}
               </p>
+              {isRtl && (
+                <p className="text-xs font-mono text-muted-foreground/70 mt-3">
+                  {t("infra.illustrative", "")}
+                </p>
+              )}
             </div>
           </div>
 
@@ -159,14 +166,14 @@ export function InfrastructureSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <span className="text-5xl lg:text-6xl font-display">99.99%</span>
-              <span className="block text-sm text-muted-foreground mt-2">Uptime SLA</span>
+              <span className="block text-sm text-muted-foreground mt-2">{t("infra.uptime", "Uptime SLA")}</span>
             </div>
             
             <div className={`p-8 border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <span className="text-5xl lg:text-6xl font-display">&lt;50ms</span>
-              <span className="block text-sm text-muted-foreground mt-2">Global latency</span>
+              <span className="block text-sm text-muted-foreground mt-2">{t("infra.latency", "Global latency")}</span>
             </div>
           </div>
         </div>
@@ -189,11 +196,11 @@ export function InfrastructureSection() {
                   activeRegion === index ? "bg-[#eca8d6]" : "bg-foreground/20"
                 }`} />
                 <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
-                  {region.status}
+                  {t("infra.status.operational", region.status)}
                 </span>
               </div>
-              <span className="font-medium block mb-1">{region.name}</span>
-              <span className="text-sm text-muted-foreground">{region.nodes} nodes</span>
+              <span className="font-medium block mb-1">{t(region.nameKey, region.name)}</span>
+              <span className="text-sm text-muted-foreground">{region.nodes} {t("infra.nodes", "nodes")}</span>
             </div>
           ))}
         </div>
