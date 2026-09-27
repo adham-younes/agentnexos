@@ -1,47 +1,51 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/use-t";
 
 const steps = [
   {
     number: "01",
+    key: "how.step1",
     title: "Define",
     subtitle: "your agent",
     description: "Describe what your agent should do. Set its capabilities, constraints, and goals in natural language or code.",
     code: `const researcher = new Agent({
-  role: 'Research Analyst',
-  capabilities: ['web', 'docs', 'api'],
+  role: 'Document Analyst',
+  capabilities: ['extract', 'validate', 'export'],
   memory: true,
-  autonomy: 'full'
+  autonomy: 'approval-gated'
 })`,
   },
   {
     number: "02",
+    key: "how.step2",
     title: "Assign",
     subtitle: "the task",
     description: "Give your agent a mission. It breaks down complex tasks into steps and executes them autonomously.",
     code: `await researcher.execute({
-  task: 'Analyze competitor pricing',
-  sources: ['public-data', 'news'],
-  output: 'structured-report',
-  deadline: '2h'
+  task: 'Extract invoice line items',
+  source: 'uploaded-document',
+  output: 'structured-rows',
+  approval: true
 })`,
   },
   {
     number: "03",
+    key: "how.step3",
     title: "Monitor",
     subtitle: "& scale",
     description: "Track progress in real-time. Spin up more agents as needed. Pay only for compute used.",
-    code: `optimus.dashboard({
+    code: `console.watch({
   agents: [researcher],
-  metrics: ['tasks', 'latency', 'cost'],
-  alerts: true
-})
-// 847 tasks completed today`,
+  metrics: ['steps', 'latency'],
+  approval: true
+})`,
   },
 ];
 
 export function HowItWorksSection() {
+  const t = useT();
   const [activeStep, setActiveStep] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -81,16 +85,16 @@ export function HowItWorksSection() {
             <div className={`transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}>
               <span className="inline-flex items-center gap-3 text-sm font-mono text-white/40 mb-8">
                 <span className="w-12 h-px bg-white/20" />
-                Process
+                {t("how.eyebrow", "Process")}
               </span>
             </div>
             
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">Define.</span>
-              <span className="block text-white/30">Deploy.</span>
-              <span className="block text-white/10">Scale.</span>
+              <span className="block">{t("how.title1", "Define.")}</span>
+              <span className="block text-white/30">{t("how.title2", "Deploy.")}</span>
+              <span className="block text-white/10">{t("how.title3", "Scale.")}</span>
             </h2>
           </div>
 
@@ -116,7 +120,7 @@ export function HowItWorksSection() {
               key={step.number}
               type="button"
               onClick={() => setActiveStep(index)}
-              className={`relative text-left p-8 lg:p-12 border transition-all duration-500 ${
+              className={`relative text-start p-8 lg:p-12 border transition-all duration-500 ${
                 activeStep === index 
                   ? "bg-[#000000] border-white/60" 
                   : "bg-[#000000] border-white/25 hover:border-white/50"
@@ -138,17 +142,17 @@ export function HowItWorksSection() {
 
               {/* Title */}
               <h3 className="text-3xl lg:text-4xl font-display mb-2">
-                {step.title}
+                {t(`${step.key}.title`, step.title)}
               </h3>
               <span className="text-xl text-white/40 font-display block mb-6">
-                {step.subtitle}
+                {t(`${step.key}.sub`, step.subtitle)}
               </span>
 
               {/* Description */}
               <p className={`text-white/60 leading-relaxed transition-opacity duration-300 ${
                 activeStep === index ? "opacity-100" : "opacity-60"
               }`}>
-                {step.description}
+                {t(`${step.key}.desc`, step.description)}
               </p>
 
               {/* Active indicator */}

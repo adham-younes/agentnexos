@@ -2,28 +2,33 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Shield, Lock, Eye, FileCheck } from "lucide-react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const securityFeatures = [
   {
     icon: Shield,
+    key: "security.1",
     title: "Isolated execution",
     description: "Each agent runs in its own secure sandbox.",
     image: "/images/isolated.jpg",
   },
   {
     icon: Lock,
+    key: "security.2",
     title: "Encrypted memory",
     description: "Data encrypted at rest and in transit.",
     image: "/images/encrypted.jpg",
   },
   {
     icon: Eye,
+    key: "security.3",
     title: "Full audit trails",
     description: "Every action logged and inspectable.",
     image: "/images/audit.jpg",
   },
   {
     icon: FileCheck,
+    key: "security.4",
     title: "Permission boundaries",
     description: "Principle of least privilege by design.",
     image: "/images/permissions.jpg",
@@ -33,6 +38,8 @@ const securityFeatures = [
 const certifications = ["SOC 2", "ISO 27001", "HIPAA", "GDPR"];
 
 export function SecuritySection() {
+  const t = useT();
+  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
@@ -67,16 +74,16 @@ export function SecuritySection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <span className="w-12 h-px bg-foreground/20" />
-            Security
+            {t("security.eyebrow", "Security")}
           </span>
           
           {/* Title — full width */}
           <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] mb-12 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            Autonomous,
+            {t("security.title1", "Autonomous,")}
             <br />
-            <span className="text-muted-foreground">not uncontrolled.</span>
+            <span className="text-muted-foreground">{t("security.title2", "not uncontrolled.")}</span>
           </h2>
           
           {/* Description — below title */}
@@ -84,7 +91,7 @@ export function SecuritySection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Your agents are powerful but constrained. Enterprise-grade security ensures they only do what you allow.
+              {t("security.lead", "Your agents are powerful but constrained. Enterprise-grade security ensures they only do what you allow.")}
             </p>
           </div>
         </div>
@@ -109,10 +116,17 @@ export function SecuritySection() {
             </div>
             
             <div className="relative z-10">
-              <span className="font-mono text-sm text-muted-foreground">Active protection</span>
+              <span className="font-mono text-sm text-muted-foreground">{t("security.active", "Active protection")}</span>
               <div className="mt-8">
                 <span className="text-7xl lg:text-8xl font-display">0</span>
-                <span className="block text-muted-foreground mt-2">Security incidents this year</span>
+                <span className="block text-muted-foreground mt-2">
+                  {isRtl ? t("security.integrityTitle", "Execution integrity") : "Security incidents this year"}
+                </span>
+                {isRtl && (
+                  <span className="block text-xs text-muted-foreground/70 mt-1 max-w-xs">
+                    {t("security.integrityNote", "")}
+                  </span>
+                )}
               </div>
             </div>
             
@@ -126,7 +140,7 @@ export function SecuritySection() {
                   }`}
                   style={{ transitionDelay: `${index * 100 + 300}ms` }}
                 >
-                  {cert}
+                  {isRtl ? `${cert} · ${t("security.complianceNote", "")}` : cert}
                 </span>
               ))}
             </div>
@@ -155,8 +169,8 @@ export function SecuritySection() {
                     <feature.icon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    <h3 className="font-medium mb-1">{t(`${feature.key}.title`, feature.title)}</h3>
+                    <p className="text-sm text-muted-foreground">{t(`${feature.key}.desc`, feature.description)}</p>
                   </div>
                 </div>
               </div>

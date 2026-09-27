@@ -3,8 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 export function CtaSection() {
+  const t = useT();
+  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -39,26 +42,27 @@ export function CtaSection() {
           onMouseMove={handleMouseMove}
         >
           {/* Spotlight effect */}
-          <div 
+          <div
             className="absolute inset-0 opacity-10 pointer-events-none transition-opacity duration-300"
             style={{
               background: `radial-gradient(600px circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0,0,0,0.15), transparent 40%)`
             }}
           />
-          
+
           <div className="relative z-10 px-8 lg:px-16 py-16 lg:py-24">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to delegate
+                  {t("cta.title1", "Ready to delegate")}
                   <br />
-                  to AI agents?
+                  {isRtl ? t("cta.title2", "") : "to AI agents?"}
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Join teams automating complex workflows with COMPUTE agents. 
-                  Deploy your first agent in minutes.
+                  {isRtl
+                    ? t("cta.lead", "")
+                    : "Join teams automating complex workflows with COMPUTE agents. Deploy your first agent in minutes."}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -66,25 +70,25 @@ export function CtaSection() {
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
                   >
-                    Deploy your first agent
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                    {t("cta.primary", "Deploy your first agent")}
+                    <ArrowRight className="w-4 h-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
                   >
-                    Book a demo
+                    {t("cta.secondary", "Book a demo")}
                   </Button>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  1,000 free tasks with COMPUTE
+                  {isRtl ? t("cta.free", "") : "1,000 free tasks with COMPUTE"}
                 </p>
               </div>
 
               {/* Right image */}
-              <div className="hidden lg:flex items-end justify-center w-[600px] h-[650px] -mr-16">
+              <div className="hidden lg:flex items-end justify-center w-[600px] h-[650px] -mr-16 rtl:-mr-0 rtl:-ml-16">
                 <img
                   src="/images/bridge.png"
                   alt="Two trees connected by glowing arcs"

@@ -1,10 +1,16 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
-const words = ["automate", "delegate", "execute", "scale"];
+const wordKeys = [
+  { key: "hero.words.0", fallback: "automate" },
+  { key: "hero.words.1", fallback: "delegate" },
+  { key: "hero.words.2", fallback: "execute" },
+  { key: "hero.words.3", fallback: "scale" },
+];
 
-function BlurWord({ word, trigger }: { word: string; trigger: number }) {
+function BlurWord({ word, trigger, animate }: { word: string; trigger: number; animate: boolean }) {
   const letters = word.split("");
   const STAGGER = 45;      // ms between each letter
   const DURATION = 500;    // blur+opacity fade duration per letter
@@ -66,7 +72,7 @@ function BlurWord({ word, trigger }: { word: string; trigger: number }) {
 
   return (
     <>
-      {letters.map((char, i) => {
+      {animate && letters.map((char, i) => {
         const colorIndex = (i / Math.max(letters.length - 1, 1)) * (gradientColors.length - 1);
         const lower = Math.floor(colorIndex);
         const upper = Math.min(lower + 1, gradientColors.length - 1);
@@ -99,12 +105,18 @@ function BlurWord({ word, trigger }: { word: string; trigger: number }) {
             {char}
           </span>
         );
-      })}
+              })}
+        {/* Per-letter splitting breaks Arabic letter joining, so the RTL face
+            animates the whole word instead of individual glyphs. */}
+        {!animate && <span style={{ display: "inline-block" }}>{word}</span>}
     </>
   );
 }
 
 export function HeroSection() {
+  const t = useT();
+  const isRtl = useIsRtl();
+  const words = wordKeys.map((w) => t(w.key, w.fallback));
   const [isVisible, setIsVisible] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -174,22 +186,22 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
             <span className="w-8 h-px bg-white/30" />
-            Autonomous AI agents for distributed computing
+            {t("hero.eyebrow", "Autonomous AI agents for distributed computing")}
           </span>
         </div>
         
         {/* Main headline */}
         <div className="mb-12">
           <h1 
-            className={`text-left text-[clamp(2rem,6vw,7rem)] font-display leading-[0.92] tracking-tight text-white transition-all duration-1000 ${
+            className={`text-start text-[clamp(2rem,6vw,7rem)] font-display leading-[0.92] tracking-tight text-white transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block whitespace-nowrap">Distributed compute,</span>
+            <span className="block whitespace-nowrap">{t("hero.headlineLine1", "Distributed compute,")}</span>
             <span className="block whitespace-nowrap">
-              agents that{" "}
+              {t("hero.headlineLine2", "agents that")}{" "}
               <span className="relative inline-block">
-                <BlurWord word={words[wordIndex]} trigger={wordIndex} />
+                <BlurWord word={words[wordIndex]} trigger={wordIndex} animate={!isRtl} />
               </span>
             </span>
           </h1>
@@ -205,14 +217,14 @@ export function HeroSection() {
       >
         <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">
           {[
-            { value: "3500+", label: "autonomous agents active" },
-            { value: "99.7%", label: "distributed uptime" },
-            { value: "<50ms", label: "execution latency" },
+            { value: "3500+", key: "hero.stat1", label: "autonomous agents active" },
+            { value: "99.7%", key: "hero.stat2", label: "distributed uptime" },
+            { value: "<50ms", key: "hero.stat3", label: "execution latency" },
           ].map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-2">
+            <div key={stat.key} className="flex flex-col gap-2">
               <span className="text-3xl lg:text-4xl font-display text-white">{stat.value}</span>
               <span className="text-xs text-white/50 leading-tight">
-                {stat.label}
+                {t(stat.key, stat.label)}
               </span>
             </div>
           ))}

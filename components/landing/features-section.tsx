@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/use-t";
 
 const features = [
   {
@@ -129,6 +130,7 @@ function ParticleVisualization() {
 }
 
 export function FeaturesSection() {
+  const t = useT();
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -156,25 +158,25 @@ export function FeaturesSection() {
         <div className="relative mb-24 lg:mb-32">
           <div className="grid lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
+                              <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
                 <span className="w-12 h-px bg-foreground/30" />
-                Capabilities
+                {t("features.eyebrow", "Capabilities")}
               </span>
               <h2
                 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Intelligent
+                {t("features.title1", "Intelligent")}
                 <br />
-                <span className="text-muted-foreground">workers.</span>
+                <span className="text-muted-foreground">{t("features.title2", "workers.")}</span>
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.
+                {t("features.intro", "Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.")}
               </p>
             </div>
           </div>
@@ -195,14 +197,14 @@ export function FeaturesSection() {
               <div className="relative z-10">
                 <span className="font-mono text-sm text-muted-foreground">{features[0].number}</span>
                 <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                  {features[0].title}
+                  {t("features.1.title", features[0].title)}
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
-                  {features[0].description}
+                  {t("features.1.desc", features[0].description)}
                 </p>
                 <div>
                   <span className="text-5xl lg:text-6xl font-display">{features[0].stats.value}</span>
-                  <span className="block text-sm text-muted-foreground font-mono mt-2">{features[0].stats.label}</span>
+                  <span className="block text-sm text-muted-foreground font-mono mt-2">{t("features.1.meta", features[0].stats.label)}</span>
                 </div>
               </div>
             </div>
