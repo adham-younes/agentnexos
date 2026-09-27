@@ -155,7 +155,7 @@ export function SecuritySection() {
                   activeFeature === index 
                     ? "border-foreground/30 bg-foreground/[0.04]" 
                     : "border-foreground/10"
-                } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
+                } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8 rtl:-translate-x-8"}`}
                 style={{ transitionDelay: `${index * 80}ms` }}
                 onClick={() => setActiveFeature(index)}
                 onMouseEnter={() => setActiveFeature(index)}

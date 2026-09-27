@@ -60,7 +60,7 @@ export function DevelopersSection() {
           className="w-full h-full object-cover object-left-top"
         />
         {/* Fade left edge */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent rtl:bg-gradient-to-l" />
         {/* Fade top edge */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent" />
       </div>

@@ -91,11 +91,31 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Arabic face is opt-in via :lang(ar), never a global override, so the
+     Latin template layout (LTR) keeps rendering with the original fonts. */
+  :lang(ar) body,
+  :lang(ar) button,
+  :lang(ar) input,
+  :lang(ar) select,
+  :lang(ar) textarea {
+    font-family: var(--font-arabic), var(--font-instrument), system-ui, sans-serif;
+  }
+
+  /* The template's display face is a Latin serif; Arabic has no serif companion,
+     so display headings in Arabic use the Arabic sans face instead of falling
+     back to a system font. */
 }
 
 @layer utilities {
   .font-display {
     font-family: var(--font-display);
+  }
+
+  /* Arabic display override lives here (not in @layer base) because the base
+     .font-display rule above would otherwise win by layer order. */
+  :lang(ar) .font-display {
+    font-family: var(--font-arabic), var(--font-instrument), system-ui, sans-serif;
   }
   
   .text-stroke {
