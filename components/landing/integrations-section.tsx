@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { useIsRtl, useT } from "@/lib/i18n/use-t";
+import { useT } from "@/lib/i18n/use-t";
 
 const logos: Record<string, React.ReactNode> = {
   OpenAI: (
@@ -97,7 +97,6 @@ const categoryKey: Record<string, string> = {
 
 export function IntegrationsSection() {
   const t = useT();
-  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
@@ -139,9 +138,8 @@ export function IntegrationsSection() {
         <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-100 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          {isRtl
-            ? `${t("integrations.lead", "")} ${t("integrations.leadRoadmap", "")}`
-            : "Your agents connect to 100+ tools and services. They read, write, and act autonomously across your entire stack."}
+          {t("integrations.lead", "Your agents connect to the tools you already use — REST and Webhooks first. Autonomy across your stack is on the roadmap.")}{" "}
+          {t("integrations.leadRoadmap", "Roadmap")}
         </p>
       </div>
 
@@ -228,18 +226,11 @@ export function IntegrationsSection() {
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           <div className="flex flex-wrap gap-12">
-            {(isRtl
-              ? [
-                  { value: "REST", labelKey: "integrations.stat1", label: "APIs" },
-                  { value: "Webhooks", labelKey: "integrations.stat2", label: "Event sync" },
-                  { value: "OAuth", labelKey: "integrations.stat3", label: "Auth built-in" },
-                ]
-              : [
-                  { value: "100+", labelKey: "integrations.stat0", label: "Integrations" },
-                  { value: "OAuth", labelKey: "integrations.stat3", label: "Auth built-in" },
-                  { value: "Webhooks", labelKey: "integrations.stat2", label: "Real-time sync" },
-                ]
-            ).map((stat) => (
+            {[
+              { value: "REST", labelKey: "integrations.stat1", label: "APIs" },
+              { value: "Webhooks", labelKey: "integrations.stat2", label: "Event sync" },
+              { value: "OAuth", labelKey: "integrations.stat3", label: "Auth built-in" },
+            ].map((stat) => (
               <div key={stat.labelKey} className="flex items-baseline gap-3">
                 <span className="text-3xl font-display">{stat.value}</span>
                 <span className="text-sm text-muted-foreground">{t(stat.labelKey, stat.label)}</span>

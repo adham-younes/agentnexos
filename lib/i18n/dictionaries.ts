@@ -39,6 +39,13 @@ export const ar = {
   "hero.stat1": "وكلاء متخصّصون",
   "hero.stat2": "تتبّع لكل خطوة",
   "hero.stat3": "تصدير بموافقتك",
+  "hero.stat4": "خارطة الطريق",
+
+  // ---------- metrics (live counters are honest zeros; the rest is roadmap) ----------
+  "metrics.m1.sub": "في مساحة التجربة",
+  "metrics.roadmap": "خارطة الطريق",
+  "metrics.m2.sub": "خارطة الطريق",
+  "metrics.m3.sub": "خارطة الطريق",
 
   // ---------- features ----------
   "features.eyebrow": "القدرات",
@@ -49,7 +56,7 @@ export const ar = {
   "features.1.title": "تنفيذ ذاتي",
   "features.1.desc":
     "وكلاء يحلّلون ويقرّرون وينفّذون مهامًا متعدّدة الخطوات، مع توقّف عند نقاط الموافقة قبل أي تصدير.",
-  "features.1.meta": "متاح الآن",
+  "features.1.meta": "خارطة الطريق",
   "features.2.title": "حوسبة موزّعة",
   "features.2.desc":
     "وزّع المهام الثقيلة على بنية موزّعة. الوكلاء يعملون على عمّال مستقلّين يمكن تشغيلهم بالتوازي.",

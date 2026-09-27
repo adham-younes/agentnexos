@@ -1,35 +1,33 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { useIsRtl, useT } from "@/lib/i18n/use-t";
+import { useT } from "@/lib/i18n/use-t";
 
-const metrics = [
+type Metric = {
+  value?: number;
+  suffix?: string;
+  prefix?: string;
+  labelKey: string;
+  label: string;
+};
+
+// Live counters read from real state only. Until the agent console ships there is
+// no traffic, so these render honest zeros rather than fabricated sample values.
+const metrics: Metric[] = [
   { 
-    value: 12847392, 
-    suffix: "", 
+    value: 0,
+    suffix: "",
     prefix: "",
     labelKey: "metrics.m1",
     label: "Documents processed today",
-    sublabelKey: "metrics.m1.sub",
-    sublabel: "in the pilot workspace",
   },
   { 
-    value: 99, 
-    suffix: ".99%", 
-    prefix: "",
     labelKey: "metrics.m2",
     label: "Availability",
-    sublabelKey: "metrics.m2.sub",
-    sublabel: "across pilot regions",
   },
   { 
-    value: 340, 
-    suffix: "ms", 
-    prefix: "<",
     labelKey: "metrics.m3",
     label: "Average execution",
-    sublabelKey: "metrics.m3.sub",
-    sublabel: "p99 latency",
   },
 ];
 
@@ -225,7 +223,6 @@ function DotGraph({
 
 export function MetricsSection() {
   const t = useT();
-  const isRtl = useIsRtl();
   const [time, setTime] = useState<Date | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -294,13 +291,13 @@ export function MetricsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}>
             <div className="text-4xl md:text-5xl lg:text-6xl font-display tracking-tight mb-4 whitespace-nowrap overflow-hidden">
-              <AnimatedNumber end={metrics[0].value} suffix={metrics[0].suffix} prefix={metrics[0].prefix} />
+              <AnimatedNumber end={metrics[0].value ?? 0} suffix={metrics[0].suffix} prefix={metrics[0].prefix} />
             </div>
             <div className="mb-6">
               <DotGraph color="white" height={36} freq1={0.28} freq2={0.09} freqT={0.5} speed={0.018} baseline={0.35} amplitude={0.55} />
             </div>
             <div className="text-lg text-foreground mb-2">{t(metrics[0].labelKey, metrics[0].label)}</div>
-            <div className="text-sm text-muted-foreground font-mono">{t(metrics[0].sublabelKey, metrics[0].sublabel)}</div>
+            <div className="text-sm text-muted-foreground font-mono">{t("metrics.m1.sub", "in the pilot workspace")}</div>
           </div>
 
           {/* Metrics */}
@@ -313,7 +310,7 @@ export function MetricsSection() {
               style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
               <div className="w-full">
-                <div className="text-sm text-muted-foreground font-mono mb-2">{t(metric.sublabelKey, metric.sublabel)}</div>
+                <div className="text-sm text-muted-foreground font-mono mb-2">{t("metrics.roadmap", "Roadmap")}</div>
                 <div className="text-base text-foreground mb-3">{t(metric.labelKey, metric.label)}</div>
                 <DotGraph
                   color={index === 0 ? "green" : "white"}
@@ -326,8 +323,8 @@ export function MetricsSection() {
                   amplitude={index === 0 ? 0.45 : 0.6}
                 />
               </div>
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display tracking-tight w-full">
-                <AnimatedNumber end={metric.value} suffix={metric.suffix} prefix={metric.prefix} />
+              <div className="text-3xl md:text-4xl lg:text-5xl font-display tracking-tight w-full text-muted-foreground">
+                —
               </div>
             </div>
           ))}
@@ -337,21 +334,10 @@ export function MetricsSection() {
         <div className={`mt-16 pt-8 border-t border-foreground/10 flex flex-wrap items-center gap-x-12 gap-y-4 text-sm font-mono text-muted-foreground transition-all duration-1000 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          {isRtl ? (
-            <>
-              {/* Named providers would imply live integrations; label as planned. */}
-              <span>{t("metrics.routing", "Multi-model routing")}</span>
-              <span className="text-foreground">{t("metrics.routingNote", "Roadmap")}</span>
-            </>
-          ) : (
-            <>
-              <span>OpenAI GPT-4 Turbo</span>
-              <span>Anthropic Claude 3</span>
-              <span>Mistral Large</span>
-              <span>Llama 3</span>
-              <span className="text-foreground">+12 more models</span>
-            </>
-          )}
+          {/* Named providers would imply live integrations, so both locales show
+              the honest roadmap label instead of unbuilt model claims. */}
+          <span>{t("metrics.routing", "Multi-model routing")}</span>
+          <span className="text-foreground">{t("metrics.routingNote", "Roadmap")}</span>
         </div>
       </div>
     </section>

@@ -8,25 +8,25 @@ const features = [
     number: "01",
     title: "Autonomous Execution",
     description: "Deploy AI agents that work independently. They analyze, decide, and execute complex multi-step tasks without human intervention.",
-    stats: { value: "99.7%", label: "task completion" },
+    stats: { value: "01", label: "Roadmap" },
   },
   {
     number: "02",
     title: "Distributed Computing",
     description: "Offload compute-heavy tasks to our global network. Your agents run on optimized infrastructure across 50+ regions worldwide.",
-    stats: { value: "50+", label: "global regions" },
+    stats: { value: "02", label: "Roadmap" },
   },
   {
     number: "03",
     title: "Multi-Agent Orchestration",
     description: "Coordinate teams of specialized agents. They communicate, delegate, and collaborate to solve complex problems together.",
-    stats: { value: "1000x", label: "parallel execution" },
+    stats: { value: "03", label: "Roadmap" },
   },
   {
     number: "04",
     title: "Secure Sandboxing",
     description: "Each agent runs in isolated environments. Full audit trails, encrypted execution, and zero data leakage between tasks.",
-    stats: { value: "0", label: "data breaches" },
+    stats: { value: "04", label: "Roadmap" },
   },
 ];
 

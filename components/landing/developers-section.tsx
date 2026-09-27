@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useIsRtl, useT } from "@/lib/i18n/use-t";
+import { useT } from "@/lib/i18n/use-t";
 
 const features = [
   {
@@ -28,7 +28,6 @@ const features = [
 
 export function DevelopersSection() {
   const t = useT();
-  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -91,8 +90,7 @@ export function DevelopersSection() {
           }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            A powerful SDK for building, deploying, and orchestrating AI agents. 
-            Define behaviors in code or natural language.
+            {t("dev.lead", "A powerful SDK for building, deploying, and orchestrating AI agents. Define behaviors in code or natural language.")}
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (

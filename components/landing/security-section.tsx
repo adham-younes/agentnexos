@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Shield, Lock, Eye, FileCheck } from "lucide-react";
-import { useIsRtl, useT } from "@/lib/i18n/use-t";
+import { useT } from "@/lib/i18n/use-t";
 
 const securityFeatures = [
   {
@@ -39,7 +39,6 @@ const certifications = ["SOC 2", "ISO 27001", "HIPAA", "GDPR"];
 
 export function SecuritySection() {
   const t = useT();
-  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
@@ -120,13 +119,11 @@ export function SecuritySection() {
               <div className="mt-8">
                 <span className="text-7xl lg:text-8xl font-display">0</span>
                 <span className="block text-muted-foreground mt-2">
-                  {isRtl ? t("security.integrityTitle", "Execution integrity") : "Security incidents this year"}
+                  {t("security.integrityTitle", "Execution integrity")}
                 </span>
-                {isRtl && (
-                  <span className="block text-xs text-muted-foreground/70 mt-1 max-w-xs">
-                    {t("security.integrityNote", "")}
-                  </span>
-                )}
+                <span className="block text-xs text-muted-foreground/70 mt-1 max-w-xs">
+                  {t("security.integrityNote", "Certifications are on the roadmap.")}
+                </span>
               </div>
             </div>
             
@@ -140,7 +137,7 @@ export function SecuritySection() {
                   }`}
                   style={{ transitionDelay: `${index * 100 + 300}ms` }}
                 >
-                  {isRtl ? `${cert} · ${t("security.complianceNote", "")}` : cert}
+                  {cert} · {t("security.complianceNote", "Roadmap")}
                 </span>
               ))}
             </div>
