@@ -49,6 +49,19 @@ Open [http://localhost:3000](http://localhost:3000).
 | `pnpm lint` | فحص ESLint |
 | `pnpm typecheck` | فحص TypeScript |
 
+### هوية الالتزام (مهمة للنشر)
+
+خطة Vercel Hobby + مستودع خاص ⇒ **النشر التلقائي يتطلب أن يكون إيميل مؤلف الالتزام
+عضوًا في فريق Vercel**. الهوية مضبوطة على مستوى المستودع:
+
+```bash
+git config user.name  "adham younes"
+git config user.email "adham@adham-agritech.com"
+```
+
+بديل التجاوز عند الحاجة: النشر المباشر عبر واجهة Vercel — راجع
+[`docs/deployment-verification.md`](./docs/deployment-verification.md).
+
 ---
 
 ## متغيرات البيئة | Environment variables
