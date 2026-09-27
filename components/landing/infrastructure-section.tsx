@@ -157,6 +157,11 @@ export function InfrastructureSection() {
                   {t("infra.illustrative", "")}
                 </p>
               )}
+              {!isRtl && (
+                <p className="text-xs font-mono text-muted-foreground/70 mt-3">
+                  Illustrative figures — roadmap.
+                </p>
+              )}
             </div>
           </div>
 

@@ -3,11 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useIsRtl, useT } from "@/lib/i18n/use-t";
+import { useT } from "@/lib/i18n/use-t";
 
 export function CtaSection() {
   const t = useT();
-  const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,13 +55,11 @@ export function CtaSection() {
                 <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
                   {t("cta.title1", "Ready to delegate")}
                   <br />
-                  {isRtl ? t("cta.title2", "") : "to AI agents?"}
+                  {t("cta.title2", "to AI agents?")}
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  {isRtl
-                    ? t("cta.lead", "")
-                    : "Join teams automating complex workflows with COMPUTE agents. Deploy your first agent in minutes."}
+                  {t("cta.lead", "Join teams automating complex workflows with Agentnexos agents. Deploy your first agent in minutes.")}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -83,7 +80,7 @@ export function CtaSection() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  {isRtl ? t("cta.free", "") : "1,000 free tasks with COMPUTE"}
+                  {t("cta.free", "1,000 free tasks with Agentnexos")}
                 </p>
               </div>
 
