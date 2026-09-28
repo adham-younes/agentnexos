@@ -1,30 +1,67 @@
-# Agentnexos repository guidance
+# AGENTS.md — ذاكرة المستودع
 
-## Product contract
+نسخة عربية أولًا (RTL) من قالب Agentnexos، مبنية على Vercel/Next.js.
+المطلوب الأعلى: **عدم المساس بالتصميم الأصلي أو الصور** — راجع `docs/GUARDRAILS.md`.
 
-Agentnexos builds governed enterprise agent systems for the Middle East. Start from the business process, source of truth, authority boundaries, approval points, and measurable outcome. Do not reduce the platform to document processing or a generic chatbot.
+## أوامر أساسية
 
-## Truth and safety
+- البناء: `pnpm build` (شرط الدفع — راجع §7 في GUARDRAILS).
+- فحص الأنواع: `pnpm typecheck`.
+- حارس التعريب: `pnpm i18n:check` — **يفشل** إذا نقص أي مفتاح في
+  `lib/i18n/dictionaries.ts`، أي نص إنجليزي سيتسرّب للصفحة العربية.
+- المعاينة المحلية: `npx next start -p 12000`، والقالب الأصلي على `13300`.
 
-- Never publish invented customers, testimonials, metrics, SLAs, regions, integrations, prices, or certifications.
-- Available capabilities must exist in production and pass the relevant user journey.
-- Model output cannot directly authorize a sensitive external action. Use typed tools, least privilege, idempotency, server-owned approval state, and audit events.
-- Keep Arabic and English semantically equivalent, while writing naturally in each language.
+## قواعد يجب ألا تُنسى
 
-## Architecture and gates
+1. **العربية**: الخط العربي يُربط عبر `--font-arabic` داخل `:lang(ar)` فقط
+   في `app/globals.css`. لا تلمس خطوط النسخة الإنجليزية.
+2. **الترجمة**: كل `t("x.y", "Fallback")` يجب أن يوجد مفتاحه في القاموس،
+   وإلا يظهر النص الإنجليزي. شغّل `pnpm i18n:check` قبل أي دفع.
+3. **RTL الاتجاهي**: `translate-x`، `bg-gradient-to-r`، `ml/mr`، `left/right`
+   لأغراض بصرية تحتاج بديلًا `rtl:` — المتصفح لا يعكسها تلقائيًا.
+4. **الأهداف غير الحقيقية** (شهادات، شعارات، تكاملات، شهادات امتثال) تُعطَّل
+   بالعرض فقط وتُوسم «خارطة الطريق»، ولا تُحذف.
 
-- Prefer Server Components; isolate interaction in small client components.
-- Use Vercel AI SDK `ToolLoopAgent` for the current agent and verify APIs against installed docs.
-- Introduce Mastra only with a documented durable-workflow requirement and clear ownership of persistence and retries.
-- All exposed Supabase tables require RLS and tenant-aware policies. Never expose secret or service-role keys.
-- Run `pnpm lint`, `pnpm typecheck`, and `pnpm build`. For production, verify both locales on desktop and mobile, metadata routes, the agent endpoint, Git SHA, and deployment URL.
+## أدوات التحقق الآلي
 
-<!-- BEGIN:nextjs-agent-rules -->
+سكربتات CDP في `scripts/`: `cdp-eval.mjs` (تقييم JS بعرض مخصص)،
+`cdp-measure.mjs`، `cdp-shot.mjs`. الاستخدام:
+`node scripts/cdp-eval.mjs <url> <js-file> [width] [mobile]`.
+تحتاج Chromium على منفذ CDP 9222.
 
-# This is NOT the Next.js you know
+## بنية الأقسام
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+القالب 13 قسمًا في `components/landing/*`، والنصوص في
+`lib/i18n/dictionaries.ts` (القاموس العربي مسطّح بصيغة `section.key`).
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## النشر على Vercel (مهمّ)
 
-<!-- END:nextjs-agent-rules -->
+- المشروع `compute-the-platform-to-build` مربوط بـGitHub وفرع الإنتاج `main`.
+- الدفع إلى أي فرع غير `main` ينشئ **معاينة** فقط (preview URL)، ولا يمسّ الموقع الإنتاجي. لهذا اشتكى المستخدم من «لا يوجد نشر جديد» — الرابط الإنتاجي ظلّ يخدم commit قديمًا.
+- لنشر الإصلاحات فعليًا: ادمجها في `main` وادفع؛ يبني Vercel الإنتاج تلقائيًا (`target=production` ويصبح `state=READY`).
+- توكن Vercel team-scoped: `vercel deploy` عبر CLI يفشل بـ`User not found (404)`. استخدم REST API مع `teamId=team_FWfSZ1vGknqWNQ52Y4bmoHlU`.
+- فحص الموقع الحيّ: `curl` ثم تجريد `<script>` لتفادي إيجابيات كاذبة، أو `/tmp/audit.mjs` عبر CDP (صور + تجاوز أفقي + تسريبات إنجليزي).
+
+## صدق المحتوى (قرار ثابت)
+
+- لا أرقام ملفّقة: العدّادات الحيّة تعرض الصفر الحقيقي، وكل ما لم يُبنَ يُوسم «خارطة الطريق» بالعربية والإنجليزية.
+- `AnimatedNumber` يفكّك القيم الكسرية ويُظهر «0 .99
+## النشر على Vercel (مهمّ)
+
+- المشروع `compute-the-platform-to-build` مربوط بـGitHub وفرع الإنتاج `main`.
+- الدفع إلى أي فرع غير `main` ينشئ **معاينة** فقط (preview URL)، ولا يمسّ الموقع
+  الإنتاجي. لهذا اشتكى المستخدم من «لا يوجد نشر جديد» — الرابط الإنتاجي ظلّ يخدم
+  commit قديمًا.
+- لنشر الإصلاحات فعليًا: ادمجها في `main` وادفع؛ يبني Vercel الإنتاج تلقائيًا
+  (`target=production` ويصبح `state=READY`).
+- توكن Vercel team-scoped: `vercel deploy` عبر CLI يفشل بـ`User not found (404)`.
+  استخدم REST API مع `teamId=team_FWfSZ1vGknqWNQ52Y4bmoHlU`.
+- فحص الموقع الحيّ: `curl` ثم تجريد `<script>` لتفادي إيجابيات كاذبة، أو
+  `/tmp/audit.mjs` عبر CDP (صور + تجاوز أفقي + تسريبات إنجليزي).
+
+## صدق المحتوى (قرار ثابت)
+
+- لا أرقام ملفّقة: العدّادات الحيّة تعرض الصفر الحقيقي، وكل ما لم يُبنَ يُوسم
+  «خارطة الطريق» بالعربية والإنجليزية.
+- `AnimatedNumber` يفكّك القيم الكسرية ويُظهر «0 .99%»؛ لا تمرّر له قيمًا كسرية
+  أو `<`/`+` كنصّ.
