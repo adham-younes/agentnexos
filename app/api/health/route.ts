@@ -1,0 +1,1 @@
+export function GET() { return Response.json({ status:"ok", service:"agentnexos-web", release:process.env.VERCEL_GIT_COMMIT_SHA?.slice(0,7) ?? "local", time:new Date().toISOString() }, { headers:{"Cache-Control":"no-store"} }); }

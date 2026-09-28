@@ -1,0 +1,43 @@
+import type { Locale } from "./i18n/config";
+
+const content = {
+  ar: {
+    nav: ["المنصة", "الحلول", "القطاعات", "الأمان"], navIds: ["platform", "solutions", "industries", "security"],
+    badge: "منصة هندسة أنظمة وكيلة للمؤسسات", title: "ابنِ نظامًا وكيلاً يفهم عملك، وينفّذ داخله.",
+    intro: "Agentnexos تصمّم وتبني وتشغّل أنظمة وكلاء مخصّصة للمؤسسات في الشرق الأوسط. نحوّل العمليات المتكررة والمعرفة المبعثرة إلى سير عمل قابل للقياس، بموافقات بشرية وسجل تنفيذ واضح.",
+    primary: "جرّب Agentnexos", secondary: "استكشف المنصة", status: "نسخة تجريبية حية",
+    proof: ["عربي وإنجليزي أصليان", "صلاحيات قبل التنفيذ", "سجل لكل خطوة"],
+    platformKicker: "طبقة تشغيل للأعمال", platformTitle: "ليس روبوت محادثة. نظام عمل متكامل.",
+    platformBody: "نبدأ من العملية والقرار ومصدر الحقيقة، ثم نختار النموذج والأدوات. الوكيل يقرأ السياق المصرح به، يقترح خطة، ينفّذ الأدوات المحددة، ويتوقف عند نقاط الموافقة.",
+    layers: [["01", "فهم العمل", "نحوّل الإجراء التشغيلي إلى حالات وقواعد وحدود نجاح واضحة."],["02", "المعرفة والسياق", "نربط المستندات والأنظمة والبيانات دون إرسال ما لا تحتاجه المهمة."],["03", "التنفيذ والأدوات", "أدوات ضيقة الصلاحية لقراءة الأنظمة وإنشاء المسودات وتنفيذ الأفعال المصرح بها."],["04", "الحوكمة والرصد", "موافقات، آثار تدقيق، قياس تكلفة، واختبارات تمنع الإغلاق دون تحقق."]],
+    solutionsKicker: "حلول تبدأ من مشكلة حقيقية", solutionsTitle: "من العملية اليدوية إلى تشغيل مضبوط.",
+    solutions: [["عمليات المبيعات", "تأهيل الطلبات، تجهيز عروض أولية، تحديث CRM، ومتابعة الاستثناءات."],["المشتريات والعقود", "تجميع متطلبات، مقارنة عروض، كشف مخاطر، ومسارات موافقة قابلة للتدقيق."],["خدمة العملاء", "فهم العربية واللهجات، استرجاع معرفة مصرح بها، وتنفيذ أو تصعيد مع سياق كامل."],["العمليات الداخلية", "ربط البريد والملفات والأنظمة وتحويل كل حالة إلى خطوات ونتيجة قابلة للقياس."]],
+    industriesKicker: "مصممة للمنطقة", industriesTitle: "عربية في البيانات، محلية في القيود، مؤسسية في التشغيل.",
+    industries: ["الخدمات المالية", "الحكومة والخدمات العامة", "التجزئة والتوزيع", "العقارات والإنشاءات", "الصناعة واللوجستيات", "الخدمات المهنية"],
+    securityKicker: "التحكم قبل الاستقلالية", securityTitle: "الوكيل لا يملك صلاحية مطلقة.",
+    securityBody: "كل أداة لها مدخلات محددة، وصلاحية، وحد تكلفة، وسياسة موافقة. البيانات غير الموثوقة تُعامل كبيانات لا كتعليمات، والأفعال الحساسة لا تمر من النموذج مباشرة إلى نظام الإنتاج.",
+    securityItems: ["أقل صلاحية ممكنة", "موافقة بشرية للأفعال الحساسة", "عزل بيانات كل مؤسسة", "إعادة محاولة محدودة وتسوية", "سجل أحداث قابل للفحص", "تقييمات قبل كل إصدار"],
+    agentKicker: "Agentnexos 01", agentTitle: "وكيل تجريبي لتحليل العمليات وبناء مسودة أتمتة.",
+    agentBody: "صف عملية داخل مؤسستك. سيحدد الهدف، المدخلات، الأنظمة، المخاطر، نقاط الموافقة، ومؤشرات القياس. لن ينفّذ فعلًا خارجيًا في هذه المرحلة.", footer: "هندسة أنظمة وكيلة للمؤسسات في الشرق الأوسط.",
+  },
+  en: {
+    nav: ["Platform", "Solutions", "Industries", "Security"], navIds: ["platform", "solutions", "industries", "security"],
+    badge: "Enterprise agent systems for MENA", title: "Build an agent system that understands your operation—and works inside it.",
+    intro: "Agentnexos designs, builds, and operates custom agent systems for Middle East enterprises. We turn repetitive work and fragmented knowledge into measurable workflows with human approvals and inspectable execution.",
+    primary: "Try Agentnexos", secondary: "Explore the platform", status: "Live experimental release",
+    proof: ["Native Arabic and English", "Authority before action", "A trace for every step"],
+    platformKicker: "An operating layer for work", platformTitle: "Not a chatbot. A governed work system.",
+    platformBody: "We start with the business process, decision rights, and source of truth—then select models and tools. The agent reads authorized context, proposes a plan, uses bounded tools, and stops at approval gates.",
+    layers: [["01", "Business model", "Turn the operating procedure into explicit states, rules, and success conditions."],["02", "Knowledge and context", "Connect documents, systems, and data without flooding each task with irrelevant context."],["03", "Execution and tools", "Least-privilege tools to read systems, create drafts, and perform authorized actions."],["04", "Governance and evidence", "Approvals, audit events, cost measures, and release evaluations before completion."]],
+    solutionsKicker: "Start with a real constraint", solutionsTitle: "From manual handoffs to controlled execution.",
+    solutions: [["Sales operations", "Qualify requests, prepare first drafts, update CRM, and manage exceptions."],["Procurement and contracts", "Structure requirements, compare bids, flag risks, and route approvals."],["Customer operations", "Understand Arabic and dialects, retrieve authorized knowledge, execute or escalate with context."],["Internal operations", "Connect inboxes, files, and systems; turn every case into steps and a measurable outcome."]],
+    industriesKicker: "Built for the region", industriesTitle: "Arabic in the data. Local in constraints. Enterprise in operation.",
+    industries: ["Financial services", "Government and public services", "Retail and distribution", "Real estate and construction", "Industry and logistics", "Professional services"],
+    securityKicker: "Control before autonomy", securityTitle: "The agent never receives unlimited authority.",
+    securityBody: "Every tool has a schema, permission, cost ceiling, and approval policy. Untrusted content remains data—not instructions—and sensitive actions never flow directly from a model into production systems.",
+    securityItems: ["Least privilege", "Human approval for sensitive actions", "Tenant data isolation", "Bounded retries and reconciliation", "Inspectable event history", "Pre-release evaluations"],
+    agentKicker: "Agentnexos 01", agentTitle: "An experimental agent for process analysis and automation blueprints.",
+    agentBody: "Describe an operation in your organization. It will identify the outcome, inputs, systems, risks, approval gates, and metrics. It will not perform external actions in this phase.", footer: "Enterprise agent systems engineered for the Middle East.",
+  },
+} as const;
+export function getSiteContent(locale: Locale) { return content[locale]; }

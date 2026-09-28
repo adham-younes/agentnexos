@@ -1,101 +1,31 @@
 # Agentnexos
 
-**Where agents connect. / حيث يتواصل الوكلاء.**
+Agentnexos is an Arabic and English platform for designing governed enterprise agent systems for organizations in the Middle East. The product starts from a business process, source of truth, authority model, and measurable outcome—not from a generic chatbot.
 
-منصة عربية-أولًا لمعالجة المستندات بخطوات قابلة للتتبّع: استخراج، وتحقّق، ومراجعة،
-ثم تصدير بموافقتك.
+## Phase 1 release
 
-An Arabic-first platform for extracting, checking, and reviewing document data,
-with your approval before export.
+- A rebuilt bilingual website with truthful positioning, symmetric responsive layout, and no fabricated customers, metrics, integrations, prices, or certifications.
+- Agentnexos 01, a Vercel AI SDK `ToolLoopAgent` that turns an operational description into a typed automation blueprint. It is analysis-only in this release.
+- A Supabase foundation migration for tenants, memberships, workflow blueprints, runs, events, approvals, tool executions, and audit records with RLS.
+- Health, robots, sitemap, release SHA, security headers, lint, typecheck, and production build gates.
 
-> **حالة المشروع:** قيد التنفيذ على مراحل. راجع [`docs/ROADMAP.md`](./docs/ROADMAP.md)
-> للخطة، و [`docs/GUARDRAILS.md`](./docs/GUARDRAILS.md) لقواعد عدم المساس بالتصميم.
+## Stack and development
 
----
-
-## This project is linked to v0
-
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by
-visiting the link below — start new chats to make changes, and v0 will push commits directly to
-this repo. Every merge to `main` will automatically deploy.
-
-[Continue working on v0 →](https://v0.app/chat/projects/prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf)
-
-> **ملاحظة:** المراحل المنفَّذة هنا تُبنى على فرعها (`phase-N-*`) ولا تُدفع مباشرة إلى `main`.
-
----
-
-## الصفحات الحالية | Current pages
-
-المرحلة 1 تثبّت الأساس فقط. الموقع الحالي هو **القالب** (بالإنجليزية) بصفحة هبوط واحدة
-تضم 13 قسمًا. الصفحات العربية/الإنجليزية والبقية تُضاف في المرحلة 2 و3.
-
-## Getting Started
+Next.js 16, React 19, TypeScript, Vercel AI SDK and AI Gateway, and Supabase/Postgres.
 
 ```bash
 pnpm install
+cp .env.example .env.local
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Set `AI_GATEWAY_API_KEY` for local model calls. Then run `pnpm lint`, `pnpm typecheck`, and `pnpm build`. Verify `/ar`, `/en`, `/api/health`, `robots.txt`, `sitemap.xml`, responsive layouts, and the agent request flow before promotion.
 
-### Scripts
+## Documentation
 
-| الأمر | الوظيفة |
-|---|---|
-| `pnpm dev` | خادم التطوير |
-| `pnpm build` | بناء إنتاجي |
-| `pnpm start` | تشغيل البناء |
-| `pnpm lint` | فحص ESLint |
-| `pnpm typecheck` | فحص TypeScript |
+- [Phase 1 release record](docs/releases/phase-1-foundation.md)
+- [MENA market content research](docs/research/mena-agent-platforms.md)
+- [Upgrade plan](docs/UPGRADE-PLAN.md)
+- [Content and product guardrails](docs/GUARDRAILS.md)
 
-### هوية الالتزام (مهمة للنشر)
-
-خطة Vercel Hobby + مستودع خاص ⇒ **النشر التلقائي يتطلب أن يكون إيميل مؤلف الالتزام
-عضوًا في فريق Vercel**. الهوية مضبوطة على مستوى المستودع:
-
-```bash
-git config user.name  "adham younes"
-git config user.email "adham@adham-agritech.com"
-```
-
-بديل التجاوز عند الحاجة: النشر المباشر عبر واجهة Vercel — راجع
-[`docs/deployment-verification.md`](./docs/deployment-verification.md).
-
----
-
-## متغيرات البيئة | Environment variables
-
-انسخ `.env.example` إلى `.env.local` واملأ القيم، أو اضبطها من لوحة Vercel.
-**لا تُحفظ أي قيم سرية في المستودع.**
-
-| المتغيّر | النطاق | الاستخدام |
-|---|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | عام | عنوان مشروع Supabase |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | عام | مفتاح النشر |
-| `SUPABASE_SECRET_KEY` | **سري** | عمليات الخادم |
-| `NEXT_PUBLIC_SITE_URL` | عام | العنوان الأساسي |
-| `GROQ_API_KEY` / `GROQ_API_KEY1` / `GROQ_API_KEY2` | **سري** | طبقة لغوية اختيارية |
-| `NEXT_PUBLIC_SHOW_PLACEHOLDER_SECTIONS` | عام | إظهار/إخفاء أقسام القالب غير المتحقّقة |
-
-**مهم:** المسار الحتمي يعمل **بلا أي مفتاح نموذج**. مفاتيح Groq **اختيارية**
-وتُقرأ من بيئة Vercel فقط.
-
-التحقق من الحالة (بلا طباعة قيم) عبر `describeEnv()` في [`lib/env.ts`](./lib/env.ts).
-
----
-
-## Deployment smoke test
-
-Use a documentation-only change on a dedicated branch to verify GitHub write access and a Vercel
-Preview deployment before changing application code.
-
-**ملاحظة تشغيلية:** النشر الإنتاجي الحالي محجوب بـVercel Deployment Protection. الفحص الآلي
-يحتاج **Protection Bypass Secret** من Settings → Deployment Protection.
-
----
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [v0 Documentation](https://v0.app/docs)
+Capabilities described as available must exist in the deployed artifact and pass a user-journey test. Planned integrations, compliance work, pricing, and customer proof remain explicitly planned until verifiable.

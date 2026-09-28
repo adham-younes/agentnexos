@@ -17,4 +17,7 @@ next.user-config.*
 node_modules
 .next/
 *.tsbuildinfo
+.playwright-cli/
+output/
+supabase/.temp/
 .DS_Store
