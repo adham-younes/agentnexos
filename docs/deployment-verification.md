@@ -80,6 +80,16 @@ curl -s -X POST \
 | 2026-09-27 | `main` | `6bdc3fe` | READY (تلقائي) | `...six-fawn.vercel.app` |
 | 2026-09-27 | `phase-1-foundation` | `1406082` | **BLOCKED** (تلقائي — مؤلف غير عضو) | — |
 | 2026-09-27 | `phase-1-foundation` | `1406082` | **READY** (نشر مباشر) ✅ | `compute-the-platform-to-build-six-fawn.vercel.app` |
+| 2026-09-28 | `main` | `f0c4f4c` | **READY ثم ملغى** — غيّر القالب خلاف النطاق | `compute-the-platform-to-build-six-fawn.vercel.app` |
+| 2026-09-28 | `main` | `308c95a` | **READY** — استرجاع القالب السابق ✅ | `compute-the-platform-to-build-six-fawn.vercel.app` |
+
+### حادثة 2026-09-28
+
+نُشرت محاولة مرحلة أولى غيّرت القالب بدل تطويره. أُلغيت فورًا عبر `git revert`
+ودُفع الالتزام `308c95a` إلى `main`. أبلغ GitHub عن نجاح حالة Vercel، ثم أُعيد
+فحص رابط الإنتاج وتأكد ظهور محتوى القالب السابق. التفاصيل والضوابط التصحيحية في
+[`CHANGELOG-2026-09-28.md`](./CHANGELOG-2026-09-28.md)، والخطة المصححة في
+[`EXECUTION-PLAN-2026-09-28.md`](./EXECUTION-PLAN-2026-09-28.md).
 
 ---
 
