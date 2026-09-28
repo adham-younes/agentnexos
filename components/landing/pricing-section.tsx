@@ -58,14 +58,14 @@ export function PricingSection() {
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-8">
               <span className="w-12 h-px bg-foreground/30" />
-              {t("pricing.eyebrow", "Pricing")}
+              {t("pricing.eyebrow", "Engagement model")}
             </span>
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              {t("pricing.title1", "Pay for")}
+              {t("pricing.title1", "Start with one workflow,")}
               <br />
-              <span className="text-stroke">{t("pricing.title2", "results.")}</span>
+              <span className="text-stroke">{t("pricing.title2", "build with confidence.")}</span>
             </h2>
           </div>
 
@@ -84,7 +84,7 @@ export function PricingSection() {
 
         {!showPlaceholders ? (
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            {t("pricing.roadmapNote", "")}
+            {t("pricing.roadmapNote", "We begin with discovery, move to a bounded pilot with explicit success criteria, then deploy in measured production stages. Scope and cost follow the systems, risks, and integrations involved.")}
           </p>
         ) : (
           <>
@@ -190,7 +190,7 @@ export function PricingSection() {
                   {t("metrics.routing", "")}
                 </span>
               </div>
-              <a href="#" className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">
+              <a href="#contact" className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">
                 {t("pricing.compare", "Compare all features")}
               </a>
             </div>

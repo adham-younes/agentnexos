@@ -19,15 +19,15 @@ const metrics: Metric[] = [
     suffix: "",
     prefix: "",
     labelKey: "metrics.m1",
-    label: "Documents processed today",
+    label: "Verified production runs",
   },
   { 
     labelKey: "metrics.m2",
-    label: "Availability",
+    label: "Outcome quality",
   },
   { 
     labelKey: "metrics.m3",
-    label: "Average execution",
+    label: "Workflow cycle time",
   },
 ];
 
@@ -267,7 +267,7 @@ export function MetricsSection() {
             }`}>
               {t("metrics.realtime", "Real-time")}
               <br />
-              <span className="text-muted-foreground">{t("metrics.title", "agent metrics.")}</span>
+              <span className="text-muted-foreground">{t("metrics.title", "workflow success metrics.")}</span>
             </h2>
           </div>
         </div>

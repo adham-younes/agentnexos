@@ -7,9 +7,9 @@ const steps = [
   {
     number: "01",
     key: "how.step1",
-    title: "Define",
-    subtitle: "your agent",
-    description: "Describe what your agent should do. Set its capabilities, constraints, and goals in natural language or code.",
+    title: "Discover",
+    subtitle: "the workflow",
+    description: "Map the process, systems, decision points, risks, and the result the business needs.",
     code: `const researcher = new Agent({
   role: 'Document Analyst',
   capabilities: ['extract', 'validate', 'export'],
@@ -20,9 +20,9 @@ const steps = [
   {
     number: "02",
     key: "how.step2",
-    title: "Assign",
-    subtitle: "the task",
-    description: "Give your agent a mission. It breaks down complex tasks into steps and executes them autonomously.",
+    title: "Build",
+    subtitle: "the system",
+    description: "Design the agents, tools, memory, policies, integrations, and approval gates around that workflow.",
     code: `await researcher.execute({
   task: 'Extract invoice line items',
   source: 'uploaded-document',
@@ -33,9 +33,9 @@ const steps = [
   {
     number: "03",
     key: "how.step3",
-    title: "Monitor",
-    subtitle: "& scale",
-    description: "Track progress in real-time. Spin up more agents as needed. Pay only for compute used.",
+    title: "Operate",
+    subtitle: "with control",
+    description: "Deploy in measured stages, observe every run, evaluate outcomes, and improve from real operating data.",
     code: `console.watch({
   agents: [researcher],
   metrics: ['steps', 'latency'],
@@ -85,16 +85,16 @@ export function HowItWorksSection() {
             <div className={`transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 rtl:translate-x-12 opacity-0"}`}>
               <span className="inline-flex items-center gap-3 text-sm font-mono text-white/40 mb-8">
                 <span className="w-12 h-px bg-white/20" />
-                {t("how.eyebrow", "Process")}
+                {t("how.eyebrow", "Delivery process")}
               </span>
             </div>
             
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">{t("how.title1", "Define.")}</span>
-              <span className="block text-white/30">{t("how.title2", "Deploy.")}</span>
-              <span className="block text-white/10">{t("how.title3", "Scale.")}</span>
+              <span className="block">{t("how.title1", "Discover.")}</span>
+              <span className="block text-white/30">{t("how.title2", "Build.")}</span>
+              <span className="block text-white/10">{t("how.title3", "Operate.")}</span>
             </h2>
           </div>
 

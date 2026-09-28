@@ -6,23 +6,23 @@ import { useT } from "@/lib/i18n/use-t";
 const features = [
   {
     key: "dev.1",
-    title: "TypeScript native",
-    description: "Full type safety for agent configs and responses."
+    title: "Explicit tool contracts",
+    description: "Testable inputs, outputs, and permissions for every tool."
   },
   {
     key: "dev.2",
-    title: "Streaming results",
-    description: "Watch your agents think and act in real-time."
+    title: "Traceable state",
+    description: "Every step, decision, and result leaves a reviewable event."
   },
   {
     key: "dev.3",
-    title: "Multi-model support",
-    description: "OpenAI, Anthropic, Mistral, or bring your own."
+    title: "Model flexibility",
+    description: "Choose by quality, cost, and policy without binding business logic to one provider."
   },
   {
     key: "dev.4",
-    title: "Local debugging",
-    description: "Test agents locally before deploying to cloud."
+    title: "Pre-production evaluation",
+    description: "Acceptance scenarios measure behaviour before expansion."
   },
 ];
 
@@ -74,23 +74,23 @@ export function DevelopersSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            {t("dev.eyebrow", "Developer SDK")}
+            {t("dev.eyebrow", "Agent engineering")}
           </span>
           <h2 className="text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9]">
-            {t("dev.title1", "Code your agents.")}
+            {t("dev.title1", "Explicit logic.")}
             <br />
-            <span className="text-muted-foreground">{t("dev.title2", "Or let them code.")}</span>
+            <span className="text-muted-foreground">{t("dev.title2", "Observable operation.")}</span>
           </h2>
         </div>
 
         {/* Description + Features — left half only */}
         <div
-          className={`max-w-[50%] transition-all duration-700 delay-100 ${
+          className={`max-w-full lg:max-w-[50%] transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            {t("dev.lead", "A powerful SDK for building, deploying, and orchestrating AI agents. Define behaviors in code or natural language.")}
+            {t("dev.lead", "We engineer each system with explicit tool contracts, traceable state, execution policies, and evaluations that gate production.")}
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (

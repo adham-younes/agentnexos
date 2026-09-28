@@ -35,7 +35,12 @@ const securityFeatures = [
   },
 ];
 
-const certifications = ["SOC 2", "ISO 27001", "HIPAA", "GDPR"];
+const controlPrinciples = [
+  { key: "security.control.leastPrivilege", label: "Least privilege" },
+  { key: "security.control.humanApproval", label: "Human approval" },
+  { key: "security.control.auditEvents", label: "Audit events" },
+  { key: "security.control.isolation", label: "Isolation" },
+];
 
 export function SecuritySection() {
   const t = useT();
@@ -117,7 +122,7 @@ export function SecuritySection() {
             <div className="relative z-10">
               <span className="font-mono text-sm text-muted-foreground">{t("security.active", "Active protection")}</span>
               <div className="mt-8">
-                <span className="text-7xl lg:text-8xl font-display">0</span>
+                <span className="text-7xl lg:text-8xl font-display">04</span>
                 <span className="block text-muted-foreground mt-2">
                   {t("security.integrityTitle", "Execution integrity")}
                 </span>
@@ -129,15 +134,15 @@ export function SecuritySection() {
             
             {/* Certification badges */}
             <div className="absolute bottom-8 left-8 right-8 flex flex-wrap gap-2">
-              {certifications.map((cert, index) => (
+              {controlPrinciples.map((principle, index) => (
                 <span
-                  key={cert}
+                  key={principle.key}
                   className={`px-3 py-1 border border-foreground/10 text-xs font-mono text-muted-foreground transition-all duration-500 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                   }`}
                   style={{ transitionDelay: `${index * 100 + 300}ms` }}
                 >
-                  {cert} · {t("security.complianceNote", "Roadmap")}
+                  {t(principle.key, principle.label)} · {t("security.complianceNote", "design principle")}
                 </span>
               ))}
             </div>

@@ -6,27 +6,27 @@ import { useT } from "@/lib/i18n/use-t";
 const features = [
   {
     number: "01",
-    title: "Autonomous Execution",
-    description: "Deploy AI agents that work independently. They analyze, decide, and execute complex multi-step tasks without human intervention.",
-    stats: { value: "01", label: "Roadmap" },
+    title: "Workflow intelligence",
+    description: "Turn operating procedures into clear agent steps, decisions, tools, and human approval points.",
+    stats: { value: "01", label: "Discover" },
   },
   {
     number: "02",
-    title: "Distributed Computing",
-    description: "Offload compute-heavy tasks to our global network. Your agents run on optimized infrastructure across 50+ regions worldwide.",
-    stats: { value: "02", label: "Roadmap" },
+    title: "Custom agent systems",
+    description: "Build specialised agents around your teams, data boundaries, language, and business rules.",
+    stats: { value: "02", label: "Build" },
   },
   {
     number: "03",
-    title: "Multi-Agent Orchestration",
-    description: "Coordinate teams of specialized agents. They communicate, delegate, and collaborate to solve complex problems together.",
-    stats: { value: "03", label: "Roadmap" },
+    title: "Tools and integrations",
+    description: "Connect agents to approved business systems so they can retrieve context and execute real work.",
+    stats: { value: "03", label: "Connect" },
   },
   {
     number: "04",
-    title: "Secure Sandboxing",
-    description: "Each agent runs in isolated environments. Full audit trails, encrypted execution, and zero data leakage between tasks.",
-    stats: { value: "04", label: "Roadmap" },
+    title: "Controlled operations",
+    description: "Add permissions, evaluations, audit events, and human review where operational risk requires them.",
+    stats: { value: "04", label: "Operate" },
   },
 ];
 

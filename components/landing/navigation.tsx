@@ -27,6 +27,20 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
       className={`fixed z-50 transition-all duration-500 ${
@@ -48,7 +62,7 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#top" className="flex items-center gap-2 group">
             <span className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl text-foreground" : "text-2xl text-white"}`}>Agentnexos</span>
           </a>
 
@@ -69,14 +83,14 @@ export function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <LocaleSwitcher />
-            <a href="#" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
-              {t("nav.signIn", "Sign in")}
+            <a href="#how-it-works" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
+              {t("nav.signIn", "Our process")}
             </a>
-            <Button
+            <Button asChild
               size="sm"
               className={`rounded-full transition-all duration-500 ${isScrolled ? "bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs" : "bg-white hover:bg-white/90 text-black px-6"}`}
             >
-              {t("nav.deployAgent", "Deploy agent")}
+              <a href="#contact">{t("nav.deployAgent", "Start a project")}</a>
             </Button>
           </div>
 
@@ -85,6 +99,8 @@ export function Navigation() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-2 transition-colors duration-500 ${isScrolled || isMobileMenuOpen ? "text-foreground" : "text-white"}`}
             aria-label={t("nav.toggleMenu", "Toggle menu")}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -98,6 +114,8 @@ export function Navigation() {
 
       {/* Mobile Menu - Full Screen Overlay */}
       <div
+        id="mobile-navigation"
+        aria-hidden={!isMobileMenuOpen}
         className={`md:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto"
@@ -137,18 +155,16 @@ export function Navigation() {
                 viewport on narrow screens once a third item was added. */}
             <LocaleSwitcher />
             <div className="flex items-center gap-4 mt-4">
-              <Button
+              <Button asChild
                 variant="outline"
                 className="flex-1 rounded-full h-14 text-base"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t("nav.signIn", "Sign in")}
+                <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.signIn", "Our process")}</a>
               </Button>
-              <Button
+              <Button asChild
                 className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t("nav.deployAgent", "Deploy agent")}
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.deployAgent", "Start a project")}</a>
               </Button>
             </div>
           </div>

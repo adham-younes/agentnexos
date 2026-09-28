@@ -98,14 +98,14 @@ export function TestimonialsSection() {
           <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-background/40 mb-4">
               <span className="w-12 h-px bg-background/20" />
-              {t("testimonials.eyebrow", "Testimonials")}
+              {t("testimonials.eyebrow", "Success criteria")}
             </span>
             <h2
               className={`text-4xl lg:text-5xl font-display transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              {t("testimonials.title", "Trusted by teams worldwide.")}
+              {t("testimonials.title", "Business value you can measure.")}
             </h2>
           </div>
 
@@ -131,7 +131,7 @@ export function TestimonialsSection() {
 
         {!showPlaceholders ? (
           <p className="text-xl text-background/50 leading-relaxed max-w-2xl">
-            {t("testimonials.note", "")}
+            {t("testimonials.note", "Before we build, we define the workflow baseline and the quality, cycle-time, cost, and human-intervention measures. We only publish customer outcomes when they are verified.")}
           </p>
         ) : (
           <>

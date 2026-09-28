@@ -138,8 +138,8 @@ export function IntegrationsSection() {
         <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-100 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          {t("integrations.lead", "Your agents connect to the tools you already use — REST and Webhooks first. Autonomy across your stack is on the roadmap.")}{" "}
-          {t("integrations.leadRoadmap", "Roadmap")}
+          {t("integrations.lead", "We begin with the systems your workflow depends on, then add each integration with scoped permissions and explicit tests.")}{" "}
+          {t("integrations.leadRoadmap", "Logos illustrate possible integration categories, not ready-made connectors.")}
         </p>
       </div>
 
@@ -238,8 +238,8 @@ export function IntegrationsSection() {
             ))}
           </div>
 
-          <a href="#" className="group inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors">
-            {t("integrations.viewAll", "View all integrations")}
+          <a href="#contact" className="group inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors">
+            {t("integrations.viewAll", "Discuss your required systems")}
             <span className="group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180">&rarr;</span>
           </a>
         </div>

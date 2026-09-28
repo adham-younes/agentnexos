@@ -55,12 +55,15 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "Agentnexos — حيث يتواصل الوكلاء"
-      : "Agentnexos — Where agents connect",
+      ? "Agentnexos — أنظمة وكيلة للمؤسسات"
+      : "Agentnexos — Enterprise agent systems",
     description: isAr
-      ? "منصة عربية-أولًا لمعالجة المستندات: استخراج، وتحقّق، ومراجعة، ثم تصدير بموافقتك."
-      : "An Arabic-first platform for extracting, checking, and reviewing document data, with your approval before export.",
-    generator: "v0.app",
+      ? "نبني أنظمة وكلاء ذكاء اصطناعي مخصّصة للمؤسسات في الشرق الأوسط، لأتمتة العمليات وربط الأدوات وتشغيل العمل بضوابط واضحة."
+      : "We build custom AI agent systems for MENA enterprises to automate operations, connect tools, and run work with clear controls.",
+    icons: {
+      icon: "/icon.svg",
+      apple: "/apple-icon.png",
+    },
   };
 }
 

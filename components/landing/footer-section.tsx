@@ -14,27 +14,27 @@ const footerLinks = {
   ] },
   developers: { titleKey: "footer.sdk", title: "Developers", links: [
     { nameKey: "footer.docs", name: "Documentation", href: "#developers" },
-    { nameKey: "footer.sdk", name: "Agent SDK", href: "#" },
+    { nameKey: "footer.sdk", name: "Agent engineering", href: "#developers" },
     { nameKey: "footer.api", name: "API Reference", href: "#developers" },
-    { nameKey: "footer.status", name: "Status", href: "#" },
+    { nameKey: "footer.status", name: "Success criteria", href: "#pricing" },
   ] },
   company: { titleKey: "footer.company", title: "Company", links: [
-    { nameKey: "footer.about", name: "About", href: "#" },
-    { nameKey: "footer.blog", name: "Blog", href: "#" },
-    { nameKey: "footer.careers", name: "Careers", href: "#", badgeKey: "footer.hiring", badge: "Hiring" },
-    { nameKey: "footer.contact", name: "Contact", href: "#" },
+    { nameKey: "footer.about", name: "About", href: "#top" },
+    { nameKey: "footer.blog", name: "Architecture", href: "#infra" },
+    { nameKey: "footer.careers", name: "Delivery process", href: "#how-it-works" },
+    { nameKey: "footer.contact", name: "Contact", href: "#contact" },
   ] },
   legal: { titleKey: "footer.legal", title: "Legal", links: [
-    { nameKey: "footer.privacy", name: "Privacy", href: "#" },
-    { nameKey: "footer.terms", name: "Terms", href: "#" },
+    { nameKey: "footer.privacy", name: "Data boundaries", href: "#security" },
+    { nameKey: "footer.terms", name: "Controls", href: "#security" },
     { nameKey: "footer.security", name: "Security", href: "#security" },
   ] },
 };
 
 const socialLinks = [
-  { name: "Twitter", href: "#" },
-  { name: "GitHub", href: "#" },
-  { name: "LinkedIn", href: "#" },
+  { name: "Capabilities", href: "#features" },
+  { name: "Process", href: "#how-it-works" },
+  { name: "Security", href: "#security" },
 ];
 
 function AnimatedWaveCanvas() {
@@ -116,7 +116,7 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-2 mb-6">
+              <a href="#top" className="inline-flex items-center gap-2 mb-6">
                 <span className="text-2xl font-display text-white">
                   {t("footer.brand", "Agentnexos")}
                 </span>
@@ -124,7 +124,7 @@ export function FooterSection() {
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                {t("footer.tagline", "Autonomous AI agents for distributed computing. Delegate complex tasks to intelligent workers.")}
+                {t("footer.tagline", "Custom AI agent systems for MENA enterprises, built to automate real operations with explicit controls.")}
               </p>
 
               {/* Social Links */}
@@ -156,11 +156,6 @@ export function FooterSection() {
                         className="text-sm text-white/40 hover:text-white transition-colors inline-flex items-center gap-2"
                       >
                         {t(link.nameKey, link.name)}
-                        {"badge" in link && link.badge && (
-                          <span className="text-xs px-2 py-0.5 bg-white text-black rounded-full">
-                            {t(link.badgeKey, link.badge)}
-                          </span>
-                        )}
                       </a>
                     </li>
                   ))}
@@ -173,13 +168,13 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="py-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/30">
-            {t("footer.copyright", "\u00a9 2025 Agentnexos. All rights reserved.")}
+            {t("footer.copyright", "\u00a9 2026 Agentnexos. All rights reserved.")}
           </p>
 
           <div className="flex items-center gap-4 text-sm text-white/30">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#eca8d6]" />
-              {t("footer.operational", "All agents operational")}
+              {t("footer.operational", "Platform under staged development")}
             </span>
           </div>
         </div>

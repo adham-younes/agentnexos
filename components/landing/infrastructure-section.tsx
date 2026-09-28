@@ -4,10 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const regions = [
-  { nameKey: "infra.region.na", name: "North America", nodes: 12, status: "operational" },
-  { nameKey: "infra.region.eu", name: "Europe", nodes: 8, status: "operational" },
-  { nameKey: "infra.region.apac", name: "Asia Pacific", nodes: 6, status: "operational" },
-  { nameKey: "infra.region.sa", name: "South America", nodes: 3, status: "operational" },
+  { nameKey: "infra.region.na", name: "Model layer", detailKey: "infra.detail.models", detail: "Provider-flexible", status: "designed per project" },
+  { nameKey: "infra.region.eu", name: "Tool layer", detailKey: "infra.detail.tools", detail: "Permission-scoped", status: "designed per project" },
+  { nameKey: "infra.region.apac", name: "Memory layer", detailKey: "infra.detail.memory", detail: "Policy-bound", status: "designed per project" },
+  { nameKey: "infra.region.sa", name: "Observability", detailKey: "infra.detail.observability", detail: "Evaluation-ready", status: "designed per project" },
 ];
 
 export function InfrastructureSection() {
@@ -47,7 +47,7 @@ export function InfrastructureSection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <span className="w-12 h-px bg-foreground/20" />
-            {t("infra.eyebrow", "Global infrastructure")}
+            {t("infra.eyebrow", "Operating architecture")}
           </span>
           
           <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-stretch">
@@ -67,15 +67,15 @@ export function InfrastructureSection() {
               <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}>
-                {t("infra.title1", "Global by")}
+                {t("infra.title1", "Flexible for")}
                 <br />
-                <span className="text-muted-foreground">{t("infra.title2", "default.")}</span>
+                <span className="text-muted-foreground">{t("infra.title2", "your environment.")}</span>
               </h2>
 
               <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg transition-all duration-1000 delay-100 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}>
-                {t("infra.lead", "Your agents run on distributed infrastructure across 29 regions. Sub-50ms latency to 99% of the world.")}
+                {t("infra.lead", "We design model, tool, memory, policy, and observability layers around the workflow and the organisation's boundaries.")}
               </p>
             </div>
           </div>
@@ -146,11 +146,11 @@ export function InfrastructureSection() {
             
             <div className="relative z-10">
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-8xl lg:text-[10rem] font-display leading-none">29</span>
-                <span className="text-2xl text-muted-foreground">{t("infra.regionsWord", "regions")}</span>
+                <span className="text-8xl lg:text-[10rem] font-display leading-none">05</span>
+                <span className="text-2xl text-muted-foreground">{t("infra.regionsWord", "layers")}</span>
               </div>
               <p className="text-muted-foreground max-w-md">
-                {t("infra.card", "Compute nodes distributed globally for maximum redundancy and minimum latency.")}
+                {t("infra.card", "A composable architecture for models, tools, memory, policy, and observability — selected for each deployment.")}
               </p>
               {isRtl && (
                 <p className="text-xs font-mono text-muted-foreground/70 mt-3">
@@ -159,7 +159,7 @@ export function InfrastructureSection() {
               )}
               {!isRtl && (
                 <p className="text-xs font-mono text-muted-foreground/70 mt-3">
-                  Illustrative figures — roadmap.
+                  Architecture model, not a claim about live infrastructure.
                 </p>
               )}
             </div>
@@ -170,15 +170,15 @@ export function InfrastructureSection() {
             <div className={`p-8 border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              <span className="text-5xl lg:text-6xl font-display">99.99%</span>
-              <span className="block text-sm text-muted-foreground mt-2">{t("infra.uptime", "Uptime SLA")}</span>
+              <span className="text-5xl lg:text-6xl font-display">{t("infra.humanValue", "Human")}</span>
+              <span className="block text-sm text-muted-foreground mt-2">{t("infra.uptime", "approval where risk requires it")}</span>
             </div>
             
             <div className={`p-8 border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              <span className="text-5xl lg:text-6xl font-display">&lt;50ms</span>
-              <span className="block text-sm text-muted-foreground mt-2">{t("infra.latency", "Global latency")}</span>
+              <span className="text-5xl lg:text-6xl font-display">{t("infra.traceValue", "Trace")}</span>
+              <span className="block text-sm text-muted-foreground mt-2">{t("infra.latency", "events and evaluations")}</span>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ export function InfrastructureSection() {
                 </span>
               </div>
               <span className="font-medium block mb-1">{t(region.nameKey, region.name)}</span>
-              <span className="text-sm text-muted-foreground">{region.nodes} {t("infra.nodes", "nodes")}</span>
+              <span className="text-sm text-muted-foreground">{t(region.detailKey, region.detail)}</span>
             </div>
           ))}
         </div>

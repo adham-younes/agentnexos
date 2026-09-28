@@ -32,7 +32,7 @@ export function CtaSection() {
   };
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="contact" ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`relative border border-foreground transition-all duration-1000 ${
@@ -53,34 +53,36 @@ export function CtaSection() {
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
-                  {t("cta.title1", "Ready to delegate")}
+                  {t("cta.title1", "Choose one workflow,")}
                   <br />
-                  {t("cta.title2", "to AI agents?")}
+                  {t("cta.title2", "then build with evidence.")}
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  {t("cta.lead", "Join teams automating complex workflows with Agentnexos agents. Deploy your first agent in minutes.")}
+                  {t("cta.lead", "Start with a real operating problem. We define the outcome and controls, then build a measurable pilot inside your environment.")}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
-                  <Button
+                  <Button asChild
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
                   >
-                    {t("cta.primary", "Deploy your first agent")}
-                    <ArrowRight className="w-4 h-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
+                    <a href="#features">
+                      {t("cta.primary", "Explore capabilities")}
+                      <ArrowRight className="w-4 h-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
+                    </a>
                   </Button>
-                  <Button
+                  <Button asChild
                     size="lg"
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
                   >
-                    {t("cta.secondary", "Book a demo")}
+                    <a href="#how-it-works">{t("cta.secondary", "See our process")}</a>
                   </Button>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  {t("cta.free", "1,000 free tasks with Agentnexos")}
+                  {t("cta.free", "Phase one: workflow discovery and a measurable success criterion")}
                 </p>
               </div>
 

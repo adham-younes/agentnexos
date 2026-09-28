@@ -4,10 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
 const wordKeys = [
-  { key: "hero.words.0", fallback: "automate" },
-  { key: "hero.words.1", fallback: "delegate" },
-  { key: "hero.words.2", fallback: "execute" },
-  { key: "hero.words.3", fallback: "scale" },
+  { key: "hero.words.0", fallback: "plan" },
+  { key: "hero.words.1", fallback: "act" },
+  { key: "hero.words.2", fallback: "connect" },
+  { key: "hero.words.3", fallback: "improve" },
 ];
 
 function BlurWord({ word, trigger, animate }: { word: string; trigger: number; animate: boolean }) {
@@ -132,7 +132,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-start overflow-hidden bg-black">
+    <section id="top" className="relative min-h-screen flex flex-col justify-center items-start overflow-hidden bg-black">
       {/* Background video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -186,7 +186,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
             <span className="w-8 h-px bg-white/30" />
-            {t("hero.eyebrow", "Autonomous AI agents for distributed computing")}
+            {t("hero.eyebrow", "Enterprise agent systems for MENA")}
           </span>
         </div>
         
@@ -197,9 +197,9 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block whitespace-nowrap">{t("hero.headlineLine1", "Distributed compute,")}</span>
+            <span className="block">{t("hero.headlineLine1", "Agent systems,")}</span>
             <span className="block whitespace-nowrap">
-              {t("hero.headlineLine2", "agents that")}{" "}
+              {t("hero.headlineLine2", "built to")}{" "}
               <span className="relative inline-block">
                 <BlurWord word={words[wordIndex]} trigger={wordIndex} animate={!isRtl} />
               </span>
@@ -217,9 +217,9 @@ export function HeroSection() {
       >
         <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">
           {[
-            { value: "01", key: "hero.stat1", label: "autonomous agents active" },
-            { value: "02", key: "hero.stat2", label: "distributed uptime" },
-            { value: "03", key: "hero.stat3", label: "execution latency" },
+            { value: "01", key: "hero.stat1", label: "discover the workflow" },
+            { value: "02", key: "hero.stat2", label: "build the agent system" },
+            { value: "03", key: "hero.stat3", label: "operate with control" },
           ].map((stat) => (
             <div key={stat.key} className="flex flex-col gap-2">
               <span className="text-3xl lg:text-4xl font-display text-white">{stat.value}</span>
