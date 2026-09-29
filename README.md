@@ -1,101 +1,61 @@
 # Agentnexos
 
-**Where agents connect. / حيث يتواصل الوكلاء.**
+**Where agents connect. / حيث تتصل أنظمة الوكلاء بالعمل الحقيقي.**
 
-منصة عربية-أولًا لمعالجة المستندات بخطوات قابلة للتتبّع: استخراج، وتحقّق، ومراجعة،
-ثم تصدير بموافقتك.
+منصة عربية أولًا لبناء وتشغيل أنظمة وكلاء مخصصة للمؤسسات في مصر والخليج والشرق الأوسط، بصلاحيات محددة وموافقات بشرية وسجل نتيجة قابل للمراجعة.
 
-An Arabic-first platform for extracting, checking, and reviewing document data,
-with your approval before export.
+## ابدأ من هنا
 
-> **حالة المشروع:** قيد التنفيذ على مراحل. راجع [`docs/ROADMAP.md`](./docs/ROADMAP.md)
-> للخطة، و [`docs/GUARDRAILS.md`](./docs/GUARDRAILS.md) لقواعد عدم المساس بالتصميم.
+- [الخطة الرئيسية والتسليم](./docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md) — المرجع الحاكم للرؤية والمعمارية والمراحل.
+- [تعليمات Antigravity الصارمة](./docs/ANTIGRAVITY-HANDOFF.md) — النص الذي يبدأ به Gemini ولا يتجاوزه.
+- [حالة المشروع](./docs/PROJECT-STATUS-2026-09-29.md) — المنفذ والمتبقي والمسارات.
+- [قواعد حماية القالب](./docs/GUARDRAILS.md).
+- [المرحلة 1](./docs/PHASE-1-TEMPLATE-CONTENT-2026-09-29.md) و[المرحلة 2](./docs/PHASE-2-NAVIGATION-2026-09-29.md).
 
----
+أي وثيقة قديمة تعرّف Agentnexos كمنصة معالجة مستندات فقط هي سجل تاريخي وقد تجاوزتها الخطة الرئيسية أعلاه.
 
-## This project is linked to v0
+## الحالة الحالية
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by
-visiting the link below — start new chats to make changes, and v0 will push commits directly to
-this repo. Every merge to `main` will automatically deploy.
+- مرحلتان منشورتان حتى commit `443cf22`.
+- القالب وصوره ونظامه البصري محفوظة.
+- Runtime الوكيل وSupabase والأدوات والذاكرة **لم تُنفذ بعد**؛ لا تعرضها كميزات جاهزة.
+- الأيقونات الحالية عامة من القالب؛ هوية Agentnexos الأصلية ضمن المرحلة 3 بعد اختيار المالك.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf)
-
-> **ملاحظة:** المراحل المنفَّذة هنا تُبنى على فرعها (`phase-N-*`) ولا تُدفع مباشرة إلى `main`.
-
----
-
-## الصفحات الحالية | Current pages
-
-المرحلة 1 تثبّت الأساس فقط. الموقع الحالي هو **القالب** (بالإنجليزية) بصفحة هبوط واحدة
-تضم 13 قسمًا. الصفحات العربية/الإنجليزية والبقية تُضاف في المرحلة 2 و3.
-
-## Getting Started
+## التشغيل المحلي
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
-
-### Scripts
-
-| الأمر | الوظيفة |
-|---|---|
-| `pnpm dev` | خادم التطوير |
-| `pnpm build` | بناء إنتاجي |
-| `pnpm start` | تشغيل البناء |
-| `pnpm lint` | فحص ESLint |
-| `pnpm typecheck` | فحص TypeScript |
-
-### هوية الالتزام (مهمة للنشر)
-
-خطة Vercel Hobby + مستودع خاص ⇒ **النشر التلقائي يتطلب أن يكون إيميل مؤلف الالتزام
-عضوًا في فريق Vercel**. الهوية مضبوطة على مستوى المستودع:
+## بوابات التحقق
 
 ```bash
-git config user.name  "adham younes"
-git config user.email "adham@adham-agritech.com"
+pnpm typecheck
+pnpm i18n:check
+pnpm build
 ```
 
-بديل التجاوز عند الحاجة: النشر المباشر عبر واجهة Vercel — راجع
-[`docs/deployment-verification.md`](./docs/deployment-verification.md).
+`pnpm lint` يحتاج أولًا إضافة ESLint وإعداداته ضمن المرحلة 3.
 
----
+## متغيرات البيئة المخطط لها
 
-## متغيرات البيئة | Environment variables
+لا تُحفظ القيم في Git أو الوثائق.
 
-انسخ `.env.example` إلى `.env.local` واملأ القيم، أو اضبطها من لوحة Vercel.
-**لا تُحفظ أي قيم سرية في المستودع.**
+| المتغير | الاستخدام |
+|---|---|
+| `GROQ_API_KEY` | وكيل تحليل العملية — Qwen |
+| `GROQ_API_KEY1` | وكيل التخطيط/الأدوات — Qwen |
+| `GROQ_API_KEY2` | المراجع — GPT-OSS |
+| `NEXT_PUBLIC_SUPABASE_URL` | رابط Supabase العام عند إنشائه |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | مفتاح العميل العام |
+| `SUPABASE_SECRET_KEY` | خادم فقط؛ ممنوع في العميل |
+| `NEXT_PUBLIC_SITE_URL` | الرابط الأساسي |
 
-| المتغيّر | النطاق | الاستخدام |
-|---|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | عام | عنوان مشروع Supabase |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | عام | مفتاح النشر |
-| `SUPABASE_SECRET_KEY` | **سري** | عمليات الخادم |
-| `NEXT_PUBLIC_SITE_URL` | عام | العنوان الأساسي |
-| `GROQ_API_KEY` / `GROQ_API_KEY1` / `GROQ_API_KEY2` | **سري** | طبقة لغوية اختيارية |
-| `NEXT_PUBLIC_SHOW_PLACEHOLDER_SECTIONS` | عام | إظهار/إخفاء أقسام القالب غير المتحقّقة |
+أبلغ المالك أن مفاتيح Groq الثلاثة موجودة في Vercel Production؛ ما زال يلزم فحص وجود وصلاحية بلا كشف القيم.
 
-**مهم:** المسار الحتمي يعمل **بلا أي مفتاح نموذج**. مفاتيح Groq **اختيارية**
-وتُقرأ من بيئة Vercel فقط.
+## النشر
 
-التحقق من الحالة (بلا طباعة قيم) عبر `describeEnv()` في [`lib/env.ts`](./lib/env.ts).
+الإنتاج من `main` فقط على مشروع Vercel `compute-the-platform-to-build`. نجاح البناء المحلي أو Preview ليس نشرًا إنتاجيًا. اتبع بروتوكول المرحلة في الخطة الرئيسية وسجل Git SHA والتحقق الحي.
 
----
-
-## Deployment smoke test
-
-Use a documentation-only change on a dedicated branch to verify GitHub write access and a Vercel
-Preview deployment before changing application code.
-
-**ملاحظة تشغيلية:** النشر الإنتاجي الحالي محجوب بـVercel Deployment Protection. الفحص الآلي
-يحتاج **Protection Bypass Secret** من Settings → Deployment Protection.
-
----
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [v0 Documentation](https://v0.app/docs)
+المشروع مرتبط أيضًا بـ[v0](https://v0.app/chat/projects/prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf)، لكن أي تغيير منه يخضع لنفس القيود والاختبارات.
