@@ -87,9 +87,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+    max-width: 100%;
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   /* Arabic face is opt-in via :lang(ar), never a global override, so the
