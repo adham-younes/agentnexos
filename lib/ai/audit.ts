@@ -19,6 +19,7 @@ export const auditEventSchema = z.object({
     "approval_rejected",
     "action_executed",
     "run_completed",
+    "security_violation",
   ]),
   actorId: z.string().default("system"),
   payload: z.record(z.unknown()),

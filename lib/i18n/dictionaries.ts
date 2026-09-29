@@ -309,7 +309,7 @@ export const ar = {
   // ---------- agent space (phase 6 action tools & approvals) ----------
   "agent.title": "مساحة الوكيل",
   "agent.subtitle": "غلاف التنفيذ الحتمي ومساحة العمل متعددة الوكلاء",
-  "agent.badge": "المرحلة 6: الأدوات التنفيذية والموافقات والذاكرة",
+  "agent.badge": "المرحلة 7: التقييمات والأمان والمراقبة والتعافي",
   "agent.backToHome": "العودة للرئيسية",
   "agent.status.title": "تشخيص البيئة التشغيلية",
   "agent.status.model": "طبقة النماذج",
@@ -353,7 +353,7 @@ export const ar = {
   "agent.actions.cancel": "إلغاء التشغيل",
   "agent.actions.retry": "إعادة المحاولة",
   "agent.actions.reset": "إعادة تعيين المسار",
-  "agent.banner.notice": "تنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر.",
+  "agent.banner.notice": "تنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.",
   "agent.stream.output": "مخرجات التوليف المباشر (Live Streaming Synthesis)",
   "agent.stream.samplePrompts": "استعلامات تجريبية سريعة:",
   "agent.sample.compliance": "فحص شروط الفوترة الإلكترونية زاتكا المرحلة 2",
@@ -364,6 +364,12 @@ export const ar = {
   "agent.actionReceipt": "إيصال التنفيذ المشفر (Action Receipt)",
   "agent.idempotencyKey": "مفتاح منع التكرار (Idempotency)",
   "agent.decisionRecorded": "تم تسجيل القرار في سجل التدقيق غير القابل للتعديل",
+  "agent.security.title": "درع الأمان والمراقبة",
+  "agent.security.safe": "المدخلات آمنة وتم اجتياز فحص السياسات",
+  "agent.security.blocked": "تم حظر المدخلات لمخالفة سياسات الأمان أو محاولة حقن التعليمات",
+  "agent.security.sanitized": "تم تجهيل البيانات الحساسة وأرقام الهوية تلقائيًا",
+  "agent.telemetry.latency": "زمن المعالجة",
+  "agent.telemetry.guard": "حالة الحماية",
 } as const;
 
 export type ArKey = keyof typeof ar;

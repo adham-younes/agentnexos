@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useT } from "@/lib/i18n/use-t";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import {
   ShieldAlert,
   CheckCircle2,
@@ -61,6 +62,9 @@ export default function AgentSpacePage() {
   const [isProcessingApproval, setIsProcessingApproval] = useState<boolean>(false);
   const [streamingSynthesis, setStreamingSynthesis] = useState<string>("");
   const [isStreaming, setIsStreaming] = useState<boolean>(false);
+  const [guardStatus, setGuardStatus] = useState<"idle" | "passed" | "blocked" | "sanitized">("idle");
+  const [securityReason, setSecurityReason] = useState<string>("");
+  const [securityRedacted, setSecurityRedacted] = useState<string[]>([]);
 
   const handleApprove = async () => {
     if (!approvalId) {
@@ -136,6 +140,9 @@ export default function AgentSpacePage() {
     setIdempotencyKey("");
     setActionReceiptHash("");
     setLatencyMs(null);
+    setGuardStatus("idle");
+    setSecurityReason("");
+    setSecurityRedacted([]);
   };
 
   const executeQuery = async (queryText: string) => {
@@ -148,6 +155,9 @@ export default function AgentSpacePage() {
     setFindings([]);
     setEvidenceHash("");
     setApprovalStatus("pending");
+    setGuardStatus("idle");
+    setSecurityReason("");
+    setSecurityRedacted([]);
 
     try {
       const response = await fetch("/api/chat", {
@@ -180,7 +190,18 @@ export default function AgentSpacePage() {
             const data = JSON.parse(trimmed.slice(6));
 
             if (data.type === "step") {
-              if (data.step === 1 && data.contract) {
+              if (data.step === 0 && data.security) {
+                if (!data.security.safe) {
+                  setGuardStatus("blocked");
+                  setSecurityReason(data.security.reason || "Policy violation");
+                  setRunStatus("cancelled");
+                } else if (data.security.redactedCategories && data.security.redactedCategories.length > 0) {
+                  setGuardStatus("sanitized");
+                  setSecurityRedacted(data.security.redactedCategories);
+                } else {
+                  setGuardStatus("passed");
+                }
+              } else if (data.step === 1 && data.contract) {
                 setActiveStep(1);
                 setContractGoal(data.contract.goal);
                 setContractSource(data.contract.sourceOfTruth);
@@ -210,6 +231,8 @@ export default function AgentSpacePage() {
               if (data.status === "waiting_approval") {
                 setRunStatus("waiting_approval");
                 setActiveStep(3);
+              } else if (data.status === "rejected") {
+                setRunStatus("cancelled");
               } else {
                 setRunStatus("completed");
                 setApprovalStatus("approved");
@@ -458,9 +481,24 @@ export default function AgentSpacePage() {
                 <span>Status:</span>
                 <span className="text-emerald-400 capitalize">{runStatus.replace("_", " ")}</span>
               </div>
+              <div className="flex justify-between items-center">
+                <span>{t("agent.telemetry.guard", "Guard Status")}:</span>
+                <span className={cn(
+                  "px-1.5 py-0.5 rounded text-[10px] font-mono",
+                  guardStatus === "blocked" ? "bg-red-500/20 text-red-400 border border-red-500/30" :
+                  guardStatus === "sanitized" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30" :
+                  guardStatus === "passed" ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" :
+                  "bg-muted/50 text-muted-foreground"
+                )}>
+                  {guardStatus === "blocked" ? t("agent.security.blocked", "Blocked (Policy Violation)") :
+                   guardStatus === "sanitized" ? t("agent.security.sanitized", "PII Sanitized") :
+                   guardStatus === "passed" ? t("agent.security.safe", "Clean & Verified") :
+                   "Active Defense"}
+                </span>
+              </div>
               {latencyMs !== null && (
                 <div className="flex justify-between">
-                  <span>Latency:</span>
+                  <span>{t("agent.telemetry.latency", "Latency")}:</span>
                   <span className="text-foreground">{latencyMs} ms</span>
                 </div>
               )}
@@ -484,6 +522,19 @@ export default function AgentSpacePage() {
                   Step {activeStep} / 4
                 </span>
               </div>
+
+              {/* Security Alert if blocked */}
+              {guardStatus === "blocked" && (
+                <div className="p-3.5 rounded-xl border border-red-500/30 bg-red-500/10 text-red-300 text-xs flex items-start gap-2.5">
+                  <ShieldAlert className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                  <div className="space-y-1">
+                    <p className="font-semibold text-red-200">
+                      {t("agent.security.blocked", "Prompt Halted by Agentnexos Prompt Guard")}
+                    </p>
+                    {securityReason && <p className="text-[11px] text-red-300/80">{securityReason}</p>}
+                  </div>
+                </div>
+              )}
 
               {/* Step Sequence */}
               <div className="space-y-4">

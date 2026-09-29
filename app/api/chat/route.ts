@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { runMultiAgentCoordinator } from "@/lib/ai/coordinator";
+import { checkRateLimit } from "@/lib/security/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -8,6 +9,30 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const prompt = body?.prompt;
     const threadId = body?.threadId || `th_${Date.now().toString(36)}`;
+    const tenantId = body?.tenantId || body?.organizationId || "org_default";
+
+    // Rate Limiting Check
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "127.0.0.1";
+    const rateLimitKey = `${tenantId}:${clientIp}`;
+    const rateLimit = checkRateLimit(rateLimitKey);
+
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        {
+          error: rateLimit.error || "Rate limit exceeded. Please back off and retry.",
+          retryAfterSeconds: rateLimit.retryAfterSeconds,
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rateLimit.retryAfterSeconds),
+            "X-RateLimit-Limit": String(rateLimit.limit),
+            "X-RateLimit-Remaining": String(rateLimit.remaining),
+            "X-RateLimit-Reset": String(rateLimit.resetInSeconds),
+          },
+        }
+      );
+    }
 
     if (!prompt || typeof prompt !== "string" || prompt.trim().length === 0) {
       return NextResponse.json(
@@ -23,17 +48,30 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Execute multi-agent coordinator
+    // Execute multi-agent coordinator with prompt guard and telemetry
     const result = await runMultiAgentCoordinator({
       query: prompt,
       threadId,
+      organizationId: tenantId,
     });
 
     // Create a streaming SSE response
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        // Emit Step 1: Process Analysis
+        // Emit Step 0: Security & Policy Validation
+        controller.enqueue(
+          encoder.encode(
+            `data: ${JSON.stringify({
+              type: "step",
+              step: 0,
+              name: "security_guard",
+              security: result.securityGuard,
+            })}\n\n`
+          )
+        );
+
+        // Emit Step 1: Process Analysis & Contract
         controller.enqueue(
           encoder.encode(
             `data: ${JSON.stringify({
@@ -45,33 +83,35 @@ export async function POST(req: NextRequest) {
           )
         );
 
-        // Emit Step 2: Tool Execution
-        controller.enqueue(
-          encoder.encode(
-            `data: ${JSON.stringify({
-              type: "step",
-              step: 2,
-              name: "tool_execution",
-              tool: "enterprise_lookup",
-              output: result.lookupResult,
-            })}\n\n`
-          )
-        );
+        // Emit Step 2: Tool Execution (if not blocked)
+        if (result.status !== "rejected") {
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: "step",
+                step: 2,
+                name: "tool_execution",
+                tool: "enterprise_lookup",
+                output: result.lookupResult,
+              })}\n\n`
+            )
+          );
 
-        // Emit Step 3: Approval Assessment
-        controller.enqueue(
-          encoder.encode(
-            `data: ${JSON.stringify({
-              type: "step",
-              step: 3,
-              name: "approval_gate",
-              required: result.approvalRequired,
-              prompt: result.approvalPrompt,
-              approvalId: result.approvalId,
-              idempotencyKey: result.idempotencyKey,
-            })}\n\n`
-          )
-        );
+          // Emit Step 3: Approval Assessment
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: "step",
+                step: 3,
+                name: "approval_gate",
+                required: result.approvalRequired,
+                prompt: result.approvalPrompt,
+                approvalId: result.approvalId,
+                idempotencyKey: result.idempotencyKey,
+              })}\n\n`
+            )
+          );
+        }
 
         // Stream synthesis tokens in chunks
         const tokens = result.finalSynthesis.split(" ");
@@ -86,7 +126,7 @@ export async function POST(req: NextRequest) {
             )
           );
           // brief yield for stream fluidity
-          await new Promise((r) => setTimeout(r, 20));
+          await new Promise((r) => setTimeout(r, 15));
         }
 
         // Emit Step 4 / Complete
@@ -102,6 +142,7 @@ export async function POST(req: NextRequest) {
               approvalId: result.approvalId,
               idempotencyKey: result.idempotencyKey,
               latencyMs: result.latencyMs,
+              securityGuard: result.securityGuard,
             })}\n\n`
           )
         );
@@ -115,6 +156,8 @@ export async function POST(req: NextRequest) {
         "Content-Type": "text/event-stream; charset=utf-8",
         "Cache-Control": "no-cache, no-transform",
         Connection: "keep-alive",
+        "X-RateLimit-Limit": String(rateLimit.limit),
+        "X-RateLimit-Remaining": String(rateLimit.remaining),
       },
     });
   } catch (error: unknown) {

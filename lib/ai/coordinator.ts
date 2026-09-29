@@ -5,6 +5,9 @@ import {
 } from "./tools/enterprise-lookup.ts";
 import { createApprovalRequest } from "./approvals.ts";
 import { recordAuditEvent } from "./audit.ts";
+import { validatePromptSafety } from "../security/prompt-guard.ts";
+import { sanitizeAndRedact } from "../security/redaction.ts";
+import { recordTelemetry } from "../telemetry/logger.ts";
 
 export interface ExecutionContract {
   goal: string;
@@ -18,7 +21,7 @@ export interface CoordinatorRunResult {
   runId: string;
   threadId: string;
   organizationId: string;
-  status: "completed" | "waiting_approval" | "failed";
+  status: "completed" | "waiting_approval" | "failed" | "rejected";
   executionContract: ExecutionContract;
   lookupResult: EnterpriseLookupResult;
   modelUsed: string;
@@ -30,6 +33,11 @@ export interface CoordinatorRunResult {
   finalSynthesis: string;
   evidenceHash: string;
   latencyMs: number;
+  securityGuard?: {
+    safe: boolean;
+    reason?: string;
+    redactedCategories: string[];
+  };
 }
 
 export async function runMultiAgentCoordinator({
@@ -44,8 +52,87 @@ export async function runMultiAgentCoordinator({
   const startTime = Date.now();
   const runId = `run_${Date.now().toString(36)}`;
 
-  // Determine domain
-  const lower = query.toLowerCase();
+  // 1. Security Phase: Prompt Injection & Jailbreak Defense
+  const safetyCheck = validatePromptSafety(query);
+  if (!safetyCheck.isSafe) {
+    const latencyMs = Date.now() - startTime;
+
+    recordTelemetry({
+      level: "security",
+      correlationId: runId,
+      stepId: "step_0_security_guard",
+      organizationId,
+      action: "prompt_validation",
+      guardStatus: "blocked",
+      errorCategory: "PROMPT_INJECTION",
+      latencyMs,
+      metadata: { reason: safetyCheck.reason, category: safetyCheck.category },
+    });
+
+    await recordAuditEvent({
+      organizationId,
+      runId,
+      eventType: "security_violation",
+      payload: {
+        reason: safetyCheck.reason,
+        category: safetyCheck.category,
+        severity: safetyCheck.severity,
+      },
+    });
+
+    const blockedContract: ExecutionContract = {
+      goal: "Rejected by Enterprise Security Perimeter",
+      sourceOfTruth: "Agentnexos Prompt Guard & Security Policies",
+      permittedTools: [],
+      safetyBoundary: "Execution halted. Untrusted prompt payload prevented from accessing agent tools or LLMs.",
+      evidenceRequirement: "Security incident registered in immutable audit log",
+    };
+
+    return {
+      runId,
+      threadId,
+      organizationId,
+      status: "rejected",
+      executionContract: blockedContract,
+      lookupResult: {
+        query,
+        domain: "general",
+        sourceOfTruth: "Agentnexos Prompt Guard",
+        findings: ["Query blocked due to policy violation: " + (safetyCheck.reason || "Unsafe input detected")],
+        evidenceHash: "0000000000000000000000000000000000000000000000000000000000000000",
+        verifiedAt: new Date().toISOString(),
+        requiresHumanApprovalForNextStep: false,
+      },
+      modelUsed: "agentnexos-security-guard",
+      isDeterministicFallback: true,
+      approvalRequired: false,
+      finalSynthesis: `[درع الأمان المؤسسي / Security Boundary Active]\n\nتم حظر هذا الطلب من قبل نظام الحماية المؤسسية لـ Agentnexos للاشتباه في محاولة حقن تعليمات برمجية أو تجاوز قواعد الأمان.\nالسبب: ${safetyCheck.reason}\n\nThis prompt was halted by the Agentnexos Security Guard. Reason: ${safetyCheck.reason}`,
+      evidenceHash: "0000000000000000000000000000000000000000000000000000000000000000",
+      latencyMs,
+      securityGuard: {
+        safe: false,
+        reason: safetyCheck.reason,
+        redactedCategories: [],
+      },
+    };
+  }
+
+  // 2. Data Sanitization & Redaction (PII & Secret Defense)
+  const { redactedText, hasRedactions, redactedCategories } = sanitizeAndRedact(query);
+  const effectiveQuery = hasRedactions ? redactedText : query;
+
+  recordTelemetry({
+    level: "info",
+    correlationId: runId,
+    stepId: "step_0_security_guard",
+    organizationId,
+    action: "prompt_validation",
+    guardStatus: hasRedactions ? "sanitized" : "passed",
+    metadata: { redactedCategories },
+  });
+
+  // Determine domain from effective sanitized query
+  const lower = effectiveQuery.toLowerCase();
   let domain: "operations" | "compliance" | "procurement" | "general" = "general";
   if (
     lower.includes("invoice") ||
@@ -83,10 +170,10 @@ export async function runMultiAgentCoordinator({
     organizationId,
     runId,
     eventType: "run_started",
-    payload: { query, domain, threadId },
+    payload: { query: effectiveQuery, domain, threadId, hasRedactions },
   });
 
-  // 1. Build Execution Contract
+  // 3. Build Execution Contract
   const executionContract: ExecutionContract = {
     goal: `Execute enterprise operational query within domain [${domain}]`,
     sourceOfTruth: "Verified Enterprise Knowledge & Connected Regulatory Tools",
@@ -102,9 +189,9 @@ export async function runMultiAgentCoordinator({
     payload: { contract: executionContract },
   });
 
-  // 2. Execute Read Tool
+  // 4. Execute Read Tool
   const lookupResult = await executeEnterpriseLookup({
-    query,
+    query: effectiveQuery,
     domain,
   });
 
@@ -119,12 +206,12 @@ export async function runMultiAgentCoordinator({
     },
   });
 
-  // 3. Determine if model layer is active
+  // 5. Determine if model layer is active
   const analyst = getAnalystModel();
   const verifier = getVerifierModel();
   const hasModel = Boolean(analyst && verifier);
 
-  // 4. Formulate synthesis
+  // 6. Formulate synthesis
   let finalSynthesis = "";
   if (hasModel) {
     // When Groq is connected in production
@@ -164,6 +251,21 @@ export async function runMultiAgentCoordinator({
 
   const latencyMs = Date.now() - startTime;
 
+  recordTelemetry({
+    level: "info",
+    correlationId: runId,
+    stepId: "step_final_completion",
+    organizationId,
+    action: "coordinator_execution",
+    latencyMs,
+    guardStatus: hasRedactions ? "sanitized" : "passed",
+    metadata: {
+      domain,
+      approvalRequired,
+      isDeterministicFallback: !hasModel,
+    },
+  });
+
   return {
     runId,
     threadId,
@@ -182,5 +284,9 @@ export async function runMultiAgentCoordinator({
     finalSynthesis,
     evidenceHash: lookupResult.evidenceHash,
     latencyMs,
+    securityGuard: {
+      safe: true,
+      redactedCategories,
+    },
   };
 }
