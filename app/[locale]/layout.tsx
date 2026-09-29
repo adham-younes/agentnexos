@@ -61,7 +61,11 @@ export async function generateMetadata({
       ? "نبني أنظمة وكلاء ذكاء اصطناعي مخصّصة للمؤسسات في الشرق الأوسط، لأتمتة العمليات وربط الأدوات وتشغيل العمل بضوابط واضحة."
       : "We build custom AI agent systems for MENA enterprises to automate operations, connect tools, and run work with clear controls.",
     icons: {
-      icon: "/icon.svg",
+      icon: [
+        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: "/icon-dark-32x32.png", sizes: "32x32", media: "(prefers-color-scheme: dark)" },
+        { url: "/icon-light-32x32.png", sizes: "32x32", media: "(prefers-color-scheme: light)" },
+      ],
       apple: "/apple-icon.png",
     },
   };
