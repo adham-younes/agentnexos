@@ -18,3 +18,5 @@ node_modules
 .next/
 *.tsbuildinfo
 .DS_Store
+.playwright-cli/
+output/

@@ -1,3 +1,22 @@
+# Agentnexos — Project Rules
+
+1. Before editing, read docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md and docs/GUARDRAILS.md.
+2. Follow the user's current request; the master plan overrides older conflicting project documents.
+3. Work on one requested phase only; list its scope and acceptance criteria before editing.
+4. Preserve the approved template, images, animations, fonts, section order, and proportions.
+5. Inspect existing code and reuse its patterns before adding files, dependencies, or abstractions.
+6. Make small, focused changes; preserve unrelated work and review the diff before committing.
+7. Use documentation matching installed versions; verify uncertain APIs with official sources.
+8. Keep Arabic and English equivalent; verify RTL/LTR and all changed user-facing states.
+9. Never invent implemented features, customers, metrics, integrations, or successful test results.
+10. Keep secrets server-side and out of source code, logs, screenshots, and documentation.
+11. For defects: reproduce, identify the cause, apply a focused fix, and verify the original symptom.
+12. Run pnpm typecheck, pnpm i18n:check, pnpm build, and relevant tests; report failures honestly.
+13. For UI changes, compare before/after at 390, 768, and 1440px in Arabic and English.
+14. Finish with changed files, verification evidence, remaining issues, and the next planned step.
+
+---
+
 # AGENTS.md — تعليمات إلزامية لأي وكيل يعمل على Agentnexos
 
 هذه التعليمات حاكمة على Codex وGemini وGoogle Antigravity وv0 وأي وكيل آخر. اقرأ بالترتيب:
