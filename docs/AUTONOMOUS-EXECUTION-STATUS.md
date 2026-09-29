@@ -2,9 +2,9 @@
 
 **تاريخ التحديث:** 2026-09-29  
 **المرجع الحاكم:** `docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md` و `AGENTS.md`  
-**الفرع الحالي:** `phase-3-safe-shell-brand-ci`  
-**آخر commit في origin/main:** `7deca6dc564dcb0c798589b92ad966cce6af8dd2`  
-**آخر نشر إنتاجي معتمد:** `https://compute-the-platform-to-build-six-fawn.vercel.app/` (مرتبط بـ commit `443cf22`)
+**الفرع الحالي:** `phase-4-supabase-persistence`  
+**آخر commit في origin/main:** `e48345e`  
+**آخر نشر إنتاجي معتمد:** `https://compute-the-platform-to-build-six-fawn.vercel.app/` (مرتبط بـ commit `e48345e`، تم التحقق من نشر `/ar/agentnexos` و `/icon.svg`)
 
 ---
 
@@ -89,9 +89,19 @@
 
 ## 5. الخطوة التالية الدقيقة (Next Immediate Step)
 
-البدء في تنفيذ **المرحلة 3**:
-1. تثبيت `eslint` وحزم Next.js للـ linting وضبط `eslint.config.mjs`.
-2. إنشاء `.github/workflows/ci.yml`.
-3. تصميم وتنفيذ الأيقونة المؤقتة لـ Agentnexos وتحديث `icon.svg` و `apple-icon.png` مع حفظ النسخ السابقة.
-4. إنشاء مساحة الوكيل في `app/[locale]/agentnexos/page.tsx` ومكوناتها.
-5. التحقق الكامل عبر `pnpm typecheck`, `pnpm i18n:check`, `pnpm build`, `pnpm lint` وفحص العرض على 390 و 768 و 1440 بكسل.
+البدء في تنفيذ **المرحلة 4** (Supabase والهوية والحالة الدائمة):
+1. إنشاء مجلد `supabase/migrations/` وتصميم schema كاملة تشمل الجداول الأساسية:
+   - `organizations`
+   - `profiles`
+   - `memberships`
+   - `agent_threads`
+   - `agent_runs`
+   - `agent_steps`
+   - `tool_calls`
+   - `approvals`
+   - `audit_events`
+   - `artifacts`
+2. تفعيل Row-Level Security (RLS) وسياسات صارمة لعزل بيانات كل مؤسسة (Tenant Isolation).
+3. بناء عميل Supabase محكم الأمان (`lib/supabase/client.ts` و `lib/supabase/server.ts` و `lib/supabase/types.ts`) يستخدم الرموز العامة فقط على العميل والمفاتيح السرية على الخادم حصراً.
+4. كتابة اختبارات تكامل لـ RLS وعزل المؤسسات واختبارات سلامة العمليات.
+5. التحقق عبر `pnpm typecheck`, `pnpm i18n:check`, `pnpm lint`, `pnpm build`.
