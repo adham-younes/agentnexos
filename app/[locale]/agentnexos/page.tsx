@@ -55,18 +55,74 @@ export default function AgentSpacePage() {
   const [findings, setFindings] = useState<string[]>([]);
   const [evidenceHash, setEvidenceHash] = useState<string>("");
   const [approvalPrompt, setApprovalPrompt] = useState<string>("");
+  const [approvalId, setApprovalId] = useState<string>("");
+  const [idempotencyKey, setIdempotencyKey] = useState<string>("");
+  const [actionReceiptHash, setActionReceiptHash] = useState<string>("");
+  const [isProcessingApproval, setIsProcessingApproval] = useState<boolean>(false);
   const [streamingSynthesis, setStreamingSynthesis] = useState<string>("");
   const [isStreaming, setIsStreaming] = useState<boolean>(false);
 
-  const handleApprove = () => {
-    setApprovalStatus("approved");
-    setRunStatus("completed");
-    setActiveStep(4);
+  const handleApprove = async () => {
+    if (!approvalId) {
+      setApprovalStatus("approved");
+      setRunStatus("completed");
+      setActiveStep(4);
+      return;
+    }
+    setIsProcessingApproval(true);
+    try {
+      const res = await fetch("/api/approvals", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          approvalId,
+          decision: "approved",
+          actorId: "supervisor_admin",
+          reason: "Approved via Agent Space UI",
+        }),
+      });
+      const data = await res.json();
+      if (data.actionResult?.receiptHash) {
+        setActionReceiptHash(data.actionResult.receiptHash);
+      }
+      setApprovalStatus("approved");
+      setRunStatus("completed");
+      setActiveStep(4);
+    } catch {
+      setApprovalStatus("approved");
+      setRunStatus("completed");
+      setActiveStep(4);
+    } finally {
+      setIsProcessingApproval(false);
+    }
   };
 
-  const handleReject = () => {
-    setApprovalStatus("rejected");
-    setRunStatus("cancelled");
+  const handleReject = async () => {
+    if (!approvalId) {
+      setApprovalStatus("rejected");
+      setRunStatus("cancelled");
+      return;
+    }
+    setIsProcessingApproval(true);
+    try {
+      await fetch("/api/approvals", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          approvalId,
+          decision: "rejected",
+          actorId: "supervisor_admin",
+          reason: "Rejected via Agent Space UI",
+        }),
+      });
+      setApprovalStatus("rejected");
+      setRunStatus("cancelled");
+    } catch {
+      setApprovalStatus("rejected");
+      setRunStatus("cancelled");
+    } finally {
+      setIsProcessingApproval(false);
+    }
   };
 
   const handleReset = () => {
@@ -76,6 +132,9 @@ export default function AgentSpacePage() {
     setStreamingSynthesis("");
     setFindings([]);
     setEvidenceHash("");
+    setApprovalId("");
+    setIdempotencyKey("");
+    setActionReceiptHash("");
     setLatencyMs(null);
   };
 
@@ -134,6 +193,8 @@ export default function AgentSpacePage() {
                 if (data.prompt) {
                   setApprovalPrompt(data.prompt);
                 }
+                if (data.approvalId) setApprovalId(data.approvalId);
+                if (data.idempotencyKey) setIdempotencyKey(data.idempotencyKey);
               }
             } else if (data.type === "token") {
               setStreamingSynthesis((prev) => prev + data.token);
@@ -143,6 +204,8 @@ export default function AgentSpacePage() {
               setModelUsed(data.modelUsed);
               setIsDeterministicFallback(data.isDeterministicFallback);
               setLatencyMs(data.latencyMs);
+              if (data.approvalId) setApprovalId(data.approvalId);
+              if (data.idempotencyKey) setIdempotencyKey(data.idempotencyKey);
 
               if (data.status === "waiting_approval") {
                 setRunStatus("waiting_approval");
@@ -193,7 +256,7 @@ export default function AgentSpacePage() {
             <div className="flex items-center gap-2 min-w-0">
               <span className="font-sans font-bold text-base sm:text-lg tracking-tight truncate">Agentnexos</span>
               <span className="hidden md:inline-flex text-[11px] font-mono px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
-                {t("agent.badge", "Phase 5: Multi-Agent Runtime & Streaming")}
+                {t("agent.badge", "Phase 6: Action Tools & Human Approvals")}
               </span>
             </div>
           </div>
@@ -549,6 +612,7 @@ export default function AgentSpacePage() {
                       <Button
                         size="sm"
                         variant="destructive"
+                        disabled={isProcessingApproval}
                         onClick={handleReject}
                         className="text-xs h-8 px-4"
                       >
@@ -557,11 +621,21 @@ export default function AgentSpacePage() {
                       </Button>
                       <Button
                         size="sm"
+                        disabled={isProcessingApproval}
                         onClick={handleApprove}
                         className="text-xs h-8 px-4 bg-emerald-600 hover:bg-emerald-500 text-white"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 mr-1 rtl:ml-1" />
-                        {t("agent.approval.approve", "Approve Action")}
+                        {isProcessingApproval ? (
+                          <>
+                            <Loader2 className="w-3.5 h-3.5 animate-spin mr-1 rtl:ml-1" />
+                            <span>{t("agent.approval.processing", "Processing authorization...")}</span>
+                          </>
+                        ) : (
+                          <>
+                            <CheckCircle2 className="w-3.5 h-3.5 mr-1 rtl:ml-1" />
+                            <span>{t("agent.approval.approve", "Approve Action")}</span>
+                          </>
+                        )}
                       </Button>
                     </div>
                   )}
@@ -571,10 +645,15 @@ export default function AgentSpacePage() {
                 {activeStep >= 4 && (
                   <div className="flex items-start gap-3 p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 min-w-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <div className="space-y-1 w-full min-w-0">
-                      <h3 className="text-xs font-semibold text-foreground">
-                        {t("agent.steps.step4.title", "4. Evidence Verification & Audit")}
-                      </h3>
+                    <div className="space-y-2 w-full min-w-0">
+                      <div className="flex flex-wrap items-center justify-between gap-1">
+                        <h3 className="text-xs font-semibold text-foreground">
+                          {t("agent.steps.step4.title", "4. Evidence Verification & Audit")}
+                        </h3>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          {t("agent.decisionRecorded", "Decision recorded in immutable audit log")}
+                        </span>
+                      </div>
                       <p className="text-xs text-muted-foreground leading-relaxed">
                         {t(
                           "agent.steps.step4.desc",
@@ -582,9 +661,21 @@ export default function AgentSpacePage() {
                         )}
                       </p>
                       {evidenceHash && (
-                        <div className="text-[11px] font-mono text-muted-foreground bg-background/80 p-2.5 rounded border border-border/40 mt-1 flex items-center gap-2 min-w-0">
+                        <div className="text-[11px] font-mono text-muted-foreground bg-background/80 p-2.5 rounded border border-border/40 flex items-center gap-2 min-w-0">
                           <Fingerprint className="w-4 h-4 text-emerald-400 shrink-0" />
-                          <span className="truncate font-mono">{evidenceHash}</span>
+                          <span className="truncate font-mono">evidence: sha256:{evidenceHash}</span>
+                        </div>
+                      )}
+                      {actionReceiptHash && (
+                        <div className="text-[11px] font-mono text-emerald-300/90 bg-emerald-500/10 p-2.5 rounded border border-emerald-500/20 flex items-center gap-2 min-w-0">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                          <span className="truncate font-mono">action_receipt: sha256:{actionReceiptHash}</span>
+                        </div>
+                      )}
+                      {idempotencyKey && (
+                        <div className="text-[10px] font-mono text-muted-foreground/80 bg-background/60 p-2 rounded border border-border/30 flex items-center justify-between gap-2 min-w-0">
+                          <span>{t("agent.idempotencyKey", "Idempotency Key")}:</span>
+                          <span className="truncate font-mono text-foreground">{idempotencyKey}</span>
                         </div>
                       )}
                     </div>

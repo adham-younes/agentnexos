@@ -306,10 +306,10 @@ export const ar = {
   "footer.operational": "المنصة قيد التطوير المرحلي",
   "footer.rights": "جميع الحقوق محفوظة.",
 
-  // ---------- agent space (phase 5 multi-agent runtime) ----------
+  // ---------- agent space (phase 6 action tools & approvals) ----------
   "agent.title": "مساحة الوكيل",
   "agent.subtitle": "غلاف التنفيذ الحتمي ومساحة العمل متعددة الوكلاء",
-  "agent.badge": "المرحلة 5: تشغيل متعدد الوكلاء وتدفق مباشر",
+  "agent.badge": "المرحلة 6: الأدوات التنفيذية والموافقات والذاكرة",
   "agent.backToHome": "العودة للرئيسية",
   "agent.status.title": "تشخيص البيئة التشغيلية",
   "agent.status.model": "طبقة النماذج",
@@ -346,13 +346,14 @@ export const ar = {
   "agent.approval.reject": "رفض الإجراء",
   "agent.approval.approved": "تم اعتماد الإجراء",
   "agent.approval.rejected": "تم رفض الإجراء",
+  "agent.approval.processing": "جاري معالجة الاعتماد...",
   "agent.input.placeholder": "أدخل طلبك للنظام الوكيل (مثال: فحص شروط الفوترة الإلكترونية زاتكا)...",
   "agent.input.send": "إرسال وتدفق",
   "agent.input.note": "التدفق المباشر عبر SSE ومطابقة عقد التنفيذ مفعّلان تلقائيًا.",
   "agent.actions.cancel": "إلغاء التشغيل",
   "agent.actions.retry": "إعادة المحاولة",
   "agent.actions.reset": "إعادة تعيين المسار",
-  "agent.banner.notice": "تنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء (Qwen 3.8 27B + GPT-OSS 120B) مع تدفق SSE الحقيقي، وتوليد دليل إثبات مشفر SHA-256، وبوابة موافقة بشرية ملزمة.",
+  "agent.banner.notice": "تنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر.",
   "agent.stream.output": "مخرجات التوليف المباشر (Live Streaming Synthesis)",
   "agent.stream.samplePrompts": "استعلامات تجريبية سريعة:",
   "agent.sample.compliance": "فحص شروط الفوترة الإلكترونية زاتكا المرحلة 2",
@@ -360,6 +361,9 @@ export const ar = {
   "agent.sample.operations": "سياسات مهلة التشغيل للأدوات المؤتمتة وحماية SSRF",
   "agent.evidence.hash": "بصمة الإثبات الرقمي (SHA-256)",
   "agent.evidence.findings": "نتائج أداة القراءة الموثقة",
+  "agent.actionReceipt": "إيصال التنفيذ المشفر (Action Receipt)",
+  "agent.idempotencyKey": "مفتاح منع التكرار (Idempotency)",
+  "agent.decisionRecorded": "تم تسجيل القرار في سجل التدقيق غير القابل للتعديل",
 } as const;
 
 export type ArKey = keyof typeof ar;

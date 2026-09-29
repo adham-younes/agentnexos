@@ -67,6 +67,8 @@ export async function POST(req: NextRequest) {
               name: "approval_gate",
               required: result.approvalRequired,
               prompt: result.approvalPrompt,
+              approvalId: result.approvalId,
+              idempotencyKey: result.idempotencyKey,
             })}\n\n`
           )
         );
@@ -97,6 +99,8 @@ export async function POST(req: NextRequest) {
               evidenceHash: result.evidenceHash,
               modelUsed: result.modelUsed,
               isDeterministicFallback: result.isDeterministicFallback,
+              approvalId: result.approvalId,
+              idempotencyKey: result.idempotencyKey,
               latencyMs: result.latencyMs,
             })}\n\n`
           )
