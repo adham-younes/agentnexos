@@ -4,18 +4,21 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
-import { useT } from "@/lib/i18n/use-t";
+import { useT, useLocale } from "@/lib/i18n/use-t";
 
 const navLinks = [
   { key: "nav.capabilities", name: "Capabilities", href: "#features" },
+  { key: "nav.solutions", name: "Solutions", href: "/solutions" },
   { key: "nav.process", name: "Process", href: "#how-it-works" },
   { key: "nav.infra", name: "Infra", href: "#infra" },
-  { key: "nav.integrations", name: "Integrations", href: "#integrations" },
-  { key: "nav.security", name: "Security", href: "#security" },
+  { key: "nav.security", name: "Security", href: "/security" },
+  { key: "nav.agentSpace", name: "Agent Space", href: "/agentnexos" },
 ];
 
 export function Navigation() {
   const t = useT();
+  const locale = useLocale();
+  const resolveHref = (href: string) => (href.startsWith("/") ? `/${locale}${href}` : href);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isDark = !isScrolled && !isMobileMenuOpen;
@@ -72,7 +75,7 @@ export function Navigation() {
             {navLinks.map((link) => (
               <a
                 key={link.key}
-                href={link.href}
+                href={resolveHref(link.href)}
                 className={`text-[13px] xl:text-sm font-medium transition-colors duration-300 relative group ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}
               >
                 {t(link.key, link.name)}
@@ -130,7 +133,7 @@ export function Navigation() {
             {navLinks.map((link, i) => (
               <a
                 key={link.key}
-                href={link.href}
+                href={resolveHref(link.href)}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-4xl sm:text-5xl font-display text-foreground hover:text-muted-foreground transition-all duration-500 ${
                   isMobileMenuOpen

@@ -24,6 +24,8 @@ export const ar = {
   "nav.infra": "البنية",
   "nav.integrations": "التكاملات",
   "nav.security": "الأمان",
+  "nav.solutions": "الحلول",
+  "nav.agentSpace": "مساحة الوكيل",
   "nav.primary": "التنقّل الرئيسي",
   "nav.signIn": "منهج العمل",
   "nav.deployAgent": "ابدأ مشروعًا",
@@ -370,6 +372,47 @@ export const ar = {
   "agent.security.sanitized": "تم تجهيل البيانات الحساسة وأرقام الهوية تلقائيًا",
   "agent.telemetry.latency": "زمن المعالجة",
   "agent.telemetry.guard": "حالة الحماية",
+
+  // ---------- phase 8: solutions & industries ----------
+  "solutions.title": "حلول الأنظمة الوكيلة للمؤسسات",
+  "solutions.subtitle": "أتمتة العمليات الحساسة بضوابط قطاعية متوافقة مع متطلبات الشرق الأوسط",
+  "solutions.card1.title": "الامتثال والفوترة الإلكترونية (ZATCA Phase 2)",
+  "solutions.card1.desc": "التحقق المسبق من صحة الفواتير وبناء الأختام الرقمية وتفادي الغرامات التنظيمية قبل الإرسال للبوابات الضريبية الحكومية.",
+  "solutions.card2.title": "إدارة المشتريات ومصفوفة الصلاحيات (Procurement DOA)",
+  "solutions.card2.desc": "تطبيق حدود الصلاحيات، التدقيق المزدوج للمدفوعات فوق 10,000 دولار، والتحقق الآلي من السجلات التجارية والشهادات الضريبية.",
+  "solutions.card3.title": "تنسيق العمليات والربط بين الأنظمة (Cross-System Orchestration)",
+  "solutions.card3.desc": "ربط أنظمة الـ ERP والبيانات التشغيلية بسير عمل مؤتمت مشروط بموافقة المشرف البشري قبل أي كتابة خارجية.",
+  "solutions.cta": "اختبر هذه الحلول حياً في مساحة الوكيل",
+
+  // ---------- phase 8: security page ----------
+  "securityPage.title": "بنية الأمان والسيادة المؤسسية",
+  "securityPage.subtitle": "حماية متعددة الطبقات من الفكرة إلى التنفيذ المشفر وسجلات التدقيق",
+  "securityPage.pill1": "عزل المستأجرين (Tenant Isolation via RLS)",
+  "securityPage.pill2": "حماية الأوامر وحقن التعليمات (Prompt Guard)",
+  "securityPage.pill3": "بوابة المشرف البشري (Human-in-the-Loop Gateway)",
+  "securityPage.pill4": "سجل تدقيق مشفر (Append-Only SHA-256 Audit Trail)",
+  "securityPage.pill5": "حماية SSRF والحدود الشبكية",
+  "securityPage.pill6": "تجهيل البيانات الحساسة (PII & Secret Redaction)",
+
+  // ---------- phase 8: privacy page ----------
+  "privacyPage.title": "سياسة الخصوصية وحوكمة البيانات",
+  "privacyPage.subtitle": "التزام صارم بسيادة البيانات وعدم تدريب النماذج على بيانات العملاء",
+  "privacyPage.section1.title": "1. سيادة البيانات وموقع الاستضافة",
+  "privacyPage.section1.desc": "تلتزم Agentnexos بالاحتفاظ ببيانات وسجلات المؤسسات في مرافق سحابية معتمدة ومتوافقة مع المتطلبات التنظيمية المحلية في المملكة العربية السعودية والشرق الأوسط.",
+  "privacyPage.section2.title": "2. حظر تدريب النماذج",
+  "privacyPage.section2.desc": "لا يتم استخدام استعلاماتك أو بيانات عملك أو مستنداتك المؤسسية لتدريب أي نماذج ذكاء اصطناعي عامة أو تابعة لأطراف ثالثة.",
+  "privacyPage.section3.title": "3. تجهيل الهويات والأسرار آلياً",
+  "privacyPage.section3.desc": "تخضع كافة المدخلات لفحص وتجهيل آلي لأرقام الهويات الوطنية وبطاقات الدفع ومفاتيح الاعتماد قبل المعالجة.",
+
+  // ---------- phase 8: terms page ----------
+  "termsPage.title": "الشروط والضوابط التشغيلية",
+  "termsPage.subtitle": "محددات المسؤولية والتشغيل المشروط بالرقابة البشرية وعقود التنفيذ",
+  "termsPage.section1.title": "1. طبيعة المنصة وعقد التنفيذ",
+  "termsPage.section1.desc": "تعمل Agentnexos كمنصة أنظمة وكيلة مؤسسية تعمل بعقود تنفيذ صريحة ومحددة الصلاحيات، وليست روبوت محادثة عاماً.",
+  "termsPage.section2.title": "2. الرقابة البشرية على الإجراءات الحساسة",
+  "termsPage.section2.desc": "أي إجراء يترتب عليه تعديل في البيانات الخارجية أو تصدير تقارير أو إجراء مدفوعات يتطلب اعتماداً صريحاً من المشرف البشري.",
+  "termsPage.section3.title": "3. مفاتيح Idempotency وحماية التكرار",
+  "termsPage.section3.desc": "تضمن المنصة عبر مفاتيح عدم التكرار الفريدة عدم تنفيذ أي أمر حساس أكثر من مرة واحدة حتى في حال انقطاع الشبكة.",
 } as const;
 
 export type ArKey = keyof typeof ar;

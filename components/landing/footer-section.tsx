@@ -2,20 +2,20 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { useT } from "@/lib/i18n/use-t";
+import { useT, useLocale } from "@/lib/i18n/use-t";
 
 // Navigation labels are resolved from the dictionary via key; hrefs stay fixed.
 const footerLinks = {
   footer: { titleKey: "footer.products", title: "Product", links: [
-    { nameKey: "footer.capabilities", name: "Agent capabilities", href: "#features" },
+    { nameKey: "footer.capabilities", name: "Agent capabilities", href: "/solutions" },
     { nameKey: "footer.howItWorks", name: "How it works", href: "#how-it-works" },
     { nameKey: "footer.pricing", name: "Pricing", href: "#pricing" },
     { nameKey: "footer.integrations", name: "Integrations", href: "#integrations" },
   ] },
   developers: { titleKey: "footer.sdk", title: "Developers", links: [
-    { nameKey: "footer.docs", name: "Documentation", href: "#developers" },
-    { nameKey: "footer.sdk", name: "Agent engineering", href: "#developers" },
-    { nameKey: "footer.api", name: "API Reference", href: "#developers" },
+    { nameKey: "footer.docs", name: "Agent Space", href: "/agentnexos" },
+    { nameKey: "footer.sdk", name: "Agent engineering", href: "/agentnexos" },
+    { nameKey: "footer.api", name: "API Reference", href: "/agentnexos" },
     { nameKey: "footer.status", name: "Success criteria", href: "#pricing" },
   ] },
   company: { titleKey: "footer.company", title: "Company", links: [
@@ -25,9 +25,9 @@ const footerLinks = {
     { nameKey: "footer.contact", name: "Contact", href: "#contact" },
   ] },
   legal: { titleKey: "footer.legal", title: "Legal", links: [
-    { nameKey: "footer.privacy", name: "Data boundaries", href: "#security" },
-    { nameKey: "footer.terms", name: "Controls", href: "#security" },
-    { nameKey: "footer.security", name: "Security", href: "#security" },
+    { nameKey: "footer.privacy", name: "Data boundaries", href: "/privacy" },
+    { nameKey: "footer.terms", name: "Controls", href: "/terms" },
+    { nameKey: "footer.security", name: "Security", href: "/security" },
   ] },
 };
 
@@ -95,6 +95,8 @@ function AnimatedWaveCanvas() {
 
 export function FooterSection() {
   const t = useT();
+  const locale = useLocale();
+  const resolveHref = (href: string) => (href.startsWith("/") ? `/${locale}${href}` : href);
 
   return (
     <footer className="relative bg-black">
@@ -152,7 +154,7 @@ export function FooterSection() {
                   {column.links.map((link) => (
                     <li key={link.nameKey}>
                       <a
-                        href={link.href}
+                        href={resolveHref(link.href)}
                         className="text-sm text-white/40 hover:text-white transition-colors inline-flex items-center gap-2"
                       >
                         {t(link.nameKey, link.name)}

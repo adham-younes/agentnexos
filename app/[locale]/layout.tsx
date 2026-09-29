@@ -53,13 +53,43 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isAr = locale === "ar";
+  const title = isAr
+    ? "Agentnexos — أنظمة وكيلة للمؤسسات"
+    : "Agentnexos — Enterprise Agent Systems";
+  const description = isAr
+    ? "نبني أنظمة وكلاء ذكاء اصطناعي مخصّصة للمؤسسات في الشرق الأوسط، لأتمتة العمليات وربط الأدوات وتشغيل العمل بضوابط واضحة وموافقات بشرية وسجلات تدقيق مشفرة."
+    : "Custom autonomous agent systems for MENA enterprises: connecting systems, human-in-the-loop approvals, and immutable audit logs.";
+
+  const baseUrl = "https://compute-the-platform-to-build-six-fawn.vercel.app";
+
   return {
-    title: isAr
-      ? "Agentnexos — أنظمة وكيلة للمؤسسات"
-      : "Agentnexos — Enterprise agent systems",
-    description: isAr
-      ? "نبني أنظمة وكلاء ذكاء اصطناعي مخصّصة للمؤسسات في الشرق الأوسط، لأتمتة العمليات وربط الأدوات وتشغيل العمل بضوابط واضحة."
-      : "We build custom AI agent systems for MENA enterprises to automate operations, connect tools, and run work with clear controls.",
+    metadataBase: new URL(baseUrl),
+    title,
+    description,
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        ar: "/ar",
+        en: "/en",
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${baseUrl}/${locale}`,
+      siteName: "Agentnexos",
+      locale: isAr ? "ar_AR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     icons: {
       icon: [
         { url: "/icon.svg", type: "image/svg+xml" },
