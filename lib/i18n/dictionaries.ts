@@ -311,7 +311,7 @@ export const ar = {
   // ---------- agent space (phase 6 action tools & approvals) ----------
   "agent.title": "مساحة الوكيل",
   "agent.subtitle": "غلاف التنفيذ الحتمي ومساحة العمل متعددة الوكلاء",
-  "agent.badge": "المرحلة 7: التقييمات والأمان والمراقبة والتعافي",
+  "agent.badge": "المرحلة 9: جاهزية بيتا المؤسسي والربط بالأنظمة",
   "agent.backToHome": "العودة للرئيسية",
   "agent.status.title": "تشخيص البيئة التشغيلية",
   "agent.status.model": "طبقة النماذج",
@@ -413,6 +413,22 @@ export const ar = {
   "termsPage.section2.desc": "أي إجراء يترتب عليه تعديل في البيانات الخارجية أو تصدير تقارير أو إجراء مدفوعات يتطلب اعتماداً صريحاً من المشرف البشري.",
   "termsPage.section3.title": "3. مفاتيح Idempotency وحماية التكرار",
   "termsPage.section3.desc": "تضمن المنصة عبر مفاتيح عدم التكرار الفريدة عدم تنفيذ أي أمر حساس أكثر من مرة واحدة حتى في حال انقطاع الشبكة.",
+
+  // ---------- phase 9: enterprise beta & connectors ----------
+  "agent.tenant.org": "المؤسسة النشطة",
+  "agent.tenant.switch": "تبديل المؤسسة",
+  "agent.tenant.onboard": "تهيئة مؤسسة تجريبية",
+  "agent.tenant.tier": "فئة الحساب",
+  "agent.connectors.title": "الموصلات المؤسسية وحالة الربط",
+  "agent.connectors.zatca": "موصل منصة فاتورة (ZATCA)",
+  "agent.connectors.erp": "بوابة تخطيط الموارد (SAP/ERP)",
+  "agent.connectors.dw": "مستودع البيانات المحوكم (DW)",
+  "agent.connectors.healthy": "متصل ومحصن",
+  "agent.connectors.ping": "زمن الاستجابة",
+  "agent.quota.title": "حصص الاستخدام المؤسسي",
+  "agent.quota.runs": "العمليات المتبقية هذا الشهر",
+  "agent.quota.tokens": "ميزانية التوكنات الساعية",
+  "agent.quota.concurrency": "التشغيل المتزامن النشط",
 } as const;
 
 export type ArKey = keyof typeof ar;

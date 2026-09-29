@@ -100,3 +100,8 @@ export async function listAuditEvents(input: {
     return true;
   });
 }
+
+export function getAuditEvents(organizationId?: string): AuditEvent[] {
+  if (!organizationId) return [...AUDIT_STORE];
+  return AUDIT_STORE.filter((e) => e.organizationId === organizationId);
+}

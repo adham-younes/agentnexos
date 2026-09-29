@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { runMultiAgentCoordinator } from "@/lib/ai/coordinator";
 import { checkRateLimit } from "@/lib/security/rate-limit";
+import {
+  checkAndConsumeRunQuota,
+  releaseConcurrentRun,
+  recordTokenUsage,
+} from "@/lib/enterprise/quotas";
 
 export const dynamic = "force-dynamic";
 
@@ -11,12 +16,25 @@ export async function POST(req: NextRequest) {
     const threadId = body?.threadId || `th_${Date.now().toString(36)}`;
     const tenantId = body?.tenantId || body?.organizationId || "org_default";
 
+    // Multi-Tenant Quota Check
+    const quotaCheck = checkAndConsumeRunQuota(tenantId);
+    if (!quotaCheck.allowed) {
+      return NextResponse.json(
+        {
+          error: quotaCheck.reason || "Enterprise operational run quota exhausted.",
+          quota: quotaCheck.quota,
+        },
+        { status: 429 }
+      );
+    }
+
     // Rate Limiting Check
     const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "127.0.0.1";
     const rateLimitKey = `${tenantId}:${clientIp}`;
     const rateLimit = checkRateLimit(rateLimitKey);
 
     if (!rateLimit.allowed) {
+      releaseConcurrentRun(tenantId);
       return NextResponse.json(
         {
           error: rateLimit.error || "Rate limit exceeded. Please back off and retry.",
@@ -147,7 +165,12 @@ export async function POST(req: NextRequest) {
           )
         );
 
+        recordTokenUsage(tenantId, result.estimatedTokens || 120);
+        releaseConcurrentRun(tenantId);
         controller.close();
+      },
+      cancel() {
+        releaseConcurrentRun(tenantId);
       },
     });
 

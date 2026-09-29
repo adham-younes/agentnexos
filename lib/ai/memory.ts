@@ -89,3 +89,14 @@ export async function listMemories(input: {
 
   return results;
 }
+
+export function getMemoryStats(organizationId?: string): { totalEntries: number } {
+  if (!organizationId) {
+    return { totalEntries: MEMORY_VAULT.size };
+  }
+  let count = 0;
+  for (const record of MEMORY_VAULT.values()) {
+    if (record.organizationId === organizationId) count++;
+  }
+  return { totalEntries: count };
+}

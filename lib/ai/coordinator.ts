@@ -33,6 +33,7 @@ export interface CoordinatorRunResult {
   finalSynthesis: string;
   evidenceHash: string;
   latencyMs: number;
+  estimatedTokens?: number;
   securityGuard?: {
     safe: boolean;
     reason?: string;
@@ -284,6 +285,7 @@ export async function runMultiAgentCoordinator({
     finalSynthesis,
     evidenceHash: lookupResult.evidenceHash,
     latencyMs,
+    estimatedTokens: Math.max(80, Math.ceil(finalSynthesis.length / 3)),
     securityGuard: {
       safe: true,
       redactedCategories,

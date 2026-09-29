@@ -12,7 +12,8 @@
     "test:rls": "node scripts/test-rls-isolation.mjs",
     "test:runtime": "node scripts/test-agent-runtime.mjs",
     "test:actions": "node scripts/test-phase-6-actions.mjs",
-    "test:security": "node scripts/test-phase-7-evals.mjs"
+    "test:security": "node scripts/test-phase-7-evals.mjs",
+    "test:beta": "node scripts/test-phase-9-enterprise-beta.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.78",

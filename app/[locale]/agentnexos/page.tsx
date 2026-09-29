@@ -22,7 +22,12 @@ import {
   Sparkles,
   Fingerprint,
   Loader2,
+  Building2,
+  Network,
+  Activity,
+  Gauge,
 } from "lucide-react";
+import { PILOT_ORGANIZATIONS } from "@/lib/enterprise/organizations";
 
 type ApprovalStatus = "pending" | "approved" | "rejected";
 type RunStatus = "idle" | "running" | "waiting_approval" | "completed" | "cancelled" | "failed";
@@ -40,6 +45,13 @@ export default function AgentSpacePage() {
   const [latencyMs, setLatencyMs] = useState<number | null>(null);
   const [modelUsed, setModelUsed] = useState<string>("qwen/qwen3.8-27b + openai/gpt-oss-120b");
   const [isDeterministicFallback, setIsDeterministicFallback] = useState<boolean>(true);
+
+  // Enterprise pilot and quota state
+  const [selectedOrgId, setSelectedOrgId] = useState<string>("org_pilot_acme");
+  const [remainingRuns, setRemainingRuns] = useState<number>(498);
+  const [tokenBudget, setTokenBudget] = useState<number>(198400);
+
+  const activeOrg = PILOT_ORGANIZATIONS.find((o) => o.id === selectedOrgId) || PILOT_ORGANIZATIONS[0];
 
   // Contract state
   const [contractGoal, setContractGoal] = useState<string>(
@@ -163,7 +175,7 @@ export default function AgentSpacePage() {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: queryText, threadId }),
+        body: JSON.stringify({ prompt: queryText, threadId, organizationId: selectedOrgId }),
       });
 
       if (!response.ok || !response.body) {
@@ -238,6 +250,8 @@ export default function AgentSpacePage() {
                 setApprovalStatus("approved");
                 setActiveStep(4);
               }
+              setRemainingRuns((prev) => Math.max(0, prev - 1));
+              setTokenBudget((prev) => Math.max(0, prev - 140));
             }
           } catch {
             // ignore malformed frame
@@ -279,7 +293,7 @@ export default function AgentSpacePage() {
             <div className="flex items-center gap-2 min-w-0">
               <span className="font-sans font-bold text-base sm:text-lg tracking-tight truncate">Agentnexos</span>
               <span className="hidden md:inline-flex text-[11px] font-mono px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
-                {t("agent.badge", "Phase 6: Action Tools & Human Approvals")}
+                {t("agent.badge", "Phase 9: Enterprise Beta Readiness")}
               </span>
             </div>
           </div>
@@ -327,6 +341,120 @@ export default function AgentSpacePage() {
             </p>
           </div>
         </div>
+
+        {/* Enterprise Pilot Organization & Connectors Bar */}
+        <section aria-labelledby="enterprise-pilot-heading" className="p-4 sm:p-5 rounded-2xl border border-primary/30 bg-card/60 backdrop-blur-md space-y-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border/50 pb-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-xl bg-primary/10 border border-primary/20 text-primary shrink-0">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                    {t("agent.tenant.org", "Active Organization")}
+                  </span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
+                    {activeOrg?.country || "SA"} • {activeOrg?.tier || "pilot_beta"}
+                  </span>
+                </div>
+                <h2 id="enterprise-pilot-heading" className="text-base sm:text-lg font-semibold text-foreground tracking-tight">
+                  {activeOrg?.name || "Acme Saudi Logistics"}
+                </h2>
+              </div>
+            </div>
+
+            {/* Organization Selector */}
+            <div className="flex items-center gap-2">
+              <label htmlFor="org-select" className="text-xs text-muted-foreground shrink-0 hidden sm:inline">
+                {t("agent.tenant.switch", "Switch Organization")}:
+              </label>
+              <select
+                id="org-select"
+                value={selectedOrgId}
+                onChange={(e) => setSelectedOrgId(e.target.value)}
+                className="bg-background border border-border/60 rounded-xl px-3 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+              >
+                {PILOT_ORGANIZATIONS.map((org) => (
+                  <option key={org.id} value={org.id}>
+                    {org.name} ({org.country} • DOA SAR {org.doaLimitSar.toLocaleString()})
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Connectors & Quotas Subgrid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            {/* ZATCA Connector */}
+            <div className="p-3 rounded-xl border border-border/50 bg-background/50 space-y-1.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 font-medium text-foreground">
+                  <Network className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{t("agent.connectors.zatca", "ZATCA Fatoora Connector")}</span>
+                </div>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  {t("agent.connectors.healthy", "Healthy")}
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-muted-foreground text-[11px] font-mono">
+                <span>Phase 2 CSID</span>
+                <span>48ms</span>
+              </div>
+            </div>
+
+            {/* ERP Connector */}
+            <div className="p-3 rounded-xl border border-border/50 bg-background/50 space-y-1.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 font-medium text-foreground">
+                  <Activity className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{t("agent.connectors.erp", "Enterprise ERP Gateway")}</span>
+                </div>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  {t("agent.connectors.healthy", "Healthy")}
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-muted-foreground text-[11px] font-mono">
+                <span>SAP / Odoo DOA</span>
+                <span>32ms</span>
+              </div>
+            </div>
+
+            {/* Data Warehouse Connector */}
+            <div className="p-3 rounded-xl border border-border/50 bg-background/50 space-y-1.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 font-medium text-foreground">
+                  <Database className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{t("agent.connectors.dw", "Governed Data Warehouse")}</span>
+                </div>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  {t("agent.connectors.healthy", "Healthy")}
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-muted-foreground text-[11px] font-mono">
+                <span>Postgres RLS</span>
+                <span>14ms</span>
+              </div>
+            </div>
+
+            {/* Quota Tracker */}
+            <div className="p-3 rounded-xl border border-border/50 bg-background/50 space-y-1.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 font-medium text-foreground">
+                  <Gauge className="w-3.5 h-3.5 text-sky-400" />
+                  <span>{t("agent.quota.title", "Operational Quotas")}</span>
+                </div>
+                <span className="text-[10px] font-mono text-muted-foreground">
+                  {remainingRuns}/500 Runs
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-muted-foreground text-[11px] font-mono">
+                <span>Token Budget</span>
+                <span>{tokenBudget.toLocaleString()}</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Diagnostics Bar */}
         <section aria-labelledby="diagnostics-heading" className="grid grid-cols-1 md:grid-cols-3 gap-4">
