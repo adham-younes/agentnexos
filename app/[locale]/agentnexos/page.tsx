@@ -153,12 +153,12 @@ export default function AgentSpacePage() {
                 <Database className="w-4 h-4 text-emerald-400" />
                 <span>{t("agent.status.persistence", "Persistence")}</span>
               </div>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
-                {t("agent.status.statePending", "Next Phase")}
+              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                {t("agent.status.stateReady", "Ready for Link")}
               </span>
             </div>
             <p className="text-xs text-muted-foreground leading-normal">
-              {t("agent.status.persistenceDesc", "Supabase state store (Phase 4)")}
+              {t("agent.status.persistenceDesc", "Supabase schema & RLS isolation ready in Git")}
             </p>
           </div>
 
