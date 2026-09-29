@@ -11,7 +11,7 @@ function swapLocale(pathname: string, next: Locale): string {
   return parts.join("/") || `/${next}`;
 }
 
-export function LocaleSwitcher() {
+export function LocaleSwitcher({ inverted = false }: { inverted?: boolean }) {
   const locale = useLocale();
   const pathname = usePathname() || "/";
 
@@ -26,8 +26,12 @@ export function LocaleSwitcher() {
             aria-current={active ? "true" : undefined}
             className={
               active
-                ? "text-foreground underline underline-offset-4"
-                : "text-muted-foreground hover:text-foreground transition-colors"
+                ? inverted
+                  ? "text-white underline decoration-white/60 underline-offset-4"
+                  : "text-foreground underline underline-offset-4"
+                : inverted
+                  ? "text-white/55 hover:text-white transition-colors"
+                  : "text-muted-foreground hover:text-foreground transition-colors"
             }
           >
             {localeLabel[l]}

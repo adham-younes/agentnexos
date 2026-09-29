@@ -24,6 +24,7 @@ export const ar = {
   "nav.infra": "البنية",
   "nav.integrations": "التكاملات",
   "nav.security": "الأمان",
+  "nav.primary": "التنقّل الرئيسي",
   "nav.signIn": "منهج العمل",
   "nav.deployAgent": "ابدأ مشروعًا",
   "nav.toggleMenu": "فتح القائمة",
