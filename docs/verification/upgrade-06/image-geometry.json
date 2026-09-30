@@ -1,0 +1,32 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "changedImageGeometry": []
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "changedImageGeometry": []
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "changedImageGeometry": []
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "changedImageGeometry": []
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "changedImageGeometry": []
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "changedImageGeometry": []
+  }
+]

@@ -249,3 +249,13 @@ html[lang^="ar"] textarea {
     100% { background-position: 0% 50%; }
   }
 }
+
+/* Keyboard access and motion preferences leave the default template intact. */
+.skip-link { position: fixed; inset-inline-start: 1rem; top: 1rem; z-index: 100; padding: .75rem 1rem; background: var(--foreground); color: var(--background); transform: translateY(-200%); border-radius: .5rem; }
+.skip-link:focus { transform: translateY(0); outline: 2px solid var(--foreground); outline-offset: 4px; }
+:where(a, button, input, select, textarea):focus-visible { outline: 2px solid var(--foreground); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important; transition-duration: 0s !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .animate-char-in { opacity: 1; transform: none; }
+  .hover-lift:hover, .letter-spin:hover { transform: none; }
+}

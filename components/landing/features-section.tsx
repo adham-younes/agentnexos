@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
 import { useEffect, useRef, useState } from "react";
 import { useT } from "@/lib/i18n/use-t";
 
@@ -32,6 +34,7 @@ const features = [
 
 // Floating dot particles visualization
 function ParticleVisualization() {
+  const reducedMotion = useReducedMotion();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef(0);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
@@ -109,7 +112,7 @@ function ParticleVisualization() {
       });
 
       time += 0.016;
-      frameRef.current = requestAnimationFrame(render);
+      if (!reducedMotion) frameRef.current = requestAnimationFrame(render);
     };
     render();
 
@@ -118,7 +121,7 @@ function ParticleVisualization() {
       canvas.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(frameRef.current);
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <canvas
@@ -212,6 +215,10 @@ export function FeaturesSection() {
             {/* Right: mirrored image, full height */}
             <div className="hidden lg:block relative w-[42%] shrink-0 overflow-hidden">
               <img
+                  width={2720}
+                  height={1536}
+                  loading="lazy"
+                  decoding="async"
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png"
                 alt=""
                 aria-hidden="true"

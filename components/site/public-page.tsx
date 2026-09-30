@@ -10,7 +10,7 @@ export function PublicPage({ page, locale }: { page: PublicPageKey; locale: Loca
   return (
     <div className="min-h-screen bg-background text-foreground" style={locale === "ar" ? { fontFamily: "var(--font-arabic), var(--font-instrument), sans-serif" } : undefined}>
       <PageHeader />
-      <main id="main-content" className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8 sm:py-20">
+      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8 sm:py-20">
         <nav className="mb-10 flex flex-wrap gap-x-6 gap-y-3 border-b border-border/60 pb-5 text-sm" aria-label={locale === "ar" ? "استكشف المنصة" : "Explore the platform"}>
           {([["platform", "المنصة", "Platform"], ["solutions", "الحلول", "Solutions"], ["industries", "القطاعات", "Industries"], ["resources", "الأدلة", "Guides"]] as const).map(([path, ar, en]) => <Link key={path} aria-current={path === page ? "page" : undefined} href={`/${locale}/${path}`} className={path === page ? "text-foreground underline underline-offset-8" : "text-muted-foreground hover:text-foreground"}>{locale === "ar" ? ar : en}</Link>)}
         </nav>

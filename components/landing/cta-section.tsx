@@ -90,6 +90,10 @@ export function CtaSection() {
               {/* Right image */}
               <div className="hidden lg:flex items-end justify-center w-[600px] h-[650px] -mr-16 rtl:-mr-0 rtl:-ml-16">
                 <img
+                  width={2496}
+                  height={1664}
+                  loading="lazy"
+                  decoding="async"
                   src="/images/bridge.png"
                   alt="Two trees connected by glowing arcs"
                   className="w-full h-full object-contain object-bottom"

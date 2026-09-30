@@ -13,7 +13,8 @@
     "test:rls": "node scripts/test-rls-isolation.mjs",
     "test:runtime": "node scripts/test-agent-runtime.mjs",
     "test:actions": "node scripts/test-phase-6-actions.mjs",
-    "test:security": "node scripts/test-phase-7-evals.mjs"
+    "test:security": "node scripts/test-phase-7-evals.mjs",
+    "verify:site": "node scripts/verify-site.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.78",
@@ -79,6 +80,7 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
+    "@playwright/test": "1.63.0",
     "@tailwindcss/postcss": "^4.1.9",
     "@types/node": "^22",
     "@types/react": "^19",
