@@ -146,7 +146,7 @@ export const ar = {
   // ---------- integrations ----------
   "integrations.eyebrow": "التكاملات",
   "integrations.title1": "وصّل",
-  "integrations.title2": "كل شيء.",
+  "integrations.title2": "بهدف واضح.",
   "integrations.lead":
     "نبدأ بالأنظمة التي يعتمد عليها سير عملك، ثم نضيف كل تكامل بحدود صلاحيات واختبارات واضحة.",
   "integrations.leadRoadmap": "الشعارات توضّح نطاقات التكامل الممكنة ولا تعني تكاملات جاهزة.",
@@ -277,7 +277,7 @@ export const ar = {
   "cta.eyebrow": "ابدأ",
   "cta.title1": "اختر أول عملية،",
   "cta.title2": "ونبني نظامها الوكيل.",
-  "cta.primary": "استكشف القدرات",
+  "cta.primary": "جهّز موجز المشروع",
   "cta.secondary": "شاهد منهج العمل",
   "cta.lead": "ابدأ من مشكلة تشغيل حقيقية: نحدّد النتيجة، ونرسم القيود، ثم نبني تجربة قابلة للقياس داخل بيئتك.",
   "cta.free": "المرحلة الأولى: اكتشاف العملية وتحديد معيار النجاح",
@@ -300,7 +300,7 @@ export const ar = {
   "footer.about": "من نحن",
   "footer.blog": "هندسة المنصة",
   "footer.status": "معايير النجاح",
-  "footer.contact": "تواصل",
+  "footer.contact": "موجز المشروع",
   "footer.careers": "القطاعات",
   "footer.privacy": "الخصوصية",
   "footer.terms": "الشروط",

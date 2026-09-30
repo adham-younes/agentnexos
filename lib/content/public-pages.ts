@@ -135,6 +135,7 @@ export const publicPages = {
       "intro": "يوضح هذا الإشعار نطاق التجربة الحالية. ستُنشر تفاصيل معالجة البيانات الخاصة بالتشغيل المؤسسي قبل إتاحته.",
       "notice": "لا تدخل مستندات حقيقية أو بيانات شخصية أو مفاتيح وصول في المثال.",
       "cards": [
+        ["موجز المشروع المحلي", "إجابات نموذج موجز المشروع تبقى في ذاكرة صفحة المتصفح. لا ترسل إلى خادم أو فريق؛ يمكنك تنزيل ملف ومراجعته قبل مشاركته. إغلاق الصفحة أو مسحها يزيل حالتها المحلية."],
         [
           "المثال الحالي",
           "عند تشغيل الاتصال الحي، يرسل طلبك وسياق المحادثة إلى خادم Vercel ثم نماذج Groq للتحليل والتخطيط والمراجعة. استخدم بيانات افتراضية فقط. المحادثة في ذاكرة التبويب ولا تحفظ في قاعدة بيانات التطبيق."
@@ -164,6 +165,7 @@ export const publicPages = {
       "intro": "This notice describes the current example. Enterprise data-processing details must be published before enterprise access is enabled.",
       "notice": "Do not enter real documents, personal data, or credentials into the example.",
       "cards": [
+        ["Local project brief", "Project brief answers stay in the browser page memory. They are not sent to a server or team; you may download and review a file before sharing. Closing or clearing the page removes local state."],
         [
           "Current example",
           "When the live connection is enabled, your request and conversation context go to the Vercel server and then Groq models for analysis, planning, and review. Use fictional data only. Conversation state lives in the browser tab and is not stored in the application's database."

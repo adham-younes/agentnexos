@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useT } from "@/lib/i18n/use-t";
+import { useT, useLocale } from "@/lib/i18n/use-t";
 
 export function CtaSection() {
   const t = useT();
+  const locale = useLocale();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -67,8 +68,8 @@ export function CtaSection() {
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
                   >
-                    <a href="#features">
-                      {t("cta.primary", "Explore capabilities")}
+                    <a href={`/${locale}/start`}>
+                      {t("cta.primary", "Prepare a project brief")}
                       <ArrowRight className="w-4 h-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                     </a>
                   </Button>

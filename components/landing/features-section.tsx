@@ -176,7 +176,7 @@ export function FeaturesSection() {
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                {t("features.intro", "Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.")}
+                {t("features.intro", "Build custom agent workflows around your operations, approved tools, and clear decision ownership. Start with a bounded pilot and verifiable outcomes.")}
               </p>
             </div>
           </div>

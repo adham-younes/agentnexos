@@ -1,4 +1,18 @@
 export const productPages = {
+  about: {
+    ar: { eyebrow: "منهج Agentnexos", title: "نبني حول العملية والمسؤول عنها.", intro: "Agentnexos مشروع لتصميم أنظمة وكيلة مخصصة لعمليات المؤسسات في مصر والخليج. نبدأ بمشكلة قابلة للقياس، ثم نختار المعرفة والأدوات والضوابط التي تحتاجها العملية.", notice: "الموقع يعرض منهج العمل وتجربة تصميم محدودة. لا يقدم شهادات امتثال أو نتائج عملاء أو تكاملات جاهزة غير مثبتة.", cards: [
+      ["اكتشاف مسؤول", "حدد مالك العملية ومصدر الحقيقة والحجم الحالي والاستثناءات. المخرج موجز يمكن لفريق الأعمال والهندسة مراجعته.", "القبول: هدف واحد ومخرج واضح ومعيار نجاح قابل للتحقق."],
+      ["تجربة محدودة", "ابدأ ببيانات افتراضية وصلاحيات قراءة ومسودات. اختبر الفشل ونقص المعلومات وطلبات تجاوز الصلاحية قبل إضافة أي فعل خارجي.", "القبول: حالات اختبار ونتائج موثقة؛ رأي النموذج لا يمنح سلطة."],
+      ["تشغيل بإثبات", "قبل الربط المؤسسي يلزم تفويض وعزل وحفظ حالة واستئناف وتتبع كلفة ومراجعة أثر الأفعال. لا نستبدل هذه المتطلبات بتعليمات داخل محادثة.", "القبول: أدلة من الأنظمة المتصلة وخطة إيقاف واستعادة موثقة."],
+      ["توسع تدريجي", "قارن وقت الإنجاز وجودة المخرجات وتدخل المسؤول بخط أساس مقاس. وسّع نطاق العملية بعد تحقق القبول والأمن.", "القبول: نتائج قابلة للمراجعة وحدود واضحة لكل مرحلة."],
+    ] },
+    en: { eyebrow: "The Agentnexos approach", title: "Build around the process and its owner.", intro: "Agentnexos is a project for custom enterprise agent workflows in Egypt and the Gulf. Start with a measurable problem, then choose the knowledge, tools, and controls the process needs.", notice: "The site presents an approach and a limited design preview. It does not claim unverified certifications, customer results, or ready-made integrations.", cards: [
+      ["Accountable discovery", "Identify the process owner, source of truth, current volume, and exceptions. Produce a brief operations and engineering can review.", "Acceptance: one goal, a clear output, and verifiable success criteria."],
+      ["A bounded pilot", "Start with fictional data, read permissions, and drafts. Test failure, missing information, and unauthorized requests before adding external actions.", "Acceptance: documented cases and results; model opinion grants no authority."],
+      ["Evidence before operation", "Enterprise connections require authorization, isolation, saved state, recovery, cost traces, and effect verification. Conversation instructions do not replace these requirements.", "Acceptance: evidence from connected systems and a documented stop and recovery plan."],
+      ["Gradual expansion", "Compare cycle time, output quality, and owner intervention against a measured baseline. Expand after acceptance and security checks.", "Acceptance: reviewable results and explicit boundaries for each stage."],
+    ] },
+  },
   platform: {
     ar: {
       eyebrow: "من المشكلة إلى نظام قابل للتشغيل", title: "المعرفة والأدوات والقرارات، في سير عمل واحد.",

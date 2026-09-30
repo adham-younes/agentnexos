@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const content = publicPages.security[locale];
-  return { title: `${content.title} | Agentnexos`, description: content.intro, alternates: { canonical: `/${locale}/security`, languages: { ar: "/ar/security", en: "/en/security" } }, openGraph: { title: content.title, description: content.intro, url: `/${locale}/security` } };
+  return { title: `${content.title} | Agentnexos`, description: content.intro, alternates: { canonical: `/${locale}/security`, languages: { ar: "/ar/security", en: "/en/security" } }, openGraph: { title: content.title, description: content.intro, url: `/${locale}/security` }, twitter: { title: content.title, description: content.intro } };
 }
 
 export default async function Page({ params }: Props) {

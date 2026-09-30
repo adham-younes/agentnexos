@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, page } = await params;
   if (!isLocale(locale) || !isProductPage(page)) notFound();
   const c = productPages[page][locale];
-  return { title: `${c.title} | Agentnexos`, description: c.intro, alternates: { canonical: `/${locale}/${page}`, languages: { ar: `/ar/${page}`, en: `/en/${page}` } } };
+  return { title: `${c.title} | Agentnexos`, description: c.intro, alternates: { canonical: `/${locale}/${page}`, languages: { ar: `/ar/${page}`, en: `/en/${page}` } }, openGraph: { title: c.title, description: c.intro, url: `/${locale}/${page}` }, twitter: { title: c.title, description: c.intro } };
 }
 export default async function Page({ params }: Props) {
   const { locale, page } = await params;
