@@ -1,0 +1,50 @@
+[
+  {
+    "locale": "ar",
+    "scenario": 0,
+    "review": true,
+    "reject": true,
+    "approve": true,
+    "reset": true
+  },
+  {
+    "locale": "ar",
+    "scenario": 1,
+    "review": true,
+    "reject": true,
+    "approve": true,
+    "reset": true
+  },
+  {
+    "locale": "ar",
+    "noRuntimePosts": true,
+    "noInternalIdentifiers": true,
+    "noPageErrors": true,
+    "keyboardFocus": true,
+    "localePathPreserved": true
+  },
+  {
+    "locale": "en",
+    "scenario": 0,
+    "review": true,
+    "reject": true,
+    "approve": true,
+    "reset": true
+  },
+  {
+    "locale": "en",
+    "scenario": 1,
+    "review": true,
+    "reject": true,
+    "approve": true,
+    "reset": true
+  },
+  {
+    "locale": "en",
+    "noRuntimePosts": true,
+    "noInternalIdentifiers": true,
+    "noPageErrors": true,
+    "keyboardFocus": true,
+    "localePathPreserved": true
+  }
+]

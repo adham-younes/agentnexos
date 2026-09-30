@@ -1,18 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useT } from "@/lib/i18n/use-t";
-import { LocaleSwitcher } from "@/components/site/locale-switcher";
-import { Button } from "@/components/ui/button";
+import { PageHeader } from "@/components/site/page-header";
 import {
   ShieldCheck,
   Lock,
   Database,
   FileKey2,
   Terminal,
-  ArrowLeft,
-  ArrowRight,
-  ExternalLink,
   Cpu,
 } from "lucide-react";
 import { useParams } from "next/navigation";
@@ -22,7 +17,6 @@ export default function SecurityPage() {
   const params = useParams();
   const locale = (params?.locale as string) || "ar";
   const isAr = locale === "ar";
-  const BackIcon = isAr ? ArrowRight : ArrowLeft;
 
   const pillars = [
     {
@@ -72,32 +66,7 @@ export default function SecurityPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between selection:bg-primary/20">
       {/* Header */}
-      <header className="border-b border-border/40 backdrop-blur-md sticky top-0 z-40 bg-background/80">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link
-              href={`/${locale}`}
-              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <BackIcon className="w-4 h-4" />
-              <span>{t("agent.backToHome", "Back to Home")}</span>
-            </Link>
-            <span className="text-border">|</span>
-            <Link href={`/${locale}`} className="font-semibold tracking-tight text-foreground text-sm">
-              Agentnexos
-            </Link>
-          </div>
-          <div className="flex items-center gap-3">
-            <LocaleSwitcher />
-            <Button asChild size="sm" className="rounded-full text-xs">
-              <Link href={`/${locale}/agentnexos`}>
-                <span>{t("solutions.cta", "Open Agent Space")}</span>
-                <ExternalLink className="w-3.5 h-3.5 ms-1.5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <PageHeader />
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12">

@@ -1,0 +1,230 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "agentnexos",
+    "status": 200,
+    "scrollWidth": 390,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "Agentnexos\nالعربية\nEnglish\nمساحة الوكيل\n\nغلاف التنفيذ الحتمي ومساحة العمل متعددة الوكلاء\n\nإعادة تعيين المسار\n\nتنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.\n\nتشخيص البيئة التشغيلية\nطبقة النماذج\nجاهز للربط\n\nGroq (Qwen 3.8 27B / GPT-OSS 120B) مهيأ في Vercel\n\nالاستمرارية وقاعدة البيانات\nجاهز للربط\n\nمخطط Supabase وعزل المؤسسات وRLS مفعّل في Git\n\nنمط التشغيل\nنشط (تشغيل متعدد الوكلاء)\n\nمعاينة حتمية منضبطة وتدفق مباشر (دون ردود وهمية)\n\nاستعلامات تجريبية سريعة:\nفحص شروط الفوترة الإلكترونية زاتكا المرحلة 2\nمراجعة حدود صلاحيات الشراء والتوريد المؤسسية\nسياسات مهلة التشغيل للأدوات المؤتمتة وحماية SSRF\nعقد التنفيذ النشط\nالهدف\n\nProcess enterprise operational request under strict permission boundaries\n\nمصدر الحقيقة\n\nEnterprise Knowledge Base & Connected Tools\n\nحد الأمان\n\nRead-only lookup by default; writes require human approval\n\nThread ID:\nth_pgea0xv\nRun ID:\nrun_init\nStatus:\nIdle\nحالة الحماية:\nActive Defense\nمسار خطوات التشغيل\nStep 0 / 4\n1. تحليل العملية (Process Analysis)\n\nاستخراج المدخلات، وتصنيف القصد، وبناء عقد التنفيذ الحتمي المقيد.\n\n2. تنفيذ الأداة (Tool Execution - Read)\n\nالاستعلام من مصدر معرفة موثق مع مهلة زمنية وحماية من SSRF.\n\n3. بوابة الموافقة (Approval Gate - Human)\nStandby\n\nتم رصد إجراء حساس. توقف مؤقت لحين استلام موافقة صريحة من المشرف.\n\nإرسال وتدفق\n\nالتدفق المباشر عبر SSE ومطابقة عقد التنفيذ مفعّلان تلقائيًا.",
+    "errors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "solutions",
+    "status": 200,
+    "scrollWidth": 390,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 7,
+    "text": "العودة للرئيسية\n|\nAgentnexos\nالعربية\nEnglish\nاختبر هذه الحلول حياً في مساحة الوكيل\nMENA Enterprise Solutions\nحلول الأنظمة الوكيلة للمؤسسات\n\nأتمتة العمليات الحساسة بضوابط قطاعية متوافقة مع متطلبات الشرق الأوسط\n\nالامتثال والفوترة الإلكترونية (ZATCA Phase 2)\n\nالتحقق المسبق من صحة الفواتير وبناء الأختام الرقمية وتفادي الغرامات التنظيمية قبل الإرسال للبوابات الضريبية الحكومية.\n\nXML Schema & Cryptographic Stamp\nPre-flight Error Prevention\nإدارة المشتريات ومصفوفة الصلاحيات (Procurement DOA)\n\nتطبيق حدود الصلاحيات، التدقيق المزدوج للمدفوعات فوق 10,000 دولار، والتحقق الآلي من السجلات التجارية والشهادات الضريبية.\n\n$10,000 Threshold Dual Signature\nVendor Tax Clearance Verification\nتنسيق العمليات والربط بين الأنظمة (Cross-System Orchestration)\n\nربط أنظمة الـ ERP والبيانات التشغيلية بسير عمل مؤتمت مشروط بموافقة المشرف البشري قبل أي كتابة خارجية.\n\nIdempotent External Action Tools\nAppend-Only Tamper-Proof Audit\nاختبر هذه الحلول حياً في مساحة الوكيل\n\nتنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.\n\nاختبر هذه الحلول حياً في مساحة الوكيل\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "scrollWidth": 390,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 7,
+    "text": "العودة للرئيسية\n|\nAgentnexos\nالعربية\nEnglish\nاختبر هذه الحلول حياً في مساحة الوكيل\nZero-Trust Architecture\nبنية الأمان والسيادة المؤسسية\n\nحماية متعددة الطبقات من الفكرة إلى التنفيذ المشفر وسجلات التدقيق\n\nعزل المستأجرين (Tenant Isolation via RLS)\n\nعزل كامل لبيانات كل منظمة ومستأجر على مستوى قاعدة البيانات PostgreSQL بواسطة سياسات Row-Level Security الإلزامية.\n\nحماية الأوامر وحقن التعليمات (Prompt Guard)\n\nدرع أمان ثنائي اللغة يحلل المدخلات ويكشف محاولات تجاوز التعليمات وحقن الفواصل البرمجية والتسريب قبل وصولها للنماذج.\n\nبوابة المشرف البشري (Human-in-the-Loop Gateway)\n\nحظر تلقائي لكافة إجراءات الكتابة والتصدير الحساسة حتى يتم اعتمادها صراحة من المشرف البشري عبر واجهة موثقة.\n\nسجل تدقيق مشفر (Append-Only SHA-256 Audit Trail)\n\nسجل أحداث غير قابل للتعديل يوثق كل تشغيل واستدعاء أداة وقرار بشري ببصمة تشفيرية فريدة تكشف أي محاولة تلاعب.\n\nحماية SSRF والحدود الشبكية\n\nجدار حماية يمنع استدعاء العناوين المحلية (Loopback)، الشبكات الخاصة (RFC1918)، وبيانات تعريف السحابة (Cloud Metadata).\n\nتجهيل البيانات الحساسة (PII & Secret Redaction)\n\nتجهيل فوري لمفاتيح API وأرقام الهوية الوطنية وبطاقات الدفع والبريد الإلكتروني قبل المعالجة لضمان سرية البيانات.\n\nCRYPTOGRAPHIC GUARANTEE\n\nكافة أحداث التشغيل وقرارات المشرف البشري يتم تشفيرها وتخزينها بصيغة Append-only في جداول مخصصة مع بصمات SHA-256 رقمية، وتظل متاحة للتدقيق والمطابقة القانونية في أي وقت.\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "agentnexos",
+    "status": 200,
+    "scrollWidth": 768,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "العودة للرئيسية\n/\nAgentnexos\nالمرحلة 7: التقييمات والأمان والمراقبة والتعافي\nالعربية\nEnglish\nمساحة الوكيل\n\nغلاف التنفيذ الحتمي ومساحة العمل متعددة الوكلاء\n\nإعادة تعيين المسار\n\nتنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.\n\nتشخيص البيئة التشغيلية\nطبقة النماذج\nجاهز للربط\n\nGroq (Qwen 3.8 27B / GPT-OSS 120B) مهيأ في Vercel\n\nالاستمرارية وقاعدة البيانات\nجاهز للربط\n\nمخطط Supabase وعزل المؤسسات وRLS مفعّل في Git\n\nنمط التشغيل\nنشط (تشغيل متعدد الوكلاء)\n\nمعاينة حتمية منضبطة وتدفق مباشر (دون ردود وهمية)\n\nاستعلامات تجريبية سريعة:\nفحص شروط الفوترة الإلكترونية زاتكا المرحلة 2\nمراجعة حدود صلاحيات الشراء والتوريد المؤسسية\nسياسات مهلة التشغيل للأدوات المؤتمتة وحماية SSRF\nعقد التنفيذ النشط\nالهدف\n\nProcess enterprise operational request under strict permission boundaries\n\nمصدر الحقيقة\n\nEnterprise Knowledge Base & Connected Tools\n\nحد الأمان\n\nRead-only lookup by default; writes require human approval\n\nThread ID:\nth_50tsm2w\nRun ID:\nrun_init\nStatus:\nIdle\nحالة الحماية:\nActive Defense\nمسار خطوات التشغيل\nStep 0 / 4\n1. تحليل العملية (Process Analysis)\n\nاستخراج المدخلات، وتصنيف القصد، وبناء عقد التنفيذ الحتمي المقيد.\n\n2. تنفيذ الأداة (Tool Execution - Read)\n\nالاستعلام من مصدر معرفة موثق مع مهلة زمنية وحماية من SSRF.\n\n3. بوابة الموافقة (Approval Gate - Human)\nStandby\n\nتم رصد إجراء حساس. توقف مؤقت لحين استلام موافقة صريحة من المشرف.\n\nإرسال وتدفق\n\nالتدفق المباشر عبر SSE ومطابقة عقد التنفيذ مفعّلان تلقائيًا.",
+    "errors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "solutions",
+    "status": 200,
+    "scrollWidth": 768,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "العودة للرئيسية\n|\nAgentnexos\nالعربية\nEnglish\nاختبر هذه الحلول حياً في مساحة الوكيل\nMENA Enterprise Solutions\nحلول الأنظمة الوكيلة للمؤسسات\n\nأتمتة العمليات الحساسة بضوابط قطاعية متوافقة مع متطلبات الشرق الأوسط\n\nالامتثال والفوترة الإلكترونية (ZATCA Phase 2)\n\nالتحقق المسبق من صحة الفواتير وبناء الأختام الرقمية وتفادي الغرامات التنظيمية قبل الإرسال للبوابات الضريبية الحكومية.\n\nXML Schema & Cryptographic Stamp\nPre-flight Error Prevention\nإدارة المشتريات ومصفوفة الصلاحيات (Procurement DOA)\n\nتطبيق حدود الصلاحيات، التدقيق المزدوج للمدفوعات فوق 10,000 دولار، والتحقق الآلي من السجلات التجارية والشهادات الضريبية.\n\n$10,000 Threshold Dual Signature\nVendor Tax Clearance Verification\nتنسيق العمليات والربط بين الأنظمة (Cross-System Orchestration)\n\nربط أنظمة الـ ERP والبيانات التشغيلية بسير عمل مؤتمت مشروط بموافقة المشرف البشري قبل أي كتابة خارجية.\n\nIdempotent External Action Tools\nAppend-Only Tamper-Proof Audit\nاختبر هذه الحلول حياً في مساحة الوكيل\n\nتنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.\n\nاختبر هذه الحلول حياً في مساحة الوكيل\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "scrollWidth": 768,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "العودة للرئيسية\n|\nAgentnexos\nالعربية\nEnglish\nاختبر هذه الحلول حياً في مساحة الوكيل\nZero-Trust Architecture\nبنية الأمان والسيادة المؤسسية\n\nحماية متعددة الطبقات من الفكرة إلى التنفيذ المشفر وسجلات التدقيق\n\nعزل المستأجرين (Tenant Isolation via RLS)\n\nعزل كامل لبيانات كل منظمة ومستأجر على مستوى قاعدة البيانات PostgreSQL بواسطة سياسات Row-Level Security الإلزامية.\n\nحماية الأوامر وحقن التعليمات (Prompt Guard)\n\nدرع أمان ثنائي اللغة يحلل المدخلات ويكشف محاولات تجاوز التعليمات وحقن الفواصل البرمجية والتسريب قبل وصولها للنماذج.\n\nبوابة المشرف البشري (Human-in-the-Loop Gateway)\n\nحظر تلقائي لكافة إجراءات الكتابة والتصدير الحساسة حتى يتم اعتمادها صراحة من المشرف البشري عبر واجهة موثقة.\n\nسجل تدقيق مشفر (Append-Only SHA-256 Audit Trail)\n\nسجل أحداث غير قابل للتعديل يوثق كل تشغيل واستدعاء أداة وقرار بشري ببصمة تشفيرية فريدة تكشف أي محاولة تلاعب.\n\nحماية SSRF والحدود الشبكية\n\nجدار حماية يمنع استدعاء العناوين المحلية (Loopback)، الشبكات الخاصة (RFC1918)، وبيانات تعريف السحابة (Cloud Metadata).\n\nتجهيل البيانات الحساسة (PII & Secret Redaction)\n\nتجهيل فوري لمفاتيح API وأرقام الهوية الوطنية وبطاقات الدفع والبريد الإلكتروني قبل المعالجة لضمان سرية البيانات.\n\nCRYPTOGRAPHIC GUARANTEE\n\nكافة أحداث التشغيل وقرارات المشرف البشري يتم تشفيرها وتخزينها بصيغة Append-only في جداول مخصصة مع بصمات SHA-256 رقمية، وتظل متاحة للتدقيق والمطابقة القانونية في أي وقت.\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "agentnexos",
+    "status": 200,
+    "scrollWidth": 1440,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "العودة للرئيسية\n/\nAgentnexos\nالمرحلة 7: التقييمات والأمان والمراقبة والتعافي\nالعربية\nEnglish\nمساحة الوكيل\n\nغلاف التنفيذ الحتمي ومساحة العمل متعددة الوكلاء\n\nإعادة تعيين المسار\n\nتنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.\n\nتشخيص البيئة التشغيلية\nطبقة النماذج\nجاهز للربط\n\nGroq (Qwen 3.8 27B / GPT-OSS 120B) مهيأ في Vercel\n\nالاستمرارية وقاعدة البيانات\nجاهز للربط\n\nمخطط Supabase وعزل المؤسسات وRLS مفعّل في Git\n\nنمط التشغيل\nنشط (تشغيل متعدد الوكلاء)\n\nمعاينة حتمية منضبطة وتدفق مباشر (دون ردود وهمية)\n\nاستعلامات تجريبية سريعة:\nفحص شروط الفوترة الإلكترونية زاتكا المرحلة 2\nمراجعة حدود صلاحيات الشراء والتوريد المؤسسية\nسياسات مهلة التشغيل للأدوات المؤتمتة وحماية SSRF\nعقد التنفيذ النشط\nالهدف\n\nProcess enterprise operational request under strict permission boundaries\n\nمصدر الحقيقة\n\nEnterprise Knowledge Base & Connected Tools\n\nحد الأمان\n\nRead-only lookup by default; writes require human approval\n\nThread ID:\nth_yefmo5n\nRun ID:\nrun_init\nStatus:\nIdle\nحالة الحماية:\nActive Defense\nمسار خطوات التشغيل\nStep 0 / 4\n1. تحليل العملية (Process Analysis)\n\nاستخراج المدخلات، وتصنيف القصد، وبناء عقد التنفيذ الحتمي المقيد.\n\n2. تنفيذ الأداة (Tool Execution - Read)\n\nالاستعلام من مصدر معرفة موثق مع مهلة زمنية وحماية من SSRF.\n\n3. بوابة الموافقة (Approval Gate - Human)\nStandby\n\nتم رصد إجراء حساس. توقف مؤقت لحين استلام موافقة صريحة من المشرف.\n\nإرسال وتدفق\n\nالتدفق المباشر عبر SSE ومطابقة عقد التنفيذ مفعّلان تلقائيًا.",
+    "errors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "solutions",
+    "status": 200,
+    "scrollWidth": 1440,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "العودة للرئيسية\n|\nAgentnexos\nالعربية\nEnglish\nاختبر هذه الحلول حياً في مساحة الوكيل\nMENA Enterprise Solutions\nحلول الأنظمة الوكيلة للمؤسسات\n\nأتمتة العمليات الحساسة بضوابط قطاعية متوافقة مع متطلبات الشرق الأوسط\n\nالامتثال والفوترة الإلكترونية (ZATCA Phase 2)\n\nالتحقق المسبق من صحة الفواتير وبناء الأختام الرقمية وتفادي الغرامات التنظيمية قبل الإرسال للبوابات الضريبية الحكومية.\n\nXML Schema & Cryptographic Stamp\nPre-flight Error Prevention\nإدارة المشتريات ومصفوفة الصلاحيات (Procurement DOA)\n\nتطبيق حدود الصلاحيات، التدقيق المزدوج للمدفوعات فوق 10,000 دولار، والتحقق الآلي من السجلات التجارية والشهادات الضريبية.\n\n$10,000 Threshold Dual Signature\nVendor Tax Clearance Verification\nتنسيق العمليات والربط بين الأنظمة (Cross-System Orchestration)\n\nربط أنظمة الـ ERP والبيانات التشغيلية بسير عمل مؤتمت مشروط بموافقة المشرف البشري قبل أي كتابة خارجية.\n\nIdempotent External Action Tools\nAppend-Only Tamper-Proof Audit\nاختبر هذه الحلول حياً في مساحة الوكيل\n\nتنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.\n\nاختبر هذه الحلول حياً في مساحة الوكيل\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "scrollWidth": 1440,
+    "lang": "ar-EG",
+    "dir": "rtl",
+    "headerOverflow": 0,
+    "text": "العودة للرئيسية\n|\nAgentnexos\nالعربية\nEnglish\nاختبر هذه الحلول حياً في مساحة الوكيل\nZero-Trust Architecture\nبنية الأمان والسيادة المؤسسية\n\nحماية متعددة الطبقات من الفكرة إلى التنفيذ المشفر وسجلات التدقيق\n\nعزل المستأجرين (Tenant Isolation via RLS)\n\nعزل كامل لبيانات كل منظمة ومستأجر على مستوى قاعدة البيانات PostgreSQL بواسطة سياسات Row-Level Security الإلزامية.\n\nحماية الأوامر وحقن التعليمات (Prompt Guard)\n\nدرع أمان ثنائي اللغة يحلل المدخلات ويكشف محاولات تجاوز التعليمات وحقن الفواصل البرمجية والتسريب قبل وصولها للنماذج.\n\nبوابة المشرف البشري (Human-in-the-Loop Gateway)\n\nحظر تلقائي لكافة إجراءات الكتابة والتصدير الحساسة حتى يتم اعتمادها صراحة من المشرف البشري عبر واجهة موثقة.\n\nسجل تدقيق مشفر (Append-Only SHA-256 Audit Trail)\n\nسجل أحداث غير قابل للتعديل يوثق كل تشغيل واستدعاء أداة وقرار بشري ببصمة تشفيرية فريدة تكشف أي محاولة تلاعب.\n\nحماية SSRF والحدود الشبكية\n\nجدار حماية يمنع استدعاء العناوين المحلية (Loopback)، الشبكات الخاصة (RFC1918)، وبيانات تعريف السحابة (Cloud Metadata).\n\nتجهيل البيانات الحساسة (PII & Secret Redaction)\n\nتجهيل فوري لمفاتيح API وأرقام الهوية الوطنية وبطاقات الدفع والبريد الإلكتروني قبل المعالجة لضمان سرية البيانات.\n\nCRYPTOGRAPHIC GUARANTEE\n\nكافة أحداث التشغيل وقرارات المشرف البشري يتم تشفيرها وتخزينها بصيغة Append-only في جداول مخصصة مع بصمات SHA-256 رقمية، وتظل متاحة للتدقيق والمطابقة القانونية في أي وقت.\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "agentnexos",
+    "status": 200,
+    "scrollWidth": 390,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Agentnexos\nالعربية\nEnglish\nAgent Space\n\nDeterministic Execution Shell & Autonomous Multi-Agent Workspace\n\nReset Trace\n\nTransparency Alert: Multi-agent runtime (Qwen 3.8 27B + GPT-OSS 120B) is active with real SSE streaming, SHA-256 cryptographic evidence hashing, and human approval gates.\n\nEnvironment Diagnostics\nModel Layer\nReady for Link\n\nGroq (Qwen 3.8 27B / GPT-OSS 120B) configured in Vercel\n\nPersistence\nReady for Link\n\nSupabase schema & RLS isolation ready in Git\n\nOperating Mode\nActive (Multi-Agent Runtime)\n\nSafe Deterministic Preview & Real Streaming (No fabricated responses)\n\nQUICK ENTERPRISE QUERIES:\nVerify ZATCA Phase 2 E-Invoicing Rules\nCheck Procurement Approval Thresholds\nReview Autonomous Tool Execution Policies\nACTIVE EXECUTION CONTRACT\nGOAL\n\nProcess enterprise operational request under strict permission boundaries\n\nSOURCE OF TRUTH\n\nEnterprise Knowledge Base & Connected Tools\n\nSAFETY BOUNDARY\n\nRead-only lookup by default; writes require human approval\n\nThread ID:\nth_c472lw9\nRun ID:\nrun_init\nStatus:\nIdle\nGuard Status:\nActive Defense\nRUN EXECUTION TRACE\nStep 0 / 4\n1. Process Analysis\n\nExtract inputs, classify intent, and build deterministic execution contract.\n\n2. Tool Execution (Read-Only)\n\nQuery verified enterprise knowledge source with timeout and SSRF protection.\n\n3. Approval Gate (Human-in-the-Loop)\nStandby\n\nSensitive action detected. Pausing execution until explicit owner approval.\n\nSend & Stream\n\nLive streaming via SSE and execution contract matching are active.",
+    "errors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "solutions",
+    "status": 200,
+    "scrollWidth": 390,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 7,
+    "text": "Back to Home\n|\nAgentnexos\nالعربية\nEnglish\nTest Live in Agent Space\nMENA Enterprise Solutions\nEnterprise Agent Solutions\n\nAutomating sensitive operations with MENA-compliant sectoral controls, human approvals, and cryptographic evidence.\n\nCompliance & E-Invoicing (ZATCA Phase 2)\n\nPre-validating invoices, generating digital stamps, and ensuring regulatory compliance before tax gateway dispatch.\n\nXML Schema & Cryptographic Stamp\nPre-flight Error Prevention\nProcurement & Delegation of Authority\n\nEnforcing authority thresholds, dual-authorization for disbursements over $10,000, and commercial registration clearance.\n\n$10,000 Threshold Dual Signature\nVendor Tax Clearance Verification\nCross-System Operational Orchestration\n\nConnecting ERPs and databases into traceable workflows requiring human approval before external state changes.\n\nIdempotent External Action Tools\nAppend-Only Tamper-Proof Audit\nTest These Solutions Live in Agent Space\n\nExperience multi-agent coordination with Qwen 3.8 and GPT-OSS, human-in-the-loop approvals, and SHA-256 evidence logs.\n\nOpen Agent Space\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "scrollWidth": 390,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 7,
+    "text": "Back to Home\n|\nAgentnexos\nالعربية\nEnglish\nOpen Agent Space\nZero-Trust Architecture\nEnterprise Security & Sovereignty\n\nMulti-layered protection from prompt to cryptographic proof, designed for MENA regulatory compliance.\n\nTenant Isolation via Supabase RLS\n\nStrict multi-tenant isolation enforced at the PostgreSQL database layer via mandatory Supabase Row-Level Security policies.\n\nPrompt Injection & Jailbreak Guard\n\nBilingual prompt guard detecting system prompt overrides, delimiter hijacking, and environment exfiltration prior to model inference.\n\nHuman-in-the-Loop Gateway\n\nAutomatic pause on all sensitive write/export actions until explicitly authorized by a human supervisor via verified interface.\n\nAppend-Only SHA-256 Audit Trail\n\nImmutable append-only ledger signing every agent run, tool call, and human decision with SHA-256 integrity proofs.\n\nSSRF Protection & Network Perimeter\n\nNetwork perimeter blocking loopback IPs, private RFC1918 subnets, and cloud metadata endpoints from tool access.\n\nAutomatic PII & Secret Redaction\n\nAutomated pre-inference redaction of API tokens, national IDs, payment cards, and emails to preserve enterprise confidentiality.\n\nCRYPTOGRAPHIC GUARANTEE\n\nAll agent runs and human decisions are recorded in an append-only ledger with SHA-256 checksums, available for regulatory audit and mathematical verification.\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "agentnexos",
+    "status": 200,
+    "scrollWidth": 768,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Back to Home\n/\nAgentnexos\nPhase 6: Action Tools & Human Approvals\nالعربية\nEnglish\nAgent Space\n\nDeterministic Execution Shell & Autonomous Multi-Agent Workspace\n\nReset Trace\n\nTransparency Alert: Multi-agent runtime (Qwen 3.8 27B + GPT-OSS 120B) is active with real SSE streaming, SHA-256 cryptographic evidence hashing, and human approval gates.\n\nEnvironment Diagnostics\nModel Layer\nReady for Link\n\nGroq (Qwen 3.8 27B / GPT-OSS 120B) configured in Vercel\n\nPersistence\nReady for Link\n\nSupabase schema & RLS isolation ready in Git\n\nOperating Mode\nActive (Multi-Agent Runtime)\n\nSafe Deterministic Preview & Real Streaming (No fabricated responses)\n\nQUICK ENTERPRISE QUERIES:\nVerify ZATCA Phase 2 E-Invoicing Rules\nCheck Procurement Approval Thresholds\nReview Autonomous Tool Execution Policies\nACTIVE EXECUTION CONTRACT\nGOAL\n\nProcess enterprise operational request under strict permission boundaries\n\nSOURCE OF TRUTH\n\nEnterprise Knowledge Base & Connected Tools\n\nSAFETY BOUNDARY\n\nRead-only lookup by default; writes require human approval\n\nThread ID:\nth_6riz71e\nRun ID:\nrun_init\nStatus:\nIdle\nGuard Status:\nActive Defense\nRUN EXECUTION TRACE\nStep 0 / 4\n1. Process Analysis\n\nExtract inputs, classify intent, and build deterministic execution contract.\n\n2. Tool Execution (Read-Only)\n\nQuery verified enterprise knowledge source with timeout and SSRF protection.\n\n3. Approval Gate (Human-in-the-Loop)\nStandby\n\nSensitive action detected. Pausing execution until explicit owner approval.\n\nSend & Stream\n\nLive streaming via SSE and execution contract matching are active.",
+    "errors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "solutions",
+    "status": 200,
+    "scrollWidth": 768,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Back to Home\n|\nAgentnexos\nالعربية\nEnglish\nTest Live in Agent Space\nMENA Enterprise Solutions\nEnterprise Agent Solutions\n\nAutomating sensitive operations with MENA-compliant sectoral controls, human approvals, and cryptographic evidence.\n\nCompliance & E-Invoicing (ZATCA Phase 2)\n\nPre-validating invoices, generating digital stamps, and ensuring regulatory compliance before tax gateway dispatch.\n\nXML Schema & Cryptographic Stamp\nPre-flight Error Prevention\nProcurement & Delegation of Authority\n\nEnforcing authority thresholds, dual-authorization for disbursements over $10,000, and commercial registration clearance.\n\n$10,000 Threshold Dual Signature\nVendor Tax Clearance Verification\nCross-System Operational Orchestration\n\nConnecting ERPs and databases into traceable workflows requiring human approval before external state changes.\n\nIdempotent External Action Tools\nAppend-Only Tamper-Proof Audit\nTest These Solutions Live in Agent Space\n\nExperience multi-agent coordination with Qwen 3.8 and GPT-OSS, human-in-the-loop approvals, and SHA-256 evidence logs.\n\nOpen Agent Space\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "scrollWidth": 768,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Back to Home\n|\nAgentnexos\nالعربية\nEnglish\nOpen Agent Space\nZero-Trust Architecture\nEnterprise Security & Sovereignty\n\nMulti-layered protection from prompt to cryptographic proof, designed for MENA regulatory compliance.\n\nTenant Isolation via Supabase RLS\n\nStrict multi-tenant isolation enforced at the PostgreSQL database layer via mandatory Supabase Row-Level Security policies.\n\nPrompt Injection & Jailbreak Guard\n\nBilingual prompt guard detecting system prompt overrides, delimiter hijacking, and environment exfiltration prior to model inference.\n\nHuman-in-the-Loop Gateway\n\nAutomatic pause on all sensitive write/export actions until explicitly authorized by a human supervisor via verified interface.\n\nAppend-Only SHA-256 Audit Trail\n\nImmutable append-only ledger signing every agent run, tool call, and human decision with SHA-256 integrity proofs.\n\nSSRF Protection & Network Perimeter\n\nNetwork perimeter blocking loopback IPs, private RFC1918 subnets, and cloud metadata endpoints from tool access.\n\nAutomatic PII & Secret Redaction\n\nAutomated pre-inference redaction of API tokens, national IDs, payment cards, and emails to preserve enterprise confidentiality.\n\nCRYPTOGRAPHIC GUARANTEE\n\nAll agent runs and human decisions are recorded in an append-only ledger with SHA-256 checksums, available for regulatory audit and mathematical verification.\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "agentnexos",
+    "status": 200,
+    "scrollWidth": 1440,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Back to Home\n/\nAgentnexos\nPhase 6: Action Tools & Human Approvals\nالعربية\nEnglish\nAgent Space\n\nDeterministic Execution Shell & Autonomous Multi-Agent Workspace\n\nReset Trace\n\nTransparency Alert: Multi-agent runtime (Qwen 3.8 27B + GPT-OSS 120B) is active with real SSE streaming, SHA-256 cryptographic evidence hashing, and human approval gates.\n\nEnvironment Diagnostics\nModel Layer\nReady for Link\n\nGroq (Qwen 3.8 27B / GPT-OSS 120B) configured in Vercel\n\nPersistence\nReady for Link\n\nSupabase schema & RLS isolation ready in Git\n\nOperating Mode\nActive (Multi-Agent Runtime)\n\nSafe Deterministic Preview & Real Streaming (No fabricated responses)\n\nQUICK ENTERPRISE QUERIES:\nVerify ZATCA Phase 2 E-Invoicing Rules\nCheck Procurement Approval Thresholds\nReview Autonomous Tool Execution Policies\nACTIVE EXECUTION CONTRACT\nGOAL\n\nProcess enterprise operational request under strict permission boundaries\n\nSOURCE OF TRUTH\n\nEnterprise Knowledge Base & Connected Tools\n\nSAFETY BOUNDARY\n\nRead-only lookup by default; writes require human approval\n\nThread ID:\nth_6qwwc9v\nRun ID:\nrun_init\nStatus:\nIdle\nGuard Status:\nActive Defense\nRUN EXECUTION TRACE\nStep 0 / 4\n1. Process Analysis\n\nExtract inputs, classify intent, and build deterministic execution contract.\n\n2. Tool Execution (Read-Only)\n\nQuery verified enterprise knowledge source with timeout and SSRF protection.\n\n3. Approval Gate (Human-in-the-Loop)\nStandby\n\nSensitive action detected. Pausing execution until explicit owner approval.\n\nSend & Stream\n\nLive streaming via SSE and execution contract matching are active.",
+    "errors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "solutions",
+    "status": 200,
+    "scrollWidth": 1440,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Back to Home\n|\nAgentnexos\nالعربية\nEnglish\nTest Live in Agent Space\nMENA Enterprise Solutions\nEnterprise Agent Solutions\n\nAutomating sensitive operations with MENA-compliant sectoral controls, human approvals, and cryptographic evidence.\n\nCompliance & E-Invoicing (ZATCA Phase 2)\n\nPre-validating invoices, generating digital stamps, and ensuring regulatory compliance before tax gateway dispatch.\n\nXML Schema & Cryptographic Stamp\nPre-flight Error Prevention\nProcurement & Delegation of Authority\n\nEnforcing authority thresholds, dual-authorization for disbursements over $10,000, and commercial registration clearance.\n\n$10,000 Threshold Dual Signature\nVendor Tax Clearance Verification\nCross-System Operational Orchestration\n\nConnecting ERPs and databases into traceable workflows requiring human approval before external state changes.\n\nIdempotent External Action Tools\nAppend-Only Tamper-Proof Audit\nTest These Solutions Live in Agent Space\n\nExperience multi-agent coordination with Qwen 3.8 and GPT-OSS, human-in-the-loop approvals, and SHA-256 evidence logs.\n\nOpen Agent Space\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "scrollWidth": 1440,
+    "lang": "en-US",
+    "dir": "ltr",
+    "headerOverflow": 0,
+    "text": "Back to Home\n|\nAgentnexos\nالعربية\nEnglish\nOpen Agent Space\nZero-Trust Architecture\nEnterprise Security & Sovereignty\n\nMulti-layered protection from prompt to cryptographic proof, designed for MENA regulatory compliance.\n\nTenant Isolation via Supabase RLS\n\nStrict multi-tenant isolation enforced at the PostgreSQL database layer via mandatory Supabase Row-Level Security policies.\n\nPrompt Injection & Jailbreak Guard\n\nBilingual prompt guard detecting system prompt overrides, delimiter hijacking, and environment exfiltration prior to model inference.\n\nHuman-in-the-Loop Gateway\n\nAutomatic pause on all sensitive write/export actions until explicitly authorized by a human supervisor via verified interface.\n\nAppend-Only SHA-256 Audit Trail\n\nImmutable append-only ledger signing every agent run, tool call, and human decision with SHA-256 integrity proofs.\n\nSSRF Protection & Network Perimeter\n\nNetwork perimeter blocking loopback IPs, private RFC1918 subnets, and cloud metadata endpoints from tool access.\n\nAutomatic PII & Secret Redaction\n\nAutomated pre-inference redaction of API tokens, national IDs, payment cards, and emails to preserve enterprise confidentiality.\n\nCRYPTOGRAPHIC GUARANTEE\n\nAll agent runs and human decisions are recorded in an append-only ledger with SHA-256 checksums, available for regulatory audit and mathematical verification.\n\n© 2026 Agentnexos. All rights reserved.",
+    "errors": []
+  }
+]

@@ -1,801 +1,114 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { useT } from "@/lib/i18n/use-t";
-import { LocaleSwitcher } from "@/components/site/locale-switcher";
+import { ArrowUpRight, Check, Circle, FileText, RotateCcw } from "lucide-react";
+import { PageHeader } from "@/components/site/page-header";
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/lib/i18n/use-t";
+import { workspaceCopy } from "@/lib/content/workspace-demo";
 import { cn } from "@/lib/utils";
-import {
-  ShieldAlert,
-  CheckCircle2,
-  Clock,
-  ArrowLeft,
-  RotateCcw,
-  XCircle,
-  Database,
-  Cpu,
-  FileCheck,
-  Send,
-  AlertTriangle,
-  Terminal,
-  Sparkles,
-  Fingerprint,
-  Loader2,
-} from "lucide-react";
 
-type ApprovalStatus = "pending" | "approved" | "rejected";
-type RunStatus = "idle" | "running" | "waiting_approval" | "completed" | "cancelled" | "failed";
+type Stage = "idle" | "reviewing" | "approved" | "rejected";
 
 export default function AgentSpacePage() {
-  const t = useT();
-
-  const [runStatus, setRunStatus] = useState<RunStatus>("idle");
-  const [approvalStatus, setApprovalStatus] = useState<ApprovalStatus>("pending");
-  const [promptInput, setPromptInput] = useState("");
-  const [activeStep, setActiveStep] = useState<number>(0);
-
-  const [threadId] = useState(() => `th_${Math.random().toString(36).substring(2, 9)}`);
-  const [runId, setRunId] = useState<string>("run_init");
-  const [latencyMs, setLatencyMs] = useState<number | null>(null);
-  const [modelUsed, setModelUsed] = useState<string>("qwen/qwen3.8-27b + openai/gpt-oss-120b");
-  const [isDeterministicFallback, setIsDeterministicFallback] = useState<boolean>(true);
-
-  // Contract state
-  const [contractGoal, setContractGoal] = useState<string>(
-    "Process enterprise operational request under strict permission boundaries"
-  );
-  const [contractSource, setContractSource] = useState<string>(
-    "Enterprise Knowledge Base & Connected Tools"
-  );
-  const [contractSafety, setContractSafety] = useState<string>(
-    "Read-only lookup by default; writes require human approval"
-  );
-
-  // Findings & Evidence
-  const [findings, setFindings] = useState<string[]>([]);
-  const [evidenceHash, setEvidenceHash] = useState<string>("");
-  const [approvalPrompt, setApprovalPrompt] = useState<string>("");
-  const [approvalId, setApprovalId] = useState<string>("");
-  const [idempotencyKey, setIdempotencyKey] = useState<string>("");
-  const [actionReceiptHash, setActionReceiptHash] = useState<string>("");
-  const [isProcessingApproval, setIsProcessingApproval] = useState<boolean>(false);
-  const [streamingSynthesis, setStreamingSynthesis] = useState<string>("");
-  const [isStreaming, setIsStreaming] = useState<boolean>(false);
-  const [guardStatus, setGuardStatus] = useState<"idle" | "passed" | "blocked" | "sanitized">("idle");
-  const [securityReason, setSecurityReason] = useState<string>("");
-  const [securityRedacted, setSecurityRedacted] = useState<string[]>([]);
-
-  const handleApprove = async () => {
-    if (!approvalId) {
-      setApprovalStatus("approved");
-      setRunStatus("completed");
-      setActiveStep(4);
-      return;
-    }
-    setIsProcessingApproval(true);
-    try {
-      const res = await fetch("/api/approvals", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          approvalId,
-          decision: "approved",
-          actorId: "supervisor_admin",
-          reason: "Approved via Agent Space UI",
-        }),
-      });
-      const data = await res.json();
-      if (data.actionResult?.receiptHash) {
-        setActionReceiptHash(data.actionResult.receiptHash);
-      }
-      setApprovalStatus("approved");
-      setRunStatus("completed");
-      setActiveStep(4);
-    } catch {
-      setApprovalStatus("approved");
-      setRunStatus("completed");
-      setActiveStep(4);
-    } finally {
-      setIsProcessingApproval(false);
-    }
-  };
-
-  const handleReject = async () => {
-    if (!approvalId) {
-      setApprovalStatus("rejected");
-      setRunStatus("cancelled");
-      return;
-    }
-    setIsProcessingApproval(true);
-    try {
-      await fetch("/api/approvals", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          approvalId,
-          decision: "rejected",
-          actorId: "supervisor_admin",
-          reason: "Rejected via Agent Space UI",
-        }),
-      });
-      setApprovalStatus("rejected");
-      setRunStatus("cancelled");
-    } catch {
-      setApprovalStatus("rejected");
-      setRunStatus("cancelled");
-    } finally {
-      setIsProcessingApproval(false);
-    }
-  };
-
-  const handleReset = () => {
-    setApprovalStatus("pending");
-    setRunStatus("idle");
-    setActiveStep(0);
-    setStreamingSynthesis("");
-    setFindings([]);
-    setEvidenceHash("");
-    setApprovalId("");
-    setIdempotencyKey("");
-    setActionReceiptHash("");
-    setLatencyMs(null);
-    setGuardStatus("idle");
-    setSecurityReason("");
-    setSecurityRedacted([]);
-  };
-
-  const executeQuery = async (queryText: string) => {
-    if (!queryText.trim() || isStreaming) return;
-
-    setIsStreaming(true);
-    setRunStatus("running");
-    setActiveStep(1);
-    setStreamingSynthesis("");
-    setFindings([]);
-    setEvidenceHash("");
-    setApprovalStatus("pending");
-    setGuardStatus("idle");
-    setSecurityReason("");
-    setSecurityRedacted([]);
-
-    try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: queryText, threadId }),
-      });
-
-      if (!response.ok || !response.body) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder("utf-8");
-      let buffer = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split("\n\n");
-        buffer = lines.pop() || "";
-
-        for (const line of lines) {
-          const trimmed = line.trim();
-          if (!trimmed.startsWith("data: ")) continue;
-
-          try {
-            const data = JSON.parse(trimmed.slice(6));
-
-            if (data.type === "step") {
-              if (data.step === 0 && data.security) {
-                if (!data.security.safe) {
-                  setGuardStatus("blocked");
-                  setSecurityReason(data.security.reason || "Policy violation");
-                  setRunStatus("cancelled");
-                } else if (data.security.redactedCategories && data.security.redactedCategories.length > 0) {
-                  setGuardStatus("sanitized");
-                  setSecurityRedacted(data.security.redactedCategories);
-                } else {
-                  setGuardStatus("passed");
-                }
-              } else if (data.step === 1 && data.contract) {
-                setActiveStep(1);
-                setContractGoal(data.contract.goal);
-                setContractSource(data.contract.sourceOfTruth);
-                setContractSafety(data.contract.safetyBoundary);
-              } else if (data.step === 2 && data.output) {
-                setActiveStep(2);
-                setFindings(data.output.findings || []);
-              } else if (data.step === 3) {
-                setActiveStep(3);
-                if (data.prompt) {
-                  setApprovalPrompt(data.prompt);
-                }
-                if (data.approvalId) setApprovalId(data.approvalId);
-                if (data.idempotencyKey) setIdempotencyKey(data.idempotencyKey);
-              }
-            } else if (data.type === "token") {
-              setStreamingSynthesis((prev) => prev + data.token);
-            } else if (data.type === "complete") {
-              setRunId(data.runId);
-              setEvidenceHash(data.evidenceHash);
-              setModelUsed(data.modelUsed);
-              setIsDeterministicFallback(data.isDeterministicFallback);
-              setLatencyMs(data.latencyMs);
-              if (data.approvalId) setApprovalId(data.approvalId);
-              if (data.idempotencyKey) setIdempotencyKey(data.idempotencyKey);
-
-              if (data.status === "waiting_approval") {
-                setRunStatus("waiting_approval");
-                setActiveStep(3);
-              } else if (data.status === "rejected") {
-                setRunStatus("cancelled");
-              } else {
-                setRunStatus("completed");
-                setApprovalStatus("approved");
-                setActiveStep(4);
-              }
-            }
-          } catch {
-            // ignore malformed frame
-          }
-        }
-      }
-    } catch {
-      setRunStatus("failed");
-    } finally {
-      setIsStreaming(false);
-    }
-  };
-
-  const handleStartRun = (e: React.FormEvent) => {
-    e.preventDefault();
-    executeQuery(promptInput);
-  };
-
-  const handleSamplePrompt = (sampleText: string) => {
-    setPromptInput(sampleText);
-    executeQuery(sampleText);
-  };
+  const locale = useLocale();
+  const copy = workspaceCopy[locale];
+  const [selectedId, setSelectedId] = useState<"procurement" | "receivables">("procurement");
+  const [stage, setStage] = useState<Stage>("idle");
+  const example = copy.cases.find((item) => item.id === selectedId)!;
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col overflow-x-hidden">
-      {/* Top Header */}
-      <header className="sticky top-0 z-40 border-b border-border/50 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group shrink-0"
-              title={t("agent.backToHome", "Back to Home")}
-            >
-              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1 rtl:rotate-180 rtl:group-hover:translate-x-1" />
-              <span className="hidden sm:inline">{t("agent.backToHome", "Back to Home")}</span>
-            </Link>
-            <span className="text-border hidden sm:inline">/</span>
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="font-sans font-bold text-base sm:text-lg tracking-tight truncate">Agentnexos</span>
-              <span className="hidden md:inline-flex text-[11px] font-mono px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
-                {t("agent.badge", "Phase 6: Action Tools & Human Approvals")}
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-            <LocaleSwitcher />
-          </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <PageHeader />
+      <main className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
+        <div className="max-w-3xl space-y-5">
+          <p className="text-sm font-medium text-emerald-300">{copy.eyebrow}</p>
+          <h1 className="text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">{copy.title}</h1>
+          <p className="max-w-2xl text-base leading-8 text-foreground/75">{copy.intro}</p>
         </div>
-      </header>
+        <p className="mt-7 max-w-4xl border-s-2 border-emerald-300/50 ps-4 text-sm leading-7 text-foreground/75">{copy.notice}</p>
 
-      {/* Main Container */}
-      <main className="flex-1 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {/* Title and Transparency Notice */}
-        <div className="space-y-3">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h1 className="text-2xl sm:text-3xl font-display font-semibold tracking-tight">
-                {t("agent.title", "Agent Space")}
-              </h1>
-              <p className="text-sm text-muted-foreground mt-1">
-                {t("agent.subtitle", "Deterministic Execution Shell & Autonomous Multi-Agent Workspace")}
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleReset}
-                className="gap-2 text-xs"
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-                {t("agent.actions.reset", "Reset Trace")}
-              </Button>
-            </div>
-          </div>
-
-          {/* Transparency Alert */}
-          <div className="rounded-xl border border-sky-500/20 bg-sky-500/5 p-4 flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-sm text-sky-200/90 leading-relaxed">
-              {t(
-                "agent.banner.notice",
-                "Transparency Alert: Multi-agent runtime (Qwen 3.8 27B + GPT-OSS 120B) is active with real SSE streaming, SHA-256 cryptographic evidence hashing, and human approval gates."
-              )}
-            </p>
-          </div>
-        </div>
-
-        {/* Diagnostics Bar */}
-        <section aria-labelledby="diagnostics-heading" className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <h2 id="diagnostics-heading" className="sr-only">
-            {t("agent.status.title", "Environment Diagnostics")}
-          </h2>
-
-          {/* Model Layer Card */}
-          <div className="p-4 rounded-xl border border-border/60 bg-card/60 backdrop-blur-sm space-y-2">
-            <div className="flex flex-wrap items-center justify-between gap-1.5">
-              <div className="flex items-center gap-2 text-sm font-semibold">
-                <Cpu className="w-4 h-4 text-sky-400" />
-                <span>{t("agent.status.model", "Model Layer")}</span>
-              </div>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 shrink-0">
-                {isDeterministicFallback
-                  ? t("agent.status.stateReady", "Ready for Link")
-                  : t("agent.status.stateActive", "Active (Multi-Agent Runtime)")}
-              </span>
-            </div>
-            <p className="text-xs text-muted-foreground leading-normal">
-              {t("agent.status.modelDesc", "Groq (Qwen 3.8 27B / GPT-OSS 120B) configured in Vercel")}
-            </p>
-          </div>
-
-          {/* Persistence Card */}
-          <div className="p-4 rounded-xl border border-border/60 bg-card/60 backdrop-blur-sm space-y-2">
-            <div className="flex flex-wrap items-center justify-between gap-1.5">
-              <div className="flex items-center gap-2 text-sm font-semibold">
-                <Database className="w-4 h-4 text-emerald-400" />
-                <span>{t("agent.status.persistence", "Persistence")}</span>
-              </div>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
-                {t("agent.status.stateReady", "Ready for Link")}
-              </span>
-            </div>
-            <p className="text-xs text-muted-foreground leading-normal">
-              {t("agent.status.persistenceDesc", "Supabase schema & RLS isolation ready in Git")}
-            </p>
-          </div>
-
-          {/* Mode Card */}
-          <div className="p-4 rounded-xl border border-border/60 bg-card/60 backdrop-blur-sm space-y-2">
-            <div className="flex flex-wrap items-center justify-between gap-1.5">
-              <div className="flex items-center gap-2 text-sm font-semibold">
-                <ShieldAlert className="w-4 h-4 text-indigo-400" />
-                <span>{t("agent.status.mode", "Operating Mode")}</span>
-              </div>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shrink-0">
-                {t("agent.status.stateActive", "Active (Multi-Agent Runtime)")}
-              </span>
-            </div>
-            <p className="text-xs text-muted-foreground leading-normal">
-              {t("agent.status.modeDesc", "Safe Deterministic Preview & Real Streaming (No fabricated responses)")}
-            </p>
-          </div>
-        </section>
-
-        {/* Quick Sample Prompts */}
-        <section aria-labelledby="sample-prompts-heading" className="space-y-2">
-          <h2 id="sample-prompts-heading" className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            {t("agent.stream.samplePrompts", "Quick Enterprise Queries:")}
-          </h2>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={isStreaming}
-              onClick={() => handleSamplePrompt(t("agent.sample.compliance", "Verify ZATCA Phase 2 E-Invoicing Rules"))}
-              className="text-xs h-auto min-h-8 py-1.5 px-3 gap-1.5 bg-card/40 border-border/60 hover:border-primary/50 text-start whitespace-normal max-w-full justify-start break-words"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>{t("agent.sample.compliance", "Verify ZATCA Phase 2 E-Invoicing Rules")}</span>
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={isStreaming}
-              onClick={() => handleSamplePrompt(t("agent.sample.procurement", "Check Procurement Approval Thresholds"))}
-              className="text-xs h-auto min-h-8 py-1.5 px-3 gap-1.5 bg-card/40 border-border/60 hover:border-primary/50 text-start whitespace-normal max-w-full justify-start break-words"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>{t("agent.sample.procurement", "Check Procurement Approval Thresholds")}</span>
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={isStreaming}
-              onClick={() => handleSamplePrompt(t("agent.sample.operations", "Review Autonomous Tool Execution Policies"))}
-              className="text-xs h-auto min-h-8 py-1.5 px-3 gap-1.5 bg-card/40 border-border/60 hover:border-primary/50 text-start whitespace-normal max-w-full justify-start break-words"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>{t("agent.sample.operations", "Review Autonomous Tool Execution Policies")}</span>
-            </Button>
-          </div>
-        </section>
-
-        {/* Workspace Layout: Contract + Trace */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Execution Contract Card (Left Column) */}
-          <section
-            aria-labelledby="contract-heading"
-            className="lg:col-span-1 p-5 rounded-2xl border border-border/60 bg-card/40 space-y-5"
-          >
-            <div className="flex items-center gap-2 border-b border-border/50 pb-3">
-              <FileCheck className="w-4 h-4 text-primary" />
-              <h2 id="contract-heading" className="text-sm font-semibold tracking-wide uppercase text-foreground">
-                {t("agent.contract.title", "Active Execution Contract")}
-              </h2>
-            </div>
-
-            <div className="space-y-4 text-xs">
-              <div>
-                <span className="text-muted-foreground block mb-1 font-mono uppercase tracking-wider text-[10px]">
-                  {t("agent.contract.goal", "Goal")}
-                </span>
-                <p className="p-2.5 rounded-lg bg-background/80 border border-border/40 text-foreground leading-relaxed break-words">
-                  {contractGoal || t("agent.contract.goalValue", "Process enterprise operational request under strict permission boundaries")}
-                </p>
-              </div>
-
-              <div>
-                <span className="text-muted-foreground block mb-1 font-mono uppercase tracking-wider text-[10px]">
-                  {t("agent.contract.source", "Source of Truth")}
-                </span>
-                <p className="p-2.5 rounded-lg bg-background/80 border border-border/40 text-foreground leading-relaxed break-words">
-                  {contractSource || t("agent.contract.sourceValue", "Enterprise Knowledge Base & Connected Tools")}
-                </p>
-              </div>
-
-              <div>
-                <span className="text-muted-foreground block mb-1 font-mono uppercase tracking-wider text-[10px]">
-                  {t("agent.contract.safety", "Safety Boundary")}
-                </span>
-                <p className="p-2.5 rounded-lg bg-background/80 border border-border/40 text-foreground leading-relaxed break-words">
-                  {contractSafety || t("agent.contract.safetyValue", "Read-only lookup by default; writes require human approval")}
-                </p>
-              </div>
-            </div>
-
-            {/* Run Management / Metadata */}
-            <div className="pt-4 border-t border-border/40 space-y-2 text-xs font-mono text-muted-foreground">
-              <div className="flex justify-between">
-                <span>Thread ID:</span>
-                <span className="text-foreground">{threadId}</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Run ID:</span>
-                <span className="text-foreground">{runId}</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Status:</span>
-                <span className="text-emerald-400 capitalize">{runStatus.replace("_", " ")}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span>{t("agent.telemetry.guard", "Guard Status")}:</span>
-                <span className={cn(
-                  "px-1.5 py-0.5 rounded text-[10px] font-mono",
-                  guardStatus === "blocked" ? "bg-red-500/20 text-red-400 border border-red-500/30" :
-                  guardStatus === "sanitized" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30" :
-                  guardStatus === "passed" ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" :
-                  "bg-muted/50 text-muted-foreground"
-                )}>
-                  {guardStatus === "blocked" ? t("agent.security.blocked", "Blocked (Policy Violation)") :
-                   guardStatus === "sanitized" ? t("agent.security.sanitized", "PII Sanitized") :
-                   guardStatus === "passed" ? t("agent.security.safe", "Clean & Verified") :
-                   "Active Defense"}
-                </span>
-              </div>
-              {latencyMs !== null && (
-                <div className="flex justify-between">
-                  <span>{t("agent.telemetry.latency", "Latency")}:</span>
-                  <span className="text-foreground">{latencyMs} ms</span>
-                </div>
-              )}
-            </div>
-          </section>
-
-          {/* Execution Trace & Live Streaming Output (Right Column - 2 spans) */}
-          <section
-            aria-labelledby="trace-heading"
-            className="lg:col-span-2 p-5 rounded-2xl border border-border/60 bg-card/40 space-y-6 flex flex-col justify-between"
-          >
-            <div className="space-y-6">
-              <div className="flex items-center justify-between border-b border-border/50 pb-3">
-                <div className="flex items-center gap-2">
-                  <Terminal className="w-4 h-4 text-primary" />
-                  <h2 id="trace-heading" className="text-sm font-semibold tracking-wide uppercase text-foreground">
-                    {t("agent.steps.title", "Run Execution Trace")}
-                  </h2>
-                </div>
-                <span className="text-xs font-mono text-muted-foreground">
-                  Step {activeStep} / 4
-                </span>
-              </div>
-
-              {/* Security Alert if blocked */}
-              {guardStatus === "blocked" && (
-                <div className="p-3.5 rounded-xl border border-red-500/30 bg-red-500/10 text-red-300 text-xs flex items-start gap-2.5">
-                  <ShieldAlert className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
-                  <div className="space-y-1">
-                    <p className="font-semibold text-red-200">
-                      {t("agent.security.blocked", "Prompt Halted by Agentnexos Prompt Guard")}
-                    </p>
-                    {securityReason && <p className="text-[11px] text-red-300/80">{securityReason}</p>}
-                  </div>
-                </div>
-              )}
-
-              {/* Step Sequence */}
-              <div className="space-y-4">
-                {/* Step 1: Process Analysis */}
-                <div className="flex items-start gap-3 p-3.5 rounded-xl border border-border/50 bg-background/60">
-                  <CheckCircle2
-                    className={`w-4 h-4 shrink-0 mt-0.5 ${
-                      activeStep >= 1 ? "text-emerald-400" : "text-muted-foreground/40"
-                    }`}
-                  />
-                  <div className="space-y-1">
-                    <h3 className="text-xs font-semibold text-foreground">
-                      {t("agent.steps.step1.title", "1. Process Analysis")}
-                    </h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {t(
-                        "agent.steps.step1.desc",
-                        "Extract inputs, classify intent, and build deterministic execution contract."
-                      )}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 2: Tool Execution (Read) */}
-                <div className="flex items-start gap-3 p-3.5 rounded-xl border border-border/50 bg-background/60">
-                  <CheckCircle2
-                    className={`w-4 h-4 shrink-0 mt-0.5 ${
-                      activeStep >= 2 ? "text-emerald-400" : "text-muted-foreground/40"
-                    }`}
-                  />
-                  <div className="space-y-1.5 w-full">
-                    <h3 className="text-xs font-semibold text-foreground">
-                      {t("agent.steps.step2.title", "2. Tool Execution (Read-Only)")}
-                    </h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {t(
-                        "agent.steps.step2.desc",
-                        "Query verified enterprise knowledge source with timeout and SSRF protection."
-                      )}
-                    </p>
-                    {findings.length > 0 && (
-                      <div className="space-y-1 pt-1">
-                        <span className="text-[11px] font-semibold text-primary block">
-                          {t("agent.evidence.findings", "Verified Read Tool Findings:")}
-                        </span>
-                        <ul className="text-xs space-y-1 text-muted-foreground bg-background/80 p-2.5 rounded-lg border border-border/40">
-                          {findings.map((f, i) => (
-                            <li key={i} className="flex items-start gap-1.5">
-                              <span className="text-primary">•</span>
-                              <span>{f}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Step 3: Approval Gate (Human in the Loop) */}
-                <div
-                  className={`p-4 rounded-xl border transition-all ${
-                    runStatus === "waiting_approval" && approvalStatus === "pending"
-                      ? "border-amber-500/40 bg-amber-500/10 shadow-[0_0_20px_rgba(245,158,11,0.08)]"
-                      : approvalStatus === "approved"
-                      ? "border-emerald-500/30 bg-emerald-500/5"
-                      : approvalStatus === "rejected"
-                      ? "border-red-500/30 bg-red-500/5"
-                      : "border-border/40 bg-background/40"
-                  }`}
+        <div className="mt-10 grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12">
+          <aside aria-labelledby="examples-heading" className="min-w-0">
+            <h2 id="examples-heading" className="mb-4 text-sm font-medium text-foreground/70">{copy.choose}</h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {copy.cases.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-pressed={selectedId === item.id}
+                  onClick={() => { setSelectedId(item.id); setStage("idle"); }}
+                  className={cn("min-h-20 rounded-xl border p-4 text-start text-sm leading-6 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4", selectedId === item.id ? "border-emerald-300/50 bg-emerald-300/5 text-foreground" : "border-border/70 text-foreground/70 hover:border-foreground/40")}
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-start gap-3 w-full">
-                      <Clock
-                        className={`w-4 h-4 shrink-0 mt-0.5 ${
-                          runStatus === "waiting_approval" && approvalStatus === "pending"
-                            ? "text-amber-400 animate-pulse"
-                            : approvalStatus === "approved"
-                            ? "text-emerald-400"
-                            : approvalStatus === "rejected"
-                            ? "text-red-400"
-                            : "text-muted-foreground/40"
-                        }`}
-                      />
-                      <div className="space-y-1 w-full">
-                        <div className="flex items-center gap-2">
-                          <h3 className="text-xs font-semibold text-foreground">
-                            {t("agent.steps.step3.title", "3. Approval Gate (Human-in-the-Loop)")}
-                          </h3>
-                          <span
-                            className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${
-                              runStatus === "waiting_approval" && approvalStatus === "pending"
-                                ? "bg-amber-500/20 text-amber-300 border-amber-500/30"
-                                : approvalStatus === "approved"
-                                ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/30"
-                                : approvalStatus === "rejected"
-                                ? "bg-red-500/20 text-red-300 border-red-500/30"
-                                : "bg-muted text-muted-foreground border-border/40"
-                            }`}
-                          >
-                            {runStatus === "waiting_approval" && approvalStatus === "pending"
-                              ? t("agent.approval.badge", "Pending Approval")
-                              : approvalStatus === "approved"
-                              ? t("agent.approval.approved", "Action Approved")
-                              : approvalStatus === "rejected"
-                              ? t("agent.approval.rejected", "Action Rejected")
-                              : "Standby"}
-                          </span>
-                        </div>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
-                          {t(
-                            "agent.steps.step3.desc",
-                            "Sensitive action detected. Pausing execution until explicit owner approval."
-                          )}
-                        </p>
-                        {approvalPrompt && (
-                          <p className="text-xs font-mono text-foreground/90 mt-2 p-2 rounded bg-background/70 border border-border/40">
-                            {approvalPrompt}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-
-                  {runStatus === "waiting_approval" && approvalStatus === "pending" && (
-                    <div className="mt-4 pt-3 border-t border-amber-500/20 flex flex-wrap gap-2 justify-end">
-                      <Button
-                        size="sm"
-                        variant="destructive"
-                        disabled={isProcessingApproval}
-                        onClick={handleReject}
-                        className="text-xs h-8 px-4"
-                      >
-                        <XCircle className="w-3.5 h-3.5 mr-1 rtl:ml-1" />
-                        {t("agent.approval.reject", "Reject Action")}
-                      </Button>
-                      <Button
-                        size="sm"
-                        disabled={isProcessingApproval}
-                        onClick={handleApprove}
-                        className="text-xs h-8 px-4 bg-emerald-600 hover:bg-emerald-500 text-white"
-                      >
-                        {isProcessingApproval ? (
-                          <>
-                            <Loader2 className="w-3.5 h-3.5 animate-spin mr-1 rtl:ml-1" />
-                            <span>{t("agent.approval.processing", "Processing authorization...")}</span>
-                          </>
-                        ) : (
-                          <>
-                            <CheckCircle2 className="w-3.5 h-3.5 mr-1 rtl:ml-1" />
-                            <span>{t("agent.approval.approve", "Approve Action")}</span>
-                          </>
-                        )}
-                      </Button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Step 4: Evidence & Audit Log */}
-                {activeStep >= 4 && (
-                  <div className="flex items-start gap-3 p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 min-w-0">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <div className="space-y-2 w-full min-w-0">
-                      <div className="flex flex-wrap items-center justify-between gap-1">
-                        <h3 className="text-xs font-semibold text-foreground">
-                          {t("agent.steps.step4.title", "4. Evidence Verification & Audit")}
-                        </h3>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                          {t("agent.decisionRecorded", "Decision recorded in immutable audit log")}
-                        </span>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {t(
-                          "agent.steps.step4.desc",
-                          "Validate output state from target system and register audit trace."
-                        )}
-                      </p>
-                      {evidenceHash && (
-                        <div className="text-[11px] font-mono text-muted-foreground bg-background/80 p-2.5 rounded border border-border/40 flex items-center gap-2 min-w-0">
-                          <Fingerprint className="w-4 h-4 text-emerald-400 shrink-0" />
-                          <span className="truncate font-mono">evidence: sha256:{evidenceHash}</span>
-                        </div>
-                      )}
-                      {actionReceiptHash && (
-                        <div className="text-[11px] font-mono text-emerald-300/90 bg-emerald-500/10 p-2.5 rounded border border-emerald-500/20 flex items-center gap-2 min-w-0">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                          <span className="truncate font-mono">action_receipt: sha256:{actionReceiptHash}</span>
-                        </div>
-                      )}
-                      {idempotencyKey && (
-                        <div className="text-[10px] font-mono text-muted-foreground/80 bg-background/60 p-2 rounded border border-border/30 flex items-center justify-between gap-2 min-w-0">
-                          <span>{t("agent.idempotencyKey", "Idempotency Key")}:</span>
-                          <span className="truncate font-mono text-foreground">{idempotencyKey}</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Streaming Output Box */}
-              {streamingSynthesis && (
-                <div className="mt-4 p-4 rounded-xl border border-primary/20 bg-background/90 space-y-2 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold text-primary flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5" />
-                      {t("agent.stream.output", "Live Streaming Synthesis Output")}
-                    </span>
-                    <span className="text-[10px] font-mono text-muted-foreground">
-                      {modelUsed}
-                    </span>
-                  </div>
-                  <div className="text-xs sm:text-sm text-foreground/90 whitespace-pre-wrap leading-relaxed font-sans break-words">
-                    {streamingSynthesis}
-                  </div>
-                </div>
-              )}
+                  <span className="block font-semibold">{item.name}</span>
+                  <span className="mt-1 block text-xs text-foreground/65">{item.team}</span>
+                </button>
+              ))}
             </div>
+          </aside>
 
-            {/* Prompt Input Area */}
-            <div className="pt-6 border-t border-border/40 space-y-2 min-w-0">
-              <form onSubmit={handleStartRun} className="flex gap-2 w-full min-w-0">
-                <input
-                  type="text"
-                  value={promptInput}
-                  onChange={(e) => setPromptInput(e.target.value)}
-                  disabled={isStreaming}
-                  placeholder={t(
-                    "agent.input.placeholder",
-                    "Enter query for enterprise agent (e.g., Check ZATCA Phase 2 rules)..."
-                  )}
-                  className="flex-1 min-w-0 rounded-xl bg-background border border-border/60 px-4 py-2 text-xs sm:text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
-                />
-                <Button
-                  type="submit"
-                  size="sm"
-                  disabled={isStreaming || !promptInput.trim()}
-                  className="rounded-xl px-4 gap-1.5 text-xs shrink-0"
-                >
-                  {isStreaming ? (
-                    <>
-                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                      <span>{t("agent.input.send", "Send & Stream")}</span>
-                    </>
+          <div className="min-w-0 space-y-6">
+            <section aria-labelledby="request-heading" className="rounded-2xl border border-border/70 bg-card p-5 sm:p-7">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h2 id="request-heading" className="inline-flex items-center gap-2 text-lg font-semibold"><FileText className="size-5 text-emerald-300" aria-hidden="true" />{copy.request}</h2>
+                <span className="text-xs text-foreground/65">{copy.example}</span>
+              </div>
+              <p className="mt-5 text-lg leading-8">{example.request}</p>
+              <p className="mt-3 text-sm leading-7 text-foreground/75">{example.context}</p>
+              <dl className="mt-5 border-t border-border/60 pt-4 text-sm">
+                <dt className="text-foreground/60">{copy.team}</dt>
+                <dd className="mt-1 leading-6">{example.team}</dd>
+              </dl>
+            </section>
+
+            <section aria-labelledby="sources-heading" className="px-1">
+              <h2 id="sources-heading" className="text-base font-semibold">{copy.sources}</h2>
+              <ul className="mt-4 space-y-3 text-sm leading-7 text-foreground/75">
+                {example.sources.map((source) => <li key={source} className="flex items-start gap-3"><Circle className="mt-2 size-2 shrink-0 text-emerald-300" aria-hidden="true" /><span>{source}</span></li>)}
+              </ul>
+            </section>
+
+            <section aria-labelledby="decision-heading" className="rounded-2xl border border-border/70 bg-card p-5 sm:p-7">
+              <div role="status" aria-live="polite" className="mb-5 text-sm font-medium text-emerald-300">{copy[stage]}</div>
+              {stage === "idle" ? (
+                <div className="space-y-5">
+                  <h2 id="decision-heading" className="text-lg font-semibold">{copy.plan}</h2>
+                  <p className="text-sm leading-7 text-foreground/75">{copy.idleHint}</p>
+                  <Button onClick={() => setStage("reviewing")} className="min-h-11 h-auto whitespace-normal py-3 text-start">{copy.start}<ArrowUpRight className="size-4 shrink-0 rtl:-scale-x-100" aria-hidden="true" /></Button>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  <div>
+                    <h2 id="decision-heading" className="text-lg font-semibold">{copy.plan}</h2>
+                    <ol className="mt-4 space-y-3 text-sm leading-7 text-foreground/75">
+                      {example.checks.map((item, index) => <li key={item} className="flex items-start gap-3"><span className="inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-border text-xs">{new Intl.NumberFormat(locale).format(index + 1)}</span><span>{item}</span></li>)}
+                    </ol>
+                  </div>
+                  <div className="border-t border-border/60 pt-5">
+                    <h3 className="text-base font-semibold">{copy.draft}</h3>
+                    <p className="mt-3 text-sm leading-7 text-foreground/80">{example.draft}</p>
+                  </div>
+                  {stage === "reviewing" ? (
+                    <div className="space-y-4 border-t border-border/60 pt-5">
+                      <h3 className="text-base font-semibold">{copy.review}</h3>
+                      <p className="text-sm leading-7">{example.decision}</p>
+                      <p className="text-sm leading-7 text-foreground/65">{copy.reviewHint}</p>
+                      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                        <Button onClick={() => setStage("approved")} className="min-h-11 h-auto whitespace-normal py-3"><Check className="size-4" aria-hidden="true" />{copy.approve}</Button>
+                        <Button variant="outline" onClick={() => setStage("rejected")} className="min-h-11 h-auto whitespace-normal py-3">{copy.reject}</Button>
+                      </div>
+                    </div>
                   ) : (
-                    <>
-                      <span>{t("agent.input.send", "Send & Stream")}</span>
-                      <Send className="w-3.5 h-3.5" />
-                    </>
+                    <p className="border-t border-border/60 pt-5 text-sm leading-7 text-foreground/75">{stage === "approved" ? copy.resultHint : copy.rejectedHint}</p>
                   )}
-                </Button>
-              </form>
-              <p className="text-[11px] text-muted-foreground">
-                {t(
-                  "agent.input.note",
-                  "Live streaming via SSE and execution contract matching are active."
-                )}
-              </p>
-            </div>
-          </section>
+                  <Button variant="ghost" onClick={() => setStage("idle")} className="min-h-11 h-auto whitespace-normal py-3"><RotateCcw className="size-4" aria-hidden="true" />{copy.reset}</Button>
+                </div>
+              )}
+            </section>
+          </div>
         </div>
       </main>
+      <footer className="mx-auto max-w-6xl border-t border-border/60 px-5 py-8 text-sm leading-7 text-foreground/65 sm:px-8">{copy.footer}</footer>
     </div>
   );
 }

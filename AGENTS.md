@@ -1,5 +1,7 @@
 # Agentnexos — Project Rules
 
+Current repair: read `docs/REPAIR-PLAN-2026-09-30.md` and `docs/phases/REPAIR-01-2026-09-30.md` before continuing. They record the owner-requested repair scope and observed state. Historical phase completion claims are not evidence of live capabilities.
+
 1. Before editing, read docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md and docs/GUARDRAILS.md.
 2. Follow the user's current request; the master plan overrides older conflicting project documents.
 3. Work on one requested phase only; list its scope and acceptance criteria before editing.
@@ -75,13 +77,14 @@ pnpm build
 - راجع `translate-x` و`left/right` و`ml/mr` والتدرجات في RTL؛ المتصفح لا يعكس النية البصرية تلقائيًا.
 - الخط العربي مربوط عبر `--font-arabic` داخل `:lang(ar)`؛ لا تغيّر خط الإنجليزية ضمن إصلاح عربي.
 
-## حالة التنفيذ الحالية
+## حالة التنفيذ الحالية — تدقيق 2026-09-30
 
-- المرحلتان 1 و2 منشورتان حتى commit `443cf22`.
-- لا يوجد Runtime للوكيل أو API محادثة أو Mastra أو Vercel AI SDK في الكود حتى تاريخ هذه الوثيقة.
-- لا توجد هجرات Supabase أو Auth/RLS في المستودع.
-- لا توجد أيقونة علامة Agentnexos معتمدة؛ الأصول الحالية عامة من القالب.
-- أسماء مفاتيح Groq التي أبلغ المالك أنها موجودة في Vercel Production: `GROQ_API_KEY`, `GROQ_API_KEY1`, `GROQ_API_KEY2`. يجب التحقق من وجودها دون طباعة قيمها قبل الاستخدام.
+- خط أساس الإنتاج المفحوص: commit `5889dce`؛ توجد ملفات Runtime وAPI ومخطط Supabase وتبعيات AI SDK. لا يوجد Mastra في package.json.
+- الـcoordinator الحالي يصوغ نصًا ثابتًا، ولا يثبت استدعاء النماذج بوجود إعداداتها. نتائج enterprise-lookup معرفة ثابتة داخل الكود.
+- الموافقات والتدقيق والذاكرة تعتمد مخازن في الذاكرة. وجود migrations لا يثبت تطبيقها أو عزل المؤسسات في قاعدة إنتاجية.
+- أدوات الإجراءات تولد إيصالات محلية دون إرسال خارجي. لا يوصف ذلك كتصدير حقيقي أو سجل غير قابل للتعديل.
+- أول دفعة إصلاح تستبدل الواجهة العامة بمثال محلي معلن دون استدعاء هذه endpoints. ربط العمل الفعلي ينتظر بوابات المصادقة والتفويض والحفظ والأدوات في خطة الإصلاح.
+- أسماء مفاتيح Groq المبلغ عنها: `GROQ_API_KEY`, `GROQ_API_KEY1`, `GROQ_API_KEY2`. الوجود لا يثبت تنفيذ API؛ لا تُطبع القيم.
 
 ## النشر
 

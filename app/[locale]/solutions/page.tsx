@@ -2,14 +2,12 @@
 
 import Link from "next/link";
 import { useT } from "@/lib/i18n/use-t";
-import { LocaleSwitcher } from "@/components/site/locale-switcher";
+import { PageHeader } from "@/components/site/page-header";
 import { Button } from "@/components/ui/button";
 import {
   FileCheck2,
   Building2,
   Network,
-  ArrowLeft,
-  ArrowRight,
   ShieldCheck,
   CheckCircle,
   ExternalLink,
@@ -20,38 +18,11 @@ export default function SolutionsPage() {
   const t = useT();
   const params = useParams();
   const locale = (params?.locale as string) || "ar";
-  const isAr = locale === "ar";
-  const BackIcon = isAr ? ArrowRight : ArrowLeft;
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between selection:bg-primary/20">
       {/* Top Header */}
-      <header className="border-b border-border/40 backdrop-blur-md sticky top-0 z-40 bg-background/80">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link
-              href={`/${locale}`}
-              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <BackIcon className="w-4 h-4" />
-              <span>{t("agent.backToHome", "Back to Home")}</span>
-            </Link>
-            <span className="text-border">|</span>
-            <Link href={`/${locale}`} className="font-semibold tracking-tight text-foreground text-sm">
-              Agentnexos
-            </Link>
-          </div>
-          <div className="flex items-center gap-3">
-            <LocaleSwitcher />
-            <Button asChild size="sm" className="rounded-full text-xs">
-              <Link href={`/${locale}/agentnexos`}>
-                <span>{t("solutions.cta", "Test Live in Agent Space")}</span>
-                <ExternalLink className="w-3.5 h-3.5 ms-1.5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <PageHeader />
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12">
@@ -161,17 +132,17 @@ export default function SolutionsPage() {
         {/* Live CTA Section */}
         <div className="p-8 rounded-2xl border border-primary/20 bg-primary/5 text-center space-y-4">
           <h3 className="text-xl font-semibold text-foreground">
-            {t("solutions.cta", "Test These Solutions Live in Agent Space")}
+            {t("solutions.cta", "Explore a workflow example")}
           </h3>
           <p className="text-xs text-muted-foreground max-w-xl mx-auto">
             {t(
               "agent.banner.notice",
-              "Experience multi-agent coordination with Qwen 3.8 and GPT-OSS, human-in-the-loop approvals, and SHA-256 evidence logs."
+              "Explore a fictional review and approval example. It does not connect to company systems or execute external actions."
             )}
           </p>
           <Button asChild className="rounded-full px-6 text-xs">
             <Link href={`/${locale}/agentnexos`}>
-              <span>{t("solutions.cta", "Open Agent Space")}</span>
+              <span>{t("solutions.cta", "Explore a workflow example")}</span>
               <ExternalLink className="w-3.5 h-3.5 ms-2" />
             </Link>
           </Button>

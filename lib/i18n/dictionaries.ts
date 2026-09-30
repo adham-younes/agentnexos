@@ -19,6 +19,7 @@ export const ar = {
   "common.bookDemo": "احجز عرضًا",
 
   // ---------- navigation ----------
+  "nav.home": "الرئيسية",
   "nav.capabilities": "القدرات",
   "nav.process": "كيف يعمل",
   "nav.infra": "البنية",
@@ -355,7 +356,7 @@ export const ar = {
   "agent.actions.cancel": "إلغاء التشغيل",
   "agent.actions.retry": "إعادة المحاولة",
   "agent.actions.reset": "إعادة تعيين المسار",
-  "agent.banner.notice": "تنبيه الشفافية: تم تفعيل تشغيل متعدد الوكلاء وبوابة الموافقات البشرية الحقيقية (Human-in-the-Loop) ومفاتيح Idempotency وسجل التدقيق المشفر ودرع الأمان والمراقبة الآنية.",
+  "agent.banner.notice": "استكشف مثالًا افتراضيًا للمراجعة والموافقة. لا تتصل هذه التجربة بأنظمة المؤسسة ولا تنفّذ إجراءات خارجية.",
   "agent.stream.output": "مخرجات التوليف المباشر (Live Streaming Synthesis)",
   "agent.stream.samplePrompts": "استعلامات تجريبية سريعة:",
   "agent.sample.compliance": "فحص شروط الفوترة الإلكترونية زاتكا المرحلة 2",
@@ -382,7 +383,7 @@ export const ar = {
   "solutions.card2.desc": "تطبيق حدود الصلاحيات، التدقيق المزدوج للمدفوعات فوق 10,000 دولار، والتحقق الآلي من السجلات التجارية والشهادات الضريبية.",
   "solutions.card3.title": "تنسيق العمليات والربط بين الأنظمة (Cross-System Orchestration)",
   "solutions.card3.desc": "ربط أنظمة الـ ERP والبيانات التشغيلية بسير عمل مؤتمت مشروط بموافقة المشرف البشري قبل أي كتابة خارجية.",
-  "solutions.cta": "اختبر هذه الحلول حياً في مساحة الوكيل",
+  "solutions.cta": "استكشف مثالًا لسير العمل",
 
   // ---------- phase 8: security page ----------
   "securityPage.title": "بنية الأمان والسيادة المؤسسية",
