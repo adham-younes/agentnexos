@@ -12,11 +12,12 @@ const bodySchema = z.object({ locale: z.enum(["ar", "en"]), messages: z.array(z.
 const headers = { "Cache-Control": "no-store" };
 function unavailable() { return Response.json({ code: "DEMO_NOT_READY" }, { status: 503, headers }); }
 function database() {
-  if (process.env.AGENTNEXOS_DEMO_ENABLED !== "true") return null;
+  if (process.env.AGENTNEXOS_DEMO_ENABLED !== "true") throw new Error("FEATURE_DISABLED");
   const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
-  if (!url || !key || !process.env.GROQ_API_KEY || !process.env.GROQ_API_KEY1 || !process.env.GROQ_API_KEY2) return null;
-  if (new URL(url).hostname !== "ruereqpvykwnakcnmxha.supabase.co") return null;
+  if (!url || !key) throw new Error("DATABASE_UNCONFIGURED");
+  if (!process.env.GROQ_API_KEY || !process.env.GROQ_API_KEY1 || !process.env.GROQ_API_KEY2) throw new Error("PROVIDER_UNCONFIGURED");
+  if (new URL(url).hostname !== "ruereqpvykwnakcnmxha.supabase.co") throw new Error("DATABASE_PROJECT_MISMATCH");
   return { client: createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false }, global: { fetch: (input, init) => fetch(input, { ...init, signal: AbortSignal.timeout(8000) }) } }), key };
 }
 
@@ -25,8 +26,13 @@ export async function GET() {
     const db = database();
     if (!db) return Response.json({ ready: false }, { headers });
     const { data, error } = await db.client.rpc("agentnexos_demo_ready");
-    return Response.json({ ready: !error && data === true }, { headers });
-  } catch { return Response.json({ ready: false }, { headers }); }
+    return Response.json({ ready: !error && data === true, ...(!error && data === true ? {} : { code: "DATABASE_UNAVAILABLE" }) }, { headers });
+  } catch (error) {
+    // Safe readiness codes only: never provider errors, keys, URLs or stack traces.
+    const allowed = ["FEATURE_DISABLED", "DATABASE_UNCONFIGURED", "PROVIDER_UNCONFIGURED", "DATABASE_PROJECT_MISMATCH"];
+    const code = error instanceof Error && allowed.includes(error.message) ? error.message : "DATABASE_UNAVAILABLE";
+    return Response.json({ ready: false, code }, { headers });
+  }
 }
 
 export async function POST(request: Request) {
