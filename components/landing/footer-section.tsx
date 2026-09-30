@@ -16,13 +16,13 @@ const footerLinks = {
     { nameKey: "footer.docs", name: "Agent Space", href: "/agentnexos" },
     { nameKey: "footer.sdk", name: "Platform engineering", href: "/platform" },
     { nameKey: "footer.api", name: "Practical guides", href: "/resources" },
-    { nameKey: "footer.status", name: "Success criteria", href: "/resources" },
+    { nameKey: "footer.status", name: "Success criteria", href: "/resources#acceptance" },
   ] },
   company: { titleKey: "footer.company", title: "Company", links: [
-    { nameKey: "footer.about", name: "About", href: "#top" },
+    { nameKey: "footer.about", name: "About", href: "/about" },
     { nameKey: "footer.blog", name: "Architecture", href: "/platform" },
     { nameKey: "footer.careers", name: "Industries", href: "/industries" },
-    { nameKey: "footer.contact", name: "Contact", href: "#contact" },
+    { nameKey: "footer.contact", name: "Project brief", href: "/start" },
   ] },
   legal: { titleKey: "footer.legal", title: "Legal", links: [
     { nameKey: "footer.privacy", name: "Privacy", href: "/privacy" },

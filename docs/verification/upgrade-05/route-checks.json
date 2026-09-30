@@ -1,0 +1,596 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "about",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "start",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "about",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "start",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "about",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "start",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "about",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "start",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "about",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "start",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "about",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "start",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0
+  }
+]

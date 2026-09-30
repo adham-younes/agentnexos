@@ -94,7 +94,7 @@ export function Navigation() {
               size="sm"
               className={`h-10 rounded-full px-5 text-[13px] font-semibold transition-all duration-500 ${isDark ? "bg-white hover:bg-white/90 text-black" : "bg-foreground hover:bg-foreground/90 text-background"}`}
             >
-              <a href="#contact">{t("nav.deployAgent", "Start a project")}</a>
+              <a href={`/${locale}/start`}>{t("nav.deployAgent", "Start a project")}</a>
             </Button>
           </div>
 
@@ -168,7 +168,7 @@ export function Navigation() {
               <Button asChild
                 className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
               >
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.deployAgent", "Start a project")}</a>
+                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{t("nav.deployAgent", "Start a project")}</a>
               </Button>
             </div>
           </div>

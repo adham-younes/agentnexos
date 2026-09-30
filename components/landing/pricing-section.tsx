@@ -200,7 +200,7 @@ export function PricingSection() {
                   {t("metrics.routing", "")}
                 </span>
               </div>
-              <a href="#contact" className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">
+              <a href={`/${locale}/start`} className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">
                 {t("pricing.compare", "Compare all features")}
               </a>
             </div>

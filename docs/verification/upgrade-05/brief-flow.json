@@ -1,0 +1,25 @@
+{
+  "base": "http://localhost:3001",
+  "results": [
+    {
+      "locale": "ar",
+      "missingFields": 7,
+      "financialReview": true,
+      "baseline": 2000,
+      "download": true,
+      "reset": true,
+      "postRequests": 0,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "missingFields": 7,
+      "financialReview": true,
+      "baseline": 2000,
+      "download": true,
+      "reset": true,
+      "postRequests": 0,
+      "overflow": false
+    }
+  ]
+}

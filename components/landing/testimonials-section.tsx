@@ -1,48 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useLocale, useT } from "@/lib/i18n/use-t";
-
-// Placeholder quotes. No real customer has endorsed the platform, so the full
-// section stays hidden unless explicitly enabled (docs/GUARDRAILS.md §6.2).
-const showPlaceholders =
-  process.env.NEXT_PUBLIC_SHOW_PLACEHOLDER_SECTIONS === "true";
-
-const testimonials = [
-  {
-    quote:
-      "Our agents handle 80% of our customer support tickets autonomously. The ROI was immediate.",
-    author: "Sarah Chen",
-    role: "CTO",
-    company: "Meridian Labs",
-    metric: { value: "80%", label: "Ticket resolution" },
-  },
-  {
-    quote:
-      "We deployed research agents that work 24/7. They surface insights we'd never find manually.",
-    author: "Marcus Webb",
-    role: "Head of Research",
-    company: "Flux Systems",
-    metric: { value: "10x", label: "Research output" },
-  },
-  {
-    quote:
-      "The multi-agent orchestration is incredible. Complex workflows that took weeks now run in hours.",
-    author: "Elena Rodriguez",
-    role: "VP Engineering",
-    company: "Beacon AI",
-    metric: { value: "40x", label: "Faster workflows" },
-  },
-  {
-    quote:
-      "Security was our biggest concern. The sandboxing and audit trails gave us full confidence.",
-    author: "James Liu",
-    role: "CISO",
-    company: "Prism Analytics",
-    metric: { value: "0", label: "Security incidents" },
-  },
-];
 
 const asciiPattern = Array.from({ length: 60 }, (_, row) =>
   Array.from({ length: 100 }, (_, column) =>
@@ -64,7 +23,6 @@ export function TestimonialsSection() {
     ["Owner intervention", "Record questions, corrections, and approvals instead of hiding the human contribution."],
     ["Execution safety", "Test permissions, duplicates, outages, and recovery; verify effects in the target system."],
   ];
-  const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -79,21 +37,6 @@ export function TestimonialsSection() {
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    if (!showPlaceholders) return;
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const goTo = (index: number) => setActiveIndex(index);
-  const goPrev = () =>
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  const goNext = () => setActiveIndex((prev) => (prev + 1) % testimonials.length);
-
-  const active = testimonials[activeIndex];
 
   return (
     <section
@@ -121,157 +64,15 @@ export function TestimonialsSection() {
             </h2>
           </div>
 
-          {showPlaceholders && (
-            <div className="hidden lg:flex items-center gap-2">
-              <button
-                onClick={goPrev}
-                className="p-4 border border-background/20 hover:bg-background/10 transition-colors"
-                aria-label={t("testimonials.prev", "Previous testimonial")}
-              >
-                <ArrowLeft className="w-5 h-5 rtl:rotate-180" />
-              </button>
-              <button
-                onClick={goNext}
-                className="p-4 border border-background/20 hover:bg-background/10 transition-colors"
-                aria-label={t("testimonials.next", "Next testimonial")}
-              >
-                <ArrowRight className="w-5 h-5 rtl:rotate-180" />
-              </button>
-            </div>
-          )}
+
         </div>
 
-        {!showPlaceholders ? (
+
           <div><p className="text-xl text-background/70 leading-relaxed max-w-2xl">
             {t("testimonials.note", "Before we build, we define the workflow baseline and the quality, cycle-time, cost, and human-intervention measures. We only publish customer outcomes when they are verified.")}
           </p><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">{measures.map(([title, description], i) => <article key={title} className="border-t border-background/20 pt-6"><span className="text-xs font-mono text-background/50">0{i+1}</span><h3 className="mt-5 text-xl font-medium">{title}</h3><p className="mt-3 text-sm leading-7 text-background/65">{description}</p></article>)}</div></div>
-        ) : (
-          <>
-            <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
-              <div className="lg:col-span-7 relative">
-                <span className="absolute -left-4 -top-8 text-[200px] font-display text-background/5 leading-none select-none">
-                  &ldquo;
-                </span>
-
-                <div className="relative">
-                  <blockquote
-                    key={activeIndex}
-                    className="text-3xl lg:text-4xl xl:text-5xl font-display leading-[1.2] tracking-tight animate-fadeSlideIn"
-                  >
-                    {t(`testimonials.t${activeIndex + 1}.quote`, active.quote)}
-                  </blockquote>
-
-                  <div className="mt-12 flex items-center gap-6">
-                    <div className="w-14 h-14 rounded-full bg-background/10 flex items-center justify-center">
-                      <span className="font-display text-xl">
-                        {active.author.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-lg font-medium">{active.author}</p>
-                      <p className="text-background/60">
-                        {t(
-                          `testimonials.t${activeIndex + 1}.role`,
-                          `${active.role}, ${active.company}`
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:col-span-5 flex flex-col justify-center gap-6">
-                <div
-                  key={`metric-${activeIndex}`}
-                  className="p-10 border border-background/20 bg-background/5 animate-fadeSlideIn"
-                >
-                  <span className="text-7xl lg:text-8xl font-display block mb-4">
-                    {active.metric.value}
-                  </span>
-                  <span className="text-lg text-background/60">
-                    {t(`testimonials.t${activeIndex + 1}.metric`, active.metric.label)}
-                  </span>
-                </div>
-
-                <div className="flex gap-2">
-                  {testimonials.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => goTo(idx)}
-                      className="flex-1 h-1 bg-background/20 overflow-hidden"
-                      aria-label={t("testimonials.goTo", "Go to testimonial")}
-                    >
-                      <div
-                        className={`h-full bg-background transition-all duration-300 ${
-                          idx === activeIndex
-                            ? "w-full"
-                            : idx < activeIndex
-                              ? "w-full opacity-50"
-                              : "w-0"
-                        }`}
-                        style={
-                          idx === activeIndex
-                            ? { animation: "progress 8s linear forwards" }
-                            : {}
-                        }
-                      />
-                    </button>
-                  ))}
-                </div>
-
-                <div className="mt-4 pt-6 border-t border-background/10">
-                  <span className="text-xs font-mono text-background/30 uppercase tracking-widest block mb-4">
-                    {t("testimonials.featured", "Featured companies")}
-                  </span>
-                  <div className="flex flex-wrap gap-3">
-                    {testimonials.map((item, idx) => (
-                      <button
-                        key={item.company}
-                        onClick={() => goTo(idx)}
-                        className={`px-4 py-2 text-sm border transition-all ${
-                          idx === activeIndex
-                            ? "border-background/40 text-background"
-                            : "border-background/10 text-background/40 hover:border-background/30"
-                        }`}
-                      >
-                        {item.company}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p className="mt-12 text-xs font-mono text-background/30">
-              {t("testimonials.disclaimer", "")}
-            </p>
-          </>
-        )}
       </div>
 
-      <style jsx>{`
-        @keyframes fadeSlideIn {
-          from {
-            opacity: 0;
-            transform: translateX(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        .animate-fadeSlideIn {
-          animation: fadeSlideIn 0.5s ease-out forwards;
-        }
-        @keyframes progress {
-          from {
-            width: 0%;
-          }
-          to {
-            width: 100%;
-          }
-        }
-      `}</style>
     </section>
   );
 }

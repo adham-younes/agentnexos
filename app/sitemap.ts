@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const BASE_URL = "https://compute-the-platform-to-build-six-fawn.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/agentnexos", "/platform", "/industries", "/resources", "/solutions", "/security", "/privacy", "/terms"];
+  const routes = ["", "/agentnexos", "/platform", "/industries", "/resources", "/solutions", "/security", "/privacy", "/terms", "/about", "/start"];
   const locales = ["ar", "en"];
   const entries: MetadataRoute.Sitemap = [];
 
