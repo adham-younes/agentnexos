@@ -48,7 +48,7 @@ export function DevelopersSection() {
 
       {/* Image — absolute, bottom-right, behind all content */}
       <div
-        className={`absolute bottom-0 right-0 w-[55%] h-[85%] pointer-events-none transition-all duration-1000 delay-300 ${
+        className={`absolute bottom-0 end-0 w-full aspect-square max-h-[650px] lg:w-[55%] pointer-events-none transition-all duration-1000 delay-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -56,7 +56,7 @@ export function DevelopersSection() {
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-left-top"
+          className="w-full h-full object-contain object-bottom"
         />
         {/* Fade left edge */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent rtl:bg-gradient-to-l" />

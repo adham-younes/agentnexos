@@ -8,22 +8,22 @@ const securityFeatures = [
   {
     icon: Shield,
     key: "security.1",
-    title: "Isolated execution",
-    description: "Each agent runs in its own secure sandbox.",
+    title: "Defined execution scope",
+    description: "Define permitted tools and connections. Code execution requires isolation and independent testing.",
     image: "/images/isolated.jpg",
   },
   {
     icon: Lock,
     key: "security.2",
-    title: "Encrypted memory",
-    description: "Data encrypted at rest and in transit.",
+    title: "Clear data policy",
+    description: "Agree on transmitted data, retention, and hosting before connecting enterprise information.",
     image: "/images/encrypted.jpg",
   },
   {
     icon: Eye,
     key: "security.3",
-    title: "Full audit trails",
-    description: "Every action logged and inspectable.",
+    title: "Reviewable result evidence",
+    description: "Verify execution against the connected system, not a model's message or a local receipt.",
     image: "/images/audit.jpg",
   },
   {
@@ -95,7 +95,7 @@ export function SecuritySection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              {t("security.lead", "Your agents are powerful but constrained. Enterprise-grade security ensures they only do what you allow.")}
+              {t("security.lead", "Define permitted data, decision owners, and review requirements. These controls must be built and tested for each project; they are not a certification of readiness or compliance.")}
             </p>
           </div>
         </div>

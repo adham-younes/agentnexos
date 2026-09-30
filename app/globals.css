@@ -1,5 +1,33 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@source "../node_modules/streamdown/dist/*.js";
+
+/* Fix utility-layer precedence without changing the English template font. */
+html[lang^="ar"] body,
+html[lang^="ar"] button,
+html[lang^="ar"] input,
+html[lang^="ar"] textarea {
+  font-family: var(--font-arabic), var(--font-instrument), sans-serif;
+}
+
+/* Workspace-only warm neutral palette, drawn from the template's light panels. */
+.agent-workspace {
+  --background: #f5f3ef;
+  --foreground: #252422;
+  --card: #fffefa;
+  --card-foreground: #252422;
+  --primary: #a36177;
+  --primary-foreground: #ffffff;
+  --secondary: #eeebe5;
+  --secondary-foreground: #252422;
+  --muted: #eeebe5;
+  --muted-foreground: #706c65;
+  --border: #dedbd4;
+  --ring: #a36177;
+  color-scheme: light;
+}
+.agent-workspace [data-streamdown="table-wrapper"] { max-width: 100%; overflow-x: auto; }
+.agent-workspace pre { max-width: 100%; overflow-x: auto; direction: ltr; }
 
 @custom-variant dark (&:is(.dark *));
 

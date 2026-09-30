@@ -2,6 +2,8 @@
 
 Current repair: read `docs/REPAIR-PLAN-2026-09-30.md` and `docs/phases/REPAIR-01-2026-09-30.md` before continuing. They record the owner-requested repair scope and observed state. Historical phase completion claims are not evidence of live capabilities.
 
+Current upgrade: `docs/phases/UPGRADE-03-2026-09-30.md` records the later owner-authorized visual/content/chat scope. Its current-state evidence supersedes the historical audit below. `/api/agentnexos` is an independently bounded read-only public design demo, not an exception reopening `/api/chat`, `/api/approvals` or `/api/telemetry`. Never apply the old enterprise migrations blindly to production or describe the quota table as enterprise memory. Qwen is Preview; do not claim production-grade availability or an implemented fallback without tests.
+
 1. Before editing, read docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md and docs/GUARDRAILS.md.
 2. Follow the user's current request; the master plan overrides older conflicting project documents.
 3. Work on one requested phase only; list its scope and acceptance criteria before editing.

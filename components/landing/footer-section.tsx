@@ -9,32 +9,32 @@ const footerLinks = {
   footer: { titleKey: "footer.products", title: "Product", links: [
     { nameKey: "footer.capabilities", name: "Agent capabilities", href: "/solutions" },
     { nameKey: "footer.howItWorks", name: "How it works", href: "#how-it-works" },
-    { nameKey: "footer.pricing", name: "Pricing", href: "#pricing" },
+    { nameKey: "footer.pricing", name: "Delivery approach", href: "#pricing" },
     { nameKey: "footer.integrations", name: "Integrations", href: "#integrations" },
   ] },
-  developers: { titleKey: "footer.sdk", title: "Developers", links: [
+  developers: { titleKey: "footer.sdk", title: "Engineering & guides", links: [
     { nameKey: "footer.docs", name: "Agent Space", href: "/agentnexos" },
-    { nameKey: "footer.sdk", name: "Agent engineering", href: "/agentnexos" },
-    { nameKey: "footer.api", name: "API Reference", href: "/agentnexos" },
-    { nameKey: "footer.status", name: "Success criteria", href: "#pricing" },
+    { nameKey: "footer.sdk", name: "Platform engineering", href: "/platform" },
+    { nameKey: "footer.api", name: "Practical guides", href: "/resources" },
+    { nameKey: "footer.status", name: "Success criteria", href: "/resources" },
   ] },
   company: { titleKey: "footer.company", title: "Company", links: [
     { nameKey: "footer.about", name: "About", href: "#top" },
-    { nameKey: "footer.blog", name: "Architecture", href: "#infra" },
-    { nameKey: "footer.careers", name: "Delivery process", href: "#how-it-works" },
+    { nameKey: "footer.blog", name: "Architecture", href: "/platform" },
+    { nameKey: "footer.careers", name: "Industries", href: "/industries" },
     { nameKey: "footer.contact", name: "Contact", href: "#contact" },
   ] },
   legal: { titleKey: "footer.legal", title: "Legal", links: [
-    { nameKey: "footer.privacy", name: "Data boundaries", href: "/privacy" },
-    { nameKey: "footer.terms", name: "Controls", href: "/terms" },
+    { nameKey: "footer.privacy", name: "Privacy", href: "/privacy" },
+    { nameKey: "footer.terms", name: "Terms", href: "/terms" },
     { nameKey: "footer.security", name: "Security", href: "/security" },
   ] },
 };
 
 const socialLinks = [
-  { name: "Capabilities", href: "#features" },
-  { name: "Process", href: "#how-it-works" },
-  { name: "Security", href: "#security" },
+  { key: "footer.capabilities", name: "Capabilities", href: "#features" },
+  { key: "footer.howItWorks", name: "Process", href: "#how-it-works" },
+  { key: "footer.security", name: "Security", href: "#security" },
 ];
 
 function AnimatedWaveCanvas() {
@@ -137,7 +137,7 @@ export function FooterSection() {
                     href={link.href}
                     className="text-sm text-white/40 hover:text-white transition-colors flex items-center gap-1 group"
                   >
-                    {link.name}
+                    {t(link.key, link.name)}
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all rtl:rotate-90" />
                   </a>
                 ))}

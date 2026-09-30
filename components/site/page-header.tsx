@@ -16,6 +16,11 @@ export function PageHeader() {
           Agentnexos
         </Link>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <nav className="hidden items-center gap-5 md:flex" aria-label={locale === "ar" ? "صفحات المنصة" : "Platform pages"}>
+            <Link href={`/${locale}/platform`} className="text-sm text-foreground/70 hover:text-foreground">{locale === "ar" ? "المنصة" : "Platform"}</Link>
+            <Link href={`/${locale}/solutions`} className="text-sm text-foreground/70 hover:text-foreground">{locale === "ar" ? "الحلول" : "Solutions"}</Link>
+            <Link href={`/${locale}/resources`} className="text-sm text-foreground/70 hover:text-foreground">{locale === "ar" ? "الأدلة" : "Guides"}</Link>
+          </nav>
           <LocaleSwitcher />
           <Link href={`/${locale}`} className="inline-flex min-h-11 items-center gap-2 text-sm text-foreground/80 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4">
             <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />

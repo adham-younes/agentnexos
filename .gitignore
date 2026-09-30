@@ -21,3 +21,6 @@ node_modules
 .playwright-cli/
 output/
 supabase/.temp/
+.vercel
+.env*
+!.env.example

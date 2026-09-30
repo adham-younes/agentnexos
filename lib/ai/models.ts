@@ -24,7 +24,7 @@ export function getAnalystModel() {
     apiKey,
   });
 
-  return groq("qwen/qwen3.8-27b");
+  return groq.chat("qwen/qwen3.8-27b");
 }
 
 export function getOrchestratorModel() {
@@ -40,7 +40,7 @@ export function getOrchestratorModel() {
     apiKey,
   });
 
-  return groq("qwen/qwen3.8-27b");
+  return groq.chat("qwen/qwen3.8-27b");
 }
 
 export function getVerifierModel() {
@@ -56,7 +56,7 @@ export function getVerifierModel() {
     apiKey,
   });
 
-  return groq("openai/gpt-oss-120b");
+  return groq.chat("openai/gpt-oss-120b");
 }
 
 export const MODEL_LIMITS = {

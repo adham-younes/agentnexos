@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, Check, Zap } from "lucide-react";
-import { useT } from "@/lib/i18n/use-t";
+import { useLocale, useT } from "@/lib/i18n/use-t";
 
 // Commercial plans are placeholders. Nothing is on sale yet, so the section
 // stays hidden unless explicitly enabled (docs/GUARDRAILS.md §6).
@@ -35,6 +35,16 @@ const plans = [
 
 export function PricingSection() {
   const t = useT();
+  const locale = useLocale();
+  const stages = locale === "ar" ? [
+    ["اكتشاف العملية", "نحدد مالك العملية ومدخلاتها ومواضع التعطل ومصدر الحقيقة.", "التسليم: نطاق أولي وأسئلة البيانات ومعيار قبول واضح."],
+    ["تجربة محدودة", "نختبر حالات افتراضية ثم بيانات مصرحًا بها؛ تبدأ الأدوات بالقراءة والمراجعة.", "التسليم: نتائج اختبار ومخاطر وحدود قبل أي كتابة خارجية."],
+    ["ربط وتشغيل تدريجي", "نربط النظام المعتمد ونختبر الموافقات والتعافي ونقيس العملية الواقعية.", "التسليم: نطاق تشغيل موثق وخطة مراقبة ودعم واتفاق تكلفة."],
+  ] : [
+    ["Discover the workflow", "Define the process owner, inputs, bottlenecks, and source of truth.", "Deliverable: initial scope, data questions, and clear acceptance criteria."],
+    ["Validate a bounded pilot", "Test fictional cases, then authorized data. Start tools with reading and review.", "Deliverable: test results, risks, and boundaries before any external write."],
+    ["Connect and roll out", "Connect the approved system, test approvals and recovery, and measure the actual process.", "Deliverable: documented operating scope, monitoring, support, and an agreed cost."],
+  ];
   const [isAnnual, setIsAnnual] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -69,7 +79,7 @@ export function PricingSection() {
             </h2>
           </div>
 
-          <div className="lg:col-span-5 relative p-0 h-96 lg:h-auto">
+          <div className="lg:col-span-5 relative self-center p-0 aspect-[4/3] w-full">
             <div className={`absolute inset-0 pointer-events-none transition-all duration-1000 delay-100 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}>
@@ -83,9 +93,9 @@ export function PricingSection() {
         </div>
 
         {!showPlaceholders ? (
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+          <div><p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
             {t("pricing.roadmapNote", "We begin with discovery, move to a bounded pilot with explicit success criteria, then deploy in measured production stages. Scope and cost follow the systems, risks, and integrations involved.")}
-          </p>
+          </p><div className="mt-12 grid gap-6 lg:grid-cols-3">{stages.map(([title,description,deliverable],i)=><article key={title} className="border border-foreground/15 p-6 lg:p-8"><span className="text-xs font-mono text-muted-foreground">0{i+1}</span><h3 className="mt-6 text-xl font-medium">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{description}</p><p className="mt-6 border-t border-foreground/15 pt-5 text-sm leading-7">{deliverable}</p></article>)}</div></div>
         ) : (
           <>
             <div className="relative">

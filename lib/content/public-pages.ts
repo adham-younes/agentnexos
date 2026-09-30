@@ -1,4 +1,7 @@
+import { productPages } from "./product-pages";
+
 export const publicPages = {
+  ...productPages,
   "solutions": {
     "ar": {
       "eyebrow": "عمليات يمكن البناء حولها",
@@ -134,7 +137,7 @@ export const publicPages = {
       "cards": [
         [
           "المثال الحالي",
-          "تستخدم مساحة التجربة بيانات افتراضية داخل الصفحة. قرارات المثال لا ترسل رسائل ولا تعدل سجلات خارجية."
+          "عند تشغيل الاتصال الحي، يرسل طلبك وسياق المحادثة إلى خادم Vercel ثم نماذج Groq للتحليل والتخطيط والمراجعة. استخدم بيانات افتراضية فقط. المحادثة في ذاكرة التبويب ولا تحفظ في قاعدة بيانات التطبيق."
         ],
         [
           "استضافة الموقع",
@@ -146,8 +149,9 @@ export const publicPages = {
         ],
         [
           "النماذج ومورّدو الخدمات",
-          "شروط معالجة بيانات النماذج تعتمد على المورّد والخطة والإعدادات والعقد. لا نقدّم وعدًا عامًا بعدم التدريب قبل التحقق من هذه الشروط."
+          "Groq مزود معالجة نماذج التجربة. شروط المعالجة والاحتفاظ لديه تعتمد على الخطة والإعدادات والعقد؛ لا نقدّم وعدًا عامًا بعدم التدريب أو الاحتفاظ. جلب المراجع التقنية يتصل بمواقع رسمية محددة فقط."
         ],
+        ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لعنوان الاتصال ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز، دون نص الطلب أو الرد. يستخدم ذلك لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
         [
           "حدود هذا الإشعار",
           "هذا وصف للحالة الحالية وليس بديلًا عن اتفاق معالجة بيانات خاص بمشروع مؤسسي. قناة طلبات الخصوصية وبيانات الجهة المسؤولة تحتاج اعتماد المالك قبل استقبال بيانات العملاء."
@@ -162,7 +166,7 @@ export const publicPages = {
       "cards": [
         [
           "Current example",
-          "The workspace uses fictional data within the page. Example decisions do not send messages or modify external records."
+          "When the live connection is enabled, your request and conversation context go to the Vercel server and then Groq models for analysis, planning, and review. Use fictional data only. Conversation state lives in the browser tab and is not stored in the application's database."
         ],
         [
           "Website hosting",
@@ -174,8 +178,9 @@ export const publicPages = {
         ],
         [
           "Models and service providers",
-          "Model data handling depends on the provider, plan, configuration, and contract. A no-training commitment requires verification of those terms."
+          "Groq processes the demo's model requests. Its processing and retention terms depend on the plan, configuration, and contract; no universal no-training or no-retention promise is made. Technical reference retrieval connects only to selected official sites."
         ],
+        ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the connection address, request time and status, model roles, and token usage—not prompt or response text—to prevent abuse. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
         [
           "Scope of this notice",
           "This describes the current state and does not replace a project-specific data-processing agreement. Privacy contacts and controller details require owner approval before accepting customer data."
@@ -187,8 +192,8 @@ export const publicPages = {
     "ar": {
       "eyebrow": "نطاق الاستخدام الحالي",
       "title": "شروط استخدام التجربة",
-      "intro": "الموقع يقدم تعريفًا بالمشروع وأمثلة محلية توضح طريقة العمل. التشغيل المؤسسي والتكاملات يخضعان لنطاق واتفاق مستقلين.",
-      "notice": "الموافقة داخل المثال تغير حالة العرض فقط، ولا تمنح تفويضًا لتنفيذ خارجي.",
+      "intro": "الموقع يقدم تعريفًا بالمشروع ومساعدًا لتصميم العمليات ببيانات افتراضية. التشغيل المؤسسي والتكاملات يخضعان لنطاق واتفاق مستقلين.",
+      "notice": "الاقتراحات ليست تفويضًا أو تنفيذًا خارجيًا. لا توجد أدوات دفع أو شراء أو إرسال بريد في هذه التجربة.",
       "cards": [
         [
           "طبيعة المثال",
@@ -215,8 +220,8 @@ export const publicPages = {
     "en": {
       "eyebrow": "Current usage scope",
       "title": "Example usage terms",
-      "intro": "The site introduces the project and provides local workflow examples. Enterprise operation and integrations require a separate agreed scope.",
-      "notice": "Approval within the example changes the display only and does not authorize external execution.",
+      "intro": "The site introduces the project and a workflow-design assistant using fictional data. Enterprise operation and integrations require a separate agreed scope.",
+      "notice": "Suggestions are not authorization or external execution. This preview has no payment, purchasing, or email-sending tools.",
       "cards": [
         [
           "Nature of the example",
