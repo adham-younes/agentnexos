@@ -1,0 +1,50 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "errors": [],
+    "background": "lab(0.191505 -0.0083223 -0.30039)",
+    "overflow": false,
+    "dir": "rtl"
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "errors": [],
+    "background": "lab(0.191505 -0.0083223 -0.30039)",
+    "overflow": false,
+    "dir": "rtl"
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "errors": [],
+    "background": "lab(0.191505 -0.0083223 -0.30039)",
+    "overflow": false,
+    "dir": "rtl"
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "errors": [],
+    "background": "lab(0.191505 -0.0083223 -0.30039)",
+    "overflow": false,
+    "dir": "ltr"
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "errors": [],
+    "background": "lab(0.191505 -0.0083223 -0.30039)",
+    "overflow": false,
+    "dir": "ltr"
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "errors": [],
+    "background": "lab(0.191505 -0.0083223 -0.30039)",
+    "overflow": false,
+    "dir": "ltr"
+  }
+]

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { MockLanguageModelV4 } from "ai/test";
 import { simulateReadableStream } from "ai";
 import { runAgentWorkflow } from "../lib/agents/workflow";
-import { demoTools } from "../lib/agents/tools";
+import { createDemoTools } from "../lib/agents/tools";
 import { GET, POST } from "../app/api/agentnexos/route";
 
 const usage = { inputTokens: { total: 10, noCache: 10, cacheRead: undefined, cacheWrite: undefined }, outputTokens: { total: 20, text: 20, reasoning: undefined } };
@@ -31,7 +31,7 @@ test("cancellation prevents any provider call", async () => {
   assert.equal(analyst.doGenerateCalls.length,0);
 });
 test("workload tool performs arithmetic without inventing savings", async () => {
-  const result=await demoTools.estimate_workload.execute?.({items:300,minutesPerItem:12},{toolCallId:"test",messages:[],context:{}});
+  const result=await createDemoTools().estimate_workload.execute?.({items:300,minutesPerItem:12},{toolCallId:"test",messages:[],context:{}});
   assert.deepEqual(result,{items:300,minutesPerItem:12,totalMinutes:3600,totalHours:60,basis:"User-supplied assumptions; not measured outcomes."});
 });
 function request(body: unknown, origin="https://example.com") { return new Request("https://example.com/api/agentnexos",{method:"POST",headers:{origin,"content-type":"application/json"},body:JSON.stringify(body)}); }

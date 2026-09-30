@@ -1,0 +1,1148 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1130
+      },
+      {
+        "id": "how-it-works",
+        "height": 1655.5
+      },
+      {
+        "id": "infra",
+        "height": 1814
+      },
+      {
+        "id": "",
+        "height": 1458.078125
+      },
+      {
+        "id": "integrations",
+        "height": 2014.984375
+      },
+      {
+        "id": "security",
+        "height": 1624.5
+      },
+      {
+        "id": "developers",
+        "height": 814
+      },
+      {
+        "id": "",
+        "height": 1328.5
+      },
+      {
+        "id": "pricing",
+        "height": 1946.5
+      },
+      {
+        "id": "contact",
+        "height": 927.5
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 362
+      },
+      {
+        "id": "",
+        "height": 266
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1065.09375
+      },
+      {
+        "id": "how-it-works",
+        "height": 1582.0625
+      },
+      {
+        "id": "infra",
+        "height": 1755.09375
+      },
+      {
+        "id": "",
+        "height": 1621.84375
+      },
+      {
+        "id": "integrations",
+        "height": 1715.8125
+      },
+      {
+        "id": "security",
+        "height": 1501.09375
+      },
+      {
+        "id": "developers",
+        "height": 689.09375
+      },
+      {
+        "id": "",
+        "height": 885.5
+      },
+      {
+        "id": "pricing",
+        "height": 2018.59375
+      },
+      {
+        "id": "contact",
+        "height": 711.78125
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 383
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 410
+      },
+      {
+        "id": "",
+        "height": 410
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1280.0625
+      },
+      {
+        "id": "how-it-works",
+        "height": 1218
+      },
+      {
+        "id": "infra",
+        "height": 1313.875
+      },
+      {
+        "id": "",
+        "height": 1616.171875
+      },
+      {
+        "id": "integrations",
+        "height": 1977.65625
+      },
+      {
+        "id": "security",
+        "height": 1281.875
+      },
+      {
+        "id": "developers",
+        "height": 853.875
+      },
+      {
+        "id": "",
+        "height": 768.5
+      },
+      {
+        "id": "pricing",
+        "height": 1226
+      },
+      {
+        "id": "contact",
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 323
+      },
+      {
+        "id": "",
+        "height": 323
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 419
+      },
+      {
+        "id": "",
+        "height": 419
+      },
+      {
+        "id": "",
+        "height": 419
+      },
+      {
+        "id": "",
+        "height": 447
+      },
+      {
+        "id": "",
+        "height": 447
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1109.5
+      },
+      {
+        "id": "how-it-works",
+        "height": 1708.5
+      },
+      {
+        "id": "infra",
+        "height": 1973.5
+      },
+      {
+        "id": "",
+        "height": 1535.078125
+      },
+      {
+        "id": "integrations",
+        "height": 2018.484375
+      },
+      {
+        "id": "security",
+        "height": 1804.5
+      },
+      {
+        "id": "developers",
+        "height": 895.5
+      },
+      {
+        "id": "",
+        "height": 1434.5
+      },
+      {
+        "id": "pricing",
+        "height": 2170
+      },
+      {
+        "id": "contact",
+        "height": 1106.5
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 431
+      },
+      {
+        "id": "",
+        "height": 399
+      },
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 399
+      },
+      {
+        "id": "",
+        "height": 367
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 463
+      },
+      {
+        "id": "",
+        "height": 491
+      },
+      {
+        "id": "",
+        "height": 463
+      },
+      {
+        "id": "",
+        "height": 523
+      },
+      {
+        "id": "",
+        "height": 551
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 330
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 330
+      },
+      {
+        "id": "",
+        "height": 330
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 362
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 330
+      },
+      {
+        "id": "",
+        "height": 362
+      },
+      {
+        "id": "",
+        "height": 522
+      },
+      {
+        "id": "",
+        "height": 330
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1066.09375
+      },
+      {
+        "id": "how-it-works",
+        "height": 1635.0625
+      },
+      {
+        "id": "infra",
+        "height": 1788.59375
+      },
+      {
+        "id": "",
+        "height": 1621.84375
+      },
+      {
+        "id": "integrations",
+        "height": 1713.3125
+      },
+      {
+        "id": "security",
+        "height": 1554.59375
+      },
+      {
+        "id": "developers",
+        "height": 742.59375
+      },
+      {
+        "id": "",
+        "height": 919
+      },
+      {
+        "id": "pricing",
+        "height": 2084.390625
+      },
+      {
+        "id": "contact",
+        "height": 881.0625
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 479
+      },
+      {
+        "id": "",
+        "height": 479
+      },
+      {
+        "id": "",
+        "height": 443
+      },
+      {
+        "id": "",
+        "height": 443
+      },
+      {
+        "id": "",
+        "height": 443
+      },
+      {
+        "id": "",
+        "height": 443
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 387
+      },
+      {
+        "id": "",
+        "height": 359
+      },
+      {
+        "id": "",
+        "height": 387
+      },
+      {
+        "id": "",
+        "height": 387
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 410
+      },
+      {
+        "id": "",
+        "height": 410
+      },
+      {
+        "id": "",
+        "height": 442
+      },
+      {
+        "id": "",
+        "height": 442
+      },
+      {
+        "id": "",
+        "height": 570
+      },
+      {
+        "id": "",
+        "height": 570
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1165.875
+      },
+      {
+        "id": "how-it-works",
+        "height": 1244
+      },
+      {
+        "id": "infra",
+        "height": 1462.5625
+      },
+      {
+        "id": "",
+        "height": 1749.171875
+      },
+      {
+        "id": "integrations",
+        "height": 1947.15625
+      },
+      {
+        "id": "security",
+        "height": 1335.375
+      },
+      {
+        "id": "developers",
+        "height": 907.375
+      },
+      {
+        "id": "",
+        "height": 802
+      },
+      {
+        "id": "pricing",
+        "height": 1495.9375
+      },
+      {
+        "id": "contact",
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 355
+      },
+      {
+        "id": "",
+        "height": 355
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 507
+      },
+      {
+        "id": "",
+        "height": 507
+      },
+      {
+        "id": "",
+        "height": 507
+      },
+      {
+        "id": "",
+        "height": 599
+      },
+      {
+        "id": "",
+        "height": 599
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 282
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      }
+    ]
+  }
+]

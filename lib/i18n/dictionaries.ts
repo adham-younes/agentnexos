@@ -46,7 +46,7 @@ export const ar = {
   "hero.stat4": "خارطة الطريق",
 
   // ---------- metrics (live counters are honest zeros; the rest is roadmap) ----------
-  "metrics.m1.sub": "في مساحة التجربة",
+  "metrics.m1.sub": "يحتاج خط أساس مقاسًا للتجربة",
   "metrics.roadmap": "خارطة الطريق",
   "metrics.m2.sub": "خارطة الطريق",
   "metrics.m3.sub": "خارطة الطريق",
@@ -128,11 +128,11 @@ export const ar = {
 
   // ---------- metrics ----------
   "metrics.eyebrow": "المقاييس",
-  "metrics.title": "مقاييس نجاح العملية.",
-  "metrics.live": "حيّ",
-  "metrics.realtime": "لحظي",
+  "metrics.title": "نجاح العملية.",
+  "metrics.live": "معايير التقييم",
+  "metrics.realtime": "حدد معايير",
   "metrics.subtitle": "تُضبط لكل تجربة قبل الانتقال إلى الإنتاج.",
-  "metrics.m1": "تشغيلات موثّقة حاليًا",
+  "metrics.m1": "اكتمال المهمة بدليل",
   "metrics.m2": "جودة النتيجة",
   "metrics.m3": "زمن دورة العملية",
   "metrics.note":
