@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
 import { useEffect, useState, useRef } from "react";
 import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
@@ -11,6 +13,7 @@ const wordKeys = [
 ];
 
 function BlurWord({ word, trigger, animate }: { word: string; trigger: number; animate: boolean }) {
+  const reducedMotion = useReducedMotion();
   const letters = word.split("");
   const STAGGER = 45;      // ms between each letter
   const DURATION = 500;    // blur+opacity fade duration per letter
@@ -24,6 +27,7 @@ function BlurWord({ word, trigger, animate }: { word: string; trigger: number; a
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
+    if (reducedMotion || !animate) return;
     // reset
     framesRef.current.forEach(cancelAnimationFrame);
     timersRef.current.forEach(clearTimeout);
@@ -65,14 +69,14 @@ function BlurWord({ word, trigger, animate }: { word: string; trigger: number; a
       timersRef.current.forEach(clearTimeout);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [trigger]);
+  }, [trigger, reducedMotion, animate]);
 
   // gradient colours cycling across letter positions
   const gradientColors = ["#eca8d6", "#a78bfa", "#67e8f9", "#fbbf24", "#eca8d6"];
 
   return (
     <>
-      {animate && letters.map((char, i) => {
+      {animate && !reducedMotion && letters.map((char, i) => {
         const colorIndex = (i / Math.max(letters.length - 1, 1)) * (gradientColors.length - 1);
         const lower = Math.floor(colorIndex);
         const upper = Math.min(lower + 1, gradientColors.length - 1);
@@ -108,13 +112,15 @@ function BlurWord({ word, trigger, animate }: { word: string; trigger: number; a
               })}
         {/* Per-letter splitting breaks Arabic letter joining, so the RTL face
             animates the whole word instead of individual glyphs. */}
-        {!animate && <span style={{ display: "inline-block" }}>{word}</span>}
+        {(!animate || reducedMotion) && <span style={{ display: "inline-block" }}>{word}</span>}
     </>
   );
 }
 
 export function HeroSection() {
   const t = useT();
+  const reducedMotion = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const isRtl = useIsRtl();
   const words = wordKeys.map((w) => t(w.key, w.fallback));
   const [isVisible, setIsVisible] = useState(false);
@@ -125,18 +131,23 @@ export function HeroSection() {
   }, []);
 
   useEffect(() => {
+    if (reducedMotion) return;
     const interval = setInterval(() => {
       setWordIndex((prev) => (prev + 1) % words.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [reducedMotion]);
+
+  useEffect(() => { const video = videoRef.current; if (!video) return; if (reducedMotion) video.pause(); else void video.play().catch(() => {}); }, [reducedMotion]);
 
   return (
     <section id="top" className="relative min-h-screen flex flex-col justify-center items-start overflow-hidden bg-black">
       {/* Background video */}
       <div className="absolute inset-0 z-0">
         <video
-          autoPlay
+          ref={videoRef}
+          autoPlay={!reducedMotion}
+          onLoadedData={event => { if (reducedMotion) event.currentTarget.pause(); }}
           muted
           loop
           playsInline

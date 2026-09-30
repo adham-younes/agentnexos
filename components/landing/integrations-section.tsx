@@ -149,6 +149,10 @@ export function IntegrationsSection() {
         isVisible ? "opacity-100" : "opacity-0"
       }`}>
         <img
+                  width={2494}
+                  height={1199}
+                  loading="lazy"
+                  decoding="async"
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png"
           alt=""
           aria-hidden="true"

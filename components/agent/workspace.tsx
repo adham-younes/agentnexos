@@ -70,7 +70,7 @@ export function AgentWorkspace() {
           <div className="mt-10 border-t border-border pt-6"><h2 className="text-xs font-medium text-muted-foreground">{c.capability}</h2><ul className="mt-4 space-y-3">{c.tools.map(tool => <li key={tool} className="flex items-center gap-2 text-xs"><Workflow className="size-3.5 text-primary" />{tool}</li>)}</ul></div>
           <div className="mt-auto pt-12"><div className="rounded-xl bg-secondary p-4"><ShieldCheck className="mb-3 size-5 text-primary" /><h2 className="text-sm font-medium">{c.boundary}</h2><p className="mt-2 text-xs leading-6 text-muted-foreground">{c.boundaryText}</p></div></div>
         </aside>
-        <main className="flex h-[calc(100dvh-81px)] min-h-0 min-w-0 flex-col">
+        <main id="main-content" tabIndex={-1} className="flex h-[calc(100dvh-81px)] min-h-0 min-w-0 flex-col">
           <div className="flex min-h-16 shrink-0 items-center justify-between gap-3 border-b border-border px-5 sm:px-9">
             <div className="flex min-w-0 items-center gap-2"><span className="size-1.5 shrink-0 rounded-full bg-primary" /><p className="text-xs leading-5 text-muted-foreground">{c.label}</p></div>
             <div className="flex gap-1"><button onClick={() => {setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);composer.current?.focus();}} disabled={busy} aria-label={c.newChat} className="rounded-lg p-3 hover:bg-secondary lg:hidden"><Plus className="size-4" /></button><button disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="rounded-lg p-3 hover:bg-secondary disabled:opacity-30"><Download className="size-4" /></button></div>

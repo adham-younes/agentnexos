@@ -1,0 +1,38 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "changedImageGeometry": [],
+    "sameFonts": true
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "changedImageGeometry": [],
+    "sameFonts": true
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "changedImageGeometry": [],
+    "sameFonts": true
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "changedImageGeometry": [],
+    "sameFonts": true
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "changedImageGeometry": [],
+    "sameFonts": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "changedImageGeometry": [],
+    "sameFonts": true
+  }
+]

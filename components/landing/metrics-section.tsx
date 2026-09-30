@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
 import { useEffect, useState, useRef } from "react";
 import { useT } from "@/lib/i18n/use-t";
 
@@ -83,6 +85,7 @@ function AnimatedNumber({ end, suffix = "", prefix = "" }: { end: number; suffix
 }
 
 function GridBackground() {
+  const reducedMotion = useReducedMotion();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const timeRef = useRef(0);
   const frameRef = useRef(0);
@@ -128,7 +131,7 @@ function GridBackground() {
       ctx.lineTo(width, pulseY);
       ctx.stroke();
       timeRef.current += 0.02;
-      frameRef.current = requestAnimationFrame(render);
+      if (!reducedMotion) frameRef.current = requestAnimationFrame(render);
     };
     render();
 
@@ -136,7 +139,7 @@ function GridBackground() {
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(frameRef.current);
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <canvas
@@ -166,6 +169,7 @@ function DotGraph({
   baseline?: number;
   amplitude?: number;
 }) {
+  const reducedMotion = useReducedMotion();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef(0);
   const timeRef = useRef(0);
@@ -205,12 +209,12 @@ function DotGraph({
       }
 
       timeRef.current += speed;
-      frameRef.current = requestAnimationFrame(render);
+      if (!reducedMotion) frameRef.current = requestAnimationFrame(render);
     };
 
     render();
     return () => cancelAnimationFrame(frameRef.current);
-  }, [color, height, freq1, freq2, freqT, speed, baseline, amplitude]);
+  }, [color, height, freq1, freq2, freqT, speed, baseline, amplitude, reducedMotion]);
 
   return (
     <canvas
@@ -276,6 +280,10 @@ export function MetricsSection() {
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           <img
+                  width={2492}
+                  height={824}
+                  loading="lazy"
+                  decoding="async"
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png"
             alt=""
             aria-hidden="true"

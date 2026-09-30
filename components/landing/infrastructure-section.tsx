@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
 import { useEffect, useState, useRef } from "react";
 import { useIsRtl, useT } from "@/lib/i18n/use-t";
 
@@ -12,6 +14,7 @@ const regions = [
 
 export function InfrastructureSection() {
   const t = useT();
+  const reducedMotion = useReducedMotion();
   const isRtl = useIsRtl();
   const [isVisible, setIsVisible] = useState(false);
   const [activeRegion, setActiveRegion] = useState(0);
@@ -30,11 +33,12 @@ export function InfrastructureSection() {
   }, []);
 
   useEffect(() => {
+    if (reducedMotion) return;
     const interval = setInterval(() => {
       setActiveRegion((prev) => (prev + 1) % regions.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <section id="infra" ref={sectionRef} className="relative py-32 lg:py-40 overflow-hidden">
@@ -56,6 +60,10 @@ export function InfrastructureSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <img
+                  width={1369}
+                  height={1369}
+                  loading="lazy"
+                  decoding="async"
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png"
                 alt="Global network sphere"
                 className="w-full h-full object-contain object-center"

@@ -17,7 +17,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 12.4.2
+          version: 11.19.0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,6 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Audit production dependencies
+        run: pnpm audit --prod
 
       - name: Typecheck
         run: pnpm run typecheck
@@ -42,3 +45,26 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Install browser for release verification
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Verify built pages and complete browser journeys
+        shell: bash
+        run: |
+          pnpm start --port 3000 > /tmp/agentnexos-server.log 2>&1 &
+          agentnexos_server_pid=$!
+          trap 'kill "$agentnexos_server_pid"' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://localhost:3000/ar > /dev/null; then break; fi
+            sleep 1
+          done
+          pnpm verify:site http://localhost:3000
+
+      - name: Preserve browser verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-verification
+          path: output/release-verification/report.json
+          if-no-files-found: ignore

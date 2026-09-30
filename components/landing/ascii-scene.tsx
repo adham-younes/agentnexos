@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
 import { useEffect, useRef, useCallback } from "react";
 
 interface Point3D {
@@ -11,6 +13,7 @@ interface Point3D {
 const ASCII_CHARS = " .:-=+*#%@";
 
 export function AsciiScene() {
+  const reducedMotion = useReducedMotion();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef(0);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
@@ -189,7 +192,7 @@ export function AsciiScene() {
       }
 
       timeRef.current += 0.008;
-      frameRef.current = requestAnimationFrame(render);
+      if (!reducedMotion) frameRef.current = requestAnimationFrame(render);
     };
 
     render();
@@ -199,7 +202,7 @@ export function AsciiScene() {
       window.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(frameRef.current);
     };
-  }, [handleMouseMove]);
+  }, [handleMouseMove, reducedMotion]);
 
   return (
     <canvas
