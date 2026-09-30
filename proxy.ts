@@ -5,7 +5,7 @@ import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
  * Sends `/` (and any path missing a supported locale prefix) to the default
  * locale, leaving already-localised paths untouched.
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
   const first = pathname.split("/")[1];
@@ -26,8 +26,6 @@ export const config = {
     "/((?!api|_next|.*\\..*).*)",
   ],
 };
-
-export const runtime = "nodejs";
 
 // Keep locales referenced so the matcher stays in sync if extended.
 void locales;

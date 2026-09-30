@@ -57,8 +57,8 @@ export async function generateMetadata({
     ? "Agentnexos — أنظمة وكيلة للمؤسسات"
     : "Agentnexos — Enterprise Agent Systems";
   const description = isAr
-    ? "نبني أنظمة وكلاء ذكاء اصطناعي مخصّصة للمؤسسات في الشرق الأوسط، لأتمتة العمليات وربط الأدوات وتشغيل العمل بضوابط واضحة وموافقات بشرية وسجلات تدقيق مشفرة."
-    : "Custom autonomous agent systems for MENA enterprises: connecting systems, human-in-the-loop approvals, and immutable audit logs.";
+    ? "أنظمة وكلاء مخصصة لعمليات المؤسسات في مصر والخليج والشرق الأوسط. اكتشف حالات الاستخدام ومنهج ربط المعرفة والأدوات والموافقات، واستكشف مثال عمل توضيحيًا."
+    : "Custom agent systems for enterprise workflows in Egypt, the Gulf, and MENA. Explore use cases, our approach to knowledge, tools and approvals, and an illustrative workflow.";
 
   const baseUrl = "https://compute-the-platform-to-build-six-fawn.vercel.app";
 
