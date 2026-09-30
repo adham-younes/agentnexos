@@ -7,10 +7,10 @@ import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useT, useLocale } from "@/lib/i18n/use-t";
 
 const navLinks = [
-  { key: "nav.capabilities", name: "Capabilities", href: "#features" },
+  { key: "nav.capabilities", name: "Platform", href: "/platform" },
   { key: "nav.solutions", name: "Solutions", href: "/solutions" },
   { key: "nav.process", name: "Process", href: "#how-it-works" },
-  { key: "nav.infra", name: "Infra", href: "#infra" },
+  { key: "nav.infra", name: "Industries", href: "/industries" },
   { key: "nav.security", name: "Security", href: "/security" },
   { key: "nav.agentSpace", name: "Agent Space", href: "/agentnexos" },
 ];

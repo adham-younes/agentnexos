@@ -3,6 +3,7 @@ import nextConfig from "eslint-config-next";
 const config = [
   ...nextConfig,
   {
+    files: ["**/*.{js,jsx,ts,tsx}"],
     rules: {
       "react-hooks/set-state-in-effect": "warn",
       "react-hooks/purity": "warn",

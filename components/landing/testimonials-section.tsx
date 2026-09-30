@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useT } from "@/lib/i18n/use-t";
+import { useLocale, useT } from "@/lib/i18n/use-t";
 
 // Placeholder quotes. No real customer has endorsed the platform, so the full
 // section stays hidden unless explicitly enabled (docs/GUARDRAILS.md §6.2).
@@ -52,6 +52,18 @@ const asciiPattern = Array.from({ length: 60 }, (_, row) =>
 
 export function TestimonialsSection() {
   const t = useT();
+  const locale = useLocale();
+  const measures = locale === "ar" ? [
+    ["جودة النتيجة", "هل اكتملت المدخلات؟ هل النتيجة صحيحة ومسنودة بمصدر يمكن مراجعته؟"],
+    ["زمن الدورة", "قارن زمن وصول الطلب إلى نتيجة معتمدة بالمسار اليدوي لنفس النوع من العمل."],
+    ["تدخل المسؤول", "سجل أين احتاج النظام سؤالًا أو تصحيحًا أو اعتمادًا، بدل إخفاء العمل البشري."],
+    ["سلامة التنفيذ", "اختبر الصلاحيات والتكرار والانقطاع والتعافي، وتحقق من أثر الفعل في النظام النهائي."],
+  ] : [
+    ["Result quality", "Are inputs complete and the result correct, with a source the owner can inspect?"],
+    ["Cycle time", "Compare the time from request to approved result with the manual path for the same task."],
+    ["Owner intervention", "Record questions, corrections, and approvals instead of hiding the human contribution."],
+    ["Execution safety", "Test permissions, duplicates, outages, and recovery; verify effects in the target system."],
+  ];
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -130,9 +142,9 @@ export function TestimonialsSection() {
         </div>
 
         {!showPlaceholders ? (
-          <p className="text-xl text-background/50 leading-relaxed max-w-2xl">
+          <div><p className="text-xl text-background/70 leading-relaxed max-w-2xl">
             {t("testimonials.note", "Before we build, we define the workflow baseline and the quality, cycle-time, cost, and human-intervention measures. We only publish customer outcomes when they are verified.")}
-          </p>
+          </p><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">{measures.map(([title, description], i) => <article key={title} className="border-t border-background/20 pt-6"><span className="text-xs font-mono text-background/50">0{i+1}</span><h3 className="mt-5 text-xl font-medium">{title}</h3><p className="mt-3 text-sm leading-7 text-background/65">{description}</p></article>)}</div></div>
         ) : (
           <>
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
