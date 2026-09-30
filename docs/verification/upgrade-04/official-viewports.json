@@ -1,0 +1,2438 @@
+[
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — أنظمة وكيلة للمؤسسات",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+        "width": 342,
+        "height": 320
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+        "width": 192,
+        "height": 192
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+        "width": 342,
+        "height": 113.078125
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+        "width": 390,
+        "height": 187.484375
+      },
+      {
+        "src": "/images/isolated.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/encrypted.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/audit.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/permissions.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+        "width": 390,
+        "height": 390
+      },
+      {
+        "src": "/images/whale.png",
+        "width": 342,
+        "height": 256.5
+      },
+      {
+        "src": "/images/bridge.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+        "width": 390,
+        "height": 340
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1130
+      },
+      {
+        "id": "how-it-works",
+        "height": 1655.5
+      },
+      {
+        "id": "infra",
+        "height": 1814
+      },
+      {
+        "id": "",
+        "height": 1515.078125
+      },
+      {
+        "id": "integrations",
+        "height": 2014.984375
+      },
+      {
+        "id": "security",
+        "height": 1624.5
+      },
+      {
+        "id": "developers",
+        "height": 814
+      },
+      {
+        "id": "",
+        "height": 1328.5
+      },
+      {
+        "id": "pricing",
+        "height": 1946.5
+      },
+      {
+        "id": "contact",
+        "height": 927.5
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — أنظمة وكيلة للمؤسسات",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": []
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "المعرفة والأدوات والقرارات، في سير عمل واحد. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/bridge.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      },
+      {
+        "id": "",
+        "height": 335
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "نفس منهج البناء. حدود مختلفة لكل قطاع. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 315
+      },
+      {
+        "id": "",
+        "height": 343
+      },
+      {
+        "id": "",
+        "height": 343
+      },
+      {
+        "id": "",
+        "height": 343
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "اسأل الأسئلة الصحيحة قبل أن تمنح الوكيل أداة. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "ابدأ بعملية واضحة. وابنِ حولها نظامًا وكيلًا. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 415
+      },
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 411
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "حدود واضحة للبيانات والقرارات والتنفيذ. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/permissions.jpg",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "الخصوصية ومعالجة البيانات | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 330
+      },
+      {
+        "id": "",
+        "height": 266
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 390,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "شروط استخدام التجربة | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 202
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 234
+      },
+      {
+        "id": "",
+        "height": 266
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — أنظمة وكيلة للمؤسسات",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+        "width": 720,
+        "height": 320
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+        "width": 192,
+        "height": 192
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+        "width": 720,
+        "height": 238.0625
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+        "width": 768,
+        "height": 369.21875
+      },
+      {
+        "src": "/images/isolated.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/encrypted.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/audit.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/permissions.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+        "width": 768,
+        "height": 650
+      },
+      {
+        "src": "/images/whale.png",
+        "width": 720,
+        "height": 540
+      },
+      {
+        "src": "/images/bridge.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+        "width": 768,
+        "height": 420
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1065.09375
+      },
+      {
+        "id": "how-it-works",
+        "height": 1582.0625
+      },
+      {
+        "id": "infra",
+        "height": 1755.09375
+      },
+      {
+        "id": "",
+        "height": 1621.84375
+      },
+      {
+        "id": "integrations",
+        "height": 1715.8125
+      },
+      {
+        "id": "security",
+        "height": 1501.09375
+      },
+      {
+        "id": "developers",
+        "height": 689.09375
+      },
+      {
+        "id": "",
+        "height": 885.5
+      },
+      {
+        "id": "pricing",
+        "height": 2018.59375
+      },
+      {
+        "id": "contact",
+        "height": 711.78125
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — أنظمة وكيلة للمؤسسات",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": []
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "المعرفة والأدوات والقرارات، في سير عمل واحد. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/bridge.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 383
+      },
+      {
+        "id": "",
+        "height": 383
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "نفس منهج البناء. حدود مختلفة لكل قطاع. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 387
+      },
+      {
+        "id": "",
+        "height": 387
+      },
+      {
+        "id": "",
+        "height": 387
+      },
+      {
+        "id": "",
+        "height": 387
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "اسأل الأسئلة الصحيحة قبل أن تمنح الوكيل أداة. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "ابدأ بعملية واضحة. وابنِ حولها نظامًا وكيلًا. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 339
+      },
+      {
+        "id": "",
+        "height": 339
+      },
+      {
+        "id": "",
+        "height": 339
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "حدود واضحة للبيانات والقرارات والتنفيذ. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/permissions.jpg",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 282
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "الخصوصية ومعالجة البيانات | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 346
+      },
+      {
+        "id": "",
+        "height": 346
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 768,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "شروط استخدام التجربة | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 282
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — أنظمة وكيلة للمؤسسات",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+        "width": 546.828125,
+        "height": 498
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+        "width": 628,
+        "height": 640
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+        "width": 320,
+        "height": 320
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+        "width": 1304,
+        "height": 431.171875
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+        "width": 1440,
+        "height": 692.28125
+      },
+      {
+        "src": "/images/isolated.jpg",
+        "width": 561.484375,
+        "height": 358.5
+      },
+      {
+        "src": "/images/encrypted.jpg",
+        "width": 561.484375,
+        "height": 358.5
+      },
+      {
+        "src": "/images/audit.jpg",
+        "width": 561.484375,
+        "height": 358.5
+      },
+      {
+        "src": "/images/permissions.jpg",
+        "width": 561.484375,
+        "height": 358.5
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+        "width": 792,
+        "height": 650
+      },
+      {
+        "src": "/images/whale.png",
+        "width": 524.671875,
+        "height": 393.5
+      },
+      {
+        "src": "/images/bridge.png",
+        "width": 600,
+        "height": 650
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+        "width": 1440,
+        "height": 420
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1280.0625
+      },
+      {
+        "id": "how-it-works",
+        "height": 1218
+      },
+      {
+        "id": "infra",
+        "height": 1313.875
+      },
+      {
+        "id": "",
+        "height": 1749.171875
+      },
+      {
+        "id": "integrations",
+        "height": 1977.65625
+      },
+      {
+        "id": "security",
+        "height": 1281.875
+      },
+      {
+        "id": "developers",
+        "height": 853.875
+      },
+      {
+        "id": "",
+        "height": 768.5
+      },
+      {
+        "id": "pricing",
+        "height": 1226
+      },
+      {
+        "id": "contact",
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — أنظمة وكيلة للمؤسسات",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": []
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "المعرفة والأدوات والقرارات، في سير عمل واحد. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/bridge.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      },
+      {
+        "id": "",
+        "height": 291
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "نفس منهج البناء. حدود مختلفة لكل قطاع. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 299
+      },
+      {
+        "id": "",
+        "height": 299
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "اسأل الأسئلة الصحيحة قبل أن تمنح الوكيل أداة. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 419
+      },
+      {
+        "id": "",
+        "height": 419
+      },
+      {
+        "id": "",
+        "height": 419
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "ابدأ بعملية واضحة. وابنِ حولها نظامًا وكيلًا. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 459
+      },
+      {
+        "id": "",
+        "height": 459
+      },
+      {
+        "id": "",
+        "height": 459
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "حدود واضحة للبيانات والقرارات والتنفيذ. | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [
+      {
+        "src": "/images/permissions.jpg",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "الخصوصية ومعالجة البيانات | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 282
+      },
+      {
+        "id": "",
+        "height": 282
+      }
+    ]
+  },
+  {
+    "locale": "ar",
+    "width": 1440,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "شروط استخدام التجربة | Agentnexos",
+    "dir": "rtl",
+    "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 218
+      },
+      {
+        "id": "",
+        "height": 250
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — Enterprise Agent Systems",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+        "width": 342,
+        "height": 320
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+        "width": 192,
+        "height": 192
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+        "width": 342,
+        "height": 113.078125
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+        "width": 390,
+        "height": 187.484375
+      },
+      {
+        "src": "/images/isolated.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/encrypted.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/audit.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/permissions.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+        "width": 390,
+        "height": 390
+      },
+      {
+        "src": "/images/whale.png",
+        "width": 342,
+        "height": 256.5
+      },
+      {
+        "src": "/images/bridge.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+        "width": 390,
+        "height": 340
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1109.5
+      },
+      {
+        "id": "how-it-works",
+        "height": 1708.5
+      },
+      {
+        "id": "infra",
+        "height": 1973.5
+      },
+      {
+        "id": "",
+        "height": 1572.078125
+      },
+      {
+        "id": "integrations",
+        "height": 2018.484375
+      },
+      {
+        "id": "security",
+        "height": 1804.5
+      },
+      {
+        "id": "developers",
+        "height": 895.5
+      },
+      {
+        "id": "",
+        "height": 1434.5
+      },
+      {
+        "id": "pricing",
+        "height": 2170
+      },
+      {
+        "id": "contact",
+        "height": 1106.5
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — Enterprise Agent Systems",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": []
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Knowledge, tools, and decisions. One workflow. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/bridge.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 399
+      },
+      {
+        "id": "",
+        "height": 399
+      },
+      {
+        "id": "",
+        "height": 367
+      },
+      {
+        "id": "",
+        "height": 399
+      },
+      {
+        "id": "",
+        "height": 367
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "One engineering approach. Sector-specific boundaries. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      },
+      {
+        "id": "",
+        "height": 403
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Ask the right questions before giving an agent a tool. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 463
+      },
+      {
+        "id": "",
+        "height": 491
+      },
+      {
+        "id": "",
+        "height": 463
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Start with a clear workflow. Build an agent system around it. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 535
+      },
+      {
+        "id": "",
+        "height": 475
+      },
+      {
+        "id": "",
+        "height": 503
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Clear boundaries for data, decisions, and execution. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/permissions.jpg",
+        "width": 300,
+        "height": 212.5
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 330
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 234
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Privacy and data handling | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 362
+      },
+      {
+        "id": "",
+        "height": 298
+      },
+      {
+        "id": "",
+        "height": 330
+      },
+      {
+        "id": "",
+        "height": 362
+      },
+      {
+        "id": "",
+        "height": 458
+      },
+      {
+        "id": "",
+        "height": 330
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Example usage terms | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 266
+      },
+      {
+        "id": "",
+        "height": 298
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — Enterprise Agent Systems",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+        "width": 720,
+        "height": 320
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+        "width": 192,
+        "height": 192
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+        "width": 720,
+        "height": 238.0625
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+        "width": 768,
+        "height": 369.21875
+      },
+      {
+        "src": "/images/isolated.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/encrypted.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/audit.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/images/permissions.jpg",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+        "width": 768,
+        "height": 650
+      },
+      {
+        "src": "/images/whale.png",
+        "width": 720,
+        "height": 540
+      },
+      {
+        "src": "/images/bridge.png",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+        "width": 768,
+        "height": 420
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1066.09375
+      },
+      {
+        "id": "how-it-works",
+        "height": 1635.0625
+      },
+      {
+        "id": "infra",
+        "height": 1788.59375
+      },
+      {
+        "id": "",
+        "height": 1690.234375
+      },
+      {
+        "id": "integrations",
+        "height": 1713.3125
+      },
+      {
+        "id": "security",
+        "height": 1554.59375
+      },
+      {
+        "id": "developers",
+        "height": 742.59375
+      },
+      {
+        "id": "",
+        "height": 919
+      },
+      {
+        "id": "pricing",
+        "height": 2084.390625
+      },
+      {
+        "id": "contact",
+        "height": 881.0625
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — Enterprise Agent Systems",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": []
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Knowledge, tools, and decisions. One workflow. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/bridge.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 447
+      },
+      {
+        "id": "",
+        "height": 447
+      },
+      {
+        "id": "",
+        "height": 443
+      },
+      {
+        "id": "",
+        "height": 443
+      },
+      {
+        "id": "",
+        "height": 443
+      },
+      {
+        "id": "",
+        "height": 443
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "One engineering approach. Sector-specific boundaries. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 447
+      },
+      {
+        "id": "",
+        "height": 447
+      },
+      {
+        "id": "",
+        "height": 447
+      },
+      {
+        "id": "",
+        "height": 447
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Ask the right questions before giving an agent a tool. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 331
+      },
+      {
+        "id": "",
+        "height": 387
+      },
+      {
+        "id": "",
+        "height": 359
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Start with a clear workflow. Build an agent system around it. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 371
+      },
+      {
+        "id": "",
+        "height": 371
+      },
+      {
+        "id": "",
+        "height": 371
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Clear boundaries for data, decisions, and execution. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/permissions.jpg",
+        "width": 654,
+        "height": 478
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 378
+      },
+      {
+        "id": "",
+        "height": 346
+      },
+      {
+        "id": "",
+        "height": 346
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Privacy and data handling | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 410
+      },
+      {
+        "id": "",
+        "height": 410
+      },
+      {
+        "id": "",
+        "height": 442
+      },
+      {
+        "id": "",
+        "height": 442
+      },
+      {
+        "id": "",
+        "height": 506
+      },
+      {
+        "id": "",
+        "height": 506
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Example usage terms | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — Enterprise Agent Systems",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+        "width": 546.828125,
+        "height": 498
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+        "width": 628,
+        "height": 640
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+        "width": 320,
+        "height": 320
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+        "width": 1304,
+        "height": 431.171875
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+        "width": 1440,
+        "height": 692.28125
+      },
+      {
+        "src": "/images/isolated.jpg",
+        "width": 561.484375,
+        "height": 373.5
+      },
+      {
+        "src": "/images/encrypted.jpg",
+        "width": 561.484375,
+        "height": 373.5
+      },
+      {
+        "src": "/images/audit.jpg",
+        "width": 561.484375,
+        "height": 373.5
+      },
+      {
+        "src": "/images/permissions.jpg",
+        "width": 561.484375,
+        "height": 373.5
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+        "width": 792,
+        "height": 650
+      },
+      {
+        "src": "/images/whale.png",
+        "width": 524.671875,
+        "height": 393.5
+      },
+      {
+        "src": "/images/bridge.png",
+        "width": 600,
+        "height": 650
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+        "width": 1440,
+        "height": 420
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "top",
+        "height": 900
+      },
+      {
+        "id": "features",
+        "height": 1165.875
+      },
+      {
+        "id": "how-it-works",
+        "height": 1244
+      },
+      {
+        "id": "infra",
+        "height": 1462.5625
+      },
+      {
+        "id": "",
+        "height": 1882.171875
+      },
+      {
+        "id": "integrations",
+        "height": 1947.15625
+      },
+      {
+        "id": "security",
+        "height": 1335.375
+      },
+      {
+        "id": "developers",
+        "height": 907.375
+      },
+      {
+        "id": "",
+        "height": 802
+      },
+      {
+        "id": "pricing",
+        "height": 1495.9375
+      },
+      {
+        "id": "contact",
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "agentnexos",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Agentnexos — Enterprise Agent Systems",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": []
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "platform",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Knowledge, tools, and decisions. One workflow. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/bridge.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      },
+      {
+        "id": "",
+        "height": 351
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "industries",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "One engineering approach. Sector-specific boundaries. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 359
+      },
+      {
+        "id": "",
+        "height": 359
+      },
+      {
+        "id": "",
+        "height": 359
+      },
+      {
+        "id": "",
+        "height": 359
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "resources",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Ask the right questions before giving an agent a tool. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 507
+      },
+      {
+        "id": "",
+        "height": 507
+      },
+      {
+        "id": "",
+        "height": 507
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "solutions",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Start with a clear workflow. Build an agent system around it. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/whale.png",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 583
+      },
+      {
+        "id": "",
+        "height": 583
+      },
+      {
+        "id": "",
+        "height": 583
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "security",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Clear boundaries for data, decisions, and execution. | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [
+      {
+        "src": "/images/permissions.jpg",
+        "width": 405.125,
+        "height": 291.34375
+      }
+    ],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "privacy",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Privacy and data handling | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 314
+      },
+      {
+        "id": "",
+        "height": 346
+      },
+      {
+        "id": "",
+        "height": 346
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "terms",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "title": "Example usage terms | Agentnexos",
+    "dir": "ltr",
+    "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+    "images": [],
+    "brokenImages": 0,
+    "sections": [
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      },
+      {
+        "id": "",
+        "height": 250
+      }
+    ]
+  }
+]

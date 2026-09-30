@@ -1,0 +1,22 @@
+[
+  {
+    "locale": "ar",
+    "menuOpens": true,
+    "escapeCloses": true,
+    "agentNavigation": true,
+    "hiddenMenuTabbable": 10,
+    "agentBackground": "rgb(245, 243, 239)",
+    "sendDisabled": false,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "menuOpens": true,
+    "escapeCloses": true,
+    "agentNavigation": true,
+    "hiddenMenuTabbable": 10,
+    "agentBackground": "rgb(245, 243, 239)",
+    "sendDisabled": false,
+    "overflow": false
+  }
+]
