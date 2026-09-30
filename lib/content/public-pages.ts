@@ -67,7 +67,7 @@ export const publicPages = {
       "eyebrow": "الأمان والحوكمة",
       "title": "حدود واضحة للبيانات والقرارات والتنفيذ.",
       "intro": "نحدد ضوابط التشغيل مع المؤسسة قبل توصيل بياناتها أو منح أدواتها صلاحية التنفيذ. هذه متطلبات التصميم والتحقق، وليست شهادة امتثال.",
-      "notice": "مساحة المثال تستخدم بيانات افتراضية ولا تتصل بأنظمة المؤسسة. إتاحة التشغيل الفعلي تتطلب التحقق من الهوية والصلاحيات وحفظ القرارات.",
+      "notice": "التجربة العامة تصمم العمليات ببيانات افتراضية وأدوات قراءة محدودة. تنفيذ إجراءات المؤسسة يحتاج هوية موثقة وصلاحيات وعزلًا وموافقات محفوظة؛ هذه القدرات غير مفعلة هنا.",
       "cards": [
         [
           "هوية المستخدم وصلاحيات المؤسسة",
@@ -87,11 +87,11 @@ export const publicPages = {
         ],
         [
           "أدوات بصلاحيات محدودة",
-          "لكل أداة نطاق ومدخلات مسموحة ومهلة وحدود استخدام. تنفيذ الكود يحتاج بيئة معزولة، والوصول للشبكة يحتاج سياسة محددة."
+          "أدوات التجربة تتحقق من المدخلات عند التنفيذ وتلتزم بميزانية مشتركة للطلب. جلب المراجع مقصور على روابط رسمية محددة دون تحويلات. لا يوجد تنفيذ كود أو وصول لبيانات المؤسسة."
         ],
         [
           "اختبار الفشل والتعافي",
-          "نختبر انقطاع الخدمات وتكرار الطلبات والاستئناف ومحاولات الوصول غير المصرح به قبل اعتبار التشغيل جاهزًا."
+          "نختبر رفض الأدوات غير المصرح بها والحدود والإلغاء وفشل المصادر والتسجيل. التشغيل المؤسسي يحتاج أيضًا إثبات الاستئناف ومنع تكرار الأثر على النظام الفعلي."
         ]
       ]
     },
@@ -99,7 +99,7 @@ export const publicPages = {
       "eyebrow": "Security and governance",
       "title": "Clear boundaries for data, decisions, and execution.",
       "intro": "Define operating controls with the organization before connecting its data or granting execution permissions. These are design and verification requirements, not a compliance certification.",
-      "notice": "The example uses fictional data and does not connect to enterprise systems. Live operation requires verified identity, permissions, and durable decision records.",
+      "notice": "The public preview designs workflows with fictional data and bounded read tools. Enterprise actions require verified identity, scoped permissions, isolation, and persisted approvals; those capabilities are not enabled here.",
       "cards": [
         [
           "Identity and organization permissions",
@@ -119,11 +119,11 @@ export const publicPages = {
         ],
         [
           "Tools with limited permissions",
-          "Each tool needs a defined scope, validated inputs, timeout, and usage limits. Code execution requires isolation; network access requires an explicit policy."
+          "Preview tools validate inputs at execution and share a per-request budget. Reference retrieval uses fixed official URLs without redirects. There is no code execution or enterprise-data access."
         ],
         [
           "Failure and recovery testing",
-          "Test outages, duplicate requests, resumption, and unauthorized access before declaring the runtime ready."
+          "Test capability denial, limits, cancellation, source outages, and recording failures. Enterprise rollout also requires proven resumption and duplicate-effect prevention against the actual target system."
         ]
       ]
     }
@@ -151,7 +151,7 @@ export const publicPages = {
           "النماذج ومورّدو الخدمات",
           "Groq مزود معالجة نماذج التجربة. شروط المعالجة والاحتفاظ لديه تعتمد على الخطة والإعدادات والعقد؛ لا نقدّم وعدًا عامًا بعدم التدريب أو الاحتفاظ. جلب المراجع التقنية يتصل بمواقع رسمية محددة فقط."
         ],
-        ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لعنوان الاتصال ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز، دون نص الطلب أو الرد. يستخدم ذلك لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
+        ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لعنوان الاتصال ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز وقرارات سياسة الأدوات وتوقيت مراحل الطلب، دون نص الطلب أو الرد أو محتوى المراجع. يستخدم ذلك لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
         [
           "حدود هذا الإشعار",
           "هذا وصف للحالة الحالية وليس بديلًا عن اتفاق معالجة بيانات خاص بمشروع مؤسسي. قناة طلبات الخصوصية وبيانات الجهة المسؤولة تحتاج اعتماد المالك قبل استقبال بيانات العملاء."
@@ -180,7 +180,7 @@ export const publicPages = {
           "Models and service providers",
           "Groq processes the demo's model requests. Its processing and retention terms depend on the plan, configuration, and contract; no universal no-training or no-retention promise is made. Technical reference retrieval connects only to selected official sites."
         ],
-        ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the connection address, request time and status, model roles, and token usage—not prompt or response text—to prevent abuse. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
+        ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the connection address, request time and status, model roles, token usage, tool-policy decisions, and stage timing—not prompt or response text or reference content—to prevent abuse. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
         [
           "Scope of this notice",
           "This describes the current state and does not replace a project-specific data-processing agreement. Privacy contacts and controller details require owner approval before accepting customer data."

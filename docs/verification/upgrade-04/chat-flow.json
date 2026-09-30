@@ -1,0 +1,32 @@
+[
+  {
+    "locale": "ar",
+    "checks": [
+      "offline-send-denied",
+      "connection-recheck",
+      "nine-turns-context-bounded",
+      "markdown-table",
+      "invalid-phase-ignored",
+      "error-retry",
+      "cancel-warning",
+      "reset"
+    ],
+    "posts": 11,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "checks": [
+      "offline-send-denied",
+      "connection-recheck",
+      "nine-turns-context-bounded",
+      "markdown-table",
+      "invalid-phase-ignored",
+      "error-retry",
+      "cancel-warning",
+      "reset"
+    ],
+    "posts": 11,
+    "overflow": false
+  }
+]

@@ -2,13 +2,16 @@ import { createHmac } from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
 import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
 import { z } from "zod/v4";
+import { conversationText, contextLimits } from "@/lib/agents/context";
+import { demoPolicy } from "@/lib/agents/policy";
+import { createRunJournal } from "@/lib/agents/journal";
 import { runAgentWorkflow } from "@/lib/agents/workflow";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 180;
 
-const bodySchema = z.object({ locale: z.enum(["ar", "en"]), messages: z.array(z.object({ role: z.enum(["user", "assistant"]), parts: z.array(z.object({ type: z.literal("text"), text: z.string().max(4000) })).min(1).max(8) })).min(1).max(12) });
+const bodySchema = z.object({ locale: z.enum(["ar", "en"]), messages: z.array(z.object({ role: z.enum(["user", "assistant"]), parts: z.array(z.object({ type: z.literal("text"), text: z.string().max(contextLimits.messageCharacters) })).min(1).max(8) })).min(1).max(contextLimits.messages) });
 const headers = { "Cache-Control": "no-store" };
 function unavailable() { return Response.json({ code: "DEMO_NOT_READY" }, { status: 503, headers }); }
 function database() {
@@ -47,8 +50,8 @@ export async function POST(request: Request) {
   let parsed;
   try { parsed = bodySchema.safeParse(JSON.parse(raw)); } catch { return Response.json({ code: "INVALID_REQUEST" }, { status: 400, headers }); }
   if (!parsed.success || parsed.data.messages.at(-1)?.role !== "user") return Response.json({ code: "INVALID_REQUEST" }, { status: 400, headers });
-  const conversation = parsed.data.messages.map(m => `${m.role}: ${m.parts.map(p => p.text).join("\n")}`).join("\n\n");
-  if (conversation.length > 12000 || !parsed.data.messages.at(-1)?.parts.some(p => p.text.trim())) return Response.json({ code: "CONTEXT_LIMIT" }, { status: 400, headers });
+  const conversation = conversationText(parsed.data.messages);
+  if (conversation.length > contextLimits.characters || !parsed.data.messages.at(-1)?.parts.some(p => p.text.trim())) return Response.json({ code: "CONTEXT_LIMIT" }, { status: 400, headers });
   let db;
   try { db = database(); } catch { return unavailable(); }
   if (!db) return unavailable();
@@ -63,25 +66,40 @@ export async function POST(request: Request) {
     if (typeof data !== "string") return Response.json({ code: "DEMO_LIMIT" }, { status: 429, headers: { ...headers, "Retry-After": "30" } });
     runId = data;
   } catch { return unavailable(); }
-  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(150000)]);
+  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(demoPolicy.deadlineMs)]);
   const stream = createUIMessageStream({
     execute: async ({ writer }) => {
-      const stages: { role: string; model: string; tokens: number | undefined }[] = [];
-      const started = await db.client.from("agentnexos_demo_requests").update({ status: "running" }).eq("id", runId);
-      if (started.error) throw new Error("PERSISTENCE_UNAVAILABLE");
-      writer.write({ type: "start" });
-      writer.write({ type: "text-start", id: "answer" });
-      try { await runAgentWorkflow({ conversation, locale: parsed.data.locale, signal,
-        onPhase: index => writer.write({ type: "data-phase", data: { index }, transient: true }),
-        onText: delta => writer.write({ type: "text-delta", id: "answer", delta }),
-        onStage: stage => { stages.push(stage); },
+      const journal = createRunJournal(async events => {
+        const saved = await db.client.from("agentnexos_demo_requests")
+          .update({ stages: events }).eq("id", runId).select("id").single();
+        if (saved.error || !saved.data) throw new Error("PERSISTENCE_UNAVAILABLE");
       });
-      const saved = await db.client.from("agentnexos_demo_requests").update({ status: "completed", stages, completed_at: new Date().toISOString() }).eq("id", runId);
-      if (saved.error) throw new Error("PERSISTENCE_UNAVAILABLE");
-      writer.write({ type: "text-end", id: "answer" });
-      writer.write({ type: "finish" });
+      try {
+        signal.throwIfAborted();
+        const started = await db.client.from("agentnexos_demo_requests")
+          .update({ status: "running" }).eq("id", runId).select("id").single();
+        if (started.error || !started.data) throw new Error("PERSISTENCE_UNAVAILABLE");
+        writer.write({ type: "start" });
+        writer.write({ type: "text-start", id: "answer" });
+        await runAgentWorkflow({ conversation,
+          latestRequest: parsed.data.messages.at(-1)!.parts.map(part => part.text).join("\n"),
+          locale: parsed.data.locale, signal,
+          onPhase: index => writer.write({ type: "data-phase", data: { index }, transient: true }),
+          onText: delta => writer.write({ type: "text-delta", id: "answer", delta }),
+          onEvent: event => journal.append(event),
+        });
+        signal.throwIfAborted();
+        const saved = await db.client.from("agentnexos_demo_requests")
+          .update({ status: "completed", stages: journal.snapshot(), completed_at: new Date().toISOString() })
+          .eq("id", runId).select("id").single();
+        if (saved.error || !saved.data) throw new Error("PERSISTENCE_UNAVAILABLE");
+        writer.write({ type: "text-end", id: "answer" });
+        writer.write({ type: "finish" });
       } catch (error) {
-        await db.client.from("agentnexos_demo_requests").update({ status: signal.aborted ? "cancelled" : "failed", stages, completed_at: new Date().toISOString() }).eq("id", runId);
+        // Best-effort terminal status. A failed save never becomes a success response.
+        await db.client.from("agentnexos_demo_requests")
+          .update({ status: signal.aborted ? "cancelled" : "failed", stages: journal.snapshot(), completed_at: new Date().toISOString() })
+          .eq("id", runId);
         throw error;
       }
     },

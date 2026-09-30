@@ -11,15 +11,14 @@ type Metric = {
   label: string;
 };
 
-// Live counters read from real state only. Until the agent console ships there is
-// no traffic, so these render honest zeros rather than fabricated sample values.
+// Acceptance dimensions, not live counters. No connected production measurements.
 const metrics: Metric[] = [
   { 
-    value: 0,
+    value: undefined,
     suffix: "",
     prefix: "",
     labelKey: "metrics.m1",
-    label: "Verified production runs",
+    label: "Verified task completion",
   },
   { 
     labelKey: "metrics.m2",
@@ -255,19 +254,19 @@ export function MetricsSection() {
             <div className="flex items-center gap-4 mb-6">
               <span className="flex items-center gap-2 px-3 py-1 bg-[#eca8d6]/10 text-[#eca8d6] text-xs font-mono">
                 <span className="w-2 h-2 rounded-full bg-[#eca8d6] animate-pulse" />
-                {t("metrics.live", "LIVE")}
+                {t("metrics.live", "EVALUATION")}
               </span>
               <span className="text-sm font-mono text-muted-foreground">
-                {time ? `${time.toLocaleTimeString("en-GB")} UTC` : ""}
+                {time ? `${time.toLocaleTimeString("en-GB", { timeZone: "UTC" })} UTC` : ""}
               </span>
             </div>
 
             <h2 className={`text-6xl md:text-7xl lg:text-[140px] font-display tracking-tight leading-[0.95] transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              {t("metrics.realtime", "Real-time")}
+              {t("metrics.realtime", "Define your")}
               <br />
-              <span className="text-muted-foreground">{t("metrics.title", "workflow success metrics.")}</span>
+              <span className="text-muted-foreground">{t("metrics.title", "acceptance criteria.")}</span>
             </h2>
           </div>
         </div>
@@ -291,13 +290,13 @@ export function MetricsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}>
             <div className="text-4xl md:text-5xl lg:text-6xl font-display tracking-tight mb-4 whitespace-nowrap overflow-hidden">
-              <AnimatedNumber end={metrics[0].value ?? 0} suffix={metrics[0].suffix} prefix={metrics[0].prefix} />
+              {typeof metrics[0].value === "number" ? <AnimatedNumber end={metrics[0].value} suffix={metrics[0].suffix} prefix={metrics[0].prefix} /> : "—"}
             </div>
             <div className="mb-6">
               <DotGraph color="white" height={36} freq1={0.28} freq2={0.09} freqT={0.5} speed={0.018} baseline={0.35} amplitude={0.55} />
             </div>
             <div className="text-lg text-foreground mb-2">{t(metrics[0].labelKey, metrics[0].label)}</div>
-            <div className="text-sm text-muted-foreground font-mono">{t("metrics.m1.sub", "in the pilot workspace")}</div>
+            <div className="text-sm text-muted-foreground font-mono">{t("metrics.m1.sub", "Requires a measured pilot baseline")}</div>
           </div>
 
           {/* Metrics */}

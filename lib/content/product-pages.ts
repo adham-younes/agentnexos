@@ -2,11 +2,11 @@ export const productPages = {
   platform: {
     ar: {
       eyebrow: "من المشكلة إلى نظام قابل للتشغيل", title: "المعرفة والأدوات والقرارات، في سير عمل واحد.",
-      intro: "النظام الوكيل ليس نموذجًا واحدًا يعرف كل شيء. إنه توزيع واضح للأدوار بين التحليل والتخطيط والمراجعة، ومحرك يضبط متى تقرأ الأدوات ومتى تتوقف لقرار الإنسان.",
+      intro: "النظام الوكيل ليس نموذجًا واحدًا يعرف كل شيء. إنه مسار يبدأ بهدف ومالك للعملية، ويستدعي التحليل والتخطيط والمراجعة بقدر الحاجة. يحدد النظام صلاحيات الأدوات، بينما يبقى اعتماد القرارات للمسؤول عنها.",
       notice: "مساحة الوكيل مخصصة لاستكشاف تصميم العمليات. ربط أنظمة المؤسسة وحفظ التشغيل والموافقات يحتاج إعدادًا واختبارات خاصة بكل مشروع؛ لا نقدمه كقدرة عامة جاهزة.",
       cards: [
         ["01 · فهم العملية", "حدد الطلب الذي يبدأ العمل، ومالك العملية، ومصدر الحقيقة، وما الذي يعنيه النجاح. نميز المشكلة التشغيلية عن الرغبة في إضافة ذكاء اصطناعي.", "المخرج: وصف عملية وحدود واضحة وأسئلة للبيانات الناقصة."],
-        ["02 · توزيع الأدوار", "محلل يفهم الهدف، مخطط يحدد الخطوات والأدوات، ومراجع يختبر الافتراضات والنتيجة. الحالة والصلاحيات يملكها النظام، لا رأي النموذج.", "المخرج: خطة عمل قابلة للمراجعة، لا محادثة مفتوحة بلا مسؤولية."],
+        ["02 · توزيع الأدوار", "تُختار الأدوار حسب الطلب: رد مباشر للسؤال البسيط، وتخطيط ومراجعة للحساب، وتحليل إضافي لتصميم العملية. الحالة والصلاحيات يملكها النظام، لا رأي النموذج.", "المخرج: خطة عمل قابلة للمراجعة، لا محادثة مفتوحة بلا مسؤولية."],
         ["03 · معرفة مصرح بها", "اختر المستندات والسياسات والسجلات المسموح باسترجاعها. تربط الإجابة بالمصدر وتوضح عندما تكون المعلومات غير كافية.", "المطلوب: ملكية المصادر وسياسة تحديث وصلاحيات وصول قبل الربط."],
         ["04 · أدوات بحدود", "لكل أداة مدخلات ومخرجات ونطاق اتصال وحد زمني. تبدأ الأدوات بالقراءة، وتبقى الكتابة مغلقة حتى يثبت التفويض والتحقق من الأثر.", "المطلوب: حساب خدمة محدود الصلاحية واختبارات فشل وتكرار."],
         ["05 · قرارات بشرية", "الموافقة تربط الفعل بمعلماته وصاحب القرار وانتهاء الصلاحية. التعديل على الطلب يلغي الموافقة القديمة بدل استخدامها لعمل مختلف.", "المطلوب: حفظ دائم واستئناف موثق قبل تنفيذ أي فعل حساس."],
@@ -15,11 +15,11 @@ export const productPages = {
     },
     en: {
       eyebrow: "From operating problem to deployable system", title: "Knowledge, tools, and decisions. One workflow.",
-      intro: "An agent system is not one model that knows everything. It assigns analysis, planning, and review roles while a workflow engine controls when tools read and when a human decision is required.",
+      intro: "An agent system is not one model that knows everything. It starts with a goal and an accountable process owner, then uses analysis, planning, and review as needed. The system controls tool permissions while accountable people approve decisions.",
       notice: "The workspace explores workflow design. Enterprise connections, durable execution, and approvals require project-specific setup and tests; they are not advertised as generally available capabilities.",
       cards: [
         ["01 · Understand the process", "Define the triggering request, process owner, source of truth, and success criteria. Separate an operating problem from the desire to add AI.", "Output: a bounded process description and questions about missing data."],
-        ["02 · Assign clear roles", "An analyst understands the goal, a planner defines steps and tools, and a reviewer checks assumptions and results. The system owns state and permissions, not the model's opinion.", "Output: a reviewable workflow, not an unbounded conversation."],
+        ["02 · Assign clear roles", "Select roles by request: a direct response for a simple question, planning and review for calculations, and additional analysis for workflow design. The system owns state and permissions, not the model's opinion.", "Output: a reviewable workflow, not an unbounded conversation."],
         ["03 · Permission-aware knowledge", "Select the documents, policies, and records permitted for retrieval. Connect answers to sources and disclose insufficient information.", "Requires: source ownership, refresh policy, and access boundaries before connection."],
         ["04 · Bounded tools", "Each tool has inputs, outputs, network scope, and a timeout. Start with reading; keep writing closed until authorization and effect verification are proven.", "Requires: scoped service accounts and failure and duplicate-action tests."],
         ["05 · Human decisions", "Approval binds an action to its parameters, decision owner, and expiry. Changing a request invalidates the old approval rather than reusing it for another action.", "Requires: durable storage and authenticated resumption before sensitive execution."],
@@ -54,22 +54,26 @@ export const productPages = {
   resources: {
     ar: {
       eyebrow: "أدلة عملية قبل البناء", title: "اسأل الأسئلة الصحيحة قبل أن تمنح الوكيل أداة.",
-      intro: "ثلاثة أدلة مختصرة تساعد فريق العمليات والتقنية على اختيار أول عملية، تحديد حدود التكامل، وتجهيز اختبار قبول له معنى تجاري.",
+      intro: "أدلة مختصرة تساعد فريق العمليات والتقنية على اختيار أول عملية، تحديد حدود التكامل، وتجهيز اختبار قبول له معنى تجاري.",
       notice: "هذه إرشادات تصميم عامة. ليست بديلًا عن سياسة المؤسسة أو مراجعة الأمان أو التحقق القانوني الخاص بالمشروع.",
       cards: [
         ["اختيار أول عملية", "اختر مهمة متكررة لها مدخلات واضحة ومالك محدد ونتيجة يمكن فحصها. ابدأ بحجم صغير من حالات افتراضية، ثم بيانات مصرح بها.", "اسأل: أين يضيع الوقت؟ كم مرة تتكرر المهمة؟ ما الاستثناء الذي يتطلب مسؤولًا؟", "تجنب البداية بعملية مالية نهائية أو صلاحيات واسعة يصعب التراجع عنها."],
         ["قائمة تجهيز التكامل", "سجل النظام المسؤول عن الحقيقة، وما يسمح بقراءته، ومن يملك حساب الخدمة، وكيف نثبت أن الفعل وصل للنظام النهائي.", "اسأل: هل توجد API؟ ما حدود المعدل؟ كيف نحفظ المعرفات ونتجنب تنفيذ الطلب مرتين؟", "موافقة الإنسان لا تعوض حساب خدمة واسع الصلاحيات أو أداة غير محدودة."],
         ["اختبار القبول", "اكتب حالات نجاح وفشل وبيانات ناقصة وانقطاع اتصال وطلب غير مصرح به. عيّن النتيجة المتوقعة لكل حالة قبل اختبار النموذج.", "قِس: اكتمال المهمة وصحة الأدلة وتدخل المسؤول وزمن الإنجاز، لا جمال الرد فقط.", "لا توسع التشغيل قبل نجاح الحالات وتوثيق طريقة التعافي."],
+        ["درّج صلاحية التنفيذ", "ابدأ بالقراءة وتجهيز المسودات. افصل اقتراح النموذج عن الإذن باستخدام الأداة، وحدد من يعتمد الرسائل والمدفوعات والحذف.", "اسأل: ما أقل صلاحية لازمة؟ هل تتغير الموافقة عند تغيير المعلمات؟ وكيف نوقف تشغيلًا تجاوز حدوده؟", "التجربة العامة للقراءة والتصميم فقط؛ صلاحيات المؤسسة لا تُستمد من نص المحادثة."],
+        ["خطط للتعافي قبل الإطلاق", "ميّز بين تاريخ المحادثة وحالة التنفيذ ودليل النتيجة. قبل كتابة خارجية، حدد كيف تعرف ما تم بالفعل عند انقطاع الاتصال.", "اسأل: هل للفعل معرّف ثابت؟ كيف نكشف التكرار؟ ومتى نتحقق من النظام المتصل بدل إعادة المحاولة؟", "الاستئناف والذاكرة المؤسسية والعزل متطلبات لنشر المؤسسة، وليست قدرات مفعلة في التجربة."],
       ],
     },
     en: {
       eyebrow: "Practical guides before building", title: "Ask the right questions before giving an agent a tool.",
-      intro: "Three concise guides help operations and engineering choose the first workflow, define integration boundaries, and prepare acceptance tests with business meaning.",
+      intro: "Concise guides help operations and engineering choose the first workflow, define integration boundaries, and prepare acceptance tests with business meaning.",
       notice: "General design guidance, not a substitute for organizational policy, security review, or project-specific legal verification.",
       cards: [
         ["Choose the first workflow", "Pick a recurring task with clear inputs, an accountable owner, and a verifiable result. Start with a small fictional test set, then authorized data.", "Ask: where does time go, how often does the task recur, and which exceptions need an owner?", "Avoid starting with final financial actions or broad permissions that are difficult to reverse."],
         ["Prepare the integration", "Record the system of truth, permitted reads, service-account owner, and how to verify the action reached the target system.", "Ask: is an API available, what are its rate limits, and how do we preserve identifiers and prevent duplicate execution?", "Human approval does not compensate for an overpowered service account or an unbounded tool."],
         ["Define acceptance", "Write success, failure, missing-data, outage, and unauthorized-request cases. Set expected results before testing the model.", "Measure completion, evidence accuracy, owner intervention, and cycle time—not just response quality.", "Do not expand operation before these cases pass and recovery is documented."],
+        ["Graduate execution permissions", "Start with reading and drafts. Separate the model's proposal from tool authorization and identify who approves messages, payments, and deletion.", "Ask: what is the minimum permission, does a parameter change invalidate approval, and how do we stop a run that exceeds its limits?", "The public preview only reads and designs; enterprise permissions never come from conversation text."],
+        ["Plan recovery before launch", "Separate conversation history, execution state, and result evidence. Before external writes, define how to determine what committed when a connection fails.", "Ask: does the action have a stable identifier, how do we detect duplicates, and when do we reconcile with the target system instead of retrying?", "Resumption, enterprise memory, and isolation are deployment requirements, not enabled preview capabilities."],
       ],
     },
   },

@@ -1,3 +1,5 @@
+Current comprehensive upgrade: read `docs/COMPREHENSIVE-UPGRADE-2026-09-30.md` and current UPGRADE reports first. The owner's latest request explicitly authorizes successive automated whole-app stages, preserving the template, images and colors, with independent verified production publication per stage. This supersedes earlier one-stage-per-request restrictions. It does not authorize fabricating runtime capabilities, secret export, unrelated databases or bypassing branch protections.
+
 # Agentnexos — Project Rules
 
 Current repair: read `docs/REPAIR-PLAN-2026-09-30.md` and `docs/phases/REPAIR-01-2026-09-30.md` before continuing. They record the owner-requested repair scope and observed state. Historical phase completion claims are not evidence of live capabilities.
