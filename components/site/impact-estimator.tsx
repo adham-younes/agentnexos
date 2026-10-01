@@ -1,0 +1,11 @@
+"use client";
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import type { Locale } from '@/lib/i18n/config';
+export function ImpactEstimator({locale}:{locale:Locale}){
+ const ar=locale==='ar';const [items,setItems]=useState(''),[minutes,setMinutes]=useState('');
+ const n=Number(items),m=Number(minutes);const valid=items!==''&&minutes!==''&&Number.isFinite(n)&&Number.isInteger(n)&&n>=0&&n<=1000000&&Number.isFinite(m)&&m>=0&&m<=10080;
+ const format=new Intl.NumberFormat(ar?'ar-EG':'en-GB',{maximumFractionDigits:2});
+ return <section className="mt-12 rounded-2xl border border-border bg-card p-6 sm:p-8"><h2 className="text-2xl font-semibold">{ar?'احسب حجم العمل الحالي':'Estimate the current workload'}</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{ar?'أدخل عدد الحالات وزمن العمل النشط لكل حالة خلال الفترة نفسها. الحساب محلي ولا تُرسل المدخلات إلى خادم.':'Enter case volume and active work per case for the same period. Calculation is local; inputs are not sent to a server.'}</p><div className="mt-7 grid gap-6 sm:grid-cols-2"><div><Label htmlFor="impact-items">{ar?'عدد الحالات في الفترة':'Cases in the period'}</Label><Input id="impact-items" type="number" min="0" max="1000000" step="1" value={items} onChange={e=>setItems(e.target.value)} className="mt-3 min-h-12"/></div><div><Label htmlFor="impact-minutes">{ar?'دقائق العمل النشط للحالة':'Active minutes per case'}</Label><Input id="impact-minutes" type="number" min="0" max="10080" step="any" value={minutes} onChange={e=>setMinutes(e.target.value)} className="mt-3 min-h-12"/></div></div><output aria-live="polite" className="mt-8 block border-t border-border pt-6 text-lg font-medium">{valid?(ar?`${format.format(n*m/60)} ساعة عمل نشط في الفترة`:`${format.format(n*m/60)} active work hours in the period`):(ar?'أدخل أرقامًا صحيحة لحساب خط الأساس.':'Enter valid values to calculate the baseline.')}</output><p className="mt-3 text-sm leading-7 text-muted-foreground">{ar?'هذا حجم عمل محسوب من افتراضاتك، وليس وفرًا متحققًا أو توقعًا لأداء الوكيل. لا يتحول الوقت المتاح تلقائيًا إلى وفر نقدي.':'This workload is calculated from your assumptions. It is not demonstrated savings or an agent-performance forecast. Available time does not automatically become cash savings.'}</p></section>;
+}

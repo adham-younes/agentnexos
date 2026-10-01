@@ -1,0 +1,326 @@
+[
+  {
+    "slug": "distribution",
+    "ar": {
+      "title": "التوزيع وتجارة الجملة",
+      "paragraphs": [
+        "حافظ على اتساق الطلبات والعروض والمخزون بين الفروع.",
+        "في شركات التوزيع، يتزامن ضغط المبيعات مع تغير أسعار الموردين وتفاوت توافر الأصناف وشروط العملاء. تتراكم المقارنات والمتابعات، وقد تتأخر الفروع في معرفة تغيير موعد تسليم أو كمية مؤكدة.",
+        "يمكن بناء مسارات لمراجعة تأكيدات الموردين، ومطابقة بياناتها بأوامر الشراء، وفرز طلبات العملاء، وتجهيز بدائل الأصناف وفق السياسة. يظهر الاستثناء لمسؤول المشتريات أو المبيعات مع أثره على الطلبات المتأثرة.",
+        "سيناريو البداية: قراءة تأكيدات الموردين ومقارنتها بأوامر الشراء، ثم إحالة فروق السعر والكمية والموعد.",
+        "الأنظمة المرجعية: ERP، سجلات الأصناف، مخزون الفروع، البريد ومستندات الشراء.",
+        "ما يظل لدى الإدارة: اعتماد المورد البديل، التنازل التجاري، حدود الائتمان، وتغيير شروط البيع.",
+        "القياس: زمن إدخال التأكيد، صحة المطابقة، وسرعة إظهار الفروق للفريق."
+      ]
+    },
+    "en": {
+      "title": "Distribution and wholesale",
+      "paragraphs": [
+        "Keep orders, quotes and inventory consistent across branches.",
+        "Sales pressure coincides with changing supplier prices, stock availability and customer terms. Branches may learn too late about a changed delivery date or confirmed quantity.",
+        "Proposed workflows review supplier confirmations, match purchase orders, classify customer requests and prepare policy-compliant alternatives. Purchasing or sales sees the exception and affected orders.",
+        "Starting scenario: Read supplier confirmations, compare them with purchase orders and route price, quantity and date differences.",
+        "Reference systems: ERP, item registers, branch inventory, email and purchasing documents.",
+        "Human responsibility: Management approves alternative suppliers, commercial concessions, credit limits and sales-term changes.",
+        "Evaluation: Confirmation-entry time, matching accuracy and time to surface differences."
+      ]
+    }
+  },
+  {
+    "slug": "retail",
+    "ar": {
+      "title": "التجزئة والتجارة الإلكترونية",
+      "paragraphs": [
+        "اربط تجربة العميل بحقيقة الطلب وقدرة التشغيل.",
+        "تتوزع الطلبات بين المتجر والمستودع وشركة الشحن والدعم. وعند حدوث تأخير أو إرجاع، يحتاج الموظف إلى جمع معلومات من أكثر من شاشة قبل أن يقدم إجابة دقيقة.",
+        "يمكن تصميم وكيل خدمة مرتبط بحالة الطلب وسياسة الإرجاع، ومسار داخلي لمتابعة حالات التسليم المتأخر والتلف واختلاف الأصناف. يجهز النظام الخيارات المتاحة، ويقترح الإجراء المناسب، ويتحقق من تنفيذه عبر التكامل المصرح به.",
+        "سيناريو البداية: فرز طلبات الإرجاع وتجهيز مستنداتها وتوجيه الحالات غير المعتادة.",
+        "الأنظمة المرجعية: منصة التجارة، OMS، WMS، خدمة الشحن وCRM.",
+        "ما يظل لدى الإدارة: الاستثناءات التجارية والتعويضات خارج السياسة وحالات الاشتباه.",
+        "القياس: زمن حل الطلب، الإحالات المتكررة، وصحة تطبيق سياسة الإرجاع."
+      ]
+    },
+    "en": {
+      "title": "Retail and e-commerce",
+      "paragraphs": [
+        "Connect the customer experience to actual order status.",
+        "Orders span the storefront, warehouse, carrier and support. Staff gather information across several screens before explaining a delay or return.",
+        "A proposed service workflow uses order status and returns policy. Internal coordination covers delays, damage and incorrect items, preparing options and verifying authorized integration outcomes.",
+        "Starting scenario: Classify returns, prepare their documents and route unusual cases.",
+        "Reference systems: Commerce platform, OMS, WMS, carrier service and CRM.",
+        "Human responsibility: Management handles commercial exceptions, compensation outside policy and suspected misuse.",
+        "Evaluation: Resolution time, repeated handoffs and correct application of returns policy."
+      ]
+    }
+  },
+  {
+    "slug": "manufacturing",
+    "ar": {
+      "title": "التصنيع",
+      "paragraphs": [
+        "اجمع بيانات التشغيل والجودة في ملف يساعد الفريق على التصرف.",
+        "تؤثر مشكلة توريد أو مادة بديلة أو انحراف جودة على أكثر من إدارة. يحتاج الفريق إلى المواصفات وسجل المورد ونتائج الفحص وإجراءات التشغيل قبل تحديد الخطوة التالية.",
+        "يمكن بناء حلول لتجميع ملف الانحراف، واسترجاع سوابق موثقة، ومتابعة الإجراءات التصحيحية والوقائية، ومراجعة طلبات قطع الغيار. تُربط كل توصية بالمستندات والبيانات التي تستند إليها.",
+        "سيناريو البداية: إعداد ملف أولي لانحراف جودة مع مستنداته وأسئلة التحقيق الناقصة.",
+        "الأنظمة المرجعية: ERP، QMS، MES، الصيانة ومستودع المواصفات.",
+        "ما يظل لدى المختصين: تحديد السبب النهائي، اعتماد CAPA، الإفراج عن المنتج، وأي قرار يمس سلامة المصنع. التحكم المباشر في المعدات نطاق مستقل.",
+        "القياس: اكتمال ملف التحقيق، زمن جمع الأدلة، وصحة المراجع."
+      ]
+    },
+    "en": {
+      "title": "Manufacturing",
+      "paragraphs": [
+        "Bring operations and quality evidence into a usable case file.",
+        "Supply problems, substitute materials and quality deviations affect several teams. Staff need specifications, supplier history, inspection results and operating procedures.",
+        "Proposed workflows assemble deviation packets, retrieve documented precedents, track corrective and preventive actions and review spare-part requests. Recommendations reference their evidence.",
+        "Starting scenario: Prepare an initial quality-deviation packet with documents and missing investigation questions.",
+        "Reference systems: ERP, QMS, MES, maintenance systems and specification repositories.",
+        "Human responsibility: Specialists determine root cause, approve CAPA and product release, and decide factory-safety matters. Direct equipment control is a separate scope.",
+        "Evaluation: Investigation completeness, evidence-gathering time and reference accuracy."
+      ]
+    }
+  },
+  {
+    "slug": "logistics",
+    "ar": {
+      "title": "اللوجستيات وسلاسل الإمداد",
+      "paragraphs": [
+        "تعامل مع الاستثناء قبل أن يتضاعف أثره على التسليم.",
+        "تصل معلومات الشحنة من الناقل والعميل والمستودع والمستندات. قد يتغير موعدها أو ينقص مستند مهم بينما تظل الجهات المعنية تعمل على تصور قديم للحالة.",
+        "يساعد الحل المقترح في توحيد ملف الشحنة، ومطابقة المستندات، وتحديد حالات التأخير أو النقص، وتجهيز خيارات التصعيد والمتابعة. يوضح النظام مصدر كل حالة وتاريخ تحديثها، ويربطها بالطلب المتأثر.",
+        "سيناريو البداية: فرز الشحنات المتأخرة وتجهيز ملف متابعة يتضمن السبب والمستندات والمسؤول.",
+        "الأنظمة المرجعية: TMS، WMS، ERP، بوابات الناقلين والبريد.",
+        "ما يظل لدى المسؤول: تعديل المسار أو الالتزام بموعد جديد أو تكلفة إضافية. تُراجع التصنيفات والإقرارات النظامية لدى المختص.",
+        "القياس: زمن اكتشاف الاستثناء، اكتمال مستندات الشحنة، وزمن إسناد الحالة."
+      ]
+    },
+    "en": {
+      "title": "Logistics and supply chains",
+      "paragraphs": [
+        "Address exceptions before they compound delivery impact.",
+        "Shipment updates arrive from carriers, customers, warehouses and documents. Dates change or paperwork is missing while teams still rely on an old status.",
+        "A proposed workflow consolidates shipment files, checks documents, detects delays or missing items and prepares escalation options. Every status has a source and update time and links to the affected order.",
+        "Starting scenario: Classify late shipments and prepare a follow-up packet with cause, documents and owner.",
+        "Reference systems: TMS, WMS, ERP, carrier portals and email.",
+        "Human responsibility: Owners approve route changes, new delivery commitments and extra cost. Specialists review regulatory classifications and declarations.",
+        "Evaluation: Exception-detection time, shipment-document completeness and assignment time."
+      ]
+    }
+  },
+  {
+    "slug": "construction",
+    "ar": {
+      "title": "المقاولات والمشروعات",
+      "paragraphs": [
+        "حافظ على ارتباط المراسلات والتغييرات والمستخلصات بسياق المشروع.",
+        "تنتج المشروعات عددًا كبيرًا من المراسلات وطلبات المعلومات والاعتمادات والتغييرات. يصعب تتبع النسخة المعتمدة وأثر التأخير عندما تتوزع الملفات بين الموقع والإدارة والمقاولين.",
+        "يمكن تطوير مسارات لتجهيز ملفات RFI، وتصنيف المراسلات، وربط طلبات التغيير بالعقد والمستندات المؤيدة، والتحقق من اكتمال المستخلص قبل المراجعة. تظهر المواعيد والمسؤوليات والعناصر الناقصة في سجل واحد.",
+        "سيناريو البداية: مراجعة اكتمال ملفات المستخلصات وإحالتها للمختص مع قائمة النواقص.",
+        "الأنظمة المرجعية: إدارة المستندات، ERP، برنامج المشروعات والعقود.",
+        "ما يظل لدى المختصين: اعتماد الكميات والمواصفات والمطالبات والأوامر التغييرية.",
+        "القياس: زمن تجهيز الملف، إعادة التقديم بسبب النقص، وتتبع نسخة المستند المعتمد."
+      ]
+    },
+    "en": {
+      "title": "Construction and projects",
+      "paragraphs": [
+        "Keep correspondence, changes and valuations connected to the project.",
+        "Projects produce large volumes of correspondence, RFIs, approvals and changes. Distributed files obscure approved versions and delay impact.",
+        "Proposed workflows prepare RFI packets, classify correspondence, link changes to contracts and evidence, and check valuation completeness. Deadlines, owners and missing items remain visible.",
+        "Starting scenario: Check valuation-packet completeness and route missing-item lists to specialists.",
+        "Reference systems: Document management, ERP, project software and contracts.",
+        "Human responsibility: Specialists approve quantities, specifications, claims and variation orders.",
+        "Evaluation: Preparation time, resubmissions due to missing information and approved-version tracking."
+      ]
+    }
+  },
+  {
+    "slug": "facilities",
+    "ar": {
+      "title": "العقارات وإدارة المرافق",
+      "paragraphs": [
+        "اربط بلاغ الخدمة بالأصل والعقد والجهة المسؤولة.",
+        "تحتاج فرق المرافق إلى فهم البلاغ وتاريخ الأصل وعقد الصيانة وتوافر المورد. وقد يفصل سجل خدمة المستأجر عن متابعة المقاول واعتماد التكلفة.",
+        "يمكن بناء نظام يستقبل البلاغ، ويجمع بياناته، ويصنفه وفق قواعد المؤسسة، ويربطه بالأصل والعقد، ويجهز أمر عمل للمراجعة. يتابع التنفيذ والمستندات وصور الإنجاز وملاحظات المستفيد.",
+        "سيناريو البداية: فرز بلاغات الصيانة ومراجعة اكتمالها ومتابعة إسنادها.",
+        "الأنظمة المرجعية: CAFM أو CMMS، إدارة العقارات، العقود وCRM.",
+        "ما يظل لدى المسؤول: الطوارئ، الأعمال ذات الأثر على السلامة، وتكاليف تتجاوز التفويض. لا يحل التصنيف الآلي محل قنوات الطوارئ.",
+        "القياس: زمن الإسناد، إعادة فتح البلاغ، واكتمال دليل الإنجاز."
+      ]
+    },
+    "en": {
+      "title": "Real estate and facilities",
+      "paragraphs": [
+        "Connect a service request to its asset, contract and owner.",
+        "Facilities staff need the issue, asset history, maintenance contract and supplier availability. Tenant service records may be separated from contractor follow-up and cost approval.",
+        "A proposed workflow collects request details, classifies them under policy, connects assets and contracts, and prepares work orders for review. It tracks documents, completion photographs and user feedback.",
+        "Starting scenario: Classify maintenance reports, check completeness and track assignment.",
+        "Reference systems: CAFM or CMMS, property management, contracts and CRM.",
+        "Human responsibility: Owners handle emergencies, safety-sensitive work and costs beyond delegation. Automated classification does not replace emergency channels.",
+        "Evaluation: Assignment time, reopened reports and completion-evidence quality."
+      ]
+    }
+  },
+  {
+    "slug": "financial-services",
+    "ar": {
+      "title": "الخدمات المالية",
+      "paragraphs": [
+        "ملفات تشغيل ومراجعة أوضح في بيئة تتطلب ضبطًا عاليًا.",
+        "تتداخل بيانات العملاء والسياسات والمستندات والإجراءات الرقابية. يحتاج الموظف إلى سياق كامل ومراجع سارية قبل أن يراجع حالة أو يصعّدها.",
+        "تبدأ الاستخدامات المقترحة من أعمال يمكن تحديد حدودها: استرجاع السياسات، فحص اكتمال الملفات، إعداد قوائم المراجعة، وتجهيز ملخصات وقائع مرتبطة بالمصادر. تحدد المؤسسة نطاق الاطلاع والكتابة والاحتفاظ قبل أي تجربة.",
+        "سيناريو البداية: مساعد معرفة للسياسات والإجراءات أو فحص اكتمال مستندات عملية محددة.",
+        "الأنظمة المرجعية: إدارة المستندات، أنظمة الحالات، السياسات والهوية المؤسسية.",
+        "ما يظل لدى الجهة المخولة: منح الائتمان، أهلية العميل، القرارات الرقابية والمدفوعات. يتطلب كل منها تقييمًا مستقلًا وضوابط القطاع.",
+        "القياس: صحة المرجع، اكتمال الملف، واحترام حدود الوصول."
+      ]
+    },
+    "en": {
+      "title": "Financial services",
+      "paragraphs": [
+        "Clearer operating and review files in a tightly controlled environment.",
+        "Customer records, policies, documents and controls overlap. Staff need complete context and current references to review or escalate a case.",
+        "Proposed starting points include policy retrieval, completeness checks, checklists and source-linked factual summaries. The institution defines access, writes and retention before any pilot.",
+        "Starting scenario: A policy and procedure knowledge assistant, or document-completeness review for one process.",
+        "Reference systems: Document management, case systems, policies and enterprise identity.",
+        "Human responsibility: Authorized teams retain credit, eligibility, regulatory and payment decisions. Each requires independent evaluation and sector controls.",
+        "Evaluation: Reference accuracy, file completeness and access-boundary compliance."
+      ]
+    }
+  },
+  {
+    "slug": "insurance",
+    "ar": {
+      "title": "التأمين",
+      "paragraphs": [
+        "مطالبات أكثر تنظيمًا ومراجعة تستند إلى ملف متكامل.",
+        "قد تصل المطالبة بصور وتقارير وفواتير ومراسلات متفرقة، ويقضي المراجع وقتًا في جمع الوقائع وتحديد المستندات الناقصة والرجوع إلى الوثيقة.",
+        "يمكن تصميم حل يرتب ملف المطالبة، ويستخرج البيانات، ويحدد النواقص، ويربط عناصرها بشروط الوثيقة. يجهز ملخصًا للمراجع ويعرض التعارضات والبيانات غير المؤكدة.",
+        "سيناريو البداية: تجهيز المطالبة للمراجعة والتحقق من اكتمالها.",
+        "الأنظمة المرجعية: إدارة المطالبات والوثائق، إدارة المستندات وقنوات الخدمة.",
+        "ما يظل لدى المختص: تفسير التغطية، رفض المطالبة، تقرير التعويض، والفصل في الاعتراض. تُعامل مؤشرات الاشتباه بوصفها إشارات تستلزم التحقيق.",
+        "القياس: زمن تجهيز المطالبة، جودة استخراج الحقول، وإعادة طلب المستندات."
+      ]
+    },
+    "en": {
+      "title": "Insurance",
+      "paragraphs": [
+        "Organized claims backed by a complete review packet.",
+        "Claims arrive as photographs, reports, invoices and scattered messages. Reviewers gather facts, identify missing documents and consult the policy.",
+        "A proposed workflow organizes the claim, extracts fields, identifies gaps and links facts to policy terms. It prepares a summary with conflicts and unverified data visible.",
+        "Starting scenario: Prepare a claim for review and check completeness.",
+        "Reference systems: Claims and policy systems, document management and service channels.",
+        "Human responsibility: Specialists interpret coverage, reject claims, determine compensation and resolve appeals. Suspicion indicators require investigation.",
+        "Evaluation: Claim-preparation time, field-extraction quality and repeat document requests."
+      ]
+    }
+  },
+  {
+    "slug": "healthcare",
+    "ar": {
+      "title": "الرعاية الصحية",
+      "paragraphs": [
+        "تنسيق إداري أفضل حول رحلة المريض.",
+        "تحتاج إجراءات المواعيد والموافقات والفوترة إلى مستندات ومعلومات موزعة بين وحدات متعددة. يؤدي النقص إلى اتصالات متكررة وتأخير في معالجة الطلب الإداري.",
+        "يمكن تطوير استخدامات إدارية محددة مثل فحص اكتمال ملف موافقة تأمينية، ومتابعة المستندات، واسترجاع سياسات التشغيل، وتجهيز حالات الفوترة للمراجعة. تُحدد صلاحيات الاطلاع على البيانات الصحية بدقة، وتُطبق متطلبات القطاع والدولة.",
+        "سيناريو البداية: مراجعة اكتمال ملف إداري وتجهيز قائمة النواقص للموظف.",
+        "الأنظمة المرجعية: نظام إدارة المنشأة، الفوترة والتأمين وإدارة المستندات حسب التكامل المتاح.",
+        "ما يظل لدى المختص: التشخيص والعلاج والأولوية السريرية والقرار الطبي. تحتاج الاستخدامات السريرية مسارًا مستقلًا من التحقق والاعتماد.",
+        "القياس: اكتمال الملف، زمن المتابعة، ودقة الوصول المصرح به."
+      ]
+    },
+    "en": {
+      "title": "Healthcare",
+      "paragraphs": [
+        "Better administrative coordination around the patient journey.",
+        "Appointments, authorizations and billing depend on documents across several units. Missing information causes repeated calls and administrative delay.",
+        "Proposed administrative uses check insurance-authorization files, follow up documents, retrieve operating policies and prepare billing cases. Health-data access and local sector requirements must be defined precisely.",
+        "Starting scenario: Check one administrative file and prepare a missing-item list for staff.",
+        "Reference systems: Facility management systems, billing, insurance and document systems where integrations are available.",
+        "Human responsibility: Clinicians retain diagnosis, treatment, clinical priority and medical decisions. Clinical uses require separate validation and approval.",
+        "Evaluation: Completeness, follow-up time and authorized-access accuracy."
+      ]
+    }
+  },
+  {
+    "slug": "professional-services",
+    "ar": {
+      "title": "الخدمات المهنية والاستشارات",
+      "paragraphs": [
+        "استخدم خبرة المؤسسة دون إضاعة وقت الفريق في إعادة جمعها.",
+        "يتطلب إعداد عرض أو تسليم مشروع الرجوع إلى أعمال سابقة ومعرفة تخصصية ومستندات العميل. وتختلف صلاحيات إعادة استخدام المعلومات بين العقود والعملاء.",
+        "يمكن بناء معرفة داخلية تفصل بين العملاء، ومساعد لإعداد ملف عرض يربط المتطلبات بالخبرات الموثقة، ومسار لمراجعة التسليمات والالتزامات. يراجع أصحاب الخبرة المحتوى النهائي، وتتبع المؤسسة ما يجوز استخدامه خارجها.",
+        "سيناريو البداية: البحث في المعرفة الداخلية وإعداد قائمة مراجع لمسودة عرض.",
+        "الأنظمة المرجعية: إدارة المستندات، CRM، إدارة المشروعات والعقود.",
+        "ما يظل لدى المختص: الرأي المهني النهائي، التعهدات التجارية، وتسليم مواد تخص عميلًا لعميل آخر.",
+        "القياس: زمن العثور على المراجع، صحة إعادة الاستخدام، وملاحظات المراجعة المتكررة."
+      ]
+    },
+    "en": {
+      "title": "Professional services and consulting",
+      "paragraphs": [
+        "Use institutional expertise without repeatedly rebuilding the evidence.",
+        "Proposals and project delivery draw on previous work, specialist knowledge and client documents. Reuse permissions differ between contracts and clients.",
+        "Proposed internal knowledge separates clients. Proposal support links requirements to documented expertise; delivery review tracks commitments. Experts approve final content and external reuse.",
+        "Starting scenario: Find internal knowledge and prepare a reference list for a proposal draft.",
+        "Reference systems: Document management, CRM, project systems and contracts.",
+        "Human responsibility: Specialists retain final professional opinions, commercial commitments and decisions to share one client’s materials with another.",
+        "Evaluation: Reference-finding time, permitted reuse accuracy and recurring review comments."
+      ]
+    }
+  },
+  {
+    "slug": "hospitality",
+    "ar": {
+      "title": "الضيافة والسياحة",
+      "paragraphs": [
+        "تنسيق أدق بين الحجز والخدمة والتشغيل.",
+        "يتغير طلب الضيف بين الحجز والوصول وخدمة الإقامة. وقد تنتقل تفاصيله بين المبيعات والاستقبال والتشغيل دون سجل موحد للوعود والمواعيد.",
+        "يمكن تصميم مسار يجمع متطلبات الحجز الجماعي، ويتحقق من اكتمالها، ويجهز مهام الفرق المختصة، ويتابع طلبات الضيوف. يرتبط الرد بسياسات المنشأة والمخزون والخدمات المؤكدة.",
+        "سيناريو البداية: إعداد ملف تشغيل لحجز مجموعة ومتابعة التعديلات المعتمدة.",
+        "الأنظمة المرجعية: PMS، CRS، CRM، إدارة المهام والبريد.",
+        "ما يظل لدى المسؤول: الخصومات والتعويضات والشروط الخاصة والتعهدات التي تؤثر على الإيراد أو السعة.",
+        "القياس: اكتمال ملف الحجز، ضياع التفاصيل بين الفرق، وزمن إغلاق طلب الخدمة."
+      ]
+    },
+    "en": {
+      "title": "Hospitality and tourism",
+      "paragraphs": [
+        "Coordinate booking, service and operations with the same facts.",
+        "Guest requirements change between booking, arrival and the stay. Sales, reception and operations may lack a shared record of promises and deadlines.",
+        "A proposed workflow gathers group-booking requirements, checks completeness, prepares team tasks and tracks guest requests. Replies use confirmed policies, inventory and services.",
+        "Starting scenario: Prepare an operating packet for a group booking and track approved changes.",
+        "Reference systems: PMS, CRS, CRM, task management and email.",
+        "Human responsibility: Owners approve discounts, compensation, special terms and commitments affecting revenue or capacity.",
+        "Evaluation: Booking-file completeness, lost handoff details and service-request closure time."
+      ]
+    }
+  },
+  {
+    "slug": "agriculture-food",
+    "ar": {
+      "title": "الأعمال الزراعية والغذائية",
+      "paragraphs": [
+        "رؤية أوضح للمشتريات والتشغيل والتسليم عبر الموسم.",
+        "تتوزع البيانات في الأعمال الزراعية والغذائية بين دفاتر وملفات حسابات وموردين ومواقع إنتاج. يصعب جمع تكلفة المهمة ومستلزماتها وتعاقداتها وتسليماتها في سياق واحد، خصوصًا عند وجود شركاء أو أكثر من موقع.",
+        "يمكن بناء حلول إدارية لتجميع مستندات المصروفات، ومراجعة طلبات المستلزمات، وربط دفعات التوريد بمستنداتها، ومتابعة التعاقدات والتسليم. يُستفاد من البيانات الرقمية الموجودة، وتُحدد جودة السجلات المطلوبة قبل بناء أي تحليل.",
+        "سيناريو البداية: تنظيم دورة شراء مستلزمات أو متابعة دفعات توريد ومستنداتها.",
+        "الأنظمة المرجعية: ملفات حسابات منظمة، ERP عند وجوده، الموردون وعقود التوريد.",
+        "ما يظل لدى المختص: قرارات الزراعة والتغذية والمعالجة وسلامة الغذاء. التحكم في الري أو المعدات يحتاج أجهزة وبيانات وتحققًا ميدانيًا مستقلًا.",
+        "القياس: اكتمال تكلفة العملية، وضوح مستندات الدفعة، وزمن إعداد تقرير الشركاء."
+      ]
+    },
+    "en": {
+      "title": "Agriculture and food businesses",
+      "paragraphs": [
+        "A clearer view of purchasing, operations and delivery across the season.",
+        "Records span ledgers, spreadsheets, suppliers and production sites. Costs, supplies, contracts and deliveries are hard to assemble, especially across partners or locations.",
+        "Proposed administrative workflows collect expense documents, review supplies requests, connect supply batches to records and track contracts and deliveries. Assess existing digital records and data quality before analysis.",
+        "Starting scenario: Organize one supplies-purchasing cycle or follow up supply batches and documents.",
+        "Reference systems: Structured accounting files, ERP where present, suppliers and supply contracts.",
+        "Human responsibility: Specialists retain cultivation, feeding, treatment and food-safety decisions. Irrigation or equipment control requires devices, data and separate field validation.",
+        "Evaluation: Process-cost completeness, batch-document clarity and partner-report preparation time."
+      ]
+    }
+  }
+]

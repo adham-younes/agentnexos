@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "where-to-start",
+    "ar": {
+      "title": "أين تبدأ المؤسسة مع الأنظمة الوكيلة؟",
+      "paragraphs": [
+        "يبدأ الاختيار الجيد من عملية يمكن وصفها وقياسها. يُعرف ما يدخل إليها، ومن يعمل عليها، وأين تنتهي، وما الاستثناءات التي تؤخرها. يفيد هذا الوضوح في تقييم التقنية وفي معرفة ما إذا كانت التجربة قد نجحت.",
+        "راجع ثلاث نقاط مع مالك العملية. الأولى جودة المصدر: هل توجد بيانات معتمدة يمكن الرجوع إليها؟ الثانية مسؤولية القرار: من يوافق على الإجراء ومن يراجع الخطأ؟ الثالثة أثر التحسين: هل يعالج التصميم وقتًا نشطًا للموظف، أو انتظارًا، أو إعادة عمل؟ قد تتحسن سرعة تجهيز الملف بينما يبقى التأخير في موافقة خارج نطاقه.",
+        "بعد ذلك تُختار عينة تشمل الحالات المعتادة والناقصة والمتعارضة. يجهز الفريق خط أساس، ويختبر البديل، ثم يقرر ما يستحق البناء والتكامل. هذه البداية تجعل النقاش حول نتائج العمل، وتوضح الاعتماديات قبل الالتزام بنطاق أوسع."
+      ]
+    },
+    "en": {
+      "title": "Where should an enterprise start with agent systems?",
+      "paragraphs": [
+        "A useful starting point is a process you can describe and measure. Know what enters it, who works on it, where it ends, and which exceptions delay it. This clarity helps assess the technology and determine whether the pilot succeeded.",
+        "Review three points with the process owner. First, source quality: is there authoritative data to consult? Second, accountability: who approves actions and reviews errors? Third, the improvement itself: are you reducing active staff time, waiting or rework? Preparing a packet faster may leave an approval delay outside the pilot’s scope.",
+        "Choose a sample with ordinary, incomplete and contradictory cases. Establish a baseline, test the alternative and decide what deserves further development and integration. This anchors the discussion in operating results and exposes dependencies before committing to a broader scope."
+      ]
+    }
+  },
+  {
+    "slug": "context-engineering",
+    "ar": {
+      "title": "لماذا تحتاج المؤسسة إلى هندسة سياق؟",
+      "paragraphs": [
+        "قد يتلقى الوكيل سؤالًا مختصرًا، لكنه يحتاج إلى بيانات وسياسات ونتائج أدوات ليجيب بصورة مفيدة. هندسة السياق هي تنظيم هذه المعلومات واختيار ما يلزم منها للمهمة الحالية.",
+        "في مراجعة عرض شراء، يجب أن يتضح أي طلب يجري تنفيذه، وما السياسة السارية، وأي عروض تخصه، وما الذي سبق التحقق منه. وفي المعرفة المؤسسية، يجب أن يصل إلى المستند الصحيح وفق صلاحية المستخدم. تزداد المشكلة عندما تحتوي المستندات على نسخ متعارضة أو تعليمات واردة من جهة خارجية.",
+        "لذلك يُصمم السياق باعتباره جزءًا من النظام: مصادر معتمدة، معلومات مرتبطة بالمهمة، فصل للتعليمات عن البيانات، وتحديث للحالة مع تقدم العمل. ويُختبر أثر ذلك على النتيجة، بدل الاعتماد على طول الطلب أو حجم المعلومات وحدهما. [م1]"
+      ]
+    },
+    "en": {
+      "title": "Why does an enterprise need context engineering?",
+      "paragraphs": [
+        "An agent may receive a short question but need records, policies and tool results to answer usefully. Context engineering organizes that information and selects what the current task requires.",
+        "For a purchasing review, identify the request, current policy, relevant quotes and completed checks. For enterprise knowledge, retrieve the correct document under the user’s access permissions. Conflicting versions and externally supplied instructions make this more challenging.",
+        "Design context as part of the system: approved sources, task-relevant information, a clear separation between instructions and data, and state updates as work progresses. Test its effect on the outcome rather than treating prompt length or information volume as a quality measure."
+      ]
+    }
+  },
+  {
+    "slug": "human-approval",
+    "ar": {
+      "title": "ماذا تعني الموافقة البشرية في عملية وكيلة؟",
+      "paragraphs": [
+        "تكون الموافقة مفيدة عندما يعرف المراجع ما الذي سيحدث بعد ضغط الزر. يجب أن يرى بيانات الإجراء وقيمته وجهته وأثره، والمستندات التي يستند إليها، والحدود التي تسمح له باعتماده.",
+        "تحتاج العملية أيضًا إلى معرفة النسخة التي جرت الموافقة عليها. إذا تغير المورد أو القيمة أو البنود المؤثرة بعد المراجعة، تحدد السياسة ما إذا كان يلزم اعتماد جديد. وبعد الموافقة يتحقق النظام من استمرار الصلاحية ومن نتيجة الأداة.",
+        "بهذا التصميم تبقى مسؤولية المراجع مفهومة، ويستطيع الفريق التحقيق في الخطأ. وينبغي تطبيق نفس المبدأ عندما يفوض وكيل مهمة إلى وكيل آخر: ينتقل فقط ما تحتاجه المهمة من سياق وصلاحية، ضمن الحدود المعتمدة. [م2]"
+      ]
+    },
+    "en": {
+      "title": "What does human approval mean in an agent workflow?",
+      "paragraphs": [
+        "Approval is useful when the reviewer understands what happens after pressing the button. Show the action, value, destination and effect, supporting documents and the authority required to approve it.",
+        "Identify the version approved. If the supplier, value or material terms change after review, policy determines whether a new approval is needed. After approval, the system checks continuing authority and the actual tool result.",
+        "This keeps accountability understandable and makes mistakes investigable. Apply the same principle when an agent delegates: only the context and authority required for the task should cross the boundary."
+      ]
+    }
+  }
+]
