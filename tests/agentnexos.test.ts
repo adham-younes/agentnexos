@@ -59,9 +59,9 @@ test("workload tool performs arithmetic without inventing savings", async () => 
 });
 function request(body: unknown, origin="https://example.com") { return new Request("https://example.com/api/agentnexos",{method:"POST",headers:{origin,"content-type":"application/json"},body:JSON.stringify(body)}); }
 const valid={locale:"en",messages:[{role:"user",parts:[{type:"text",text:"Design a workflow"}]}]};
-test("demo remains fail-closed without explicit enablement",async()=>{
+test("anonymous requests require identity and readiness remains fail-closed without enablement",async()=>{
   const flag=process.env.AGENTNEXOS_DEMO_ENABLED;delete process.env.AGENTNEXOS_DEMO_ENABLED;
-  try {assert.equal((await POST(request(valid))).status,503);assert.deepEqual(await (await GET()).json(),{ready:false,code:"FEATURE_DISABLED"});}finally{if(flag!==undefined)process.env.AGENTNEXOS_DEMO_ENABLED=flag;}
+  try {assert.equal((await POST(request(valid))).status,401);assert.deepEqual(await (await GET()).json(),{ready:false,code:"FEATURE_DISABLED"});}finally{if(flag!==undefined)process.env.AGENTNEXOS_DEMO_ENABLED=flag;}
 });
 test("rejects cross-origin requests",async()=>assert.equal((await POST(request(valid,"https://attacker.example"))).status,403));
 test("rejects client-supplied system messages and tool results",async()=>{

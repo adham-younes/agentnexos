@@ -1,3 +1,5 @@
+Current owner-approved redesign: read `docs/COMPREHENSIVE-REDESIGN-2026-10-01.md` and the latest REDESIGN phase report. The owner explicitly approved replacing the old visual template, provided new institutional copy, and authorized all staged releases plus Supabase users/auth/private workspace persistence. Matte black and calm green supersede the former palette/image-preservation rules. Public marketing stays open; only the agent/account surfaces require verified login. This does not authorize fabricated capabilities, secret export, unscoped external writes, or protection bypass.
+
 Latest release handoff: read `docs/UPGRADE-HANDOFF-2026-10-01.md` and its production evidence before continuing. Historical pending statuses are not current deployment state.
 
 Current comprehensive upgrade: read `docs/COMPREHENSIVE-UPGRADE-2026-09-30.md` and current UPGRADE reports first. The owner's latest request explicitly authorizes successive automated whole-app stages, preserving the template, images and colors, with independent verified production publication per stage. This supersedes earlier one-stage-per-request restrictions. It does not authorize fabricating runtime capabilities, secret export, unrelated databases or bypassing branch protections.
@@ -105,8 +107,8 @@ ESLint مثبت. افحص الملفات المتأثرة وسجل ديون ال
 
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
-This block is written and re-added by `next dev`; committing it keeps the tree clean.
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->

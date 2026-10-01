@@ -1,4 +1,28 @@
 export const productPages = {
+  services: {
+    ar: {eyebrow:"منهج تسليم واضح",title:"من تشخيص العملية إلى تشغيل يمكن مراجعته.",intro:"نصمم أنظمة وكيلة حول مشكلة تشغيلية محددة. يبدأ نطاق المشروع باكتشاف العملية وبياناتها، ويتدرج إلى تجربة واختبار وتسليم وفق معايير يتفق عليها الفريق.",notice:"نطاقات خدمات مقترحة تُحدد لكل مشروع. الموجز الحالي يُنزّل إلى جهازك ولا يرسل طلب حجز أو عقدًا.",cards:[
+      ["اكتشاف وتصميم","نراجع المدخلات والاستثناءات ومالك القرار، ثم نضع حدود العملية وخط الأساس.","التسليم: خريطة عملية، متطلبات بيانات، ومعايير قبول."],
+      ["تجربة محدودة","نختبر فرضية واحدة ببيانات مصرح بها وصلاحيات محددة، مع مراجعة النتائج والحالات الفاشلة.","التسليم: نموذج تجريبي ونتائج اختبار وخطة تحسين."],
+      ["تكامل وتشغيل","يُحدد الربط بعد مراجعة هوية المستخدمين وصلاحيات الأدوات وأثر كل فعل، مع إجراءات إيقاف واستعادة.","التسليم: تكاملات متفق عليها وتوثيق تشغيل وتدريب."],
+      ["تقييم وتطوير","نقارن النتائج بخط أساس واقعي ونراجع جودة المصادر والكلفة وتدخل المسؤول.","التسليم: تقييم موثق وأولويات تطوير ضمن نطاق متفق عليه."]]},
+    en: {eyebrow:"A clear delivery approach",title:"From process discovery to accountable operation.",intro:"We design agent systems around a specific operating problem. Define the process and data first, then move through a bounded pilot, validation, and handover against agreed acceptance criteria.",notice:"Proposed service scopes are defined per project. The current brief downloads to your device; it does not book a meeting or create a contract.",cards:[
+      ["Discover and design","Review inputs, exceptions, and decision ownership, then define boundaries and a baseline.","Deliverables: process map, data requirements, and acceptance criteria."],
+      ["Run a bounded pilot","Test one hypothesis using authorized data and scoped permissions. Review both successful and failed cases.","Deliverables: pilot, test results, and an improvement plan."],
+      ["Integrate and operate","Define connections after reviewing identity, tool permissions, and action effects, with stop and recovery procedures.","Deliverables: agreed integrations, operating documentation, and training."],
+      ["Evaluate and improve","Compare results with a real baseline; review source quality, cost, and human intervention.","Deliverables: documented evaluation and development priorities within the agreed scope."]]}
+  },
+  "demo-policy": {
+    ar:{eyebrow:"سياسة مساحة الوكيل",title:"تجربة تصميم بحساب شخصي وحدود واضحة.",intro:"الموقع العام مفتوح للجميع. مساحة الوكيل تتطلب بريدًا مؤكدًا وحسابًا؛ تقدم مسودات ومراجعات للعمليات، ولا تنفذ إجراءات في أنظمة خارجية.",notice:"استخدم بيانات افتراضية فقط. لا تضف بيانات عملاء أو أسرارًا أو مستندات سرية.",cards:[
+      ["حسابك وبياناته","تدير Supabase تسجيل الدخول وتأكيد البريد. ملفات الحساب معزولة بصلاحيات صفوف قاعدة البيانات.","لا تمنح بيانات المستخدم أو نص المحادثة صلاحيات إضافية."],
+      ["معالجة الطلب","يُرسل محتوى طلبك وسياق المحادثة المحدود إلى مزود النموذج لإنتاج الرد، مع تسجيل بيانات تشغيل مختصرة.","راجع سياسة الخصوصية قبل استخدام المساحة."],
+      ["القرار تحت المراجعة","المخرجات مسودات قد تخطئ. راجع المصادر والحسابات والافتراضات قبل استخدامها.","لا دفع ولا إرسال رسائل ولا تعديل أنظمة مؤسسة من المساحة."],
+      ["حدود الاستخدام","تخضع الطلبات لميزانية استخدام وحدود تزامن، إضافة إلى حدود مزود النموذج.","اشتراكك لدى مزود مستقل لا يغيّر حدود هذه التجربة تلقائيًا."]] },
+    en:{eyebrow:"Workspace policy",title:"A personal account. A bounded design preview.",intro:"The public website is open to everyone. The agent workspace requires a confirmed email and account. It prepares workflow drafts and reviews without executing actions in external systems.",notice:"Use fictional data only. Do not enter customer records, secrets, or confidential documents.",cards:[
+      ["Account and access","Supabase manages sign-in and email confirmation. Database row policies isolate account profiles.","User metadata and conversation text cannot grant additional permissions."],
+      ["Request processing","Your request and bounded conversation context are sent to the model provider to generate a response. Limited operating metadata is recorded.","Read the privacy notice before using the workspace."],
+      ["Review decisions","Outputs are drafts and may be wrong. Check sources, calculations, and assumptions before relying on them.","The workspace cannot make payments, send messages, or modify enterprise systems."],
+      ["Usage limits","Requests are subject to a usage budget and concurrency controls, alongside provider limits.","An independent provider subscription does not automatically change this preview's limits."]] }
+  },
   about: {
     ar: { eyebrow: "منهج Agentnexos", title: "نبني حول العملية والمسؤول عنها.", intro: "Agentnexos مشروع لتصميم أنظمة وكيلة مخصصة لعمليات المؤسسات في مصر والخليج. نبدأ بمشكلة قابلة للقياس، ثم نختار المعرفة والأدوات والضوابط التي تحتاجها العملية.", notice: "الموقع يعرض منهج العمل وتجربة تصميم محدودة. لا يقدم شهادات امتثال أو نتائج عملاء أو تكاملات جاهزة غير مثبتة.", cards: [
       ["اكتشاف مسؤول", "حدد مالك العملية ومصدر الحقيقة والحجم الحالي والاستثناءات. المخرج موجز يمكن لفريق الأعمال والهندسة مراجعته.", "القبول: هدف واحد ومخرج واضح ومعيار نجاح قابل للتحقق."],

@@ -1,3 +1,4 @@
+import { refreshAuth } from "@/lib/supabase/auth-proxy";
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
 
@@ -5,11 +6,15 @@ import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
  * Sends `/` (and any path missing a supported locale prefix) to the default
  * locale, leaving already-localised paths untouched.
  */
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
   const first = pathname.split("/")[1];
-  if (isLocale(first)) return NextResponse.next();
+  if (isLocale(first)) {
+    if (/^\/(ar|en)\/(agentnexos|login|account)(\/|$)/.test(pathname)) return refreshAuth(request);
+    return NextResponse.next();
+  }
+  if (pathname.startsWith("/auth/")) return NextResponse.next();
 
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;

@@ -1,3 +1,4 @@
+import { authenticatedUser } from "@/lib/auth/server";
 import { createHmac } from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
 import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
@@ -58,13 +59,13 @@ export async function POST(request: Request) {
   if (!parsed.success || parsed.data.messages.at(-1)?.role !== "user") return Response.json({ code: "INVALID_REQUEST" }, { status: 400, headers });
   const conversation = conversationText(parsed.data.messages);
   if (conversation.length > contextLimits.characters || !parsed.data.messages.at(-1)?.parts.some(p => p.text.trim())) return Response.json({ code: "CONTEXT_LIMIT" }, { status: 400, headers });
+  const auth=await authenticatedUser();
+  if (!auth) return Response.json({ code: "AUTH_REQUIRED" }, {status:401,headers});
   let db;
   try { db = database(); } catch { return unavailable(); }
   if (!db) return unavailable();
-  // Vercel supplies this trusted header. Do not accept a client-selected tenant/IP.
-  const ip = process.env.VERCEL === "1" ? request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim() : null;
-  if (!ip) return unavailable();
-  const subject = createHmac("sha256", db.key).update(ip).digest("hex");
+  // The subject comes from verified Auth, never a client-selected user or IP.
+  const subject = createHmac("sha256", db.key).update(`user:${auth.user.id}`).digest("hex");
   let runId: string;
   try {
     const { data, error } = await db.client.rpc("reserve_agentnexos_demo_v3", { p_subject_hash: subject });
