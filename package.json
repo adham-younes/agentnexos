@@ -14,7 +14,9 @@
     "test:runtime": "node scripts/test-agent-runtime.mjs",
     "test:actions": "node scripts/test-phase-6-actions.mjs",
     "test:security": "node scripts/test-phase-7-evals.mjs",
-    "verify:site": "node scripts/verify-site.mjs"
+    "verify:site": "node scripts/verify-redesign.mjs",
+    "verify:workspace": "node scripts/verify-workspace-components.mjs",
+    "verify:journey": "node scripts/verify-public-journey.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.78",

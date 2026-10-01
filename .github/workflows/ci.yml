@@ -59,12 +59,12 @@ jobs:
             if curl --fail --silent http://localhost:3000/ar > /dev/null; then break; fi
             sleep 1
           done
-          pnpm verify:site http://localhost:3000
+          VERIFY_DIR=output/release-verification pnpm verify:site http://localhost:3000
 
       - name: Preserve browser verification report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: release-verification
-          path: output/release-verification/report.json
+          path: output/release-verification/checks.json
           if-no-files-found: ignore

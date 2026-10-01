@@ -1,0 +1,28 @@
+[
+  {
+    "locale": "ar",
+    "skipLink": true,
+    "focusTrap": true,
+    "focusRestore": true,
+    "briefValidation": true,
+    "download": true,
+    "reset": true,
+    "publicPosts": 0,
+    "recoveryFields": true,
+    "localeQuery": true,
+    "desktop1024": true
+  },
+  {
+    "locale": "en",
+    "skipLink": true,
+    "focusTrap": true,
+    "focusRestore": true,
+    "briefValidation": true,
+    "download": true,
+    "reset": true,
+    "publicPosts": 0,
+    "recoveryFields": true,
+    "localeQuery": true,
+    "desktop1024": true
+  }
+]

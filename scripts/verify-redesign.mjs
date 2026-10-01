@@ -1,11 +1,11 @@
 import { chromium } from '@playwright/test';
 import { mkdirSync,writeFileSync,readFileSync } from 'node:fs';
-const base=process.env.SITE_URL||'http://localhost:3000';
-const output=process.env.VERIFY_DIR||'docs/verification/redesign-01/local';
+const base=process.env.SITE_URL||process.argv[2]||'http://localhost:3000';
+const output=process.env.VERIFY_DIR||'docs/verification/redesign-04/local';
 mkdirSync(output,{recursive:true});
 const browser=await chromium.launch({headless:true});
 const results=[];
-const routes=['','platform','solutions','industries','services','resources','security','privacy','terms','about','start','demo-policy','login','agentnexos','roi','integrations','process'];
+const routes=['','platform','solutions','industries','services','resources','security','privacy','terms','about','start','demo-policy','login','agentnexos','account','roi','integrations','process'];
 for(const kind of ['solutions','industries','articles']) {const data=JSON.parse(readFileSync(new URL(`../lib/content/catalog/${kind}.json`,import.meta.url)));routes.push(...data.map(x=>`${kind==='articles'?'resources':kind}/${x.slug}`));}
 try {
 for(const locale of ['ar','en']) for(const width of [390,768,1440]) {
@@ -16,9 +16,11 @@ for(const locale of ['ar','en']) for(const width of [390,768,1440]) {
   const response=await page.goto(`${base}/${locale}/${route}`,{waitUntil:'networkidle'});
   await page.evaluate(()=>document.fonts.ready);
   const state=await page.evaluate(()=>({h1:document.querySelectorAll('h1').length,overflow:document.documentElement.scrollWidth>innerWidth+1,dir:document.documentElement.dir,links:[...document.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'))}));
-  const gated=route==='agentnexos';
-  const ok=response?.status()===200&&state.h1===1&&!state.overflow&&state.dir===(locale==='ar'?'rtl':'ltr')&&(!gated||new URL(page.url()).pathname===`/${locale}/login`)&&!errors.length;
-  results.push({locale,width,route,status:response?.status(),ok,overflow:state.overflow,errors,gated});
+  const gated=route==='agentnexos'||route==='account';
+  const known=new Set(['ar','en'].flatMap(l=>routes.map(r=>`/${l}${r?'/'+r:''}`)));
+  const missingLinks=state.links.filter(href=>{try{const u=new URL(href,page.url());return u.origin===new URL(base).origin&&!known.has(u.pathname.replace(/\/$/,''));}catch{return true;}});
+  const ok=!missingLinks.length&&response?.status()===200&&state.h1===1&&!state.overflow&&state.dir===(locale==='ar'?'rtl':'ltr')&&(!gated||new URL(page.url()).pathname===`/${locale}/login`)&&!errors.length;
+  results.push({locale,width,route,status:response?.status(),ok,overflow:state.overflow,errors,gated,missingLinks});
   if(route===''||route==='login')await page.screenshot({path:`${output}/${locale}-${route||'home'}-${width}.png`,fullPage:true});
   page.removeAllListeners('pageerror');
  }

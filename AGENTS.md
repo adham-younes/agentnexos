@@ -1,3 +1,5 @@
+Latest redesign source handoff: read `docs/REDESIGN-HANDOFF-2026-10-01.md`. Source/Preview completion is not production completion. Keep staged production publication blocked until real authentication configuration and account-flow evidence pass; the owner already authorized sequential deployments. Do not request that deployment authorization again.
+
 Current owner-approved redesign: read `docs/COMPREHENSIVE-REDESIGN-2026-10-01.md` and the latest REDESIGN phase report. The owner explicitly approved replacing the old visual template, provided new institutional copy, and authorized all staged releases plus Supabase users/auth/private workspace persistence. Matte black and calm green supersede the former palette/image-preservation rules. Public marketing stays open; only the agent/account surfaces require verified login. This does not authorize fabricated capabilities, secret export, unscoped external writes, or protection bypass.
 
 Latest release handoff: read `docs/UPGRADE-HANDOFF-2026-10-01.md` and its production evidence before continuing. Historical pending statuses are not current deployment state.

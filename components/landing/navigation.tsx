@@ -54,7 +54,7 @@ export function Navigation() {
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
       }
     };
-    const closeOnDesktop = () => { if (window.innerWidth >= 1024) setIsMobileMenuOpen(false); };
+    const closeOnDesktop = () => { if (window.innerWidth >= 1280) setIsMobileMenuOpen(false); };
     window.addEventListener("keydown", closeOnEscape);
     window.addEventListener("resize", closeOnDesktop);
     return () => {
@@ -93,7 +93,7 @@ export function Navigation() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+          <div className="hidden xl:flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.key}
@@ -107,7 +107,7 @@ export function Navigation() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+          <div className="hidden xl:flex items-center gap-3 xl:gap-4">
             <LocaleSwitcher inverted={isDark} />
             <a href={resolveHref("/agentnexos")} className={`text-[13px] font-medium transition-colors duration-500 ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}>
               {locale === "ar" ? "مساحة الوكيل" : "Workspace"}
@@ -126,7 +126,7 @@ export function Navigation() {
             ref={toggleRef}
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden w-10 h-10 inline-flex items-center justify-center rounded-full border transition-colors duration-500 ${isDark ? "border-white/20 text-white hover:bg-white/10" : "border-foreground/15 text-foreground hover:bg-foreground/5"}`}
+            className={`xl:hidden w-10 h-10 inline-flex items-center justify-center rounded-full border transition-colors duration-500 ${isDark ? "border-white/20 text-white hover:bg-white/10" : "border-foreground/15 text-foreground hover:bg-foreground/5"}`}
             aria-label={t("nav.toggleMenu", "Toggle menu")}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
@@ -151,7 +151,7 @@ export function Navigation() {
         aria-owns={isMobileMenuOpen ? "mobile-menu-toggle" : undefined}
         inert={!isMobileMenuOpen}
         aria-hidden={!isMobileMenuOpen}
-        className={`lg:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${
+        className={`xl:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"

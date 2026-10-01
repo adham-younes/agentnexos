@@ -8,6 +8,7 @@ export async function authClient() {
   if (!config) return null;
   const store = await cookies();
   return createServerClient(config.url, config.key, {
+    cookieOptions: { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax" },
     global: { fetch: (input, init) => fetch(input, { ...init, signal: AbortSignal.timeout(10000) }) },
     cookies: { getAll: () => store.getAll(), setAll(items) {
       try { items.forEach(({ name, value, options }) => store.set(name, value, options)); }
