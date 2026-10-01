@@ -5,7 +5,7 @@ import { simulateReadableStream } from "ai";
 import { runAgentWorkflow } from "../lib/agents/workflow";
 import { createDemoTools } from "../lib/agents/tools";
 import { GET, POST } from "../app/api/agentnexos/route";
-import { reservationSchema, demoLimitCode } from "../lib/agents/reservation";
+import { reservationSchema, demoLimitCode, demoLimitCount, previewLimitsSchema } from "../lib/agents/reservation";
 import { agentWorkspaceCopy } from "../lib/content/agent-workspace";
 
 const usage = { inputTokens: { total: 10, noCache: 10, cacheRead: undefined, cacheWrite: undefined }, outputTokens: { total: 20, text: 20, reasoning: undefined } };
@@ -21,6 +21,14 @@ test("daily, global and active-request limits have distinct bilingual messages",
   }
   assert.equal(demoLimitCode({code:"PROVIDER_ERROR"}),null);
   assert.equal(demoLimitCode(null),null);
+});
+test("configured budgets reject invalid or inverted limits, and error counts come from the server", () => {
+  assert.equal(previewLimitsSchema.safeParse({perConnectionDaily:1000,globalDaily:10000,windowSeconds:86400}).success,true);
+  for (const value of [0, -1, 1000001, 1.5, "1000"]) assert.equal(previewLimitsSchema.safeParse({perConnectionDaily:value,globalDaily:10000,windowSeconds:86400}).success,false);
+  assert.equal(previewLimitsSchema.safeParse({perConnectionDaily:1000,globalDaily:999,windowSeconds:86400}).success,false);
+  assert.equal(demoLimitCount({code:"DEMO_DAILY_LIMIT",retryAfterSeconds:30,limit:37,windowSeconds:86400}),37);
+  assert.equal(demoLimitCount({code:"DEMO_DAILY_LIMIT",retryAfterSeconds:30,limit:"<script>"}),null);
+  for (const locale of ["ar","en"] as const) assert.equal(agentWorkspaceCopy[locale].limits.DEMO_DAILY_LIMIT.includes("5"),false);
 });
 function generateModel(text: string) { return new MockLanguageModelV4({ doGenerate: async () => ({ content: [{ type: "text", text }], finishReason: { unified: "stop", raw: undefined }, usage, warnings: [] }) }); }
 function reviewerModel() { return new MockLanguageModelV4({ doStream: async () => ({ stream: simulateReadableStream({ chunks: [

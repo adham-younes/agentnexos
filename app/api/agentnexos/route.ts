@@ -6,7 +6,7 @@ import { conversationText, contextLimits } from "@/lib/agents/context";
 import { demoPolicy } from "@/lib/agents/policy";
 import { createRunJournal } from "@/lib/agents/journal";
 import { runAgentWorkflow } from "@/lib/agents/workflow";
-import { reservationSchema } from "@/lib/agents/reservation";
+import { reservationSchema, previewLimitsSchema } from "@/lib/agents/reservation";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -29,8 +29,13 @@ export async function GET() {
   try {
     const db = database();
     if (!db) return Response.json({ ready: false }, { headers });
-    const { data, error } = await db.client.rpc("agentnexos_demo_ready");
-    return Response.json({ ready: !error && data === true, ...(!error && data === true ? {} : { code: "DATABASE_UNAVAILABLE" }) }, { headers });
+    const [health, budget] = await Promise.all([
+      db.client.rpc("agentnexos_demo_ready"),
+      db.client.from("agentnexos_demo_limits").select("connection_daily_limit,global_daily_limit").eq("singleton", true).single(),
+    ]);
+    const limits = previewLimitsSchema.safeParse({ perConnectionDaily: budget.data?.connection_daily_limit, globalDaily: budget.data?.global_daily_limit, windowSeconds: 86400 });
+    if (health.error || health.data !== true || budget.error || !limits.success) return Response.json({ ready: false, code: "DATABASE_UNAVAILABLE" }, { headers });
+    return Response.json({ ready: true, limits: limits.data }, { headers });
   } catch (error) {
     // Safe readiness codes only: never provider errors, keys, URLs or stack traces.
     const allowed = ["FEATURE_DISABLED", "DATABASE_UNCONFIGURED", "PROVIDER_UNCONFIGURED", "DATABASE_PROJECT_MISMATCH"];
@@ -62,7 +67,7 @@ export async function POST(request: Request) {
   const subject = createHmac("sha256", db.key).update(ip).digest("hex");
   let runId: string;
   try {
-    const { data, error } = await db.client.rpc("reserve_agentnexos_demo_v2", { p_subject_hash: subject });
+    const { data, error } = await db.client.rpc("reserve_agentnexos_demo_v3", { p_subject_hash: subject });
     if (error) return unavailable();
     const reservation = reservationSchema.safeParse(data);
     if (!reservation.success) return unavailable();
