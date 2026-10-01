@@ -1,0 +1,35 @@
+{
+  "observedDate": "2026-10-01",
+  "productionCredentialsChanged": false,
+  "successfulCompletions": 2,
+  "credentialIncluded": false,
+  "models": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "status": 200,
+      "headers": {
+        "x-ratelimit-limit-requests": "500000",
+        "x-ratelimit-limit-tokens": "250000"
+      },
+      "units": {
+        "requests": "requests per day (RPD)",
+        "tokens": "tokens per minute (TPM)"
+      },
+      "requestsPerMinuteVerified": false
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "status": 200,
+      "headers": {
+        "x-ratelimit-limit-requests": "500000",
+        "x-ratelimit-limit-tokens": "250000"
+      },
+      "units": {
+        "requests": "requests per day (RPD)",
+        "tokens": "tokens per minute (TPM)"
+      },
+      "requestsPerMinuteVerified": false
+    }
+  ],
+  "reference": "https://console.groq.com/docs/rate-limits"
+}

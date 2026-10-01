@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-01T02:08:19.415Z",
+  "mocked": false,
+  "turns": [
+    {
+      "status": 200,
+      "answer": "Agentnexos\n\nمرحبًا\n\nنسخ الرد",
+      "finished": true,
+      "submittedMessages": 1
+    },
+    {
+      "status": 200,
+      "answer": "Agentnexos\n\nأنا Agentnexos، مساعد تصميم سير العمل للمؤسسات.\n\nنسخ الرد",
+      "finished": true,
+      "submittedMessages": 3
+    }
+  ],
+  "pageErrors": [],
+  "limits": {
+    "perConnectionDaily": 1000,
+    "globalDaily": 10000,
+    "windowSeconds": 86400
+  },
+  "displayedBudget": "تجربة حية محدودة · قراءة وتخطيط فقط\nحد التطبيق: 1000 طلب لكل 24 ساعة",
+  "overflow": false,
+  "passed": true
+}
