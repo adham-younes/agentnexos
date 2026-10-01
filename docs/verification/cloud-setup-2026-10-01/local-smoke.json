@@ -1,0 +1,84 @@
+{
+  "base": "http://localhost:3004",
+  "checkedAt": "2026-10-01T04:29:42.007Z",
+  "pages": [
+    {
+      "locale": "ar",
+      "route": "",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "ar",
+      "route": "agentnexos",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "ar",
+      "route": "start",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "ar",
+      "route": "about",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "route": "",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "route": "agentnexos",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "route": "start",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "route": "about",
+      "status": 200,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "liveAgentVerified": false,
+  "api": {
+    "readiness": {
+      "ready": false,
+      "code": "FEATURE_DISABLED"
+    },
+    "legacy": [
+      {
+        "route": "chat",
+        "status": 503
+      },
+      {
+        "route": "approvals",
+        "status": 503
+      },
+      {
+        "route": "telemetry",
+        "status": 503
+      }
+    ]
+  }
+}
