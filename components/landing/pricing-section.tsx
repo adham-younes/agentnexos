@@ -84,6 +84,10 @@ export function PricingSection() {
               isVisible ? "opacity-100" : "opacity-0"
             }`}>
               <img
+                  width={1951}
+                  height={1257}
+                  loading="lazy"
+                  decoding="async"
                 src="/images/whale.png"
                 alt="Organic whale"
                 className="w-full h-full object-contain object-center"

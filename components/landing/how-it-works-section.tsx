@@ -103,6 +103,10 @@ export function HowItWorksSection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <img
+                  width={1554}
+                  height={1664}
+                  loading="lazy"
+                  decoding="async"
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png"
               alt=""
               aria-hidden="true"

@@ -117,6 +117,7 @@ export default async function LocaleLayout({
       <body
         className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} font-sans antialiased`}
       >
+        <a href="#main-content" className="skip-link">{locale === "ar" ? "انتقل إلى المحتوى" : "Skip to content"}</a>
         <LocaleProvider locale={typed}>{children}</LocaleProvider>
         <Analytics />
       </body>

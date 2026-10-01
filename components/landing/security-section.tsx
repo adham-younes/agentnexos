@@ -110,6 +110,10 @@ export function SecuritySection() {
             <div className="absolute inset-0 pointer-events-none items-center justify-end hidden lg:flex">
               {securityFeatures.map((feature, index) => (
                 <img
+                  width={840}
+                  height={840}
+                  loading="lazy"
+                  decoding="async"
                   key={feature.image}
                   src={feature.image}
                   alt={feature.title}
@@ -153,6 +157,10 @@ export function SecuritySection() {
             {securityFeatures.map((feature, index) => (
               <div
                 key={feature.title}
+                role="button"
+                tabIndex={0}
+                aria-pressed={activeFeature === index}
+                onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setActiveFeature(index); } }}
                 className={`p-6 border transition-all duration-500 cursor-default ${
                   activeFeature === index 
                     ? "border-foreground/30 bg-foreground/[0.04]" 

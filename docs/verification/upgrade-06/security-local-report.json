@@ -1,0 +1,1950 @@
+{
+  "base": "http://localhost:3001",
+  "checkedAt": "2026-09-30T08:06:57.997Z",
+  "pages": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+          "width": 1554,
+          "height": 1664,
+          "displayedWidth": 342,
+          "displayedHeight": 320
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+          "width": 1369,
+          "height": 1369,
+          "displayedWidth": 192,
+          "displayedHeight": 192
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+          "width": 2492,
+          "height": 824,
+          "displayedWidth": 342,
+          "displayedHeight": 113.078125
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+          "width": 2494,
+          "height": 1199,
+          "displayedWidth": 390,
+          "displayedHeight": 187.484375
+        },
+        {
+          "src": "/images/isolated.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/encrypted.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/audit.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/permissions.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 390,
+          "displayedHeight": 390
+        },
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 342,
+          "displayedHeight": 256.5
+        },
+        {
+          "src": "/images/bridge.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+          "width": 2720,
+          "height": 811,
+          "displayedWidth": 390,
+          "displayedHeight": 340
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/agentnexos",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "platform",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/platform",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "industries",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/industries",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "resources",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/resources",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "solutions",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/solutions",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "security",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/security",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "privacy",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/privacy",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "terms",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/terms",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "about",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/about",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "start",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/start",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+          "width": 1554,
+          "height": 1664,
+          "displayedWidth": 720,
+          "displayedHeight": 320
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+          "width": 1369,
+          "height": 1369,
+          "displayedWidth": 192,
+          "displayedHeight": 192
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+          "width": 2492,
+          "height": 824,
+          "displayedWidth": 720,
+          "displayedHeight": 238.0625
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+          "width": 2494,
+          "height": 1199,
+          "displayedWidth": 768,
+          "displayedHeight": 369.21875
+        },
+        {
+          "src": "/images/isolated.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/encrypted.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/audit.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/permissions.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 768,
+          "displayedHeight": 650
+        },
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 720,
+          "displayedHeight": 540
+        },
+        {
+          "src": "/images/bridge.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+          "width": 2720,
+          "height": 811,
+          "displayedWidth": 768,
+          "displayedHeight": 420
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/agentnexos",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "platform",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/platform",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "industries",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/industries",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "resources",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/resources",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "solutions",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/solutions",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "security",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/security",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "privacy",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/privacy",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "terms",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/terms",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "about",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/about",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "start",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/start",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 546.828125,
+          "displayedHeight": 498
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+          "width": 1554,
+          "height": 1664,
+          "displayedWidth": 628,
+          "displayedHeight": 640
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+          "width": 1369,
+          "height": 1369,
+          "displayedWidth": 320,
+          "displayedHeight": 320
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+          "width": 2492,
+          "height": 824,
+          "displayedWidth": 1304,
+          "displayedHeight": 431.171875
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+          "width": 2494,
+          "height": 1199,
+          "displayedWidth": 1440,
+          "displayedHeight": 692.28125
+        },
+        {
+          "src": "/images/isolated.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 358.5
+        },
+        {
+          "src": "/images/encrypted.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 358.5
+        },
+        {
+          "src": "/images/audit.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 358.5
+        },
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 358.5
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 792,
+          "displayedHeight": 650
+        },
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 524.671875,
+          "displayedHeight": 393.5
+        },
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 600,
+          "displayedHeight": 650
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+          "width": 2720,
+          "height": 811,
+          "displayedWidth": 1440,
+          "displayedHeight": 420
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/agentnexos",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "platform",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/platform",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "industries",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/industries",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "resources",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/resources",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "solutions",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/solutions",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "security",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/security",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "privacy",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/privacy",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "terms",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/terms",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "about",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/about",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "start",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "rtl",
+      "lang": "ar-EG",
+      "fonts": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", \"Instrument Sans\", \"Instrument Sans Fallback\", sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/ar/start",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+          "width": 1554,
+          "height": 1664,
+          "displayedWidth": 342,
+          "displayedHeight": 320
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+          "width": 1369,
+          "height": 1369,
+          "displayedWidth": 192,
+          "displayedHeight": 192
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+          "width": 2492,
+          "height": 824,
+          "displayedWidth": 342,
+          "displayedHeight": 113.078125
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+          "width": 2494,
+          "height": 1199,
+          "displayedWidth": 390,
+          "displayedHeight": 187.484375
+        },
+        {
+          "src": "/images/isolated.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/encrypted.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/audit.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/permissions.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 390,
+          "displayedHeight": 390
+        },
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 342,
+          "displayedHeight": 256.5
+        },
+        {
+          "src": "/images/bridge.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+          "width": 2720,
+          "height": 811,
+          "displayedWidth": 390,
+          "displayedHeight": 340
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/agentnexos",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "platform",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/platform",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "industries",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/industries",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "resources",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/resources",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "solutions",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/solutions",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "security",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/security",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "privacy",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/privacy",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "terms",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/terms",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "about",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/about",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 300,
+          "displayedHeight": 212.5
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "start",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/start",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+          "width": 1554,
+          "height": 1664,
+          "displayedWidth": 720,
+          "displayedHeight": 320
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+          "width": 1369,
+          "height": 1369,
+          "displayedWidth": 192,
+          "displayedHeight": 192
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+          "width": 2492,
+          "height": 824,
+          "displayedWidth": 720,
+          "displayedHeight": 238.0625
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+          "width": 2494,
+          "height": 1199,
+          "displayedWidth": 768,
+          "displayedHeight": 369.21875
+        },
+        {
+          "src": "/images/isolated.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/encrypted.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/audit.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "/images/permissions.jpg",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 768,
+          "displayedHeight": 650
+        },
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 720,
+          "displayedHeight": 540
+        },
+        {
+          "src": "/images/bridge.png",
+          "width": 0,
+          "height": 0,
+          "displayedWidth": 0,
+          "displayedHeight": 0
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+          "width": 2720,
+          "height": 811,
+          "displayedWidth": 768,
+          "displayedHeight": 420
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/agentnexos",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "platform",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/platform",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "industries",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/industries",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "resources",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/resources",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "solutions",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/solutions",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "security",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/security",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "privacy",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/privacy",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "terms",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/terms",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "about",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/about",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 654,
+          "displayedHeight": 478
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "start",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/start",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 546.828125,
+          "displayedHeight": 498
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png",
+          "width": 1554,
+          "height": 1664,
+          "displayedWidth": 628,
+          "displayedHeight": 640
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png",
+          "width": 1369,
+          "height": 1369,
+          "displayedWidth": 320,
+          "displayedHeight": 320
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png",
+          "width": 2492,
+          "height": 824,
+          "displayedWidth": 1304,
+          "displayedHeight": 431.171875
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png",
+          "width": 2494,
+          "height": 1199,
+          "displayedWidth": 1440,
+          "displayedHeight": 692.28125
+        },
+        {
+          "src": "/images/isolated.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 373.5
+        },
+        {
+          "src": "/images/encrypted.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 373.5
+        },
+        {
+          "src": "/images/audit.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 373.5
+        },
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 561.484375,
+          "displayedHeight": 373.5
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png",
+          "width": 2720,
+          "height": 1536,
+          "displayedWidth": 792,
+          "displayedHeight": 650
+        },
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 524.671875,
+          "displayedHeight": 393.5
+        },
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 600,
+          "displayedHeight": 650
+        },
+        {
+          "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png",
+          "width": 2720,
+          "height": 811,
+          "displayedWidth": 1440,
+          "displayedHeight": 420
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/agentnexos",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "platform",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/platform",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/bridge.png",
+          "width": 2496,
+          "height": 1664,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "industries",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/industries",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "resources",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/resources",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "solutions",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/solutions",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "security",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/security",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/permissions.jpg",
+          "width": 840,
+          "height": 840,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "privacy",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/privacy",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "terms",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/terms",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "about",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/about",
+      "mainCount": 1,
+      "images": [
+        {
+          "src": "/images/whale.png",
+          "width": 1951,
+          "height": 1257,
+          "displayedWidth": 405.125,
+          "displayedHeight": 291.34375
+        }
+      ],
+      "missingHashTargets": [],
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "start",
+      "errors": [],
+      "overflow": false,
+      "brokenImages": 0,
+      "dir": "ltr",
+      "lang": "en-US",
+      "fonts": "\"Instrument Sans\", \"Instrument Sans Fallback\", \"Instrument Sans\", system-ui, sans-serif",
+      "canonical": "https://compute-the-platform-to-build-six-fawn.vercel.app/en/start",
+      "mainCount": 1,
+      "images": [],
+      "missingHashTargets": [],
+      "status": 200
+    }
+  ],
+  "interactions": [
+    {
+      "locale": "ar",
+      "collapsedMenuInert": true,
+      "focusContainment": true,
+      "escapeFocusReturn": true,
+      "pointerClose": true,
+      "reducedMotionVideoPaused": true,
+      "reducedMotionCanvasStatic": true,
+      "skipLink": true,
+      "securityCardKeyboard": true,
+      "briefValidationDownloadReset": true,
+      "briefPostRequests": 0
+    },
+    {
+      "locale": "en",
+      "collapsedMenuInert": true,
+      "focusContainment": true,
+      "escapeFocusReturn": true,
+      "pointerClose": true,
+      "reducedMotionVideoPaused": true,
+      "reducedMotionCanvasStatic": true,
+      "skipLink": true,
+      "securityCardKeyboard": true,
+      "briefValidationDownloadReset": true,
+      "briefPostRequests": 0
+    }
+  ],
+  "failures": [],
+  "liveAgentVerified": false,
+  "readiness": {
+    "ready": false,
+    "code": "FEATURE_DISABLED"
+  },
+  "legacy": [
+    {
+      "route": "chat",
+      "status": 503
+    },
+    {
+      "route": "approvals",
+      "status": 503
+    },
+    {
+      "route": "telemetry",
+      "status": 503
+    }
+  ]
+}

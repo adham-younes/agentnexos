@@ -1,0 +1,25 @@
+{
+  "base": "https://compute-the-platform-to-build-six-fawn.vercel.app",
+  "results": [
+    {
+      "locale": "ar",
+      "missingFields": 7,
+      "financialReview": true,
+      "baseline": 2000,
+      "download": true,
+      "reset": true,
+      "postRequests": 0,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "missingFields": 7,
+      "financialReview": true,
+      "baseline": 2000,
+      "download": true,
+      "reset": true,
+      "postRequests": 0,
+      "overflow": false
+    }
+  ]
+}

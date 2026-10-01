@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useT, useLocale } from "@/lib/i18n/use-t";
@@ -38,6 +40,7 @@ const socialLinks = [
 ];
 
 function AnimatedWaveCanvas() {
+  const reducedMotion = useReducedMotion();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -80,7 +83,7 @@ function AnimatedWaveCanvas() {
       }
 
       time += 0.02;
-      animationId = requestAnimationFrame(animate);
+      if (!reducedMotion) animationId = requestAnimationFrame(animate);
     };
     animate();
 
@@ -88,7 +91,7 @@ function AnimatedWaveCanvas() {
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [reducedMotion]);
 
   return <canvas ref={canvasRef} className="w-full h-full" />;
 }
@@ -103,6 +106,10 @@ export function FooterSection() {
       {/* Panoramic banner image */}
       <div className="relative w-full h-[340px] md:h-[420px] overflow-hidden">
         <img
+                  width={2720}
+                  height={811}
+                  loading="lazy"
+                  decoding="async"
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png"
           alt=""
           aria-hidden="true"
