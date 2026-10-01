@@ -1,0 +1,14 @@
+[
+  {
+    "locale": "ar",
+    "workload": true,
+    "negativeRejected": true,
+    "faqKeyboard": true
+  },
+  {
+    "locale": "en",
+    "workload": true,
+    "negativeRejected": true,
+    "faqKeyboard": true
+  }
+]

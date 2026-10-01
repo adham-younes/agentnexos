@@ -1,0 +1,117 @@
+{
+  "platform": {
+    "ar": {
+      "title": "بنية تجمع فهم اللغة مع انضباط أنظمة الأعمال.",
+      "paragraphs": [
+        "تحتاج المؤسسة إلى نظام يعرف سياق المهمة ويستخدم أدواتها، وفي الوقت نفسه يحافظ على قواعدها وحالة عملياتها. لذلك يُصمّم الحل حول مكونات لكل منها مسؤولية واضحة: المعرفة، والتنسيق، والتكامل، والسياسات، والتقييم، والتشغيل.",
+        "تنسيق الوكلاء — Agent Orchestration",
+        "يتولى التنسيق تحديد الخطوات وحالة العملية وانتقال العمل بين الأدوات والمراجعين. يمكن أن يبدأ التصميم بوكيل واحد وأدوات متخصصة، أو بمجموعة وكلاء عندما تبرر طبيعة العمل فصل الأدوار. يُحدد الاختيار وفق تعقيد المهمة ووضوح الاختبارات وتكلفة التشغيل.",
+        "هندسة السياق — Context Engineering",
+        "يحتاج الوكيل إلى المعلومات المناسبة في اللحظة المناسبة: طلب المستخدم، وسياسة العملية، والمصادر المسموح بها، ونتائج الأدوات السابقة. تُنظّم هذه المعلومات لتظل ذات صلة بالمهمة، وتُفصل البيانات الواردة من مستندات خارجية عن التعليمات التي تحكم النظام.",
+        "هندسة المعرفة — RAG وGraphRAG",
+        "تبدأ المعرفة المؤسسية من جودة المصادر وصلاحياتها وإصداراتها. تُصمم آلية الاسترجاع لربط الإجابة بمستندات محددة، واختبار البحث في النصوص العربية والجداول والمصطلحات الخاصة بالمؤسسة. يمكن استخدام GraphRAG عندما تكون العلاقات والأسئلة الممتدة عبر مجموعة المعرفة جزءًا جوهريًا من الحاجة؛ تُدرس فائدته مقابل تكلفة الفهرسة والتحديث.",
+        "تكامل الأدوات — APIs وMCP",
+        "تعرض الأدوات عمليات محددة مثل قراءة حالة طلب أو إعداد مسودة أو إنشاء سجل. يُعرّف لكل أداة عقد للمدخلات والمخرجات والصلاحيات والأخطاء. يمكن استخدام MCP لتوحيد طريقة إتاحة الأدوات والمصادر للنظام؛ وتبقى المصادقة وسياسة الوصول وفحص الإجراء مسؤولية التطبيق والأنظمة المتكاملة.",
+        "تواصل الوكلاء — A2A",
+        "قد تحتاج المؤسسة إلى تنسيق عمل بين وكلاء مستقلين أو منصات مختلفة. يتيح A2A أسلوبًا لتبادل المهام والقدرات والنتائج. يُضاف عندما توجد حاجة فعلية لهذا النوع من التعاون، مع تحديد ما يجوز تفويضه وما ينتقل من سياق وصلاحية.",
+        "التنفيذ المستمر — Durable Execution",
+        "قد تتوقف العملية في انتظار اعتماد أو رد مورد أو انتهاء خدمة خارجية. تحتاج هذه الحالات إلى حفظ حالة العمل واستئنافه، مع معرفة الخطوات المكتملة. أما الإجراءات التي تغيّر أنظمة الأعمال فتحتاج أيضًا إلى مفاتيح منع التكرار والتحقق من النتيجة؛ حفظ الحالة وحده لا يمنع ازدواج الأثر الخارجي.",
+        "طبقة السياسات — Policy Enforcement",
+        "تُطبق قواعد المؤسسة على الأداة والطلب والمستخدم والبيانات والإصدار. تشمل الحدود المالية، فصل المهام، اشتراط الموافقة، ومتى يجوز التفويض أو التصعيد. يمكن للنموذج أن يقترح إجراءً، لكن السماح به تحدده طبقة تنفيذ قابلة للاختبار.",
+        "الرصد والتقييم — Observability & Evals",
+        "تُختبر جودة استخراج البيانات وصحة المراجع واستخدام الأدوات والتزام السياسة. أثناء التشغيل تُراقب حالات الفشل والتكلفة وزمن المعالجة والاستثناءات، مع ضبط ما يُحفظ في السجلات. يتيح تتبع الإصدارات ربط تغير الأداء بتغير نموذج أو أداة أو سياسة.",
+        "الأطر واختيارها",
+        "تستخدم مساحة التصميم الحالية Vercel AI SDK وMastra. لم يُفعّل Eve أو التنفيذ المستمر المؤسسي. يُختار إطار المشروع وفق متطلباته، وتُوثق قرارات المعمارية وأسبابها."
+      ]
+    },
+    "en": {
+      "title": "An architecture that combines language understanding with business discipline.",
+      "paragraphs": [
+        "An enterprise system needs task context and tools while preserving business rules and process state. Knowledge, orchestration, integrations, policy, evaluation and operations each have a defined responsibility.",
+        "Agent orchestration",
+        "Coordinate steps, process state, tools and reviewers. Start with one agent and specialist tools; separate roles only when task complexity, testability and operating cost justify it.",
+        "Context engineering",
+        "Select the request, current process policy, authorized sources and prior tool results needed now. Keep external document data separate from the instructions governing execution.",
+        "RAG and GraphRAG",
+        "Start with source quality, permissions and versions. Link answers to specific documents and test Arabic text, tables and domain terminology. Assess GraphRAG when entity relationships or collection-wide questions matter, against indexing and update cost.",
+        "APIs and MCP",
+        "Tools expose specific operations with typed inputs, outputs, permissions and errors. MCP can standardize access, while authentication, authorization and action validation remain application responsibilities.",
+        "A2A",
+        "Independent agents may need to exchange tasks, capabilities and results. Add this when there is a concrete interoperability need, with explicit context and permission boundaries.",
+        "Durable execution",
+        "Persist state and completed steps across waits and failures. External writes also require idempotency and result verification: saved state alone cannot prevent duplicate effects.",
+        "Policy enforcement",
+        "Evaluate tools, requests, users, data and versions under organizational rules. The model proposes an action; a testable execution layer authorizes it.",
+        "Observability and evaluation",
+        "Test extraction, citations, tool use and policy compliance. Monitor failure, cost, processing time and exceptions while controlling logged data. Track versions to connect changed behavior to models, tools or policies.",
+        "Framework selection",
+        "The current design preview uses Vercel AI SDK and Mastra. Eve and enterprise durable execution are not enabled. Evaluate the delivery framework against requirements and record architectural decisions; avoid adding frameworks without a justified need."
+      ]
+    }
+  },
+  "integrations": {
+    "ar": {
+      "title": "أضف قدرات جديدة إلى الأنظمة التي يعتمد عليها فريقك.",
+      "paragraphs": [
+        "يمتلك العميل عادة نظامًا لتسجيل الطلبات، وآخر لإدارة العملاء، ومصادر للمستندات والبريد. يبدأ التكامل بتحديد النظام المرجعي لكل بيان: أين تُقرأ الحقيقة؟ وأين يُكتب الأثر النهائي؟ ومن يجيز هذا التغيير؟",
+        "تُراجع واجهات API والصلاحيات وحدود الاستخدام وبيئات الاختبار. وتُحدد حالات تعطل التكامل، وآلية المصالحة والتحقق، وكيفية التعامل مع إجراء نجح في النظام الخارجي دون وصول تأكيده إلى الوكيل.",
+        "نطاقات التكامل: ERP والمحاسبة؛ CRM؛ البريد والتعاون؛ إدارة المستندات؛ إدارة الحالات؛ WMS وTMS؛ الهوية المؤسسية.",
+        "إذا لم تتوفر API: تُدرس البدائل مع العميل، مثل تبادل ملفات منظم أو أتمتة واجهة ضمن نطاق مصرح به. يُراعى أن أتمتة الواجهة تتأثر بتغير الشاشة وتحتاج متابعة واختبارات مختلفة.",
+        "حالة التكامل على الموقع: يوضّح كل تكامل ما إذا كان منفذًا ومختبرًا، أو قابلًا للتطوير حسب المشروع. تُذكر المتطلبات والإصدارات المعنية عند عرض تكامل مثبت."
+      ]
+    },
+    "en": {
+      "title": "Add capabilities to the systems your team already depends on.",
+      "paragraphs": [
+        "Define the system of record for every field: where is truth read, where is the final effect written, and who authorizes the change?",
+        "Review APIs, permissions, rate limits and test environments. Define outage handling, reconciliation and verification, especially when an external action succeeds without an acknowledgement.",
+        "Potential scopes include ERP and accounting, CRM, collaboration and email, document and case management, WMS/TMS and enterprise identity. These require project-specific delivery; they are not ready-made public connectors.",
+        "Without an API, assess structured file exchange or authorized interface automation. Screen automation has different maintenance and testing requirements as interfaces change.",
+        "Each implemented integration should disclose its tested scope, requirements and relevant versions. The current workspace has no enterprise-system write connectors."
+      ]
+    }
+  },
+  "about": {
+    "ar": {
+      "title": "هندسة قريبة من العمل الذي تريد المؤسسة إنجازه.",
+      "paragraphs": [
+        "تركز AgentNexos على تطوير أنظمة وكيلة مرتبطة بعمليات المؤسسة: معرفة يمكن الرجوع إليها، وأدوات يمكن استخدامها ضمن صلاحيات، وقرارات يمكن مراجعتها، وتنفيذ يمكن تتبعه.",
+        "يقود المشروع أدهم يونس — المؤسس ومهندس الأنظمة الوكيلة. يبدأ العمل من فهم التفاصيل التي تحدد نجاح الحل: كيف يعمل الفريق اليوم، ومن يعتمد الاستثناء، وأين تُسجل النتيجة، وما الذي يحتاجه العميل لإدارة النظام بعد التسليم.",
+        "نتعامل مع اختيار التقنية بوصفه قرارًا هندسيًا يخدم هذه المتطلبات. وتُحدد حدود كل مشروع وتسليماته بوضوح، بما يسمح بمناقشة الجدوى والمسؤوليات قبل البناء."
+      ]
+    },
+    "en": {
+      "title": "Engineering close to the work the organization needs to accomplish.",
+      "paragraphs": [
+        "AgentNexos focuses on enterprise agent systems: traceable knowledge, tools with scoped permissions, reviewable decisions and observable execution.",
+        "Adham Younes is the founder and agent-systems engineer. Work begins with practical detail: how the team operates, who approves exceptions, where outcomes are recorded and what the client needs to manage the system after handover.",
+        "Technology choices serve these requirements. Each project defines scope and deliverables so feasibility and responsibilities can be discussed before development."
+      ]
+    }
+  },
+  "process": {
+    "ar": {
+      "title": "كل مرحلة تجيب عن سؤال قبل الانتقال إلى التالية.",
+      "paragraphs": [
+        "المرحلة الأولى — هل تستحق العملية الاستثمار؟",
+        "نحدد المشكلة وحجمها وخط الأساس وصاحب العملية. يتوقف القرار على جدوى التحسين وتوافر البيانات والقدرة على قياس النتيجة.",
+        "المرحلة الثانية — هل يمكن بناء حل مناسب؟",
+        "نختبر الافتراضات الأساسية على نطاق محدود، ونراجع جودة الاستخراج والاسترجاع واستخدام الأدوات. يحدد الاختبار ما يحتاج إلى معالجة قبل التكامل الإنتاجي.",
+        "المرحلة الثالثة — هل تستوفي العملية شروط التشغيل؟",
+        "نراجع الصلاحيات والموافقات والتكاملات وأخطاء التنفيذ والدعم. يشارك مالك العملية والتقنية والأمن في قرار القبول وفق مسؤولياتهم.",
+        "المرحلة الرابعة — هل تظهر القيمة في الاستخدام الفعلي؟",
+        "نقارن النتائج بخط الأساس، ونراجع استخدام الفريق والاستثناءات والتكلفة. يحدد ذلك أولوية التعديل والتوسع أو تقليص النطاق.",
+        "التغيير جزء من التنفيذ: يتحقق الفريق من الأدوار الجديدة، ويُشرح للموظف ما يراجعه وما يستطيع تصحيحه. تحافظ المؤسسة على خبرة موظفيها داخل العملية وتستفيد من ملاحظاتهم في تحسينها."
+      ]
+    },
+    "en": {
+      "title": "A phased approach with evidence at each decision.",
+      "paragraphs": [
+        "Discovery identifies the process owner, source of truth, current performance and operating exceptions. Agree a bounded goal and acceptance criteria.",
+        "Design maps steps, permissions, human decisions, integrations and recovery. Identify dependencies before a wider commitment.",
+        "A pilot tests normal, incomplete, conflicting, failed and unauthorized cases. Compare outcomes with the baseline and document remaining limitations.",
+        "Delivery follows accepted scope, tested integrations and operational handover. Expansion requires measured evidence, rather than the quality of a demonstration alone."
+      ]
+    }
+  }
+}

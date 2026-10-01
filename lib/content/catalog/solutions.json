@@ -1,0 +1,190 @@
+[
+  {
+    "slug": "procurement",
+    "ar": {
+      "title": "المشتريات وإدارة الموردين",
+      "paragraphs": [
+        "من طلب الشراء إلى اعتماد المورد، على أساس واضح.",
+        "تتعقد المقارنة عندما تختلف أسماء الأصناف ووحدات القياس والعملات وشروط السداد بين العروض. وقد يبدو عرض أقل سعرًا بينما يتضمن مدة تسليم أطول أو تكلفة إضافية لا تظهر في عنوانه.",
+        "يُصمَّم الحل لجمع العروض، واستخراج بنودها، وربطها بطلب الشراء وقائمة الموردين والسياسة المعتمدة. تُعرض الفروق في مقارنة قابلة للمراجعة؛ تشمل السعر والضريبة والنقل والمهلة وصلاحية العرض وشروط السداد. تحتاج البيانات المفقودة إلى استكمال من مصدر صالح، وتُعرض الافتراضات بوضوح عند السماح بها.",
+        "يستطيع مسؤول المشتريات تعديل معايير المقارنة وطلب توضيح من المورد. ينتقل الملف بعد ذلك إلى صاحب الصلاحية، وتُربط الموافقة بالنسخة التي راجعها. ينشأ أمر الشراء عبر التكامل بعد استيفاء الاعتماد، ويُتحقق من تسجيله في النظام.",
+        "نطاق أول مشروع: فئة مشتريات واحدة، سياسة اعتماد محددة، ومجموعة موردين معروفة.",
+        "مؤشرات التقييم: زمن إعداد المقارنة، اكتمال البيانات، أخطاء توحيد الوحدات، وزمن انتقال الطلب للاعتماد. يُفصل زمن انتظار قرار المدير عن زمن تجهيز الملف.",
+        "ما يلزم للبناء: عينات عروض وطلبات، سجل الأصناف والموردين، سياسة المقارنة والاعتماد، وواجهة للقراءة أو الإنشاء في النظام الحالي."
+      ]
+    },
+    "en": {
+      "title": "Procurement and supplier management",
+      "paragraphs": [
+        "A clear basis for the journey from purchase request to supplier approval.",
+        "Quotes are difficult to compare when item names, units, currencies and payment terms differ. A lower headline price may hide a longer lead time or additional cost.",
+        "The proposed workflow collects quotes and their line items, then connects them to the purchase request, supplier register and approved policy. The comparison covers price, tax, freight, lead time, validity and payment terms. Missing information requires a valid source; any permitted assumptions remain visible.",
+        "The buyer can adjust comparison criteria and request clarification. Approval belongs to the authorized reviewer and the exact version reviewed. Creating an order requires an authorized integration and verification that the target system recorded it.",
+        "Initial scope: one purchasing category, a defined approval policy and known suppliers.",
+        "Evaluation: comparison preparation time, completeness, unit-conversion errors and time to approval. Separate management waiting time from active preparation time.",
+        "Inputs required: sample requests and quotes, item and supplier records, comparison and approval policy, and the relevant system interface."
+      ]
+    }
+  },
+  {
+    "slug": "accounts-payable",
+    "ar": {
+      "title": "الفواتير والحسابات الدائنة",
+      "paragraphs": [
+        "ملف فاتورة مكتمل قبل وصوله إلى الاعتماد.",
+        "يقضي فريق الحسابات وقتًا في البحث عن أمر الشراء وإثبات الاستلام ومراجعة الضريبة والكميات. تزداد المراجعة صعوبة عند تعدد الفروع أو اختلاف طريقة إرسال الموردين للمستندات.",
+        "يرتب الحل المستندات، ويستخرج الحقول، ويطابق الفاتورة مع أمر الشراء وإثبات الاستلام متى توافرت بياناتهما. يعرض فروق السعر والكمية والعملة، ويبحث عن مؤشرات التكرار، ويحدد المستندات التي ما زالت ناقصة. تُنفذ الحسابات والتحقق من الإجماليات بقواعد برمجية، بينما يُستخدم النموذج لفهم المستند وتصنيف الحالة وصياغة شرح للمراجع.",
+        "يستلم المحاسب قائمة حالات مصنفة وأسبابًا ومراجع، ويتخذ قرار القبول أو التصحيح أو الإحالة. تحدد سياسة المؤسسة ما يمكن تسجيله تلقائيًا وما يحتاج إلى اعتماد. تظل المدفوعات عملية منفصلة ذات تفويض ورقابة مالية.",
+        "مؤشرات التقييم: نسبة المطابقة الصحيحة، الحالات التي أعيدت للمورد، زمن تجهيز الفاتورة، والتكرارات المؤكدة بعد مراجعة بشرية."
+      ]
+    },
+    "en": {
+      "title": "Invoices and accounts payable",
+      "paragraphs": [
+        "A complete invoice packet before approval.",
+        "Accounts teams spend time finding purchase orders and receipt records, then checking tax and quantities. Multiple branches and inconsistent supplier documents make this harder.",
+        "The proposed workflow organizes documents, extracts fields and matches invoices to purchase orders and receipts where available. It shows differences in price, quantity and currency, flags possible duplicates and lists missing documents. Code performs arithmetic and total checks; the model supports document interpretation, classification and explanation.",
+        "The accountant receives classified cases with reasons and references and decides whether to accept, correct or escalate. Organizational policy defines what can be recorded automatically. Payments remain a separate process with financial authorization and controls.",
+        "Evaluation: correct matches, cases returned to suppliers, invoice preparation time and duplicates confirmed by human review."
+      ]
+    }
+  },
+  {
+    "slug": "orders-collections",
+    "ar": {
+      "title": "الطلبات والمبيعات والتحصيل",
+      "paragraphs": [
+        "رؤية واحدة للطلب من الاتفاق إلى التحصيل.",
+        "قد يوافق فريق المبيعات على طلب، ثم يتوقف بسبب نقص مخزون أو اختلاف سعر أو مستند تسليم. ولا يصل تفسير التأخير إلى العميل أو المالية في الوقت المناسب.",
+        "يربط الحل بيانات الطلب بالمخزون والتسعير والتسليم والفواتير. يكشف ما يمنع تقدم الحالة، ويجهز للموظف بدائل مسموحًا بها، ويتابع اكتمال المستندات. وفي التحصيل يجمع حالة الفاتورة والمراسلات السابقة والنزاعات، ويقترح متابعة مناسبة يراجعها المسؤول.",
+        "تتطلب الخصومات والتعويضات وتغيير شروط السداد اعتمادًا وفق السياسة. ولا تُستخدم توقعات النموذج وحدها لمنح ائتمان أو تغيير حدود العميل.",
+        "مؤشرات التقييم: زمن تجهيز الطلب، عدد الحالات المتوقفة بلا سبب مصنف، اكتمال مستندات التحصيل، ودقة المتابعة. تُدرس مؤشرات رأس المال العامل مع المالية، ويُراعى أثر شروط العملاء والموسمية."
+      ]
+    },
+    "en": {
+      "title": "Orders, sales and collections",
+      "paragraphs": [
+        "One view of the order, from agreement to collection.",
+        "A sales order can stall because of stock, price differences or delivery paperwork. Customers and finance may not receive a clear explanation in time.",
+        "The proposed workflow connects order data with inventory, pricing, delivery and invoices. It identifies blockers, prepares permitted alternatives and tracks document completeness. Collections support brings together invoice status, previous correspondence and disputes to draft a follow-up for review.",
+        "Discounts, compensation and payment-term changes require approval under policy. Model predictions alone cannot grant credit or change customer limits.",
+        "Evaluation: order preparation time, uncategorized blockers, collection-document completeness and follow-up accuracy. Finance should assess working-capital measures alongside seasonality and customer terms."
+      ]
+    }
+  },
+  {
+    "slug": "contracts",
+    "ar": {
+      "title": "العقود والالتزامات",
+      "paragraphs": [
+        "التزامات العقود في متناول الفرق المسؤولة عنها.",
+        "بعد توقيع العقد، تتوزع الالتزامات بين الإدارة القانونية والمالية والتشغيل. قد يبقى موعد تجديد أو ضمان أو إشعار في مستند يصعب الرجوع إليه عند الحاجة.",
+        "يُصمّم الحل لاستخراج الأطراف والمواعيد والالتزامات وشروط الإخطار، وربط كل بند بصفحته ونسخة العقد. تنشأ قائمة متابعة لأصحاب المسؤولية، وتُعرض التغييرات بين النسخ والالتزامات التي تحتاج إلى تفسير.",
+        "تراجع الإدارة القانونية البنود الملتبسة؛ ويمكنها تصحيح الاستخراج واعتماد تفسير يستخدمه الفريق. تُراجع الإشعارات الملزمة قبل إرسالها، ويحتفظ النظام بالمصدر الذي بُني عليه التنبيه.",
+        "مؤشرات التقييم: صحة استخراج الالتزامات، اكتمال التعيين للمسؤولين، المواعيد التي تمت متابعتها، وزمن العثور على البند."
+      ]
+    },
+    "en": {
+      "title": "Contracts and obligations",
+      "paragraphs": [
+        "Keep contractual obligations within reach of their owners.",
+        "After signature, obligations are shared across legal, finance and operations. Renewal, guarantee and notice deadlines can remain buried in documents.",
+        "The proposed workflow extracts parties, dates, obligations and notice terms, linking each item to its page and contract version. It creates an owner-specific follow-up list and highlights changes between versions and obligations requiring interpretation.",
+        "Legal reviews ambiguous clauses, corrects extraction and approves interpretations. Binding notices require review before sending. The source behind every reminder stays identifiable.",
+        "Evaluation: extraction accuracy, owner assignment, tracked deadlines and time to locate a clause."
+      ]
+    }
+  },
+  {
+    "slug": "knowledge",
+    "ar": {
+      "title": "المعرفة المؤسسية",
+      "paragraphs": [
+        "إجابات تراعي مصدر المعلومة وسياق السؤال.",
+        "يعرف الموظفون أن الإجابة موجودة في سياسة أو دليل أو مراسلة، لكن العثور على النسخة الصحيحة يستغرق وقتًا. ومع تغير الإجراءات، تظهر إجابات متعارضة ويزداد الاعتماد على أشخاص بعينهم.",
+        "تبدأ الخدمة بحصر المصادر وملكية تحديثها، ثم تنظيم الاسترجاع وفق صلاحيات الاطلاع. تُقدّم الإجابة مع مراجعها وتاريخ المستند وحدود ما أمكن التحقق منه. إذا تعارضت المصادر، تُعرض المشكلة للمسؤول بدل إخفائها داخل صياغة جازمة.",
+        "يمكن استخدام RAG للبحث في المعرفة المعتمدة، وتقييم GraphRAG حين تكون العلاقات بين الكيانات أو الأسئلة الممتدة عبر مجموعة الوثائق جزءًا مهمًا من الحاجة. يُختار الأسلوب بناءً على جودة النتائج وكلفة التحديث والاسترجاع.",
+        "مؤشرات التقييم: صحة الإجابة، صحة المرجع، استرجاع النسخة السارية، احترام الصلاحيات، والوقت الذي يحتاجه الموظف للوصول إلى المعلومة."
+      ]
+    },
+    "en": {
+      "title": "Enterprise knowledge",
+      "paragraphs": [
+        "Answers that respect the source and the question.",
+        "Employees know the answer exists in a policy, manual or message, but finding the correct version takes time. Changing procedures introduce conflicting answers and reliance on a few individuals.",
+        "The service starts with source inventory and update ownership, then designs retrieval around access permissions. Answers include references, document dates and verification limits. Conflicting sources are escalated rather than concealed behind confident wording.",
+        "RAG can support approved knowledge retrieval. GraphRAG may be evaluated when relationships between entities or questions spanning document collections matter. Choose based on result quality and update and retrieval cost.",
+        "Evaluation: answer and citation accuracy, current-version retrieval, permission compliance and time to reach the information."
+      ]
+    }
+  },
+  {
+    "slug": "customer-service",
+    "ar": {
+      "title": "خدمة العملاء وإدارة الحالات",
+      "paragraphs": [
+        "خدمة تتقدم بالحالة حتى حلها.",
+        "يحصل العميل أحيانًا على رد سريع، ثم يكرر بياناته عند انتقاله إلى فريق آخر. سبب المشكلة أن المحادثة منفصلة عن الطلب أو الفاتورة أو سياسة المعالجة.",
+        "يربط الحل طلب العميل بسجله والعملية المطلوبة، ويجهز المعلومات اللازمة للموظف أو الأداة المصرح بها. يتابع الحالة، ويحدد الخطوة التالية، ويصعّد النزاعات أو الطلبات التي تتجاوز حدود التفويض.",
+        "تُطبق سياسة المؤسسة على التعويض والاسترداد وتغيير الطلب، ويتاح للعميل الانتقال إلى موظف. تُفحص الهوية قبل عرض معلومات تخص حسابًا أو تنفيذ تغيير عليه.",
+        "مؤشرات التقييم: زمن الحل، إعادة فتح الحالة، تكرار التواصل، دقة التصعيد، ورضا العميل. سرعة أول رد مؤشر مساعد ضمن رحلة الخدمة."
+      ]
+    },
+    "en": {
+      "title": "Customer service and case management",
+      "paragraphs": [
+        "Move the case toward resolution.",
+        "A customer can receive a quick reply and still repeat their information at every handoff. The conversation is often disconnected from the order, invoice or resolution policy.",
+        "The proposed workflow connects the request to the customer record and relevant process. It prepares information for staff or an authorized tool, tracks the next step and escalates disputes or requests beyond delegation.",
+        "Organizational policy governs refunds, compensation and order changes. Customers must be able to reach staff. Verify identity before exposing account information or making a change.",
+        "Evaluation: resolution time, reopened cases, repeated contacts, escalation accuracy and satisfaction. First-response speed is one supporting measure across the full service journey."
+      ]
+    }
+  },
+  {
+    "slug": "employee-services",
+    "ar": {
+      "title": "عمليات الموظفين والخدمات الداخلية",
+      "paragraphs": [
+        "طلبات الموظفين بمعلومات مكتملة ومسؤولية محددة.",
+        "تتكرر أسئلة السياسات وطلبات العهد والوصول والخطابات بين الموارد البشرية وتقنية المعلومات والإدارة. تختلف المتطلبات حسب الوظيفة والفرع وحالة الموظف.",
+        "يمكن بناء مسار يفهم نوع الطلب، ويرجع إلى السياسة السارية، ويجمع الحقول والمستندات اللازمة، ثم يحيله إلى الجهة المختصة. ترتبط خطوات تهيئة الموظف أو نقل دوره أو إنهاء وصوله بجدول مسؤوليات واعتمادات محدد.",
+        "تُعامل البيانات الشخصية والحساسة ضمن حدود الاطلاع المناسبة. قرارات التوظيف والترقية والجزاء ليست جزءًا تلقائيًا من أتمتة الخدمات الإدارية؛ تحتاج نطاقًا وتقييمًا مستقلين ومسؤولية بشرية.",
+        "مؤشرات التقييم: اكتمال الطلب، زمن المعالجة حسب الفريق، إعادة الإحالة، والمهام التي تجاوزت موعدها."
+      ]
+    },
+    "en": {
+      "title": "Employee operations and internal services",
+      "paragraphs": [
+        "Complete employee requests with clear ownership.",
+        "Policy questions, equipment requests, access and letters move between HR, IT and administration. Requirements differ by role, branch and employment status.",
+        "A proposed workflow identifies the request, consults the current policy, collects required fields and documents, and routes it to the responsible team. Onboarding, role transfers and access termination follow a defined responsibility and approval schedule.",
+        "Personal and sensitive data require appropriate access boundaries. Hiring, promotion and disciplinary decisions are not automatically part of administrative service automation; they need separate scope, evaluation and human accountability.",
+        "Evaluation: request completeness, processing time by team, repeated routing and overdue tasks."
+      ]
+    }
+  },
+  {
+    "slug": "exceptions",
+    "ar": {
+      "title": "إدارة الاستثناءات والتنسيق التشغيلي",
+      "paragraphs": [
+        "كل استثناء له تفسير ومسؤول وخطوة تالية.",
+        "تتعطل العمليات عند حدوث حالة لا يغطيها المسار المعتاد: مستند متعارض، مورد متأخر، فرق كمية، أو صلاحية غير متاحة. تظهر هذه الحالات في رسائل متفرقة ويصعب تقدير أثرها على العمل.",
+        "يُصمّم الحل لجمع الاستثناءات من مصادرها، وتصنيف السبب، وتحديد المعلومات اللازمة، وإحالة الحالة إلى مالكها. يجهز النظام ملفًا مختصرًا يوضح الوقائع والمراجع والخيارات المتاحة، ويتابع الموعد والإجراء التالي.",
+        "تستفيد الإدارة من معرفة الأنماط المتكررة وأسباب إعادة العمل. وعندما تسمح السياسة بإجراء محدد، يمكن ربطه بأداة التنفيذ؛ أما الحالات الجديدة أو ذات الأثر المرتفع فتنتقل للمراجعة.",
+        "مؤشرات التقييم: عمر الاستثناء، الحالات غير المسندة، زمن إغلاق السبب، وتكرار نفس المشكلة بعد المعالجة."
+      ]
+    },
+    "en": {
+      "title": "Exceptions and operational coordination",
+      "paragraphs": [
+        "Every exception needs an explanation, an owner and a next step.",
+        "Conflicting documents, late suppliers, quantity differences and unavailable permissions can interrupt the normal workflow. Scattered messages make their impact difficult to understand.",
+        "The proposed workflow collects exceptions from their sources, classifies causes, identifies missing information and assigns an owner. It prepares a concise packet of facts, references and available options, then tracks the deadline and next action.",
+        "Management can examine recurring patterns and rework causes. A permitted action may connect to an execution tool after authorization; unfamiliar or high-impact cases require review.",
+        "Evaluation: exception age, unassigned cases, time to resolve the cause and recurrence after treatment."
+      ]
+    }
+  }
+]
