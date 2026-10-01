@@ -7,13 +7,15 @@ import { DefaultChatTransport } from "ai";
 import { ArrowUp, ArrowUpRight, Check, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow } from "lucide-react";
 import { Conversation, ConversationContent, ConversationScrollButton, messagesToMarkdown } from "@/components/ai-elements/conversation";
 import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
+import { signOut } from "@/app/[locale]/login/actions";
+import { Brand } from "@/components/site/brand";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
 import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
-export function AgentWorkspace() {
+export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean }) {
   const locale = useLocale();
   const c = agentWorkspaceCopy[locale];
   const [input, setInput] = useState("");
@@ -54,7 +56,7 @@ export function AgentWorkspace() {
     return () => controller.abort();
   }, [readinessAttempt]);
   function submit(text = input) {
-    if (!text.trim() || busy || ready !== true) return;
+    if (!text.trim() || busy || ready !== true || !accountReady) return;
     clearError(); setLimitCode(null); setLimitCount(null); setNotice(null); setPhase(-1); setInput("");
     void sendMessage({ text: text.trim() }).catch(() => setInput(text));
   }
@@ -67,10 +69,9 @@ export function AgentWorkspace() {
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex min-h-20 max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3" aria-label={c.home}>
-            <span className="flex size-10 items-center justify-center rounded-xl border border-border bg-secondary"><Layers3 className="size-5" aria-hidden="true" /></span>
-            <span dir="ltr" className="text-xl font-semibold tracking-tight">Agentnexos</span>
+            <Brand />
           </Link>
-          <LocaleSwitcher />
+          <div className="flex items-center gap-3"><LocaleSwitcher /><form action={signOut}><input type="hidden" name="locale" value={locale}/><button type="submit" className="min-h-11 rounded-lg border border-border px-3 text-xs hover:bg-secondary">{locale==="ar"?"خروج":"Sign out"}</button></form></div>
         </div>
       </header>
       <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[260px_minmax(0,1fr)]">
@@ -88,13 +89,14 @@ export function AgentWorkspace() {
             <div className="flex min-w-0 items-center gap-2"><span className="size-1.5 shrink-0 rounded-full bg-primary" /><p className="text-xs leading-5 text-muted-foreground">{c.label}</p></div>
             <div className="flex gap-1"><button onClick={() => {setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);composer.current?.focus();}} disabled={busy} aria-label={c.newChat} className="rounded-lg p-3 hover:bg-secondary lg:hidden"><Plus className="size-4" /></button><button disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="rounded-lg p-3 hover:bg-secondary disabled:opacity-30"><Download className="size-4" /></button></div>
           </div>
+          {!accountReady && <p role="alert" className="px-5 py-3 text-sm text-muted-foreground">{locale==="ar"?"تعذر تجهيز ملف الحساب. أعد تحميل الصفحة قبل المتابعة.":"Your account profile could not be prepared. Reload before continuing."}</p>}
           <Conversation key={messages.length ? "conversation" : "welcome"} className="min-h-0" initial={messages.length ? "smooth" : false} resize="smooth" aria-label={c.label}>
             <ConversationContent className="mx-auto w-full max-w-4xl gap-8 px-5 py-8 sm:px-9 sm:py-12">
-              {messages.length === 0 ? <div className="py-2 sm:py-5">
-                <div className="mb-7 flex size-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10"><Layers3 className="size-7 text-primary" /></div>
+              {messages.length === 0 ? <div className="py-2 text-center sm:py-5">
+                <div className="mx-auto mb-7 flex size-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10"><Layers3 className="size-7 text-primary" /></div>
                 <p className="mb-3 text-xs font-medium text-primary">{c.badge}</p>
-                <h1 className="max-w-2xl text-3xl font-semibold leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
-                <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{c.intro}</p>
+                <h1 className="mx-auto max-w-2xl text-3xl font-semibold leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
+                <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{c.intro}</p>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
                 <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "Agentnexos"}</div>
@@ -112,9 +114,9 @@ export function AgentWorkspace() {
           <div className="shrink-0 px-5 pb-5 pt-3 sm:px-9">
             <div className="mx-auto max-w-4xl">
               <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}{ready === true && dailyBudget !== null && <span className="block">{c.budgetLabel} {dailyBudget} {c.dailyUnit}</span>}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
-              <form onSubmit={e => {e.preventDefault();submit();}} className="rounded-2xl border border-border bg-card p-3 shadow-[0_8px_30px_-18px_#000000] focus-within:border-primary/70">
+              <form onSubmit={e => {e.preventDefault();submit();}} className="rounded-2xl border border-border bg-card p-3 shadow-xl shadow-black/10 focus-within:border-primary/70">
                 <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="max-h-40 min-h-16 w-full resize-y bg-transparent px-2 py-2 text-sm leading-7 outline-none placeholder:text-muted-foreground" />
-                <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <button type="button" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background"><Square className="size-4" /></button> : <button type="submit" disabled={!input.trim() || ready !== true} aria-label={c.send} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background hover:bg-primary disabled:opacity-30"><ArrowUp className="size-5" /></button>}</div>
+                <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <button type="button" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background"><Square className="size-4" /></button> : <button type="submit" disabled={!input.trim() || ready !== true || !accountReady} aria-label={c.send} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background hover:bg-primary disabled:opacity-30"><ArrowUp className="size-5" /></button>}</div>
               </form>
               <p className="mt-2 text-center text-[11px] leading-6 text-muted-foreground">{c.contextNotice}</p>
               <p className="mt-3 text-center text-[11px] leading-6 text-muted-foreground">{c.privacy} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
