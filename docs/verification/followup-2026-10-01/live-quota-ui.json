@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-01T01:39:57.031Z",
+  "mocked": false,
+  "status": 429,
+  "retryAfter": "85333",
+  "body": {
+    "code": "DEMO_DAILY_LIMIT",
+    "retryAfterSeconds": 85333
+  },
+  "alert": "This connection reached the preview limit: 5 requests in 24 hours. Capacity returns as earlier requests reach 24 hours old; this request was not sent to the model.\n\nTry again",
+  "passed": true
+}

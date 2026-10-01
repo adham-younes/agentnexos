@@ -1,0 +1,13 @@
+const {chromium,expect}=require('@playwright/test');const fs=require('fs');
+(async()=>{const b=await chromium.launch();const report=[];
+for(const locale of ['ar','en']){
+ const p=await b.newPage({viewport:{width:390,height:844}});let code=null;const bodies=[];
+ await p.route('**/api/agentnexos',async route=>{if(route.request().method()==='GET')return route.fulfill({json:{ready:true}});bodies.push(route.request().postDataJSON());if(code)return route.fulfill({status:429,headers:{'retry-after':'3600'},json:{code,retryAfterSeconds:3600}});
+ const n=bodies.length;const events=[{type:'start'},{type:'text-start',id:'answer'},{type:'text-delta',id:'answer',delta:n===1?'Hello from the fictional assistant':'I am Agentnexos, a workflow design assistant.'},{type:'text-end',id:'answer'},{type:'finish'}];return route.fulfill({headers:{'content-type':'text/event-stream','x-vercel-ai-ui-message-stream':'v1'},body:events.map(e=>'data: '+JSON.stringify(e)+'\n\n').join('')+'data: [DONE]\n\n'});});
+ await p.goto(`${process.argv[2]||'http://localhost:3002'}/${locale}/agentnexos`);const send=p.getByRole('button',{name:locale==='ar'?'إرسال الطلب':'Send request',exact:true});
+ for(const text of ['؟؟','من انت']){await p.locator('textarea').fill(text);await expect(send).toBeEnabled();await send.click();await expect(p.getByRole('button',{name:locale==='ar'?'إيقاف':'Stop',exact:true})).toHaveCount(0);await expect(p.locator('.is-assistant')).toHaveCount(bodies.length);}
+ if(bodies[1].messages.length!==3||bodies[1].messages[1].role!=='assistant')throw Error('Followup lost context');await expect(p.locator('main [role=alert]')).toHaveCount(0);
+ for(code of ['DEMO_DAILY_LIMIT','DEMO_GLOBAL_LIMIT','DEMO_BUSY']){await p.locator('textarea').fill('fictional followup');await send.click();const alert=p.locator('main [role=alert]');await expect(alert).toBeVisible();const text=await alert.innerText();if(code==='DEMO_DAILY_LIMIT'&&!text.includes('5'))throw Error('Missing daily quota explanation');if(code==='DEMO_BUSY'&&!(text.includes('Another request')||text.includes('طلب آخر')))throw Error('Missing busy explanation');await alert.getByRole('button').click();await expect(p.locator('textarea')).toHaveValue('fictional followup');}
+ const overflow=await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Overflow');report.push({locale,mocked:true,immediateTwoTurnSuccess:true,contextPreserved:true,limitReasons:['daily','global','busy'],retryPreservesInput:true,overflow});await p.close();}
+ await b.close();fs.mkdirSync('output/followup',{recursive:true});fs.writeFileSync('output/followup/mocked-ui.json',JSON.stringify(report,null,2));console.log(report);
+})().catch(e=>{console.error(e);process.exitCode=1});

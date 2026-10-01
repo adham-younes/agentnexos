@@ -10,7 +10,7 @@
 
 ## الإصلاح
 
-- migration جديدة أنشأها Supabase CLI: `20261001012933_demo_followup_limits.sql`، طُبقت فقط على `ruereqpvykwnakcnmxha`. لا مخططات المؤسسة التاريخية ولا تفعيل APIs القديمة.
+- migration جديدة أنشأها Supabase CLI: `20261001013146_demo_followup_limits.sql` (أنشأ CLI الملف أولًا عند012933 ثم طوبق رقم النسخة مع سجل التطبيق الفعلي فيSupabase عند013146، دون تغيير محتوىSQL)، طُبقت فقط على `ruereqpvykwnakcnmxha`. لا مخططات المؤسسة التاريخية ولا تفعيل APIs القديمة.
 - `reserve_agentnexos_demo_v2` يعيد نتيجة نوعية داخل نفس advisory transaction lock. يقبل متابعة فور completed/failed/cancelled، ويمنع reserved/running لنفس الاتصال حتى اكتمالها أو مرور 180 ثانية، وفق عمر API الحالي. لا ينتظر 30 ثانية بعد رد ناجح.
 - لم تُرفع ميزانية 5/اتصال أو100 إجمالًا خلال rolling24h. لا تعويض رصيد أو مسح طلبات حقيقية للتجارب. اختبارات قاعدة البيانات transactional مع rollback.
 - أسباب الرفض مستقلة: DEMO_BUSY وDEMO_DAILY_LIMIT وDEMO_GLOBAL_LIMIT، مع Retry-After محسوب من الحالة أو عمر الطلبات. الحجز غير الصالح أو تعطل RPC يبقى503 قبل الاتصال بالمزود.
@@ -27,4 +27,17 @@
 
 إصلاح DB متوافق مع النشر السابق؛ التراجع عن الواجهة/API لا يحتاج إسقاط الدالةv2 أو حذف بيانات. يلزم المحافظة على بوابات الحجز وعدم استعادة فترة انتظار خفية دون عرضها للمستخدم.
 
-أدلة المعاينة والإنتاج والـPR/SHA تسجل في تسليم النشر بعد جاهزية النسخة النهائية. الحالة التي قالت DATABASE_UNAVAILABLE في تقارير الدورة السابقة تاريخية؛ المفتاح صُحح وأثبتت الجاهزية الحية في1أكتوبر. Actions ليس مطلوبًا باشتراك مدفوع؛ نستخدم الفحص المحلي ومعاينةVercel مع توثيق تعطلActions المالي.
+أدلة المعاينة والإنتاج والـPR/SHA مسجلة في إغلاق الإصدار أدناه. الحالة التي قالت DATABASE_UNAVAILABLE في تقارير الدورة السابقة تاريخية؛ المفتاح صُحح وأثبتت الجاهزية الحية في1أكتوبر. Actions ليس مطلوبًا باشتراك مدفوع؛ نستخدم الفحص المحلي ومعاينةVercel مع توثيق تعطلActions المالي.
+
+
+## إغلاق الإصدار
+
+PR [#15](https://github.com/adham-younes/agentnexos/pull/15)، head `6c962b030cb6d27949fed1b3c31533d32d081f4f`؛ دمج عادي إلى main `3bca63e0d469472510239510b785489271ac66a6`. معاينة `dpl_GsACB4fhCV2yusgL8c2pVon2Q5Qn` READY على head نفسه، ثم إنتاج `dpl_C83cxxm5udsZ3LjeFPH1aM8ssc8L` READY وSHA مطابق.
+
+[preview-site.json](../verification/followup-2026-10-01/preview-site.json) و[production-site.json](../verification/followup-2026-10-01/production-site.json): 66 حالة ورحلتا تفاعل بلا إخفاقات؛ إنتاج ready:true وlegacy503. verify:site لا يستدعي نموذجًا حيًا، لذلك liveAgentVerified:false في هذين التقريرين مقصود، منفصل عن اختبار المزود الحي السابق وسجل المتابعة completed.
+
+اختبار [حد الاستخدام الحقيقي من الواجهة](../verification/followup-2026-10-01/live-quota-ui.json): 429/DEMO_DAILY_LIMIT وRetry-After:85333 ثانية عند الفحص، مع رسالة واضحة 5 requests/24h بدل generic error. هذا عارض مؤقت يخص اتصال الاختبار الذي بلغ الحد؛ لم يُرفع الحد أو يُمسح الرصيد لإكمال الاختبارات. رفض 429 لا يرسل طلبًا إلى النموذج.
+
+لإعادة اختبار UI دون استخدام مزود أو رصيد: `node docs/verification/followup-2026-10-01/check-ui.cjs http://localhost:3002` بعد تشغيل build محلي. الاختبار mocked صراحة؛ يحفظ نتيجته في output/followup ولا يعدل الأدلة المثبتة.
+
+نسخة migration في المستودع طوبقت مع version `20261001013146` وname:demo_followup_limits في schema_migrations على المشروع المعتمد؛ إعادة التسمية لا تعيد تطبيق SQL أو تنشئ ترقية ثانية. نشر التوثيق اللاحق يحفظ الأدلة ويطابق اسم الملف فقط، دون تغيير كود Runtime.
