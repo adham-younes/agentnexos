@@ -11,7 +11,7 @@ import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
-import { demoLimitCode, type DemoLimitCode } from "@/lib/agents/reservation";
+import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
 export function AgentWorkspace() {
   const locale = useLocale();
@@ -20,6 +20,8 @@ export function AgentWorkspace() {
   const [ready, setReady] = useState<boolean | null>(null);
   const [phase, setPhase] = useState(-1);
   const [limitCode, setLimitCode] = useState<DemoLimitCode | null>(null);
+  const [limitCount, setLimitCount] = useState<number | null>(null);
+  const [dailyBudget, setDailyBudget] = useState<number | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
   const [notice, setNotice] = useState<"cancelled" | "copyError" | null>(null);
   const [readinessAttempt, setReadinessAttempt] = useState(0);
@@ -31,6 +33,7 @@ export function AgentWorkspace() {
       if (response.status === 429) {
         const body = await response.clone().json().catch(() => null);
         setLimitCode(demoLimitCode(body));
+        setLimitCount(demoLimitCount(body));
       }
       return response;
     },
@@ -47,12 +50,12 @@ export function AgentWorkspace() {
   useEffect(() => {
     const controller = new AbortController();
     const deadline = AbortSignal.timeout(10000);
-    fetch("/api/agentnexos", { signal: AbortSignal.any([controller.signal, deadline]), cache: "no-store" }).then(r => { if (!r.ok) throw new Error("READINESS_FAILED"); return r.json(); }).then(data => setReady(data.ready === true)).catch(() => { if (!controller.signal.aborted) setReady(false); });
+    fetch("/api/agentnexos", { signal: AbortSignal.any([controller.signal, deadline]), cache: "no-store" }).then(r => { if (!r.ok) throw new Error("READINESS_FAILED"); return r.json(); }).then(data => {setReady(data.ready === true);const limits = previewLimitsSchema.safeParse(data.limits);setDailyBudget(limits.success ? limits.data.perConnectionDaily : null);}).catch(() => { if (!controller.signal.aborted) {setReady(false);setDailyBudget(null);} });
     return () => controller.abort();
   }, [readinessAttempt]);
   function submit(text = input) {
     if (!text.trim() || busy || ready !== true) return;
-    clearError(); setLimitCode(null); setNotice(null); setPhase(-1); setInput("");
+    clearError(); setLimitCode(null); setLimitCount(null); setNotice(null); setPhase(-1); setInput("");
     void sendMessage({ text: text.trim() }).catch(() => setInput(text));
   }
   function download() {
@@ -101,14 +104,14 @@ export function AgentWorkspace() {
                 {message.role === "assistant" && !busy && <button className="flex w-fit items-center gap-2 rounded-lg p-2 text-xs text-muted-foreground hover:bg-secondary" onClick={async () => { try { await navigator.clipboard.writeText(message.parts.filter(p => p.type === "text").map(p => p.text).join("\n"));setCopied(message.id);setNotice(null); } catch { setNotice("copyError"); } }}>{copied === message.id ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}{copied === message.id ? c.copied : c.copy}</button>}
               </Message>)}
               {busy && <div role="status" className="flex items-center gap-3 text-sm text-muted-foreground"><LoaderCircle className="size-4 animate-spin" />{phase >= 0 ? c.roles[phase] : c.preparing}</div>}
-              {error && <div role="alert" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm leading-7"><p>{ready === false ? c.offline : limitCode ? c.limits[limitCode] : c.error}</p><button onClick={() => {const last=[...messages].reverse().find(m=>m.role==="user");const text=last?.parts.filter(p=>p.type==="text").map(p=>p.text).join("\n");if(text){setInput(text);clearError();setLimitCode(null);composer.current?.focus();}}} className="mt-3 underline underline-offset-4">{c.retry}</button></div>}
+              {error && <div role="alert" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm leading-7"><p>{ready === false ? c.offline : limitCode ? c.limits[limitCode] : c.error}</p>{limitCount !== null && <p>{c.budgetLabel} {limitCount} {c.dailyUnit}</p>}<button onClick={() => {const last=[...messages].reverse().find(m=>m.role==="user");const text=last?.parts.filter(p=>p.type==="text").map(p=>p.text).join("\n");if(text){setInput(text);clearError();setLimitCode(null);setLimitCount(null);composer.current?.focus();}}} className="mt-3 underline underline-offset-4">{c.retry}</button></div>}
               {notice && <p role="status" className="rounded-xl border border-border bg-secondary p-4 text-sm leading-7">{c[notice]}</p>}
             </ConversationContent>
             <ConversationScrollButton aria-label={locale === "ar" ? "آخر رسالة" : "Latest message"} />
           </Conversation>
           <div className="shrink-0 px-5 pb-5 pt-3 sm:px-9">
             <div className="mx-auto max-w-4xl">
-              <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
+              <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}{ready === true && dailyBudget !== null && <span className="block">{c.budgetLabel} {dailyBudget} {c.dailyUnit}</span>}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
               <form onSubmit={e => {e.preventDefault();submit();}} className="rounded-2xl border border-border bg-card p-3 shadow-[0_8px_30px_-18px_#000000] focus-within:border-primary/70">
                 <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="max-h-40 min-h-16 w-full resize-y bg-transparent px-2 py-2 text-sm leading-7 outline-none placeholder:text-muted-foreground" />
                 <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <button type="button" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background"><Square className="size-4" /></button> : <button type="submit" disabled={!input.trim() || ready !== true} aria-label={c.send} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background hover:bg-primary disabled:opacity-30"><ArrowUp className="size-5" /></button>}</div>

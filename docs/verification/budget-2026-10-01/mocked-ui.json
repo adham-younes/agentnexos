@@ -1,0 +1,28 @@
+[
+  {
+    "locale": "ar",
+    "mocked": true,
+    "immediateTwoTurnSuccess": true,
+    "contextPreserved": true,
+    "limitReasons": [
+      "daily",
+      "global",
+      "busy"
+    ],
+    "retryPreservesInput": true,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "mocked": true,
+    "immediateTwoTurnSuccess": true,
+    "contextPreserved": true,
+    "limitReasons": [
+      "daily",
+      "global",
+      "busy"
+    ],
+    "retryPreservesInput": true,
+    "overflow": false
+  }
+]

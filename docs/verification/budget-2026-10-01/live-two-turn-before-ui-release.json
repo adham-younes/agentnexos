@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-01T02:01:00.944Z",
+  "mocked": false,
+  "turns": [
+    {
+      "status": 200,
+      "answer": "Agentnexos\n\nمرحبًا\n\nنسخ الرد",
+      "finished": true,
+      "submittedMessages": 1
+    },
+    {
+      "status": 200,
+      "answer": "Agentnexos\n\nأنا Agentnexos، مساعدكم لتصميم سير العمل وتحسين العمليات في المؤسسات.\n\nنسخ الرد",
+      "finished": true,
+      "submittedMessages": 3
+    }
+  ],
+  "pageErrors": [],
+  "overflow": false,
+  "passed": true
+}
