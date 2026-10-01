@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import type { SavedConversation,SavedMessage } from "@/lib/workspace/history";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { ArrowUp, ArrowUpRight, Check, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow } from "lucide-react";
@@ -15,7 +17,13 @@ import { projectConversation } from "@/lib/agents/context";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
 import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
-export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean }) {
+export function AgentWorkspace({ accountReady = true,initialConversationId,initialHistory=[],initialMessages=[] }: { accountReady?: boolean;initialConversationId?:string;initialHistory?:SavedConversation[];initialMessages?:SavedMessage[] }) {
+  const router=useRouter();
+  const [conversationId,setConversationId]=useState<string|null>(initialConversationId||null);
+  const [history,setHistory]=useState(initialHistory);
+  const [historyError,setHistoryError]=useState(false);
+  const [saved,setSaved]=useState(false);
+  const [authExpired,setAuthExpired]=useState(false);
   const locale = useLocale();
   const c = agentWorkspaceCopy[locale];
   const [input, setInput] = useState("");
@@ -32,6 +40,7 @@ export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean
     api: "/api/agentnexos",
     fetch: async (input, init) => {
       const response = await fetch(input, init);
+      if(response.status===401)setAuthExpired(true);
       if (response.status === 429) {
         const body = await response.clone().json().catch(() => null);
         setLimitCode(demoLimitCode(body));
@@ -39,11 +48,16 @@ export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean
       }
       return response;
     },
-    prepareSendMessagesRequest: ({ messages }) => ({ body: { locale, messages: projectConversation(messages) } }),
-  }), [locale]);
+    prepareSendMessagesRequest: ({ messages }) => ({ body: { locale, conversationId, requestId: crypto.randomUUID(), messages: projectConversation(messages).slice(-1) } }),
+  }), [locale,conversationId]);
   const { messages, sendMessage, status, error, stop, setMessages, clearError } = useChat({
     transport,
-    onData: (part) => { if (part.type === "data-phase") {
+    messages: initialMessages.map(m=>({id:m.id,role:m.role,parts:[{type:"text" as const,text:m.content}]})),
+    onFinish:()=>{void refreshHistory();},
+    onData: (part) => {
+      if(part.type==="data-conversation") {const id=(part.data as {id?:unknown}).id;if(typeof id==="string"&&/^[0-9a-f-]{36}$/i.test(id)){setConversationId(id);window.history.replaceState(null,"",`/${locale}/agentnexos?chat=${encodeURIComponent(id)}`);}}
+      if(part.type==="data-persistence")setSaved((part.data as {saved?:unknown}).saved===true);
+      if (part.type === "data-phase") {
       const index = (part.data as { index?: unknown })?.index;
       if (typeof index === "number" && Number.isInteger(index) && index >= 0 && index < c.roles.length) setPhase(index);
     } },
@@ -55,8 +69,12 @@ export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean
     fetch("/api/agentnexos", { signal: AbortSignal.any([controller.signal, deadline]), cache: "no-store" }).then(r => { if (!r.ok) throw new Error("READINESS_FAILED"); return r.json(); }).then(data => {setReady(data.ready === true);const limits = previewLimitsSchema.safeParse(data.limits);setDailyBudget(limits.success ? limits.data.perConnectionDaily : null);}).catch(() => { if (!controller.signal.aborted) {setReady(false);setDailyBudget(null);} });
     return () => controller.abort();
   }, [readinessAttempt]);
+  async function refreshHistory(){try{const r=await fetch("/api/conversations",{cache:"no-store"});if(!r.ok)throw Error("HISTORY_UNAVAILABLE");const d=await r.json();setHistory(d.conversations);setHistoryError(false);}catch{setHistoryError(true);}}
+  function newConversation(){if(busy)return;setConversationId(null);setSaved(false);setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);router.replace(`/${locale}/agentnexos`);composer.current?.focus();}
+  async function deleteConversation(id:string){if(busy||!window.confirm(locale==="ar"?"حذف هذه المحادثة ورسائلها نهائيًا من حسابك؟":"Permanently delete this conversation and its messages from your account?"))return;try{const r=await fetch(`/api/conversations/${id}`,{method:"DELETE"});if(!r.ok)throw Error("DELETE_FAILED");if(conversationId===id)newConversation();await refreshHistory();}catch{setHistoryError(true);}}
   function submit(text = input) {
-    if (!text.trim() || busy || ready !== true || !accountReady) return;
+    if (!text.trim() || busy || ready !== true || !accountReady || authExpired) return;
+    setSaved(false);
     clearError(); setLimitCode(null); setLimitCount(null); setNotice(null); setPhase(-1); setInput("");
     void sendMessage({ text: text.trim() }).catch(() => setInput(text));
   }
@@ -69,14 +87,15 @@ export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex min-h-20 max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3" aria-label={c.home}>
-            <Brand />
+            <span className="sm:hidden"><Brand compact /></span><span className="hidden sm:inline-flex"><Brand /></span>
           </Link>
-          <div className="flex items-center gap-3"><LocaleSwitcher /><form action={signOut}><input type="hidden" name="locale" value={locale}/><button type="submit" className="min-h-11 rounded-lg border border-border px-3 text-xs hover:bg-secondary">{locale==="ar"?"خروج":"Sign out"}</button></form></div>
+          <div className="flex items-center gap-3"><Link href={`/${locale}/account`} className="min-h-11 content-center text-xs text-muted-foreground">{locale==="ar"?"حسابي":"Account"}</Link><LocaleSwitcher /><form action={signOut}><input type="hidden" name="locale" value={locale}/><button type="submit" className="min-h-11 rounded-lg border border-border px-3 text-xs hover:bg-secondary">{locale==="ar"?"خروج":"Sign out"}</button></form></div>
         </div>
       </header>
       <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[260px_minmax(0,1fr)]">
         <aside className="hidden min-h-[calc(100dvh-81px)] flex-col border-e border-border bg-card p-6 lg:flex">
-          <button disabled={busy} onClick={() => {setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);composer.current?.focus();}} className="flex min-h-12 items-center justify-between rounded-xl border border-border bg-background px-4 text-sm font-medium hover:bg-secondary disabled:opacity-50"><span>{c.newChat}</span><Plus className="size-4" /></button>
+          <button disabled={busy} onClick={newConversation} className="flex min-h-12 items-center justify-between rounded-xl border border-border bg-background px-4 text-sm font-medium hover:bg-secondary disabled:opacity-50"><span>{c.newChat}</span><Plus className="size-4" /></button>
+          <div className="mt-6 max-h-64 overflow-y-auto"><h2 className="mb-3 text-xs text-muted-foreground">{locale==="ar"?"محادثاتك":"Your conversations"}</h2>{history.map(chat=><div key={chat.id} className="flex items-center gap-1"><Link href={`/${locale}/agentnexos?chat=${chat.id}`} aria-current={conversationId===chat.id?"page":undefined} className="min-w-0 flex-1 truncate rounded-lg px-2 py-3 text-xs hover:bg-secondary">{chat.title}</Link><button disabled={busy} onClick={()=>void deleteConversation(chat.id)} aria-label={(locale==="ar"?"حذف ":"Delete ")+chat.title} className="min-h-11 px-2 text-xs text-muted-foreground hover:text-foreground">×</button></div>)}</div>
           <h2 className="mb-5 mt-10 text-xs font-medium text-muted-foreground">{c.team}</h2>
           <ol className="space-y-6">
             {c.roles.map((role, i) => <li key={role} className="flex items-start gap-3"><span className={`flex size-8 shrink-0 items-center justify-center rounded-full border ${busy && phase === i ? "border-primary bg-primary/10" : "border-border"}`}>{busy && phase === i ? <LoaderCircle className="size-4 animate-spin" /> : <span className="text-xs">0{i+1}</span>}</span><div><p className="text-sm font-medium">{role}</p><p className="mt-1 text-xs leading-6 text-muted-foreground">{c.roleDescriptions[i]}</p></div></li>)}
@@ -86,16 +105,20 @@ export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean
         </aside>
         <main id="main-content" tabIndex={-1} className="flex h-[calc(100dvh-81px)] min-h-0 min-w-0 flex-col">
           <div className="flex min-h-16 shrink-0 items-center justify-between gap-3 border-b border-border px-5 sm:px-9">
-            <div className="flex min-w-0 items-center gap-2"><span className="size-1.5 shrink-0 rounded-full bg-primary" /><p className="text-xs leading-5 text-muted-foreground">{c.label}</p></div>
-            <div className="flex gap-1"><button onClick={() => {setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);composer.current?.focus();}} disabled={busy} aria-label={c.newChat} className="rounded-lg p-3 hover:bg-secondary lg:hidden"><Plus className="size-4" /></button><button disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="rounded-lg p-3 hover:bg-secondary disabled:opacity-30"><Download className="size-4" /></button></div>
+            <div className="flex min-w-0 items-center gap-2"><span className="size-1.5 shrink-0 rounded-full bg-primary" /><h1 className="text-xs leading-5 text-muted-foreground">{c.label}</h1></div>
+            <div className="flex gap-1"><button onClick={newConversation} disabled={busy} aria-label={c.newChat} className="rounded-lg p-3 hover:bg-secondary lg:hidden"><Plus className="size-4" /></button><button disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="rounded-lg p-3 hover:bg-secondary disabled:opacity-30"><Download className="size-4" /></button></div>
           </div>
+          <details className="border-b border-border px-5 py-3 lg:hidden"><summary className="text-xs text-muted-foreground">{locale==="ar"?"محادثاتك":"Your conversations"}</summary><ul className="max-h-48 overflow-y-auto py-2">{history.map(chat=><li key={chat.id} className="flex gap-2"><Link href={`/${locale}/agentnexos?chat=${chat.id}`} className="min-w-0 flex-1 truncate py-3 text-xs">{chat.title}</Link><button disabled={busy} className="min-h-11 px-2 text-xs" onClick={()=>void deleteConversation(chat.id)} aria-label={(locale==="ar"?"حذف ":"Delete ")+chat.title}>×</button></li>)}</ul></details>
+          {historyError&&<p role="alert" className="px-5 py-3 text-sm text-muted-foreground">{locale==="ar"?"تعذر تحديث المحادثات أو حذفها. أعد المحاولة.":"Conversation update or deletion failed. Try again."}</p>}
+          {authExpired&&<p role="alert" className="px-5 py-3 text-sm"><Link href={`/${locale}/login`} className="text-primary underline">{locale==="ar"?"انتهت جلسة الدخول. سجل الدخول مجددًا.":"Your session expired. Sign in again."}</Link></p>}
+          <p className="px-5 py-2 text-[11px] leading-6 text-muted-foreground">{locale==="ar"?"المحادثات تحفظ في حسابك ويمكن حذفها. استخدم بيانات افتراضية فقط.":"Conversations are saved to your account and can be deleted. Use fictional data only."}</p>
           {!accountReady && <p role="alert" className="px-5 py-3 text-sm text-muted-foreground">{locale==="ar"?"تعذر تجهيز ملف الحساب. أعد تحميل الصفحة قبل المتابعة.":"Your account profile could not be prepared. Reload before continuing."}</p>}
           <Conversation key={messages.length ? "conversation" : "welcome"} className="min-h-0" initial={messages.length ? "smooth" : false} resize="smooth" aria-label={c.label}>
             <ConversationContent className="mx-auto w-full max-w-4xl gap-8 px-5 py-8 sm:px-9 sm:py-12">
               {messages.length === 0 ? <div className="py-2 text-center sm:py-5">
                 <div className="mx-auto mb-7 flex size-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10"><Layers3 className="size-7 text-primary" /></div>
                 <p className="mb-3 text-xs font-medium text-primary">{c.badge}</p>
-                <h1 className="mx-auto max-w-2xl text-3xl font-semibold leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
+                <h2 className="mx-auto max-w-2xl text-3xl font-semibold leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h2>
                 <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{c.intro}</p>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
@@ -116,7 +139,7 @@ export function AgentWorkspace({ accountReady = true }: { accountReady?: boolean
               <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}{ready === true && dailyBudget !== null && <span className="block">{c.budgetLabel} {dailyBudget} {c.dailyUnit}</span>}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
               <form onSubmit={e => {e.preventDefault();submit();}} className="rounded-2xl border border-border bg-card p-3 shadow-xl shadow-black/10 focus-within:border-primary/70">
                 <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="max-h-40 min-h-16 w-full resize-y bg-transparent px-2 py-2 text-sm leading-7 outline-none placeholder:text-muted-foreground" />
-                <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <button type="button" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background"><Square className="size-4" /></button> : <button type="submit" disabled={!input.trim() || ready !== true || !accountReady} aria-label={c.send} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background hover:bg-primary disabled:opacity-30"><ArrowUp className="size-5" /></button>}</div>
+                <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000{saved&&<span className="ms-3 text-primary">{locale==="ar"?"محفوظة":"Saved"}</span>}</span>{busy ? <button type="button" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background"><Square className="size-4" /></button> : <button type="submit" disabled={!input.trim() || ready !== true || !accountReady || authExpired} aria-label={c.send} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background hover:bg-primary disabled:opacity-30"><ArrowUp className="size-5" /></button>}</div>
               </form>
               <p className="mt-2 text-center text-[11px] leading-6 text-muted-foreground">{c.contextNotice}</p>
               <p className="mt-3 text-center text-[11px] leading-6 text-muted-foreground">{c.privacy} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
