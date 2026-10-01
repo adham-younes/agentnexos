@@ -1,3 +1,5 @@
+Latest release handoff: read `docs/UPGRADE-HANDOFF-2026-10-01.md` and its production evidence before continuing. Historical pending statuses are not current deployment state.
+
 Current comprehensive upgrade: read `docs/COMPREHENSIVE-UPGRADE-2026-09-30.md` and current UPGRADE reports first. The owner's latest request explicitly authorizes successive automated whole-app stages, preserving the template, images and colors, with independent verified production publication per stage. This supersedes earlier one-stage-per-request restrictions. It does not authorize fabricating runtime capabilities, secret export, unrelated databases or bypassing branch protections.
 
 # Agentnexos — Project Rules
