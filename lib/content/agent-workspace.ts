@@ -1,5 +1,6 @@
 export const agentWorkspaceCopy = {
   ar: {
+    limits: { DEMO_BUSY: "يوجد طلب آخر قيد المعالجة على هذا الاتصال. انتظر اكتماله ثم أعد المحاولة؛ لم يُرسل هذا الطلب إلى النموذج.", DEMO_DAILY_LIMIT: "وصل هذا الاتصال إلى حد التجربة: 5 طلبات خلال 24 ساعة. يتجدد الحد تدريجيًا عند مرور 24 ساعة على الطلبات السابقة؛ لم يُرسل هذا الطلب إلى النموذج.", DEMO_GLOBAL_LIMIT: "وصلت التجربة إلى حدها الإجمالي اليومي. جرّب لاحقًا بعد تجدد السعة؛ لم يُرسل هذا الطلب إلى النموذج." },
     label: "مساحة الوكيل", newChat: "محادثة جديدة", home: "العودة للمنصة", title: "ما العملية التي تريد تحسينها؟",
     intro: "ابدأ بالمشكلة، لا بالتقنية. يساعدك Agentnexos على فهم العملية، تصميم خطواتها، ومراجعة البيانات والصلاحيات اللازمة لتنفيذها.",
     badge: "مساعد تصميم العمليات", placeholder: "صف العملية، أين تتعطل، وما النتيجة التي تحتاجها…", send: "إرسال الطلب", stop: "إيقاف", download: "تحميل المحادثة", copy: "نسخ الرد", copied: "تم النسخ", retry: "إعادة المحاولة",
@@ -15,6 +16,7 @@ export const agentWorkspaceCopy = {
     ],
   },
   en: {
+    limits: { DEMO_BUSY: "Another request is processing on this connection. Wait for it to finish, then try again; this request was not sent to the model.", DEMO_DAILY_LIMIT: "This connection reached the preview limit: 5 requests in 24 hours. Capacity returns as earlier requests reach 24 hours old; this request was not sent to the model.", DEMO_GLOBAL_LIMIT: "The preview reached its overall daily limit. Try later when capacity returns; this request was not sent to the model." },
     label: "Agent workspace", newChat: "New conversation", home: "Back to the platform", title: "Which workflow would you improve?",
     intro: "Start with the problem, not the technology. Agentnexos helps you understand the process, design its steps, and review the data and permissions needed to implement it.",
     badge: "Workflow design assistant", placeholder: "Describe the process, where it stalls, and the outcome you need…", send: "Send request", stop: "Stop", download: "Download conversation", copy: "Copy response", copied: "Copied", retry: "Try again",

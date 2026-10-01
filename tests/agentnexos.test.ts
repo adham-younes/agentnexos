@@ -5,8 +5,23 @@ import { simulateReadableStream } from "ai";
 import { runAgentWorkflow } from "../lib/agents/workflow";
 import { createDemoTools } from "../lib/agents/tools";
 import { GET, POST } from "../app/api/agentnexos/route";
+import { reservationSchema, demoLimitCode } from "../lib/agents/reservation";
+import { agentWorkspaceCopy } from "../lib/content/agent-workspace";
 
 const usage = { inputTokens: { total: 10, noCache: 10, cacheRead: undefined, cacheWrite: undefined }, outputTokens: { total: 20, text: 20, reasoning: undefined } };
+test("reservation rejects unknown outcomes and malformed run IDs instead of starting a model", () => {
+  for (const value of [null, "a-run-id", {code:"RESERVED",runId:"invalid"}, {code:"UNKNOWN",retryAfterSeconds:30}, {code:"DEMO_BUSY",retryAfterSeconds:0}]) assert.equal(reservationSchema.safeParse(value).success,false);
+  assert.equal(reservationSchema.safeParse({code:"RESERVED",runId:"00000000-0000-4000-8000-000000000001"}).success,true);
+});
+test("daily, global and active-request limits have distinct bilingual messages", () => {
+  for (const code of ["DEMO_BUSY", "DEMO_DAILY_LIMIT", "DEMO_GLOBAL_LIMIT"] as const) {
+    assert.equal(demoLimitCode({code}),code);
+    assert.equal(reservationSchema.safeParse({code,retryAfterSeconds:86400}).success,true);
+    for (const locale of ["ar","en"] as const) assert.notEqual(agentWorkspaceCopy[locale].limits[code],agentWorkspaceCopy[locale].error);
+  }
+  assert.equal(demoLimitCode({code:"PROVIDER_ERROR"}),null);
+  assert.equal(demoLimitCode(null),null);
+});
 function generateModel(text: string) { return new MockLanguageModelV4({ doGenerate: async () => ({ content: [{ type: "text", text }], finishReason: { unified: "stop", raw: undefined }, usage, warnings: [] }) }); }
 function reviewerModel() { return new MockLanguageModelV4({ doStream: async () => ({ stream: simulateReadableStream({ chunks: [
   { type: "stream-start", warnings: [] }, { type: "text-start", id: "answer" }, { type: "text-delta", id: "answer", delta: "Reviewed " }, { type: "text-delta", id: "answer", delta: "plan" }, { type: "text-end", id: "answer" }, { type: "finish", finishReason: { unified: "stop", raw: undefined }, usage },

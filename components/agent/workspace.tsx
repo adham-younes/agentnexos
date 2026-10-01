@@ -11,6 +11,7 @@ import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
+import { demoLimitCode, type DemoLimitCode } from "@/lib/agents/reservation";
 
 export function AgentWorkspace() {
   const locale = useLocale();
@@ -18,12 +19,21 @@ export function AgentWorkspace() {
   const [input, setInput] = useState("");
   const [ready, setReady] = useState<boolean | null>(null);
   const [phase, setPhase] = useState(-1);
+  const [limitCode, setLimitCode] = useState<DemoLimitCode | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
   const [notice, setNotice] = useState<"cancelled" | "copyError" | null>(null);
   const [readinessAttempt, setReadinessAttempt] = useState(0);
   const composer = useRef<HTMLTextAreaElement>(null);
   const transport = useMemo(() => new DefaultChatTransport({
     api: "/api/agentnexos",
+    fetch: async (input, init) => {
+      const response = await fetch(input, init);
+      if (response.status === 429) {
+        const body = await response.clone().json().catch(() => null);
+        setLimitCode(demoLimitCode(body));
+      }
+      return response;
+    },
     prepareSendMessagesRequest: ({ messages }) => ({ body: { locale, messages: projectConversation(messages) } }),
   }), [locale]);
   const { messages, sendMessage, status, error, stop, setMessages, clearError } = useChat({
@@ -42,7 +52,7 @@ export function AgentWorkspace() {
   }, [readinessAttempt]);
   function submit(text = input) {
     if (!text.trim() || busy || ready !== true) return;
-    clearError(); setNotice(null); setPhase(-1); setInput("");
+    clearError(); setLimitCode(null); setNotice(null); setPhase(-1); setInput("");
     void sendMessage({ text: text.trim() }).catch(() => setInput(text));
   }
   function download() {
@@ -91,7 +101,7 @@ export function AgentWorkspace() {
                 {message.role === "assistant" && !busy && <button className="flex w-fit items-center gap-2 rounded-lg p-2 text-xs text-muted-foreground hover:bg-secondary" onClick={async () => { try { await navigator.clipboard.writeText(message.parts.filter(p => p.type === "text").map(p => p.text).join("\n"));setCopied(message.id);setNotice(null); } catch { setNotice("copyError"); } }}>{copied === message.id ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}{copied === message.id ? c.copied : c.copy}</button>}
               </Message>)}
               {busy && <div role="status" className="flex items-center gap-3 text-sm text-muted-foreground"><LoaderCircle className="size-4 animate-spin" />{phase >= 0 ? c.roles[phase] : c.preparing}</div>}
-              {error && <div role="alert" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm leading-7"><p>{ready === false ? c.offline : c.error}</p><button onClick={() => {const last=[...messages].reverse().find(m=>m.role==="user");const text=last?.parts.filter(p=>p.type==="text").map(p=>p.text).join("\n");if(text){setInput(text);clearError();composer.current?.focus();}}} className="mt-3 underline underline-offset-4">{c.retry}</button></div>}
+              {error && <div role="alert" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm leading-7"><p>{ready === false ? c.offline : limitCode ? c.limits[limitCode] : c.error}</p><button onClick={() => {const last=[...messages].reverse().find(m=>m.role==="user");const text=last?.parts.filter(p=>p.type==="text").map(p=>p.text).join("\n");if(text){setInput(text);clearError();setLimitCode(null);composer.current?.focus();}}} className="mt-3 underline underline-offset-4">{c.retry}</button></div>}
               {notice && <p role="status" className="rounded-xl border border-border bg-secondary p-4 text-sm leading-7">{c[notice]}</p>}
             </ConversationContent>
             <ConversationScrollButton aria-label={locale === "ar" ? "آخر رسالة" : "Latest message"} />
