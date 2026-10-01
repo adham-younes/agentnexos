@@ -5,7 +5,7 @@ import { authConfig } from "@/lib/auth/config";
 export async function refreshAuth(request:NextRequest) {
  const config=authConfig();let response=NextResponse.next({request});
  if(!config)return response;
- const client=createServerClient(config.url,config.key,{cookies:{getAll:()=>request.cookies.getAll(),setAll(items,cacheHeaders){
+ const client=createServerClient(config.url,config.key,{cookieOptions:{httpOnly:true,secure:process.env.NODE_ENV==="production",sameSite:"lax"},cookies:{getAll:()=>request.cookies.getAll(),setAll(items,cacheHeaders){
   items.forEach(({name,value})=>request.cookies.set(name,value));response=NextResponse.next({request});
   items.forEach(({name,value,options})=>response.cookies.set(name,value,options));
   Object.entries(cacheHeaders||{}).forEach(([key,value])=>response.headers.set(key,value));

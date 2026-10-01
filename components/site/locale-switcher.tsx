@@ -23,8 +23,9 @@ export function LocaleSwitcher({ inverted = false }: { inverted?: boolean }) {
           <a
             key={l}
             href={swapLocale(pathname, l)}
+            onClick={event=>{event.currentTarget.href=swapLocale(pathname,l)+window.location.search+window.location.hash;}}
             aria-current={active ? "true" : undefined}
-            className={
+            className={"inline-flex min-h-11 items-center px-1 " + (
               active
                 ? inverted
                   ? "text-white underline decoration-white/60 underline-offset-4"
@@ -32,7 +33,7 @@ export function LocaleSwitcher({ inverted = false }: { inverted?: boolean }) {
                 : inverted
                   ? "text-white/55 hover:text-white transition-colors"
                   : "text-muted-foreground hover:text-foreground transition-colors"
-            }
+            )}
           >
             {localeLabel[l]}
           </a>

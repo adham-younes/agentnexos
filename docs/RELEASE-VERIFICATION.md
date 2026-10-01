@@ -1,3 +1,5 @@
+Current redesign verification: see [REDESIGN-HANDOFF-2026-10-01](./REDESIGN-HANDOFF-2026-10-01.md). `pnpm verify:site` uses the new public/auth route verifier; historical photographic asset checks below are archived and do not govern the owner-approved redesign.
+
 # بوابة إصدار التطبيق
 
 من مستودع نظيف: pnpm install --frozen-lockfile، ثم pnpm audit --prod وpnpm typecheck وpnpm i18n:check وpnpm test:agentnexos وpnpm lint وpnpm build. ثبّت متصفح الاختبار مرة واحدة بـpnpm exec playwright install chromium (في CI يحتاج --with-deps)، وشغّل pnpm start --port 3000. نفّذ pnpm verify:site http://localhost:3000، ثم نفس الأمر لرابط المعاينة، ثم للرابط الرسمي بعد Production READY. التقرير في output/release-verification/report.json؛ ينتهي الأمر بكود فشل عند إخفاق أي حالة.

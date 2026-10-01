@@ -1,0 +1,4 @@
+import { authConfig,authConfigStatus } from '@/lib/auth/config';
+export const dynamic='force-dynamic';
+const headers={'Cache-Control':'no-store'};
+export async function GET(){const config=authConfig();if(!config)return Response.json({ready:false,code:authConfigStatus()},{headers});try{const r=await fetch(`${config.url}/auth/v1/settings`,{headers:{apikey:config.key},cache:'no-store',signal:AbortSignal.timeout(5000)});if(!r.ok)throw Error('AUTH_PROVIDER_UNAVAILABLE');const d=await r.json();return Response.json({ready:d.email_enabled===true,code:d.email_enabled===true?'AUTH_PROVIDER_REACHABLE':'AUTH_EMAIL_DISABLED',signupEnabled:d.disable_signup!==true,emailConfirmationRequired:d.email_autoconfirm===false},{headers});}catch{return Response.json({ready:false,code:'AUTH_PROVIDER_UNAVAILABLE'},{headers});}}

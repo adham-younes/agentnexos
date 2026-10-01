@@ -85,3 +85,29 @@ test("private conversation APIs reject anonymous access and cross-origin deletio
 test("latest user text is bounded even when split into multiple parts",async()=>{
  assert.equal((await POST(request({locale:'en',messages:[{role:'user',parts:[{type:'text',text:'x'.repeat(3000)},{type:'text',text:'y'.repeat(3000)}]}]}))).status,400);
 });
+
+test("SSR authentication rejects foreign projects, secret keys and privileged legacy keys",async()=>{
+ const {authConfig,authConfigStatus}=await import('../lib/auth/config');
+ const keys=['NEXT_PUBLIC_SUPABASE_URL','AGENTNEXOS_SUPABASE_URL','NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY','NEXT_PUBLIC_SUPABASE_ANON_KEY'];const prior=Object.fromEntries(keys.map(k=>[k,process.env[k]]));
+ try{
+  keys.forEach(k=>delete process.env[k]);assert.equal(authConfigStatus(),'AUTH_URL_MISSING');
+  process.env.NEXT_PUBLIC_SUPABASE_URL='https://ruereqpvykwnakcnmxha.supabase.co';assert.equal(authConfigStatus(),'AUTH_PUBLIC_KEY_MISSING');
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY='sb_secret_test_fixture_not_a_real_key';assert.equal(authConfig(),null);
+  delete process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  const legacy=(role:string,ref='ruereqpvykwnakcnmxha')=>'header.'+Buffer.from(JSON.stringify({role,ref})).toString('base64url')+'.fixture';
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY=legacy('service_role');assert.equal(authConfig(),null);
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY=legacy('anon','other-project');assert.equal(authConfig(),null);
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY=legacy('anon');assert.equal(authConfigStatus(),'AUTH_CONFIGURED');
+  process.env.NEXT_PUBLIC_SUPABASE_URL='https://other-project.supabase.co';assert.equal(authConfig(),null);
+  process.env.NEXT_PUBLIC_SUPABASE_URL='invalid-url';assert.equal(authConfigStatus(),'AUTH_URL_INVALID');
+ }finally{for(const k of keys){if(prior[k]===undefined)delete process.env[k];else process.env[k]=prior[k];}}
+});
+test("login return paths cannot redirect to an external origin or unrelated route",async()=>{
+ const {safeWorkspacePath}=await import('../lib/auth/validation');
+ for(const path of ['https://attacker.example','//attacker.example','/ar/agentnexos/../../admin','/ar/agentnexos\\evil','/ar/agentnexos\r\nLocation: attacker'])assert.equal(safeWorkspacePath(path,'ar'),'/ar/agentnexos');
+ assert.equal(safeWorkspacePath('/ar/agentnexos?chat=aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','ar'),'/ar/agentnexos?chat=aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa');
+});
+test("profile and password actions reject invalid input and an expired session",async()=>{
+ const {updateProfile,updatePassword}=await import('../app/[locale]/account/actions');const data=new FormData();data.set('locale','ar');data.set('name','x'.repeat(101));assert.equal((await updateProfile({code:'idle'},data)).code,'invalid');data.set('name','Fictional Name');assert.equal((await updateProfile({code:'idle'},data)).code,'failed');
+ data.set('password','fixture-password');data.set('confirm','different-password');assert.equal((await updatePassword({code:'idle'},data)).code,'invalid');data.set('confirm','fixture-password');assert.equal((await updatePassword({code:'idle'},data)).code,'failed');
+});
