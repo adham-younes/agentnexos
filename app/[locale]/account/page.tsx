@@ -1,0 +1,11 @@
+import type { Metadata } from 'next';
+import { redirect,notFound } from 'next/navigation';
+import Link from 'next/link';
+import { authenticatedUser } from '@/lib/auth/server';
+import { isLocale } from '@/lib/i18n/config';
+import { PageHeader } from '@/components/site/page-header';
+import { ProfileForm } from '@/components/site/profile-form';
+import { signOut } from '../login/actions';
+export const dynamic='force-dynamic';
+export const metadata:Metadata={title:'Account | AgentNexos',robots:{index:false,follow:false}};
+export default async function Account({params}:{params:Promise<{locale:string}>}){const {locale}=await params;if(!isLocale(locale))notFound();const auth=await authenticatedUser();if(!auth)redirect(`/${locale}/login`);const ar=locale==='ar';const {data,error}=await auth.client.from('agentnexos_profiles').select('display_name').eq('id',auth.user.id).maybeSingle();return <div className="min-h-screen bg-background"><PageHeader/><main id="main-content" tabIndex={-1} className="site-section max-w-3xl"><h1 className="text-3xl font-semibold">{ar?'حساب مساحة الوكيل':'Workspace account'}</h1><p className="mt-5 text-sm leading-8 text-muted-foreground">{ar?'تستطيع إدارة الاسم ومحادثاتك الخاصة. لا يمنح الحساب صلاحيات على أنظمة مؤسسة أو حسابات أخرى.':'Manage your display name and private conversations. This account grants no access to enterprise systems or other accounts.'}</p><p className="mt-6 break-all rounded-lg border border-border bg-card p-5 text-sm" dir="ltr">{auth.user.email}</p>{error||!data?<p role="alert" className="mt-8 text-sm">{ar?'تعذر تحميل الملف. افتح مساحة الوكيل لتهيئة الملف، ثم أعد المحاولة.':'The profile could not be loaded. Open the workspace to initialize it, then try again.'}</p>:<ProfileForm locale={locale} name={data.display_name}/>}<div className="mt-10 flex flex-wrap gap-5 border-t border-border pt-6"><Link href={`/${locale}/agentnexos`} className="text-sm text-primary underline">{ar?'إدارة المحادثات':'Manage conversations'}</Link><Link href={`/${locale}/privacy`} className="text-sm text-primary underline">{ar?'معالجة البيانات':'Data handling'}</Link><form action={signOut}><input type="hidden" name="locale" value={locale}/><button className="text-sm text-muted-foreground underline" type="submit">{ar?'تسجيل الخروج':'Sign out'}</button></form></div></main></div>;}

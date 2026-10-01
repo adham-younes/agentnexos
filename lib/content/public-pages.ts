@@ -139,7 +139,7 @@ export const publicPages = {
         ["موجز المشروع المحلي", "إجابات نموذج موجز المشروع تبقى في ذاكرة صفحة المتصفح. لا ترسل إلى خادم أو فريق؛ يمكنك تنزيل ملف ومراجعته قبل مشاركته. إغلاق الصفحة أو مسحها يزيل حالتها المحلية."],
         [
           "المثال الحالي",
-          "عند تشغيل الاتصال الحي، يرسل طلبك وسياق المحادثة إلى خادم Vercel ثم نماذج Groq للتحليل والتخطيط والمراجعة. استخدم بيانات افتراضية فقط. المحادثة في ذاكرة التبويب ولا تحفظ في قاعدة بيانات التطبيق."
+          "عند تشغيل الاتصال الحي، يرسل طلبك وسياق المحادثة إلى خادم Vercel ثم نماذج Groq للتحليل والتخطيط والمراجعة. استخدم بيانات افتراضية فقط. تُحفظ رسائل المحادثة في Supabase مرتبطة بحسابك لاسترجاعها لاحقًا. يمكنك حذف المحادثة ورسائلها من المساحة بعد تأكيد الحذف."
         ],
         [
           "استضافة الموقع",
@@ -153,7 +153,7 @@ export const publicPages = {
           "النماذج ومورّدو الخدمات",
           "Groq مزود معالجة نماذج التجربة. شروط المعالجة والاحتفاظ لديه تعتمد على الخطة والإعدادات والعقد؛ لا نقدّم وعدًا عامًا بعدم التدريب أو الاحتفاظ. جلب المراجع التقنية يتصل بمواقع رسمية محددة فقط."
         ],
-        ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لمعرف الحساب ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز وقرارات سياسة الأدوات وتوقيت مراحل الطلب، دون نص الطلب أو الرد أو محتوى المراجع. يستخدم ذلك لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
+        ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لمعرف الحساب ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز وقرارات سياسة الأدوات وتوقيت مراحل الطلب، دون نص الطلب أو الرد أو محتوى المراجع في سجل التشغيل. تُحفظ نصوص المحادثات بشكل منفصل مع صلاحيات خاصة بالمستخدم، حتى تحذف المحادثة. يستخدم سجل التشغيل لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
         [
           "حدود هذا الإشعار",
           "هذا وصف للحالة الحالية وليس بديلًا عن اتفاق معالجة بيانات خاص بمشروع مؤسسي. قناة طلبات الخصوصية وبيانات الجهة المسؤولة تحتاج اعتماد المالك قبل استقبال بيانات العملاء."
@@ -170,7 +170,7 @@ export const publicPages = {
         ["Local project brief", "Project brief answers stay in the browser page memory. They are not sent to a server or team; you may download and review a file before sharing. Closing or clearing the page removes local state."],
         [
           "Current example",
-          "When the live connection is enabled, your request and conversation context go to the Vercel server and then Groq models for analysis, planning, and review. Use fictional data only. Conversation state lives in the browser tab and is not stored in the application's database."
+          "When the live connection is enabled, your request and conversation context go to the Vercel server and then Groq models for analysis, planning, and review. Use fictional data only. Conversation messages are stored in Supabase under your account for later retrieval. You can delete a conversation and its messages from the workspace after confirmation."
         ],
         [
           "Website hosting",
@@ -184,7 +184,7 @@ export const publicPages = {
           "Models and service providers",
           "Groq processes the demo's model requests. Its processing and retention terms depend on the plan, configuration, and contract; no universal no-training or no-retention promise is made. Technical reference retrieval connects only to selected official sites."
         ],
-        ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the account identifier, request time and status, model roles, token usage, tool-policy decisions, and stage timing—not prompt or response text or reference content—to prevent abuse. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
+        ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the account identifier, request time and status, model roles, token usage, tool-policy decisions, and stage timing—not prompt or response text or reference content in the operating log—to prevent abuse. Conversation text is stored separately with own-user access until you delete the conversation. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
         [
           "Scope of this notice",
           "This describes the current state and does not replace a project-specific data-processing agreement. Privacy contacts and controller details require owner approval before accepting customer data."

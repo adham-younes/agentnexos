@@ -3,7 +3,8 @@ import { createHmac } from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
 import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
 import { z } from "zod/v4";
-import { conversationText, contextLimits } from "@/lib/agents/context";
+import { conversationMessages } from "@/lib/workspace/history";
+import { conversationText, contextLimits, projectConversation } from "@/lib/agents/context";
 import { demoPolicy } from "@/lib/agents/policy";
 import { createRunJournal } from "@/lib/agents/journal";
 import { runAgentWorkflow } from "@/lib/agents/workflow";
@@ -13,7 +14,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 180;
 
-const bodySchema = z.object({ locale: z.enum(["ar", "en"]), messages: z.array(z.object({ role: z.enum(["user", "assistant"]), parts: z.array(z.object({ type: z.literal("text"), text: z.string().max(contextLimits.messageCharacters) })).min(1).max(8) })).min(1).max(contextLimits.messages) });
+const bodySchema = z.object({ conversationId: z.uuid().nullable().optional(), requestId: z.uuid().optional(), locale: z.enum(["ar", "en"]), messages: z.array(z.object({ role: z.enum(["user", "assistant"]), parts: z.array(z.object({ type: z.literal("text"), text: z.string().max(contextLimits.messageCharacters) })).min(1).max(8) })).min(1).max(contextLimits.messages) });
 const headers = { "Cache-Control": "no-store" };
 function unavailable() { return Response.json({ code: "DEMO_NOT_READY" }, { status: 503, headers }); }
 function database() {
@@ -57,10 +58,13 @@ export async function POST(request: Request) {
   let parsed;
   try { parsed = bodySchema.safeParse(JSON.parse(raw)); } catch { return Response.json({ code: "INVALID_REQUEST" }, { status: 400, headers }); }
   if (!parsed.success || parsed.data.messages.at(-1)?.role !== "user") return Response.json({ code: "INVALID_REQUEST" }, { status: 400, headers });
-  const conversation = conversationText(parsed.data.messages);
+  let conversation = conversationText(parsed.data.messages);
+  const latestRequest = parsed.data.messages.at(-1)!.parts.map(p=>p.text).join("\n");
+  if(latestRequest.length>4000) return Response.json({code:"CONTEXT_LIMIT"},{status:400,headers});
   if (conversation.length > contextLimits.characters || !parsed.data.messages.at(-1)?.parts.some(p => p.text.trim())) return Response.json({ code: "CONTEXT_LIMIT" }, { status: 400, headers });
   const auth=await authenticatedUser();
   if (!auth) return Response.json({ code: "AUTH_REQUIRED" }, {status:401,headers});
+  if(!parsed.data.requestId) return Response.json({code:"REQUEST_ID_REQUIRED"},{status:400,headers});
   let db;
   try { db = database(); } catch { return unavailable(); }
   if (!db) return unavailable();
@@ -75,6 +79,17 @@ export async function POST(request: Request) {
     if (reservation.data.code !== "RESERVED") return Response.json(reservation.data, { status: 429, headers: { ...headers, "Retry-After": String(reservation.data.retryAfterSeconds) } });
     runId = reservation.data.runId;
   } catch { return unavailable(); }
+  let conversationId: string;
+  try {
+    const started=await db.client.rpc("agentnexos_begin_turn",{p_user_id:auth.user.id,p_conversation_id:parsed.data.conversationId??null,p_request_id:parsed.data.requestId,p_content:latestRequest,p_locale:parsed.data.locale});
+    if(started.error||!z.uuid().safeParse(started.data).success) throw Error("CONVERSATION_UNAVAILABLE");
+    conversationId=started.data;
+    const history=await conversationMessages(auth.client,auth.user.id,conversationId);
+    conversation=conversationText(projectConversation(history.map(x=>({role:x.role,parts:[{type:"text",text:x.content}]}))));
+  } catch {
+    await db.client.from("agentnexos_demo_requests").update({status:"failed",completed_at:new Date().toISOString()}).eq("id",runId);
+    return Response.json({code:"CONVERSATION_UNAVAILABLE"},{status:409,headers});
+  }
   const signal = AbortSignal.any([request.signal, AbortSignal.timeout(demoPolicy.deadlineMs)]);
   const stream = createUIMessageStream({
     execute: async ({ writer }) => {
@@ -88,21 +103,27 @@ export async function POST(request: Request) {
         const started = await db.client.from("agentnexos_demo_requests")
           .update({ status: "running" }).eq("id", runId).select("id").single();
         if (started.error || !started.data) throw new Error("PERSISTENCE_UNAVAILABLE");
+        writer.write({type:"data-conversation",data:{id:conversationId},transient:true});
         writer.write({ type: "start" });
         writer.write({ type: "text-start", id: "answer" });
-        await runAgentWorkflow({ conversation,
-          latestRequest: parsed.data.messages.at(-1)!.parts.map(part => part.text).join("\n"),
+        const result = await runAgentWorkflow({ conversation,
+          latestRequest,
           locale: parsed.data.locale, signal,
           onPhase: index => writer.write({ type: "data-phase", data: { index }, transient: true }),
           onText: delta => writer.write({ type: "text-delta", id: "answer", delta }),
           onEvent: event => journal.append(event),
         });
         signal.throwIfAborted();
+        const answer=await db.client.from("agentnexos_messages").insert({conversation_id:conversationId,user_id:auth.user.id,request_id:parsed.data.requestId,role:"assistant",content:result.text}).select("id").single();
+        if(answer.error||!answer.data)throw Error("PERSISTENCE_UNAVAILABLE");
+        const touched=await db.client.from("agentnexos_conversations").update({updated_at:new Date().toISOString()}).eq("id",conversationId).eq("user_id",auth.user.id).select("id").single();
+        if(touched.error||!touched.data)throw Error("PERSISTENCE_UNAVAILABLE");
         const saved = await db.client.from("agentnexos_demo_requests")
           .update({ status: "completed", stages: journal.snapshot(), completed_at: new Date().toISOString() })
           .eq("id", runId).select("id").single();
         if (saved.error || !saved.data) throw new Error("PERSISTENCE_UNAVAILABLE");
         writer.write({ type: "text-end", id: "answer" });
+        writer.write({type:"data-persistence",data:{saved:true},transient:true});
         writer.write({ type: "finish" });
       } catch (error) {
         // Best-effort terminal status. A failed save never becomes a success response.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { redirect, notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n/config";
 import { authenticatedUser } from "@/lib/auth/server";
+import { conversationList,conversationMessages } from "@/lib/workspace/history";
 import { AgentWorkspace } from "@/components/agent/workspace";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; if (!isLocale(locale)) notFound();
@@ -10,9 +11,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title, description, robots: { index: false, follow: false }, alternates: { canonical: `/${locale}/agentnexos`, languages: { ar: "/ar/agentnexos", en: "/en/agentnexos" } }, openGraph: { title, description, url: `/${locale}/agentnexos` }, twitter: { title, description } };
 }
 export const dynamic = "force-dynamic";
-export default async function AgentSpacePage({params}:{params:Promise<{locale:string}>}) {
+export default async function AgentSpacePage({params,searchParams}:{params:Promise<{locale:string}>;searchParams:Promise<{chat?:string}>}) {
   const {locale}=await params;if(!isLocale(locale))notFound();
   const auth=await authenticatedUser();if(!auth)redirect(`/${locale}/login`);
   const {error}=await auth.client.from("agentnexos_profiles").upsert({id:auth.user.id},{onConflict:"id",ignoreDuplicates:true});
-  return <AgentWorkspace accountReady={!error} />;
+  const chat=(await searchParams).chat;
+  let history:Awaited<ReturnType<typeof conversationList>>=[], initial:Awaited<ReturnType<typeof conversationMessages>>=[];
+  let historyReady=true;
+  try {history=await conversationList(auth.client,auth.user.id);if(chat)initial=await conversationMessages(auth.client,auth.user.id,chat);}catch{historyReady=false;}
+  return <AgentWorkspace key={chat||"new"} accountReady={!error&&historyReady} initialConversationId={historyReady?chat:undefined} initialHistory={history} initialMessages={initial} />;
 }

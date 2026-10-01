@@ -73,3 +73,15 @@ test("bounded request and context size",async()=>{
   const messages=Array.from({length:4},()=>({role:"user",parts:[{type:"text",text:"x".repeat(4000)}]}));
   assert.equal((await POST(request({locale:"en",messages}))).status,400);
 });
+
+test("private conversation APIs reject anonymous access and cross-origin deletion",async()=>{
+ const {GET:history}=await import('../app/api/conversations/route');
+ const {DELETE:remove}=await import('../app/api/conversations/[id]/route');
+ const id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+ assert.equal((await history()).status,401);
+ assert.equal((await remove(new Request(`https://example.com/api/conversations/${id}`,{method:'DELETE',headers:{origin:'https://attacker.example'}}),{params:Promise.resolve({id})})).status,403);
+ assert.equal((await remove(new Request(`https://example.com/api/conversations/${id}`,{method:'DELETE',headers:{origin:'https://example.com'}}),{params:Promise.resolve({id})})).status,401);
+});
+test("latest user text is bounded even when split into multiple parts",async()=>{
+ assert.equal((await POST(request({locale:'en',messages:[{role:'user',parts:[{type:'text',text:'x'.repeat(3000)},{type:'text',text:'y'.repeat(3000)}]}]}))).status,400);
+});
