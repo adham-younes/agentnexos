@@ -6,6 +6,7 @@ import { conversationText, contextLimits } from "@/lib/agents/context";
 import { demoPolicy } from "@/lib/agents/policy";
 import { createRunJournal } from "@/lib/agents/journal";
 import { runAgentWorkflow } from "@/lib/agents/workflow";
+import { reservationSchema } from "@/lib/agents/reservation";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -61,10 +62,12 @@ export async function POST(request: Request) {
   const subject = createHmac("sha256", db.key).update(ip).digest("hex");
   let runId: string;
   try {
-    const { data, error } = await db.client.rpc("reserve_agentnexos_demo", { p_subject_hash: subject });
+    const { data, error } = await db.client.rpc("reserve_agentnexos_demo_v2", { p_subject_hash: subject });
     if (error) return unavailable();
-    if (typeof data !== "string") return Response.json({ code: "DEMO_LIMIT" }, { status: 429, headers: { ...headers, "Retry-After": "30" } });
-    runId = data;
+    const reservation = reservationSchema.safeParse(data);
+    if (!reservation.success) return unavailable();
+    if (reservation.data.code !== "RESERVED") return Response.json(reservation.data, { status: 429, headers: { ...headers, "Retry-After": String(reservation.data.retryAfterSeconds) } });
+    runId = reservation.data.runId;
   } catch { return unavailable(); }
   const signal = AbortSignal.any([request.signal, AbortSignal.timeout(demoPolicy.deadlineMs)]);
   const stream = createUIMessageStream({
