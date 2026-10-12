@@ -16,8 +16,8 @@ export function PublicPage({ page, locale }: { page: PublicPageKey; locale: Loca
         </nav>
         <div className={legal ? "mx-auto max-w-3xl text-center" : "grid items-center gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-16"}>
           <div className="space-y-5">
-            <p className="text-sm font-medium text-[#eca8d6]">{content.eyebrow}</p>
-            <h1 className="text-3xl font-semibold leading-[1.4] tracking-tight sm:text-5xl">{content.title}</h1>
+            <p className="text-sm font-medium text-[#10b981]">{content.eyebrow}</p>
+            <h1 className="text-3xl font-display leading-[1.4] tracking-tight sm:text-5xl">{content.title}</h1>
             <p className="text-base leading-8 text-foreground/75 sm:text-lg">{content.intro}</p>
           </div>
           {!legal && <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6">
@@ -26,21 +26,21 @@ export function PublicPage({ page, locale }: { page: PublicPageKey; locale: Loca
             <img src={image} alt="" aria-hidden="true" className={page === "security" ? "h-full w-full rounded-2xl object-cover" : "h-full w-full object-contain"} />
           </div>}
         </div>
-        <p className="mt-10 rounded-xl border-s-2 border-[#eca8d6]/50 bg-foreground/[0.025] p-5 text-sm leading-7 text-foreground/65">{content.notice}</p>
+        <p className="mt-10 rounded-xl border-s-2 border-[#10b981]/50 bg-foreground/[0.025] p-5 text-sm leading-7 text-foreground/65">{content.notice}</p>
         <div className={`mt-12 grid gap-6 ${page === "solutions" || page === "resources" ? "lg:grid-cols-3" : "md:grid-cols-2"}`}>
           {content.cards.map(([title, description, ...details], index) => (
             <section id={page === "resources" && index === 2 ? "acceptance" : undefined} key={title} className="flex min-w-0 flex-col rounded-2xl border border-border/60 bg-card/50 p-6 sm:p-8">
-              <span className="mb-6 text-xs font-mono text-[#eca8d6]">{String(index+1).padStart(2,"0")}</span>
-              <h2 className="text-xl font-semibold leading-8">{title}</h2>
+              <span className="mb-6 text-xs font-mono text-[#10b981]">{String(index+1).padStart(2,"0")}</span>
+              <h2 className="text-2xl font-display leading-8">{title}</h2>
               <p className="mt-4 text-base leading-8 text-foreground/75">{description}</p>
               {details.length > 0 && <ul className="mt-6 space-y-3 border-t border-border/50 pt-5 text-sm leading-7 text-foreground/75">{details.map(detail => <li key={detail}>{detail}</li>)}</ul>}
             </section>
           ))}
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          {!legal && <Link className="rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/start`}>{locale === "ar" ? "جهّز موجز المشروع" : "Prepare a project brief"}</Link>}
-          <Link className="rounded-xl border border-border px-6 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/agentnexos`}>{locale === "ar" ? "افتح مساحة الوكيل" : "Open the agent workspace"}</Link>
-          <Link className="rounded-xl border border-border px-6 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/${page === "security" ? "privacy" : "security"}`}>{locale === "ar" ? (page === "security" ? "راجع معالجة البيانات" : "راجع ضوابط التشغيل") : (page === "security" ? "Review data handling" : "Review operating controls")}</Link>
+          {!legal && <Link className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/start`}>{locale === "ar" ? "جهّز موجز المشروع" : "Prepare a project brief"}</Link>}
+          <Link className="rounded-full border border-border px-6 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/agentnexos`}>{locale === "ar" ? "افتح مساحة الوكيل" : "Open the agent workspace"}</Link>
+          <Link className="rounded-full border border-border px-6 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/${page === "security" ? "privacy" : "security"}`}>{locale === "ar" ? (page === "security" ? "راجع معالجة البيانات" : "راجع ضوابط التشغيل") : (page === "security" ? "Review data handling" : "Review operating controls")}</Link>
         </div>
       </main>
       <footer className="border-t border-border/50 px-5 py-8 text-center text-sm text-muted-foreground"><p>{locale === "ar" ? "© 2026 Agentnexos. جميع الحقوق محفوظة." : "© 2026 Agentnexos. All rights reserved."}</p></footer>

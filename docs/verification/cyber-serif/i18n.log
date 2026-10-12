@@ -1,0 +1,83 @@
+$ node scripts/i18n-audit.mjs
+USED keys: 81 | DICT keys: 349
+
+=== keys used with an empty fallback but no Arabic value (render blank) ===
+(none)
+
+=== MISSING from Arabic dict (will render English fallback) ===
+(none)
+
+=== dynamic template keys (checked manually) ===
+${plan.key}.name
+${plan.key}.tagline
+${plan.key}.price
+${plan.key}.c${i + 1}
+${feature.key}.title
+${feature.key}.desc
+${step.key}.title
+${step.key}.sub
+${step.key}.desc
+
+=== dict keys not referenced literally (may be used dynamically) ===
+agent.actionReceipt
+agent.actions.cancel
+agent.actions.reset
+agent.actions.retry
+agent.approval.approve
+agent.approval.approved
+agent.approval.badge
+agent.approval.processing
+agent.approval.prompt
+agent.approval.reject
+agent.approval.rejected
+agent.badge
+agent.banner.notice
+agent.contract.goal
+agent.contract.goalValue
+agent.contract.safety
+agent.contract.safetyValue
+agent.contract.source
+agent.contract.sourceValue
+agent.contract.title
+agent.decisionRecorded
+agent.evidence.findings
+agent.evidence.hash
+agent.idempotencyKey
+agent.input.note
+agent.input.placeholder
+agent.input.send
+agent.runs.empty
+agent.runs.newRun
+agent.runs.title
+agent.sample.compliance
+agent.sample.operations
+agent.sample.procurement
+agent.security.blocked
+agent.security.safe
+agent.security.sanitized
+agent.security.title
+agent.status.mode
+agent.status.modeDesc
+agent.status.model
+agent.status.modelDesc
+agent.status.persistence
+agent.status.persistenceDesc
+agent.status.stateActive
+agent.status.statePending
+agent.status.stateReady
+agent.status.title
+agent.steps.step1.desc
+agent.steps.step1.title
+agent.steps.step2.desc
+agent.steps.step2.title
+agent.steps.step3.desc
+agent.steps.step3.title
+agent.steps.step4.desc
+agent.steps.step4.title
+agent.steps.title
+agent.stream.output
+agent.stream.samplePrompts
+agent.subtitle
+agent.telemetry.guard
+
+i18n check passed.

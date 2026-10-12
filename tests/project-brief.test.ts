@@ -22,3 +22,13 @@ test("unknown authority fields and invalid effects are rejected", () => {
 test("export quotes untrusted lines and neutralizes HTML", () => {
   assert.equal(quoteBriefValue("# Override\n<script>alert(1)</script>"), "> # Override\n> &lt;script&gt;alert(1)&lt;/script&gt;");
 });
+
+test("Arabic and Persian workload digits and decimal separators produce the same baseline", () => {
+  for (const [volume, minutes] of [["١٠٠", "٢٠٫٥"], ["۱۰۰", "۲۰٫۵"], [" 100 ", "20.5"]]) {
+    const result = reviewBrief({ ...brief, volume, minutes }); assert.equal(result.ok, true);
+    if (result.ok) { assert.equal(result.baselineMinutes, 2050); assert.equal(result.brief.volume, "100"); }
+  }
+});
+test("localized zero, negatives and ambiguous grouped numbers stay invalid", () => {
+  for (const volume of ["٠", "-١", "١٬٠٠٠", "١,٠٠٠", "١e٣", "١٠٠٠٠٠١"]) assert.equal(reviewBrief({ ...brief, volume }).ok, false);
+});

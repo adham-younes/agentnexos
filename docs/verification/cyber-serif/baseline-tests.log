@@ -1,0 +1,51 @@
+$ tsx --test tests/agentnexos.test.ts tests/agent-policy.test.ts tests/project-brief.test.ts
+(node:6718) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ routing bilingual task cases; history and length do not force a team (1.769292ms)
+✔ unknown and ungranted capabilities fail before execution (0.269416ms)
+✔ concurrent calls cannot exceed the shared runtime budget (0.130541ms)
+✔ new runs have independent budgets (0.986917ms)
+✔ direct tool calls validate values, arbitrary reference IDs, and extra permissions (0.738ms)
+✔ abort prevents tool network work (0.144459ms)
+✔ fixed reference and redirect rejection; injected text remains untrusted (9.840875ms)
+✔ reference read limit is enforced independently of total calls (0.512125ms)
+✔ references preserve UTF-8 across chunks and declare oversized truncation (1.001708ms)
+✔ reference outages and disallowed content never return fabricated evidence (0.452375ms)
+✔ context projection keeps latest complete turns within API limits (0.230166ms)
+✔ browser tool and system parts cannot enter the text context (0.062125ms)
+✔ journal serializes concurrent snapshots; persistence failure is latched (0.179834ms)
+✔ latest greeting skips previous complex history and emits metadata only (45.55575ms)
+✔ calculation uses planner and reviewer without analyst; discovery excludes references (13.236291ms)
+✔ audit failure stops provider calls rather than claiming success (0.313834ms)
+✔ design review requires accountability and never grants execution (0.426959ms)
+✔ complete financial design remains high risk and blocked for execution (0.069916ms)
+✔ untrusted design cannot add approval flags or unrecognized effects (0.189792ms)
+(node:6719) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ reservation rejects unknown outcomes and malformed run IDs instead of starting a model (2.945875ms)
+✔ daily, global and active-request limits have distinct bilingual messages (0.21625ms)
+✔ configured budgets reject invalid or inverted limits, and error counts come from the server (0.524208ms)
+✔ three real SDK model boundaries execute in Mastra order (mock providers, not live Groq) (146.296792ms)
+✔ short greeting calls only the reviewer (8.764041ms)
+✔ cancellation prevents any provider call (0.229625ms)
+✔ workload tool performs arithmetic without inventing savings (0.29175ms)
+✔ demo remains fail-closed without explicit enablement (2.166084ms)
+✔ rejects cross-origin requests (0.347458ms)
+✔ rejects client-supplied system messages and tool results (0.695458ms)
+✔ bounded request and context size (0.347667ms)
+(node:6720) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ brief measures current workload without authorizing execution or predicting savings (1.860833ms)
+✔ sensitive effects require approval and deletion remains high risk (0.438917ms)
+✔ missing owner and evidence criteria cannot be passed as a complete brief (1.725125ms)
+✔ invalid, negative, nonfinite and oversized workloads are rejected (0.262167ms)
+✔ unknown authority fields and invalid effects are rejected (0.154958ms)
+✔ export quotes untrusted lines and neutralizes HTML (0.153292ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1632.991041

@@ -1,0 +1,60 @@
+? Verifying lockfile against supply-chain policies (820 entries)...
+.                                        | [WARN] deprecated recharts@2.15.4
+.                                        | [WARN] deprecated eslint@9.39.5
+Progress: resolved 0, reused 101, downloaded 0, added 0
+Progress: resolved 0, reused 276, downloaded 2, added 0
+Downloading next@16.3.8: 0.00 B/42.04 MB
+Downloading next@16.3.8: 69.81 kB/42.04 MB
+Progress: resolved 0, reused 319, downloaded 4, added 0
+✓ Lockfile passes supply-chain policies (820 entries in 9.2s)
+Downloading next@16.3.8: 686.84 kB/42.04 MB
+Downloading next@16.3.8: 1.01 MB/42.04 MB
+Downloading next@16.3.8: 1.64 MB/42.04 MB
+Downloading next@16.3.8: 2.31 MB/42.04 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 0.00 B/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 212.15 kB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 490.68 kB/31.69 MB
+Downloading next@16.3.8: 5.16 MB/42.04 MB
+Downloading next@16.3.8: 6.05 MB/42.04 MB
+Downloading next@16.3.8: 6.94 MB/42.04 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 1.69 MB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 2.05 MB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 2.54 MB/31.69 MB
+[WARN] Request took 16547ms: https://registry.npmjs.org/@typescript-eslint%2Feslint-plugin
+Downloading @next/swc-darwin-arm64@16.3.8: 3.52 MB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 4.51 MB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 5.49 MB/31.69 MB
+[WARN] Request took 19708ms: https://registry.npmjs.org/@typescript-eslint%2Ftypescript-estree
+Progress: resolved 0, reused 338, downloaded 4, added 0
+Downloading @next/swc-darwin-arm64@16.3.8: 8.36 MB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 9.72 MB/31.69 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 11.13 MB/31.69 MB
+Downloading next@16.3.8: 24.94 MB/42.04 MB
+Downloading next@16.3.8: 26.82 MB/42.04 MB
+Downloading next@16.3.8: 28.25 MB/42.04 MB
+Downloading next@16.3.8: 29.87 MB/42.04 MB
+Downloading next@16.3.8: 31.67 MB/42.04 MB
+Downloading next@16.3.8: 33.46 MB/42.04 MB
+Downloading next@16.3.8: 35.24 MB/42.04 MB
+Downloading next@16.3.8: 36.81 MB/42.04 MB
+Downloading next@16.3.8: 38.02 MB/42.04 MB
+Downloading next@16.3.8: 39.94 MB/42.04 MB
+Downloading next@16.3.8: 41.62 MB/42.04 MB
+Downloading @next/swc-darwin-arm64@16.3.8: 29.42 MB/31.69 MB
+Progress: resolved 11, reused 341, downloaded 6, added 11
+Packages: +11 -15
++++++++++++---------------
+Progress: resolved 11, reused 341, downloaded 6, added 11, done
+.../node_modules/unrs-resolver postinstall$ node postinstall.js
+.../node_modules/unrs-resolver postinstall: Done
+[WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+
+dependencies:
+- next 16.3.7
++ next 16.3.8
+
+devDependencies:
+- eslint-config-next 16.3.7
++ eslint-config-next 16.3.8
+
+Done in 44.9s using pnpm v12.4.2

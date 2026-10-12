@@ -1,0 +1,27 @@
+$ node scripts/verify-site.mjs https://compute-the-platform-to-build-six-fawn.vercel.app
+Verified ar at 390px
+Verified ar at 768px
+Verified ar at 1440px
+Verified en at 390px
+Verified en at 768px
+Verified en at 1440px
+{
+  "pages": 66,
+  "interactions": 1,
+  "failures": [
+    {
+      "locale": "en",
+      "interaction": "Skip link does not focus main"
+    }
+  ],
+  "readiness": {
+    "ready": true,
+    "limits": {
+      "perConnectionDaily": 1000,
+      "globalDaily": 10000,
+      "windowSeconds": 86400
+    }
+  },
+  "liveAgentVerified": false
+}
+[ELIFECYCLE] Command failed with exit code 1.
