@@ -1,9 +1,9 @@
 import { chromium } from "@playwright/test";
-import { mkdir, writeFile, readFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 
 const base = new URL(process.argv[2] || process.env.SITE_URL || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Use an HTTP(S) site URL without credentials");
-const templateAssets = JSON.parse(await readFile(new URL("../lib/content/template-assets.json", import.meta.url), "utf8"));
+
 const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start"];
 const report = { base: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAgentVerified: false };
 const requireCheck = (condition, message) => { if (!condition) throw Error(message); };
@@ -43,8 +43,12 @@ try {
       const known = new Set(routes.flatMap(path => ["ar", "en"].map(language => `/${language}${path ? "/" + path : ""}`)));
       requireCheck(row.missingRoutes.every(path => known.has(path)), "Unknown internal route");
       if (!route) {
-        requireCheck(row.images.length === templateAssets.length && row.images.every((image, index) => image.src === templateAssets[index].src), "Template image source or order changed");
-        requireCheck(row.images.every((image, index) => !image.width || (image.width === templateAssets[index].width && image.height === templateAssets[index].height)), "Template image intrinsic dimensions changed");
+        requireCheck(await page.locator("h1").count() === 1, "Homepage needs one primary heading");
+        const headingFont = await page.locator("h1").evaluate(element => getComputedStyle(element).fontFamily);
+        requireCheck(headingFont.includes(locale === "ar" ? "IBM Plex Sans Arabic" : "Newsreader"), "Approved display font is not rendered");
+        requireCheck(await page.locator("#availability table tbody tr").count() === 4, "Capability disclosure table is incomplete");
+        requireCheck(await page.locator("#questions details").count() >= 4, "Pre-start questions are missing");
+        requireCheck(await page.locator("#top a[href$='/agentnexos']").count() === 1 && await page.locator("#top a[href$='/start']").count() === 1, "Primary workflow and brief actions are missing");
       }
       delete row.missingRoutes;
     } catch (error) { row.failure = error.message; report.failures.push({ locale, width, route, failure: error.message }); }
@@ -60,12 +64,12 @@ try {
     const page = await browser.newPage({ viewport: { width: 390, height: 667 }, reducedMotion: "reduce", acceptDownloads: true });
     try {
       await page.goto(`${base.origin}/${locale}`, { waitUntil: "domcontentloaded" });
-      await page.waitForFunction(() => document.querySelector("video")?.paused && document.querySelector("#top h1")?.textContent.trim());
+      await page.waitForFunction(() => document.querySelector("#top h1")?.textContent.trim());
       const toggle = page.locator("#mobile-menu-toggle"), menu = page.locator("#mobile-navigation");
       requireCheck(await menu.evaluate(element => element.inert), "Collapsed menu is not inert");
       await page.keyboard.press("Tab");
       requireCheck(await page.locator(".skip-link").evaluate(element => document.activeElement === element), "Skip link is not first focus target");
-      await page.keyboard.press("Enter"); requireCheck(await page.locator("#main-content").evaluate(element => document.activeElement === element), "Skip link does not focus main");
+      await page.keyboard.press("Enter"); await page.waitForFunction(() => document.activeElement?.id === "main-content");
       for (let n = 0; n < 14; n++) { await page.keyboard.press("Tab"); requireCheck(!await menu.evaluate(element => element.contains(document.activeElement)), "Focus enters collapsed menu"); }
       await toggle.click();
       await page.waitForFunction(() => document.querySelector("#mobile-navigation").contains(document.activeElement));
@@ -74,13 +78,17 @@ try {
       await page.keyboard.press("Escape");
       requireCheck(await toggle.evaluate(element => document.activeElement === element), "Focus did not return to toggle");
       requireCheck(!await page.locator("#main-content").evaluate(element => element.inert), "Background remained inert");
-      await page.waitForFunction(() => document.querySelector("video")?.paused);
+      requireCheck(await page.locator(".cyber-flow-step").evaluateAll(elements => elements.every(element => getComputedStyle(element).animationName === "none")), "Decorative workflow animates with reduced motion");
       const canvasesBefore = await page.locator("canvas").evaluateAll(elements => elements.map(element => element.toDataURL()));
       await page.waitForTimeout(300);
       const canvasesAfter = await page.locator("canvas").evaluateAll(elements => elements.map(element => element.toDataURL()));
       requireCheck(JSON.stringify(canvasesBefore) === JSON.stringify(canvasesAfter), "Decorative canvas animates with reduced motion");
-      const securityCard = page.locator('#security [role="button"]').nth(1);
-      await securityCard.focus(); await page.keyboard.press("Enter"); requireCheck(await securityCard.getAttribute("aria-pressed") === "true", "Security card keyboard activation failed");
+      const tabs = page.getByRole("tab");
+      await tabs.nth(0).focus(); await page.keyboard.press(locale === "ar" ? "ArrowLeft" : "ArrowRight");
+      requireCheck(await tabs.nth(1).getAttribute("aria-selected") === "true" && await tabs.nth(1).evaluate(element => document.activeElement === element), "Workflow tab keyboard selection failed");
+      requireCheck(await page.getByRole("tabpanel").getAttribute("aria-labelledby") === "case-tab-1", "Workflow panel label is stale");
+      await page.locator("#questions summary").first().focus(); await page.keyboard.press("Enter");
+      requireCheck(await page.locator("#questions details").first().getAttribute("open") !== null, "FAQ keyboard activation failed");
       await toggle.click(); await toggle.click(); requireCheck(await toggle.getAttribute("aria-expanded") === "false", "Pointer close failed");
       await page.goto(`${base.origin}/${locale}/start`);
       await page.locator("button[type=submit]").click(); requireCheck(await page.locator('[aria-invalid="true"]').count() === 7, "Incomplete brief accepted");
@@ -94,7 +102,11 @@ try {
       requireCheck(download.suggestedFilename() === `agentnexos-brief-${locale}.md`, "Brief download failed");
       await page.getByRole("button", { name: locale === "ar" ? "امسح البيانات" : "Clear details", exact: true }).click();
       requireCheck(await page.locator("#brief-goal").inputValue() === "" && !await result.count() && !posts.length, "Brief reset or local-only boundary failed");
-      report.interactions.push({ locale, collapsedMenuInert: true, focusContainment: true, escapeFocusReturn: true, pointerClose: true, reducedMotionVideoPaused: true, reducedMotionCanvasStatic: true, skipLink: true, securityCardKeyboard: true, briefValidationDownloadReset: true, briefPostRequests: 0 });
+      await page.goto(`${base.origin}/${locale}/platform?view=details#main-content`);
+      await page.getByRole("link", { name: locale === "ar" ? "English" : "العربية", exact: true }).click();
+      await page.waitForURL(url => url.pathname === `/${locale === "ar" ? "en" : "ar"}/platform`);
+      requireCheck(new URL(page.url()).search === "?view=details" && new URL(page.url()).hash === "#main-content", "Language switch lost query or fragment");
+      report.interactions.push({ locale, localeContextPreserved: true, collapsedMenuInert: true, focusContainment: true, escapeFocusReturn: true, pointerClose: true, reducedMotionWorkflowStatic: true, reducedMotionCanvasStatic: true, skipLink: true, workflowTabsKeyboard: true, faqKeyboard: true, briefValidationDownloadReset: true, briefPostRequests: 0 });
     } catch (error) { report.failures.push({ locale, interaction: error.message }); }
     await page.close();
   }

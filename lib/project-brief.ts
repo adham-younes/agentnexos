@@ -3,10 +3,14 @@ import { z } from "zod";
 export const briefFields = ["goal", "owner", "trigger", "source", "outcome", "acceptance", "failure"] as const;
 export type BriefField = typeof briefFields[number];
 const text = z.string().trim().min(3).max(1200);
+const localizedNumber = z.string().max(20).transform(value => value.trim()
+  .replace(/[٠-٩]/g, digit => String(digit.charCodeAt(0) - 0x0660))
+  .replace(/[۰-۹]/g, digit => String(digit.charCodeAt(0) - 0x06f0))
+  .replace(/٫/g, "."));
 export const briefSchema = z.object({
   goal: text, owner: text, trigger: text, source: text, outcome: text, acceptance: text, failure: text,
   effect: z.enum(["read", "draft", "external_write", "financial", "delete"]),
-  volume: z.string().max(20), minutes: z.string().max(20),
+  volume: localizedNumber, minutes: localizedNumber,
 }).strict();
 export type ProjectBrief = z.infer<typeof briefSchema>;
 export function reviewBrief(input: unknown) {

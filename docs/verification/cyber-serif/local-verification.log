@@ -1,0 +1,17 @@
+$ node scripts/verify-site.mjs http://localhost:3000
+Verified ar at 390px
+Verified ar at 768px
+Verified ar at 1440px
+Verified en at 390px
+Verified en at 768px
+Verified en at 1440px
+{
+  "pages": 66,
+  "interactions": 2,
+  "failures": [],
+  "readiness": {
+    "ready": false,
+    "code": "FEATURE_DISABLED"
+  },
+  "liveAgentVerified": false
+}

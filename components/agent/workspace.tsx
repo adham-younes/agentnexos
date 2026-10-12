@@ -93,7 +93,7 @@ export function AgentWorkspace() {
               {messages.length === 0 ? <div className="py-2 sm:py-5">
                 <div className="mb-7 flex size-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10"><Layers3 className="size-7 text-primary" /></div>
                 <p className="mb-3 text-xs font-medium text-primary">{c.badge}</p>
-                <h1 className="max-w-2xl text-3xl font-semibold leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
+                <h1 className="max-w-2xl text-3xl font-display leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
                 <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{c.intro}</p>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">

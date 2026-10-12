@@ -23,6 +23,8 @@ export function LocaleSwitcher({ inverted = false }: { inverted?: boolean }) {
           <a
             key={l}
             href={swapLocale(pathname, l)}
+            onClick={event => { event.currentTarget.search = window.location.search; event.currentTarget.hash = window.location.hash; }}
+            onAuxClick={event => { event.currentTarget.search = window.location.search; event.currentTarget.hash = window.location.hash; }}
             aria-current={active ? "true" : undefined}
             className={
               active

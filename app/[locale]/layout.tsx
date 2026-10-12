@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
-  Instrument_Sans,
-  Instrument_Serif,
-  JetBrains_Mono,
+  Inter,
+  Newsreader,
+  Space_Grotesk,
   IBM_Plex_Sans_Arabic,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -18,24 +18,23 @@ import {
   type Locale,
 } from "@/lib/i18n/config";
 
-const instrumentSans = Instrument_Sans({
+const instrumentSans = Inter({
   subsets: ["latin"],
   variable: "--font-instrument",
 });
 
-const instrumentSerif = Instrument_Serif({
+const instrumentSerif = Newsreader({
   subsets: ["latin"],
-  weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-instrument-serif",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMono = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-jetbrains",
 });
 
-// Arabic companion face — added alongside the template fonts, never replacing
-// them, so the English (LTR) rendering stays identical.
+// Arabic companion: Newsreader has no Arabic glyphs. Keep joining and readable line height.
 const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "600", "700"],

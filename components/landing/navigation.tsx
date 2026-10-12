@@ -30,7 +30,8 @@ export function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -99,7 +100,7 @@ export function Navigation() {
                 className={`text-[13px] xl:text-sm font-medium transition-colors duration-300 relative group ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}
               >
                 {t(link.key, link.name)}
-                <span className={`absolute -bottom-1.5 start-0 w-0 h-px transition-all duration-300 group-hover:w-full ${isDark ? "bg-white" : "bg-foreground"}`} />
+                <span className="absolute -bottom-1.5 start-0 w-0 h-px bg-[#10b981] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
@@ -107,9 +108,6 @@ export function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3 xl:gap-4">
             <LocaleSwitcher inverted={isDark} />
-            <a href="#how-it-works" className={`text-[13px] font-medium transition-colors duration-500 ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}>
-              {t("nav.signIn", "Our process")}
-            </a>
             <Button asChild
               size="sm"
               className={`h-10 rounded-full px-5 text-[13px] font-semibold transition-all duration-500 ${isDark ? "bg-white hover:bg-white/90 text-black" : "bg-foreground hover:bg-foreground/90 text-background"}`}
