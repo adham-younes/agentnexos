@@ -49,3 +49,11 @@ Research informs examples and structure only. It is not evidence of Agentnexos c
 - Additional read-only and form interactions tested via Chrome: 6 sector tabs, case-specific assistant prompt on deep link, session draft retention between Arabic and English, form validation, Markdown download, clear-on-reload, founder email/tel anchors, mobile-menu escape. All checks passed.
 - `pnpm audit --prod`: still exits 1 due to a known moderate transitive `sprintf-js` advisory; no unreviewed dependency override and no suppression applied.
 - The **local** assistant readiness is `FEATURE_DISABLED` intentionally because local tests do not copy production model and database secrets. A preview deployment must be tested independently; no local LLM inference success is claimed.
+
+## Hosted Preview verification (first build)
+- Branch `feature/enterprise-story-preview-20261013`, initial SHA `ffa5615edd0185573a3fd650938cfb91f4e60f6c`, deployed as Vercel Preview `dpl_6sjt7ubVUxUZtCzhhJh5CgSRGu1J`, state `READY`.
+- Public URL: `https://compute-the-platform-to-build-igmyh1hwo-adhamlouxors-projects.vercel.app`.
+- Host browser verification: 72/72 pages passed at ar/en × 390/768/1440, with 2 interactive journeys, zero reported failures.
+- Preview `GET /api/agentnexos` returned `{"ready":false,"code":"FEATURE_DISABLED"}`. This is **not** a verified live AI demo environment.
+- GitHub Actions for first SHA failed before any test step was reported (`steps: []`); investigate external CI configuration before a production merge.
+- Final follow-up corrects local session-storage wording in the project-brief page and requires a fresh matching-SHA Vercel Preview check.
