@@ -11,12 +11,14 @@ import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
+import { casePrompt } from "@/lib/content/enterprise-story";
 import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
 export function AgentWorkspace() {
   const locale = useLocale();
   const c = agentWorkspaceCopy[locale];
   const [input, setInput] = useState("");
+  useEffect(() => { const frame = requestAnimationFrame(() => { const selected = new URLSearchParams(window.location.search).get("case"); const draft = selected && casePrompt(locale,selected); if (draft) setInput(draft); }); return () => cancelAnimationFrame(frame); }, [locale]);
   const [ready, setReady] = useState<boolean | null>(null);
   const [phase, setPhase] = useState(-1);
   const [limitCode, setLimitCode] = useState<DemoLimitCode | null>(null);

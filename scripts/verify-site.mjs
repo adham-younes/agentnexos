@@ -4,7 +4,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 const base = new URL(process.argv[2] || process.env.SITE_URL || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Use an HTTP(S) site URL without credentials");
 
-const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start"];
+const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "founder", "start"];
 const report = { base: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAgentVerified: false };
 const requireCheck = (condition, message) => { if (!condition) throw Error(message); };
 const browser = await chromium.launch();
@@ -34,7 +34,7 @@ try {
         mainCount: document.querySelectorAll("main").length,
         images: [...document.images].map(image => ({ src: image.getAttribute("src"), width: image.naturalWidth, height: image.naturalHeight, displayedWidth: image.getBoundingClientRect().width, displayedHeight: image.getBoundingClientRect().height })),
         missingHashTargets: [...document.querySelectorAll('a[href^="#"]')].map(link => link.getAttribute("href")).filter(href => href !== "#" && !document.getElementById(decodeURIComponent(href.slice(1)))),
-        missingRoutes: [...document.querySelectorAll('a[href^="/"]')].map(link => link.getAttribute("href").split("#")[0]),
+        missingRoutes: [...document.querySelectorAll('a[href^="/"]')].map(link => link.getAttribute("href").split("#")[0].split("?")[0]),
       })));
       row.status = response.status();
       requireCheck(row.status === 200 && !row.overflow && !row.brokenImages && !errors.length, "HTTP/layout/image/browser failure");
