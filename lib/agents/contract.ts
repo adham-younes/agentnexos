@@ -14,17 +14,18 @@ export const designContractSchema = z.object({
     onFailure: z.string().trim().max(400),
   }).strict()).min(1).max(12),
 }).strict();
+const unspecified = (value: string) => !value || /^(?:unknown|tbd|n\/a|not (?:known|specified)|غير محدد|غير معروف|لم يحدد|لاحقًا|لاحقا|\?+|…|\.{2,})$/i.test(value.trim());
 export function reviewDesignContract(input: unknown) {
   const design = designContractSchema.parse(input);
   const gaps: { field: string; code: string }[] = [];
-  if (!design.owner) gaps.push({field:"owner",code:"OWNER_REQUIRED"});
-  if (!design.sourceOfTruth) gaps.push({field:"sourceOfTruth",code:"SOURCE_REQUIRED"});
-  if (!design.acceptanceCriteria.length) gaps.push({field:"acceptanceCriteria",code:"ACCEPTANCE_REQUIRED"});
+  if (unspecified(design.owner)) gaps.push({field:"owner",code:"OWNER_REQUIRED"});
+  if (unspecified(design.sourceOfTruth)) gaps.push({field:"sourceOfTruth",code:"SOURCE_REQUIRED"});
+  if (!design.acceptanceCriteria.length || design.acceptanceCriteria.some(unspecified)) gaps.push({field:"acceptanceCriteria",code:"ACCEPTANCE_REQUIRED"});
   const steps = design.steps.map((step,index) => {
     const sensitive = ["external_write", "financial", "delete"].includes(step.effect);
-    if(sensitive && !step.decisionOwner) gaps.push({field:`steps.${index}.decisionOwner`,code:"DECISION_OWNER_REQUIRED"});
-    if(!step.evidence) gaps.push({field:`steps.${index}.evidence`,code:"EVIDENCE_REQUIRED"});
-    if(!step.onFailure) gaps.push({field:`steps.${index}.onFailure`,code:"FAILURE_PATH_REQUIRED"});
+    if(sensitive && unspecified(step.decisionOwner)) gaps.push({field:`steps.${index}.decisionOwner`,code:"DECISION_OWNER_REQUIRED"});
+    if(unspecified(step.evidence)) gaps.push({field:`steps.${index}.evidence`,code:"EVIDENCE_REQUIRED"});
+    if(unspecified(step.onFailure)) gaps.push({field:`steps.${index}.onFailure`,code:"FAILURE_PATH_REQUIRED"});
     return { index, risk: step.effect === "financial" || step.effect === "delete" ? "high" : sensitive ? "elevated" : "low", humanApprovalRequired: sensitive, executableInPreview: false };
   });
   return { scope:"design_review_only", status:gaps.length?"needs_details":"ready_for_human_review", executable:false, gaps, steps,

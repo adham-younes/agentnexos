@@ -26,10 +26,10 @@ export const ar = {
   "nav.integrations": "التكاملات",
   "nav.security": "الأمان",
   "nav.solutions": "الحلول",
-  "nav.agentSpace": "مساحة الوكيل",
+  "nav.agentSpace": "مساعد التصميم",
   "nav.primary": "التنقّل الرئيسي",
   "nav.signIn": "منهج العمل",
-  "nav.deployAgent": "ابدأ مشروعًا",
+  "nav.deployAgent": "جهّز موجزك",
   "nav.toggleMenu": "فتح القائمة",
 
   // ---------- hero ----------

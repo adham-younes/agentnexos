@@ -110,6 +110,14 @@ try {
       requireCheck(download.suggestedFilename() === `agentnexos-brief-${locale}.md`, "Brief download failed");
       await page.getByRole("button", { name: locale === "ar" ? "امسح البيانات" : "Clear details", exact: true }).click();
       requireCheck(await page.locator("#brief-goal").inputValue() === "" && !await result.count() && !posts.length, "Brief reset or local-only boundary failed");
+      await page.getByRole("button", { name: locale === "ar" ? "استخدم المثال الافتراضي" : "Use the fictional example", exact: true }).click();
+      requireCheck((await page.locator("#brief-goal").inputValue()).length > 20, "Fictional brief did not load");
+      requireCheck(await page.getByRole("button", { name: locale === "ar" ? "استخدم المثال الافتراضي" : "Use the fictional example", exact: true }).isDisabled(), "Example can overwrite a populated brief");
+      for (const key of Object.keys(fields)) requireCheck((await page.locator(`#brief-${key}`).inputValue()).length >= 3, "Fictional brief is incomplete");
+      await page.locator("button[type=submit]").click();
+      requireCheck((await result.innerText()).includes((2000).toLocaleString(locale)), "Fictional brief baseline is incorrect");
+      requireCheck(!posts.length, "Example brief submitted data externally");
+      await page.getByRole("button", { name: locale === "ar" ? "امسح البيانات" : "Clear details", exact: true }).click();
       await page.goto(`${base.origin}/${locale}/platform?view=details#main-content`);
       await page.getByRole("link", { name: locale === "ar" ? "English" : "العربية", exact: true }).click();
       await page.waitForURL(url => url.pathname === `/${locale === "ar" ? "en" : "ar"}/platform`);
