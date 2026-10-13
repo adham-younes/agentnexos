@@ -73,3 +73,33 @@ test("bounded request and context size",async()=>{
   const messages=Array.from({length:4},()=>({role:"user",parts:[{type:"text",text:"x".repeat(4000)}]}));
   assert.equal((await POST(request({locale:"en",messages}))).status,400);
 });
+
+test("readiness uses the consolidated integration project despite stale legacy overrides", async () => {
+  const names = ["AGENTNEXOS_DEMO_ENABLED", "SUPABASE_URL", "SUPABASE_SECRET_KEY", "AGENTNEXOS_SUPABASE_URL", "AGENTNEXOS_SUPABASE_SECRET_KEY", "GROQ_API_KEY", "GROQ_API_KEY1", "GROQ_API_KEY2"];
+  const previous = Object.fromEntries(names.map(name => [name, process.env[name]]));
+  const originalFetch = globalThis.fetch;
+  const hosts: string[] = [];
+  try {
+    process.env.AGENTNEXOS_DEMO_ENABLED = "true";
+    process.env.SUPABASE_URL = "https://yhjyaytbrsuwaefkqkqg.supabase.co";
+    process.env.SUPABASE_SECRET_KEY = "sb_secret_test_only";
+    process.env.AGENTNEXOS_SUPABASE_URL = "https://ruereqpvykwnakcnmxha.supabase.co";
+    process.env.AGENTNEXOS_SUPABASE_SECRET_KEY = "stale-test-only";
+    for (const name of ["GROQ_API_KEY", "GROQ_API_KEY1", "GROQ_API_KEY2"]) process.env[name] = "test-only";
+    globalThis.fetch = async input => {
+      const url = new URL(typeof input === "string" ? input : input instanceof URL ? input.href : input.url);
+      hosts.push(url.hostname);
+      return Response.json(url.pathname.includes("/rpc/") ? true : { connection_daily_limit: 1000, global_daily_limit: 10000 });
+    };
+    assert.deepEqual(await (await GET()).json(), { ready: true, limits: { perConnectionDaily: 1000, globalDaily: 10000, windowSeconds: 86400 } });
+    assert.equal(hosts.length, 2);
+    assert.ok(hosts.every(host => host === "yhjyaytbrsuwaefkqkqg.supabase.co"));
+    process.env.SUPABASE_URL = "https://another-project.supabase.co";
+    hosts.length = 0;
+    assert.deepEqual(await (await GET()).json(), { ready: false, code: "DATABASE_PROJECT_MISMATCH" });
+    assert.equal(hosts.length, 0);
+  } finally {
+    globalThis.fetch = originalFetch;
+    for (const name of names) { if (previous[name] === undefined) delete process.env[name]; else process.env[name] = previous[name]; }
+  }
+});

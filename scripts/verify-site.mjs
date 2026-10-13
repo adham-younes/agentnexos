@@ -17,7 +17,7 @@ try {
       const response = await page.goto(`${base.origin}/${locale}/${route}`, { waitUntil: "domcontentloaded" });
       await page.locator("main").waitFor();
       await page.evaluate(() => document.fonts.ready);
-      await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { scrollTo(0, y); await new Promise(resolve => setTimeout(resolve, 35)); } scrollTo(0, 0); });
+      await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { scrollTo({ top: y, behavior: "instant" }); await new Promise(resolve => setTimeout(resolve, 60)); } scrollTo({ top: 0, behavior: "instant" }); });
       for (const image of await page.locator("img").all()) {
         if (!await image.evaluate(element => element.getBoundingClientRect().width > 0 && element.getBoundingClientRect().height > 0 && Number(getComputedStyle(element).opacity) > 0)) continue;
         await image.scrollIntoViewIfNeeded();
@@ -44,8 +44,13 @@ try {
       requireCheck(row.missingRoutes.every(path => known.has(path)), "Unknown internal route");
       if (!route) {
         requireCheck(await page.locator("h1").count() === 1, "Homepage needs one primary heading");
+        requireCheck(await page.locator('img[src*="whale"], img[src*="bridge"], video').count() === 0, "Legacy template imagery remains");
+        const motion = await page.locator(".nexus-console-window").evaluate(element => ({ animation: getComputedStyle(element).animationName, border: getComputedStyle(element, "::after").animationName }));
+        requireCheck(motion.animation === "nexus-float" && motion.border === "nexus-shimmer", "Template floating layers or shimmer are missing");
+        requireCheck(await page.locator("[data-reveal]").evaluateAll(elements => elements.every(element => element.classList.contains("is-visible"))), "Scrolled content did not reveal");
+
         const headingFont = await page.locator("h1").evaluate(element => getComputedStyle(element).fontFamily);
-        requireCheck(headingFont.includes(locale === "ar" ? "IBM Plex Sans Arabic" : "Newsreader"), "Approved display font is not rendered");
+        requireCheck(headingFont.includes(locale === "ar" ? "Noto Naskh Arabic" : "Newsreader"), "Approved display font is not rendered");
         requireCheck(await page.locator("#availability table tbody tr").count() === 4, "Capability disclosure table is incomplete");
         requireCheck(await page.locator("#questions details").count() >= 4, "Pre-start questions are missing");
         requireCheck(await page.locator("#top a[href$='/agentnexos']").count() === 1 && await page.locator("#top a[href$='/start']").count() === 1, "Primary workflow and brief actions are missing");
@@ -79,6 +84,7 @@ try {
       requireCheck(await toggle.evaluate(element => document.activeElement === element), "Focus did not return to toggle");
       requireCheck(!await page.locator("#main-content").evaluate(element => element.inert), "Background remained inert");
       requireCheck(await page.locator(".cyber-flow-step").evaluateAll(elements => elements.every(element => getComputedStyle(element).animationName === "none")), "Decorative workflow animates with reduced motion");
+      requireCheck(await page.locator(".nexus-console-window").evaluate(element => getComputedStyle(element).animationName === "none" && getComputedStyle(element, "::after").animationName === "none"), "Template motion ignores reduced-motion preference");
       const canvasesBefore = await page.locator("canvas").evaluateAll(elements => elements.map(element => element.toDataURL()));
       await page.waitForTimeout(300);
       const canvasesAfter = await page.locator("canvas").evaluateAll(elements => elements.map(element => element.toDataURL()));

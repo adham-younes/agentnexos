@@ -1,10 +1,11 @@
-# Agentnexos — Cyber Serif adaptation approved by owner
+# Agentnexos — complete Cyber Serif rebuild
 
-Source: https://superdesign.dev/library/cyber-serif-style, supplied and selected 13 October 2026.
-Audience: Arabic-first operation owners in Egypt, Gulf and MENA; English equivalent.
-Identity: actual Agentnexos wordmark. Do not invent logos, customers, testimonials, measurements, prices or live enterprise capabilities.
-Palette: background #050505; foreground #EBEBEB; muted #a3a3a3; emerald #10b981 limited to status dots, small labels, rules, icons and focused emphasis. Cards rgba(255,255,255,.02), border rgba(255,255,255,.10), blur 12px; white primary buttons with dark text; secondary glass pills. No large emerald panels.
-Typography: Newsreader display in English; Inter body; Space Grotesk technical English labels 10–11px uppercase tracking .2em. Arabic: readable IBM Plex Sans Arabic body and display companion (Newsreader has no Arabic glyphs); keep Arabic joining and normal tracking, generous 1.35 heading line height. Mixed numeric/Latin labels isolated LTR.
-Layout: max 1280px, 24px mobile gutters, fixed dark glass nav, split hero with purpose-built illustrative workflow glass panel; cards radius 24px, pills fully rounded. Spacious marketing, compact readable operational UI.
-Motion: cubic-bezier(.16,1,.3,1), deliberate entrance and hover only, subtle spotlight and shimmer borders. No animation needed for information, no fake progress/count-ups, respect prefers-reduced-motion. Keyboard focus emerald. No permanent competing pulse loops.
-Content: distinguish currently available read-only planning demo and local downloadable project brief from project-specific future enterprise rollout. Email/CRM/ERP/external writes remain disabled. Use fictional data only in demo; sending processes text with Groq. Brief is local-only without submission or server persistence.
+Owner rejected the partial redesign and explicitly requested starting again from the original Cyber Serif template on 13 October 2026. Original reference: https://superdesign.dev/library/cyber-serif-style . Actual preview inside library: https://component-4a04a7c3-74ae-413c-a504-e727a63c9960.preview.superdesign.dev/?projectId=0a04dcd4-8049-425e-9839-27eff4259d82 . Outer gallery extraction was not used as the visual system. Original iframe DNA extracted separately to output/cyber-original-template.
+
+Complete system: #050505 black, #EBEBEB text, surgical #10B981 emerald. Newsreader normal/italic display, Inter body, Space Grotesk metadata. Arabic uses Noto Naskh Arabic editorial display and Noto Sans Arabic body; do not use the old single sans font for all Arabic content.
+
+Edge-to-edge fixed transparent navigation turns to blurred glass on scroll. White command icon rotates on brand hover. Split hero has oversized editorial typography and an actual illustrative procurement console with floating layers and scan line. Three-column glass bento uses pointer spotlights and continuously moving 1px shimmer border. Morphing blurred emerald atmosphere, weighted scroll reveal cubic-bezier(.16,1,.3,1), live pulse, gradient CTA; all decorative motion stops for reduced-motion. No whales, bridges or unrelated photos.
+
+New shared public-page layout covers all interior routes; no legacy template composition or images. Rich concrete operating examples and natural copy; show actual capability constraints succinctly rather than repeating disclaimers as the primary narrative. No fabricated benchmarks, client numbers, integrations, or execution abilities. Keep assistant/brief behavior truthful.
+
+Public footer/navigation, brief form, workspace surfaces and heading fonts use the same system. Tests verify routes, fonts, keyboard/focus, motion preference, no old assets, and actual user journeys.

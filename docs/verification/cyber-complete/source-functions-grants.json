@@ -1,0 +1,397 @@
+{
+  "grants": [
+    {
+      "grantee": "authenticated",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "authenticated",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_conversations",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_limits",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_demo_requests",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "authenticated",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_messages",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "authenticated",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "authenticated",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "authenticated",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "postgres",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "DELETE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "INSERT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "grantee": "service_role",
+      "table_name": "agentnexos_profiles",
+      "privilege_type": "UPDATE"
+    }
+  ],
+  "triggers": null,
+  "functions": [
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "name": "agentnexos_demo_ready",
+      "definition": "CREATE OR REPLACE FUNCTION public.agentnexos_demo_ready()\n RETURNS boolean\n LANGUAGE sql\n SET search_path TO ''\nAS $function$\n  select exists(select 1 from pg_catalog.pg_class where oid = 'public.agentnexos_demo_requests'::regclass);\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "name": "reserve_agentnexos_demo",
+      "definition": "CREATE OR REPLACE FUNCTION public.reserve_agentnexos_demo(p_subject_hash text)\n RETURNS uuid\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare reservation jsonb;\nbegin\n  reservation := public.reserve_agentnexos_demo_v2(p_subject_hash);\n  if reservation->>'code' = 'RESERVED' then return (reservation->>'runId')::uuid; end if;\n  return null;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "name": "reserve_agentnexos_demo_v3",
+      "definition": "CREATE OR REPLACE FUNCTION public.reserve_agentnexos_demo_v3(p_subject_hash text)\n RETURNS jsonb\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare request_id uuid; first_at timestamptz; active_at timestamptz; retry_seconds integer; limits public.agentnexos_demo_limits%rowtype;\nbegin\n  if p_subject_hash !~ '^[a-f0-9]{64}$' or p_subject_hash is null then raise exception 'Invalid subject'; end if;\n  perform pg_catalog.pg_advisory_xact_lock(20260930, 3);\n  select * into strict limits from public.agentnexos_demo_limits where singleton = true;\n  delete from public.agentnexos_demo_requests where created_at < now() - interval '48 hours';\n  -- An abandoned reservation expires after the existing 180-second API lifetime.\n  select min(created_at) into active_at from public.agentnexos_demo_requests\n    where subject_hash = p_subject_hash and status in ('reserved', 'running') and created_at > now() - interval '180 seconds';\n  if active_at is not null then\n    retry_seconds := greatest(1, ceil(extract(epoch from active_at + interval '180 seconds' - now()))::integer);\n    return jsonb_build_object('code', 'DEMO_BUSY', 'retryAfterSeconds', retry_seconds);\n  end if;\n  if (select count(*) from public.agentnexos_demo_requests where subject_hash = p_subject_hash and created_at > now() - interval '24 hours') >= limits.connection_daily_limit then\n    select min(created_at) into first_at from public.agentnexos_demo_requests where subject_hash = p_subject_hash and created_at > now() - interval '24 hours';\n    retry_seconds := greatest(1, ceil(extract(epoch from first_at + interval '24 hours' - now()))::integer);\n    return jsonb_build_object('code', 'DEMO_DAILY_LIMIT', 'retryAfterSeconds', retry_seconds, 'limit', limits.connection_daily_limit, 'windowSeconds', 86400);\n  end if;\n  if (select count(*) from public.agentnexos_demo_requests where created_at > now() - interval '24 hours') >= limits.global_daily_limit then\n    select min(created_at) into first_at from public.agentnexos_demo_requests where created_at > now() - interval '24 hours';\n    retry_seconds := greatest(1, ceil(extract(epoch from first_at + interval '24 hours' - now()))::integer);\n    return jsonb_build_object('code', 'DEMO_GLOBAL_LIMIT', 'retryAfterSeconds', retry_seconds, 'limit', limits.global_daily_limit, 'windowSeconds', 86400);\n  end if;\n  insert into public.agentnexos_demo_requests(subject_hash) values(p_subject_hash) returning id into request_id;\n  return jsonb_build_object('code', 'RESERVED', 'runId', request_id);\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "name": "reserve_agentnexos_demo_v2",
+      "definition": "CREATE OR REPLACE FUNCTION public.reserve_agentnexos_demo_v2(p_subject_hash text)\n RETURNS jsonb\n LANGUAGE sql\n SET search_path TO ''\nAS $function$\n  select public.reserve_agentnexos_demo_v3(p_subject_hash) - 'limit' - 'windowSeconds';\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "name": "agentnexos_begin_turn",
+      "definition": "CREATE OR REPLACE FUNCTION public.agentnexos_begin_turn(p_user_id uuid, p_conversation_id uuid, p_request_id uuid, p_content text, p_locale text)\n RETURNS uuid\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare v_id uuid; v_owner uuid; v_count bigint;\nbegin\n if p_locale not in ('ar','en') or char_length(p_content) not between 1 and 4000 then raise exception 'INVALID_TURN'; end if;\n if exists(select 1 from public.agentnexos_messages where request_id=p_request_id) then raise exception 'DUPLICATE_TURN'; end if;\n if p_conversation_id is null then\n  select count(*) into v_count from public.agentnexos_conversations where user_id=p_user_id;\n  if v_count >= 200 then raise exception 'CONVERSATION_LIMIT'; end if;\n  insert into public.agentnexos_conversations(user_id,title,locale) values(p_user_id,left(p_content,120),p_locale) returning id into v_id;\n else\n  select user_id into v_owner from public.agentnexos_conversations where id=p_conversation_id for update;\n  if v_owner is distinct from p_user_id then raise exception 'CONVERSATION_UNAVAILABLE'; end if;\n  v_id:=p_conversation_id;\n end if;\n select count(*) into v_count from public.agentnexos_messages where conversation_id=v_id;\n if v_count >= 200 then raise exception 'MESSAGE_LIMIT'; end if;\n insert into public.agentnexos_messages(conversation_id,user_id,request_id,role,content) values(v_id,p_user_id,p_request_id,'user',p_content);\n update public.agentnexos_conversations set updated_at=now() where id=v_id;\n return v_id;\nend $function$\n"
+    }
+  ]
+}

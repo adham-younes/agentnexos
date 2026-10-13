@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Command } from "lucide-react";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useT, useLocale } from "@/lib/i18n/use-t";
 
@@ -18,7 +18,7 @@ const navLinks = [
 export function Navigation() {
   const t = useT();
   const locale = useLocale();
-  const resolveHref = (href: string) => (href.startsWith("/") ? `/${locale}${href}` : href);
+  const resolveHref = (href: string) => href.startsWith("#") ? `/${locale}${href}` : `/${locale}${href}`;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isDark = !isScrolled && !isMobileMenuOpen;
@@ -68,17 +68,11 @@ export function Navigation() {
   return (
     <header
       ref={headerRef}
-      className={`fixed z-50 left-3 right-3 sm:left-5 sm:right-5 transition-[top] duration-500 ${
-        isScrolled ? "top-3" : "top-4"
-      }`}
+      className={`nexus-nav ${isScrolled ? "is-scrolled" : ""}`}
     >
       <nav
         aria-label={t("nav.primary", "Primary navigation")}
-        className={`relative z-50 mx-auto max-w-[1320px] rounded-2xl border backdrop-blur-xl transition-all duration-500 ${
-          isDark
-            ? "bg-black/35 border-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
-            : "bg-background/92 border-foreground/10 shadow-[0_18px_60px_rgba(0,0,0,0.12)]"
-        }`}
+        className="nexus-nav-inner"
       >
         <div
           className={`flex items-center justify-between transition-all duration-500 px-4 sm:px-6 lg:px-8 ${
@@ -86,7 +80,8 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#top" tabIndex={isMobileMenuOpen ? -1 : undefined} className="flex items-center gap-2.5 group shrink-0">
+          <a href={`/${locale}`} tabIndex={isMobileMenuOpen ? -1 : undefined} className="flex items-center gap-2.5 group shrink-0">
+            <span className="nexus-command" aria-hidden="true"><Command size={20} /></span>
             <span className={`font-sans text-[22px] sm:text-[25px] font-semibold tracking-[-0.035em] leading-none transition-colors duration-500 ${isDark ? "text-white" : "text-foreground"}`}>Agentnexos</span>
             <span className={`hidden sm:inline font-mono text-[9px] tracking-[0.12em] transition-colors duration-500 ${isDark ? "text-white/45" : "text-muted-foreground"}`}>AI</span>
           </a>
@@ -110,12 +105,13 @@ export function Navigation() {
             <LocaleSwitcher inverted={isDark} />
             <Button asChild
               size="sm"
-              className={`h-10 rounded-full px-5 text-[13px] font-semibold transition-all duration-500 ${isDark ? "bg-white hover:bg-white/90 text-black" : "bg-foreground hover:bg-foreground/90 text-background"}`}
+              className="nexus-nav-cta"
             >
               <a href={`/${locale}/start`}>{t("nav.deployAgent", "Start a project")}</a>
             </Button>
           </div>
 
+          <div className="nexus-mobile-actions lg:hidden"><div inert={isMobileMenuOpen} aria-hidden={isMobileMenuOpen || undefined}><LocaleSwitcher inverted={isDark} compact /></div>
           {/* Mobile Menu Button */}
           <button
             id="mobile-menu-toggle"
@@ -133,6 +129,7 @@ export function Navigation() {
               <Menu className="w-6 h-6" />
             )}
           </button>
+          </div>
         </div>
 
       </nav>
@@ -190,7 +187,7 @@ export function Navigation() {
                 variant="outline"
                 className="flex-1 rounded-full h-14 text-base"
               >
-                <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.signIn", "Our process")}</a>
+                <a href={`/${locale}#how-it-works`} onClick={() => setIsMobileMenuOpen(false)}>{t("nav.signIn", "Our process")}</a>
               </Button>
               <Button asChild
                 className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
