@@ -1,0 +1,28 @@
+{
+  "brand_name": "Agentnexos",
+  "default_locale": "ar",
+  "supported_locales": [
+    "ar",
+    "en"
+  ],
+  "contact_mode": "local_brief",
+  "contact_email": null,
+  "booking_url": null,
+  "lead_submission_enabled": false,
+  "download_markdown_enabled": true,
+  "print_brief_enabled": true,
+  "conversation_max_characters": 4000,
+  "display_application_request_limit": 1000,
+  "application_request_limit_hours": 24,
+  "request_limit_source": "verify_against_server_before_display",
+  "privacy_controller_name": null,
+  "privacy_contact": null,
+  "canonical_origin": null,
+  "publish_rewritten_privacy": false,
+  "publish_rewritten_terms": false,
+  "enable_erp": false,
+  "enable_crm": false,
+  "enable_email_send": false,
+  "enable_payments": false,
+  "enable_code_execution": false
+}
