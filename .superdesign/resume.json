@@ -7,34 +7,29 @@
       "baselineDraftId": "e9172d2f-2b3e-4537-9631-8bcbd1125ad5",
       "activeDraftId": "e9172d2f-2b3e-4537-9631-8bcbd1125ad5",
       "designSystemPath": ".superdesign/design-system.md",
-      "contextFiles": [
-        ".superdesign/design-system.md",
-        "docs/verification/cyber-serif/content-brief.md",
-        "app/globals.css",
-        "components/landing/navigation.tsx",
-        "components/site/locale-switcher.tsx"
-      ],
-      "fingerprints": {
-        ".superdesign/design-system.md": "19cb5cfac23bd6a2c1e3b73f3addd1e7337d13182ad31f1bcd6b8cd911fe6b90",
-        "docs/verification/cyber-serif/content-brief.md": "2dabdb13f1bc440f802e8c9ea3307511a6aa6e7185e9db8545456b0e43f87da8",
-        "app/globals.css": "cca147d2006d68216fb6fc111da68a546cecb51fb452f5dba05d2d71268fe20a",
-        "components/landing/navigation.tsx": "9112f38e6f44ad9b2b9de26fecd868a404df9bdb8fc3deacca424846ae4cfae9",
-        "components/site/locale-switcher.tsx": "2e02f9cfe0dde9873069a687fb6f58ea9f73764dd0240ed951f0288aedfc1762"
-      },
+      "contextFiles": [],
+      "fingerprints": {},
       "components": [],
       "drafts": {
         "e9172d2f-2b3e-4537-9631-8bcbd1125ad5": {
-          "title": "Agentnexos Cyber Serif Refactoring",
-          "visualDirection": "Owner-selected Cyber Serif adapted for bilingual workflow planning",
-          "currentVersion": 2
+          "title": "Agentnexos - Intelligent work. Human direction.",
+          "visualDirection": "Complete owner-requested Cyber Serif rebuild: no legacy assets, editorial bilingual type, actual motion across all public pages",
+          "currentVersion": 3
         }
       },
-      "updatedAt": "2026-10-12T21:57:01.598140+00:00",
+      "updatedAt": "2026-10-13T00:37:03.340225+00:00",
       "implementationFiles": [
         "components/landing/cyber-home.tsx",
-        "lib/content/cyber-home.ts"
+        "components/cyber/effects.tsx",
+        "components/cyber/console.tsx",
+        "components/cyber/footer.tsx",
+        "components/site/public-page.tsx",
+        "components/landing/navigation.tsx",
+        "app/globals.css",
+        "lib/content/cyber-home.ts",
+        "lib/content/product-pages.ts"
       ],
-      "note": "Baseline and selected replace share a draft; baseline is version 1. Source changed during implementation; refresh affected context before next design generation."
+      "note": "Owner explicitly restarted from original reference. Version3 generated from full corrective prompt and selected original style. No code context files were sent on this corrective generation. Existing init artifacts are historical baseline snapshots; active implementation moved to components/cyber and new public-page."
     }
   }
 }

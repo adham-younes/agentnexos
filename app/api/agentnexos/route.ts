@@ -17,11 +17,11 @@ const headers = { "Cache-Control": "no-store" };
 function unavailable() { return Response.json({ code: "DEMO_NOT_READY" }, { status: 503, headers }); }
 function database() {
   if (process.env.AGENTNEXOS_DEMO_ENABLED !== "true") throw new Error("FEATURE_DISABLED");
-  const url = process.env.AGENTNEXOS_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
-  const key = process.env.AGENTNEXOS_SUPABASE_SECRET_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) throw new Error("DATABASE_UNCONFIGURED");
   if (!process.env.GROQ_API_KEY || !process.env.GROQ_API_KEY1 || !process.env.GROQ_API_KEY2) throw new Error("PROVIDER_UNCONFIGURED");
-  if (new URL(url).hostname !== "ruereqpvykwnakcnmxha.supabase.co") throw new Error("DATABASE_PROJECT_MISMATCH");
+  if (new URL(url).hostname !== "yhjyaytbrsuwaefkqkqg.supabase.co") throw new Error("DATABASE_PROJECT_MISMATCH");
   return { client: createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false }, global: { fetch: (input, init) => fetch(input, { ...init, signal: AbortSignal.timeout(8000) }) } }), key };
 }
 

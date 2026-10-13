@@ -1,94 +1,64 @@
 export const productPages = {
-  about: {
-    ar: { eyebrow: "منهج Agentnexos", title: "نبني حول العملية والمسؤول عنها.", intro: "Agentnexos مشروع لتصميم أنظمة وكيلة مخصصة لعمليات المؤسسات في مصر والخليج. نبدأ بمشكلة قابلة للقياس، ثم نختار المعرفة والأدوات والضوابط التي تحتاجها العملية.", notice: "الموقع يعرض منهج العمل وتجربة تصميم محدودة. لا يقدم شهادات امتثال أو نتائج عملاء أو تكاملات جاهزة غير مثبتة.", cards: [
-      ["اكتشاف مسؤول", "حدد مالك العملية ومصدر الحقيقة والحجم الحالي والاستثناءات. المخرج موجز يمكن لفريق الأعمال والهندسة مراجعته.", "القبول: هدف واحد ومخرج واضح ومعيار نجاح قابل للتحقق."],
-      ["تجربة محدودة", "ابدأ ببيانات افتراضية وصلاحيات قراءة ومسودات. اختبر الفشل ونقص المعلومات وطلبات تجاوز الصلاحية قبل إضافة أي فعل خارجي.", "القبول: حالات اختبار ونتائج موثقة؛ رأي النموذج لا يمنح سلطة."],
-      ["تشغيل بإثبات", "قبل الربط المؤسسي يلزم تفويض وعزل وحفظ حالة واستئناف وتتبع كلفة ومراجعة أثر الأفعال. لا نستبدل هذه المتطلبات بتعليمات داخل محادثة.", "القبول: أدلة من الأنظمة المتصلة وخطة إيقاف واستعادة موثقة."],
-      ["توسع تدريجي", "قارن وقت الإنجاز وجودة المخرجات وتدخل المسؤول بخط أساس مقاس. وسّع نطاق العملية بعد تحقق القبول والأمن.", "القبول: نتائج قابلة للمراجعة وحدود واضحة لكل مرحلة."],
-    ] },
-    en: { eyebrow: "The Agentnexos approach", title: "Build around the process and its owner.", intro: "Agentnexos is a project for custom enterprise agent workflows in Egypt and the Gulf. Start with a measurable problem, then choose the knowledge, tools, and controls the process needs.", notice: "The site presents an approach and a limited design preview. It does not claim unverified certifications, customer results, or ready-made integrations.", cards: [
-      ["Accountable discovery", "Identify the process owner, source of truth, current volume, and exceptions. Produce a brief operations and engineering can review.", "Acceptance: one goal, a clear output, and verifiable success criteria."],
-      ["A bounded pilot", "Start with fictional data, read permissions, and drafts. Test failure, missing information, and unauthorized requests before adding external actions.", "Acceptance: documented cases and results; model opinion grants no authority."],
-      ["Evidence before operation", "Enterprise connections require authorization, isolation, saved state, recovery, cost traces, and effect verification. Conversation instructions do not replace these requirements.", "Acceptance: evidence from connected systems and a documented stop and recovery plan."],
-      ["Gradual expansion", "Compare cycle time, output quality, and owner intervention against a measured baseline. Expand after acceptance and security checks.", "Acceptance: reviewable results and explicit boundaries for each stage."],
-    ] },
-  },
-  platform: {
-    ar: {
-      eyebrow: "من المشكلة إلى نظام قابل للتشغيل", title: "المعرفة والأدوات والقرارات، في سير عمل واحد.",
-      intro: "النظام الوكيل ليس نموذجًا واحدًا يعرف كل شيء. إنه مسار يبدأ بهدف ومالك للعملية، ويستدعي التحليل والتخطيط والمراجعة بقدر الحاجة. يحدد النظام صلاحيات الأدوات، بينما يبقى اعتماد القرارات للمسؤول عنها.",
-      notice: "مساحة الوكيل مخصصة لاستكشاف تصميم العمليات. ربط أنظمة المؤسسة وحفظ التشغيل والموافقات يحتاج إعدادًا واختبارات خاصة بكل مشروع؛ لا نقدمه كقدرة عامة جاهزة.",
-      cards: [
-        ["01 · فهم العملية", "حدد الطلب الذي يبدأ العمل، ومالك العملية، ومصدر الحقيقة، وما الذي يعنيه النجاح. نميز المشكلة التشغيلية عن الرغبة في إضافة ذكاء اصطناعي.", "المخرج: وصف عملية وحدود واضحة وأسئلة للبيانات الناقصة."],
-        ["02 · توزيع الأدوار", "تُختار الأدوار حسب الطلب: رد مباشر للسؤال البسيط، وتخطيط ومراجعة للحساب، وتحليل إضافي لتصميم العملية. الحالة والصلاحيات يملكها النظام، لا رأي النموذج.", "المخرج: خطة عمل قابلة للمراجعة، لا محادثة مفتوحة بلا مسؤولية."],
-        ["03 · معرفة مصرح بها", "اختر المستندات والسياسات والسجلات المسموح باسترجاعها. تربط الإجابة بالمصدر وتوضح عندما تكون المعلومات غير كافية.", "المطلوب: ملكية المصادر وسياسة تحديث وصلاحيات وصول قبل الربط."],
-        ["04 · أدوات بحدود", "لكل أداة مدخلات ومخرجات ونطاق اتصال وحد زمني. تبدأ الأدوات بالقراءة، وتبقى الكتابة مغلقة حتى يثبت التفويض والتحقق من الأثر.", "المطلوب: حساب خدمة محدود الصلاحية واختبارات فشل وتكرار."],
-        ["05 · قرارات بشرية", "الموافقة تربط الفعل بمعلماته وصاحب القرار وانتهاء الصلاحية. التعديل على الطلب يلغي الموافقة القديمة بدل استخدامها لعمل مختلف.", "المطلوب: حفظ دائم واستئناف موثق قبل تنفيذ أي فعل حساس."],
-        ["06 · إثبات القيمة", "اختبر العملية مقابل خط أساس: وقت الإنجاز، جودة النتيجة، الاستثناءات، وتدخل المسؤول. لا نستنتج التوفير من جودة نص الرد.", "المخرج: حالات قبول ودليل من النظام النهائي وخطة توسع تدريجي."],
-      ],
-    },
-    en: {
-      eyebrow: "From operating problem to deployable system", title: "Knowledge, tools, and decisions. One workflow.",
-      intro: "An agent system is not one model that knows everything. It starts with a goal and an accountable process owner, then uses analysis, planning, and review as needed. The system controls tool permissions while accountable people approve decisions.",
-      notice: "The workspace explores workflow design. Enterprise connections, durable execution, and approvals require project-specific setup and tests; they are not advertised as generally available capabilities.",
-      cards: [
-        ["01 · Understand the process", "Define the triggering request, process owner, source of truth, and success criteria. Separate an operating problem from the desire to add AI.", "Output: a bounded process description and questions about missing data."],
-        ["02 · Assign clear roles", "Select roles by request: a direct response for a simple question, planning and review for calculations, and additional analysis for workflow design. The system owns state and permissions, not the model's opinion.", "Output: a reviewable workflow, not an unbounded conversation."],
-        ["03 · Permission-aware knowledge", "Select the documents, policies, and records permitted for retrieval. Connect answers to sources and disclose insufficient information.", "Requires: source ownership, refresh policy, and access boundaries before connection."],
-        ["04 · Bounded tools", "Each tool has inputs, outputs, network scope, and a timeout. Start with reading; keep writing closed until authorization and effect verification are proven.", "Requires: scoped service accounts and failure and duplicate-action tests."],
-        ["05 · Human decisions", "Approval binds an action to its parameters, decision owner, and expiry. Changing a request invalidates the old approval rather than reusing it for another action.", "Requires: durable storage and authenticated resumption before sensitive execution."],
-        ["06 · Demonstrate value", "Compare with a baseline: cycle time, result quality, exceptions, and owner intervention. A good-looking response does not establish savings.", "Output: acceptance cases, evidence from the target system, and gradual expansion."],
-      ],
-    },
-  },
-  industries: {
-    ar: {
-      eyebrow: "مصر والخليج والشرق الأوسط", title: "نفس منهج البناء. حدود مختلفة لكل قطاع.",
-      intro: "اللغة والبيانات وسلطة القرار تختلف بين فريق مالي وشركة لوجستية ومقدم خدمات. لذلك نبدأ من العملية وبيئتها، لا من قالب قطاعي يدعي حل كل شيء.",
-      notice: "هذه نطاقات مقترحة للاكتشاف والتطوير، وليست قائمة عملاء أو حلول قطاعية مكتملة أو إقرار امتثال.",
-      cards: [
-        ["التجارة والتوزيع", "دراسة تصنيف طلبات العملاء، جمع معلومات المنتجات، وتجهيز مسودة العرض.", "مصدر الحقيقة: الكتالوج والأسعار والمخزون المعتمد.", "الحد: لا تعديل سعر أو تأكيد طلب دون مراجعة المسؤول."],
-        ["الخدمات المهنية", "تنظيم طلبات الخدمة، تجميع المتطلبات، وصياغة ملخص تسليم بين الفرق.", "مصدر الحقيقة: نطاق الخدمة وسجل العميل والملفات المصرح بها.", "الحد: لا تعهد تعاقدي أو مشاركة مستند دون تفويض."],
-        ["اللوجستيات والعمليات", "ترتيب استثناءات الشحنات، تلخيص الحالة، واقتراح التصعيد للفريق الصحيح.", "مصدر الحقيقة: نظام تتبع فعلي وبيانات حالة حديثة.", "الحد: لا تغيير موعد أو حجز أو إصدار تعليمات تشغيلية دون اعتماد."],
-        ["المالية والإدارة", "تحضير مراجعة الفواتير وطلبات الشراء وتجميع الأسئلة الناقصة للمسؤول.", "مصدر الحقيقة: السجلات المالية وسياسات الشركة المعتمدة.", "الحد: لا دفع أو اعتماد أو توصية قانونية؛ القرار للمخولين."],
-      ],
-    },
-    en: {
-      eyebrow: "Egypt, the Gulf, and the Middle East", title: "One engineering approach. Sector-specific boundaries.",
-      intro: "Language, data, and decision authority differ across finance, logistics, and professional services. Start with the actual process and its environment, not a sector template claiming to solve everything.",
-      notice: "These are proposed discovery and development scopes, not customer references, completed vertical products, or compliance endorsements.",
-      cards: [
-        ["Commerce and distribution", "Explore customer-request classification, product information collection, and quotation drafts.", "Source of truth: approved catalog, prices, and inventory.", "Boundary: no price changes or order confirmation without owner review."],
-        ["Professional services", "Organize service requests, collect requirements, and draft handover summaries.", "Source of truth: service scope, customer record, and permitted files.", "Boundary: no contractual commitments or document sharing without authorization."],
-        ["Logistics and operations", "Organize shipment exceptions, summarize status, and propose escalation to the right team.", "Source of truth: a connected tracking system with current status data.", "Boundary: no schedule changes, bookings, or operational instructions without approval."],
-        ["Finance and administration", "Prepare invoice and purchase-request reviews and collect missing questions for the owner.", "Source of truth: financial records and approved organizational policies.", "Boundary: no payments, approvals, or legal advice; authorized people own the decisions."],
-      ],
-    },
-  },
-  resources: {
-    ar: {
-      eyebrow: "أدلة عملية قبل البناء", title: "اسأل الأسئلة الصحيحة قبل أن تمنح الوكيل أداة.",
-      intro: "أدلة مختصرة تساعد فريق العمليات والتقنية على اختيار أول عملية، تحديد حدود التكامل، وتجهيز اختبار قبول له معنى تجاري.",
-      notice: "هذه إرشادات تصميم عامة. ليست بديلًا عن سياسة المؤسسة أو مراجعة الأمان أو التحقق القانوني الخاص بالمشروع.",
-      cards: [
-        ["اختيار أول عملية", "اختر مهمة متكررة لها مدخلات واضحة ومالك محدد ونتيجة يمكن فحصها. ابدأ بحجم صغير من حالات افتراضية، ثم بيانات مصرح بها.", "اسأل: أين يضيع الوقت؟ كم مرة تتكرر المهمة؟ ما الاستثناء الذي يتطلب مسؤولًا؟", "تجنب البداية بعملية مالية نهائية أو صلاحيات واسعة يصعب التراجع عنها."],
-        ["قائمة تجهيز التكامل", "سجل النظام المسؤول عن الحقيقة، وما يسمح بقراءته، ومن يملك حساب الخدمة، وكيف نثبت أن الفعل وصل للنظام النهائي.", "اسأل: هل توجد API؟ ما حدود المعدل؟ كيف نحفظ المعرفات ونتجنب تنفيذ الطلب مرتين؟", "موافقة الإنسان لا تعوض حساب خدمة واسع الصلاحيات أو أداة غير محدودة."],
-        ["اختبار القبول", "اكتب حالات نجاح وفشل وبيانات ناقصة وانقطاع اتصال وطلب غير مصرح به. عيّن النتيجة المتوقعة لكل حالة قبل اختبار النموذج.", "قِس: اكتمال المهمة وصحة الأدلة وتدخل المسؤول وزمن الإنجاز، لا جمال الرد فقط.", "لا توسع التشغيل قبل نجاح الحالات وتوثيق طريقة التعافي."],
-        ["درّج صلاحية التنفيذ", "ابدأ بالقراءة وتجهيز المسودات. افصل اقتراح النموذج عن الإذن باستخدام الأداة، وحدد من يعتمد الرسائل والمدفوعات والحذف.", "اسأل: ما أقل صلاحية لازمة؟ هل تتغير الموافقة عند تغيير المعلمات؟ وكيف نوقف تشغيلًا تجاوز حدوده؟", "التجربة العامة للقراءة والتصميم فقط؛ صلاحيات المؤسسة لا تُستمد من نص المحادثة."],
-        ["خطط للتعافي قبل الإطلاق", "ميّز بين تاريخ المحادثة وحالة التنفيذ ودليل النتيجة. قبل كتابة خارجية، حدد كيف تعرف ما تم بالفعل عند انقطاع الاتصال.", "اسأل: هل للفعل معرّف ثابت؟ كيف نكشف التكرار؟ ومتى نتحقق من النظام المتصل بدل إعادة المحاولة؟", "الاستئناف والذاكرة المؤسسية والعزل متطلبات لنشر المؤسسة، وليست قدرات مفعلة في التجربة."],
-      ],
-    },
-    en: {
-      eyebrow: "Practical guides before building", title: "Ask the right questions before giving an agent a tool.",
-      intro: "Concise guides help operations and engineering choose the first workflow, define integration boundaries, and prepare acceptance tests with business meaning.",
-      notice: "General design guidance, not a substitute for organizational policy, security review, or project-specific legal verification.",
-      cards: [
-        ["Choose the first workflow", "Pick a recurring task with clear inputs, an accountable owner, and a verifiable result. Start with a small fictional test set, then authorized data.", "Ask: where does time go, how often does the task recur, and which exceptions need an owner?", "Avoid starting with final financial actions or broad permissions that are difficult to reverse."],
-        ["Prepare the integration", "Record the system of truth, permitted reads, service-account owner, and how to verify the action reached the target system.", "Ask: is an API available, what are its rate limits, and how do we preserve identifiers and prevent duplicate execution?", "Human approval does not compensate for an overpowered service account or an unbounded tool."],
-        ["Define acceptance", "Write success, failure, missing-data, outage, and unauthorized-request cases. Set expected results before testing the model.", "Measure completion, evidence accuracy, owner intervention, and cycle time—not just response quality.", "Do not expand operation before these cases pass and recovery is documented."],
-        ["Graduate execution permissions", "Start with reading and drafts. Separate the model's proposal from tool authorization and identify who approves messages, payments, and deletion.", "Ask: what is the minimum permission, does a parameter change invalidate approval, and how do we stop a run that exceeds its limits?", "The public preview only reads and designs; enterprise permissions never come from conversation text."],
-        ["Plan recovery before launch", "Separate conversation history, execution state, and result evidence. Before external writes, define how to determine what committed when a connection fails.", "Ask: does the action have a stable identifier, how do we detect duplicates, and when do we reconcile with the target system instead of retrying?", "Resumption, enterprise memory, and isolation are deployment requirements, not enabled preview capabilities."],
-      ],
-    },
-  },
+ about:{
+  ar:{eyebrow:"عن Agentnexos",title:"التقنية تفهم العمل. والناس تحدد وجهته.",intro:"بدأنا من سؤال بسيط: لماذا تنتهي أدوات الذكاء الاصطناعي عند إجابة جيدة، بينما يحتاج الفريق إلى إنجاز عملية كاملة؟ Agentnexos يركز على المسافة بين السؤال والنتيجة: مصادر واضحة، أدوار مفهومة، ومراجعة في المكان الصحيح.",notice:"المتاح حاليًا مساعد لتصميم العمليات وموجز مشروع محلي. بناء نظام متصل ببيانات مؤسسة يُحدد ويُختبر لكل مشروع على حدة.",cards:[
+   ["نبدأ من يوم العمل","طلب ناقص التفاصيل، فاتورة تحتاج مراجعة، أو سؤال تتكرر إجابته. نفهم كيف يتحرك العمل اليوم، ومن يتدخل، وأين يتوقف قبل أن نختار التقنية.","نستهدف الفرق في مصر والخليج التي تحتاج تجربة عربية وإنجليزية تناسب طريقة عملها."],
+   ["نبني ما يحتاجه المسار","قد تحتاج العملية إلى استرجاع مستند، أو حساب، أو تجهيز مسودة. نضيف ما يخدم النتيجة، ونبقي الخطوات البسيطة بسيطة.","اختيار الوكيل أو الأداة يأتي بعد فهم المهمة، لا قبلها."],
+   ["نحترم معرفة الفريق","أصحاب العملية يعرفون استثناءاتها وقراراتها الحساسة. نبني حول هذه المعرفة، ونحدد أين يساعد النظام وأين يعود إلى الإنسان.","الهدف أن يصبح القرار أسهل في المراجعة، وأن يبقى المسؤول عنه واضحًا."],
+   ["نختبر على ما يهمك","لا تكفي إجابة مقنعة. نراجع اكتمال الطلب، ودقة المصدر، والتعامل مع النقص، والوقت الذي يحتاجه المسؤول للوصول إلى قرار.","نحدد معيار القبول قبل التجربة، ثم نقارن النتيجة به."],
+  ]},
+  en:{eyebrow:"About Agentnexos",title:"Technology understands the work. People give it direction.",intro:"We started with a simple question: why do AI tools stop at a good answer when a team needs to complete an entire process? Agentnexos focuses on the distance between a question and a result: clear sources, defined roles, and review at the right moment.",notice:"Available today: a workflow design assistant and a local project brief. Systems connected to enterprise data are scoped and tested for each project.",cards:[
+   ["Start with a working day","An incomplete request, an invoice waiting for review, or a question someone answers every week. Understand how work moves, who intervenes, and where it stops before choosing technology.","Designed with Arabic- and English-speaking teams in Egypt and the Gulf in mind."],
+   ["Build what the workflow needs","A process might need document retrieval, a calculation, or a draft. Add what serves the outcome and keep straightforward steps straightforward.","The choice of agent or tool follows the task."],
+   ["Respect the team's knowledge","Process owners know the exceptions and sensitive decisions. Build around that knowledge and define when the system assists and when it returns to a person.","Make decisions easier to review and ownership easier to understand."],
+   ["Test what matters","A convincing answer is not enough. Review request completeness, source accuracy, missing information, and the effort required to reach a decision.","Define acceptance before the pilot, then compare results against it."],
+  ]}
+ },
+ platform:{
+  ar:{eyebrow:"هندسة النظام الوكيل",title:"المعرفة في سياقها. والعمل في مساره.",intro:"الوكيل الجيد يعرف ما يحتاجه الطلب، وأين يجد المعلومة، ومتى يتوقف ليسأل. نصمم هذه العلاقات في مسار واحد، بدل ترك فريقك يتنقل بين أدوات لا تتشارك السياق.",notice:"هذه مكونات تصميم الأنظمة المخصصة. التجربة العامة تساعدك على التخطيط والحساب؛ مصادر المؤسسة وأدواتها لا تتصل تلقائيًا.",cards:[
+   ["مدخل يفهمه الجميع","يبدأ المسار بطلب له غرض ومعلومات أساسية. نحدد ما يجب أن يصل مع الطلب، وما يمكن سؤاله لاحقًا، وما يستدعي إعادته لصاحبه.","مثال: طلب شراء يحدد الفئة والكمية والموعد والمسؤول."],
+   ["المعرفة المناسبة للطلب","ليست كل الملفات مفيدة لكل سؤال. نحدد المصادر المعتمدة وطريقة تحديثها ونطاق الوصول، ليجد النظام ما يتعلق بالمهمة فعلًا.","عندما يغيب المصدر أو يتعارض، يعود الطلب للمراجعة بدل اختراع إجابة."],
+   ["أدوار تعمل معًا","التحليل يرتب المدخلات، والتخطيط يقترح الخطوات، والمراجعة تختبر النتيجة. نستخدم ما تحتاجه المهمة من هذه الأدوار، دون سلسلة زائدة لكل سؤال.","السؤال البسيط يستحق طريقًا قصيرًا. القرار المركب يستحق مراجعة أعمق."],
+   ["أداة لخطوة محددة","قراءة سجل تختلف عن تعديله، وتجهيز رسالة يختلف عن إرسالها. نفصل هذه الأفعال ونحدد صلاحية كل خطوة وحدودها.","لكل اتصال مالك، ومدخلات واضحة، وطريقة للتحقق من النتيجة."],
+   ["الإنسان عند نقطة القرار","الموافقة ليست زرًا شكليًا. يحتاج المسؤول أن يرى الطلب، وما تغير فيه، والأدلة التي يستند إليها، قبل اعتماد فعل له أثر.","الطلب المتغير يحتاج مراجعة جديدة؛ القرار السابق لا يغطي عملًا مختلفًا."],
+   ["نتيجة يمكن فحصها","يخرج المسار بملف أو إجابة أو مسودة لها معيار قبول. نختبر الحالات العادية والاستثناءات ونقص البيانات، ثم نقرر ما يستحق التوسع.","ابدأ بنطاق واحد يمكن مراجعته قبل إضافة مصادر أو صلاحيات أخرى."],
+  ]},
+  en:{eyebrow:"Inside an agent workflow",title:"Knowledge in context. Work in motion.",intro:"A useful agent knows what a request needs, where to find the information, and when to stop and ask. We design those relationships as one workflow, so your team spends less time connecting tools that do not share context.",notice:"These are components of a custom system design. The public assistant supports planning and calculations; enterprise sources and tools are not connected automatically.",cards:[
+   ["An input everyone understands","Start with a request that has a purpose and essential details. Define what must arrive with it, what can be clarified later, and what should go back to its owner.","Example: a purchase request with category, quantity, deadline, and owner."],
+   ["Knowledge that fits the request","Not every file belongs in every answer. Define approved sources, refresh rules, and access boundaries so the system finds what actually relates to the task.","Missing or conflicting sources lead to review rather than an invented answer."],
+   ["Roles that work together","Analysis organizes inputs, planning proposes steps, and review tests the result. Use the roles the task needs without adding a long chain to every question.","Simple questions deserve a short path. Complex decisions deserve deeper review."],
+   ["A tool for a specific step","Reading a record differs from changing it. Preparing a message differs from sending it. Separate those actions and define the authority for each.","Every connection needs an owner, clear inputs, and a way to verify the outcome."],
+   ["People at decision points","Approval needs context. An owner should see the request, its changes, and the supporting evidence before authorizing an action with consequences.","A changed request needs a fresh review; an earlier decision does not cover different work."],
+   ["An outcome you can inspect","A workflow produces a file, answer, or draft with acceptance criteria. Test normal cases, exceptions, and missing data, then decide where to expand.","Begin with one reviewable scope before adding sources or permissions."],
+  ]}
+ },
+ industries:{
+  ar:{eyebrow:"مصمم لواقع فريقك",title:"لكل قطاع لغته. ولكل عملية تفاصيلها.",intro:"المشكلة قد تبدو واحدة: طلب يتأخر. لكن تأخر عرض سعر يختلف عن استثناء في شحنة أو فاتورة ناقصة. نبدأ من مصادر العمل ومسؤوليه، ونصمم مسارًا يناسب السياق.",notice:"أمثلة لنطاقات يمكن تصميمها وتطويرها، وليست منتجات قطاعية جاهزة أو نتائج عملاء منشورة.",cards:[
+   ["التجارة والتوزيع","يصل استفسار العميل قبل اكتمال المواصفات. يمكن تصميم مسار يجمع متطلبات الطلب، ويراجع الكتالوج المعتمد، ويجهز عرضًا يفهمه مسؤول المبيعات.","المصادر: المنتجات والأسعار والمخزون المصرح به.","يبقى اعتماد السعر وتأكيد الطلب عند الفريق."],
+   ["الخدمات المهنية","تنتقل المهمة بين المبيعات والتنفيذ، فتضيع بعض التفاصيل. نصمم نقطة استقبال تجمع النطاق والملفات والأسئلة الناقصة قبل تسليمها للفريق المسؤول.","المخرج: ملخص تسليم ومتطلبات منظمة وخطوة تالية واضحة.","التعهد التعاقدي ومشاركة الملفات يحتاجان اعتمادًا."],
+   ["اللوجستيات والعمليات","تتغير حالة الشحنة في أكثر من نظام. يمكن تنظيم الاستثناءات في ملخص يوضح آخر معلومة موثوقة، وما يحتاج متابعة، ومن يملك التصعيد.","المصادر: حالة حديثة من نظام تتبع معتمد.","تغيير المواعيد والتعليمات التشغيلية يبقى للمخولين."],
+   ["المالية والإدارة","المراجعة تتأخر عندما تُجمع الفاتورة والطلب والمرفقات يدويًا. نصمم مسارًا يرتب المستندات ويكشف النقص ويجهز ملفًا للمراجعة.","المخرج: قائمة فروق وأسئلة محددة للمسؤول.","لا يتحول إعداد الملف إلى دفع أو اعتماد مالي تلقائي."],
+  ]},
+  en:{eyebrow:"Built for your team's context",title:"Every sector has a language. Every workflow has its details.",intro:"The problem may sound the same: a delayed request. But a quotation, a shipment exception, and an incomplete invoice need different information and different decisions. Begin with the actual sources and owners.",notice:"Examples of workflows to design and develop, not finished vertical products or published customer outcomes.",cards:[
+   ["Commerce and distribution","A customer enquiry arrives before the specifications are complete. Design a workflow that gathers requirements, checks the approved catalog, and prepares a quotation for the sales owner.","Sources: authorized product, price, and inventory information.","The team approves prices and confirms orders."],
+   ["Professional services","Details get lost between sales and delivery. Design an intake that collects scope, files, and missing questions before passing the work to its owner.","Output: a handover summary, organized requirements, and a clear next step.","Contractual commitments and document sharing require approval."],
+   ["Logistics and operations","Shipment status changes across systems. Organize exceptions into a summary of the latest reliable information, outstanding follow-up, and escalation ownership.","Sources: current status from an approved tracking system.","Authorized people retain scheduling and operational decisions."],
+   ["Finance and administration","Review slows down when invoices, requests, and attachments must be gathered manually. Design a workflow that organizes documents, identifies gaps, and prepares a review file.","Output: discrepancies and specific questions for the owner.","Preparing the file does not authorize a payment or financial approval."],
+  ]}
+ },
+ resources:{
+  ar:{eyebrow:"مكتبة العمل",title:"من فكرة جيدة إلى تجربة تستحق البناء.",intro:"أدلة عملية للاجتماع الأول بين فريق العمليات والتقنية. استخدمها لاختيار المهمة، وتجهيز مصادرها، والاتفاق على نتيجة تستطيعون الحكم عليها معًا.",notice:"إرشادات لتصميم المشروع. راجع سياسات مؤسستك ومتطلبات الأمان قبل استخدام بيانات حقيقية أو توصيل أنظمتها.",cards:[
+   ["اختر أول عملية بعناية","ابحث عن مهمة تتكرر، لها بداية واضحة، ونتيجة يراجعها شخص معروف. المهمة الصغيرة المكتملة تعلّمك أكثر من محاولة أتمتة القسم كله.","اكتب: كيف يبدأ الطلب؟ ما أكثر معلومة تنقصه؟ ومن يحسم الاستثناء؟","ابدأ بالمراجعة أو تجهيز المسودات، ثم اختبر القيمة قبل توسيع الدور."],
+   ["ارسم خريطة البيانات","حدد أين توجد المعلومة المعتمدة، ومن يملكها، ومتى تتغير. ميّز ما يحتاجه النظام فعلًا عمّا اعتاد الفريق إرفاقه بلا استخدام.","اجمع أسماء المصادر وحقولها وملاكها وقواعد الوصول والتحديث.","بيانات أقل ومرتبطة بالمهمة أسهل في المراجعة من سياق واسع غير منظم."],
+   ["اتفق على معنى النجاح","اختر حالات يعرف الفريق نتيجتها مسبقًا. ضع معها طلبًا ناقصًا، ومصدرًا متعارضًا، وحالة تحتاج تصعيدًا، وانقطاع اتصال.","راجع اكتمال النتيجة ودقة الأدلة ووضوح التصعيد وزمن المراجعة.","سجّل النتيجة المتوقعة قبل التجربة؛ لا تغيّر المعيار ليوافق الرد."],
+   ["اجعل الصلاحيات جزءًا من التصميم","اكتب ما يقرأه النظام وما يقترحه وما يحتاج موافقة. تعامل مع الإرسال والتعديل والحذف كخطوات مستقلة، لكل منها صاحب قرار.","ابدأ بأقل صلاحية لازمة، وحدد ما يوقف التشغيل.","الموافقة الجيدة تعرض الفعل ومعلماته وآثاره، ولا تخفيها خلف عنوان عام."],
+   ["جهّز اليوم الذي تتعطل فيه الخدمة","قد ينقطع الاتصال بعد نجاح جزء من العمل. حدد كيف تعرف ما تم، ومن يراجع النتيجة، ومتى تعيد المحاولة.","احتفظ بمعرفات الطلبات، وتحقق من النظام النهائي قبل تكرار أي فعل.","خطة التعافي تُكتب قبل التشغيل، وتُختبر مع حالات القبول."],
+  ]},
+  en:{eyebrow:"Field notes",title:"From a useful idea to a pilot worth building.",intro:"Practical guides for the first conversation between operations and engineering. Choose a task, prepare its sources, and agree on an outcome you can evaluate together.",notice:"Project-design guidance. Review your organization's policies and security requirements before using real data or connecting systems.",cards:[
+   ["Choose the first workflow carefully","Look for a recurring task with a clear beginning and a result reviewed by a known owner. A small, complete workflow teaches more than trying to automate a whole department.","Write down how requests start, what is usually missing, and who resolves exceptions.","Begin with reviews or drafts and test value before expanding the role."],
+   ["Map the data","Identify the approved source, its owner, and how often it changes. Separate information the task needs from attachments the team includes out of habit.","Record source names, fields, owners, access rules, and refresh requirements.","A focused set of relevant data is easier to review than a wide, unstructured context."],
+   ["Agree on what success means","Choose cases with known outcomes. Add incomplete requests, conflicting sources, escalation cases, and a connection failure.","Evaluate completeness, evidence accuracy, escalation clarity, and review time.","Set expected results before the pilot; do not adjust the standard to fit the answer."],
+   ["Design permissions into the workflow","Write down what the system reads, proposes, and needs approval for. Treat sending, editing, and deleting as distinct steps with accountable owners.","Begin with the minimum permission and define what stops a run.","A useful approval shows the action, parameters, and consequences."],
+   ["Prepare for the day a service fails","A connection may fail after part of the work succeeds. Define how to find out what committed, who checks the result, and when to retry.","Preserve request identifiers and reconcile with the target system before repeating an action.","Write the recovery plan before operation and test it alongside acceptance cases."],
+  ]}
+ }
 } as const;

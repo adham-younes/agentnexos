@@ -1,0 +1,676 @@
+{
+  "counts": {
+    "messages": 0,
+    "profiles": 0,
+    "requests": 2,
+    "auth_users": 0,
+    "conversations": 0,
+    "storage_objects": 0
+  },
+  "limits": [
+    {
+      "singleton": true,
+      "global_daily_limit": 10000,
+      "connection_daily_limit": 1000
+    }
+  ],
+  "tables": [
+    {
+      "rls": true,
+      "table": "saml_relay_states",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "flow_state",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "saml_providers",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "instances",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "schema_migrations",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "refresh_tokens",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "users",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "audit_log_entries",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "sso_domains",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "mfa_amr_claims",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "identities",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "sessions",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "mfa_challenges",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "sso_providers",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "mfa_factors",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "one_time_tokens",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "oauth_consents",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "oauth_authorizations",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "oauth_client_states",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "oauth_clients",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "custom_oauth_providers",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "webauthn_credentials",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "webauthn_challenges",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "scim_users",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "scim_tokens",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "mfa_recovery_code_sets",
+      "schema": "auth"
+    },
+    {
+      "rls": false,
+      "table": "mfa_recovery_codes",
+      "schema": "auth"
+    },
+    {
+      "rls": true,
+      "table": "migrations",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "s3_multipart_uploads",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "s3_multipart_uploads_parts",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "buckets_vectors",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "vector_indexes",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "buckets_analytics",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "objects",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "buckets",
+      "schema": "storage"
+    },
+    {
+      "rls": true,
+      "table": "agentnexos_demo_requests",
+      "schema": "public"
+    },
+    {
+      "rls": true,
+      "table": "agentnexos_demo_limits",
+      "schema": "public"
+    },
+    {
+      "rls": true,
+      "table": "agentnexos_profiles",
+      "schema": "public"
+    },
+    {
+      "rls": true,
+      "table": "agentnexos_conversations",
+      "schema": "public"
+    },
+    {
+      "rls": true,
+      "table": "agentnexos_messages",
+      "schema": "public"
+    }
+  ],
+  "columns": [
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_conversations",
+      "column_name": "id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "gen_random_uuid()"
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_conversations",
+      "column_name": "user_id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_conversations",
+      "column_name": "title",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_conversations",
+      "column_name": "locale",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "timestamp with time zone",
+      "table_name": "agentnexos_conversations",
+      "column_name": "created_at",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "now()"
+    },
+    {
+      "data_type": "timestamp with time zone",
+      "table_name": "agentnexos_conversations",
+      "column_name": "updated_at",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "now()"
+    },
+    {
+      "data_type": "boolean",
+      "table_name": "agentnexos_demo_limits",
+      "column_name": "singleton",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "true"
+    },
+    {
+      "data_type": "integer",
+      "table_name": "agentnexos_demo_limits",
+      "column_name": "connection_daily_limit",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "integer",
+      "table_name": "agentnexos_demo_limits",
+      "column_name": "global_daily_limit",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_demo_requests",
+      "column_name": "id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "gen_random_uuid()"
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_demo_requests",
+      "column_name": "subject_hash",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "timestamp with time zone",
+      "table_name": "agentnexos_demo_requests",
+      "column_name": "created_at",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "now()"
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_demo_requests",
+      "column_name": "status",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "'reserved'::text"
+    },
+    {
+      "data_type": "jsonb",
+      "table_name": "agentnexos_demo_requests",
+      "column_name": "stages",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "'[]'::jsonb"
+    },
+    {
+      "data_type": "timestamp with time zone",
+      "table_name": "agentnexos_demo_requests",
+      "column_name": "completed_at",
+      "is_nullable": "YES",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_messages",
+      "column_name": "id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "gen_random_uuid()"
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_messages",
+      "column_name": "conversation_id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_messages",
+      "column_name": "user_id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_messages",
+      "column_name": "request_id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_messages",
+      "column_name": "role",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_messages",
+      "column_name": "content",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "bigint",
+      "table_name": "agentnexos_messages",
+      "column_name": "sequence",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "timestamp with time zone",
+      "table_name": "agentnexos_messages",
+      "column_name": "created_at",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "now()"
+    },
+    {
+      "data_type": "uuid",
+      "table_name": "agentnexos_profiles",
+      "column_name": "id",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": null
+    },
+    {
+      "data_type": "text",
+      "table_name": "agentnexos_profiles",
+      "column_name": "display_name",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "''::text"
+    },
+    {
+      "data_type": "timestamp with time zone",
+      "table_name": "agentnexos_profiles",
+      "column_name": "created_at",
+      "is_nullable": "NO",
+      "table_schema": "public",
+      "column_default": "now()"
+    }
+  ],
+  "indexes": [
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_demo_requests_pkey ON public.agentnexos_demo_requests USING btree (id)",
+      "indexname": "agentnexos_demo_requests_pkey",
+      "tablename": "agentnexos_demo_requests"
+    },
+    {
+      "indexdef": "CREATE INDEX agentnexos_demo_time_idx ON public.agentnexos_demo_requests USING btree (created_at)",
+      "indexname": "agentnexos_demo_time_idx",
+      "tablename": "agentnexos_demo_requests"
+    },
+    {
+      "indexdef": "CREATE INDEX agentnexos_demo_subject_idx ON public.agentnexos_demo_requests USING btree (subject_hash, created_at)",
+      "indexname": "agentnexos_demo_subject_idx",
+      "tablename": "agentnexos_demo_requests"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_demo_limits_pkey ON public.agentnexos_demo_limits USING btree (singleton)",
+      "indexname": "agentnexos_demo_limits_pkey",
+      "tablename": "agentnexos_demo_limits"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_profiles_pkey ON public.agentnexos_profiles USING btree (id)",
+      "indexname": "agentnexos_profiles_pkey",
+      "tablename": "agentnexos_profiles"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_conversations_pkey ON public.agentnexos_conversations USING btree (id)",
+      "indexname": "agentnexos_conversations_pkey",
+      "tablename": "agentnexos_conversations"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_conversations_id_user_id_key ON public.agentnexos_conversations USING btree (id, user_id)",
+      "indexname": "agentnexos_conversations_id_user_id_key",
+      "tablename": "agentnexos_conversations"
+    },
+    {
+      "indexdef": "CREATE INDEX agentnexos_conversations_owner_updated ON public.agentnexos_conversations USING btree (user_id, updated_at DESC)",
+      "indexname": "agentnexos_conversations_owner_updated",
+      "tablename": "agentnexos_conversations"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_messages_pkey ON public.agentnexos_messages USING btree (id)",
+      "indexname": "agentnexos_messages_pkey",
+      "tablename": "agentnexos_messages"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_messages_request_id_role_key ON public.agentnexos_messages USING btree (request_id, role)",
+      "indexname": "agentnexos_messages_request_id_role_key",
+      "tablename": "agentnexos_messages"
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX agentnexos_messages_conversation_id_sequence_key ON public.agentnexos_messages USING btree (conversation_id, sequence)",
+      "indexname": "agentnexos_messages_conversation_id_sequence_key",
+      "tablename": "agentnexos_messages"
+    },
+    {
+      "indexdef": "CREATE INDEX agentnexos_messages_owner_conversation ON public.agentnexos_messages USING btree (user_id, conversation_id)",
+      "indexname": "agentnexos_messages_owner_conversation",
+      "tablename": "agentnexos_messages"
+    }
+  ],
+  "policies": [
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_profiles",
+      "policyname": "profile_update_own",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = id)"
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_profiles",
+      "policyname": "profile_insert_own",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_profiles",
+      "policyname": "profile_select_own",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_conversations",
+      "policyname": "conversations_delete_own",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_conversations",
+      "policyname": "conversations_select_own",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_messages",
+      "policyname": "messages_select_own",
+      "schemaname": "public",
+      "with_check": null
+    }
+  ],
+  "functions": [
+    {
+      "name": "agentnexos_begin_turn",
+      "definition": "CREATE OR REPLACE FUNCTION public.agentnexos_begin_turn(p_user_id uuid, p_conversation_id uuid, p_request_id uuid, p_content text, p_locale text)\n RETURNS uuid\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare v_id uuid; v_owner uuid; v_count bigint;\nbegin\n if p_locale not in ('ar','en') or char_length(p_content) not between 1 and 4000 then raise exception 'INVALID_TURN'; end if;\n if exists(select 1 from public.agentnexos_messages where request_id=p_request_id) then raise exception 'DUPLICATE_TURN'; end if;\n if p_conversation_id is null then\n  select count(*) into v_count from public.agentnexos_conversations where user_id=p_user_id;\n  if v_count >= 200 then raise exception 'CONVERSATION_LIMIT'; end if;\n  insert into public.agentnexos_conversations(user_id,title,locale) values(p_user_id,left(p_content,120),p_locale) returning id into v_id;\n else\n  select user_id into v_owner from public.agentnexos_conversations where id=p_conversation_id for update;\n  if v_owner is distinct from p_user_id then raise exception 'CONVERSATION_UNAVAILABLE'; end if;\n  v_id:=p_conversation_id;\n end if;\n select count(*) into v_count from public.agentnexos_messages where conversation_id=v_id;\n if v_count >= 200 then raise exception 'MESSAGE_LIMIT'; end if;\n insert into public.agentnexos_messages(conversation_id,user_id,request_id,role,content) values(v_id,p_user_id,p_request_id,'user',p_content);\n update public.agentnexos_conversations set updated_at=now() where id=v_id;\n return v_id;\nend $function$\n"
+    },
+    {
+      "name": "agentnexos_demo_ready",
+      "definition": "CREATE OR REPLACE FUNCTION public.agentnexos_demo_ready()\n RETURNS boolean\n LANGUAGE sql\n SET search_path TO ''\nAS $function$\n  select exists(select 1 from pg_catalog.pg_class where oid = 'public.agentnexos_demo_requests'::regclass);\n$function$\n"
+    }
+  ],
+  "constraints": [
+    {
+      "name": "agentnexos_demo_requests_subject_hash_check",
+      "table": "agentnexos_demo_requests",
+      "definition": "CHECK ((length(subject_hash) = 64))"
+    },
+    {
+      "name": "agentnexos_demo_requests_status_check",
+      "table": "agentnexos_demo_requests",
+      "definition": "CHECK ((status = ANY (ARRAY['reserved'::text, 'running'::text, 'completed'::text, 'failed'::text, 'cancelled'::text])))"
+    },
+    {
+      "name": "agentnexos_demo_requests_pkey",
+      "table": "agentnexos_demo_requests",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "agentnexos_demo_limits_singleton_check",
+      "table": "agentnexos_demo_limits",
+      "definition": "CHECK (singleton)"
+    },
+    {
+      "name": "agentnexos_demo_limits_connection_daily_limit_check",
+      "table": "agentnexos_demo_limits",
+      "definition": "CHECK (((connection_daily_limit >= 1) AND (connection_daily_limit <= 1000000)))"
+    },
+    {
+      "name": "agentnexos_demo_limits_check",
+      "table": "agentnexos_demo_limits",
+      "definition": "CHECK (((global_daily_limit >= connection_daily_limit) AND (global_daily_limit <= 1000000)))"
+    },
+    {
+      "name": "agentnexos_demo_limits_pkey",
+      "table": "agentnexos_demo_limits",
+      "definition": "PRIMARY KEY (singleton)"
+    },
+    {
+      "name": "agentnexos_profiles_display_name_check",
+      "table": "agentnexos_profiles",
+      "definition": "CHECK ((char_length(display_name) <= 100))"
+    },
+    {
+      "name": "agentnexos_profiles_pkey",
+      "table": "agentnexos_profiles",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "agentnexos_profiles_id_fkey",
+      "table": "agentnexos_profiles",
+      "definition": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "agentnexos_conversations_title_check",
+      "table": "agentnexos_conversations",
+      "definition": "CHECK (((char_length(title) >= 1) AND (char_length(title) <= 120)))"
+    },
+    {
+      "name": "agentnexos_conversations_locale_check",
+      "table": "agentnexos_conversations",
+      "definition": "CHECK ((locale = ANY (ARRAY['ar'::text, 'en'::text])))"
+    },
+    {
+      "name": "agentnexos_conversations_pkey",
+      "table": "agentnexos_conversations",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "agentnexos_conversations_id_user_id_key",
+      "table": "agentnexos_conversations",
+      "definition": "UNIQUE (id, user_id)"
+    },
+    {
+      "name": "agentnexos_conversations_user_id_fkey",
+      "table": "agentnexos_conversations",
+      "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "agentnexos_messages_role_check",
+      "table": "agentnexos_messages",
+      "definition": "CHECK ((role = ANY (ARRAY['user'::text, 'assistant'::text])))"
+    },
+    {
+      "name": "agentnexos_messages_content_check",
+      "table": "agentnexos_messages",
+      "definition": "CHECK (((char_length(content) >= 1) AND (char_length(content) <= 16000)))"
+    },
+    {
+      "name": "agentnexos_messages_pkey",
+      "table": "agentnexos_messages",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "agentnexos_messages_request_id_role_key",
+      "table": "agentnexos_messages",
+      "definition": "UNIQUE (request_id, role)"
+    },
+    {
+      "name": "agentnexos_messages_conversation_id_sequence_key",
+      "table": "agentnexos_messages",
+      "definition": "UNIQUE (conversation_id, sequence)"
+    },
+    {
+      "name": "agentnexos_messages_conversation_id_user_id_fkey",
+      "table": "agentnexos_messages",
+      "definition": "FOREIGN KEY (conversation_id, user_id) REFERENCES agentnexos_conversations(id, user_id) ON DELETE CASCADE"
+    }
+  ]
+}

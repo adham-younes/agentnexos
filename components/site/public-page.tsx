@@ -1,49 +1,18 @@
 import Link from "next/link";
+import { ArrowUpRight, Check, Database, FileText, GitBranch, ShieldCheck, Workflow } from "lucide-react";
 import { PageHeader } from "./page-header";
 import { publicPages, type PublicPageKey } from "@/lib/content/public-pages";
 import type { Locale } from "@/lib/i18n/config";
+import { CyberEffects, Glass } from "@/components/cyber/effects";
+import { CyberFooter } from "@/components/cyber/footer";
+import { WorkflowConsole } from "@/components/cyber/console";
 
+const icons = [Workflow, Database, ShieldCheck, GitBranch, FileText, Check];
 export function PublicPage({ page, locale }: { page: PublicPageKey; locale: Locale }) {
-  const content = publicPages[page][locale];
-  const legal = page === "privacy" || page === "terms";
-  const image = page === "security" ? "/images/permissions.jpg" : page === "platform" ? "/images/bridge.png" : "/images/whale.png";
-  return (
-    <div className="min-h-screen bg-background text-foreground" style={locale === "ar" ? { fontFamily: "var(--font-arabic), var(--font-instrument), sans-serif" } : undefined}>
-      <PageHeader />
-      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8 sm:py-20">
-        <nav className="mb-10 flex flex-wrap gap-x-6 gap-y-3 border-b border-border/60 pb-5 text-sm" aria-label={locale === "ar" ? "استكشف المنصة" : "Explore the platform"}>
-          {([["platform", "المنصة", "Platform"], ["solutions", "الحلول", "Solutions"], ["industries", "القطاعات", "Industries"], ["resources", "الأدلة", "Guides"]] as const).map(([path, ar, en]) => <Link key={path} aria-current={path === page ? "page" : undefined} href={`/${locale}/${path}`} className={path === page ? "text-foreground underline underline-offset-8" : "text-muted-foreground hover:text-foreground"}>{locale === "ar" ? ar : en}</Link>)}
-        </nav>
-        <div className={legal ? "mx-auto max-w-3xl text-center" : "grid items-center gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-16"}>
-          <div className="space-y-5">
-            <p className="text-sm font-medium text-[#10b981]">{content.eyebrow}</p>
-            <h1 className="text-3xl font-display leading-[1.4] tracking-tight sm:text-5xl">{content.title}</h1>
-            <p className="text-base leading-8 text-foreground/75 sm:text-lg">{content.intro}</p>
-          </div>
-          {!legal && <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6">
-            {/* Reuse template assets with dimensions independent of copy. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt="" aria-hidden="true" className={page === "security" ? "h-full w-full rounded-2xl object-cover" : "h-full w-full object-contain"} />
-          </div>}
-        </div>
-        <p className="mt-10 rounded-xl border-s-2 border-[#10b981]/50 bg-foreground/[0.025] p-5 text-sm leading-7 text-foreground/65">{content.notice}</p>
-        <div className={`mt-12 grid gap-6 ${page === "solutions" || page === "resources" ? "lg:grid-cols-3" : "md:grid-cols-2"}`}>
-          {content.cards.map(([title, description, ...details], index) => (
-            <section id={page === "resources" && index === 2 ? "acceptance" : undefined} key={title} className="flex min-w-0 flex-col rounded-2xl border border-border/60 bg-card/50 p-6 sm:p-8">
-              <span className="mb-6 text-xs font-mono text-[#10b981]">{String(index+1).padStart(2,"0")}</span>
-              <h2 className="text-2xl font-display leading-8">{title}</h2>
-              <p className="mt-4 text-base leading-8 text-foreground/75">{description}</p>
-              {details.length > 0 && <ul className="mt-6 space-y-3 border-t border-border/50 pt-5 text-sm leading-7 text-foreground/75">{details.map(detail => <li key={detail}>{detail}</li>)}</ul>}
-            </section>
-          ))}
-        </div>
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
-          {!legal && <Link className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/start`}>{locale === "ar" ? "جهّز موجز المشروع" : "Prepare a project brief"}</Link>}
-          <Link className="rounded-full border border-border px-6 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/agentnexos`}>{locale === "ar" ? "افتح مساحة الوكيل" : "Open the agent workspace"}</Link>
-          <Link className="rounded-full border border-border px-6 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4" href={`/${locale}/${page === "security" ? "privacy" : "security"}`}>{locale === "ar" ? (page === "security" ? "راجع معالجة البيانات" : "راجع ضوابط التشغيل") : (page === "security" ? "Review data handling" : "Review operating controls")}</Link>
-        </div>
-      </main>
-      <footer className="border-t border-border/50 px-5 py-8 text-center text-sm text-muted-foreground"><p>{locale === "ar" ? "© 2026 Agentnexos. جميع الحقوق محفوظة." : "© 2026 Agentnexos. All rights reserved."}</p></footer>
-    </div>
-  );
+ const content=publicPages[page][locale], ar=locale==="ar",legal=page==="privacy"||page==="terms";
+ return <CyberEffects className={`nexus-public nexus-page-${page}`}><PageHeader/><main id="main-content" tabIndex={-1}>
+ <section className={`nexus-wrap nexus-page-hero ${legal?"is-legal":""}`}><div><p className="cyber-eyebrow"><span/>{content.eyebrow}</p><h1>{content.title}</h1><p className="nexus-page-intro">{content.intro}</p>{!legal&&<Link className="cyber-text-link" href={`/${locale}/start`}>{ar?"حوّل الفكرة إلى موجز مشروع":"Turn an idea into a project brief"}<ArrowUpRight size={16}/></Link>}</div>{!legal&&(page==="platform"||page==="solutions"?<WorkflowConsole locale={locale} compact/>:<div className="nexus-page-art" aria-label={ar?"المعرفة، المراجعة، والقرار في مسار واحد":"Knowledge, review and decision in one workflow"}><div className="nexus-art-rings" aria-hidden="true"/><div className="nexus-art-center"><Workflow size={38}/></div>{[Database,ShieldCheck,GitBranch].map((Icon,i)=><Glass key={i} reveal={false} className={`nexus-art-node node-${i}`}><Icon size={21}/><span>{(ar?["مصدر موثوق","مراجعة واضحة","خطوة مفهومة"]:["Trusted source","Clear review","A next step"])[i]}</span></Glass>)}<p className="nexus-meta">{ar?"معرفة ← مراجعة ← قرار":"KNOWLEDGE / REVIEW / DECISION"}</p></div>)}</section>
+ <section className="nexus-wrap nexus-public-content"><div className="nexus-section-marker" data-reveal><span dir="ltr">{legal?"DOCUMENT / 2026":"FIELD GUIDE / AGENTNEXOS"}</span><p>{legal?(ar?"اقرأ التفاصيل قبل استخدام الخدمة.":"Read the details before using the service."):(ar?"التفاصيل التي تجعل الفكرة قابلة للبناء.":"The details that turn an idea into something you can build.")}</p></div><div className={legal?"nexus-legal-sections":"nexus-editorial-grid"}>{content.cards.map(([title,description,...details],i)=>{const Icon=icons[i%icons.length];return <Glass key={title} className="nexus-editorial-card"><section id={page==="resources"&&i===2?"acceptance":undefined}><div className="nexus-card-head"><Icon size={22}/><span className="nexus-meta" dir="ltr">{String(i+1).padStart(2,"0")}</span></div><h2>{title.replace(/^\d+\s*[·—]\s*/,"")}</h2><p>{description}</p>{details.length>0&&<ul>{details.map(d=><li key={d}><span/><p>{d}</p></li>)}</ul>}</section></Glass>})}</div><aside className="nexus-scope-note"><ShieldCheck size={18}/><p>{content.notice}</p></aside></section>
+ {!legal&&<section className="nexus-wrap nexus-public-cta" data-reveal><p className="cyber-eyebrow"><span/>{ar?"خطوتك التالية":"YOUR NEXT STEP"}</p><h2 className="nexus-gradient">{ar?"ابدأ بما يعطّل فريقك.":"Start where the work gets stuck."}</h2><p>{ar?"صف طلبًا واحدًا كما يصل اليوم. لنبنِ منه مسارًا أوضح.":"Describe one request as it arrives today. Make its next step clearer."}</p><div className="cyber-actions"><Link className="cyber-button cyber-button-primary" href={`/${locale}/agentnexos`}>{ar?"جرّب مساعد التصميم":"Try the design assistant"}<ArrowUpRight size={16}/></Link><Link className="cyber-button cyber-button-secondary" href={`/${locale}/start`}>{ar?"جهّز موجز المشروع":"Prepare a project brief"}</Link></div></section>}
+ </main><CyberFooter locale={locale}/></CyberEffects>;
 }

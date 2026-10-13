@@ -1,0 +1,137 @@
+{
+  "ready": true,
+  "counts": {
+    "messages": 0,
+    "profiles": 0,
+    "requests": 0,
+    "conversations": 0
+  },
+  "limits": [
+    {
+      "singleton": true,
+      "global_daily_limit": 10000,
+      "connection_daily_limit": 1000
+    }
+  ],
+  "tables": [
+    {
+      "rls": true,
+      "name": "agentnexos_conversations"
+    },
+    {
+      "rls": true,
+      "name": "agentnexos_demo_limits"
+    },
+    {
+      "rls": true,
+      "name": "agentnexos_demo_requests"
+    },
+    {
+      "rls": true,
+      "name": "agentnexos_messages"
+    },
+    {
+      "rls": true,
+      "name": "agentnexos_profiles"
+    }
+  ],
+  "policies": [
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_conversations",
+      "policyname": "conversations_select_own",
+      "with_check": null
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_conversations",
+      "policyname": "conversations_delete_own",
+      "with_check": null
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_messages",
+      "policyname": "messages_select_own",
+      "with_check": null
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_profiles",
+      "policyname": "profile_select_own",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_profiles",
+      "policyname": "profile_insert_own",
+      "with_check": "(( SELECT auth.uid() AS uid) = id)"
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "agentnexos_profiles",
+      "policyname": "profile_update_own",
+      "with_check": "(( SELECT auth.uid() AS uid) = id)"
+    }
+  ],
+  "functions": [
+    {
+      "name": "reserve_agentnexos_demo_v2",
+      "config": [
+        "search_path=\"\""
+      ],
+      "security_definer": false
+    },
+    {
+      "name": "reserve_agentnexos_demo",
+      "config": [
+        "search_path=\"\""
+      ],
+      "security_definer": false
+    },
+    {
+      "name": "agentnexos_begin_turn",
+      "config": [
+        "search_path=\"\""
+      ],
+      "security_definer": false
+    },
+    {
+      "name": "agentnexos_demo_ready",
+      "config": [
+        "search_path=\"\""
+      ],
+      "security_definer": false
+    },
+    {
+      "name": "reserve_agentnexos_demo_v3",
+      "config": [
+        "search_path=\"\""
+      ],
+      "security_definer": false
+    }
+  ]
+}

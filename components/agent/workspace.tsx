@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { ArrowUp, ArrowUpRight, Check, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Check, Command, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow } from "lucide-react";
 import { Conversation, ConversationContent, ConversationScrollButton, messagesToMarkdown } from "@/components/ai-elements/conversation";
 import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
@@ -63,11 +63,11 @@ export function AgentWorkspace() {
     const link = document.createElement("a"); link.href = url; link.download = "agentnexos-conversation.md"; link.click(); URL.revokeObjectURL(url);
   }
   return (
-    <div className="agent-workspace min-h-dvh bg-background text-foreground">
+    <div className="agent-workspace nexus-workspace min-h-dvh bg-background text-foreground">
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex min-h-20 max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3" aria-label={c.home}>
-            <span className="flex size-10 items-center justify-center rounded-xl border border-border bg-secondary"><Layers3 className="size-5" aria-hidden="true" /></span>
+            <span className="flex size-10 items-center justify-center rounded-xl border border-border bg-secondary"><Command className="size-5" aria-hidden="true" /></span>
             <span dir="ltr" className="text-xl font-semibold tracking-tight">Agentnexos</span>
           </Link>
           <LocaleSwitcher />

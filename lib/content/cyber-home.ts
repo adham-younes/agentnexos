@@ -1,17 +1,17 @@
 /** Public product copy: capabilities are grounded in the bounded planning preview. */
 export const cyberHome = {
   ar: {
-    eyebrow: "من فكرة الأتمتة إلى خطة عمل واضحة",
-    headline: "عمل أقل تشتتًا.", emphasis: "قرارات أوضح.",
-    intro: "حوّل العملية التي تستنزف وقت فريقك إلى خطوات مفهومة: ما البيانات المطلوبة، من يراجع القرار، وكيف تتحقق من النتيجة. ابدأ بتصميمها مع Agentnexos، بالعربية أو الإنجليزية.",
-    primary: "صمّم عمليتك الأولى", secondary: "جهّز موجز المشروع", note: "تجربة تخطيط ببيانات افتراضية · بلا تنفيذ على أنظمتك",
+    eyebrow: "ذكاء اصطناعي مصمم لطريقة عملك",
+    headline: "عملٌ أذكى.", emphasis: "بقيادة بشرية.",
+    intro: "بين طلب يصل بالبريد، ومستند ينتظر المراجعة، وقرار يتأخر، يضيع وقت الفريق. نصمّم أنظمة وكلاء تجمع هذه الأجزاء في مسار واضح: معرفة في مكانها، وخطوة تالية مفهومة، وقرار عند صاحبه.",
+    primary: "جرّب مساعد التصميم", secondary: "ابدأ من عملية واحدة", note: "تجربة تخطيط ببيانات افتراضية · بلا تنفيذ على أنظمتك",
     region: "للفرق في مصر والخليج والشرق الأوسط", scroll: "اكتشف ما يمكنك بناؤه",
     illustration: "مسار توضيحي · مراجعة مشتريات", request: "طلب جديد من فريق العمليات", requestDetail: "توريد أجهزة للفريق · مثال افتراضي", requestLabel: "المدخلات", check: "اجمع ما ينقص الطلب", checkDetail: "المواصفات، عرض المورد، وحد الاعتماد", checkLabel: "التحقق", review: "قرار المسؤول قبل الشراء", reviewDetail: "ملف منظم وملاحظات للمراجعة", reviewLabel: "المخرج", human: "نقطة قرار بشري", draft: "تصميم مسار، وليس تشغيلًا حيًا",
-    capabilitiesLabel: "ابدأ بالعمل الذي تعرفه", capabilitiesTitle: "فريقك يعرف المشكلة.", capabilitiesEmphasis: "لنرسم طريق حلّها.", capabilitiesIntro: "قبل اختيار الأدوات، نحدد ما يحتاجه الناس لإنجاز العمل. ثلاث أسئلة تحوّل الفكرة إلى خطة يمكن مناقشتها واختبارها.",
+    capabilitiesLabel: "ابدأ بالعمل الذي تعرفه", capabilitiesTitle: "من المعرفة إلى القرار.", capabilitiesEmphasis: "كل خطوة لها دور.", capabilitiesIntro: "لا تحتاج كل مهمة إلى وكيل مستقل، ولا يكفي رد ذكي لإنجاز عمل كامل. نختار الأدوار والمصادر والأدوات بحسب العملية التي تريد تحسينها.",
     capabilities: [
-      { title: "أين تتوقف العملية؟", description: "صف الطلب كما يصل إلى فريقك. نرتب المدخلات والقرارات والاستثناءات، ونحدد ما يحتاج سؤالًا بدل التخمين.", detail: "النتيجة: خطوات واضحة وأسئلة محددة", icon: "workflow" },
-      { title: "ما الذي يحتاج قرارًا منك؟", description: "حدد ما يمكن قراءته، وما يبقى مسودة، ومتى يعود العمل إلى المسؤول. تدخل الإنسان جزء من التصميم منذ البداية.", detail: "النتيجة: حدود صلاحية ونقاط مراجعة", icon: "shield" },
-      { title: "كيف تعرف أن العمل اكتمل؟", description: "اربط كل مخرج بمصدره ومعيار قبوله. اختبر نقص البيانات والاستثناءات قبل التفكير في توسيع التشغيل.", detail: "النتيجة: معيار نجاح قابل للتحقق", icon: "check" },
+      { title: "فهمٌ يسبق التنفيذ", description: "صف الطلب كما يصل إلى فريقك. نرتب المدخلات والقرارات والاستثناءات، ونحدد ما يحتاج سؤالًا بدل التخمين.", detail: "النتيجة: خطوات واضحة وأسئلة محددة", icon: "workflow" },
+      { title: "معرفة مرتبطة بالسياق", description: "المعلومة المفيدة تأتي من المصدر المناسب، في اللحظة المناسبة. نحدد أين يعيش سياق المهمة، وما الذي يحتاج تحديثًا أو توضيحًا.", detail: "المصدر واضح. والمعلومة الناقصة ظاهرة.", icon: "shield" },
+      { title: "قرار يمكن مراجعته", description: "يجمع المسار ما يحتاجه المسؤول للحكم: ملخص الطلب، والمستندات، والنواقص، والخطوة المقترحة. يبقى القرار في مكانه الصحيح.", detail: "مخرج منظم. ومراجعة في وقتها.", icon: "check" },
     ],
     casesLabel: "مسارات من يوم العمل", casesTitle: "ابدأ من عملية تشبه عملك.", casesIntro: "أمثلة تساعدك على التفكير. اختر مسارًا لاستكشاف بياناته، القرار الذي يحتاج إنسانًا، والنتيجة المنتظرة.", casesTabs: "اختر مثال العملية", inputs: "ما نبدأ به", decision: "أين يراجع الإنسان؟", output: "ما الذي نريد الوصول إليه؟", caseAction: "استكشف هذا النوع من العمليات", caseNotice: "أمثلة تصميمية؛ لا اتصال بموردين أو فواتير أو أنظمة فعلية.",
     cases: [
@@ -25,7 +25,7 @@ export const cyberHome = {
       { title: "جهّز موجزًا واضحًا", text: "اجمع الهدف ومصدر البيانات ومعيار القبول في ملف محلي. راجعه مع فريقك قبل أي ربط.", deliverable: "موجز قابل للتنزيل والمناقشة", href: "start", action: "جهّز الموجز" },
       { title: "حدّد شروط التجربة", text: "ضع حالات نجاح وفشل، وحدودًا للأدوات والموافقة، وطريقة للتحقق من الأثر. هذه متطلبات المشروع المخصص.", deliverable: "معايير قبول وخطة تجربة", href: "resources", action: "راجع دليل التجربة" },
     ],
-    availabilityLabel: "صورة واضحة قبل البداية", availabilityTitle: "ما الذي يمكنك استخدامه اليوم؟", availabilityIntro: "الواجهة تساعدك على تصميم العملية واتخاذ قرار البداية. ربط بيانات المؤسسة وتنفيذ إجراءاتها يحتاجان مشروعًا مخصصًا وتحققًا مستقلًا.", tableFeature: "القدرة", tableUse: "ما الذي تحصل عليه؟", tableStatus: "الحالة", available: "متاح الآن", scoped: "حسب المشروع", notEnabled: "غير مفعّل هنا",
+    availabilityLabel: "صورة واضحة قبل البداية", availabilityTitle: "من الاستكشاف إلى التشغيل.", availabilityIntro: "الواجهة تساعدك على تصميم العملية واتخاذ قرار البداية. ربط بيانات المؤسسة وتنفيذ إجراءاتها يحتاجان مشروعًا مخصصًا وتحققًا مستقلًا.", tableFeature: "القدرة", tableUse: "ما الذي تحصل عليه؟", tableStatus: "الحالة", available: "متاح الآن", scoped: "حسب المشروع", notEnabled: "غير مفعّل هنا",
     availability: [
       ["مساعد تصميم العمليات", "مناقشة العملية، اقتراح خطواتها ومراجعة افتراضاتها ببيانات افتراضية.", "available"],
       ["موجز مشروع محلي", "تجميع الهدف والبيانات ومعيار القبول، ثم تنزيل ملف للمراجعة دون إرسال.", "available"],
@@ -41,20 +41,20 @@ export const cyberHome = {
       ["هل تدعم التجربة العربية والإنجليزية؟", "نعم، الواجهة ومساعد تصميم العمليات متاحان باللغتين. يمكنك تبديل اللغة مع الاحتفاظ بمسار الصفحة. راجع أي مخرج قبل استخدامه في قرار عملي."],
       ["هل توجد أسعار أو نتائج توفير مضمونة؟", "لا توجد باقات شراء أو أرقام توفير منشورة. يتحدد نطاق المشروع وتكلفته بعد فهم البيانات والربط والاختبارات والدعم المطلوب. قياس العبء الحالي في الموجز ليس توقعًا للتوفير."],
     ],
-    ctaLabel: "الخطوة التالية", ctaTitle: "اختر العملية التي", ctaEmphasis: "تستحق وقتًا أقل.", ctaText: "صفها كما تحدث اليوم. ابدأ بسؤال واضح، ثم اخرج بخطة يمكن لفريقك مراجعتها.", footerLine: "من فكرة الأتمتة إلى خطة يفهمها فريقك.", footerNav: "روابط المنصة", footerCopyright: "© 2026 Agentnexos. جميع الحقوق محفوظة.", footerLinks: [["platform", "المنصة"], ["solutions", "الحلول"], ["about", "منهجنا"], ["resources", "الأدلة"], ["security", "الأمان"], ["privacy", "الخصوصية"], ["terms", "الشروط"]],
+    ctaLabel: "الخطوة التالية", ctaTitle: "امنح فريقك وقتًا", ctaEmphasis: "للعمل الذي يستحقه.", ctaText: "ابدأ بمهمة واحدة تستنزف يوم الفريق. صفها للمساعد، وحدد ما يحتاجه الناس لإنجازها بصورة أفضل.", footerLine: "من فكرة الأتمتة إلى خطة يفهمها فريقك.", footerNav: "روابط المنصة", footerCopyright: "© 2026 Agentnexos. جميع الحقوق محفوظة.", footerLinks: [["platform", "المنصة"], ["solutions", "الحلول"], ["about", "منهجنا"], ["resources", "الأدلة"], ["security", "الأمان"], ["privacy", "الخصوصية"], ["terms", "الشروط"]],
   },
   en: {
-    eyebrow: "From an automation idea to a clear workflow",
-    headline: "Less scattered work.", emphasis: "Clearer decisions.",
-    intro: "Turn the process taking up your team's time into steps everyone can follow: the data you need, who reviews each decision, and how to verify the result. Start designing it with Agentnexos, in Arabic or English.",
-    primary: "Design your first workflow", secondary: "Prepare a project brief", note: "Planning preview with fictional data · no actions on your systems",
+    eyebrow: "AGENT WORKFLOWS / BUILT AROUND YOUR TEAM",
+    headline: "Intelligent work.", emphasis: "Human direction.",
+    intro: "Requests arrive in one place, documents live in another, and decisions wait between them. We design agent workflows that bring the pieces together: the right knowledge, a clear next step, and a person in control.",
+    primary: "Try the design assistant", secondary: "Start with one workflow", note: "Planning preview with fictional data · no actions on your systems",
     region: "For teams across Egypt, the Gulf and MENA", scroll: "Explore what you could build",
     illustration: "Illustrative workflow · purchase review", request: "A new operations request", requestDetail: "Equipment for the team · fictional example", requestLabel: "Input", check: "Bring the missing details together", checkDetail: "Specifications, supplier quote, approval threshold", checkLabel: "Check", review: "Owner review before purchase", reviewDetail: "An organized request with clear review notes", reviewLabel: "Output", human: "Human decision point", draft: "A workflow design, not a live run",
-    capabilitiesLabel: "Start with the work you know", capabilitiesTitle: "Your team knows the problem.", capabilitiesEmphasis: "Let's map a way through.", capabilitiesIntro: "Before choosing tools, work out what people need to get the job done. Three questions turn an idea into a plan you can discuss and test.",
+    capabilitiesLabel: "Start with the work you know", capabilitiesTitle: "From knowledge to decisions.", capabilitiesEmphasis: "Every step has a role.", capabilitiesIntro: "Not every task needs its own agent, and a good answer does not complete an entire process. Choose roles, sources and tools around the work you want to improve.",
     capabilities: [
-      { title: "Where does work stall?", description: "Describe a request as your team receives it. Map the inputs, decisions and exceptions, and identify what needs a question rather than a guess.", detail: "The result: clear steps and specific questions", icon: "workflow" },
-      { title: "What needs your decision?", description: "Define what can be read, what stays a draft, and when the owner steps in. Human judgment belongs in the design from the beginning.", detail: "The result: permission boundaries and review points", icon: "shield" },
-      { title: "How do you know it's done?", description: "Connect each output to its source and acceptance criteria. Test missing information and exceptions before considering a wider rollout.", detail: "The result: a verifiable measure of success", icon: "check" },
+      { title: "Understand before acting", description: "Describe a request as your team receives it. Map the inputs, decisions and exceptions, and identify what needs a question rather than a guess.", detail: "The result: clear steps and specific questions", icon: "workflow" },
+      { title: "Knowledge in context", description: "Useful information comes from the right source at the right moment. Define where task context lives and what needs an update or clarification.", detail: "A clear source. Visible gaps.", icon: "shield" },
+      { title: "A reviewable decision", description: "Bring together what an owner needs to decide: the request, supporting documents, missing details and a proposed next step. Keep the decision with its owner.", detail: "An organized output. Review at the right time.", icon: "check" },
     ],
     casesLabel: "Workflows from the working day", casesTitle: "Start with a process like yours.", casesIntro: "Examples to help you think. Choose a workflow to explore its inputs, the decision that needs a person, and the intended result.", casesTabs: "Choose a workflow example", inputs: "What we start with", decision: "Where a person reviews", output: "What we're working toward", caseAction: "Explore this kind of workflow", caseNotice: "Design examples; no connection to actual suppliers, invoices or systems.",
     cases: [
@@ -62,13 +62,13 @@ export const cyberHome = {
       { name: "Finance follow-up", title: "An organized follow-up. A draft your team reviews.", description: "Define how to prioritize receivables and separate routine cases from disputed ones, with sending and financial decisions left to the owner.", input: "A fictional invoice ledger, due dates and payment statuses.", decision: "The team checks the amount and status, then approves a follow-up draft.", output: "Follow-up priorities and drafts based on approved information." },
       { name: "Internal knowledge", title: "An answer employees can trace to its source.", description: "Design an assistant grounded in approved policies, clear about what it cannot find, and ready to route a question to its owner.", input: "Approved policies, an employee question and the permitted information scope.", decision: "An owner resolves conflicting policies or missing reliable sources.", output: "A sourced answer or a clear escalation to the right person." },
     ],
-    processLabel: "How we approach the work", processTitle: "One workflow. A considered start.", processIntro: "A small starting point makes questions clear and results reviewable. Moving into operation comes after data and permissions are verified.",
+    processLabel: "How we approach the work", processTitle: "Start small. Build with intent.", processIntro: "A small starting point makes questions clear and results reviewable. Moving into operation comes after data and permissions are verified.",
     steps: [
       { title: "Understand the process", text: "Choose a recurring task and define its owner, inputs and sticking points. Try describing it in the agent workspace.", deliverable: "An initial workflow map", href: "agentnexos", action: "Open the design assistant" },
       { title: "Prepare a clear brief", text: "Bring the goal, data source and acceptance criteria into a local file. Review it with your team before any connection.", deliverable: "A downloadable brief to discuss", href: "start", action: "Prepare the brief" },
       { title: "Define a bounded pilot", text: "Set success and failure cases, tool and approval boundaries, and a way to verify effects. These are requirements for a custom project.", deliverable: "Acceptance criteria and a pilot plan", href: "resources", action: "Read the pilot guide" },
     ],
-    availabilityLabel: "Know what you're starting with", availabilityTitle: "What can you use today?", availabilityIntro: "The interface helps you design a workflow and decide where to start. Connecting enterprise data and executing actions require a scoped project and independent verification.", tableFeature: "Capability", tableUse: "What you get", tableStatus: "Status", available: "Available now", scoped: "Project-specific", notEnabled: "Not enabled here",
+    availabilityLabel: "Know what you're starting with", availabilityTitle: "From exploration to operation.", availabilityIntro: "The interface helps you design a workflow and decide where to start. Connecting enterprise data and executing actions require a scoped project and independent verification.", tableFeature: "Capability", tableUse: "What you get", tableStatus: "Status", available: "Available now", scoped: "Project-specific", notEnabled: "Not enabled here",
     availability: [
       ["Workflow design assistant", "Discuss a process, propose steps and review assumptions using fictional data.", "available"],
       ["Local project brief", "Gather goals, data and acceptance criteria, then download a file without submitting it.", "available"],
@@ -84,6 +84,6 @@ export const cyberHome = {
       ["Does the preview support Arabic and English?", "Yes. The interface and workflow design assistant are available in both languages. You can switch language while keeping the current page path. Review any output before using it in a business decision."],
       ["Are there prices or guaranteed savings?", "There are no published purchase plans or savings claims. Project scope and cost depend on data, integrations, testing and support needs. Current workload calculations in the brief do not predict savings."],
     ],
-    ctaLabel: "Your next step", ctaTitle: "Choose the workflow", ctaEmphasis: "worth untangling.", ctaText: "Describe how it works today. Start with a clear question, then build a plan your team can review.", footerLine: "From an automation idea to a plan your team understands.", footerNav: "Platform links", footerCopyright: "© 2026 Agentnexos. All rights reserved.", footerLinks: [["platform", "Platform"], ["solutions", "Solutions"], ["about", "Our approach"], ["resources", "Guides"], ["security", "Security"], ["privacy", "Privacy"], ["terms", "Terms"]],
+    ctaLabel: "Your next step", ctaTitle: "Give your team", ctaEmphasis: "room to move.", ctaText: "Describe how it works today. Start with a clear question, then build a plan your team can review.", footerLine: "From an automation idea to a plan your team understands.", footerNav: "Platform links", footerCopyright: "© 2026 Agentnexos. All rights reserved.", footerLinks: [["platform", "Platform"], ["solutions", "Solutions"], ["about", "Our approach"], ["resources", "Guides"], ["security", "Security"], ["privacy", "Privacy"], ["terms", "Terms"]],
   },
 } as const;

@@ -11,13 +11,13 @@ function swapLocale(pathname: string, next: Locale): string {
   return parts.join("/") || `/${next}`;
 }
 
-export function LocaleSwitcher({ inverted = false }: { inverted?: boolean }) {
+export function LocaleSwitcher({ inverted = false, compact = false }: { inverted?: boolean; compact?: boolean }) {
   const locale = useLocale();
   const pathname = usePathname() || "/";
 
   return (
     <div className="flex items-center gap-1 font-mono text-xs">
-      {locales.map((l) => {
+      {locales.filter(l => !compact || l !== locale).map((l) => {
         const active = l === locale;
         return (
           <a
