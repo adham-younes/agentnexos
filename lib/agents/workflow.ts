@@ -37,13 +37,13 @@ export async function runAgentWorkflow(options: {
   const plannerModel = options.models?.planner ?? getOrchestratorModel();
   const reviewerModel = options.models?.reviewer ?? getVerifierModel();
   if (!analystModel || !plannerModel || !reviewerModel) throw new Error("MODEL_CONFIGURATION_UNAVAILABLE");
-  const instructions = agentInstructions(options.locale, task);
+  const instructions = agentInstructions(options.locale, task, Boolean(options.previousRequest) && classifyTask(latestRequest) === "conversation" && task !== "conversation");
   const analyst = new ToolLoopAgent({ id: "process-analyst", model: analystModel, instructions: instructions.analyst, maxOutputTokens: 1200, maxRetries: 0, stopWhen: isStepCount(1) });
   const planner = new ToolLoopAgent({ id: "workflow-designer", model: plannerModel, instructions: instructions.planner, tools, maxOutputTokens: 1800, maxRetries: 0, stopWhen: isStepCount(3),
     prepareStep: ({ stepNumber }) => task === "workflow" && stepNumber === 0 ? { toolChoice: { type: "tool", toolName: "review_workflow_design" } } : {},
   });
   const reviewer = new ToolLoopAgent({ id: "result-reviewer", model: reviewerModel, instructions: instructions.reviewer, maxOutputTokens: 3000, maxRetries: 0, stopWhen: isStepCount(1) });
-  // Small requests do not need three paid calls. Business workflow design does.
+  // Small requests use one reviewer; workflow design uses the full team.
   const needsTeam = task !== "conversation";
   if (!needsTeam) {
     options.onPhase(2);
