@@ -56,3 +56,11 @@ External case-study statistics were **not** imported as our own results.
 - Local browser matrix: 78/78 page-locale-viewport checks; two baseline interaction journeys passed after selector and layout fixes. Additional E2E covered nav geometry at widths 390/1440, eight-domain selector and deep link, offline local Markdown generation with zero POST requests, ROI input recalculation and invalid input rejection.
 - Visual QA detected floating nav position error caused by an incorrectly overridden logical CSS inset, then fixed and confirmed centered: x=12 / width=366 on 390px mobile and x=40 / width=1360 on 1440px desktop. CSS rounded corners 18px/25px.
 - ROI demonstration values are purely fictional: 600 cases/month, 60% eligible, 18 baseline minutes, 9 assisted minutes, 3 minutes human review, USD 8 loaded hourly cost, USD 150 monthly running costs. Illustrative net: USD 138/month before implementation costs and other quality risks. Do not represent this as measured savings or ROI.
+
+## Vercel Preview acceptance evidence
+- First Atlas Preview deployment `dpl_FdFtVtz1ZNghGBxUwp1NYrBg6Yx9`, commit `b956a5b4b57cb6b5251dddd7f8e65d5a734e7110` was `READY` on `https://compute-the-platform-to-build-pl6jgu6qk-adhamlouxors-projects.vercel.app`.
+- Hosted Chromium suite: `pnpm verify:site <preview-url>` passed 78/78 AR/EN × 390/768/1440 page cases, 2 baseline interaction journeys, zero failures.
+- Hosted product journey passed: 8 domain entries, banking case selection and assistant prompt prefill, functional local offline review draft/Markdown download with zero POSTs, variable ROI and invalid input, exact centered rounded header geometry across mobile and desktop.
+- One test initially read agent draft before client hydration and failed although draft appeared after ~400ms. Fixed the test to await actual draft value before assessment. Application bundle unchanged by this test fix.
+- Production still at Git commit `49f4627ec934bba066294cb0740ad6ea0f21a80a` when first Preview verified; no merge or direct production deployment.
+- **Not production ready:** Preview AI backend remains `FEATURE_DISABLED` by safe environment scoping; prior CI jobs exited before any action steps; production Groq provider and policy regression remain separate gates.
