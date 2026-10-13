@@ -1,0 +1,459 @@
+{
+  "status": "PASS",
+  "render_type": "React server render, not browser rendering",
+  "route_locale_combinations": 42,
+  "text_comparisons": 834,
+  "content_source_sha256": "0c6e94ea511828bd3572c3a4d5d9445193eabb22c8ee794f86a0fead3cc13804",
+  "all_content_identical": true,
+  "routes": [
+    {
+      "route": "",
+      "locale": "ar",
+      "checked_texts": 40,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "services",
+      "locale": "ar",
+      "checked_texts": 24,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions",
+      "locale": "ar",
+      "checked_texts": 18,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries",
+      "locale": "ar",
+      "checked_texts": 14,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "methodology",
+      "locale": "ar",
+      "checked_texts": 17,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "about",
+      "locale": "ar",
+      "checked_texts": 12,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "governance",
+      "locale": "ar",
+      "checked_texts": 20,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/procurement",
+      "locale": "ar",
+      "checked_texts": 28,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/receivables",
+      "locale": "ar",
+      "checked_texts": 28,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/knowledge",
+      "locale": "ar",
+      "checked_texts": 25,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/customer-operations",
+      "locale": "ar",
+      "checked_texts": 24,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries/commerce",
+      "locale": "ar",
+      "checked_texts": 16,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries/professional-services",
+      "locale": "ar",
+      "checked_texts": 13,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries/logistics",
+      "locale": "ar",
+      "checked_texts": 13,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "resources",
+      "locale": "ar",
+      "checked_texts": 11,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "resources/first-workflow",
+      "locale": "ar",
+      "checked_texts": 24,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "resources/acceptance-testing",
+      "locale": "ar",
+      "checked_texts": 19,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "privacy",
+      "locale": "ar",
+      "checked_texts": 15,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "terms",
+      "locale": "ar",
+      "checked_texts": 12,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "start",
+      "locale": "ar",
+      "checked_texts": 28,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "agentnexos",
+      "locale": "ar",
+      "checked_texts": 16,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "",
+      "locale": "en",
+      "checked_texts": 40,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "services",
+      "locale": "en",
+      "checked_texts": 24,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions",
+      "locale": "en",
+      "checked_texts": 18,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries",
+      "locale": "en",
+      "checked_texts": 14,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "methodology",
+      "locale": "en",
+      "checked_texts": 17,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "about",
+      "locale": "en",
+      "checked_texts": 12,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "governance",
+      "locale": "en",
+      "checked_texts": 20,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/procurement",
+      "locale": "en",
+      "checked_texts": 28,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/receivables",
+      "locale": "en",
+      "checked_texts": 28,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/knowledge",
+      "locale": "en",
+      "checked_texts": 25,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "solutions/customer-operations",
+      "locale": "en",
+      "checked_texts": 24,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries/commerce",
+      "locale": "en",
+      "checked_texts": 16,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries/professional-services",
+      "locale": "en",
+      "checked_texts": 13,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "industries/logistics",
+      "locale": "en",
+      "checked_texts": 13,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "resources",
+      "locale": "en",
+      "checked_texts": 11,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "resources/first-workflow",
+      "locale": "en",
+      "checked_texts": 24,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "resources/acceptance-testing",
+      "locale": "en",
+      "checked_texts": 19,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "privacy",
+      "locale": "en",
+      "checked_texts": 15,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "terms",
+      "locale": "en",
+      "checked_texts": 12,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "start",
+      "locale": "en",
+      "checked_texts": 28,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    },
+    {
+      "route": "agentnexos",
+      "locale": "en",
+      "checked_texts": 16,
+      "missing": [],
+      "broken_links": [],
+      "status": "PASS"
+    }
+  ],
+  "contrast_pairs": [
+    {
+      "role": "body",
+      "foreground": "#ebebeb",
+      "background": "#050505",
+      "ratio": 17.1,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "role": "muted",
+      "foreground": "#a5b2ac",
+      "background": "#0b100e",
+      "ratio": 8.74,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "role": "cta",
+      "foreground": "#050505",
+      "background": "#10b981",
+      "ratio": 8.03,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "role": "cta_hover",
+      "foreground": "#050505",
+      "background": "#34d399",
+      "ratio": 10.6,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "role": "error",
+      "foreground": "#fca5a5",
+      "background": "#1e1111",
+      "ratio": 9.68,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "role": "control_border",
+      "foreground": "#66796d",
+      "background": "#0b100e",
+      "ratio": 4.13,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "role": "focus",
+      "foreground": "#10b981",
+      "background": "#050505",
+      "ratio": 8.03,
+      "required": 3,
+      "status": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "file": "concept-1.webp",
+      "bytes": 114088,
+      "format": "WEBP"
+    },
+    {
+      "file": "concept-2.webp",
+      "bytes": 148744,
+      "format": "WEBP"
+    },
+    {
+      "file": "concept-3.webp",
+      "bytes": 131718,
+      "format": "WEBP"
+    },
+    {
+      "file": "concept-4.webp",
+      "bytes": 121606,
+      "format": "WEBP"
+    },
+    {
+      "file": "neural-detail.webp",
+      "bytes": 109558,
+      "format": "WEBP"
+    },
+    {
+      "file": "neural-film-poster.webp",
+      "bytes": 48820,
+      "format": "WEBP"
+    },
+    {
+      "file": "neural-hero.webp",
+      "bytes": 130406,
+      "format": "WEBP"
+    }
+  ],
+  "video": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 716
+      }
+    ],
+    "format": {
+      "duration": "5.041667",
+      "size": "1030996"
+    }
+  },
+  "failures": [],
+  "browser_visual_qa": "NOT_RUN: cloud browser local file protocol is blocked",
+  "model_evaluations": "NOT_RUN",
+  "production_deployment": "NOT_CHANGED"
+}

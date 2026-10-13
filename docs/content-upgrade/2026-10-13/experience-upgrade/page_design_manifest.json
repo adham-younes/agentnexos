@@ -1,0 +1,1114 @@
+{
+  "schema_version": "1.0",
+  "pages": [
+    {
+      "id": "home",
+      "slug": "",
+      "routes": [
+        "/ar/",
+        "/en/"
+      ],
+      "template": "marketing_editorial",
+      "hero": {
+        "asset": "neural-hero.webp",
+        "motion": "user_requested_video"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "work",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "solutions",
+          "source_layout": "linked_list",
+          "render_pattern": "linked_solution_or_sector_cards",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "delivery",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "controls",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "demo",
+          "source_layout": "availability",
+          "render_pattern": "capability_scope_panel",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "next",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": true,
+      "interactive_contract": null
+    },
+    {
+      "id": "services",
+      "slug": "services",
+      "routes": [
+        "/ar/services",
+        "/en/services"
+      ],
+      "template": "service_editorial",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "scope",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "knowledge",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "integration",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "orchestration",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "evaluation",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "handover",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "solutions",
+      "slug": "solutions",
+      "routes": [
+        "/ar/solutions",
+        "/en/solutions"
+      ],
+      "template": "marketing_editorial",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "buying",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "finance",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "knowledge",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "service",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "fit",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "industries",
+      "slug": "industries",
+      "routes": [
+        "/ar/industries",
+        "/en/industries"
+      ],
+      "template": "marketing_editorial",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "segments",
+          "source_layout": "linked_list",
+          "render_pattern": "linked_solution_or_sector_cards",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "classification",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "selection",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "methodology",
+      "slug": "methodology",
+      "routes": [
+        "/ar/methodology",
+        "/en/methodology"
+      ],
+      "template": "service_editorial",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "discovery",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "design",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "build",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "acceptance",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "operation",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "about",
+      "slug": "about",
+      "routes": [
+        "/ar/about",
+        "/en/about"
+      ],
+      "template": "marketing_editorial",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "founder",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "region",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "working",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "governance",
+      "slug": "governance",
+      "routes": [
+        "/ar/governance",
+        "/en/governance"
+      ],
+      "template": "service_editorial",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "owners",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "access",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "approval",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "evidence",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "untrusted",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "recovery",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "data",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "solutions/procurement",
+      "slug": "solutions/procurement",
+      "routes": [
+        "/ar/solutions/procurement",
+        "/en/solutions/procurement"
+      ],
+      "template": "solution_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "problem",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "flow",
+          "source_layout": "workflow",
+          "render_pattern": "numbered_workflow",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "exception",
+          "source_layout": "example",
+          "render_pattern": "illustrative_case",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "output",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": true,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "solutions/receivables",
+      "slug": "solutions/receivables",
+      "routes": [
+        "/ar/solutions/receivables",
+        "/en/solutions/receivables"
+      ],
+      "template": "solution_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "problem",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "flow",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "example",
+          "source_layout": "example",
+          "render_pattern": "illustrative_case",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "acceptance",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "boundary",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": true,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "solutions/knowledge",
+      "slug": "solutions/knowledge",
+      "routes": [
+        "/ar/solutions/knowledge",
+        "/en/solutions/knowledge"
+      ],
+      "template": "solution_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "sources",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "retrieval",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "answer",
+          "source_layout": "example",
+          "render_pattern": "illustrative_case",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "maintenance",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "measure",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": true,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "solutions/customer-operations",
+      "slug": "solutions/customer-operations",
+      "routes": [
+        "/ar/solutions/customer-operations",
+        "/en/solutions/customer-operations"
+      ],
+      "template": "solution_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "context",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "case",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "handoff",
+          "source_layout": "example",
+          "render_pattern": "illustrative_case",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "pilot",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": true,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "industries/commerce",
+      "slug": "industries/commerce",
+      "routes": [
+        "/ar/industries/commerce",
+        "/en/industries/commerce"
+      ],
+      "template": "sector_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "enquiry",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "operations",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "pilot",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "industries/professional-services",
+      "slug": "industries/professional-services",
+      "routes": [
+        "/ar/industries/professional-services",
+        "/en/industries/professional-services"
+      ],
+      "template": "sector_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "intake",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "handover",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "knowledge",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "acceptance",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "industries/logistics",
+      "slug": "industries/logistics",
+      "routes": [
+        "/ar/industries/logistics",
+        "/en/industries/logistics"
+      ],
+      "template": "sector_detail",
+      "hero": {
+        "asset": null,
+        "motion": "static_or_reduced_lattice"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "status",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "exceptions",
+          "source_layout": "example",
+          "render_pattern": "illustrative_case",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "boundaries",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "test",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "resources",
+      "slug": "resources",
+      "routes": [
+        "/ar/resources",
+        "/en/resources"
+      ],
+      "template": "guide_index",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "brief",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "acceptance",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "use",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "resources/first-workflow",
+      "slug": "resources/first-workflow",
+      "routes": [
+        "/ar/resources/first-workflow",
+        "/en/resources/first-workflow"
+      ],
+      "template": "guide_reading",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "candidates",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "fit",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "template",
+          "source_layout": "template",
+          "render_pattern": "copyable_brief_template",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "example",
+          "source_layout": "example",
+          "render_pattern": "illustrative_case",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "resources/acceptance-testing",
+      "slug": "resources/acceptance-testing",
+      "routes": [
+        "/ar/resources/acceptance-testing",
+        "/en/resources/acceptance-testing"
+      ],
+      "template": "guide_reading",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "cases",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "matrix",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "record",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "release",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "privacy",
+      "slug": "privacy",
+      "routes": [
+        "/ar/privacy",
+        "/en/privacy"
+      ],
+      "template": "legal_reading",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "brief",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "conversation",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "technical",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "providers",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "enterprise",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "terms",
+      "slug": "terms",
+      "routes": [
+        "/ar/terms",
+        "/en/terms"
+      ],
+      "template": "legal_reading",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "outputs",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "use",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "availability",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "project",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": null
+    },
+    {
+      "id": "start",
+      "slug": "start",
+      "routes": [
+        "/ar/start",
+        "/en/start"
+      ],
+      "template": "local_brief",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "local",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "example",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": "browser_memory_only_no_post"
+    },
+    {
+      "id": "agentnexos",
+      "slug": "agentnexos",
+      "routes": [
+        "/ar/agentnexos",
+        "/en/agentnexos"
+      ],
+      "template": "workspace",
+      "hero": {
+        "asset": null,
+        "motion": "none"
+      },
+      "content_source": "../content/site_content.json",
+      "sections": [
+        {
+          "id": "can",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        },
+        {
+          "id": "boundary",
+          "source_layout": "editorial",
+          "render_pattern": "editorial_heading_and_full_paragraphs",
+          "retain_all_paragraphs": true,
+          "retain_all_items": true,
+          "retain_all_links": true
+        }
+      ],
+      "requires_sample_output": false,
+      "requires_faq": false,
+      "interactive_contract": "existing_live_runtime_only"
+    }
+  ],
+  "redirects": {
+    "platform": "services",
+    "security": "governance"
+  },
+  "total_routes": 42,
+  "sections_per_locale": 88
+}

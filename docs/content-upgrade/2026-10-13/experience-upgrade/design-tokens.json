@@ -1,0 +1,67 @@
+{
+  "status": "proposed_for_upgrade",
+  "baseline_commit": "49f4627ec934bba066294cb0740ad6ea0f21a80a",
+  "preserved": {
+    "canvas": "#050505",
+    "text": "#ebebeb",
+    "emerald": "#10b981",
+    "fonts": {
+      "body_en": "Inter",
+      "display_en": "Newsreader",
+      "body_ar": "Noto Sans Arabic",
+      "display_ar": "Noto Naskh Arabic",
+      "technical": "Space Grotesk"
+    }
+  },
+  "semantic": {
+    "surface": "#0b100e",
+    "secondary_text": "#a5b2ac",
+    "control_border": "#66796d",
+    "decorative_border": "#30473a",
+    "action_bg": "#10b981",
+    "action_text": "#050505",
+    "error_text": "#fca5a5",
+    "error_surface": "#1e1111",
+    "focus": "#10b981"
+  },
+  "geometry": {
+    "container_max": 1248,
+    "gutter_desktop": 40,
+    "gutter_mobile": 20,
+    "touch_target_min": 44,
+    "spacing": [
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64,
+      80
+    ],
+    "radii": [
+      8,
+      12,
+      16,
+      20
+    ]
+  },
+  "motion": {
+    "hover_ms": 180,
+    "lift_px": 3,
+    "video_autoplay": false,
+    "video_audio": false,
+    "video_loop": false,
+    "lattice_nodes": 16,
+    "lattice_edges": 32,
+    "lattice_mobile": "static",
+    "reduced_motion": "static",
+    "offscreen": "paused"
+  },
+  "budgets": {
+    "hero_image_bytes": 180000,
+    "other_image_bytes": 160000,
+    "video_bytes": 1200000,
+    "source": "design_targets_not_measured_web_vitals"
+  }
+}
