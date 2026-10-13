@@ -3,7 +3,7 @@ export const cyberHome = {
   ar: {
     eyebrow: "أنظمة وكلاء للمؤسسات · العربية أولًا",
     headline: "أنظمة وكلاء.", emphasis: "على مقاس عملك.",
-    intro: "نصمّم أنظمة وكلاء حول عمليات فريقك، من مراجعة طلبات الشراء إلى متابعة العملاء. نحدد البيانات التي يحتاجها كل طلب، ونرتب خطوات معالجته، ونضع المراجعة البشرية عند القرار. ابدأ هنا بتصميم أول مسار عمل.",
+    intro: "عندما تتوزع تفاصيل الطلب بين الرسائل والجداول، يتأخر صاحب القرار. نبدأ بعملية متكررة من واقع فريقك، ونحدد مصادرها ونقاط المراجعة فيها، ثم نصمم نظام وكلاء يناسب خطواتها. جرّب التخطيط بمعلومات افتراضية قبل أي ربط.",
     primary: "صمّم أول مسار عمل", secondary: "جهّز موجز مشروعك", note: "تجربة تخطيط ببيانات افتراضية · بلا تنفيذ على أنظمتك",
     region: "للفرق في مصر والخليج والشرق الأوسط", scroll: "اكتشف ما يمكنك بناؤه",
     illustration: "مسار توضيحي · مراجعة مشتريات", request: "طلب جديد من فريق العمليات", requestDetail: "توريد أجهزة للفريق · مثال افتراضي", requestLabel: "المدخلات", check: "اجمع ما ينقص الطلب", checkDetail: "المواصفات، عرض المورد، وحد الاعتماد", checkLabel: "التحقق", review: "قرار المسؤول قبل الشراء", reviewDetail: "ملف منظم وملاحظات للمراجعة", reviewLabel: "المخرج", human: "نقطة قرار بشري", draft: "تصميم مسار، وليس تشغيلًا حيًا",
@@ -46,7 +46,7 @@ export const cyberHome = {
   en: {
     eyebrow: "ENTERPRISE AGENT SYSTEMS / ARABIC FIRST",
     headline: "Agent systems.", emphasis: "Built for your work.",
-    intro: "We design custom agent systems around your team’s processes, from purchase reviews to customer follow-up. Define the information each request needs, organize the steps and keep people at decision points. Start here by designing your first workflow.",
+    intro: "When a request is split between inboxes and spreadsheets, the decision owner loses time finding the facts. Start with one recurring task. Map its sources and review points, then design an agent workflow around how your team actually works. Try it with fictional information first.",
     primary: "Design your first workflow", secondary: "Prepare your project brief", note: "Planning preview with fictional data · no actions on your systems",
     region: "For teams across Egypt, the Gulf and MENA", scroll: "Explore what you could build",
     illustration: "Illustrative workflow · purchase review", request: "A new operations request", requestDetail: "Equipment for the team · fictional example", requestLabel: "Input", check: "Bring the missing details together", checkDetail: "Specifications, supplier quote, approval threshold", checkLabel: "Check", review: "Owner review before purchase", reviewDetail: "An organized request with clear review notes", reviewLabel: "Output", human: "Human decision point", draft: "A workflow design, not a live run",
