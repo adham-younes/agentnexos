@@ -10,6 +10,7 @@ import { CyberEffects, Glass as Spotlight } from "@/components/cyber/effects";
 import { WorkflowConsole } from "@/components/cyber/console";
 import { Lightning } from "@/components/cyber/lightning";
 import { CyberFooter } from "@/components/cyber/footer";
+import { FounderIntroduction } from "@/components/site/enterprise-experience";
 
 function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="cyber-eyebrow"><span aria-hidden="true" />{children}</p>;
@@ -61,7 +62,7 @@ export function CyberHome() {
       <section id="solutions" className="cyber-section cyber-section-tinted">
         <div className="cyber-container"><div className="cyber-section-heading" data-reveal><div><Eyebrow>{c.casesLabel}</Eyebrow><h2>{c.casesTitle}</h2></div><p>{c.casesIntro}</p></div>
           <div role="tablist" aria-label={c.casesTabs} className="cyber-tabs">{c.cases.map((item, i) => <button key={item.name} id={`case-tab-${i}`} type="button" role="tab" aria-selected={active === i} aria-controls="case-panel" tabIndex={active === i ? 0 : -1} onClick={() => setActive(i)} onKeyDown={event => selectTab(event, i)}>{item.name}<ArrowUpRight className="size-3.5 rtl:-rotate-90" aria-hidden="true" /></button>)}</div>
-          <div id="case-panel" role="tabpanel" tabIndex={0} aria-labelledby={`case-tab-${active}`} className="cyber-case-panel"><div className="cyber-case-story"><span className="cyber-meta" dir="ltr">0{active + 1} / 03</span><h3>{selected.title}</h3><p>{selected.description}</p><Link href={`/${locale}/agentnexos`} className="cyber-text-link">{c.caseAction}<ArrowUpRight className="size-4 rtl:-rotate-90" aria-hidden="true" /></Link></div><ol className="cyber-case-steps">{[[c.inputs, selected.input], [c.decision, selected.decision], [c.output, selected.output]].map(([label, text], i) => <li key={label}><span className="cyber-case-node" aria-hidden="true">{i === 2 ? <Check className="size-3" /> : <span />}</span><div><h4>{label}</h4><p>{text}</p></div></li>)}</ol></div>
+          <div id="case-panel" role="tabpanel" tabIndex={0} aria-labelledby={`case-tab-${active}`} className="cyber-case-panel"><div className="cyber-case-story"><span className="cyber-meta" dir="ltr">0{active + 1} / 03</span><h3>{selected.title}</h3><p>{selected.description}</p><Link href={`/${locale}/agentnexos?case=${["procurement","finance","knowledge"][active]}`} className="cyber-text-link">{c.caseAction}<ArrowUpRight className="size-4 rtl:-rotate-90" aria-hidden="true" /></Link></div><ol className="cyber-case-steps">{[[c.inputs, selected.input], [c.decision, selected.decision], [c.output, selected.output]].map(([label, text], i) => <li key={label}><span className="cyber-case-node" aria-hidden="true">{i === 2 ? <Check className="size-3" /> : <span />}</span><div><h4>{label}</h4><p>{text}</p></div></li>)}</ol></div>
           <p className="cyber-section-note">{c.caseNotice}</p>
         </div>
       </section>
@@ -72,6 +73,7 @@ export function CyberHome() {
 
       <section id="security" className="cyber-section cyber-container"><Spotlight className="cyber-security"><div><Eyebrow>{c.securityLabel}</Eyebrow><h2>{c.securityTitle}</h2><p>{c.securityIntro}</p><Link href={`/${locale}/security`} className="cyber-text-link">{c.securityAction}<ArrowUpRight className="size-4 rtl:-rotate-90" aria-hidden="true" /></Link></div><ul>{c.securityItems.map(text => <li key={text}><ShieldCheck className="size-5 shrink-0" aria-hidden="true" />{text}</li>)}</ul></Spotlight></section>
 
+      <div className="cyber-container"><FounderIntroduction locale={locale}/></div>
       <section id="questions" className="cyber-section cyber-container cyber-faq"><div><Eyebrow>{c.faqLabel}</Eyebrow><h2>{c.faqTitle}</h2></div><div>{c.faqs.map(([question, answer]) => <details key={question}><summary>{question}<ChevronDown className="size-4 shrink-0" aria-hidden="true" /></summary><p>{answer}</p></details>)}</div></section>
 
       <section id="contact" className="cyber-section cyber-container cyber-final"><Eyebrow>{c.ctaLabel}</Eyebrow><h2 className="nexus-gradient">{c.ctaTitle}<br /><em>{c.ctaEmphasis}</em></h2><p>{c.ctaText}</p><div className="cyber-actions"><Action href={`/${locale}/agentnexos`}>{c.primary}</Action><Action secondary href={`/${locale}/start`}>{c.secondary}</Action></div></section>

@@ -60,5 +60,31 @@ export const productPages = {
    ["Design permissions into the workflow","Write down what the system reads, proposes, and needs approval for. Treat sending, editing, and deleting as distinct steps with accountable owners.","Begin with the minimum permission and define what stops a run.","A useful approval shows the action, parameters, and consequences."],
    ["Prepare for the day a service fails","A connection may fail after part of the work succeeds. Define how to find out what committed, who checks the result, and when to retry.","Preserve request identifiers and reconcile with the target system before repeating an action.","Write the recovery plan before operation and test it alongside acceptance cases."],
   ]}
+ },
+ founder: {
+  ar: {
+   eyebrow: "المؤسس | Adham Younes",
+   title: "الهندسة تبدأ بفهم واقع الفريق.",
+   intro: "أدهم يونس محمد أحمد. مهندس أنظمة وكلاء للمؤسسات ومطور برمجيات مستقل. أعمل على تحويل العمليات اليومية إلى مسارات واضحة: بيانات معروفة، أدوات بحدود محددة، ومخرجات يراجعها الإنسان قبل اتخاذ القرار.",
+   notice: "أعمل على مشاريع مستقلة وحلول مخصصة. أي تشغيل متصل ببيانات مؤسسة يحتاج نطاقًا متفقًا عليه وتفويضًا واختبارات قبول؛ العرض الحالي لا يثبت تنفيذًا مؤسسيًا.",
+   cards: [
+    ["من فهم العملية إلى تعريف النظام","أبدأ بوصف العمل كما يحدث، والأسئلة التي تتكرر، والمعلومات التي تضيع بين الأشخاص والأنظمة. بعدها تتضح وظيفة الوكيل وأي خطوة يجب أن تبقى عند المسؤول.","المخرج الأول: خريطة عملية ومخاطر وافتراضات مفتوحة."],
+    ["الهندسة فوق الإجابات المقنعة","أستخدم تطوير الويب والـ APIs وتصميم الوكلاء وRAG حسب الحاجة. أراجع المصدر والصلاحية وحدود التنفيذ، وأحدد كيفية التعامل مع المدخلات الناقصة وفشل الأنظمة.","يمكن مناقشة Next.js وPython وSupabase وVercel AI SDK وMastra داخل نطاق المشروع، دون افتراض أن كل تكامل جاهز."],
+    ["مشروعات مستقلة","Agentnexos تجربة عملية لبناء واجهات ومسارات تصميم الأنظمة الوكيلة. Adham AgriTech تجربة تطوير رقمية في الزراعة الذكية، تنطلق من فهم احتياجات المتابعة والتخطيط في العمليات الزراعية.","كل مشروع له نطاق تجريبي وحدود تشغيل واضحة."],
+    ["التواصل والعمل","أستهدف شراكات ومشروعات عن بُعد مع فرق مصر والخليج. يبدأ التعاون بعملية محددة ومصادر معلومة، ثم نضع معايير قبول واختبارًا مناسبًا قبل أي توسع.","البريد: adham@adham-agritech.com · الهاتف: +20 111 009 3730"]
+   ]
+  },
+  en: {
+   eyebrow: "Founder | Adham Younes",
+   title: "Engineering begins with the team's actual work.",
+   intro: "Adham Younes Mohamed Ahmed is an independent enterprise agent systems engineer and software developer. I work from operational reality to testable workflows, known data sources, bounded tools and reviewable decisions.",
+   notice: "Independent projects and scoped client work. Enterprise deployment requires agreed scope, authorization and acceptance tests. The public preview is not evidence of connected enterprise execution.",
+   cards: [
+    ["Map the work before picking the tools","I start with the actual request, recurring questions and information lost between people and systems. Then I define where an agent helps and which decisions remain with the owner.","First output: a process map, constraints and open assumptions."],
+    ["Engineering beyond a plausible answer","My work brings web development, APIs, agent orchestration and retrieval together where useful. Source ownership, execution permissions, missing data and failure recovery belong in the initial design.","Potential stack choices include Next.js, Python, Supabase, Vercel AI SDK and Mastra, selected for the actual project."],
+    ["Independent projects","Agentnexos explores interface and workflow design for enterprise agent systems. Adham AgriTech brings agricultural operations experience into digital planning and support workflows.","Each public demonstration has its own explicit operating boundaries."],
+    ["Work together","I focus on remote project delivery and technical collaborations with teams in Egypt and the Gulf. Engagement starts with one process, defined data sources and acceptance criteria.","Email: adham@adham-agritech.com · phone: +20 111 009 3730"]
+   ]
+  }
  }
 } as const;

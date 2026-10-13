@@ -135,7 +135,7 @@ export const publicPages = {
       "intro": "يوضح هذا الإشعار نطاق التجربة الحالية. ستُنشر تفاصيل معالجة البيانات الخاصة بالتشغيل المؤسسي قبل إتاحته.",
       "notice": "لا تدخل مستندات حقيقية أو بيانات شخصية أو مفاتيح وصول في المثال.",
       "cards": [
-        ["موجز المشروع المحلي", "إجابات نموذج موجز المشروع تبقى في ذاكرة صفحة المتصفح. لا ترسل إلى خادم أو فريق؛ يمكنك تنزيل ملف ومراجعته قبل مشاركته. إغلاق الصفحة أو مسحها يزيل حالتها المحلية."],
+        ["موجز المشروع المحلي", "إجابات الموجز محفوظة مؤقتًا في تخزين تبويب المتصفح حتى تتمكن من تبديل اللغة دون فقدانها. لا تُرسل إلى خادم أو فريق؛ يمكن تنزيلها ومشاركتها باختيارك. مسح النموذج أو إغلاق التبويب ينهي هذه الحالة المحلية."],
         [
           "المثال الحالي",
           "عند تشغيل الاتصال الحي، يرسل طلبك وسياق المحادثة إلى خادم Vercel ثم نماذج Groq للتحليل والتخطيط والمراجعة. استخدم بيانات افتراضية فقط. المحادثة في ذاكرة التبويب ولا تحفظ في قاعدة بيانات التطبيق."
@@ -155,7 +155,7 @@ export const publicPages = {
         ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لعنوان الاتصال ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز وقرارات سياسة الأدوات وتوقيت مراحل الطلب، دون نص الطلب أو الرد أو محتوى المراجع. يستخدم ذلك لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
         [
           "حدود هذا الإشعار",
-          "هذا وصف للحالة الحالية وليس بديلًا عن اتفاق معالجة بيانات خاص بمشروع مؤسسي. قناة طلبات الخصوصية وبيانات الجهة المسؤولة تحتاج اعتماد المالك قبل استقبال بيانات العملاء."
+          "هذا وصف للحالة الحالية وليس بديلًا عن اتفاق معالجة بيانات خاص بمشروع مؤسسي. يمكن إرسال استفسارات الخصوصية إلى adham@adham-agritech.com؛ تفاصيل الجهة المسؤولة واتفاقات معالجة بيانات المؤسسات تخضع لمراجعة خاصة قبل استقبال بيانات عملاء حقيقية."
         ]
       ]
     },
@@ -165,7 +165,7 @@ export const publicPages = {
       "intro": "This notice describes the current example. Enterprise data-processing details must be published before enterprise access is enabled.",
       "notice": "Do not enter real documents, personal data, or credentials into the example.",
       "cards": [
-        ["Local project brief", "Project brief answers stay in the browser page memory. They are not sent to a server or team; you may download and review a file before sharing. Closing or clearing the page removes local state."],
+        ["Local project brief", "Brief answers are temporarily kept in this browser tab so you can switch languages without losing them. They are not sent to a server or team. Download and share only when you choose; clearing the form or closing the tab removes this local session state."],
         [
           "Current example",
           "When the live connection is enabled, your request and conversation context go to the Vercel server and then Groq models for analysis, planning, and review. Use fictional data only. Conversation state lives in the browser tab and is not stored in the application's database."
@@ -185,7 +185,7 @@ export const publicPages = {
         ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the connection address, request time and status, model roles, token usage, tool-policy decisions, and stage timing—not prompt or response text or reference content—to prevent abuse. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
         [
           "Scope of this notice",
-          "This describes the current state and does not replace a project-specific data-processing agreement. Privacy contacts and controller details require owner approval before accepting customer data."
+          "This describes the current state and does not replace a project-specific data-processing agreement. Privacy enquiries may be sent to adham@adham-agritech.com; formal controller details and enterprise processing terms require project-specific review before accepting real customer data."
         ]
       ]
     }
