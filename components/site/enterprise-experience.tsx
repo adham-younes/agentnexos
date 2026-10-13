@@ -12,9 +12,10 @@ export function SectorExplorer({ locale, compact = false }: { locale: Locale; co
  const selected = c.cases[active];
  function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
   const key = event.key;
+  // This tab list is vertical in both RTL and LTR, so follow its visual axis.
   const next = key === "Home" ? 0 : key === "End" ? c.cases.length - 1 :
-   key === "ArrowRight" ? (index + (locale === "ar" ? -1 : 1) + c.cases.length) % c.cases.length :
-   key === "ArrowLeft" ? (index + (locale === "ar" ? 1 : -1) + c.cases.length) % c.cases.length : null;
+   key === "ArrowDown" ? (index + 1) % c.cases.length :
+   key === "ArrowUp" ? (index - 1 + c.cases.length) % c.cases.length : null;
   if(next === null) return;event.preventDefault();setActive(next);
   document.getElementById(`sector-tab-${compact ? "home" : "page"}-${next}`)?.focus();
  }
