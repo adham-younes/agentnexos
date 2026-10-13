@@ -4,6 +4,7 @@ import Link from "next/link";
 import {ArrowUpRight,ArrowDownRight,BookOpenCheck,CheckCircle2,FileWarning,GitBranch,ShieldCheck} from "lucide-react";
 import type {Locale} from "@/lib/i18n/config";
 import {industryDossiers} from "@/lib/content/industry-dossiers";
+import {IndustryVisual} from "./industry-visual";
 export function IndustryTheatre({locale}:{locale:Locale}){
  const ar=locale==="ar";const list=industryDossiers[locale];const [selected,setSelected]=useState(0);const item=list[selected];
  function keys(e:KeyboardEvent<HTMLButtonElement>,i:number){const next=e.key==="Home"?0:e.key==="End"?list.length-1:e.key==="ArrowLeft"?(i+(ar?1:list.length-1))%list.length:e.key==="ArrowRight"?(i+(ar?list.length-1:1))%list.length:-1;if(next<0)return;e.preventDefault();setSelected(next);document.getElementById("atlas-tab-"+next)?.focus();}
@@ -19,6 +20,7 @@ export function IndustryTheatre({locale}:{locale:Locale}){
     <div className="atelier-atlas-top"><span className="atelier-label">{item.sector}</span><span className="atelier-atlas-disclosure">{ar?"تصور قابل للدراسة · غير منفذ":"Design study · not deployed"}</span></div>
     <h3>{item.headline}</h3>
     <p className="atelier-atlas-situation">{item.situation}</p>
+    <IndustryVisual locale={locale} slug={item.slug}/>
     <aside className="atelier-atlas-risk"><FileWarning size={20}/><div><strong>{ar?"ماذا قد يفشل؟":"What might fail?"}</strong><p>{item.failure}</p></div></aside>
     <div className="atelier-atlas-two">
      <div><h4>{ar?"الأدلة التي يحتاجها النظام":"Evidence the system needs"}</h4><ul className="atelier-evidence-list">{item.signals.map(s=><li key={s}><CheckCircle2 size={16}/>{s}</li>)}</ul></div>

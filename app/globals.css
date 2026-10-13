@@ -2,6 +2,9 @@
 @import 'tw-animate-css';
 @import './enterprise.css';
 @import './atelier.css';
+@import './economics.css';
+@import './industry-visual.css';
+@import './market.css';
 @source "../node_modules/streamdown/dist/*.js";
 
 /* Keep Arabic glyph joining and script-specific typography across all screens. */

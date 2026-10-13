@@ -8,6 +8,7 @@ import { CyberFooter } from "@/components/cyber/footer";
 import { FounderIdentity, SectorExplorer, SystemBlueprint } from "./enterprise-experience";
 import { IndustryTheatre } from "./industry-theatre";
 import { LearningStudio } from "./learning-studio";
+import { MarketNotebook } from "./market-notebook";
 
 const icons = [Workflow, Database, ShieldCheck, GitBranch, FileCheck2, Check];
 
@@ -47,7 +48,7 @@ export function PublicPage({page,locale}:{page:PublicPageKey;locale:Locale}) {
    {solutions&&<div className="nexus-wrap"><SectorExplorer locale={locale}/></div>}
    {platform&&<div className="nexus-wrap"><SystemBlueprint locale={locale}/></div>}
    {page==="industries"&&<div className="nexus-wrap"><IndustryTheatre locale={locale}/></div>}
-   {page==="resources"&&<div className="nexus-wrap"><LearningStudio locale={locale}/></div>}
+   {page==="resources"&&<div className="nexus-wrap"><LearningStudio locale={locale}/><MarketNotebook locale={locale}/></div>}
    {!solutions&&<section className="nexus-wrap nexus-public-content">
     <div className="nexus-section-marker" data-reveal><span dir="ltr">{legal?"DOCUMENT / 2026":founder?"ENGINEERING / PERSONAL":"FIELD GUIDE / AGENTNEXOS"}</span>
     <p>{legal?(ar?"تفاصيل استخدام الخدمة وحدودها.":"Usage and operating details."):(ar?"التفاصيل التي يحتاجها فريقك قبل اتخاذ القرار.":"Details your team needs before making a decision.")}</p></div>

@@ -1,53 +1,74 @@
 "use client";
 import {useMemo,useState} from "react";
 import Link from "next/link";
-import {ArrowUpRight,Calculator,Info,Minus,Plus,ShieldCheck,TrendingUp} from "lucide-react";
+import {ArrowUpRight,Copy,Info,ShieldCheck} from "lucide-react";
 import type {Locale} from "@/lib/i18n/config";
-export type ValueInput={cases:number,eligible:number,manual:number,assisted:number,review:number,cost:number,operation:number};
-export const demonstration:ValueInput={cases:600,eligible:60,manual:18,assisted:9,review:3,cost:8,operation:150};
-export function evaluateValue(v:ValueInput) {
- const each=Object.values(v);if(each.some(x=>!Number.isFinite(x)||x<0)||v.eligible>100||v.cases>10000000||v.manual>100000||v.assisted>100000||v.review>100000)return null;
- const eligibleCases=v.cases*v.eligible/100;
- const minutesPerCase=v.manual-v.assisted-v.review;
- const hours=(eligibleCases*minutesPerCase)/60;
- const gross=hours*v.cost;
- const net=gross-v.operation;
- const baselineHours=v.cases*v.manual/60;
- return {eligibleCases,minutesPerCase,hours,gross,net,baselineHours,netPerYear:net*12};
-}
-function money(v:number,currency:string,locale:Locale) {return new Intl.NumberFormat(locale==="ar"?"ar-EG":"en-US",{maximumFractionDigits:0,style:"currency",currency}).format(v)}
+import {demonstration,evaluateValue,withScenario,type ValueInput,type Scenario} from "@/lib/value-economics";
+export {demonstration,evaluateValue} from "@/lib/value-economics";
+export type {ValueInput} from "@/lib/value-economics";
+type Field={key:keyof ValueInput;ar:string;en:string;step:number;max:number;unit?:string};
+const groups:{ar:string;en:string;fields:Field[]}[]=[
+ {ar:"01 / حجم العملية الحالية",en:"01 / Current workload",fields:[
+ {key:"cases",ar:"المعاملات شهريًا",en:"Cases per month",step:50,max:10000000},
+ {key:"manual",ar:"دقائق المعالجة اليدوية",en:"Manual minutes per case",step:1,max:100000},
+ {key:"cost",ar:"تكلفة ساعة العمل المحمّلة",en:"Loaded hourly cost",step:1,max:1000000}]},
+ {ar:"02 / كفاءة المساعد والمراجعة",en:"02 / Agent and review performance",fields:[
+ {key:"eligible",ar:"الحالات المؤهلة %",en:"Cases eligible %",step:1,max:100},
+ {key:"success",ar:"نجاح الحالات المؤهلة %",en:"Successful cases %",step:1,max:100},
+ {key:"reviewShare",ar:"حالات تتطلب مراجعة %",en:"Cases requiring review %",step:1,max:100},
+ {key:"reviewMinutes",ar:"دقائق المراجعة البشرية",en:"Human review minutes",step:1,max:100000},
+ {key:"failureShare",ar:"نسبة حالات التصحيح %",en:"Recovery cases %",step:1,max:100},
+ {key:"recoveryMinutes",ar:"دقائق تصحيح الحالة",en:"Recovery minutes",step:1,max:100000}]},
+ {ar:"03 / التشغيل والاستثمار",en:"03 / Operating and project cost",fields:[
+ {key:"perCaseAi",ar:"تكلفة AI لكل حالة مؤهلة",en:"AI cost per eligible case",step:.05,max:1000000},
+ {key:"operation",ar:"تكاليف التشغيل الشهرية الثابتة",en:"Monthly fixed operations",step:100,max:1000000000},
+ {key:"setup",ar:"تكلفة التأسيس لمرة واحدة",en:"One-off implementation cost",step:500,max:10000000000},
+ {key:"realizable",ar:"نسبة قيمة الوقت القابلة للتحقق نقديًا %",en:"Labor value financially realizable %",step:5,max:100}
+ ]}
+];
+const sampleLabels:Record<Scenario,[string,string]>={conservative:["محافظ","Conservative"],base:["أساسي","Base"],optimistic:["متفائل","Optimistic"]};
+const currencyLabels=["USD","EGP","SAR","AED"];
+function monetary(n:number,currency:string,locale:Locale){return new Intl.NumberFormat(locale==="ar"?"ar-EG":"en-US",{style:"currency",currency,maximumFractionDigits:0}).format(n)}
+function decimal(n:number){return new Intl.NumberFormat("en-US",{maximumFractionDigits:1}).format(n)}
 export function ValueLab({locale}:{locale:Locale}){
- const ar=locale==="ar";const [state,setState]=useState(demonstration);const [currency,setCurrency]=useState("USD");const [modified,setModified]=useState(false);
- const calculation=useMemo(()=>evaluateValue(state),[state]);
- const fields:{key:keyof ValueInput;ar:string;en:string;step:number;max:number}[]=[
- {key:"cases",ar:"عدد الحالات شهريًا",en:"Cases per month",step:50,max:1000000},
- {key:"eligible",ar:"نسبة الحالات المؤهلة للتجربة %",en:"Pilot-eligible share %",step:5,max:100},
- {key:"manual",ar:"دقائق المعالجة الحالية للحالة",en:"Current minutes per case",step:1,max:300},
- {key:"assisted",ar:"دقائق المعالجة المقترحة بعد المساعدة",en:"Assisted minutes per case (assumed)",step:1,max:300},
- {key:"review",ar:"دقائق المراجعة البشرية للحالة",en:"Human review minutes per case",step:1,max:300},
- {key:"cost",ar:"التكلفة المحمّلة لساعة العمل",en:"Fully loaded hourly cost",step:1,max:10000},
- {key:"operation",ar:"تكلفة التشغيل والمراجعة الإضافية شهريًا",en:"Monthly operating and additional costs",step:25,max:1000000}
- ];
- const change=(key:keyof ValueInput,v:number)=>{setModified(true);setState(x=>({...x,[key]:Number.isFinite(v)?v:0}))};
- return <section id="value-lab" className="atelier-value-lab" aria-labelledby="value-lab-title">
-  <div className="atelier-section-intro"><p className="atelier-label"><Calculator size={15}/>{ar?"مختبر الجدوى / تجربة تفاعلية":"VALUE LAB / INTERACTIVE MODEL"}</p><h2 id="value-lab-title">{ar?"قبل ما تقول «هنوفّر»، احسب الشغل اللي بيتعمل فعلًا.":"Before promising savings, account for the work."}</h2>
-  <p>{ar?"أدخل حجم العمل وزمنه وتكلفة التشغيل والمراجعة البشرية. سترى سيناريو جدوى أوليًا، لا وعدًا بالتوفير.":"Enter case volume, handling time, human review and running costs. Explore a modeled business case, not a savings promise."}</p></div>
-  <div className="atelier-lab-grid"><div className="atelier-lab-inputs">
-   <div className="atelier-lab-title"><strong>{ar?"افتراضات قابلة للتغيير":"Editable assumptions"}</strong><button type="button" onClick={()=>{setState(demonstration);setCurrency("USD");setModified(false)}}>{ar?"إعادة المثال":"Reset example"}</button></div>
-   <p className="atelier-lab-disclosure"><Info size={16}/>{ar?"القيم الابتدائية افتراضية للتوضيح. غيّرها ببيانات مؤسستك؛ لا نستخدمها كتوقع أو تعهد.":"Starting values are fictional, not a forecast. Replace them with your own baseline."}</p>
-   <div className="atelier-input-grid">{fields.map(f=><label key={f.key}><span>{ar?f.ar:f.en}</span><input type="number" inputMode="decimal" min="0" max={f.max} step={f.step} value={state[f.key]} onChange={e=>change(f.key,e.target.valueAsNumber)} /></label>)}</div>
-   <div className="atelier-currency"><label htmlFor="atelier-currency">{ar?"عملة التكلفة":"Cost currency"}</label><select id="atelier-currency" value={currency} onChange={e=>setCurrency(e.target.value)}><option value="USD">USD</option><option value="EGP">EGP</option><option value="SAR">SAR</option><option value="AED">AED</option></select></div>
-   <p className="atelier-lab-disclosure"><ShieldCheck size={16}/>{ar?"لا يتم إرسال الأرقام لأي خادم. الحساب يعمل في المتصفح، ولا يتضمن تكاليف أخطاء الجودة أو مخاطر البيانات ما لم تُقدّرها مؤسستك منفصلًا.":"No numbers are submitted to a server. This runs in your browser. Quality defects, compliance risk and other omitted costs need a separate assessment."}</p>
-  </div><div className="atelier-lab-outputs" aria-live="polite">
-   <div className="atelier-metric-primary"><span>{ar?"صافي قيمة الوقت الشهرية المحتملة":"Illustrative monthly net time value"}</span><strong dir="ltr">{calculation?money(calculation.net,currency,locale):"—"}</strong><p>{ar?"بعد خصم تكلفة التشغيل المحددة، واحتساب مراجعة بشرية ضمن زمن الحالة.":"After the entered operating cost and per-case human review time."}</p></div>
-   <div className="atelier-metric-pair"><div><span>{ar?"ساعات العمل المتغيرة شهريًا":"Monthly hours affected"}</span><strong dir="ltr">{calculation?calculation.hours.toLocaleString("en-US",{maximumFractionDigits:1}):"—"}</strong></div><div><span>{ar?"الحالات الداخلة في نطاق التجربة":"In-scope cases"}</span><strong dir="ltr">{calculation?calculation.eligibleCases.toLocaleString("en-US",{maximumFractionDigits:0}):"—"}</strong></div></div>
-   <div className="atelier-roi-waterfall" role="img" aria-label={ar?"مقارنة مكونات الحساب":"Breakdown of the model"}>
-    <div><span>{ar?"قيمة الوقت":"Time value"}</span><b>{calculation?money(calculation.gross,currency,locale):"—"}</b></div><div className="atelier-waterfall-bar"><span style={{width:calculation&&calculation.gross>0?"100%":"0%"}}/></div>
-    <div><span>{ar?"تكلفة التشغيل":"Operating cost"}</span><b>{money(state.operation,currency,locale)}</b></div><div className="atelier-waterfall-bar is-cost"><span style={{width:calculation&&calculation.gross>0?Math.min(100,state.operation/calculation.gross*100)+"%":"100%"}}/></div>
-    <div><span>{ar?"صافي حسابي، ليس عائدًا مضمونًا":"Modeled net, not guaranteed ROI"}</span><b>{calculation?money(calculation.net,currency,locale):"—"}</b></div>
+ const ar=locale==="ar";
+ const [state,setState]=useState<ValueInput>(demonstration),[scenario,setScenario]=useState<Scenario>("base"),[currency,setCurrency]=useState("USD"),[copied,setCopied]=useState(false);
+ const result=useMemo(()=>evaluateValue(state),[state]);
+ const selectScenario=(next:Scenario)=>{setScenario(next);setState(x=>withScenario(x,next));setCopied(false)};
+ const change=(key:keyof ValueInput,value:number)=>{setState(x=>({...x,[key]:Number.isFinite(value)?value:0}));setCopied(false)};
+ const reset=()=>{setState(demonstration);setScenario("base");setCurrency("USD");setCopied(false)};
+ const copy=()=>{const content=[ar?"مختبر جدوى Agentnexos":"Agentnexos economics lab",ar?"سيناريو افتراضي غير موثق":"Unverified illustration",...groups.flatMap(g=>g.fields.map(f=>`${ar?f.ar:f.en}: ${state[f.key]}`)),...(result?[`Baseline: ${result.manualBaseline} ${currency}`,`After: ${result.afterCost} ${currency}`,`Monthly net: ${result.net} ${currency}`,`Year-one net: ${result.netPerYear} ${currency}`]:[])].join("\n");void navigator.clipboard.writeText(content).then(()=>setCopied(true)).catch(()=>setCopied(false))};
+ return <section id="value-lab" className="atelier-value-lab economics-lab" aria-labelledby="value-lab-title">
+  <div className="atelier-section-intro"><h2 id="value-lab-title">{ar?"تكلفة العملية قبل الوكيل وبعده.":"The cost of work, before and after."}</h2>
+  <p>{ar?"احسب معاملات مؤسستك ومراجعتها وإعادة العمل والتكلفة التقنية. الافتراضات مثال قابل للتعديل، بما في ذلك سيناريو بخسارة مالية.":"Model your own workload, human review, rework and technical costs. Defaults are fictional, including scenarios where the numbers do not work."}</p></div>
+  <div className="economics-layout">
+   <div className="economics-inputs">
+    <div className="economics-bar"><h3>{ar?"افتراضات السيناريو":"Scenario assumptions"}</h3><button type="button" onClick={reset}>{ar?"إعادة المثال":"Reset illustration"}</button></div>
+    <div role="group" aria-label={ar?"اختيار السيناريو":"Choose scenario"} className="economics-modes">{(["conservative","base","optimistic"] as Scenario[]).map(s=><button key={s} aria-pressed={scenario===s} onClick={()=>selectScenario(s)} type="button">{sampleLabels[s][ar?0:1]}</button>)}</div>
+    <p className="economics-assumption"><Info size={16}/>{ar?"تغيّر السيناريوهات ثلاث فرضيات فقط: النجاح، والمراجعة، والتصحيح. باقي المدخلات كما هي. الأرقام ليست نتائج عملاء.":"Presets only change success, review and recovery assumptions. Other inputs remain yours. No client results are claimed."}</p>
+    {groups.map(group=><fieldset className="economics-fieldset" key={group.en}><legend>{ar?group.ar:group.en}</legend><div className="economics-fields">{group.fields.map(f=><label key={f.key}><span>{ar?f.ar:f.en}</span><input type="number" inputMode="decimal" min="0" max={f.max} step={f.step} value={state[f.key]} onChange={e=>change(f.key,e.target.valueAsNumber)}/></label>)}</div></fieldset>)}
+    <div className="economics-last-row"><label htmlFor="economics-currency">{ar?"عملة الإدخال والحساب":"Accounting currency"}<select id="economics-currency" value={currency} onChange={e=>setCurrency(e.target.value)}>{currencyLabels.map(x=><option key={x}>{x}</option>)}</select></label><span>{ar?"لا يوجد تحويل عملات. أدخل التكاليف بنفس العملة.":"No currency conversion. Enter all costs in the same currency."}</span></div>
+    <p className="economics-privacy"><ShieldCheck size={17}/>{ar?"الحساب محلي داخل المتصفح؛ لا تُرسل المدخلات للخادم. النتائج ليست توصية استثمارية أو توقعًا للعائد.":"Calculations stay in your browser; inputs are not submitted. Outputs are not an investment forecast."}</p>
    </div>
-   <p className="atelier-model-verdict">{calculation?(calculation.net>0?(ar?"الأرقام المفترضة تعطي فائضًا قبل تكلفة التنفيذ الأولية. تحتاج تجربة فعلية لإثبات الزمن والجودة.":"The assumptions produce a surplus before implementation cost. A real pilot must verify time and quality."):(ar?"وفق الأرقام المفترضة، لا توجد جدوى مالية شهرية مثبتة. عدّل النطاق أو اختبر أثر جودة العمل قبل الاستثمار.":"Under these assumptions, there is no positive modeled monthly net. Revisit scope and test quality impact before investing.")):(ar?"راجع القيم المدخلة؛ لا يمكن استخدام أرقام سالبة أو نسبة أكبر من 100%.":"Check the inputs: values must be nonnegative and the share no more than 100%.")}</p>
-   <Link href={`/${locale}/start`} className="atelier-underline-action">{ar?"وثّق افتراضات التجربة في موجز مشروع":"Document pilot assumptions in a project brief"}<ArrowUpRight size={18}/></Link>
-  </div></div>
+   <div className="economics-results" aria-live="polite">
+    <div className="economics-results-heading"><span>{ar?"نتيجة الحسابات":"Modeled result"}</span><span>{ar?"شهريًا، باستثناء التأسيس":"Monthly, excluding setup"}</span></div>
+    {result?<><div className="economics-main-value"><span>{ar?"فرق التشغيل الشهري":"Monthly operating difference"}</span><strong dir="ltr" className={result.net<0?"negative":""}>{monetary(result.net,currency,locale)}</strong><p>{result.net>0?(ar?"وفرة تشغيلية مفترضة، وليست مبلغًا نقديًا مضمونًا.":"Illustrative operating improvement, not guaranteed cash savings."):(ar?"التكلفة الحالية أقل من النموذج المقترح وفق هذه المدخلات.":"Under these inputs, the proposed model costs more than current operations.")}</p></div>
+    <div className="economics-comparison" role="figure" aria-label={ar?"مقارنة التكاليف":"Modeled cost comparison"}>
+     <div className="economics-two-values"><div><span>{ar?"التكلفة اليدوية الحالية":"Current manual cost"}</span><strong dir="ltr">{monetary(result.manualBaseline,currency,locale)}</strong></div><div><span>{ar?"التكلفة الشهرية بعد النظام":"Modeled monthly cost"}</span><strong dir="ltr">{monetary(result.afterCost,currency,locale)}</strong></div></div>
+     <div className="economics-bars"><div className="baseline" style={{width:result.manualBaseline>0?"100%":"0%"}}/><div className="assisted" style={{width:result.manualBaseline>0?Math.min(100,result.afterCost/result.manualBaseline*100)+"%":result.afterCost>0?"100%":"0%"}}/></div>
+    </div>
+    <div className="economics-key-figures"><div><span>{ar?"صافي السنة الأولى بعد التأسيس":"Year-one net after setup"}</span><strong dir="ltr" className={result.netPerYear<0?"negative":""}>{monetary(result.netPerYear,currency,locale)}</strong></div><div><span>{ar?"استرداد تكلفة التأسيس نظريًا":"Modeled payback"}</span><strong dir="ltr">{result.paybackMonths===null?(ar?"لا يتحقق":"None"):`${decimal(result.paybackMonths)} ${ar?"شهر":"months"}`}</strong></div><div><span>{ar?"حالات مكتملة دون إعادة تنفيذ يدوي":"Completed without manual rework"}</span><strong dir="ltr">{decimal(result.completedCases)} / {decimal(state.cases)}</strong></div><div><span>{ar?"الحالات المؤهلة للمساعد":"Eligible cases"}</span><strong dir="ltr">{decimal(result.eligibleCases)}</strong></div></div>
+    <div className="economics-breakdown"><h3>{ar?"ممّ تتكوّن التكلفة بعد التطبيق؟":"Where modeled costs go"}</h3>{[
+      {name:ar?"العمل اليدوي المتبقي والقيمة غير القابلة للتحقق":"Remaining labor and unrealized value",value:result.retainedLabor},
+      {name:ar?"المراجعات البشرية":"Human review",value:result.reviewCost},
+      {name:ar?"تصحيح الإخفاقات":"Failure recovery",value:result.recoveryCost},
+      {name:ar?"استدعاءات النموذج":"Model usage",value:result.aiCost},
+      {name:ar?"البنية التحتية والتشغيل":"Infrastructure and operations",value:result.operationCost}
+     ].map((item,i)=><div className="economics-cost-row" key={i}><span>{item.name}</span><div className="economics-cost-track"><i style={{width:result.afterCost>0?Math.min(100,item.value/result.afterCost*100)+"%":"0%"}}/></div><b dir="ltr">{monetary(item.value,currency,locale)}</b></div>)}</div>
+    <p className="economics-disclaimer">{ar?"تراجع الحاسبة تكاليف زمن العمل والتشغيل والتأسيس فقط. تحتاج المراقبة، والتراخيص، ومخاطر الأخطاء، وجودة القرار، والانتقال التشغيلي إلى تقدير منفصل. خفض وقت الموظف لا يساوي وفرًا نقديًا إلا إذا كان قابلًا للتحقق.":"This model simplifies the cost of labor, review, recovery, technology and setup. Governance, licenses, quality failures and change management require separate estimates. Released staff time does not automatically become cash savings."}</p>
+    </>:<p role="alert" className="economics-invalid">{ar?"راجع القيم: يمنع إدخال تكلفة سالبة أو نسبة أكبر من 100% أو أعداد غير صالحة.":"Check inputs: negative values, percentages over 100% and invalid numbers are not supported."}</p>}
+    <div className="economics-actions"><button disabled={!result} onClick={copy} type="button"><Copy size={16}/>{copied?(ar?"نُسخت الافتراضات":"Scenario copied"):(ar?"نسخ الافتراضات والنتائج":"Copy assumptions & results")}</button><Link href={`/${locale}/start`}>{ar?"أعد موجز مشروع تجريبي":"Prepare a pilot brief"}<ArrowUpRight size={17}/></Link></div>
+   </div>
+  </div>
  </section>;
 }
