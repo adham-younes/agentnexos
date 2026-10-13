@@ -16,6 +16,7 @@ try {
     try {
       const response = await page.goto(`${base.origin}/${locale}/${route}`, { waitUntil: "domcontentloaded" });
       await page.locator("main").waitFor();
+      if (route !== "agentnexos") await page.locator('[data-effects-ready="true"]').waitFor();
       await page.evaluate(() => document.fonts.ready);
       await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { scrollTo({ top: y, behavior: "instant" }); await new Promise(resolve => setTimeout(resolve, 60)); } scrollTo({ top: 0, behavior: "instant" }); });
       for (const image of await page.locator("img").all()) {
@@ -69,6 +70,7 @@ try {
     const page = await browser.newPage({ viewport: { width: 390, height: 667 }, reducedMotion: "reduce", acceptDownloads: true });
     try {
       await page.goto(`${base.origin}/${locale}`, { waitUntil: "domcontentloaded" });
+      await page.locator('[data-effects-ready="true"]').waitFor();
       await page.waitForFunction(() => document.querySelector("#top h1")?.textContent.trim());
       const toggle = page.locator("#mobile-menu-toggle"), menu = page.locator("#mobile-navigation");
       requireCheck(await menu.evaluate(element => element.inert), "Collapsed menu is not inert");

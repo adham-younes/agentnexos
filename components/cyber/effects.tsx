@@ -22,7 +22,7 @@ export function CyberEffects({ children, className = "" }: { children: ReactNode
       }, { threshold: .08 });
       items.forEach(item => observer!.observe(item));
     }
-    configure(); media.addEventListener("change", configure);
+    configure(); element.dataset.effectsReady = "true"; media.addEventListener("change", configure);
     return () => { observer?.disconnect(); media.removeEventListener("change", configure); };
   }, []);
   return <div ref={root} className={`nexus ${className}`}><div className="nexus-atmosphere" aria-hidden="true"><i /><i /></div>{children}</div>;
