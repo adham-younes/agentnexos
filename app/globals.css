@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import './enterprise.css';
+@import './atelier.css';
 @source "../node_modules/streamdown/dist/*.js";
 
 /* Keep Arabic glyph joining and script-specific typography across all screens. */

@@ -11,6 +11,8 @@ import { WorkflowConsole } from "@/components/cyber/console";
 import { Lightning } from "@/components/cyber/lightning";
 import { CyberFooter } from "@/components/cyber/footer";
 import { FounderIntroduction } from "@/components/site/enterprise-experience";
+import { LearningStudio } from "@/components/site/learning-studio";
+import { ValueLab } from "@/components/site/value-lab";
 
 function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="cyber-eyebrow"><span aria-hidden="true" />{children}</p>;
@@ -67,8 +69,10 @@ export function CyberHome() {
         </div>
       </section>
 
+      <div className="cyber-container"><LearningStudio locale={locale} mini /></div>
       <section id="how-it-works" className="cyber-section cyber-container"><div className="cyber-section-heading" data-reveal><div><Eyebrow>{c.processLabel}</Eyebrow><h2>{c.processTitle}</h2></div><p>{c.processIntro}</p></div><div className="cyber-process">{c.steps.map((step, i) => <article key={step.title} data-reveal><span className="cyber-process-index" dir="ltr">0{i + 1}<span aria-hidden="true" /></span><h3>{step.title}</h3><p>{step.text}</p><p className="cyber-deliverable">{step.deliverable}</p><Link className="cyber-text-link" href={`/${locale}/${step.href}`}>{step.action}<ArrowUpRight className="size-4 rtl:-rotate-90" aria-hidden="true" /></Link></article>)}</div></section>
 
+      <div className="cyber-container"><ValueLab locale={locale}/></div>
       <section id="availability" className="cyber-section cyber-container cyber-availability"><div className="cyber-section-heading" data-reveal><div><Eyebrow>{c.availabilityLabel}</Eyebrow><h2>{c.availabilityTitle}</h2></div><p>{c.availabilityIntro}</p></div><div className="cyber-table-wrap" role="region" aria-label={c.availabilityTitle} tabIndex={0}><table><caption className="sr-only">{c.availabilityTitle}</caption><thead><tr><th scope="col">{c.tableFeature}</th><th scope="col">{c.tableUse}</th><th scope="col">{c.tableStatus}</th></tr></thead><tbody>{c.availability.map(([name, description, status]) => <tr key={name}><th scope="row">{name}</th><td>{description}</td><td><span className={`cyber-availability-status ${status === "available" ? "is-available" : ""}`}>{status === "available" && <Check className="size-3.5 shrink-0" aria-hidden="true" />}{status === "available" ? c.available : status === "scoped" ? c.scoped : c.notEnabled}</span></td></tr>)}</tbody></table></div></section>
 
       <section id="security" className="cyber-section cyber-container"><Spotlight className="cyber-security"><div><Eyebrow>{c.securityLabel}</Eyebrow><h2>{c.securityTitle}</h2><p>{c.securityIntro}</p><Link href={`/${locale}/security`} className="cyber-text-link">{c.securityAction}<ArrowUpRight className="size-4 rtl:-rotate-90" aria-hidden="true" /></Link></div><ul>{c.securityItems.map(text => <li key={text}><ShieldCheck className="size-5 shrink-0" aria-hidden="true" />{text}</li>)}</ul></Spotlight></section>

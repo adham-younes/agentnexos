@@ -13,6 +13,7 @@ const navLinks = [
   { key: "nav.infra", name: "Industries", href: "/industries" },
   { key: "nav.security", name: "Security", href: "/security" },
   { key: "nav.agentSpace", name: "Design assistant", href: "/agentnexos" },
+  { key: "nav.value", name: "Value", href: "/impact" },
 ];
 
 export function Navigation() {
@@ -68,7 +69,7 @@ export function Navigation() {
   return (
     <header
       ref={headerRef}
-      className={`nexus-nav ${isScrolled ? "is-scrolled" : ""}`}
+      className={`nexus-nav ${isScrolled ? "is-scrolled" : ""} ${isMobileMenuOpen ? "is-menu-open" : ""}`}
     >
       <nav
         aria-label={t("nav.primary", "Primary navigation")}
@@ -94,7 +95,7 @@ export function Navigation() {
                 href={resolveHref(link.href)}
                 className={`text-[13px] xl:text-sm font-medium transition-colors duration-300 relative group ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}
               >
-                {t(link.key, link.name)}
+                {link.key === "nav.value" ? (locale === "ar" ? "الجدوى" : "Value") : t(link.key, link.name)}
                 <span className="absolute -bottom-1.5 start-0 w-0 h-px bg-[#10b981] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}

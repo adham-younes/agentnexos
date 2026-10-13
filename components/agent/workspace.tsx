@@ -12,13 +12,15 @@ import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
 import { casePrompt } from "@/lib/content/enterprise-story";
+import { dossier } from "@/lib/content/industry-dossiers";
+import { OfflineWorkshop } from "./offline-workshop";
 import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
 export function AgentWorkspace() {
   const locale = useLocale();
   const c = agentWorkspaceCopy[locale];
   const [input, setInput] = useState("");
-  useEffect(() => { const frame = requestAnimationFrame(() => { const selected = new URLSearchParams(window.location.search).get("case"); const draft = selected && casePrompt(locale,selected); if (draft) setInput(draft); }); return () => cancelAnimationFrame(frame); }, [locale]);
+  useEffect(() => { const frame = requestAnimationFrame(() => { const selected = new URLSearchParams(window.location.search).get("case"); const chosenIndustry = new URLSearchParams(window.location.search).get("industry"); const story = chosenIndustry && dossier(locale,chosenIndustry); const draft = selected && casePrompt(locale,selected); if (draft) setInput(draft); else if (story) setInput(locale === "ar" ? `اقترح تصميم مسار عمل افتراضي لقطاع ${story.sector}: ${story.opening} اذكر المدخلات المطلوبة، المسؤول عن القرار، ما يحدث عند نقص البيانات، ودليل نجاح يمكن اختباره. لا تنفذ أي إجراء خارجي.` : `Design a fictional workflow for ${story.sector}: ${story.opening} Specify required sources, decision ownership, missing-data handling and testable acceptance evidence. Perform no external action.`); }); return () => cancelAnimationFrame(frame); }, [locale]);
   const [ready, setReady] = useState<boolean | null>(null);
   const [phase, setPhase] = useState(-1);
   const [limitCode, setLimitCode] = useState<DemoLimitCode | null>(null);
@@ -98,6 +100,7 @@ export function AgentWorkspace() {
                 <h1 className="max-w-2xl text-3xl font-display leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
                 <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{c.intro}</p>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
+                {ready === false && <OfflineWorkshop locale={locale} seed={input}/>}
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
                 <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "Agentnexos"}</div>
                 <MessageContent className="w-full text-sm leading-8 group-[.is-user]:bg-secondary group-[.is-user]:text-foreground">

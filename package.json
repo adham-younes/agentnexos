@@ -9,12 +9,13 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "i18n:check": "node scripts/i18n-audit.mjs",
-    "test:agentnexos": "tsx --test tests/agentnexos.test.ts tests/agent-policy.test.ts tests/project-brief.test.ts tests/enterprise-story.test.ts",
+    "test:agentnexos": "tsx --test tests/agentnexos.test.ts tests/agent-policy.test.ts tests/project-brief.test.ts tests/enterprise-story.test.ts tests/atelier-product.test.ts",
     "test:rls": "node scripts/test-rls-isolation.mjs",
     "test:runtime": "node scripts/test-agent-runtime.mjs",
     "test:actions": "node scripts/test-phase-6-actions.mjs",
     "test:security": "node scripts/test-phase-7-evals.mjs",
-    "verify:site": "node scripts/verify-site.mjs"
+    "verify:site": "node scripts/verify-site.mjs",
+    "verify:atelier": "node scripts/verify-atelier-journeys.cjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.78",

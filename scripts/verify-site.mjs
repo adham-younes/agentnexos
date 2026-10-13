@@ -4,7 +4,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 const base = new URL(process.argv[2] || process.env.SITE_URL || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Use an HTTP(S) site URL without credentials");
 
-const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "founder", "start"];
+const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "founder", "impact", "start"];
 const report = { base: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAgentVerified: false };
 const requireCheck = (condition, message) => { if (!condition) throw Error(message); };
 const browser = await chromium.launch();
@@ -94,7 +94,7 @@ try {
       const tabs = page.getByRole("tab");
       await tabs.nth(0).focus(); await page.keyboard.press(locale === "ar" ? "ArrowLeft" : "ArrowRight");
       requireCheck(await tabs.nth(1).getAttribute("aria-selected") === "true" && await tabs.nth(1).evaluate(element => document.activeElement === element), "Workflow tab keyboard selection failed");
-      requireCheck(await page.getByRole("tabpanel").getAttribute("aria-labelledby") === "case-tab-1", "Workflow panel label is stale");
+      requireCheck(await page.locator("#case-panel").getAttribute("aria-labelledby") === "case-tab-1", "Workflow panel label is stale");
       await page.locator("#questions summary").first().focus(); await page.keyboard.press("Enter");
       requireCheck(await page.locator("#questions details").first().getAttribute("open") !== null, "FAQ keyboard activation failed");
       await toggle.click(); await toggle.click(); requireCheck(await toggle.getAttribute("aria-expanded") === "false", "Pointer close failed");
