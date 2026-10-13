@@ -106,3 +106,29 @@ test("untrusted design cannot add approval flags or unrecognized effects", () =>
   const input={goal:"Delete records",owner:"",sourceOfTruth:"",acceptanceCriteria:[],steps:[{title:"Delete",effect:"delete",decisionOwner:"",evidence:"",onFailure:""}]};
   assert.throws(()=>reviewDesignContract({...input,approved:true}));assert.throws(()=>reviewDesignContract({...input,steps:[{...input.steps[0],effect:"root_shell"}]}));
 });
+
+
+test("referential followups inherit the previous user task while new greetings remain cheap", () => {
+  for (const request of ["ولو البيانات ناقصة؟", "وماذا لو تعطل الاتصال؟", "What happens if it fails?", "Expand the exception path"]) assert.equal(classifyTask(request, "Design a procurement workflow"), "workflow");
+  for (const request of ["Thanks", "شكرًا", "طيب شكرا", "كيف حالك؟", "How are you?", "Hello", "مرحبا", "Tell me a joke"]) assert.equal(classifyTask(request, "Design a procurement workflow"), "conversation");
+  assert.equal(classifyTask("Read Supabase documentation", "Design a procurement workflow"), "technical");
+  assert.equal(classifyTask("What if it doubles?", "Calculate workload for 30 items"), "calculation");
+  assert.equal(classifyTask("صمّم مساعد معرفة للموظفين"), "workflow");
+  assert.equal(classifyTask("صمم مسار خدمة العملاء"), "workflow");
+});
+test("placeholder accountability cannot pass a deterministic design review", () => {
+ const result=reviewDesignContract({goal:"Review a request",owner:"TBD",sourceOfTruth:"غير محدد",acceptanceCriteria:["unknown"],steps:[{title:"Send",effect:"external_write",decisionOwner:"غير معروف",evidence:"...",onFailure:"n/a"}]});
+ assert.equal(result.status,"needs_details");assert.equal(result.gaps.length,6);assert.equal(result.executable,false);
+});
+test("missing required design tool fails before reviewer output",async()=>{
+ const analyst=model(),planner=model(),reviewer=model();let text="";
+ await assert.rejects(runAgentWorkflow({conversation:"Design a purchase workflow",locale:"en",signal:new AbortController().signal,models:{analyst,planner,reviewer},onPhase:()=>{},onText:s=>{text+=s;}}),/WORKFLOW_FAILED/);
+ assert.equal(reviewer.doStreamCalls.length,0);assert.equal(text,"");
+});
+test("tool receipts survive a bounded plan ending with a tool rather than text",async()=>{
+ let call=0;const planner=new MockLanguageModelV4({doGenerate:async()=>({content:[{type:"tool-call",toolCallId:`review-${++call}`,toolName:"review_workflow_design",input:JSON.stringify({goal:"Review invoices",owner:"",sourceOfTruth:"",acceptanceCriteria:[],steps:[{title:"Review",effect:"read",decisionOwner:"",evidence:"",onFailure:""}]})}],finishReason:{unified:"tool-calls",raw:undefined},usage,warnings:[]})});
+ const analyst=model(),reviewer=model();const events:RuntimeEvent[]=[];
+ await runAgentWorkflow({conversation:"user: Design an invoice workflow\nuser: What if a document is missing?",latestRequest:"What if a document is missing?",previousRequest:"Design an invoice workflow",locale:"en",signal:new AbortController().signal,models:{analyst,planner,reviewer},onPhase:()=>{},onText:()=>{},onEvent:event=>{events.push(event)}});
+ assert.equal(call,3);assert.equal(reviewer.doStreamCalls.length,1);assert.equal(events.filter(event=>event.kind==="tool_completed").length,3);
+ assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/SOURCE_REQUIRED/);assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/executable/);
+});

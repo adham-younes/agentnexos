@@ -12,7 +12,7 @@ const navLinks = [
   { key: "nav.process", name: "Process", href: "#how-it-works" },
   { key: "nav.infra", name: "Industries", href: "/industries" },
   { key: "nav.security", name: "Security", href: "/security" },
-  { key: "nav.agentSpace", name: "Agent Space", href: "/agentnexos" },
+  { key: "nav.agentSpace", name: "Design assistant", href: "/agentnexos" },
 ];
 
 export function Navigation() {
@@ -107,7 +107,7 @@ export function Navigation() {
               size="sm"
               className="nexus-nav-cta"
             >
-              <a href={`/${locale}/start`}>{t("nav.deployAgent", "Start a project")}</a>
+              <a href={`/${locale}/start`}>{t("nav.deployAgent", "Prepare a brief")}</a>
             </Button>
           </div>
 
@@ -192,7 +192,7 @@ export function Navigation() {
               <Button asChild
                 className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
               >
-                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{t("nav.deployAgent", "Start a project")}</a>
+                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{t("nav.deployAgent", "Prepare a brief")}</a>
               </Button>
             </div>
           </div>

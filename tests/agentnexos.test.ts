@@ -30,7 +30,9 @@ test("configured budgets reject invalid or inverted limits, and error counts com
   assert.equal(demoLimitCount({code:"DEMO_DAILY_LIMIT",retryAfterSeconds:30,limit:"<script>"}),null);
   for (const locale of ["ar","en"] as const) assert.equal(agentWorkspaceCopy[locale].limits.DEMO_DAILY_LIMIT.includes("5"),false);
 });
-function generateModel(text: string) { return new MockLanguageModelV4({ doGenerate: async () => ({ content: [{ type: "text", text }], finishReason: { unified: "stop", raw: undefined }, usage, warnings: [] }) }); }
+function generateModel(text: string) { return new MockLanguageModelV4({ doGenerate: async options => options.toolChoice?.type === "tool" ? ({
+  content: [{ type: "tool-call", toolCallId: "review-1", toolName: "review_workflow_design", input: JSON.stringify({ goal: "Review a purchase request", owner: "", sourceOfTruth: "", acceptanceCriteria: [], steps: [{ title: "Prepare a draft", effect: "draft", decisionOwner: "", evidence: "", onFailure: "" }] }) }], finishReason: { unified: "tool-calls", raw: undefined }, usage, warnings: [],
+}) : ({ content: [{ type: "text", text }], finishReason: { unified: "stop", raw: undefined }, usage, warnings: [] }) }); }
 function reviewerModel() { return new MockLanguageModelV4({ doStream: async () => ({ stream: simulateReadableStream({ chunks: [
   { type: "stream-start", warnings: [] }, { type: "text-start", id: "answer" }, { type: "text-delta", id: "answer", delta: "Reviewed " }, { type: "text-delta", id: "answer", delta: "plan" }, { type: "text-end", id: "answer" }, { type: "finish", finishReason: { unified: "stop", raw: undefined }, usage },
 ] }) }) }); }
@@ -40,8 +42,9 @@ test("three real SDK model boundaries execute in Mastra order (mock providers, n
   const phases: number[] = []; let streamed = "";
   const result = await runAgentWorkflow({ conversation: "user: Design a procurement workflow", locale: "ar", signal: new AbortController().signal, models: { analyst, planner, reviewer }, onPhase: i => phases.push(i), onText: s => {streamed += s;} });
   assert.deepEqual(phases, [0,1,2]); assert.equal(result.text, "Reviewed plan"); assert.equal(streamed, result.text);
-  assert.equal(analyst.doGenerateCalls.length,1); assert.equal(planner.doGenerateCalls.length,1); assert.equal(reviewer.doStreamCalls.length,1);
-  assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt), /Actual tool receipts/);
+  assert.equal(analyst.doGenerateCalls.length,1); assert.equal(planner.doGenerateCalls.length,2); assert.equal(reviewer.doStreamCalls.length,1);
+  assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt), /OWNER_REQUIRED/);
+  assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt), /needs_details/);
 });
 test("short greeting calls only the reviewer", async () => {
   const analyst=generateModel("unused"), planner=generateModel("unused"), reviewer=reviewerModel();

@@ -24,11 +24,23 @@ export function createToolGate(options: { tools: readonly DemoTool[]; signal?: A
     await options.onEvent?.({ kind: "tool_allowed", tool });
   };
 }
-export function classifyTask(request: string) {
-  if (/workflow|process|integration|procurement|invoice|approval|purchase|عملية|عمليه|مشتريات|فاتور|تكامل|سير عمل|إجراءات|اعتماد/i.test(request)) return "workflow" as const;
+function normalizeRequest(request: string) {
+  return request.normalize("NFKC").replace(/[\u064B-\u065F\u0670\u0640]/g, "").replace(/[إأآ]/g, "ا").replace(/ى/g, "ي");
+}
+function directTask(request: string) {
+  if (/workflow|process|integration|procurement|invoice|approval|purchase|customer support|knowledge assistant|عملية|عمليه|مشتريات|فاتور|تكامل|سير عمل|اجراءات|اعتماد|خدمة العملاء|خدمه العملاء|مساعد معرفة|مساعد معرفه|طلبات العملاء/i.test(request)) return "workflow" as const;
   if (/احسب|حساب|عبء|calculate|workload|minutes|دقيقة|دقائق/i.test(request)) return "calculation" as const;
   if (/documentation|technical|AI SDK|Mastra|Supabase|تقني|توثيق/i.test(request)) return "technical" as const;
   return "conversation" as const;
+}
+/** Only referential follow-ups inherit a previous USER request; greetings never do. */
+export function classifyTask(request: string, previousRequest?: string) {
+  const normalized = normalizeRequest(request);
+  const direct = directTask(normalized);
+  if (direct !== "conversation" || !previousRequest) return direct;
+  if (/^(?:(?:طيب|okay|ok)[ ،]*)?(?:شكرا|تمام|حاضر|thanks|thank you|hello|hi|مرحبا|اهلا|كيف حالك|how are you)[.!؟?\s،]*$/i.test(normalized.trim())) return "conversation";
+  const followup = /^(?:و?لو|وماذا|ماذا لو|ومين|ومن |كيف |طب |طيب |اكمل|كمل|عدّل|عدل|وضح|فصل|what if|what happens|and what|who |how |continue|expand|revise|update (?:it|that|the plan))/i.test(normalized.trim());
+  return followup ? directTask(normalizeRequest(previousRequest)) : direct;
 }
 export function discoverTools(task: ReturnType<typeof classifyTask>, request: string): DemoTool[] {
   if (task === "conversation") return [];
