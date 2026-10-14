@@ -4,7 +4,7 @@ const version=process.argv[3]||'unverified';
 const cases=(await readFile('docs/content-upgrade/2026-10-13/revision-2026-10-14/agent/evals.jsonl','utf8')).trim().split('\n').map(JSON.parse);
 const report={base:base.origin,version,startedAt:new Date().toISOString(),configuredModels:['qwen/qwen3.8-27b','openai/gpt-oss-120b'],modelEvidence:'IDs from deployed source configuration; provider model ID is not exposed by the public stream.',cases:[],notes:['No model or database secrets downloaded. Actual production API requests with fictional inputs.','Text-only hypothetical tool failure/injection cases are not live external write fault injection.','Customer cases require an authenticated customer runtime and are not executed against the public API.']};
 const message=(role,text)=>({role,parts:[{type:'text',text}]});
-let initialWorkflow=null;
+
 async function run(locale,messages){
  const started=Date.now();
  const response=await fetch(new URL('/api/agentnexos',base),{method:'POST',headers:{origin:base.origin,'content-type':'application/json'},body:JSON.stringify({locale,messages}),signal:AbortSignal.timeout(180000)});
@@ -16,10 +16,14 @@ await mkdir('output/agent-evals',{recursive:true});
 for(const entry of cases){
  if(entry.mode!=='public'){report.cases.push({...entry,executionStatus:'blocked',reason:'No authenticated customer agent/runtime or verified institutional tools yet.'});continue;}
  const messages=[message('user',entry.input)];
- if(entry.id==='public-followup-en'&&initialWorkflow){messages.unshift(message('user',initialWorkflow.input),message('assistant',initialWorkflow.answer));}
+ if(entry.id==='public-followup-en'){
+  const initialInput='Our review-only purchase process is: receive the request; check required fields and return missing information to the requester while keeping it pending; prepare a human review decision. No ordering, sending, SLA or escalation authority is supplied. Briefly restate this process without adding steps.';
+  const initial=await run('en',[message('user',initialInput)]);
+  report.followupSetup={input:initialInput,...initial};
+  if(initial.executionStatus==='completed')messages.unshift(message('user',initialInput),message('assistant',initial.answer));
+}
  let result;
  try{result=await run(entry.locale,messages);}catch(error){result={executionStatus:'failed',error:error.name,semanticVerdict:'not evaluated'};}
- if(entry.id==='public-review_scope-en'&&result.executionStatus==='completed')initialWorkflow={input:entry.input,answer:result.answer};
  report.cases.push({...entry,...result,actualConversationTurns:messages.length});
  await writeFile(`output/agent-evals/${version}.json`,JSON.stringify(report,null,2));
  console.log(`${entry.id}: ${result.executionStatus}`);

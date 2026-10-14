@@ -1,0 +1,68 @@
+{
+  "base": "https://compute-the-platform-to-build-6vgtj5d62-adhamlouxors-projects.vercel.app",
+  "checkedAt": "2026-10-14T12:55:32.255Z",
+  "cases": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "completePreview": true,
+      "clipboardExact": true,
+      "downloadExact": true,
+      "mailActivated": true,
+      "longAttachment": true,
+      "apiPosts": []
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "completePreview": true,
+      "clipboardExact": true,
+      "downloadExact": true,
+      "mailActivated": true,
+      "longAttachment": true,
+      "apiPosts": []
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "completePreview": true,
+      "clipboardExact": true,
+      "downloadExact": true,
+      "mailActivated": true,
+      "longAttachment": true,
+      "apiPosts": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "completePreview": true,
+      "clipboardExact": true,
+      "downloadExact": true,
+      "mailActivated": true,
+      "longAttachment": true,
+      "apiPosts": []
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "completePreview": true,
+      "clipboardExact": true,
+      "downloadExact": true,
+      "mailActivated": true,
+      "longAttachment": true,
+      "apiPosts": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "completePreview": true,
+      "clipboardExact": true,
+      "downloadExact": true,
+      "mailActivated": true,
+      "longAttachment": true,
+      "apiPosts": []
+    }
+  ],
+  "failures": [],
+  "emailTest": "Actual mailto anchor activation intercepted before opening an OS mail client; no message sent."
+}
