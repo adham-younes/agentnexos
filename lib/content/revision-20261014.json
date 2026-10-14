@@ -6,32 +6,32 @@
       "sections": [
         {
           "heading": "المعرفة التي يحتاجها فريقك لإنجاز العمل",
-          "body": "**استخرج المعلومات المهمة من البيانات غير المنظمة**\n\nنجهز المستندات والسياسات وبيانات العمل للاسترجاع، مع الاحتفاظ بمرجع كل معلومة وإصدارها وصلاحية الوصول إليها. يوفّر الاسترجاع المعزز بالتوليد سياقًا مرتبطًا بالسؤال، ويحوّل الاستخراج المستند إلى حقول يستطيع مسار العمل فحصها.\n\nعند تعارض السياسات أو تقادم السجل أو نقص البيانات، يظهر ما يحتاج مراجعة. لا يستبدل النظام المعلومة الغائبة بإجابة محتملة. [معرفة المؤسسة](/ar/solutions/knowledge)",
+          "body": "نجهز المستندات والسياسات وبيانات العمل للاسترجاع، مع الاحتفاظ بمرجع كل معلومة وإصدارها وصلاحية الوصول إليها. يوفّر الاسترجاع المعزز بالتوليد سياقًا مرتبطًا بالسؤال، ويحوّل الاستخراج المستند إلى حقول يستطيع مسار العمل فحصها.\n\nعند تعارض السياسات أو تقادم السجل أو نقص البيانات، يظهر ما يحتاج مراجعة. لا يستبدل النظام المعلومة الغائبة بإجابة محتملة. [معرفة المؤسسة](/ar/solutions/knowledge)",
           "id": "home-section-1"
         },
         {
           "heading": "اربط الوكيل بالأنظمة التي يعتمد عليها العمل",
-          "body": "**حوّل واجهات التطبيقات وخوادم MCP والخدمات الخارجية إلى أدوات قابلة لإعادة الاستخدام**\n\nالتكامل فعل محدد: قراءة حالة طلب، أو فحص سجل، أو تجهيز رد، أو تعديل حقل مصرح به. نحدد مدخلات الأداة، والسجلات التي تصل إليها، وكيفية التحقق من نتيجتها.\n\nيستخدم الوكيل الأدوات المتاحة ضمن صلاحيات جلسته. يتتبع مسار العمل الحالة والاستثناءات، وتنتظر التغييرات الحساسة قرار المسؤول. لا يتوسع التنفيذ المستقل قبل إثبات صلاحياته وحدوده بالاختبار.",
+          "body": "التكامل فعل محدد: قراءة حالة طلب، أو فحص سجل، أو تجهيز رد، أو تعديل حقل مصرح به. نحدد مدخلات الأداة، والسجلات التي تصل إليها، وكيفية التحقق من نتيجتها.\n\nيستخدم الوكيل الأدوات المتاحة ضمن صلاحيات جلسته. يتتبع مسار العمل الحالة والاستثناءات، وتنتظر التغييرات الحساسة قرار المسؤول. لا يتوسع التنفيذ المستقل قبل إثبات صلاحياته وحدوده بالاختبار.",
           "id": "home-section-2"
         },
         {
           "heading": "ابدأ بالعملية التي تريد تحسينها",
-          "body": "**حلول ذكاء اصطناعي مصممة لاحتياجات كل قطاع**\n\n**عمليات العملاء:** عالج رحلة الخدمة وتهيئة العميل والدعم من البداية إلى النهاية. نحدد رحلة الخدمة عبر السجلات والقنوات والفرق المسؤولة، وما يستطيع الوكيل معالجته، ومتى يجب تسليم الحالة لإنسان. مساعدات محادثة متعددة اللغات تفهم مقصد العميل وسياقه؛ وتُختبر اللغة وفهم الطلب وتسليم السياق على حالات العمل. [عمليات العملاء](/ar/solutions/customer-operations)\n\n**المشتريات والمستحقات:** نجمع الاحتياجات والعروض وحالات الفواتير والنزاعات في مخرجات قابلة للمراجعة. نفصل التوصية عن الاعتماد، والإجراء المعتمد عن أثره المثبت. [المشتريات](/ar/solutions/procurement) · [المستحقات](/ar/solutions/receivables)\n\n**العمليات الصناعية والقطاعية:** تحسين الأداء التشغيلي هدف يحتاج تعريفًا ومقياسًا؛ مثل تجهيز مراجعة صيانة أو معالجة استثناء في مستند. يحدد صاحب العملية النتيجة المطلوبة وحالات قبولها. [نطاقات القطاعات](/ar/industries)",
+          "body": "**عمليات العملاء:** عالج رحلة الخدمة وتهيئة العميل والدعم من البداية إلى النهاية. نحدد رحلة الخدمة عبر السجلات والقنوات والفرق المسؤولة، وما يستطيع الوكيل معالجته، ومتى يجب تسليم الحالة لإنسان. مساعدات محادثة متعددة اللغات تفهم مقصد العميل وسياقه؛ وتُختبر اللغة وفهم الطلب وتسليم السياق على حالات العمل. [عمليات العملاء](/ar/solutions/customer-operations)\n\n**المشتريات والمستحقات:** نجمع الاحتياجات والعروض وحالات الفواتير والنزاعات في مخرجات قابلة للمراجعة. نفصل التوصية عن الاعتماد، والإجراء المعتمد عن أثره المثبت. [المشتريات](/ar/solutions/procurement) · [المستحقات](/ar/solutions/receivables)\n\n**العمليات الصناعية والقطاعية:** تحسين الأداء التشغيلي هدف يحتاج تعريفًا ومقياسًا؛ مثل تجهيز مراجعة صيانة أو معالجة استثناء في مستند. يحدد صاحب العملية النتيجة المطلوبة وحالات قبولها. [نطاقات القطاعات](/ar/industries)",
           "id": "home-section-3"
         },
         {
           "heading": "القرار يظل عند صاحبه",
-          "body": "**دعم قرارات واضحة ومسؤولة داخل المؤسسة**\n\nيحتاج المسؤول إلى رؤية الإجراء المقترح ومدخلاته والأدلة التي يستند إليها. يرتبط الاعتماد بهذه النسخة تحديدًا؛ وتغير المدخلات يستدعي مراجعة جديدة، وغياب الصلاحية يبقي الإجراء معلقًا.\n\nيسجل النظام نتيجة الأداة ويفحص أثرها في النظام النهائي قبل إعلان النجاح. إذا انقطع الاتصال بعد كتابة، تظل النتيجة مجهولة حتى التحقق منها. الذكاء يرتّب. الإنسان يقرّر.",
+          "body": "يحتاج المسؤول إلى رؤية الإجراء المقترح ومدخلاته والأدلة التي يستند إليها. يرتبط الاعتماد بهذه النسخة تحديدًا؛ وتغير المدخلات يستدعي مراجعة جديدة، وغياب الصلاحية يبقي الإجراء معلقًا.\n\nيسجل النظام نتيجة الأداة ويفحص أثرها في النظام النهائي قبل إعلان النجاح. إذا انقطع الاتصال بعد كتابة، تظل النتيجة مجهولة حتى التحقق منها. الذكاء يرتّب. الإنسان يقرّر.",
           "id": "home-section-4"
         },
         {
           "heading": "مسار يستطيع فريقك تشغيله ومراجعته",
-          "body": "**نظّم سير العمل وقلّل خطواته اليدوية**\n\nنرسم الطلب والبيانات والقرار أولًا. ثم نبني مسارًا محدودًا بتكاملاته وحالات فشله، ونقيّمه مع أصحاب العملية. تحدد التجربة ما يمكن تشغيله وما يحتاج إصلاحًا قبل التوسع.\n\nيشمل التسليم المعمارية المتفق عليها وتعريفات سير العمل والموصلات واختبارات القبول وإرشادات التشغيل. تُحدد مسؤوليات الدعم والصيانة ضمن المشروع. [منهج التسليم](/ar/methodology)",
+          "body": "نرسم الطلب والبيانات والقرار أولًا. ثم نبني مسارًا محدودًا بتكاملاته وحالات فشله، ونقيّمه مع أصحاب العملية. تحدد التجربة ما يمكن تشغيله وما يحتاج إصلاحًا قبل التوسع.\n\nيشمل التسليم المعمارية المتفق عليها وتعريفات سير العمل والموصلات واختبارات القبول وإرشادات التشغيل. تُحدد مسؤوليات الدعم والصيانة ضمن المشروع. [منهج التسليم](/ar/methodology)",
           "id": "home-section-5"
         },
         {
           "heading": "استكشف التصميم قبل توصيل أنظمة مؤسستك",
-          "body": "**اربط أنظمتك وأتمت مهامك**\n\nيمكنك مناقشة عملية ببيانات افتراضية مع المساعد العام وتجهيز تصور لخطواتها. ويجمع موجز المشروع المحلي المتطلبات في ملف تراجعه وتشاركه بنفسك.\n\nهذه الأدوات العامة لا تمنح وصولًا إلى أنظمة الشركة. يحتاج تشغيل مساحة العميل هوية مثبتة واتصالات محددة النطاق وصلاحيات مختبرة. [مساعد التصميم](/ar/agentnexos) · [موجز المشروع](/ar/start)",
+          "body": "يمكنك مناقشة عملية ببيانات افتراضية مع المساعد العام وتجهيز تصور لخطواتها. ويجمع موجز المشروع المحلي المتطلبات في ملف تراجعه وتشاركه بنفسك.\n\nهذه الأدوات العامة لا تمنح وصولًا إلى أنظمة الشركة. يحتاج تشغيل مساحة العميل هوية مثبتة واتصالات محددة النطاق وصلاحيات مختبرة. [مساعد التصميم](/ar/agentnexos) · [موجز المشروع](/ar/start)",
           "id": "home-section-6"
         },
         {
@@ -54,7 +54,7 @@
       "sections": [
         {
           "heading": "طبقة المعرفة والسياق",
-          "body": "تبدأ المعرفة بجرد المصادر وأصحابها وإصداراتها. نحدد معنى المصطلحات والحقول، ونربط المستندات بالسجلات والكيانات التي تشير إليها. يساعد ذلك على تمييز سياسة سارية من نسخة قديمة، وعلى فهم العلاقة بين المورد والعقد والفاتورة والطلب.\n\nيمكن استخدام الاسترجاع النصي والدلالي للعثور على مادة مرتبطة بالمهمة. وعندما تحتاج الأسئلة تتبع علاقات بين كيانات أو مستندات، نقيّم تمثيلًا معرفيًا يدعم هذه العلاقات. يُصفّى الوصول قبل إدخال السياق إلى النموذج، وترافق المعلومة بيانات مصدرها.",
+          "body": "تبدأ المعرفة بجرد المصادر وأصحابها وإصداراتها. نحدد معنى المصطلحات والحقول، ونربط المستندات بالسجلات والكيانات التي تشير إليها. يساعد ذلك على تمييز سياسة سارية من نسخة قديمة، وعلى فهم العلاقة بين المورد والعقد والفاتورة والطلب.\n\nيمكن استخدام الاسترجاع النصي والدلالي للعثور على مادة مرتبطة بالمهمة. وعندما تحتاج الأسئلة تتبع علاقات بين كيانات أو مستندات، نقيّم تمثيلًا معرفيًا يدعم هذه العلاقات. يُصفّى الوصول قبل إدخال السياق إلى النموذج، وترافق المعلومة بيانات مصدرها.\n\n**يستخدم HUMAIN ONE وكلاء الذكاء الاصطناعي لربط أنظمتك وأتمتة مهامك وتشغيل أعمالك كلها من واجهة واحدة.**\n\n[مرجع من القطاع — ترجمة الاقتباس: HUMAIN](https://humain.ai/)",
           "id": "platform-section-1"
         },
         {
@@ -64,12 +64,12 @@
         },
         {
           "heading": "أدوات تتصل بأنظمة العمل",
-          "body": "**حوّل واجهات التطبيقات وخوادم MCP والخدمات الخارجية إلى أدوات قابلة لإعادة الاستخدام**\n\nتتيح الاتصالات عمليات محددة بمدخلات محققة ووصول واضح. تبقى صلاحيات القراءة وإعداد المسودة والكتابة منفصلة، ولا ينشئ الاعتماد صلاحية غير موجودة.\n\nنختبر انقطاع الاتصال والطلبات المكررة ودليل النتيجة في النظام النهائي قبل تفعيل الكتابة الحساسة. وعندما لا يُعرف الأثر الخارجي، ينتظر الإجراء التحقق والمصالحة.",
+          "body": "تتيح الاتصالات عمليات محددة بمدخلات محققة ووصول واضح. تبقى صلاحيات القراءة وإعداد المسودة والكتابة منفصلة، ولا ينشئ الاعتماد صلاحية غير موجودة.\n\nنختبر انقطاع الاتصال والطلبات المكررة ودليل النتيجة في النظام النهائي قبل تفعيل الكتابة الحساسة. وعندما لا يُعرف الأثر الخارجي، ينتظر الإجراء التحقق والمصالحة.",
           "id": "platform-section-3"
         },
         {
           "heading": "موافقة مرتبطة بما سيحدث",
-          "body": "تُعرض للمسؤول الخطوة المطلوبة، والسجلات المتأثرة، ومعطيات التنفيذ، والسبب الذي يستدعي الاعتماد. تُثبت الموافقة على هذه النسخة من الطلب. ويُعاد التقييم إذا تغيرت الحمولة أو انتهت صلاحية الاعتماد.\n\nقبل إعادة إجراء فشل اتصاله، يُفحص النظام النهائي لمعرفة إن كان الأثر قد حدث. ويُصمّم منع التكرار والتعافي ضمن عقد الأداة، خصوصًا عند الإرسال أو تعديل السجلات.",
+          "body": "تُعرض للمسؤول الخطوة المطلوبة، والسجلات المتأثرة، ومعطيات التنفيذ، والسبب الذي يستدعي الاعتماد. تُثبت الموافقة على هذه النسخة من الطلب. ويُعاد التقييم إذا تغيرت الحمولة أو انتهت صلاحية الاعتماد.\n\nقبل إعادة إجراء فشل اتصاله، يُفحص النظام النهائي لمعرفة إن كان الأثر قد حدث. ويُصمّم منع التكرار والتعافي ضمن عقد الأداة، خصوصًا عند الإرسال أو تعديل السجلات.\n\n**كل ما نقوم به يهدف إلى حماية المؤسسات وتعزيز الاقتصادات وتمكين اتخاذ قرارات واثقة في جميع أنحاء المؤسسة.**\n\n[مرجع من القطاع — ترجمة الاقتباس: MOZN](https://www.mozn.ai/)",
           "id": "platform-section-4"
         },
         {
@@ -102,22 +102,22 @@
         },
         {
           "heading": "معرفة المؤسسة ومعالجة المستندات",
-          "body": "**استخرج المعلومات المهمة من البيانات غير المنظمة**\n\nنجرد المصادر المعتمدة وننظم مصطلحات العمل ونصمم الاسترجاع وفق أسئلة الفريق ومهامه. يربط الاستخراج والمخرج المنظم محتوى المستند بالحقول التي يستخدمها سير العمل.\n\nيشمل التقييم غياب الدليل وتعارض الإصدارات وحدود الوصول. تبقى مراجع المصادر مرتبطة بالنتيجة كي يستطيع المراجع فحصها.",
+          "body": "نجرد المصادر المعتمدة وننظم مصطلحات العمل ونصمم الاسترجاع وفق أسئلة الفريق ومهامه. يربط الاستخراج والمخرج المنظم محتوى المستند بالحقول التي يستخدمها سير العمل.\n\nيشمل التقييم غياب الدليل وتعارض الإصدارات وحدود الوصول. تبقى مراجع المصادر مرتبطة بالنتيجة كي يستطيع المراجع فحصها.\n\n**استخرج المعلومات الأساسية من البيانات غير المنظمة باستخدام معالجة اللغة الطبيعية، وحوّل المهام اليدوية إلى عمليات رقمية منظمة.**\n\n[مرجع من القطاع — ترجمة الاقتباس: WideBot](https://widebot.ai/)\n\nقد تشمل معالجة المستندات تصنيف الملفات الواردة واستخراج الحقول ومقارنتها بالشروط المعتمدة، وتجهيز قائمة مراجعة للمعلومات الناقصة أو المتعارضة. يحتفظ كل حقل بمرجع المستند. ويشمل التقييم ملفات ممثلة للعمل، منها الصور الممسوحة والمستندات متعددة اللغات والسجلات غير المكتملة، قبل توسيع المصادر.",
           "id": "services-section-2"
         },
         {
           "heading": "تطوير الوكلاء وتنسيق سير العمل",
-          "body": "**نظّم سير العمل وقلّل خطواته اليدوية**\n\nنبني الوكلاء حول طلب ومخرج محددين، وننسق الأدوار المتخصصة عندما تستفيد المهمة منها. يدير سير العمل الحالة والتحقق والاستثناءات والقرارات البشرية.\n\nيشمل النطاق المتفق عليه واجهة الاستخدام وتعريفات المهام والمخرجات المنظمة ومسارات الفشل. نقارن تعدد الوكلاء بمسار أبسط بدل اعتباره ميزة في حد ذاته.",
+          "body": "نبني الوكلاء حول طلب ومخرج محددين، وننسق الأدوار المتخصصة عندما تستفيد المهمة منها. يدير سير العمل الحالة والتحقق والاستثناءات والقرارات البشرية.\n\nيشمل النطاق المتفق عليه واجهة الاستخدام وتعريفات المهام والمخرجات المنظمة ومسارات الفشل. نقارن تعدد الوكلاء بمسار أبسط بدل اعتباره ميزة في حد ذاته.\n\n**بسّط سير العمل، وحقق الامتثال، وقلّل التكاليف باستخدام وكلاء الذكاء الاصطناعي التوليدي الموثوقين من منصة ORXTRA التابعة لـDXwand، والمصممين لأشد القطاعات خضوعًا للتنظيم والمستخدمين فيها.**\n\n[مرجع من القطاع — ترجمة الاقتباس: DXwand / ORXTRA](https://dxwand.com/)",
           "id": "services-section-3"
         },
         {
           "heading": "تكامل التطبيقات والأدوات",
-          "body": "**حوّل واجهات التطبيقات وخوادم MCP والخدمات الخارجية إلى أدوات قابلة لإعادة الاستخدام**\n\nتتيح الاتصالات عمليات محددة بمدخلات محققة ووصول واضح. تبقى صلاحيات القراءة وإعداد المسودة والكتابة منفصلة، ولا ينشئ الاعتماد صلاحية غير موجودة.\n\nنختبر انقطاع الاتصال والطلبات المكررة ودليل النتيجة في النظام النهائي قبل تفعيل الكتابة الحساسة. وعندما لا يُعرف الأثر الخارجي، ينتظر الإجراء التحقق والمصالحة.",
+          "body": "تتيح الاتصالات عمليات محددة بمدخلات محققة ووصول واضح. تبقى صلاحيات القراءة وإعداد المسودة والكتابة منفصلة، ولا ينشئ الاعتماد صلاحية غير موجودة.\n\nنختبر انقطاع الاتصال والطلبات المكررة ودليل النتيجة في النظام النهائي قبل تفعيل الكتابة الحساسة. وعندما لا يُعرف الأثر الخارجي، ينتظر الإجراء التحقق والمصالحة.\n\n**حوّل واجهات التطبيقات وخوادم MCP والخدمات الخارجية إلى أدوات قابلة لإعادة الاستخدام، يستطيع وكلاؤك اكتشافها واستدعاءها.**\n\n[مرجع من القطاع — ترجمة الاقتباس: OnDemand](https://on-demand.io/)\n\nيوثق نطاق كل اتصال مالك النظام وطريقة التحقق من الهوية والسجلات المسموح بها وبنية المدخلات والاستجابة المنتظرة. نحدد إعادة المحاولة ومنع الطلبات المكررة وقراءة التحقق عندما يغير الإجراء بيانات. ويشمل التسليم جرد الاتصالات وتعليمات التشغيل، ليتمكن العميل من فهم الوصول وإلغائه.",
           "id": "services-section-4"
         },
         {
           "heading": "عمليات العملاء والوكلاء متعددو اللغات",
-          "body": "**عالج رحلة الخدمة وتهيئة العميل والدعم من البداية إلى النهاية**\n\nرحلة العميل تحتاج هوية وسجل حالة وأفعالًا مسموحة وفريقًا مسؤولًا عن الخطوة التالية. نحدد هذه الاتصالات ونختبر انتقال الحالة مع سياقها إلى المسؤول المناسب.\n\nيشمل تقييم اللغة وفهم الطلب حالات الخدمة الفعلية للمؤسسة. تُختار القنوات والتكاملات وتُثبت ضمن المشروع، ولا نفترض وجودها لمجرد وجود واجهة محادثة.",
+          "body": "رحلة العميل تحتاج هوية وسجل حالة وأفعالًا مسموحة وفريقًا مسؤولًا عن الخطوة التالية. نحدد هذه الاتصالات ونختبر انتقال الحالة مع سياقها إلى المسؤول المناسب.\n\nيشمل تقييم اللغة وفهم الطلب حالات الخدمة الفعلية للمؤسسة. تُختار القنوات والتكاملات وتُثبت ضمن المشروع، ولا نفترض وجودها لمجرد وجود واجهة محادثة.\n\n**عالج رحلات الخدمة وتهيئة العملاء والدعم من البداية إلى النهاية، لتقليل تكلفة تقديم الخدمة وتحسين رضا العملاء.**\n\n[مرجع من القطاع — ترجمة الاقتباس: Unifonic](https://www.unifonic.com/)",
           "id": "services-section-5"
         },
         {
@@ -267,12 +267,12 @@
       "sections": [
         {
           "heading": "من قصد العميل إلى مسار المعالجة",
-          "body": "**مساعدات محادثة متعددة اللغات تفهم مقصد العميل وسياقه**\n\nيحدد النظام الطلب وسياق الحالة، ثم يسترجع المعرفة والسجلات التي يحق له قراءتها. يراجع شروط المعالجة المعتمدة، ويحدد ما يمكن تقديمه مباشرة وما يحتاج معلومات إضافية أو اعتمادًا من مسؤول.\n\nيمكن ربط أفعال محددة مثل قراءة حالة طلب أو تجهيز رد أو تحديث حقل مسموح به. وتتحدد صلاحية كل فعل من هوية المستخدم والسياسة والأداة، لا من قدرة النموذج على اقتراحه.",
+          "body": "يحدد النظام الطلب وسياق الحالة، ثم يسترجع المعرفة والسجلات التي يحق له قراءتها. يراجع شروط المعالجة المعتمدة، ويحدد ما يمكن تقديمه مباشرة وما يحتاج معلومات إضافية أو اعتمادًا من مسؤول.\n\nيمكن ربط أفعال محددة مثل قراءة حالة طلب أو تجهيز رد أو تحديث حقل مسموح به. وتتحدد صلاحية كل فعل من هوية المستخدم والسياسة والأداة، لا من قدرة النموذج على اقتراحه.\n\n**انشر مساعدات محادثة متعددة اللغات تراعي الفروق الثقافية، وتفهم المقصد وتؤتمت الاستفسارات الروتينية، مع الحفاظ على محادثات سلسة تراعي السياق.**\n\n[مرجع من القطاع — ترجمة الاقتباس: Lucidya](https://www.lucidya.com/)",
           "id": "solutions-customer-operations-section-1"
         },
         {
           "heading": "ملف حالة يصلح لاستكمال العمل",
-          "body": "يجمع المخرج طلب العميل، والبيانات المستخدمة، والخطوات التي تمت، وما بقي، وسبب الإحالة. يستطيع الموظف متابعة الحالة من هذه النقطة دون الاعتماد على ملخص يخلط المقترح بالفعل المنفذ.\n\nفي مثال افتراضي، يسأل عميل عن طلب تأخر. يقرأ النظام حالة التتبع إذا كان الاتصال مصرحًا ومتاحًا، ويربطها بشروط الخدمة المقدمة. إذا تعارض السجل أو غابت قاعدة التعويض، يعرض النقص ويصعده؛ لا يعد بموعد أو تعويض من عنده.",
+          "body": "يجمع المخرج طلب العميل، والبيانات المستخدمة، والخطوات التي تمت، وما بقي، وسبب الإحالة. يستطيع الموظف متابعة الحالة من هذه النقطة دون الاعتماد على ملخص يخلط المقترح بالفعل المنفذ.\n\nفي مثال افتراضي، يسأل عميل عن طلب تأخر. يقرأ النظام حالة التتبع إذا كان الاتصال مصرحًا ومتاحًا، ويربطها بشروط الخدمة المقدمة. إذا تعارض السجل أو غابت قاعدة التعويض، يعرض النقص ويصعده؛ لا يعد بموعد أو تعويض من عنده.\n\nيربط التصميم استقبال الطلب وتحديد صاحبه واسترجاع المعرفة وتجهيز الحل وتسليم الحالة للموظف. ويشمل التسليم الطلب الأصلي والسجلات المتحقق منها والإجراءات المنجزة والقرار المطلوب. نتفق مع العميل على أهداف الخدمة ونقيسها مقارنة بخط الأساس؛ ولا تمثل نتائج أي شركة أخرى دليلًا على نتائجنا.",
           "id": "solutions-customer-operations-section-2"
         },
         {
@@ -295,12 +295,12 @@
       "sections": [
         {
           "heading": "التجارة والتوزيع",
-          "body": "تحتاج فرق المبيعات والتشغيل إلى الجمع بين الكتالوج والأسعار والمخزون وشروط العميل وحالة الطلب. يمكن بناء مساعد يجهز عرضًا أو يفسر حالة توريد من المصادر المتصلة، ويظهر ما يحتاج اعتمادًا قبل التزام تجاري.\n\nيُحدد المشروع كيفية التعامل مع سعر قديم أو مخزون تغير أو شرط خاص بالعميل. وتظل الاستثناءات في التسعير والائتمان لدى أصحاب الصلاحية. يُختبر الحل على اكتمال العرض وصحة مصدر السعر وتحديث حالة المخزون.",
+          "body": "تحتاج فرق المبيعات والتشغيل إلى الجمع بين الكتالوج والأسعار والمخزون وشروط العميل وحالة الطلب. يمكن بناء مساعد يجهز عرضًا أو يفسر حالة توريد من المصادر المتصلة، ويظهر ما يحتاج اعتمادًا قبل التزام تجاري.\n\nيُحدد المشروع كيفية التعامل مع سعر قديم أو مخزون تغير أو شرط خاص بالعميل. وتظل الاستثناءات في التسعير والائتمان لدى أصحاب الصلاحية. يُختبر الحل على اكتمال العرض وصحة مصدر السعر وتحديث حالة المخزون.\n\n**تقدم Presight منتجات وحلول ذكاء اصطناعي متخصصة حسب القطاع، لتطوير العمليات وتحسين اتخاذ القرار ودعم النمو المستدام.**\n\n[مرجع من القطاع — ترجمة الاقتباس: Presight](https://www.presight.ai/)",
           "id": "industries-section-1"
         },
         {
           "heading": "الطاقة والخدمات الصناعية",
-          "body": "ترتبط الأعمال المكتبية والتشغيلية بتقارير وعقود وأوامر عمل وأدلة فنية ذات إصدارات مختلفة. يمكن تجهيز معرفة تخصصية ومساعدة فرق الصيانة والمشتريات على جمع السياق وإعداد ملفات مراجعة أو إحاطات تشغيلية.\n\nنحدد الفرق بين دعم القرار المكتبي والتحكم في أصل مادي. التكامل مع أجهزة أو أنظمة تحكم ليس جزءًا تلقائيًا من الحل؛ ويحتاج نطاقًا وتقييمًا مستقلين. تتطلب المراجع الفنية إصدارًا ساريًا وصاحب اعتماد.",
+          "body": "ترتبط الأعمال المكتبية والتشغيلية بتقارير وعقود وأوامر عمل وأدلة فنية ذات إصدارات مختلفة. يمكن تجهيز معرفة تخصصية ومساعدة فرق الصيانة والمشتريات على جمع السياق وإعداد ملفات مراجعة أو إحاطات تشغيلية.\n\nنحدد الفرق بين دعم القرار المكتبي والتحكم في أصل مادي. التكامل مع أجهزة أو أنظمة تحكم ليس جزءًا تلقائيًا من الحل؛ ويحتاج نطاقًا وتقييمًا مستقلين. تتطلب المراجع الفنية إصدارًا ساريًا وصاحب اعتماد.\n\n**نساعد شركات الطاقة على تحسين أدائها التشغيلي مع الاستجابة للتزايد الملح في متطلبات المساءلة البيئية والاجتماعية والحوكمة.**\n\n[مرجع من القطاع — ترجمة الاقتباس: AIQ](https://aiq.ae/)\n\nيمكن أن يبدأ النطاق بجمع تاريخ الصيانة وأوامر العمل الحالية والمراجع الفنية المعتمدة في موجز للمراجعة. يحدد المشروع الأنظمة المرجعية وكيفية التعامل مع تعارض أوقات التحديث أو إصدارات المستندات. ويحتاج التحكم المادي وشهادات السلامة وادعاءات الأداء البيئي إلى أدلة مستقلة، ولا تثبتها معالجة المستندات.",
           "id": "industries-section-2"
         },
         {
@@ -343,7 +343,7 @@
       "sections": [
         {
           "heading": "تحديد نطاق العمل",
-          "body": "نراجع نقطة البداية والنهاية، والمدخلات، ومصدر الحقيقة، والمسؤول عن القرار. نسجل الحالات التي تتكرر والاستثناءات المؤثرة، وما يستطيع النظام اقتراحه أو تنفيذه. المخرج تعريف مهمة يستطيع فريق الأعمال والتقنية مناقشته على أساس واحد.",
+          "body": "نراجع نقطة البداية والنهاية، والمدخلات، ومصدر الحقيقة، والمسؤول عن القرار. نسجل الحالات التي تتكرر والاستثناءات المؤثرة، وما يستطيع النظام اقتراحه أو تنفيذه. المخرج تعريف مهمة يستطيع فريق الأعمال والتقنية مناقشته على أساس واحد.\n\n**تأسست Inception42 على الذكاء الاصطناعي، وتحوّل الأبحاث العالمية الرائدة إلى تطبيقات سيادية فعلية في صميم عمل الحكومات والمؤسسات.**\n\n[مرجع من القطاع — ترجمة الاقتباس: Inception42](https://inception42.ai/)",
           "id": "methodology-section-1"
         },
         {
@@ -589,27 +589,27 @@
       "sections": [
         {
           "heading": "Give your agents the knowledge behind the work",
-          "body": "**Extract key information from unstructured data**\n\nA useful answer starts with the records your team can trust. We prepare documents, policies and business data for retrieval, preserving source references, versions and access rights. RAG supplies relevant context; extraction turns a document into fields a workflow can check.\n\nThe system must also recognize what is missing. Conflicting policies, an outdated record or an unanswered question remain visible instead of being filled with a plausible guess. [Enterprise knowledge](/en/solutions/knowledge)",
+          "body": "A useful answer starts with the records your team can trust. We prepare documents, policies and business data for retrieval, preserving source references, versions and access rights. RAG supplies relevant context; extraction turns a document into fields a workflow can check.\n\nThe system must also recognize what is missing. Conflicting policies, an outdated record or an unanswered question remain visible instead of being filled with a plausible guess. [Enterprise knowledge](/en/solutions/knowledge)",
           "id": "home-section-1"
         },
         {
           "heading": "Put your existing systems to work",
-          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nAn integration is a defined action: retrieve an order, check a record, prepare a response or update an authorized field. We specify what each tool accepts, which records it can reach and how its result will be verified.\n\nAn agent selects from the tools its session is allowed to use. The workflow tracks state and exceptions, while sensitive changes wait for the responsible person. We introduce autonomous execution only within the scope that testing and policy support.",
+          "body": "An integration is a defined action: retrieve an order, check a record, prepare a response or update an authorized field. We specify what each tool accepts, which records it can reach and how its result will be verified.\n\nAn agent selects from the tools its session is allowed to use. The workflow tracks state and exceptions, while sensitive changes wait for the responsible person. We introduce autonomous execution only within the scope that testing and policy support.",
           "id": "home-section-2"
         },
         {
           "heading": "Choose the work you want to improve",
-          "body": "**industry-specific AI powered products and solutions**\n\n**Customer operations:** Resolve service, onboarding, and support journeys end-to-end. We scope the journey across records, channels and responsible teams, including what an agent may resolve and when it must hand over. multilingual, culturally-nuanced chatbots that understand intent can support that journey, with language and handover quality tested against actual cases. [Customer operations](/en/solutions/customer-operations)\n\n**Procurement and receivables:** Assemble requirements, offers, invoice status and disputes into reviewable work. Separate a recommendation from approval and an approved action from its verified effect. [Procurement](/en/solutions/procurement) · [Receivables](/en/solutions/receivables)\n\n**Industrial and sector workflows:** Define improved operational performance through a task that can be measured, such as preparing a maintenance review or resolving a document exception. The process owner sets the target and acceptance cases. [Industry scopes](/en/industries)",
+          "body": "**Customer operations:** Resolve service, onboarding, and support journeys end-to-end. We scope the journey across records, channels and responsible teams, including what an agent may resolve and when it must hand over. multilingual, culturally-nuanced chatbots that understand intent can support that journey, with language and handover quality tested against actual cases. [Customer operations](/en/solutions/customer-operations)\n\n**Procurement and receivables:** Assemble requirements, offers, invoice status and disputes into reviewable work. Separate a recommendation from approval and an approved action from its verified effect. [Procurement](/en/solutions/procurement) · [Receivables](/en/solutions/receivables)\n\n**Industrial and sector workflows:** Define improved operational performance through a task that can be measured, such as preparing a maintenance review or resolving a document exception. The process owner sets the target and acceptance cases. [Industry scopes](/en/industries)",
           "id": "home-section-3"
         },
         {
           "heading": "Keep the decision with its owner",
-          "body": "**empowering confident decisions across the organization**\n\nThe person responsible for a decision needs the proposed action, its inputs and the evidence behind it. Approval belongs to that exact version. Changed inputs require a new review; missing authority keeps the action pending.\n\nThe system records what a tool returned and checks the final system before reporting success. If a write times out, its effect is unknown until reconciled. AI organizes. Humans decide.",
+          "body": "The person responsible for a decision needs the proposed action, its inputs and the evidence behind it. Approval belongs to that exact version. Changed inputs require a new review; missing authority keeps the action pending.\n\nThe system records what a tool returned and checks the final system before reporting success. If a write times out, its effect is unknown until reconciled. AI organizes. Humans decide.",
           "id": "home-section-4"
         },
         {
           "heading": "Build a workflow your team can operate",
-          "body": "**Streamline workflows**\n\nWe map the request, data and decision first. Then we build a bounded path with its integrations and failure cases, and evaluate it with the people who own the process. The pilot determines what can move into operation and what still needs attention.\n\nDelivery covers the agreed architecture, workflow definitions, connectors, acceptance tests and operating guidance. Support and maintenance responsibilities are settled within the project. [Our delivery method](/en/methodology)",
+          "body": "We map the request, data and decision first. Then we build a bounded path with its integrations and failure cases, and evaluate it with the people who own the process. The pilot determines what can move into operation and what still needs attention.\n\nDelivery covers the agreed architecture, workflow definitions, connectors, acceptance tests and operating guidance. Support and maintenance responsibilities are settled within the project. [Our delivery method](/en/methodology)",
           "id": "home-section-5"
         },
         {
@@ -637,7 +637,7 @@
       "sections": [
         {
           "heading": "Knowledge and context",
-          "body": "Knowledge preparation starts with source owners, versions, and access rights. We define business terms and fields, and connect documents with the records and entities they describe. This distinguishes a current policy from an old version and preserves the relationships between a supplier, contract, invoice, and request.\n\nText and semantic retrieval can locate material relevant to a task. Questions that require tracing relationships may benefit from a knowledge representation alongside retrieval. Access is filtered before context reaches the model, and source metadata travels with the information.",
+          "body": "Knowledge preparation starts with source owners, versions, and access rights. We define business terms and fields, and connect documents with the records and entities they describe. This distinguishes a current policy from an old version and preserves the relationships between a supplier, contract, invoice, and request.\n\nText and semantic retrieval can locate material relevant to a task. Questions that require tracing relationships may benefit from a knowledge representation alongside retrieval. Access is filtered before context reaches the model, and source metadata travels with the information.\n\n**HUMAIN ONE uses AI agents to connect your systems, automate tasks, and run your entire business from a single interface.**\n\n[Industry reference: HUMAIN](https://humain.ai/)",
           "id": "platform-section-1"
         },
         {
@@ -647,12 +647,12 @@
         },
         {
           "heading": "Tools connected to business systems",
-          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nConnections expose specific operations with input validation and defined access. Read, draft and write permissions remain distinct, and an approval never creates an otherwise missing permission.\n\nWe test timeouts, duplicate requests and final-system evidence before enabling consequential writes. Where the external result is uncertain, the system holds the action for reconciliation.",
+          "body": "Connections expose specific operations with input validation and defined access. Read, draft and write permissions remain distinct, and an approval never creates an otherwise missing permission.\n\nWe test timeouts, duplicate requests and final-system evidence before enabling consequential writes. Where the external result is uncertain, the system holds the action for reconciliation.",
           "id": "platform-section-3"
         },
         {
           "heading": "Approval bound to the action",
-          "body": "The responsible person sees the proposed step, affected records, execution inputs, and reason for approval. Approval is recorded against that version of the request. Changed inputs or expired authorization trigger reassessment.\n\nBefore repeating an action after a connection failure, the system checks whether the external system already performed it. Duplicate prevention and recovery belong in the tool contract, especially for sending messages or updating records.",
+          "body": "The responsible person sees the proposed step, affected records, execution inputs, and reason for approval. Approval is recorded against that version of the request. Changed inputs or expired authorization trigger reassessment.\n\nBefore repeating an action after a connection failure, the system checks whether the external system already performed it. Duplicate prevention and recovery belong in the tool contract, especially for sending messages or updating records.\n\n**Everything we do is aimed at protecting institutions, strengthening economies, and empowering confident decisions across the organization.**\n\n[Industry reference: MOZN](https://www.mozn.ai/)",
           "id": "platform-section-4"
         },
         {
@@ -685,22 +685,22 @@
         },
         {
           "heading": "Enterprise knowledge and document intelligence",
-          "body": "**Extract key information from unstructured data**\n\nWe identify approved sources, organize business terminology and design retrieval around the questions and tasks the team needs to answer. Extraction and structured outputs connect document content to the fields a workflow uses.\n\nEvaluation covers absent evidence, conflicting versions and access boundaries. Source references remain attached to results so a reviewer can check the answer.",
+          "body": "We identify approved sources, organize business terminology and design retrieval around the questions and tasks the team needs to answer. Extraction and structured outputs connect document content to the fields a workflow uses.\n\nEvaluation covers absent evidence, conflicting versions and access boundaries. Source references remain attached to results so a reviewer can check the answer.\n\n**Extract key information from unstructured data using natural language processing (NLP) and transform manual tasks into streamlined digital processes.**\n\n[Industry reference: WideBot](https://widebot.ai/)\n\nDocument work can include intake classification, field extraction, comparisons against approved terms and a review queue for missing or conflicting information. Each field should retain its document reference. Evaluation uses representative files, including scans, mixed languages and incomplete records, before expanding the source set.",
           "id": "services-section-2"
         },
         {
           "heading": "Agentic workflows and orchestration",
-          "body": "**Streamline workflows**\n\nWe build agents around a defined request and output, coordinating specialist roles only where the task benefits from them. The workflow manages state, validation, exceptions and human decisions.\n\nThe agreed scope includes the user interface, task definitions, structured outputs and failure paths. A multi-agent design is compared with a simpler path rather than treated as a benefit on its own.",
+          "body": "We build agents around a defined request and output, coordinating specialist roles only where the task benefits from them. The workflow manages state, validation, exceptions and human decisions.\n\nThe agreed scope includes the user interface, task definitions, structured outputs and failure paths. A multi-agent design is compared with a simpler path rather than treated as a benefit on its own.\n\n**Streamline workflows, ensure compliance, and reduce costs with DXwand’s ORXTRA Generative AI reliable Agents, designed for and used by the most regulated industries..**\n\n[Industry reference: DXwand / ORXTRA](https://dxwand.com/)",
           "id": "services-section-3"
         },
         {
           "heading": "Application and tool integration",
-          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nConnections expose specific operations with input validation and defined access. Read, draft and write permissions remain distinct, and an approval never creates an otherwise missing permission.\n\nWe test timeouts, duplicate requests and final-system evidence before enabling consequential writes. Where the external result is uncertain, the system holds the action for reconciliation.",
+          "body": "Connections expose specific operations with input validation and defined access. Read, draft and write permissions remain distinct, and an approval never creates an otherwise missing permission.\n\nWe test timeouts, duplicate requests and final-system evidence before enabling consequential writes. Where the external result is uncertain, the system holds the action for reconciliation.\n\n**Turn APIs, MCP servers and external services into reusable tools your agents can discover and invoke.**\n\n[Industry reference: OnDemand](https://on-demand.io/)\n\nA connector scope records the system owner, authentication method, permitted records, input schema and expected response. We define retry behavior, duplicate protection and a verification read where the operation changes data. The handover includes a connection inventory and operating instructions so the client can understand and revoke access.",
           "id": "services-section-4"
         },
         {
           "heading": "Customer operations and multilingual agents",
-          "body": "**Resolve service, onboarding, and support journeys end-to-end**\n\nA customer journey depends on more than an answer: identity, case history, permitted actions and the team responsible for the next step. We scope those connections and test the handover with its context intact.\n\nLanguage and intent evaluation cover the organization’s real service cases. Channels and integrations are selected and verified within each engagement, not assumed from a chat interface.",
+          "body": "A customer journey depends on more than an answer: identity, case history, permitted actions and the team responsible for the next step. We scope those connections and test the handover with its context intact.\n\nLanguage and intent evaluation cover the organization’s real service cases. Channels and integrations are selected and verified within each engagement, not assumed from a chat interface.\n\n**Resolve service, onboarding, and support journeys end-to-end, reducing cost-to-serve while improving customer satisfaction.**\n\n[Industry reference: Unifonic](https://www.unifonic.com/)",
           "id": "services-section-5"
         },
         {
@@ -850,12 +850,12 @@
       "sections": [
         {
           "heading": "From customer intent to a resolution path",
-          "body": "**multilingual, culturally-nuanced chatbots that understand intent**\n\nThe system identifies the request and its context, then retrieves knowledge and records it is permitted to read. It checks approved resolution rules and determines what can be provided directly, what needs additional input, and what requires authorization.\n\nDefined actions can include reading an order status, preparing a reply, or updating an authorized field. Each action's permission comes from identity, policy, and the tool, not the model's ability to propose it.",
+          "body": "The system identifies the request and its context, then retrieves knowledge and records it is permitted to read. It checks approved resolution rules and determines what can be provided directly, what needs additional input, and what requires authorization.\n\nDefined actions can include reading an order status, preparing a reply, or updating an authorized field. Each action's permission comes from identity, policy, and the tool, not the model's ability to propose it.\n\n**Deploy multilingual, culturally-nuanced chatbots that understand intent and automate routine queries while ensuring smooth, context-aware conversations.**\n\n[Industry reference: Lucidya](https://www.lucidya.com/)",
           "id": "solutions-customer-operations-section-1"
         },
         {
           "heading": "A case file that supports continuation",
-          "body": "The output brings together the request, data used, completed steps, remaining work, and reason for referral. An employee can continue from that point without relying on a summary that confuses proposals with executed actions.\n\nIn a fictional example, a customer asks about a late order. The system reads tracking status if the connection is authorized and available, then applies the supplied service terms. Conflicting records or a missing compensation rule are escalated; it does not invent a date or compensation.",
+          "body": "The output brings together the request, data used, completed steps, remaining work, and reason for referral. An employee can continue from that point without relying on a summary that confuses proposals with executed actions.\n\nIn a fictional example, a customer asks about a late order. The system reads tracking status if the connection is authorized and available, then applies the supplied service terms. Conflicting records or a missing compensation rule are escalated; it does not invent a date or compensation.\n\nThe design joins intake, identification, knowledge retrieval, resolution preparation and human handover. A handover includes the original request, verified records, actions already completed and the decision still required. We agree service targets with the client and measure them against a baseline; another vendor’s cost or satisfaction claim is not evidence of our results.",
           "id": "solutions-customer-operations-section-2"
         },
         {
@@ -878,12 +878,12 @@
       "sections": [
         {
           "heading": "Commerce and distribution",
-          "body": "Sales and operations need catalog, pricing, inventory, customer terms, and order status together. An assistant can prepare an offer or explain supply status from connected sources, showing what needs approval before a commercial commitment.\n\nThe project defines handling of old prices, changed stock, and customer-specific terms. Pricing and credit exceptions stay with their authorized owners. Testing covers offer completeness, price-source accuracy, and inventory freshness.",
+          "body": "Sales and operations need catalog, pricing, inventory, customer terms, and order status together. An assistant can prepare an offer or explain supply status from connected sources, showing what needs approval before a commercial commitment.\n\nThe project defines handling of old prices, changed stock, and customer-specific terms. Pricing and credit exceptions stay with their authorized owners. Testing covers offer completeness, price-source accuracy, and inventory freshness.\n\n**Presight delivers industry-specific AI powered products and solutions that transform operations, enhance decision-making, and drive sustainable growth.**\n\n[Industry reference: Presight](https://www.presight.ai/)",
           "id": "industries-section-1"
         },
         {
           "heading": "Energy and industrial services",
-          "body": "Office and operational work depends on reports, contracts, work orders, and versioned technical guidance. Specialist knowledge can help maintenance and procurement teams assemble context and prepare review files or operational briefings.\n\nOffice decision support is distinguished from physical asset control. Devices and control systems are not an automatic integration scope and require separate definition and assessment. Technical references need a current version and an approval owner.",
+          "body": "Office and operational work depends on reports, contracts, work orders, and versioned technical guidance. Specialist knowledge can help maintenance and procurement teams assemble context and prepare review files or operational briefings.\n\nOffice decision support is distinguished from physical asset control. Devices and control systems are not an automatic integration scope and require separate definition and assessment. Technical references need a current version and an approval owner.\n\n**We assist Energy companies to achieve improved operational performance while addressing the urgent rise in ESG accountability.**\n\n[Industry reference: AIQ](https://aiq.ae/)\n\nA practical first scope may assemble maintenance history, current work orders and approved technical references into a review brief. The project specifies which systems are authoritative and how conflicting timestamps or document versions are handled. Physical control, safety certification and environmental performance claims require separate evidence and are not implied by a document workflow.",
           "id": "industries-section-2"
         },
         {
@@ -926,7 +926,7 @@
       "sections": [
         {
           "heading": "Define the work",
-          "body": "We review start and end points, inputs, source of truth, and decision responsibility. Recurring cases and consequential exceptions are recorded, along with what the system can propose or perform. The output is a task definition business and technical teams can discuss together.",
+          "body": "We review start and end points, inputs, source of truth, and decision responsibility. Recurring cases and consequential exceptions are recorded, along with what the system can propose or perform. The output is a task definition business and technical teams can discuss together.\n\n**AI-native from the ground up, Inception42 transforms world-leading research into live, sovereign deployments at the core of governments and enterprises.**\n\n[Industry reference: Inception42](https://inception42.ai/)",
           "id": "methodology-section-1"
         },
         {
