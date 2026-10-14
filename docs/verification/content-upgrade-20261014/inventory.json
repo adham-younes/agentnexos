@@ -1,0 +1,44 @@
+{
+  "baselineSha": "49f4627ec934bba066294cb0740ad6ea0f21a80a",
+  "pages": [
+    "app/[locale]/[page]/page.tsx",
+    "app/[locale]/agentnexos/page.tsx",
+    "app/[locale]/page.tsx",
+    "app/[locale]/privacy/page.tsx",
+    "app/[locale]/security/page.tsx",
+    "app/[locale]/solutions/page.tsx",
+    "app/[locale]/start/page.tsx",
+    "app/[locale]/terms/page.tsx"
+  ],
+  "apis": [
+    "app/api/agentnexos/route.ts",
+    "app/api/approvals/route.ts",
+    "app/api/chat/route.ts",
+    "app/api/telemetry/route.ts"
+  ],
+  "contentSources": [
+    "lib/content/agent-workspace.ts",
+    "lib/content/cyber-home.ts",
+    "lib/content/product-pages.ts",
+    "lib/content/project-brief.ts",
+    "lib/content/public-pages.ts",
+    "lib/content/template-assets.json",
+    "lib/content/workspace-demo.ts"
+  ],
+  "packageFiles": 81,
+  "packageManifestKeys": [
+    "revision",
+    "pages",
+    "downloadRoutes"
+  ],
+  "acceptanceScenarios": 36,
+  "database": "yhjyaytbrsuwaefkqkqg",
+  "productionDeployment": "dpl_GYcBvXN46QTLTjgnB62uqkfynDKM",
+  "productionReady": true,
+  "limitations": [
+    "No authenticated application flow found in current app routes",
+    "Public tables have user ownership, no organization_id",
+    "No live tenant isolation test performed",
+    "No enterprise connector chosen or authorized"
+  ]
+}

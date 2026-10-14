@@ -1,0 +1,55 @@
+{
+  "revision": "2026-10-14",
+  "flowId": "EVx1u696JpleW8L0QwvY",
+  "palette": [
+    "#050505",
+    "#10b981",
+    "#EBEBEB"
+  ],
+  "assets": [
+    {
+      "file": "assets/computational-graph-1.png",
+      "provider": "ElevenLabs Creative Studio",
+      "generationId": "FlyPG0qV6wThM4njFCUm",
+      "width": 1280,
+      "height": 720,
+      "sha256": "1044b351a37eda8c0566f5d4b7c57c9deee66aae9487839388b03ac3d5c7152f",
+      "role": "alternative; do not load all variants",
+      "conceptual": true
+    },
+    {
+      "file": "assets/computational-graph-2.png",
+      "provider": "ElevenLabs Creative Studio",
+      "generationId": "5KErYuUQPHFVX76r9sXm",
+      "width": 1280,
+      "height": 720,
+      "sha256": "9a9b40a9ecfb9a31ff8eaa10011b1281265b1b26c5f2ed56d1add77e8c47d456",
+      "role": "alternative; do not load all variants",
+      "conceptual": true
+    },
+    {
+      "file": "assets/computational-graph-3.png",
+      "provider": "ElevenLabs Creative Studio",
+      "generationId": "C1bZEoVGWeYGPNN0EWY8",
+      "width": 1280,
+      "height": 720,
+      "sha256": "0ad11e7abc48df8b4d8e9dd70334af5e40c8ef4feef65aa4e7f497e8f5b6ace0",
+      "role": "alternative; do not load all variants",
+      "conceptual": true
+    },
+    {
+      "file": "assets/computational-graph-4.png",
+      "provider": "ElevenLabs Creative Studio",
+      "generationId": "wgCzdKTob7ohGJEkrRRX",
+      "width": 1280,
+      "height": 720,
+      "sha256": "eb998b9ccf1afba58f485feb85b664047a457c8ab8efdd2ddcee96c75f9c9da9",
+      "role": "selected additive platform/services illustration",
+      "conceptual": true
+    }
+  ],
+  "placement": "Additional existing art container. Never replace the home hero or theme. No biological imagery.",
+  "motion": "frontend/ComputationalGraph.tsx; finite CSS animation with reduced-motion support. No video generated.",
+  "fonts": "Copied from the same published application for review; implementation reuses its existing next/font setup.",
+  "provenance": "New generated graphics, not competitor assets. No paid generation repeated for polling."
+}
