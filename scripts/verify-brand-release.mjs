@@ -14,16 +14,18 @@ try{
    const h1=(await page.locator('h1').innerText()).replace(/\s+/g,' ').trim();
    const mainText=(await page.locator('main').innerText()).replace(/\s+/g,' ');
    const missing=excerpts.filter(item=>!mainText.includes(item.quote));
-   if(missing.length)throw Error('Verbatim excerpt missing: '+missing.map(item=>item.source).join(', '));
+   if(locale==='ar' && excerpts.some(item=>mainText.includes(item.quote)))throw Error('English excerpt present on Arabic page');
+   if(locale==='en' && missing.length)throw Error('Verbatim excerpt missing: '+missing.map(item=>item.source).join(', '));
    const layout=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,font:getComputedStyle(document.querySelector('h1')).fontFamily,dir:document.documentElement.dir,background:getComputedStyle(document.body).backgroundColor,accent:getComputedStyle(document.querySelector('h1 em')).color}));
    if(r.status()!==200||h1!==content[locale].home.title||layout.overflow||layout.background!=='rgb(5, 5, 5)'||layout.accent!=='rgb(16, 185, 129)'||!layout.font.includes(locale==='en'?'Newsreader':'IBM Plex Sans Arabic')||layout.dir!==(locale==='en'?'ltr':'rtl'))throw Error('Brand/template/headline/layout mismatch');
    if(!await page.locator('header').innerText().then(t=>t.includes('AGYNEXA')))throw Error('Old wordmark');
-   await page.screenshot({path:`output/agynexa-reference/${label}-${locale}-${width}.png`});report.viewports.push({locale,width,headline:h1,verbatimQuotes:excerpts.length,...layout});
+   await page.screenshot({path:`output/agynexa-reference/${label}-${locale}-${width}.png`});report.viewports.push({locale,width,headline:h1,verbatimQuotes:locale==='en'?excerpts.length:0,...layout});
   }catch(e){report.failures.push({locale,width,error:e.message});}finally{await page.close();}
  }
  const redirect=await fetch(base+'/',{redirect:'manual'});report.defaultLocale={status:redirect.status,location:redirect.headers.get('location')};if(!report.defaultLocale.location?.endsWith('/en'))throw Error('English is not default');
  for(const locale of ['en','ar'])for(const key of Object.keys(content[locale])){
   const path=`/${locale}${key==='home'?'':'/'+key}`,r=await fetch(base+path),html=await r.text();
+  if(locale==='ar' && excerpts.some(item=>html.includes(item.quote)))report.failures.push({path,error:'English excerpt present on Arabic route'});
   if(r.status!==200||!html.includes('AGYNEXA')||(html.includes('Agentnexos')||html.includes('FIELD GUIDE / AGENTNEXOS')))report.failures.push({path,error:'HTTP or display-brand mismatch'});
   report.routes.push({path,status:r.status});
  }
