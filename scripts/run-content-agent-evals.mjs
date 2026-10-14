@@ -2,7 +2,7 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 const base=new URL(process.argv[2]||'https://compute-the-platform-to-build-six-fawn.vercel.app');
 const version=process.argv[3]||'unverified';
 const cases=(await readFile('docs/content-upgrade/2026-10-13/revision-2026-10-14/agent/evals.jsonl','utf8')).trim().split('\n').map(JSON.parse);
-const report={base:base.origin,version,startedAt:new Date().toISOString(),configuredModels:['qwen/qwen3.8-27b','openai/gpt-oss-120b'],modelEvidence:'IDs from deployed source configuration; provider model ID is not exposed by the public stream.',cases:[],notes:['No model or database secrets downloaded. Actual production API requests with fictional inputs.','Text-only hypothetical tool failure/injection cases are not live external write fault injection.','Customer cases require an authenticated customer runtime and are not executed against the public API.']};
+const report={base:base.origin,version,startedAt:new Date().toISOString(),configuredModels:['qwen/qwen3.8-27b','openai/gpt-oss-120b'],modelEvidence:'IDs from deployed source configuration; provider model ID is not exposed by the public stream.',cases:[],notes:['No model or database secrets downloaded. Actual production API requests with fictional inputs.','Text-only hypothetical tool failure/injection cases are not live external write fault injection. Narrow policy/draft contracts can return deterministic server responses without a model call; passing those cases does not certify model adherence.','Customer cases require an authenticated customer runtime and are not executed against the public API.']};
 const message=(role,text)=>({role,parts:[{type:'text',text}]});
 
 async function run(locale,messages){

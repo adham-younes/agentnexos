@@ -4,6 +4,7 @@ import { MockLanguageModelV4 } from "ai/test";
 import { simulateReadableStream } from "ai";
 import { createDemoTools } from "../lib/agents/tools";
 import { classifyTask, createToolGate, demoPolicy, discoverTools, type RuntimeEvent } from "../lib/agents/policy";
+import { publicBoundaryReply } from "../lib/agents/public-boundary";
 import { reviewDesignContract } from "../lib/agents/contract";
 import { projectConversation, conversationText, contextLimits } from "../lib/agents/context";
 import { createRunJournal } from "../lib/agents/journal";
@@ -153,4 +154,26 @@ test("reviewer uses configured low sampling temperature", async () => {
   const reviewer = model();
   await runAgentWorkflow({conversation:"Hello",latestRequest:"Hello",locale:"en",signal:new AbortController().signal,models:{analyst:reviewer,planner:reviewer,reviewer},onPhase:()=>{},onText:()=>{}});
   assert.equal(reviewer.doStreamCalls[0].temperature, 0.1);
+});
+
+test("unknown external effect is held by server policy before any model or tool", async () => {
+ for(const [locale,request] of [["en","The ERP timed out after submitting an update. Retry?"],["ar","الاتصال فصل بعد إرسال تحديث للفاتورة؛ هل أعيد الطلب؟"]] as const){
+  const provider=model(),events:RuntimeEvent[]=[],chunks:string[]=[];
+  await runAgentWorkflow({conversation:request,latestRequest:request,locale,signal:new AbortController().signal,models:{analyst:provider,planner:provider,reviewer:provider},onPhase:()=>{},onText:text=>chunks.push(text),onEvent:event=>{events.push(event)}});
+  assert.equal(provider.doStreamCalls.length,0);assert.equal(provider.doGenerateCalls.length,0);
+  assert.ok(events.some(event=>event.kind==="policy_response"&&event.reason==="unknown_write_effect"));assert.ok(chunks.join("").length>100);
+ }
+});
+
+test("bounded public drafts preserve review scope and narrow follow-up in both languages", () => {
+ const en=publicBoundaryReply("Design review of a purchase request only. No order should be placed.","en");
+ const ar=publicBoundaryReply("صمم مسار مراجعة طلب شراء فقط، من غير إصدار أمر أو إرسال للمورد.","ar");
+ assert.equal(en?.contract,"purchase_review_draft");assert.equal(ar?.contract,"purchase_review_draft");
+ assert.match(en!.text,/End at that review result/);assert.match(ar!.text,/ينتهي المسار/);
+ for(const [locale,request] of [["en","Change only the missing-data step."],["ar","عدّل خطوة البيانات الناقصة فقط، وباقي الخطوات كما هي."]] as const){
+  const reply=publicBoundaryReply(request,locale,"receive; check; review");assert.equal(reply?.contract,"missing_data_step_draft");assert.doesNotMatch(reply!.text,/1\.|2\.|3\./);
+ }
+ assert.equal(publicBoundaryReply("Design a workflow for a timeout after an update","en"),undefined);
+ assert.equal(publicBoundaryReply("What is Agentnexos?","en"),undefined);
+ assert.equal(publicBoundaryReply("Calculate 100 cases at 20 minutes","en"),undefined);
 });
