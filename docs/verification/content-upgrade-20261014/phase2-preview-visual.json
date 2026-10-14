@@ -1,0 +1,126 @@
+{
+  "base": "https://compute-the-platform-to-build-fl88faj4w-adhamlouxors-projects.vercel.app",
+  "checkedAt": "2026-10-14T12:42:43.536Z",
+  "pages": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "status": 200,
+      "state": {
+        "width": 1280,
+        "height": 720,
+        "lazy": "lazy",
+        "displayedWidth": 292
+      },
+      "layout": {
+        "overflow": false,
+        "dir": "rtl",
+        "font": "\"Noto Naskh Arabic\", \"Noto Naskh Arabic Fallback\"",
+        "background": "rgb(5, 5, 5)",
+        "hero": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "status": 200,
+      "state": {
+        "width": 1280,
+        "height": 720,
+        "lazy": "lazy",
+        "displayedWidth": 287
+      },
+      "layout": {
+        "overflow": false,
+        "dir": "rtl",
+        "font": "\"Noto Naskh Arabic\", \"Noto Naskh Arabic Fallback\"",
+        "background": "rgb(5, 5, 5)",
+        "hero": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "status": 200,
+      "state": {
+        "width": 1280,
+        "height": 720,
+        "lazy": "lazy",
+        "displayedWidth": 547
+      },
+      "layout": {
+        "overflow": false,
+        "dir": "rtl",
+        "font": "\"Noto Naskh Arabic\", \"Noto Naskh Arabic Fallback\"",
+        "background": "rgb(5, 5, 5)",
+        "hero": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "state": {
+        "width": 1280,
+        "height": 720,
+        "lazy": "lazy",
+        "displayedWidth": 292
+      },
+      "layout": {
+        "overflow": false,
+        "dir": "ltr",
+        "font": "Newsreader, \"Newsreader Fallback\"",
+        "background": "rgb(5, 5, 5)",
+        "hero": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "status": 200,
+      "state": {
+        "width": 1280,
+        "height": 720,
+        "lazy": "lazy",
+        "displayedWidth": 287
+      },
+      "layout": {
+        "overflow": false,
+        "dir": "ltr",
+        "font": "Newsreader, \"Newsreader Fallback\"",
+        "background": "rgb(5, 5, 5)",
+        "hero": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "state": {
+        "width": 1280,
+        "height": 720,
+        "lazy": "lazy",
+        "displayedWidth": 547
+      },
+      "layout": {
+        "overflow": false,
+        "dir": "ltr",
+        "font": "Newsreader, \"Newsreader Fallback\"",
+        "background": "rgb(5, 5, 5)",
+        "hero": true
+      },
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "asset": {
+    "status": 200,
+    "sha256": "eb998b9ccf1afba58f485feb85b664047a457c8ab8efdd2ddcee96c75f9c9da9",
+    "expected": "eb998b9ccf1afba58f485feb85b664047a457c8ab8efdd2ddcee96c75f9c9da9"
+  }
+}
