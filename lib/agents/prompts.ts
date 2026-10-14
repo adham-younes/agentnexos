@@ -2,7 +2,7 @@ import { publicRoleInstructions } from "./instruction-templates";
 import type { Locale } from "@/lib/i18n/config";
 import type { classifyTask } from "./policy";
 
-export const promptVersion = "product-advisor-2026-10-14-r4";
+export const promptVersion = "product-advisor-2026-10-14-r5";
 
 
 export function agentInstructions(locale: Locale, task: ReturnType<typeof classifyTask>, followup = false) {

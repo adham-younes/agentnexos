@@ -7,7 +7,7 @@ export const demoPolicy = Object.freeze({
 export type DemoTool = typeof demoPolicy.allowedTools[number];
 export type RuntimeEvent = {
   sequence: number; elapsedMs: number;
-  kind: "routing" | "model_started" | "model_completed" | "tool_allowed" | "tool_denied" | "tool_completed" | "tool_failed";
+  kind: "routing" | "policy_response" | "model_started" | "model_completed" | "tool_allowed" | "tool_denied" | "tool_completed" | "tool_failed";
   role?: string; model?: string; tokens?: number; tool?: DemoTool; latencyMs?: number;
   task?: "conversation" | "calculation" | "technical" | "workflow"; reason?: string;
 };

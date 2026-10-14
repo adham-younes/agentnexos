@@ -3,6 +3,7 @@ import { ToolLoopAgent, isStepCount, type LanguageModel } from "ai";
 import { z } from "zod/v4";
 import { getAnalystModel, getOrchestratorModel, getVerifierModel, MODEL_LIMITS } from "@/lib/ai/models";
 import { createDemoTools } from "./tools";
+import { publicBoundaryReply } from "./public-boundary";
 import { agentInstructions } from "./prompts";
 import { classifyTask, discoverTools, type RuntimeEvent } from "./policy";
 
@@ -38,6 +39,14 @@ export async function runAgentWorkflow(options: {
   const allTools = createDemoTools({ allowedTools, signal: options.signal, onEvent: emit });
   const tools = Object.fromEntries(allowedTools.map(name => [name, allTools[name]]));
   await emit({ kind: "routing", task });
+  const boundary = publicBoundaryReply(latestRequest, options.locale, options.previousRequest);
+  if (boundary) {
+    options.onPhase(2);
+    await emit({ kind: "policy_response", reason: boundary.contract });
+    options.signal.throwIfAborted();
+    options.onText(boundary.text);
+    return { text: boundary.text };
+  }
   const analystModel = options.models?.analyst ?? getAnalystModel();
   const plannerModel = options.models?.planner ?? getOrchestratorModel();
   const reviewerModel = options.models?.reviewer ?? getVerifierModel();
