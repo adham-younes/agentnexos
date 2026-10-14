@@ -132,3 +132,12 @@ test("tool receipts survive a bounded plan ending with a tool rather than text",
  assert.equal(call,3);assert.equal(reviewer.doStreamCalls.length,1);assert.equal(events.filter(event=>event.kind==="tool_completed").length,3);
  assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/SOURCE_REQUIRED/);assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/executable/);
 });
+
+test("write-timeout state questions do not become invoice-planning workflows", () => {
+  for (const request of ["الاتصال فصل بعد إرسال تحديث للفاتورة؛ هل أعيد الطلب فورًا؟", "The tool timed out after submitting an invoice update."]) {
+    assert.equal(classifyTask(request, "Design a purchase review workflow"), "conversation");
+    assert.deepEqual(discoverTools(classifyTask(request), request), []);
+  }
+  assert.equal(classifyTask("صمم سير عمل للتعامل مع انقطاع الاتصال بعد تحديث الفاتورة"), "workflow");
+  assert.equal(classifyTask("Design a workflow for a timeout after an invoice update"), "workflow");
+});

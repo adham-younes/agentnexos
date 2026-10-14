@@ -36,6 +36,13 @@ function directTask(request: string) {
 /** Only referential follow-ups inherit a previous USER request; greetings never do. */
 export function classifyTask(request: string, previousRequest?: string) {
   const normalized = normalizeRequest(request);
+  // A reported timeout AFTER a write asks about unknown effects, not a new workflow.
+  // Avoid forcing a planning tool merely because the affected record is an invoice.
+  const explicitDesign = /\b(design|build|create|map|plan)\b|صمم|تصميم|ابن|ارسم|خطط|سير عمل/i.test(normalized);
+  const afterWriteTimeout = /timeout|timed out|time.?out|(?:الاتصال|اتصال).{0,20}(?:فصل|انقطع)|انقطاع الاتصال/i.test(normalized)
+    && /\bafter\b|بعد/i.test(normalized)
+    && /update|submit|write|تحديث|تعديل|ارسال/i.test(normalized);
+  if (afterWriteTimeout && !explicitDesign) return "conversation" as const;
   const direct = directTask(normalized);
   if (direct !== "conversation" || !previousRequest) return direct;
   if (/^(?:(?:طيب|okay|ok)[ ،]*)?(?:شكرا|تمام|حاضر|thanks|thank you|hello|hi|مرحبا|اهلا|كيف حالك|how are you)[.!؟?\s،]*$/i.test(normalized.trim())) return "conversation";
