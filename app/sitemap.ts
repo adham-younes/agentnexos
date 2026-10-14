@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { revisionRoutes } from "@/lib/content/revision";
 
 const BASE_URL = "https://compute-the-platform-to-build-six-fawn.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/agentnexos", "/platform", "/industries", "/resources", "/solutions", "/security", "/privacy", "/terms", "/about", "/start"];
+  const routes = revisionRoutes.map(path => path ? `/${path}` : "");
   const locales = ["ar", "en"];
   const entries: MetadataRoute.Sitemap = [];
 
