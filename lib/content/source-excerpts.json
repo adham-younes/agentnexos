@@ -3,80 +3,110 @@
     "id": "inception",
     "source": "Inception42",
     "url": "https://inception42.ai/",
-    "quote": "AI-native from the ground up",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "AI-native from the ground up, Inception42 transforms world-leading research into live, sovereign deployments at the core of governments and enterprises.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "AI-native from the ground up",
+    "translationAr": "تأسست Inception42 على الذكاء الاصطناعي، وتحوّل الأبحاث العالمية الرائدة إلى تطبيقات سيادية فعلية في صميم عمل الحكومات والمؤسسات.",
+    "placement": "methodology"
   },
   {
     "id": "aiq",
     "source": "AIQ",
     "url": "https://aiq.ae/",
-    "quote": "improved operational performance",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "We assist Energy companies to achieve improved operational performance while addressing the urgent rise in ESG accountability.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "improved operational performance",
+    "translationAr": "نساعد شركات الطاقة على تحسين أدائها التشغيلي مع الاستجابة للتزايد الملح في متطلبات المساءلة البيئية والاجتماعية والحوكمة.",
+    "placement": "industries"
   },
   {
     "id": "presight",
     "source": "Presight",
     "url": "https://www.presight.ai/",
-    "quote": "industry-specific AI powered products and solutions",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Presight delivers industry-specific AI powered products and solutions that transform operations, enhance decision-making, and drive sustainable growth.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "industry-specific AI powered products and solutions",
+    "translationAr": "تقدم Presight منتجات وحلول ذكاء اصطناعي متخصصة حسب القطاع، لتطوير العمليات وتحسين اتخاذ القرار ودعم النمو المستدام.",
+    "placement": "industries"
   },
   {
     "id": "ondemand",
     "source": "OnDemand",
     "url": "https://on-demand.io/",
-    "quote": "Turn APIs, MCP servers and external services into reusable tools",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Turn APIs, MCP servers and external services into reusable tools your agents can discover and invoke.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "Turn APIs, MCP servers and external services into reusable tools",
+    "translationAr": "حوّل واجهات التطبيقات وخوادم MCP والخدمات الخارجية إلى أدوات قابلة لإعادة الاستخدام، يستطيع وكلاؤك اكتشافها واستدعاءها.",
+    "placement": "services"
   },
   {
     "id": "mozn",
     "source": "MOZN",
     "url": "https://www.mozn.ai/",
-    "quote": "empowering confident decisions across the organization",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Everything we do is aimed at protecting institutions, strengthening economies, and empowering confident decisions across the organization.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "empowering confident decisions across the organization",
+    "translationAr": "كل ما نقوم به يهدف إلى حماية المؤسسات وتعزيز الاقتصادات وتمكين اتخاذ قرارات واثقة في جميع أنحاء المؤسسة.",
+    "placement": "platform"
   },
   {
     "id": "lucidya",
     "source": "Lucidya",
     "url": "https://www.lucidya.com/",
-    "quote": "multilingual, culturally-nuanced chatbots that understand intent",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Deploy multilingual, culturally-nuanced chatbots that understand intent and automate routine queries while ensuring smooth, context-aware conversations.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "multilingual, culturally-nuanced chatbots that understand intent",
+    "translationAr": "انشر مساعدات محادثة متعددة اللغات تراعي الفروق الثقافية، وتفهم المقصد وتؤتمت الاستفسارات الروتينية، مع الحفاظ على محادثات سلسة تراعي السياق.",
+    "placement": "solutions/customer-operations"
   },
   {
     "id": "unifonic",
     "source": "Unifonic",
     "url": "https://www.unifonic.com/",
-    "quote": "Resolve service, onboarding, and support journeys end-to-end",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Resolve service, onboarding, and support journeys end-to-end, reducing cost-to-serve while improving customer satisfaction.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "Resolve service, onboarding, and support journeys end-to-end",
+    "translationAr": "عالج رحلات الخدمة وتهيئة العملاء والدعم من البداية إلى النهاية، لتقليل تكلفة تقديم الخدمة وتحسين رضا العملاء.",
+    "placement": "services"
   },
   {
     "id": "dxwand",
     "source": "DXwand / ORXTRA",
     "url": "https://dxwand.com/",
-    "quote": "Streamline workflows",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Streamline workflows, ensure compliance, and reduce costs with DXwand’s ORXTRA Generative AI reliable Agents, designed for and used by the most regulated industries..",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "Streamline workflows",
+    "translationAr": "بسّط سير العمل، وحقق الامتثال، وقلّل التكاليف باستخدام وكلاء الذكاء الاصطناعي التوليدي الموثوقين من منصة ORXTRA التابعة لـDXwand، والمصممين لأشد القطاعات خضوعًا للتنظيم والمستخدمين فيها.",
+    "placement": "services"
   },
   {
     "id": "widebot",
     "source": "WideBot",
     "url": "https://widebot.ai/",
-    "quote": "Extract key information from unstructured data",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "Extract key information from unstructured data using natural language processing (NLP) and transform manual tasks into streamlined digital processes.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "Extract key information from unstructured data",
+    "translationAr": "استخرج المعلومات الأساسية من البيانات غير المنظمة باستخدام معالجة اللغة الطبيعية، وحوّل المهام اليدوية إلى عمليات رقمية منظمة.",
+    "placement": "services"
   },
   {
     "id": "humain",
     "source": "HUMAIN",
     "url": "https://humain.ai/",
-    "quote": "connect your systems, automate tasks",
-    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
-    "locked": true
+    "quote": "HUMAIN ONE uses AI agents to connect your systems, automate tasks, and run your entire business from a single interface.",
+    "evidence": "Complete excerpt supplied verbatim by the owner in this conversation; official homepage reopened 2026-10-15. OnDemand and HUMAIN page bodies are not extractable; their supplied text is not independently reverified.",
+    "locked": true,
+    "shortQuote": "connect your systems, automate tasks",
+    "translationAr": "يستخدم HUMAIN ONE وكلاء الذكاء الاصطناعي لربط أنظمتك وأتمتة مهامك وتشغيل أعمالك كلها من واجهة واحدة.",
+    "placement": "platform"
   }
 ]
