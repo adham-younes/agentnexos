@@ -1,0 +1,25 @@
+{
+  "base": "https://compute-the-platform-to-build-six-fawn.vercel.app",
+  "checkedAt": "2026-10-14T13:15:46.436Z",
+  "cases": [
+    {
+      "locale": "ar",
+      "initialActualProvider": true,
+      "followupActualProvider": true,
+      "copyExact": true,
+      "downloadComplete": true,
+      "errorRetryPreserved": true,
+      "errorSimulation": "Mocked HTTP503; not a real provider outage."
+    },
+    {
+      "locale": "en",
+      "initialActualProvider": true,
+      "followupActualProvider": true,
+      "copyExact": true,
+      "downloadComplete": true,
+      "errorRetryPreserved": true,
+      "errorSimulation": "Mocked HTTP503; not a real provider outage."
+    }
+  ],
+  "failures": []
+}
