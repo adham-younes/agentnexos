@@ -1,0 +1,183 @@
+{
+  "base": "https://compute-the-platform-to-build-six-fawn.vercel.app",
+  "checkedAt": "2026-10-14T12:35:49.330Z",
+  "pages": [
+    {
+      "path": "/ar",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/platform",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/services",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/solutions",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/solutions/knowledge",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/solutions/receivables",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/solutions/customer-operations",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/industries",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/methodology",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/security",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/resources",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/about",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/agentnexos",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/ar/start",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/platform",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/services",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/solutions",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/solutions/knowledge",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/solutions/procurement",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/solutions/receivables",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/solutions/customer-operations",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/industries",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/methodology",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/security",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/resources",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/about",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/agentnexos",
+      "missing": [],
+      "missingIds": []
+    },
+    {
+      "path": "/en/start",
+      "missing": [],
+      "missingIds": []
+    }
+  ],
+  "downloads": [
+    {
+      "route": "/downloads/agentnexos/workflow-brief-ar.md",
+      "status": 200,
+      "exactMatch": true
+    },
+    {
+      "route": "/downloads/agentnexos/workflow-brief-en.md",
+      "status": 200,
+      "exactMatch": true
+    },
+    {
+      "route": "/downloads/agentnexos/acceptance-plan-ar.md",
+      "status": 200,
+      "exactMatch": true
+    },
+    {
+      "route": "/downloads/agentnexos/acceptance-plan-en.md",
+      "status": 200,
+      "exactMatch": true
+    }
+  ],
+  "failures": [],
+  "legalExceptions": [
+    "privacy",
+    "terms"
+  ]
+}
