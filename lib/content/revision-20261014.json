@@ -1,52 +1,52 @@
 {
   "ar": {
     "home": {
-      "title": "ذكاء مؤسسي. مصمّم للعمل.",
-      "intro": "تصمّم AGYNEXA أنظمة ذكاء اصطناعي مخصصة تربط معرفة المؤسسة وتطبيقاتها وأدواتها التشغيلية. من دعم القرار إلى تنسيق سير العمل، نبني لكل عملية صلاحياتها وإشرافها البشري وآلية التحقق من نتيجتها.",
+      "title": "ذكاء اصطناعي من الأساس.",
+      "intro": "نبني في AGYNEXA أنظمة وكلاء تربط معرفة المؤسسة بتطبيقاتها وأدواتها. نبدأ من العمل الذي تريد إنجازه، ونحدد ما يحتاجه من بيانات وصلاحيات ومراجعة بشرية، ثم نختبر المسار من الطلب إلى النتيجة.\n\nAI-native from the ground up",
       "sections": [
         {
-          "heading": "معرفة المؤسسة، في سياق المهمة",
-          "body": "السياسة في مستند، وحالة الطلب في نظام، وتاريخ التعامل عند فريق آخر. يحتاج الموظف إلى جمع هذه الصورة قبل أن يتصرف. يبدأ تصميم النظام بتحديد المصادر المعتمدة ومعاني بياناتها وعلاقاتها، ثم إتاحة السياق المناسب للمهمة ولصلاحيات مستخدمها.\n\nتُبنى الإجابة على المادة المسترجعة، ويظل أصلها ظاهرًا. وعندما تتعارض المصادر أو تنقص المعلومة اللازمة، يحدد النظام الفجوة ويعيدها إلى صاحبها. [المعرفة المؤسسية](/ar/solutions/knowledge)",
+          "heading": "المعرفة التي يحتاجها فريقك لإنجاز العمل",
+          "body": "**Extract key information from unstructured data**\n\nنجهز المستندات والسياسات وبيانات العمل للاسترجاع، مع الاحتفاظ بمرجع كل معلومة وإصدارها وصلاحية الوصول إليها. يوفّر الاسترجاع المعزز بالتوليد سياقًا مرتبطًا بالسؤال، ويحوّل الاستخراج المستند إلى حقول يستطيع مسار العمل فحصها.\n\nعند تعارض السياسات أو تقادم السجل أو نقص البيانات، يظهر ما يحتاج مراجعة. لا يستبدل النظام المعلومة الغائبة بإجابة محتملة. [معرفة المؤسسة](/ar/solutions/knowledge)",
           "id": "home-section-1"
         },
         {
-          "heading": "نسّق العمل. وحدد مسؤولية القرار.",
-          "body": "الوكيل يفسر الطلب ويحدد ما يحتاجه من معرفة وأدوات. محرك سير العمل يدير ترتيب الخطوات وحالتها، ويفصل تجهيز المسودة عن الإرسال، وقراءة السجل عن تعديله. يمكن توزيع المهمة بين أدوار متخصصة حين تحتاج تحليلًا ومراجعة مستقلين؛ وتبقى المهمة البسيطة في مسار قصير.\n\nنصمّم نهاية واضحة للعمل: إجابة مع مصادرها، مقارنة عروض، ملف حالة، أو إجراء موثق في النظام المتصل. ويشمل التصميم حالات النقص وتعطل الاتصال والتوقف قبل إجراء حساس. [بنية النظام](/ar/platform)",
+          "heading": "اربط الوكيل بالأنظمة التي يعتمد عليها العمل",
+          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nالتكامل فعل محدد: قراءة حالة طلب، أو فحص سجل، أو تجهيز رد، أو تعديل حقل مصرح به. نحدد مدخلات الأداة، والسجلات التي تصل إليها، وكيفية التحقق من نتيجتها.\n\nيستخدم الوكيل الأدوات المتاحة ضمن صلاحيات جلسته. يتتبع مسار العمل الحالة والاستثناءات، وتنتظر التغييرات الحساسة قرار المسؤول. لا يتوسع التنفيذ المستقل قبل إثبات صلاحياته وحدوده بالاختبار.",
           "id": "home-section-2"
         },
         {
-          "heading": "حلول حول القرارات التي تتكرر",
-          "body": "**المشتريات وإدارة الموردين:** توحيد متطلبات الطلب وشروط العروض، وإظهار الفروق والمعلومات الناقصة قبل قرار الاختيار. [تفاصيل الحل](/ar/solutions/procurement)\n\n**المتابعة المالية:** ربط الاستحقاقات بحالة السداد والنزاع وسجل التواصل، وتجهيز قائمة متابعة يستطيع المسؤول العمل عليها. [تفاصيل الحل](/ar/solutions/receivables)\n\n**عمليات العملاء:** جمع سياق الحالة من المعرفة والسجلات المتاحة، واقتراح المعالجة أو تنفيذ خطوة محددة ضمن السياسة المعتمدة. [تفاصيل الحل](/ar/solutions/customer-operations)\n\n**المعرفة المؤسسية:** الوصول إلى المعلومات المسموح بها مع مصدرها وإصدارها، واستخدامها في التحليل وإعداد العمل. [تفاصيل الحل](/ar/solutions/knowledge)",
+          "heading": "ابدأ بالعملية التي تريد تحسينها",
+          "body": "**industry-specific AI powered products and solutions**\n\n**عمليات العملاء:** Resolve service, onboarding, and support journeys end-to-end. نحدد رحلة الخدمة عبر السجلات والقنوات والفرق المسؤولة، وما يستطيع الوكيل معالجته، ومتى يجب تسليم الحالة لإنسان. multilingual, culturally-nuanced chatbots that understand intent؛ وتُختبر اللغة وفهم الطلب وتسليم السياق على حالات العمل. [عمليات العملاء](/ar/solutions/customer-operations)\n\n**المشتريات والمستحقات:** نجمع الاحتياجات والعروض وحالات الفواتير والنزاعات في مخرجات قابلة للمراجعة. نفصل التوصية عن الاعتماد، والإجراء المعتمد عن أثره المثبت. [المشتريات](/ar/solutions/procurement) · [المستحقات](/ar/solutions/receivables)\n\n**العمليات الصناعية والقطاعية:** improved operational performance هدف يحتاج تعريفًا ومقياسًا؛ مثل تجهيز مراجعة صيانة أو معالجة استثناء في مستند. يحدد صاحب العملية النتيجة المطلوبة وحالات قبولها. [نطاقات القطاعات](/ar/industries)",
           "id": "home-section-3"
         },
         {
-          "heading": "الذكاء يرتّب. الإنسان يقرّر.",
-          "body": "تحدد المؤسسة ما يقرأه الوكيل وما يعدّه وما يُسمح له بتغييره. تُربط الموافقة بالإجراء ومعطياته؛ تغيرها يستدعي تقييمًا جديدًا. ويُصمّم سجل العمل ليجمع المصدر، وقرار السياسة، ونتيجة الأداة، ودليل اكتمال العملية.\n\nنختبر الطلبات الملتبسة، والمصادر المتعارضة، ومحاولات تجاوز الصلاحية، وفقد استجابة النظام الخارجي. يُحدد مستوى الاستقلالية بعد تقييم هذه الحالات ومراجعة أصحاب العملية. [الحوكمة والأمان](/ar/security)",
+          "heading": "القرار يظل عند صاحبه",
+          "body": "**empowering confident decisions across the organization**\n\nيحتاج المسؤول إلى رؤية الإجراء المقترح ومدخلاته والأدلة التي يستند إليها. يرتبط الاعتماد بهذه النسخة تحديدًا؛ وتغير المدخلات يستدعي مراجعة جديدة، وغياب الصلاحية يبقي الإجراء معلقًا.\n\nيسجل النظام نتيجة الأداة ويفحص أثرها في النظام النهائي قبل إعلان النجاح. إذا انقطع الاتصال بعد كتابة، تظل النتيجة مجهولة حتى التحقق منها. الذكاء يرتّب. الإنسان يقرّر.",
           "id": "home-section-4"
         },
         {
-          "heading": "من المعمارية إلى التشغيل",
-          "body": "نحدد أول عملية وأصل بياناتها ومعيار قبولها. نبني تجربة محدودة ونقارن مخرجاتها بالطريقة الحالية، ثم نضيف التكامل والصلاحيات تدريجيًا وفق ما أثبتته الاختبارات. يتضمن التسليم تعريفات العمل، والاختبارات، وإرشادات التشغيل والمسؤوليات المتفق عليها. [منهج التنفيذ](/ar/methodology)",
+          "heading": "مسار يستطيع فريقك تشغيله ومراجعته",
+          "body": "**Streamline workflows**\n\nنرسم الطلب والبيانات والقرار أولًا. ثم نبني مسارًا محدودًا بتكاملاته وحالات فشله، ونقيّمه مع أصحاب العملية. تحدد التجربة ما يمكن تشغيله وما يحتاج إصلاحًا قبل التوسع.\n\nيشمل التسليم المعمارية المتفق عليها وتعريفات سير العمل والموصلات واختبارات القبول وإرشادات التشغيل. تُحدد مسؤوليات الدعم والصيانة ضمن المشروع. [منهج التسليم](/ar/methodology)",
           "id": "home-section-5"
         },
         {
-          "heading": "استكشف AGYNEXA",
-          "body": "المساعد العام يساعدك على تحليل عملية وتصميم خطواتها. مساحة العميل المتصلة ببيانات المؤسسة وأدواتها تُنفذ ضمن نطاق المشروع وصلاحياته؛ التجربة العامة لا تمنح وصولًا إلى تلك الأنظمة.\n\n[افتح مساعد التصميم](/ar/agentnexos) · [حدد متطلبات مشروعك](/ar/start)",
+          "heading": "استكشف التصميم قبل توصيل أنظمة مؤسستك",
+          "body": "**connect your systems, automate tasks**\n\nيمكنك مناقشة عملية ببيانات افتراضية مع المساعد العام وتجهيز تصور لخطواتها. ويجمع موجز المشروع المحلي المتطلبات في ملف تراجعه وتشاركه بنفسك.\n\nهذه الأدوات العامة لا تمنح وصولًا إلى أنظمة الشركة. يحتاج تشغيل مساحة العميل هوية مثبتة واتصالات محددة النطاق وصلاحيات مختبرة. [مساعد التصميم](/ar/agentnexos) · [موجز المشروع](/ar/start)",
           "id": "home-section-6"
         },
         {
-          "heading": "ما النتيجة التي تحتاجها من نظامك القادم؟",
-          "body": "صف أين يتعطل العمل، وما الأنظمة التي يعتمد عليها، وكيف تبدو النتيجة الناجحة. ننطلق من هذا السياق لتحديد نطاق هندسي وخطة قبول. [ناقش مشروعك معنا](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
+          "heading": "ناقش العملية التي تريد تطويرها",
+          "body": "صف كيف يبدأ العمل وأين يتعطل، وما الأنظمة التي تحمل معلوماته. نستخدم هذه التفاصيل لتحديد نطاق هندسي أول، والوصول المطلوب، ونتيجة يستطيع فريقك تقييمها.\n\n[ناقش مشروعك معنا](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "home-section-7"
         },
         {
-          "heading": "أسئلة شائعة",
-          "body": "### هل يمكن العمل مع أنظمتنا الحالية؟\nتبدأ دراسة التكامل بواجهات الأنظمة وإصداراتها وصلاحياتها وقيود البيانات. يحدد هذا الفحص ما يمكن ربطه وما يحتاج تعديلًا؛ لا نفترض دعم اتصال لم يُختبر.\n\n### كيف تختارون النموذج والبنية؟\nنختبر جودة المهمة باللغة والمصادر المطلوبة، ثم نقارن زمن الاستجابة والتكلفة ومتطلبات النشر. الاسترجاع والذاكرة والرسم المعرفي وتعدد الوكلاء خيارات تُختار حسب طبيعة العمل.\n\n### هل يجب أن يعتمد الإنسان كل خطوة؟\nتُحدد المراجعة وفق أثر الإجراء وسياسة المؤسسة. يمكن أن يجمع النظام معلومات أو يعد مسودة دون اعتماد كل خطوة، بينما يتوقف قبل الأفعال التي تتطلب موافقة.\n\n### ما الذي يمكن تجربته هنا؟\nالمساعد العام لتصميم العمليات والموجز المحلي. التكاملات والأدوات التنفيذية الخاصة بالمؤسسة تحتاج مشروعًا وإعدادًا واختبارات مستقلة.",
+          "heading": "أسئلة قبل البداية",
+          "body": "### هل يمكن العمل مع أنظمتنا الحالية؟\nنفحص الواجهات والصلاحيات والإصدارات وقيود البيانات قبل اقتراح الموصل. تبقى الأنظمة الحالية ضمن التصميم متى دعمت واجهاتها العمل المطلوب.\n\n### هل هذا منتج مؤسسي جاهز للتشغيل؟\nتقدم AGYNEXA هندسة أنظمة مخصصة. المساعد العام تجربة للتصميم؛ أما أدوات العميل وهويته وحفظ بياناته فتُجهز وتُختبر لكل مشروع.\n\n### كيف نعرف أن النظام مفيد؟\nنتفق على العملية الحالية والمخرج المطلوب وحالات القبول. نقيّم صحة النتائج ومعالجة الفشل وتكلفة التشغيل قبل التوسع، دون وعد بنسبة توفير لم تُقَس.\n\n### هل نطاق العمل عالمي؟\nنعم. الإنجليزية لغة الموقع الأساسية مع تعريب كامل. تُحدد متطلبات النشر ومعالجة البيانات والدعم لكل مشروع.\n\n### هل يرسل الموجز بريدًا تلقائيًا؟\nلا. يجهز ملفًا محليًا ويفتح مسودة إلى adham@adham-agritech.com. تراجع الرسالة وترسلها بنفسك.",
           "id": "home-section-8"
         }
       ],
-      "seoTitle": "AGYNEXA | هندسة أنظمة الذكاء الاصطناعي وأتمتة الأعمال",
-      "seoDescription": "تصمّم AGYNEXA أنظمة ذكاء اصطناعي مخصصة تربط معرفة المؤسسة وتطبيقاتها وأدواتها التشغيلية. من دعم القرار إلى تنسيق سير العمل، نبني لكل عملية صلاحياتها وإشرافها البشري وآلية التحقق من نتيجتها."
+      "seoTitle": "AGYNEXA | هندسة وكلاء الذكاء الاصطناعي وأتمتة الأعمال",
+      "seoDescription": "وكلاء ذكاء اصطناعي مخصصون للمؤسسات، وتكامل للأنظمة وأتمتة لسير العمل، بصلاحيات واضحة وإشراف بشري وتجربة عربية كاملة."
     },
     "platform": {
       "title": "معرفة مترابطة. عمل منسّق.",
@@ -64,7 +64,7 @@
         },
         {
           "heading": "أدوات تتصل بأنظمة العمل",
-          "body": "تُقدّم وظائف النظام المتصل كأدوات محددة: قراءة حالة طلب، استرجاع مستند، تجهيز مسودة، أو تحديث حقل مصرح به. لكل أداة مدخلات ومخرجات محققة، وصلاحية، وحدود وقت وحجم، وطريقة للتحقق من أثرها.\n\nيمكن تنظيم الأدوات عبر APIs أو MCP وفق بيئة العميل. البروتوكول يتيح الاتصال؛ والسياسة تحدد من يحق له استخدامه ولأي غرض. لا تصبح أداة متاحة لمجرد أن النموذج ذكر اسمها.",
+          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nتتيح الاتصالات عمليات محددة بمدخلات محققة ووصول واضح. تبقى صلاحيات القراءة وإعداد المسودة والكتابة منفصلة، ولا ينشئ الاعتماد صلاحية غير موجودة.\n\nنختبر انقطاع الاتصال والطلبات المكررة ودليل النتيجة في النظام النهائي قبل تفعيل الكتابة الحساسة. وعندما لا يُعرف الأثر الخارجي، ينتظر الإجراء التحقق والمصالحة.",
           "id": "platform-section-3"
         },
         {
@@ -92,37 +92,37 @@
       "seoDescription": "نبني حول الأنظمة التي تستخدمها مؤسستك بالفعل. يجمع منهجنا بين المعرفة المصرح بها، والأدوات محددة النطاق، وسير العمل المنسق؛ وتكون الهوية وحالة المهمة ونقاط القرار البشري جزءًا من تصميم النظام."
     },
     "services": {
-      "title": "هندسة الذكاء الاصطناعي، من المعمارية إلى التشغيل.",
-      "intro": "حوّل متطلبات العمل إلى نظام يستطيع فريقك تشغيله وتقييمه. تشمل خدماتنا معمارية الذكاء الاصطناعي، ومعرفة المؤسسة، وتطوير الوكلاء، والتكامل، والتقييم التشغيلي. نحدد لكل مشروع مخرجاته وحدود الوصول ومعايير القبول قبل التنفيذ.",
+      "title": "هندسة العمليات التي يعتمد عليها فريقك.",
+      "intro": "ابنِ نظام ذكاء اصطناعي حول عملية محددة. نحدد المعرفة والوكلاء والتكاملات وضوابط التشغيل التي تحتاجها، مع مسؤوليات واختبارات قبول واضحة قبل التنفيذ.",
       "sections": [
         {
-          "heading": "استراتيجية الذكاء الاصطناعي ومعمارية الأنظمة",
-          "body": "نراجع كيف يصل الطلب، وما يحتاجه لإنجازه، وأين تتعطل الخطوات، ومن يملك القرار. نحدد دور النموذج مقابل القواعد الثابتة، وحدود الأدوات، وحالات التصعيد. المخرج خريطة عمل وعقد مهمة يربطان البيانات والصلاحيات بالنتيجة المطلوبة.\n\nالمخرجات: نطاق عمليات مرتب حسب الأولوية، ومعمارية النظام، وحدود الأدوات، وخطة قبول.",
+          "heading": "معمارية الذكاء الاصطناعي وتصميم العمليات",
+          "body": "نحدد ما يجب أن ينجزه النظام قبل اختيار النموذج. نفهم العملية وأصحاب القرار والأنظمة التي تحمل نتيجة التنفيذ، ثم نحدد أدوار الوكلاء والقواعد الثابتة وحدود التشغيل.\n\nالمخرج معمارية وعقد للمهمة يربط المدخلات بالأدوات والمسؤوليات وحالات القبول. يوضح ذلك ما سنبنيه وما يظل خارج النطاق الأول.",
           "id": "services-section-1"
         },
         {
-          "heading": "معرفة المؤسسة والاسترجاع المعزز بالتوليد",
-          "body": "نحدد المصادر المعتمدة وإصداراتها وحقوق الوصول، وننظم المصطلحات والكيانات والعلاقات اللازمة للعمل. يشمل النطاق تصميم الاسترجاع وتقييمه، ومعالجة التعارض والقدم ونقص الأدلة. يُختار RAG أو تمثيل معرفي أعمق وفق الأسئلة التي يجب على النظام الإجابة عنها.\n\nالمخرجات: جرد المصادر، ونموذج الوصول، وتصميم الاسترجاع، وحالات تقييم للمعرفة الناقصة أو المتعارضة.",
+          "heading": "معرفة المؤسسة ومعالجة المستندات",
+          "body": "**Extract key information from unstructured data**\n\nنجرد المصادر المعتمدة وننظم مصطلحات العمل ونصمم الاسترجاع وفق أسئلة الفريق ومهامه. يربط الاستخراج والمخرج المنظم محتوى المستند بالحقول التي يستخدمها سير العمل.\n\nيشمل التقييم غياب الدليل وتعارض الإصدارات وحدود الوصول. تبقى مراجع المصادر مرتبطة بالنتيجة كي يستطيع المراجع فحصها.",
           "id": "services-section-2"
         },
         {
-          "heading": "سير العمل الوكيلي وتنسيق الأدوار",
-          "body": "نبني واجهة الاستخدام وتنسيق الأدوار وربط الأدوات وإدارة الحالة. تُختبر المخرجات المنظمة وطلبات المتابعة وتغير المدخلات وحالات الفشل. ويُصمّم حفظ المهمة والاستئناف والتعافي وفق متطلبات العملية.\n\nالمخرجات: تعريفات المهام، وتنسيق الأدوار، ومخرجات منظمة، ومسارات استثناء مختبرة.",
+          "heading": "تطوير الوكلاء وتنسيق سير العمل",
+          "body": "**Streamline workflows**\n\nنبني الوكلاء حول طلب ومخرج محددين، وننسق الأدوار المتخصصة عندما تستفيد المهمة منها. يدير سير العمل الحالة والتحقق والاستثناءات والقرارات البشرية.\n\nيشمل النطاق المتفق عليه واجهة الاستخدام وتعريفات المهام والمخرجات المنظمة ومسارات الفشل. نقارن تعدد الوكلاء بمسار أبسط بدل اعتباره ميزة في حد ذاته.",
           "id": "services-section-3"
         },
         {
-          "heading": "تكامل التطبيقات والواجهات والأدوات",
-          "body": "نقيّم APIs والهوية وحدود الاستخدام، ثم نطور وصلات بأفعال محددة. يتضمن كل اتصال تحقق المدخلات، وفصل القراءة عن الكتابة، وإدارة المهلات، وإثبات النتيجة. تُختبر إمكانية منع التكرار قبل تشغيل أفعال خارجية مؤثرة.\n\nالمخرجات: موصلات محددة النطاق، بمدخلات محققة وصلاحيات ومعالجة للفشل ومتطلبات للتحقق من الأثر.",
+          "heading": "تكامل التطبيقات والأدوات",
+          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nتتيح الاتصالات عمليات محددة بمدخلات محققة ووصول واضح. تبقى صلاحيات القراءة وإعداد المسودة والكتابة منفصلة، ولا ينشئ الاعتماد صلاحية غير موجودة.\n\nنختبر انقطاع الاتصال والطلبات المكررة ودليل النتيجة في النظام النهائي قبل تفعيل الكتابة الحساسة. وعندما لا يُعرف الأثر الخارجي، ينتظر الإجراء التحقق والمصالحة.",
           "id": "services-section-4"
         },
         {
-          "heading": "التقييم والأمان والحوكمة",
-          "body": "نجهز حالات قبول من المجال، وحالات تعارض ونقص وتجاوز صلاحية. نراجع الأدلة التي تظهر للمستخدم، وحدود الاستقلالية، وأثر النموذج والأداة على النتيجة. تُسجل الملاحظات كحالات يمكن إعادة اختبارها مع كل إصدار.\n\nالمخرجات: حالات قبول قابلة للتكرار، وحدود للمخاطر، وقرارات موثقة بشأن المراجعة البشرية.",
+          "heading": "عمليات العملاء والوكلاء متعددو اللغات",
+          "body": "**Resolve service, onboarding, and support journeys end-to-end**\n\nرحلة العميل تحتاج هوية وسجل حالة وأفعالًا مسموحة وفريقًا مسؤولًا عن الخطوة التالية. نحدد هذه الاتصالات ونختبر انتقال الحالة مع سياقها إلى المسؤول المناسب.\n\nيشمل تقييم اللغة وفهم الطلب حالات الخدمة الفعلية للمؤسسة. تُختار القنوات والتكاملات وتُثبت ضمن المشروع، ولا نفترض وجودها لمجرد وجود واجهة محادثة.",
           "id": "services-section-5"
         },
         {
-          "heading": "النشر والرصد والتحسين",
-          "body": "تُحدد بيئة النشر ومسؤوليات الدعم والتحديث والاحتفاظ ضمن المشروع. يتضمن التسليم الوثائق والتعريفات والاختبارات وإرشادات التعامل مع الأعطال، حتى يستطيع الفريق متابعة النظام وتغيير نطاقه بصورة معلومة.\n\n### ما نحتاجه لبدء تحديد النطاق\n\nوصف عملية متكررة، وصاحبها، والأنظمة المستخدمة، وعينة افتراضية من المدخل والمخرج. يمكن مشاركة قيود الوصول واللغة والنشر دون إرسال أسرار أو بيانات عملاء في أول تواصل.\n\n[جهّز متطلبات المشروع](/ar/start) · [تواصل عبر البريد](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)\n\nالمخرجات: إرشادات النشر، والرؤية التشغيلية، ومسؤوليات الصيانة، ومعايير تحسين مرتبطة بالإصدارات.",
+          "heading": "التقييم والنشر والدعم التشغيلي",
+          "body": "تفحص اختبارات القبول المسار كاملًا: الطلب والمصدر والصلاحية ونتيجة الأداة وأثرها النهائي. نختبر المدخلات الناقصة وتعارض السياسة ورفض الوصول وفشل المزود أو التخزين.\n\nيحدد نطاق النشر الرصد والاحتفاظ والتعافي ومسؤوليات الصيانة. تُقيّم تغييرات النماذج والمعرفة والأدوات بحالات مرتبطة بالإصدار قبل زيادة الاستقلالية أو الوصول.",
           "id": "services-section-6"
         }
       ],
@@ -267,7 +267,7 @@
       "sections": [
         {
           "heading": "من قصد العميل إلى مسار المعالجة",
-          "body": "يحدد النظام الطلب وسياق الحالة، ثم يسترجع المعرفة والسجلات التي يحق له قراءتها. يراجع شروط المعالجة المعتمدة، ويحدد ما يمكن تقديمه مباشرة وما يحتاج معلومات إضافية أو اعتمادًا من مسؤول.\n\nيمكن ربط أفعال محددة مثل قراءة حالة طلب أو تجهيز رد أو تحديث حقل مسموح به. وتتحدد صلاحية كل فعل من هوية المستخدم والسياسة والأداة، لا من قدرة النموذج على اقتراحه.",
+          "body": "**multilingual, culturally-nuanced chatbots that understand intent**\n\nيحدد النظام الطلب وسياق الحالة، ثم يسترجع المعرفة والسجلات التي يحق له قراءتها. يراجع شروط المعالجة المعتمدة، ويحدد ما يمكن تقديمه مباشرة وما يحتاج معلومات إضافية أو اعتمادًا من مسؤول.\n\nيمكن ربط أفعال محددة مثل قراءة حالة طلب أو تجهيز رد أو تحديث حقل مسموح به. وتتحدد صلاحية كل فعل من هوية المستخدم والسياسة والأداة، لا من قدرة النموذج على اقتراحه.",
           "id": "solutions-customer-operations-section-1"
         },
         {
@@ -584,52 +584,52 @@
   },
   "en": {
     "home": {
-      "title": "Enterprise AI. Engineered to work.",
-      "intro": "AGYNEXA designs and builds custom AI systems that connect enterprise knowledge, applications and operational tools. From informed decisions to coordinated workflows, we engineer the permissions, human oversight and verification each process needs.",
+      "title": "AI-native from the ground up",
+      "intro": "AGYNEXA builds enterprise AI agents to connect your systems, automate tasks and bring the right knowledge into the work. We design the integrations, permissions and review points around your process, then test the complete path from request to result.",
       "sections": [
         {
-          "heading": "Enterprise knowledge, ready for the task",
-          "body": "A policy lives in a document, an order status in a system, and the history of a relationship with another team. An employee needs to assemble that picture before acting. System design starts with approved sources, their business definitions and relationships, then makes relevant context available within the user's access rights.\n\nAnswers are grounded in retrieved material, with their sources visible. When sources conflict or essential information is missing, the system identifies the gap and returns it to the responsible person. [Enterprise knowledge](/en/solutions/knowledge)",
+          "heading": "Give your agents the knowledge behind the work",
+          "body": "**Extract key information from unstructured data**\n\nA useful answer starts with the records your team can trust. We prepare documents, policies and business data for retrieval, preserving source references, versions and access rights. RAG supplies relevant context; extraction turns a document into fields a workflow can check.\n\nThe system must also recognize what is missing. Conflicting policies, an outdated record or an unanswered question remain visible instead of being filled with a plausible guess. [Enterprise knowledge](/en/solutions/knowledge)",
           "id": "home-section-1"
         },
         {
-          "heading": "Coordinate the work. Keep decisions accountable.",
-          "body": "The agent interprets the request and identifies the knowledge and tools it needs. The workflow engine manages sequence and state, separating a draft from a sent message and a record read from a record update. Specialist roles can support tasks that need independent analysis and review; simple tasks follow a short path.\n\nWe define an observable end to the work: an answer with sources, a supplier comparison, a case file, or an action recorded in the connected system. The design covers missing inputs, failed connections, and stopping before a sensitive action. [System architecture](/en/platform)",
+          "heading": "Put your existing systems to work",
+          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nAn integration is a defined action: retrieve an order, check a record, prepare a response or update an authorized field. We specify what each tool accepts, which records it can reach and how its result will be verified.\n\nAn agent selects from the tools its session is allowed to use. The workflow tracks state and exceptions, while sensitive changes wait for the responsible person. We introduce autonomous execution only within the scope that testing and policy support.",
           "id": "home-section-2"
         },
         {
-          "heading": "Solutions for recurring decisions",
-          "body": "**Procurement and supplier management:** Bring requirements and offer terms into a consistent comparison, with differences and missing information visible before selection. [Solution details](/en/solutions/procurement)\n\n**Receivables operations:** Connect due invoices to payment, dispute, and communication status, and prepare an actionable follow-up queue. [Solution details](/en/solutions/receivables)\n\n**Customer operations:** Assemble case context from available knowledge and records, then propose a resolution or perform a defined step under the approved policy. [Solution details](/en/solutions/customer-operations)\n\n**Enterprise knowledge:** Retrieve permitted information with its source and version, and use it in analysis and work preparation. [Solution details](/en/solutions/knowledge)",
+          "heading": "Choose the work you want to improve",
+          "body": "**industry-specific AI powered products and solutions**\n\n**Customer operations:** Resolve service, onboarding, and support journeys end-to-end. We scope the journey across records, channels and responsible teams, including what an agent may resolve and when it must hand over. multilingual, culturally-nuanced chatbots that understand intent can support that journey, with language and handover quality tested against actual cases. [Customer operations](/en/solutions/customer-operations)\n\n**Procurement and receivables:** Assemble requirements, offers, invoice status and disputes into reviewable work. Separate a recommendation from approval and an approved action from its verified effect. [Procurement](/en/solutions/procurement) · [Receivables](/en/solutions/receivables)\n\n**Industrial and sector workflows:** Define improved operational performance through a task that can be measured, such as preparing a maintenance review or resolving a document exception. The process owner sets the target and acceptance cases. [Industry scopes](/en/industries)",
           "id": "home-section-3"
         },
         {
-          "heading": "AI organizes. Humans decide.",
-          "body": "The organization defines what the agent can read, prepare, and change. Approval is bound to the action and its inputs; changed inputs require a new assessment. The operational record is designed to connect the source, policy decision, tool result, and evidence of completion.\n\nWe test ambiguous requests, conflicting sources, unauthorized access attempts, and lost responses from external systems. The level of autonomy follows evaluation and review with the process owner. [Governance and security](/en/security)",
+          "heading": "Keep the decision with its owner",
+          "body": "**empowering confident decisions across the organization**\n\nThe person responsible for a decision needs the proposed action, its inputs and the evidence behind it. Approval belongs to that exact version. Changed inputs require a new review; missing authority keeps the action pending.\n\nThe system records what a tool returned and checks the final system before reporting success. If a write times out, its effect is unknown until reconciled. AI organizes. Humans decide.",
           "id": "home-section-4"
         },
         {
-          "heading": "From architecture to operation",
-          "body": "We define the first process, its data sources, and acceptance criteria. A bounded pilot is compared with the current method, then integrations and permissions expand according to what testing demonstrates. Delivery includes workflow definitions, tests, operating guidance, and agreed responsibilities. [Delivery approach](/en/methodology)",
+          "heading": "Build a workflow your team can operate",
+          "body": "**Streamline workflows**\n\nWe map the request, data and decision first. Then we build a bounded path with its integrations and failure cases, and evaluate it with the people who own the process. The pilot determines what can move into operation and what still needs attention.\n\nDelivery covers the agreed architecture, workflow definitions, connectors, acceptance tests and operating guidance. Support and maintenance responsibilities are settled within the project. [Our delivery method](/en/methodology)",
           "id": "home-section-5"
         },
         {
-          "heading": "Explore AGYNEXA",
-          "body": "The public assistant helps analyze a process and design its steps. A customer workspace connected to enterprise data and tools is implemented within the project's scope and permissions; the public experience does not grant access to those systems.\n\n[Open the design assistant](/en/agentnexos) · [Define your project requirements](/en/start)",
+          "heading": "Explore the design before connecting your business",
+          "body": "Use the public assistant to examine a process with fictional data and prepare a workflow proposal. The local project brief helps collect requirements in a file you review and share yourself.\n\nThese public tools do not grant access to company systems. A customer deployment requires verified identity, scoped connections and tested permissions. [Open the design assistant](/en/agentnexos) · [Prepare a project brief](/en/start)",
           "id": "home-section-6"
         },
         {
-          "heading": "What should your next AI system deliver?",
-          "body": "Tell us where work slows down, which systems it depends on and what a successful result looks like. We will use that context to define an engineering scope and acceptance plan. [Discuss your project](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
+          "heading": "Bring us the process that needs to work better",
+          "body": "Tell us how the work starts, where it stalls and which systems hold the information. We use those details to define the first engineering scope, required access and a result your team can evaluate.\n\n[Discuss your project](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "home-section-7"
         },
         {
-          "heading": "Frequently asked questions",
-          "body": "### Can you work with our existing systems?\nIntegration discovery covers interfaces, versions, permissions, and data constraints. It establishes what can connect and what needs adjustment; an untested connection is never assumed.\n\n### How do you choose models and architecture?\nWe evaluate the task in its required language and sources, then compare response time, cost, and deployment requirements. Retrieval, memory, knowledge graphs, and multiple agents are chosen according to the work.\n\n### Does a person approve every step?\nReview depends on the impact of the action and organizational policy. A system can gather information or prepare drafts without approving each step, while pausing before actions that require authorization.\n\n### What can we try here?\nThe public process design assistant and local project brief. Enterprise integrations and execution tools require their own project, configuration, and tests.",
+          "heading": "Questions before you start",
+          "body": "### Can you work with the systems we already use?\nWe assess their APIs, permissions, versions and data constraints before proposing a connector. Existing systems remain part of the design where their interfaces support the required work.\n\n### Is this a ready-made enterprise platform?\nAGYNEXA provides custom systems engineering. The public assistant is a design experience; customer tools, identity and persistence are configured and verified for each project.\n\n### How do you measure whether the system is useful?\nAgree on the current process, required output and acceptance cases. Evaluate correctness, failure handling and operating cost before expanding scope. We do not promise a saving percentage without measured evidence.\n\n### Do you work internationally?\nThe offer is global. English is the primary site language, with complete Arabic localization. Deployment, data processing and support requirements are agreed for each engagement.\n\n### Does the brief send an email automatically?\nNo. It prepares a local file and opens a draft addressed to adham@adham-agritech.com. You review and send the message yourself.",
           "id": "home-section-8"
         }
       ],
-      "seoTitle": "AGYNEXA | Enterprise AI Systems & Automation Engineering",
-      "seoDescription": "AGYNEXA designs and builds custom AI systems that connect enterprise knowledge, applications and operational tools. From informed decisions to coordinated workflows, we engineer the permissions, human oversight and verification each process needs."
+      "seoTitle": "AGYNEXA | Enterprise AI Agents & Automation Engineering",
+      "seoDescription": "Custom enterprise AI agents, system integrations and workflow automation. English-first, with Arabic support and human-governed execution."
     },
     "platform": {
       "title": "Knowledge connected. Work coordinated.",
@@ -647,7 +647,7 @@
         },
         {
           "heading": "Tools connected to business systems",
-          "body": "Connected functions become bounded tools: read a request status, retrieve a document, prepare a draft, or update an authorized field. Each tool has validated inputs and outputs, permissions, time and size limits, and a way to verify its effect.\n\nAPIs or MCP can organize these connections according to the customer's environment. The protocol provides connectivity; policy decides who can use it and for what purpose. A tool is not available merely because a model mentions it.",
+          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nConnections expose specific operations with input validation and defined access. Read, draft and write permissions remain distinct, and an approval never creates an otherwise missing permission.\n\nWe test timeouts, duplicate requests and final-system evidence before enabling consequential writes. Where the external result is uncertain, the system holds the action for reconciliation.",
           "id": "platform-section-3"
         },
         {
@@ -675,37 +675,37 @@
       "seoDescription": "Build around the systems your organization already uses. Our engineering approach combines authorized knowledge, bounded tools and coordinated workflows, with identity, state and human decision points defined as part of the system."
     },
     "services": {
-      "title": "AI engineering, from architecture to operation.",
-      "intro": "Turn a business requirement into a system your team can operate and evaluate. Our services span AI architecture, enterprise knowledge, agent development, integration and operational evaluation. Each engagement defines deliverables, access boundaries and acceptance criteria before implementation.",
+      "title": "Streamline workflows",
+      "intro": "Build an AI system around a specific business process. AGYNEXA scopes the knowledge, agents, integrations and operating controls needed to deliver it, with responsibilities and acceptance tests defined before implementation.",
       "sections": [
         {
-          "heading": "AI strategy and system architecture",
-          "body": "We review how work arrives, what completion requires, where steps stall, and who owns the decision. The model's role is separated from fixed rules, tool permissions, and escalation paths. The output is a workflow map and task contract connecting data and authority with the intended result.\n\nDeliverables: a prioritized process scope, system architecture, tool boundaries and an acceptance plan.",
+          "heading": "AI architecture and process design",
+          "body": "Define what the system should accomplish before selecting a model. We examine the process, its decision owners and the systems that hold the result, then specify the agent roles, fixed rules and operating boundaries.\n\nThe deliverable is an architecture and task contract covering inputs, tools, responsibilities and acceptance cases. This establishes what to build and what remains outside the initial scope.",
           "id": "services-section-1"
         },
         {
-          "heading": "Enterprise knowledge and RAG",
-          "body": "We identify approved sources, versions, and access rights, and organize the terms, entities, and relationships the work needs. Scope includes retrieval design and evaluation, source conflicts, outdated content, and missing evidence. RAG or a deeper knowledge representation is selected according to the questions the system must answer.\n\nDeliverables: a source inventory, access model, retrieval design and evaluation cases for incomplete or conflicting knowledge.",
+          "heading": "Enterprise knowledge and document intelligence",
+          "body": "**Extract key information from unstructured data**\n\nWe identify approved sources, organize business terminology and design retrieval around the questions and tasks the team needs to answer. Extraction and structured outputs connect document content to the fields a workflow uses.\n\nEvaluation covers absent evidence, conflicting versions and access boundaries. Source references remain attached to results so a reviewer can check the answer.",
           "id": "services-section-2"
         },
         {
           "heading": "Agentic workflows and orchestration",
-          "body": "We build the interface, role coordination, tool connections, and state management. Structured outputs, follow-up requests, changed inputs, and failure cases are tested. Persistence, resumption, and recovery follow the requirements of the process.\n\nDeliverables: task definitions, role coordination, structured outputs and tested exception paths.",
+          "body": "**Streamline workflows**\n\nWe build agents around a defined request and output, coordinating specialist roles only where the task benefits from them. The workflow manages state, validation, exceptions and human decisions.\n\nThe agreed scope includes the user interface, task definitions, structured outputs and failure paths. A multi-agent design is compared with a simpler path rather than treated as a benefit on its own.",
           "id": "services-section-3"
         },
         {
-          "heading": "Application, API and tool integration",
-          "body": "We assess APIs, identity, and usage limits, then build connections with defined actions. Each connection includes input validation, separate read and write permissions, timeouts, and result verification. Duplicate prevention is tested before consequential external actions run.\n\nDeliverables: scoped connectors with validated inputs, permissions, failure handling and effect-verification requirements.",
+          "heading": "Application and tool integration",
+          "body": "**Turn APIs, MCP servers and external services into reusable tools**\n\nConnections expose specific operations with input validation and defined access. Read, draft and write permissions remain distinct, and an approval never creates an otherwise missing permission.\n\nWe test timeouts, duplicate requests and final-system evidence before enabling consequential writes. Where the external result is uncertain, the system holds the action for reconciliation.",
           "id": "services-section-4"
         },
         {
-          "heading": "Evaluation, security and governance",
-          "body": "We prepare domain acceptance cases and cases for conflict, incomplete input, and unauthorized access. We review the evidence shown to users, autonomy boundaries, and the contribution of models and tools to the result. Findings become repeatable cases for each release.\n\nDeliverables: repeatable acceptance cases, risk boundaries and documented decisions about human review.",
+          "heading": "Customer operations and multilingual agents",
+          "body": "**Resolve service, onboarding, and support journeys end-to-end**\n\nA customer journey depends on more than an answer: identity, case history, permitted actions and the team responsible for the next step. We scope those connections and test the handover with its context intact.\n\nLanguage and intent evaluation cover the organization’s real service cases. Channels and integrations are selected and verified within each engagement, not assumed from a chat interface.",
           "id": "services-section-5"
         },
         {
-          "heading": "Deployment, observability and improvement",
-          "body": "Deployment, support, updates, and retention responsibilities are agreed within the project. Delivery includes documentation, definitions, tests, and failure-handling guidance so the team can maintain the system and change its scope deliberately.\n\n### What starts the scoping discussion\n\nA recurring process, its owner, existing systems, and a fictional input/output example. Access, language, and deployment constraints can be shared without secrets or customer records in the first contact.\n\n[Prepare project requirements](/en/start) · [Contact by email](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)\n\nDeliverables: deployment guidance, operational visibility, maintenance responsibilities and versioned improvement criteria.",
+          "heading": "Evaluation, deployment and operational support",
+          "body": "Acceptance testing checks the complete path: request, source, permission, tool result and final-system effect. We include incomplete input, policy conflicts, rejected access and provider or storage failures.\n\nDeployment scope defines visibility, retention, recovery and maintenance responsibilities. Changes to models, knowledge and tools are evaluated against versioned cases before autonomy or access expands.",
           "id": "services-section-6"
         }
       ],
@@ -850,7 +850,7 @@
       "sections": [
         {
           "heading": "From customer intent to a resolution path",
-          "body": "The system identifies the request and its context, then retrieves knowledge and records it is permitted to read. It checks approved resolution rules and determines what can be provided directly, what needs additional input, and what requires authorization.\n\nDefined actions can include reading an order status, preparing a reply, or updating an authorized field. Each action's permission comes from identity, policy, and the tool, not the model's ability to propose it.",
+          "body": "**multilingual, culturally-nuanced chatbots that understand intent**\n\nThe system identifies the request and its context, then retrieves knowledge and records it is permitted to read. It checks approved resolution rules and determines what can be provided directly, what needs additional input, and what requires authorization.\n\nDefined actions can include reading an order status, preparing a reply, or updating an authorized field. Each action's permission comes from identity, policy, and the tool, not the model's ability to propose it.",
           "id": "solutions-customer-operations-section-1"
         },
         {

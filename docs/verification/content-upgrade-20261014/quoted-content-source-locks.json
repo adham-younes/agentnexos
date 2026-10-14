@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-14T20:43:49.893Z",
+  "exactQuotes": [
+    {
+      "source": "Inception42",
+      "quote": "AI-native from the ground up",
+      "words": 5,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "AIQ",
+      "quote": "improved operational performance",
+      "words": 3,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "Presight",
+      "quote": "industry-specific AI powered products and solutions",
+      "words": 6,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "OnDemand",
+      "quote": "Turn APIs, MCP servers and external services into reusable tools",
+      "words": 10,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "MOZN",
+      "quote": "empowering confident decisions across the organization",
+      "words": 6,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "Lucidya",
+      "quote": "multilingual, culturally-nuanced chatbots that understand intent",
+      "words": 6,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "Unifonic",
+      "quote": "Resolve service, onboarding, and support journeys end-to-end",
+      "words": 7,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "DXwand / ORXTRA",
+      "quote": "Streamline workflows",
+      "words": 2,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "WideBot",
+      "quote": "Extract key information from unstructured data",
+      "words": 6,
+      "en": true,
+      "ar": true
+    },
+    {
+      "source": "HUMAIN",
+      "quote": "connect your systems, automate tasks",
+      "words": 5,
+      "en": true,
+      "ar": true
+    }
+  ]
+}

@@ -5,8 +5,7 @@ import {
   Inter,
   Newsreader,
   Space_Grotesk,
-  Noto_Sans_Arabic,
-  Noto_Naskh_Arabic,
+  IBM_Plex_Sans_Arabic,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -37,13 +36,13 @@ const jetbrainsMono = Space_Grotesk({
 });
 
 // Arabic companion: Newsreader has no Arabic glyphs. Keep joining and readable line height.
-const plexArabic = Noto_Sans_Arabic({
+const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-arabic",
 });
 
-const arabicDisplay = Noto_Naskh_Arabic({ subsets: ["arabic", "latin"], weight: ["400", "500", "600", "700"], variable: "--font-arabic-display" });
+
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -118,7 +117,7 @@ export default async function LocaleLayout({
   return (
     <html lang={localeBcp47[typed]} dir={localeDir[typed]}>
       <body
-        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} ${arabicDisplay.variable} font-sans antialiased`}
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} font-sans antialiased`}
       >
         <a href="#main-content" className="skip-link">{locale === "ar" ? "انتقل إلى المحتوى" : "Skip to content"}</a>
         <LocaleProvider locale={typed}>{children}</LocaleProvider>

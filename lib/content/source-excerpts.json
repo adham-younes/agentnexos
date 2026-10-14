@@ -1,0 +1,82 @@
+[
+  {
+    "id": "inception",
+    "source": "Inception42",
+    "url": "https://inception42.ai/",
+    "quote": "AI-native from the ground up",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "aiq",
+    "source": "AIQ",
+    "url": "https://aiq.ae/",
+    "quote": "improved operational performance",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "presight",
+    "source": "Presight",
+    "url": "https://www.presight.ai/",
+    "quote": "industry-specific AI powered products and solutions",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "ondemand",
+    "source": "OnDemand",
+    "url": "https://on-demand.io/",
+    "quote": "Turn APIs, MCP servers and external services into reusable tools",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "mozn",
+    "source": "MOZN",
+    "url": "https://www.mozn.ai/",
+    "quote": "empowering confident decisions across the organization",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "lucidya",
+    "source": "Lucidya",
+    "url": "https://www.lucidya.com/",
+    "quote": "multilingual, culturally-nuanced chatbots that understand intent",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "unifonic",
+    "source": "Unifonic",
+    "url": "https://www.unifonic.com/",
+    "quote": "Resolve service, onboarding, and support journeys end-to-end",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "dxwand",
+    "source": "DXwand / ORXTRA",
+    "url": "https://dxwand.com/",
+    "quote": "Streamline workflows",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "widebot",
+    "source": "WideBot",
+    "url": "https://widebot.ai/",
+    "quote": "Extract key information from unstructured data",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  },
+  {
+    "id": "humain",
+    "source": "HUMAIN",
+    "url": "https://humain.ai/",
+    "quote": "connect your systems, automate tasks",
+    "evidence": "Exact substring of the owner-provided official-site excerpt. Official URLs reopened; OnDemand/HUMAIN dynamic homepage extraction remains limited.",
+    "locked": true
+  }
+]
