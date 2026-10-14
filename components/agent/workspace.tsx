@@ -71,7 +71,7 @@ export function AgentWorkspace() {
         <div className="mx-auto flex min-h-20 max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3" aria-label={c.home}>
             <span className="flex size-10 items-center justify-center rounded-xl border border-border bg-secondary"><Command className="size-5" aria-hidden="true" /></span>
-            <span dir="ltr" className="text-xl font-semibold tracking-tight">Agentnexos</span>
+            <span dir="ltr" className="text-xl font-semibold tracking-tight">AGYNEXA</span>
           </Link>
           <LocaleSwitcher />
         </div>
@@ -100,7 +100,7 @@ export function AgentWorkspace() {
                 <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{reviewed.intro}</p><details className="mt-6"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><ContentSections sections={reviewed.sections}/></details>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
-                <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "Agentnexos"}</div>
+                <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "AGYNEXA"}</div>
                 <MessageContent className="w-full text-sm leading-8 group-[.is-user]:bg-secondary group-[.is-user]:text-foreground">
                   {message.parts.map((part, i) => part.type === "text" ? <MessageResponse key={i} dir={locale === "ar" ? "rtl" : "ltr"} components={{ img: () => null }}>{part.text}</MessageResponse> : null)}
                 </MessageContent>

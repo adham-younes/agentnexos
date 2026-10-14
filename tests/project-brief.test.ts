@@ -41,7 +41,7 @@ test("project mail draft preserves complete short text and cannot inject recipie
   const url = new URL(draft.href);
   assert.equal(url.pathname, "adham@adham-agritech.com");
   assert.equal(url.searchParams.get("body"), text);
-  assert.equal(url.searchParams.get("subject"), "Agentnexos project discussion");
+  assert.equal(url.searchParams.get("subject"), "AGYNEXA project discussion");
 });
 test("long Arabic mail draft requests the complete attachment without truncation", () => {
   const draft = projectEmailDraft("تفاصيل المشروع ".repeat(500), "ar");

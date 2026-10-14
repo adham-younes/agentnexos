@@ -1,0 +1,11 @@
+{
+  "base": "http://localhost:3018",
+  "checkedAt": "2026-10-14T20:10:35.364Z",
+  "pages": 102,
+  "interactions": 2,
+  "browserFailures": [],
+  "contentPages": 30,
+  "downloads": 4,
+  "contentFailures": [],
+  "rawEvidence": "output/agynexa-reference/local-browser.json and local-content.json"
+}

@@ -1,16 +1,16 @@
 {
   "ar": {
     "home": {
-      "title": "أنظمة وكلاء مبنية على أعمالك",
-      "intro": "Agentnexos لهندسة أنظمة الذكاء الاصطناعي الوكيلة. نربط معرفة المؤسسة وأنظمتها بمهام يمكن للوكيل إنجازها، من البحث والتحليل إلى إعداد المخرجات وتنفيذ الإجراءات المصرح بها. يتحدد كل نظام حول سياق العمل، ومسؤولية القرار، والنتيجة التي يحتاجها فريقك.",
+      "title": "ذكاء مؤسسي. مصمّم للعمل.",
+      "intro": "تصمّم AGYNEXA أنظمة ذكاء اصطناعي مخصصة تربط معرفة المؤسسة وتطبيقاتها وأدواتها التشغيلية. من دعم القرار إلى تنسيق سير العمل، نبني لكل عملية صلاحياتها وإشرافها البشري وآلية التحقق من نتيجتها.",
       "sections": [
         {
-          "heading": "المعرفة التي تحتاجها المهمة، في موضع استخدامها",
+          "heading": "معرفة المؤسسة، في سياق المهمة",
           "body": "السياسة في مستند، وحالة الطلب في نظام، وتاريخ التعامل عند فريق آخر. يحتاج الموظف إلى جمع هذه الصورة قبل أن يتصرف. يبدأ تصميم النظام بتحديد المصادر المعتمدة ومعاني بياناتها وعلاقاتها، ثم إتاحة السياق المناسب للمهمة ولصلاحيات مستخدمها.\n\nتُبنى الإجابة على المادة المسترجعة، ويظل أصلها ظاهرًا. وعندما تتعارض المصادر أو تنقص المعلومة اللازمة، يحدد النظام الفجوة ويعيدها إلى صاحبها. [المعرفة المؤسسية](/ar/solutions/knowledge)",
           "id": "home-section-1"
         },
         {
-          "heading": "من الطلب إلى نتيجة داخل سير العمل",
+          "heading": "نسّق العمل. وحدد مسؤولية القرار.",
           "body": "الوكيل يفسر الطلب ويحدد ما يحتاجه من معرفة وأدوات. محرك سير العمل يدير ترتيب الخطوات وحالتها، ويفصل تجهيز المسودة عن الإرسال، وقراءة السجل عن تعديله. يمكن توزيع المهمة بين أدوار متخصصة حين تحتاج تحليلًا ومراجعة مستقلين؛ وتبقى المهمة البسيطة في مسار قصير.\n\nنصمّم نهاية واضحة للعمل: إجابة مع مصادرها، مقارنة عروض، ملف حالة، أو إجراء موثق في النظام المتصل. ويشمل التصميم حالات النقص وتعطل الاتصال والتوقف قبل إجراء حساس. [بنية النظام](/ar/platform)",
           "id": "home-section-2"
         },
@@ -20,23 +20,23 @@
           "id": "home-section-3"
         },
         {
-          "heading": "التحكم جزء من تصميم التنفيذ",
+          "heading": "الذكاء يرتّب. الإنسان يقرّر.",
           "body": "تحدد المؤسسة ما يقرأه الوكيل وما يعدّه وما يُسمح له بتغييره. تُربط الموافقة بالإجراء ومعطياته؛ تغيرها يستدعي تقييمًا جديدًا. ويُصمّم سجل العمل ليجمع المصدر، وقرار السياسة، ونتيجة الأداة، ودليل اكتمال العملية.\n\nنختبر الطلبات الملتبسة، والمصادر المتعارضة، ومحاولات تجاوز الصلاحية، وفقد استجابة النظام الخارجي. يُحدد مستوى الاستقلالية بعد تقييم هذه الحالات ومراجعة أصحاب العملية. [الحوكمة والأمان](/ar/security)",
           "id": "home-section-4"
         },
         {
-          "heading": "كيف يصل النظام إلى التشغيل",
+          "heading": "من المعمارية إلى التشغيل",
           "body": "نحدد أول عملية وأصل بياناتها ومعيار قبولها. نبني تجربة محدودة ونقارن مخرجاتها بالطريقة الحالية، ثم نضيف التكامل والصلاحيات تدريجيًا وفق ما أثبتته الاختبارات. يتضمن التسليم تعريفات العمل، والاختبارات، وإرشادات التشغيل والمسؤوليات المتفق عليها. [منهج التنفيذ](/ar/methodology)",
           "id": "home-section-5"
         },
         {
-          "heading": "استكشف Agentnexos",
+          "heading": "استكشف AGYNEXA",
           "body": "المساعد العام يساعدك على تحليل عملية وتصميم خطواتها. مساحة العميل المتصلة ببيانات المؤسسة وأدواتها تُنفذ ضمن نطاق المشروع وصلاحياته؛ التجربة العامة لا تمنح وصولًا إلى تلك الأنظمة.\n\n[افتح مساعد التصميم](/ar/agentnexos) · [حدد متطلبات مشروعك](/ar/start)",
           "id": "home-section-6"
         },
         {
-          "heading": "ناقش النظام الذي يحتاجه فريقك",
-          "body": "شارك وصفًا للعملية، والأنظمة المستخدمة، والمخرج المطلوب. نبدأ من هذه المعلومات لتحديد النطاق والبيانات واختبارات القبول. [تواصل بشأن مشروعك](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "heading": "ما النتيجة التي تحتاجها من نظامك القادم؟",
+          "body": "صف أين يتعطل العمل، وما الأنظمة التي يعتمد عليها، وكيف تبدو النتيجة الناجحة. ننطلق من هذا السياق لتحديد نطاق هندسي وخطة قبول. [ناقش مشروعك معنا](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "home-section-7"
         },
         {
@@ -45,12 +45,12 @@
           "id": "home-section-8"
         }
       ],
-      "seoTitle": "أنظمة وكلاء مبنية على أعمالك | Agentnexos",
-      "seoDescription": "Agentnexos لهندسة أنظمة الذكاء الاصطناعي الوكيلة. نربط معرفة المؤسسة وأنظمتها بمهام يمكن للوكيل إنجازها، من البحث والتحليل إلى إعداد المخرجات وتنفيذ الإجراءات ا"
+      "seoTitle": "AGYNEXA | هندسة أنظمة الذكاء الاصطناعي وأتمتة الأعمال",
+      "seoDescription": "تصمّم AGYNEXA أنظمة ذكاء اصطناعي مخصصة تربط معرفة المؤسسة وتطبيقاتها وأدواتها التشغيلية. من دعم القرار إلى تنسيق سير العمل، نبني لكل عملية صلاحياتها وإشرافها البشري وآلية التحقق من نتيجتها."
     },
     "platform": {
-      "title": "المعرفة والأدوات وسير العمل، في نظام واحد",
-      "intro": "نبني النظام الوكيل حول طريقة عمل المؤسسة: مصادر المعرفة، وأدوار المستخدمين، وقواعد القرار، والأنظمة التي تحمل نتيجة التنفيذ. يرتبط النموذج بهذه المكونات عبر عقود محددة؛ ويحتفظ محرك العمل بالحالة ومسار التوقف والاستئناف.",
+      "title": "معرفة مترابطة. عمل منسّق.",
+      "intro": "نبني حول الأنظمة التي تستخدمها مؤسستك بالفعل. يجمع منهجنا بين المعرفة المصرح بها، والأدوات محددة النطاق، وسير العمل المنسق؛ وتكون الهوية وحالة المهمة ونقاط القرار البشري جزءًا من تصميم النظام.",
       "sections": [
         {
           "heading": "طبقة المعرفة والسياق",
@@ -88,50 +88,50 @@
           "id": "platform-section-7"
         }
       ],
-      "seoTitle": "المعرفة والأدوات وسير العمل، في نظام واحد | Agentnexos",
-      "seoDescription": "نبني النظام الوكيل حول طريقة عمل المؤسسة: مصادر المعرفة، وأدوار المستخدمين، وقواعد القرار، والأنظمة التي تحمل نتيجة التنفيذ. يرتبط النموذج بهذه المكونات عبر عقو"
+      "seoTitle": "معرفة مترابطة. عمل منسّق. | AGYNEXA",
+      "seoDescription": "نبني حول الأنظمة التي تستخدمها مؤسستك بالفعل. يجمع منهجنا بين المعرفة المصرح بها، والأدوات محددة النطاق، وسير العمل المنسق؛ وتكون الهوية وحالة المهمة ونقاط القرار البشري جزءًا من تصميم النظام."
     },
     "services": {
-      "title": "خدمات هندسة النظام من احتياج العمل إلى التشغيل",
-      "intro": "يمكن أن يبدأ التعاون بتطوير عملية محددة، أو تجهيز المعرفة، أو إصلاح تكامل قائم. يُحدد نطاق العمل والمخرجات واختبارات قبولها قبل بناء النظام؛ وتختار المؤسسة مستوى الوصول والتنفيذ المناسب لها.",
+      "title": "هندسة الذكاء الاصطناعي، من المعمارية إلى التشغيل.",
+      "intro": "حوّل متطلبات العمل إلى نظام يستطيع فريقك تشغيله وتقييمه. تشمل خدماتنا معمارية الذكاء الاصطناعي، ومعرفة المؤسسة، وتطوير الوكلاء، والتكامل، والتقييم التشغيلي. نحدد لكل مشروع مخرجاته وحدود الوصول ومعايير القبول قبل التنفيذ.",
       "sections": [
         {
-          "heading": "تصميم العملية والبنية",
-          "body": "نراجع كيف يصل الطلب، وما يحتاجه لإنجازه، وأين تتعطل الخطوات، ومن يملك القرار. نحدد دور النموذج مقابل القواعد الثابتة، وحدود الأدوات، وحالات التصعيد. المخرج خريطة عمل وعقد مهمة يربطان البيانات والصلاحيات بالنتيجة المطلوبة.",
+          "heading": "استراتيجية الذكاء الاصطناعي ومعمارية الأنظمة",
+          "body": "نراجع كيف يصل الطلب، وما يحتاجه لإنجازه، وأين تتعطل الخطوات، ومن يملك القرار. نحدد دور النموذج مقابل القواعد الثابتة، وحدود الأدوات، وحالات التصعيد. المخرج خريطة عمل وعقد مهمة يربطان البيانات والصلاحيات بالنتيجة المطلوبة.\n\nالمخرجات: نطاق عمليات مرتب حسب الأولوية، ومعمارية النظام، وحدود الأدوات، وخطة قبول.",
           "id": "services-section-1"
         },
         {
-          "heading": "تجهيز المعرفة المؤسسية",
-          "body": "نحدد المصادر المعتمدة وإصداراتها وحقوق الوصول، وننظم المصطلحات والكيانات والعلاقات اللازمة للعمل. يشمل النطاق تصميم الاسترجاع وتقييمه، ومعالجة التعارض والقدم ونقص الأدلة. يُختار RAG أو تمثيل معرفي أعمق وفق الأسئلة التي يجب على النظام الإجابة عنها.",
+          "heading": "معرفة المؤسسة والاسترجاع المعزز بالتوليد",
+          "body": "نحدد المصادر المعتمدة وإصداراتها وحقوق الوصول، وننظم المصطلحات والكيانات والعلاقات اللازمة للعمل. يشمل النطاق تصميم الاسترجاع وتقييمه، ومعالجة التعارض والقدم ونقص الأدلة. يُختار RAG أو تمثيل معرفي أعمق وفق الأسئلة التي يجب على النظام الإجابة عنها.\n\nالمخرجات: جرد المصادر، ونموذج الوصول، وتصميم الاسترجاع، وحالات تقييم للمعرفة الناقصة أو المتعارضة.",
           "id": "services-section-2"
         },
         {
-          "heading": "تطوير الوكلاء وسير العمل",
-          "body": "نبني واجهة الاستخدام وتنسيق الأدوار وربط الأدوات وإدارة الحالة. تُختبر المخرجات المنظمة وطلبات المتابعة وتغير المدخلات وحالات الفشل. ويُصمّم حفظ المهمة والاستئناف والتعافي وفق متطلبات العملية.",
+          "heading": "سير العمل الوكيلي وتنسيق الأدوار",
+          "body": "نبني واجهة الاستخدام وتنسيق الأدوار وربط الأدوات وإدارة الحالة. تُختبر المخرجات المنظمة وطلبات المتابعة وتغير المدخلات وحالات الفشل. ويُصمّم حفظ المهمة والاستئناف والتعافي وفق متطلبات العملية.\n\nالمخرجات: تعريفات المهام، وتنسيق الأدوار، ومخرجات منظمة، ومسارات استثناء مختبرة.",
           "id": "services-section-3"
         },
         {
-          "heading": "ربط الأنظمة والأدوات",
-          "body": "نقيّم APIs والهوية وحدود الاستخدام، ثم نطور وصلات بأفعال محددة. يتضمن كل اتصال تحقق المدخلات، وفصل القراءة عن الكتابة، وإدارة المهلات، وإثبات النتيجة. تُختبر إمكانية منع التكرار قبل تشغيل أفعال خارجية مؤثرة.",
+          "heading": "تكامل التطبيقات والواجهات والأدوات",
+          "body": "نقيّم APIs والهوية وحدود الاستخدام، ثم نطور وصلات بأفعال محددة. يتضمن كل اتصال تحقق المدخلات، وفصل القراءة عن الكتابة، وإدارة المهلات، وإثبات النتيجة. تُختبر إمكانية منع التكرار قبل تشغيل أفعال خارجية مؤثرة.\n\nالمخرجات: موصلات محددة النطاق، بمدخلات محققة وصلاحيات ومعالجة للفشل ومتطلبات للتحقق من الأثر.",
           "id": "services-section-4"
         },
         {
-          "heading": "التقييم والحوكمة",
-          "body": "نجهز حالات قبول من المجال، وحالات تعارض ونقص وتجاوز صلاحية. نراجع الأدلة التي تظهر للمستخدم، وحدود الاستقلالية، وأثر النموذج والأداة على النتيجة. تُسجل الملاحظات كحالات يمكن إعادة اختبارها مع كل إصدار.",
+          "heading": "التقييم والأمان والحوكمة",
+          "body": "نجهز حالات قبول من المجال، وحالات تعارض ونقص وتجاوز صلاحية. نراجع الأدلة التي تظهر للمستخدم، وحدود الاستقلالية، وأثر النموذج والأداة على النتيجة. تُسجل الملاحظات كحالات يمكن إعادة اختبارها مع كل إصدار.\n\nالمخرجات: حالات قبول قابلة للتكرار، وحدود للمخاطر، وقرارات موثقة بشأن المراجعة البشرية.",
           "id": "services-section-5"
         },
         {
-          "heading": "التسليم والتشغيل",
-          "body": "تُحدد بيئة النشر ومسؤوليات الدعم والتحديث والاحتفاظ ضمن المشروع. يتضمن التسليم الوثائق والتعريفات والاختبارات وإرشادات التعامل مع الأعطال، حتى يستطيع الفريق متابعة النظام وتغيير نطاقه بصورة معلومة.\n\n### ما نحتاجه لبدء تحديد النطاق\n\nوصف عملية متكررة، وصاحبها، والأنظمة المستخدمة، وعينة افتراضية من المدخل والمخرج. يمكن مشاركة قيود الوصول واللغة والنشر دون إرسال أسرار أو بيانات عملاء في أول تواصل.\n\n[جهّز متطلبات المشروع](/ar/start) · [تواصل عبر البريد](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "heading": "النشر والرصد والتحسين",
+          "body": "تُحدد بيئة النشر ومسؤوليات الدعم والتحديث والاحتفاظ ضمن المشروع. يتضمن التسليم الوثائق والتعريفات والاختبارات وإرشادات التعامل مع الأعطال، حتى يستطيع الفريق متابعة النظام وتغيير نطاقه بصورة معلومة.\n\n### ما نحتاجه لبدء تحديد النطاق\n\nوصف عملية متكررة، وصاحبها، والأنظمة المستخدمة، وعينة افتراضية من المدخل والمخرج. يمكن مشاركة قيود الوصول واللغة والنشر دون إرسال أسرار أو بيانات عملاء في أول تواصل.\n\n[جهّز متطلبات المشروع](/ar/start) · [تواصل عبر البريد](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)\n\nالمخرجات: إرشادات النشر، والرؤية التشغيلية، ومسؤوليات الصيانة، ومعايير تحسين مرتبطة بالإصدارات.",
           "id": "services-section-6"
         }
       ],
-      "seoTitle": "خدمات هندسة النظام من احتياج العمل إلى التشغيل | Agentnexos",
-      "seoDescription": "يمكن أن يبدأ التعاون بتطوير عملية محددة، أو تجهيز المعرفة، أو إصلاح تكامل قائم. يُحدد نطاق العمل والمخرجات واختبارات قبولها قبل بناء النظام؛ وتختار المؤسسة مستو"
+      "seoTitle": "هندسة الذكاء الاصطناعي، من المعمارية إلى التشغيل. | AGYNEXA",
+      "seoDescription": "حوّل متطلبات العمل إلى نظام يستطيع فريقك تشغيله وتقييمه. تشمل خدماتنا معمارية الذكاء الاصطناعي، ومعرفة المؤسسة، وتطوير الوكلاء، والتكامل، والتقييم التشغيلي. نحدد لكل مشروع مخرجاته وحدود الوصول ومعايير القبول قبل التنفيذ."
     },
     "solutions": {
-      "title": "حلول تربط معرفة المؤسسة بما يحتاج العمل إنجازه",
-      "intro": "تتكرر الحاجة إلى الوكلاء عندما تعتمد المهمة على معلومات موزعة، وتحتاج تفسيرًا أو تنسيقًا قبل الوصول إلى قرار أو إجراء. نحدد الحل حول هذه المهمة، ثم نربطه بمصادرها وقواعدها وأنظمة نتيجتها.",
+      "title": "اربط الذكاء بالعمل الذي يهم مؤسستك.",
+      "intro": "انتقل من معلومات متفرقة إلى خطوة تالية واضحة. نصمم حلولًا لمعرفة المؤسسة والمشتريات والمستحقات وعمليات العملاء، تربط المصادر والأنظمة المناسبة مع إبقاء القرار لدى صاحبه.",
       "sections": [
         {
           "heading": "المعرفة المؤسسية",
@@ -159,8 +159,8 @@
           "id": "solutions-section-5"
         }
       ],
-      "seoTitle": "حلول تربط معرفة المؤسسة بما يحتاج العمل إنجازه | Agentnexos",
-      "seoDescription": "تتكرر الحاجة إلى الوكلاء عندما تعتمد المهمة على معلومات موزعة، وتحتاج تفسيرًا أو تنسيقًا قبل الوصول إلى قرار أو إجراء. نحدد الحل حول هذه المهمة، ثم نربطه بمصادر"
+      "seoTitle": "اربط الذكاء بالعمل الذي يهم مؤسستك. | AGYNEXA",
+      "seoDescription": "انتقل من معلومات متفرقة إلى خطوة تالية واضحة. نصمم حلولًا لمعرفة المؤسسة والمشتريات والمستحقات وعمليات العملاء، تربط المصادر والأنظمة المناسبة مع إبقاء القرار لدى صاحبه."
     },
     "solutions/knowledge": {
       "title": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها",
@@ -192,7 +192,7 @@
           "id": "solutions-knowledge-section-5"
         }
       ],
-      "seoTitle": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها | Agentnexos",
+      "seoTitle": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها | AGYNEXA",
       "seoDescription": "توزع المعلومات بين السياسات والعقود والتقارير وقواعد البيانات يجعل السؤال الواحد رحلة بحث بين فرق وأنظمة. وقد يعثر الموظف على المستند دون أن يعرف إن كانت نسخته "
     },
     "solutions/procurement": {
@@ -225,7 +225,7 @@
           "id": "solutions-procurement-section-5"
         }
       ],
-      "seoTitle": "مراجعة مشتريات تجمع شروط القرار في موضع واحد | Agentnexos",
+      "seoTitle": "مراجعة مشتريات تجمع شروط القرار في موضع واحد | AGYNEXA",
       "seoDescription": "يصعب اختيار العرض المناسب عندما تختلف وصف البنود ووحدات القياس والشحن والضمان ومواعيد التسليم. ويزيد العبء حين تكون معلومات المورد وسجل التعامل والسياسة الشرائي"
     },
     "solutions/receivables": {
@@ -258,7 +258,7 @@
           "id": "solutions-receivables-section-5"
         }
       ],
-      "seoTitle": "متابعة المستحقات وفق حالة كل فاتورة | Agentnexos",
+      "seoTitle": "متابعة المستحقات وفق حالة كل فاتورة | AGYNEXA",
       "seoDescription": "قائمة الفواتير وحدها لا تكفي لتحديد التواصل التالي. قد تكون الفاتورة مسددة جزئيًا، أو محل نزاع، أو مرتبطة بوعد سداد، أو تحتاج مستندًا ناقصًا. جمع هذه التفاصيل ي"
     },
     "solutions/customer-operations": {
@@ -286,12 +286,12 @@
           "id": "solutions-customer-operations-section-4"
         }
       ],
-      "seoTitle": "معالجة حالات العملاء بسياق متصل وحدود واضحة | Agentnexos",
+      "seoTitle": "معالجة حالات العملاء بسياق متصل وحدود واضحة | AGYNEXA",
       "seoDescription": "عندما تتوزع الحالة بين نظام الدعم والطلبات والفوترة والمعرفة، يضطر الموظف إلى إعادة جمع السياق قبل كل خطوة. وقد ينتقل العميل بين فرق دون أن تنتقل معها الأسباب و"
     },
     "industries": {
-      "title": "حلول تتشكل وفق واقع القطاع",
-      "intro": "تختلف قيمة الوكيل باختلاف البيانات والقيود والمسؤولية داخل القطاع. نحدد العملية المستهدفة أولًا، ثم نختار المعرفة والأدوات ونقاط المراجعة التي تناسبها. الأمثلة التالية توضح نطاقات تصميم ممكنة؛ لا تمثل دراسات عملاء أو منتجات قطاعية جاهزة.",
+      "title": "نفهم القطاع. ونبني حول العمل.",
+      "intro": "سياق القطاع يحدد المعلومات المهمة، ومن يملك صلاحية التصرف، وكيف تُراجع النتيجة. نحدد نطاق الحلول وفق هذه المتطلبات، من العمليات التجارية والخدمات المهنية إلى سير العمل الصناعي والخدمات العامة. الأمثلة التالية نطاقات تطوير مقترحة، وليست ادعاءً بمشروعات قطاعية منفذة.",
       "sections": [
         {
           "heading": "التجارة والتوزيع",
@@ -319,17 +319,27 @@
           "id": "industries-section-5"
         },
         {
+          "id": "industries-section-7",
+          "heading": "العمليات المالية والإدارية",
+          "body": "نحدد نطاق فحص المستندات والتقارير الداخلية وتجهيز ملفات الحالات وفق السجلات المصرح بها. تبقى القرارات ذات الأثر المالي أو التنظيمي خاضعة لمراجعة بشرية مسؤولة. هذا نطاق هندسي مخصص، وليس شهادة امتثال."
+        },
+        {
+          "id": "industries-section-8",
+          "heading": "الخدمات العامة والعمليات المؤسسية",
+          "body": "ننظم السياسات وسجلات الخدمة المسموح بها، ونجهز ملخصات الحالات ونوجّه الطلبات إلى فرقها المسؤولة. تُحدد الهوية والوصول والاحتفاظ ومكان النشر مع المؤسسة قبل توصيل البيانات."
+        },
+        {
           "heading": "اختيار البداية المناسبة",
           "body": "نبحث عن عملية لها حجم تكرار معلوم، وبيانات يمكن استخدامها، ومسؤول يستطيع تقييم النتيجة. قد يبدأ قطاعان بالحل الوظيفي نفسه، لكن قواعدهما ومصادرهما وحدود القرار تختلف.\n\n[الحلول](/ar/solutions) · [ناقش عملية من قطاعك](/ar/start)",
           "id": "industries-section-6"
         }
       ],
-      "seoTitle": "حلول تتشكل وفق واقع القطاع | Agentnexos",
-      "seoDescription": "تختلف قيمة الوكيل باختلاف البيانات والقيود والمسؤولية داخل القطاع. نحدد العملية المستهدفة أولًا، ثم نختار المعرفة والأدوات ونقاط المراجعة التي تناسبها. الأمثلة "
+      "seoTitle": "نفهم القطاع. ونبني حول العمل. | AGYNEXA",
+      "seoDescription": "سياق القطاع يحدد المعلومات المهمة، ومن يملك صلاحية التصرف، وكيف تُراجع النتيجة. نحدد نطاق الحلول وفق هذه المتطلبات، من العمليات التجارية والخدمات المهنية إلى سير العمل الصناعي والخدمات العامة. الأمثلة التالية نطاقات تطوير مقترحة، وليست ادعاءً بمشروعات قطاعية منفذة."
     },
     "methodology": {
-      "title": "تطوير يثبت كل خطوة قبل توسيع نطاقها",
-      "intro": "تبدأ هندسة الوكيل من العملية والنتيجة التي يحتاجها العميل. نحدد ما يعنيه نجاح المهمة وما الذي يجعلها غير مقبولة، ثم نبني النظام واختباراته حول هذا التعريف.",
+      "title": "من متطلبات العمل إلى تشغيل قابل للتحقق.",
+      "intro": "نحدد النتيجة، ونهندس مسار العمل، ونقيّم ما يحدث. يربط منهج التسليم بين فهم العملية والتكامل واختبارات القبول، لتستند كل زيادة في الاستقلالية إلى دليل ومسؤول واضح.",
       "sections": [
         {
           "heading": "تحديد نطاق العمل",
@@ -362,8 +372,8 @@
           "id": "methodology-section-6"
         }
       ],
-      "seoTitle": "تطوير يثبت كل خطوة قبل توسيع نطاقها | Agentnexos",
-      "seoDescription": "تبدأ هندسة الوكيل من العملية والنتيجة التي يحتاجها العميل. نحدد ما يعنيه نجاح المهمة وما الذي يجعلها غير مقبولة، ثم نبني النظام واختباراته حول هذا التعريف."
+      "seoTitle": "من متطلبات العمل إلى تشغيل قابل للتحقق. | AGYNEXA",
+      "seoDescription": "نحدد النتيجة، ونهندس مسار العمل، ونقيّم ما يحدث. يربط منهج التسليم بين فهم العملية والتكامل واختبارات القبول، لتستند كل زيادة في الاستقلالية إلى دليل ومسؤول واضح."
     },
     "security": {
       "title": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته",
@@ -410,7 +420,7 @@
           "id": "security-section-8"
         }
       ],
-      "seoTitle": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته | Agentnexos",
+      "seoTitle": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته | AGYNEXA",
       "seoDescription": "تزداد متطلبات التحكم حين ينتقل النظام من قراءة المعرفة إلى إرسال رسالة أو تعديل سجل. نصمم الهوية والصلاحيات والموافقة وإثبات الأثر حول هذه الأفعال، وفق بيانات ا"
     },
     "resources": {
@@ -438,31 +448,31 @@
           "id": "resources-section-4"
         }
       ],
-      "seoTitle": "أدوات عملية لتحديد المشروع واختبار نتيجته | Agentnexos",
+      "seoTitle": "أدوات عملية لتحديد المشروع واختبار نتيجته | AGYNEXA",
       "seoDescription": "استخدم هذه النماذج لتجهيز نقاش بين صاحب العملية والفريق التقني. تعرض ما يحتاج تحديدًا قبل التطوير، وكيف يمكن تقييم المخرج دون الاعتماد على انطباع عام عن الإجابة"
     },
     "about": {
-      "title": "Agentnexos لهندسة الأنظمة الوكيلة",
-      "intro": "نطوّر أنظمة ذكاء اصطناعي حول المعرفة والقرارات والإجراءات التي يعتمد عليها عمل المؤسسة. يجمع الاتجاه الهندسي بين فهم العملية وتطوير التطبيق والتكامل وتقييم السلوك، حتى يكون دور الوكيل ومخرجه ومسؤولية تشغيله معلومين.",
+      "title": "ذكاء مؤسسي. مسؤولية بشرية.",
+      "intro": "AGYNEXA ممارسة هندسية لأنظمة الذكاء الاصطناعي وأتمتة الأعمال، موجهة للمؤسسات حول العالم. نربط متطلبات العمل بالبرمجيات والمعرفة والأدوات التشغيلية لبناء أنظمة مخصصة، بمسؤوليات محددة ونتائج قابلة للمراجعة.",
       "sections": [
         {
           "heading": "لماذا تبدأ الهندسة من الأعمال؟",
-          "body": "اختيار نموذج أو إطار لا يحدد وحده ما يجب أن يحدث داخل العملية. نبدأ بالسياق الذي يجعل المعلومة صالحة للاستخدام، وبالأداة التي تحمل أثر التنفيذ، وبالقرار الذي يجب أن يظل لدى صاحبه. على هذا الأساس يتحدد ما يحتاج ذكاءً لغويًا وما يُنفذ بقواعد مباشرة.",
+          "body": "اختيار نموذج أو إطار لا يحدد وحده ما يجب أن يحدث داخل العملية. نبدأ بالسياق الذي يجعل المعلومة صالحة للاستخدام، وبالأداة التي تحمل أثر التنفيذ، وبالقرار الذي يجب أن يظل لدى صاحبه. على هذا الأساس يتحدد ما يحتاج ذكاءً لغويًا وما يُنفذ بقواعد مباشرة.\n\nالذكاء يرتّب. الإنسان يقرّر. نتعامل مع هذا المبدأ كقاعدة هندسية: المسؤولية والصلاحيات والمراجعة جزء من سير العمل، إلى جانب النماذج والأدوات. الإنجليزية لغتنا الدولية الأساسية، مع تجربة عربية كاملة. نحدد نطاق المشروع وموقع النشر ومتطلبات البيانات لكل مؤسسة.",
           "id": "about-section-1"
         },
         {
-          "heading": "من يقود Agentnexos؟",
-          "body": "يقود Agentnexos أدهم يونس، مهندس حلول وكلاء الذكاء الاصطناعي وأتمتة الأعمال والتكاملات. يركز عمله على تطوير تطبيقات تربط احتياجات فرق الأعمال بالمعرفة والأدوات وحدود التنفيذ، مع تجربة عربية وإنجليزية.",
+          "heading": "من يقود AGYNEXA؟",
+          "body": "يقود AGYNEXA أدهم يونس، مهندس حلول وكلاء الذكاء الاصطناعي وأتمتة الأعمال والتكاملات. يركز عمله على تطوير تطبيقات تربط احتياجات فرق الأعمال بالمعرفة والأدوات وحدود التنفيذ، مع تجربة عربية وإنجليزية.",
           "id": "about-section-2"
         },
         {
           "heading": "التعاون مع فريقك",
-          "body": "يحدد المشروع صاحب العملية والممثل التقني والمصادر والصلاحيات ومعايير القبول. نتفق على نطاق التسليم ومسؤولية التحديث والتشغيل، ونراجع النتائج على حالات من عمل الفريق قبل توسيع الوصول.\n\nيمكن البدء من عملية واضحة أو من مشكلة في المعرفة أو التكامل. [الخدمات الهندسية](/ar/services) توضح نطاقات العمل، و[منهج التنفيذ](/ar/methodology) يوضح كيف نختبرها.\n\n[تواصل بشأن مشروع](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "body": "يحدد المشروع صاحب العملية والممثل التقني والمصادر والصلاحيات ومعايير القبول. نتفق على نطاق التسليم ومسؤولية التحديث والتشغيل، ونراجع النتائج على حالات من عمل الفريق قبل توسيع الوصول.\n\nيمكن البدء من عملية واضحة أو من مشكلة في المعرفة أو التكامل. [الخدمات الهندسية](/ar/services) توضح نطاقات العمل، و[منهج التنفيذ](/ar/methodology) يوضح كيف نختبرها.\n\n[تواصل بشأن مشروع](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "about-section-3"
         }
       ],
-      "seoTitle": "Agentnexos لهندسة الأنظمة الوكيلة | Agentnexos",
-      "seoDescription": "نطوّر أنظمة ذكاء اصطناعي حول المعرفة والقرارات والإجراءات التي يعتمد عليها عمل المؤسسة. يجمع الاتجاه الهندسي بين فهم العملية وتطوير التطبيق والتكامل وتقييم السل"
+      "seoTitle": "ذكاء مؤسسي. مسؤولية بشرية. | AGYNEXA",
+      "seoDescription": "AGYNEXA ممارسة هندسية لأنظمة الذكاء الاصطناعي وأتمتة الأعمال، موجهة للمؤسسات حول العالم. نربط متطلبات العمل بالبرمجيات والمعرفة والأدوات التشغيلية لبناء أنظمة مخصصة، بمسؤوليات محددة ونتائج قابلة للمراجعة."
     },
     "agentnexos": {
       "title": "مساعد تصميم الأنظمة",
@@ -484,7 +494,7 @@
           "id": "agentnexos-section-3"
         }
       ],
-      "seoTitle": "مساعد تصميم الأنظمة | Agentnexos",
+      "seoTitle": "مساعد تصميم الأنظمة | AGYNEXA",
       "seoDescription": "صف العملية التي تريد تطويرها، والأنظمة التي تستخدمها، والمخرج المطلوب. يساعدك المساعد على تنظيم المتطلبات، واقتراح مسار عمل، وتحديد البيانات والصلاحيات والأسئلة"
     },
     "start": {
@@ -503,15 +513,15 @@
         },
         {
           "heading": "راجع قبل المشاركة",
-          "body": "تحقق من المعلومات الناقصة وحذف أي أسرار أو بيانات شخصية. يمكنك تنزيل الموجز ومراجعته مع فريقك. زر «افتح رسالة لمناقشة المشروع» يفتح تطبيق البريد إلى adham@adham-agritech.com؛ أنت تراجع الرسالة وترسلها، والموقع لا يرسلها تلقائيًا.\n\n[افتح رسالة لمناقشة المشروع](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "body": "تحقق من المعلومات الناقصة وحذف أي أسرار أو بيانات شخصية. يمكنك تنزيل الموجز ومراجعته مع فريقك. زر «افتح رسالة لمناقشة المشروع» يفتح تطبيق البريد إلى adham@adham-agritech.com؛ أنت تراجع الرسالة وترسلها، والموقع لا يرسلها تلقائيًا.\n\n[افتح رسالة لمناقشة المشروع](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "start-section-3"
         }
       ],
-      "seoTitle": "حدد النظام الذي يحتاجه عملك | Agentnexos",
+      "seoTitle": "حدد النظام الذي يحتاجه عملك | AGYNEXA",
       "seoDescription": "جهّز وصفًا للعملية ومصادرها والمخرج المطلوب. يبقى النموذج في صفحة المتصفح، ويمكنك مراجعة الموجز وتنزيله أو فتح رسالة بريد لمناقشته."
     },
     "privacy": {
-      "title": "البيانات عند استخدام Agentnexos",
+      "title": "البيانات عند استخدام AGYNEXA",
       "intro": "يشرح هذا الإشعار استخدام التجربة العامة والموجز المحلي. تُحدد معالجة بيانات المؤسسة ونطاق مزوديها واحتفاظها ضمن اتفاق المشروع قبل ربط نظام عميل.",
       "sections": [
         {
@@ -540,12 +550,12 @@
           "id": "privacy-section-5"
         }
       ],
-      "seoTitle": "البيانات عند استخدام Agentnexos | Agentnexos",
+      "seoTitle": "البيانات عند استخدام AGYNEXA | AGYNEXA",
       "seoDescription": "يشرح هذا الإشعار استخدام التجربة العامة والموجز المحلي. تُحدد معالجة بيانات المؤسسة ونطاق مزوديها واحتفاظها ضمن اتفاق المشروع قبل ربط نظام عميل."
     },
     "terms": {
       "title": "استخدام التجربة العامة",
-      "intro": "تقدم Agentnexos مساعدًا لتصميم العمليات وموجز مشروع محليًا. استخدام التجربة لا ينشئ عقد تطوير أو طلب شراء أو حجز خدمة.",
+      "intro": "تقدم AGYNEXA مساعدًا لتصميم العمليات وموجز مشروع محليًا. استخدام التجربة لا ينشئ عقد تطوير أو طلب شراء أو حجز خدمة.",
       "sections": [
         {
           "heading": "الأمثلة والمخرجات",
@@ -568,22 +578,22 @@
           "id": "terms-section-4"
         }
       ],
-      "seoTitle": "استخدام التجربة العامة | Agentnexos",
-      "seoDescription": "تقدم Agentnexos مساعدًا لتصميم العمليات وموجز مشروع محليًا. استخدام التجربة لا ينشئ عقد تطوير أو طلب شراء أو حجز خدمة."
+      "seoTitle": "استخدام التجربة العامة | AGYNEXA",
+      "seoDescription": "تقدم AGYNEXA مساعدًا لتصميم العمليات وموجز مشروع محليًا. استخدام التجربة لا ينشئ عقد تطوير أو طلب شراء أو حجز خدمة."
     }
   },
   "en": {
     "home": {
-      "title": "Agent systems built around your business",
-      "intro": "Agentnexos engineers enterprise agent systems. We connect organizational knowledge and business systems to tasks an agent can complete, from research and analysis to preparing outputs and performing authorized actions. Each system is defined around the working context, decision ownership, and the result your team needs.",
+      "title": "Enterprise AI. Engineered to work.",
+      "intro": "AGYNEXA designs and builds custom AI systems that connect enterprise knowledge, applications and operational tools. From informed decisions to coordinated workflows, we engineer the permissions, human oversight and verification each process needs.",
       "sections": [
         {
-          "heading": "The knowledge a task needs, where the work happens",
+          "heading": "Enterprise knowledge, ready for the task",
           "body": "A policy lives in a document, an order status in a system, and the history of a relationship with another team. An employee needs to assemble that picture before acting. System design starts with approved sources, their business definitions and relationships, then makes relevant context available within the user's access rights.\n\nAnswers are grounded in retrieved material, with their sources visible. When sources conflict or essential information is missing, the system identifies the gap and returns it to the responsible person. [Enterprise knowledge](/en/solutions/knowledge)",
           "id": "home-section-1"
         },
         {
-          "heading": "From a request to a result in the workflow",
+          "heading": "Coordinate the work. Keep decisions accountable.",
           "body": "The agent interprets the request and identifies the knowledge and tools it needs. The workflow engine manages sequence and state, separating a draft from a sent message and a record read from a record update. Specialist roles can support tasks that need independent analysis and review; simple tasks follow a short path.\n\nWe define an observable end to the work: an answer with sources, a supplier comparison, a case file, or an action recorded in the connected system. The design covers missing inputs, failed connections, and stopping before a sensitive action. [System architecture](/en/platform)",
           "id": "home-section-2"
         },
@@ -593,23 +603,23 @@
           "id": "home-section-3"
         },
         {
-          "heading": "Control is part of execution design",
+          "heading": "AI organizes. Humans decide.",
           "body": "The organization defines what the agent can read, prepare, and change. Approval is bound to the action and its inputs; changed inputs require a new assessment. The operational record is designed to connect the source, policy decision, tool result, and evidence of completion.\n\nWe test ambiguous requests, conflicting sources, unauthorized access attempts, and lost responses from external systems. The level of autonomy follows evaluation and review with the process owner. [Governance and security](/en/security)",
           "id": "home-section-4"
         },
         {
-          "heading": "How the system reaches operation",
+          "heading": "From architecture to operation",
           "body": "We define the first process, its data sources, and acceptance criteria. A bounded pilot is compared with the current method, then integrations and permissions expand according to what testing demonstrates. Delivery includes workflow definitions, tests, operating guidance, and agreed responsibilities. [Delivery approach](/en/methodology)",
           "id": "home-section-5"
         },
         {
-          "heading": "Explore Agentnexos",
+          "heading": "Explore AGYNEXA",
           "body": "The public assistant helps analyze a process and design its steps. A customer workspace connected to enterprise data and tools is implemented within the project's scope and permissions; the public experience does not grant access to those systems.\n\n[Open the design assistant](/en/agentnexos) · [Define your project requirements](/en/start)",
           "id": "home-section-6"
         },
         {
-          "heading": "Discuss the system your team needs",
-          "body": "Share the process, existing systems, and intended output. These details establish scope, data requirements, and acceptance tests. [Contact us about your project](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "heading": "What should your next AI system deliver?",
+          "body": "Tell us where work slows down, which systems it depends on and what a successful result looks like. We will use that context to define an engineering scope and acceptance plan. [Discuss your project](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "home-section-7"
         },
         {
@@ -618,12 +628,12 @@
           "id": "home-section-8"
         }
       ],
-      "seoTitle": "Agent systems built around your business | Agentnexos",
-      "seoDescription": "Agentnexos engineers enterprise agent systems. We connect organizational knowledge and business systems to tasks an agent can complete, from research and analys"
+      "seoTitle": "AGYNEXA | Enterprise AI Systems & Automation Engineering",
+      "seoDescription": "AGYNEXA designs and builds custom AI systems that connect enterprise knowledge, applications and operational tools. From informed decisions to coordinated workflows, we engineer the permissions, human oversight and verification each process needs."
     },
     "platform": {
-      "title": "Knowledge, tools, and workflows in one system",
-      "intro": "We build an agent system around how the organization works: its knowledge sources, user roles, decision rules, and systems that hold the result of execution. The model connects to these components through defined contracts; the workflow engine retains state and the paths for stopping and resuming.",
+      "title": "Knowledge connected. Work coordinated.",
+      "intro": "Build around the systems your organization already uses. Our engineering approach combines authorized knowledge, bounded tools and coordinated workflows, with identity, state and human decision points defined as part of the system.",
       "sections": [
         {
           "heading": "Knowledge and context",
@@ -661,50 +671,50 @@
           "id": "platform-section-7"
         }
       ],
-      "seoTitle": "Knowledge, tools, and workflows in one system | Agentnexos",
-      "seoDescription": "We build an agent system around how the organization works: its knowledge sources, user roles, decision rules, and systems that hold the result of execution. Th"
+      "seoTitle": "Knowledge connected. Work coordinated. | AGYNEXA",
+      "seoDescription": "Build around the systems your organization already uses. Our engineering approach combines authorized knowledge, bounded tools and coordinated workflows, with identity, state and human decision points defined as part of the system."
     },
     "services": {
-      "title": "Engineering services from business requirements to operation",
-      "intro": "Engagements can begin with one process, knowledge preparation, or a failing integration. Scope, deliverables, and acceptance tests are defined before implementation; the organization selects the appropriate level of access and execution.",
+      "title": "AI engineering, from architecture to operation.",
+      "intro": "Turn a business requirement into a system your team can operate and evaluate. Our services span AI architecture, enterprise knowledge, agent development, integration and operational evaluation. Each engagement defines deliverables, access boundaries and acceptance criteria before implementation.",
       "sections": [
         {
-          "heading": "Process and architecture design",
-          "body": "We review how work arrives, what completion requires, where steps stall, and who owns the decision. The model's role is separated from fixed rules, tool permissions, and escalation paths. The output is a workflow map and task contract connecting data and authority with the intended result.",
+          "heading": "AI strategy and system architecture",
+          "body": "We review how work arrives, what completion requires, where steps stall, and who owns the decision. The model's role is separated from fixed rules, tool permissions, and escalation paths. The output is a workflow map and task contract connecting data and authority with the intended result.\n\nDeliverables: a prioritized process scope, system architecture, tool boundaries and an acceptance plan.",
           "id": "services-section-1"
         },
         {
-          "heading": "Enterprise knowledge preparation",
-          "body": "We identify approved sources, versions, and access rights, and organize the terms, entities, and relationships the work needs. Scope includes retrieval design and evaluation, source conflicts, outdated content, and missing evidence. RAG or a deeper knowledge representation is selected according to the questions the system must answer.",
+          "heading": "Enterprise knowledge and RAG",
+          "body": "We identify approved sources, versions, and access rights, and organize the terms, entities, and relationships the work needs. Scope includes retrieval design and evaluation, source conflicts, outdated content, and missing evidence. RAG or a deeper knowledge representation is selected according to the questions the system must answer.\n\nDeliverables: a source inventory, access model, retrieval design and evaluation cases for incomplete or conflicting knowledge.",
           "id": "services-section-2"
         },
         {
-          "heading": "Agent and workflow development",
-          "body": "We build the interface, role coordination, tool connections, and state management. Structured outputs, follow-up requests, changed inputs, and failure cases are tested. Persistence, resumption, and recovery follow the requirements of the process.",
+          "heading": "Agentic workflows and orchestration",
+          "body": "We build the interface, role coordination, tool connections, and state management. Structured outputs, follow-up requests, changed inputs, and failure cases are tested. Persistence, resumption, and recovery follow the requirements of the process.\n\nDeliverables: task definitions, role coordination, structured outputs and tested exception paths.",
           "id": "services-section-3"
         },
         {
-          "heading": "System and tool integration",
-          "body": "We assess APIs, identity, and usage limits, then build connections with defined actions. Each connection includes input validation, separate read and write permissions, timeouts, and result verification. Duplicate prevention is tested before consequential external actions run.",
+          "heading": "Application, API and tool integration",
+          "body": "We assess APIs, identity, and usage limits, then build connections with defined actions. Each connection includes input validation, separate read and write permissions, timeouts, and result verification. Duplicate prevention is tested before consequential external actions run.\n\nDeliverables: scoped connectors with validated inputs, permissions, failure handling and effect-verification requirements.",
           "id": "services-section-4"
         },
         {
-          "heading": "Evaluation and governance",
-          "body": "We prepare domain acceptance cases and cases for conflict, incomplete input, and unauthorized access. We review the evidence shown to users, autonomy boundaries, and the contribution of models and tools to the result. Findings become repeatable cases for each release.",
+          "heading": "Evaluation, security and governance",
+          "body": "We prepare domain acceptance cases and cases for conflict, incomplete input, and unauthorized access. We review the evidence shown to users, autonomy boundaries, and the contribution of models and tools to the result. Findings become repeatable cases for each release.\n\nDeliverables: repeatable acceptance cases, risk boundaries and documented decisions about human review.",
           "id": "services-section-5"
         },
         {
-          "heading": "Delivery and operation",
-          "body": "Deployment, support, updates, and retention responsibilities are agreed within the project. Delivery includes documentation, definitions, tests, and failure-handling guidance so the team can maintain the system and change its scope deliberately.\n\n### What starts the scoping discussion\n\nA recurring process, its owner, existing systems, and a fictional input/output example. Access, language, and deployment constraints can be shared without secrets or customer records in the first contact.\n\n[Prepare project requirements](/en/start) · [Contact by email](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "heading": "Deployment, observability and improvement",
+          "body": "Deployment, support, updates, and retention responsibilities are agreed within the project. Delivery includes documentation, definitions, tests, and failure-handling guidance so the team can maintain the system and change its scope deliberately.\n\n### What starts the scoping discussion\n\nA recurring process, its owner, existing systems, and a fictional input/output example. Access, language, and deployment constraints can be shared without secrets or customer records in the first contact.\n\n[Prepare project requirements](/en/start) · [Contact by email](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)\n\nDeliverables: deployment guidance, operational visibility, maintenance responsibilities and versioned improvement criteria.",
           "id": "services-section-6"
         }
       ],
-      "seoTitle": "Engineering services from business requirements to operation | Agentnexos",
-      "seoDescription": "Engagements can begin with one process, knowledge preparation, or a failing integration. Scope, deliverables, and acceptance tests are defined before implementa"
+      "seoTitle": "AI engineering, from architecture to operation. | AGYNEXA",
+      "seoDescription": "Turn a business requirement into a system your team can operate and evaluate. Our services span AI architecture, enterprise knowledge, agent development, integration and operational evaluation. Each engagement defines deliverables, access boundaries and acceptance criteria before implementation."
     },
     "solutions": {
-      "title": "Solutions that connect enterprise knowledge to completed work",
-      "intro": "Agents are useful when a task depends on dispersed information and needs interpretation or coordination before reaching a decision or action. The solution is defined around that task, then connected to its sources, rules, and systems of record.",
+      "title": "Connect intelligence to the work that matters.",
+      "intro": "Move from scattered information to a clear next action. We design solutions for enterprise knowledge, procurement, receivables and customer operations, connecting the relevant sources and systems while preserving decision ownership.",
       "sections": [
         {
           "heading": "Enterprise knowledge",
@@ -732,8 +742,8 @@
           "id": "solutions-section-5"
         }
       ],
-      "seoTitle": "Solutions that connect enterprise knowledge to completed work | Agentnexos",
-      "seoDescription": "Agents are useful when a task depends on dispersed information and needs interpretation or coordination before reaching a decision or action. The solution is de"
+      "seoTitle": "Connect intelligence to the work that matters. | AGYNEXA",
+      "seoDescription": "Move from scattered information to a clear next action. We design solutions for enterprise knowledge, procurement, receivables and customer operations, connecting the relevant sources and systems while preserving decision ownership."
     },
     "solutions/knowledge": {
       "title": "Enterprise knowledge with its context and sources",
@@ -765,7 +775,7 @@
           "id": "solutions-knowledge-section-5"
         }
       ],
-      "seoTitle": "Enterprise knowledge with its context and sources | Agentnexos",
+      "seoTitle": "Enterprise knowledge with its context and sources | AGYNEXA",
       "seoDescription": "Information spread across policies, contracts, reports, and databases makes a single question a search across teams and systems. Finding a document may still le"
     },
     "solutions/procurement": {
@@ -798,7 +808,7 @@
           "id": "solutions-procurement-section-5"
         }
       ],
-      "seoTitle": "Procurement review with the decision inputs in one place | Agentnexos",
+      "seoTitle": "Procurement review with the decision inputs in one place | AGYNEXA",
       "seoDescription": "Selecting an offer is difficult when item descriptions, measurement units, shipping, warranties, and delivery dates differ. The burden grows when supplier infor"
     },
     "solutions/receivables": {
@@ -831,7 +841,7 @@
           "id": "solutions-receivables-section-5"
         }
       ],
-      "seoTitle": "Receivables follow-up based on each invoice's status | Agentnexos",
+      "seoTitle": "Receivables follow-up based on each invoice's status | AGYNEXA",
       "seoDescription": "An invoice list does not establish the next appropriate contact. An invoice may be partly paid, disputed, covered by a payment promise, or missing documentation"
     },
     "solutions/customer-operations": {
@@ -859,12 +869,12 @@
           "id": "solutions-customer-operations-section-4"
         }
       ],
-      "seoTitle": "Customer case handling with connected context and clear boundaries | Agentnexos",
+      "seoTitle": "Customer case handling with connected context and clear boundaries | AGYNEXA",
       "seoDescription": "When a case spans support, order, billing, and knowledge systems, employees must rebuild context for each step. A customer may move between teams while previous"
     },
     "industries": {
-      "title": "Solutions shaped by the sector's working context",
-      "intro": "Agent value depends on the data, constraints, and responsibilities of the sector. We define the process first, then choose its knowledge, tools, and review points. These examples describe possible development scopes; they are not customer case studies or ready-made sector products.",
+      "title": "Built around your industry. Defined by your work.",
+      "intro": "Industry context determines which information matters, who can act and how a result is checked. We scope custom solutions around those requirements, from commercial operations and professional services to industrial and public-sector workflows. The examples below are development scopes, not claims of existing sector deployments.",
       "sections": [
         {
           "heading": "Commerce and distribution",
@@ -892,17 +902,27 @@
           "id": "industries-section-5"
         },
         {
+          "id": "industries-section-7",
+          "heading": "Financial and administrative operations",
+          "body": "Scope document checks, internal reporting and case preparation around authorized records. Decisions that create financial or regulatory consequences retain accountable human review. This is a custom engineering scope, not a compliance certification."
+        },
+        {
+          "id": "industries-section-8",
+          "heading": "Public services and institutional operations",
+          "body": "Organize permitted policies and service records, prepare case summaries and route requests to their responsible teams. Identity, access, retention and deployment requirements are established with the institution before connecting data."
+        },
+        {
           "heading": "Choose an appropriate start",
           "body": "Look for recurring work, usable data, and an owner who can evaluate the result. Two sectors may start with the same functional solution while their rules, sources, and decision boundaries differ.\n\n[Solutions](/en/solutions) · [Discuss your sector's process](/en/start)",
           "id": "industries-section-6"
         }
       ],
-      "seoTitle": "Solutions shaped by the sector's working context | Agentnexos",
-      "seoDescription": "Agent value depends on the data, constraints, and responsibilities of the sector. We define the process first, then choose its knowledge, tools, and review poin"
+      "seoTitle": "Built around your industry. Defined by your work. | AGYNEXA",
+      "seoDescription": "Industry context determines which information matters, who can act and how a result is checked. We scope custom solutions around those requirements, from commercial operations and professional services to industrial and public-sector workflows. The examples below are development scopes, not claims of existing sector deployments."
     },
     "methodology": {
-      "title": "Prove each step before expanding the scope",
-      "intro": "Agent engineering begins with the process and the result the customer needs. We define success and unacceptable outcomes, then build the system and its tests around that definition.",
+      "title": "From business intent to verified operation.",
+      "intro": "Define the result. Engineer the workflow. Evaluate what happens. Our delivery method connects process discovery, integration and acceptance testing so each increase in autonomy is supported by evidence and an accountable owner.",
       "sections": [
         {
           "heading": "Define the work",
@@ -935,8 +955,8 @@
           "id": "methodology-section-6"
         }
       ],
-      "seoTitle": "Prove each step before expanding the scope | Agentnexos",
-      "seoDescription": "Agent engineering begins with the process and the result the customer needs. We define success and unacceptable outcomes, then build the system and its tests ar"
+      "seoTitle": "From business intent to verified operation. | AGYNEXA",
+      "seoDescription": "Define the result. Engineer the workflow. Evaluate what happens. Our delivery method connects process discovery, integration and acceptance testing so each increase in autonomy is supported by evidence and an accountable owner."
     },
     "security": {
       "title": "Governance that defines agent authority and verifies results",
@@ -983,7 +1003,7 @@
           "id": "security-section-8"
         }
       ],
-      "seoTitle": "Governance that defines agent authority and verifies results | Agentnexos",
+      "seoTitle": "Governance that defines agent authority and verifies results | AGYNEXA",
       "seoDescription": "Control requirements increase when a system moves from reading knowledge to sending a message or changing a record. Identity, permissions, approval, and effect "
     },
     "resources": {
@@ -1011,31 +1031,31 @@
           "id": "resources-section-4"
         }
       ],
-      "seoTitle": "Practical tools to scope the project and test its results | Agentnexos",
+      "seoTitle": "Practical tools to scope the project and test its results | AGYNEXA",
       "seoDescription": "Use these templates to prepare a discussion between the process owner and technical team. They identify decisions needed before development and ways to evaluate"
     },
     "about": {
-      "title": "Agentnexos engineers enterprise agent systems",
-      "intro": "We develop AI systems around the knowledge, decisions, and actions on which an organization depends. The engineering approach connects process understanding, application development, integration, and behavioral evaluation so the agent's role, output, and operational responsibility are defined.",
+      "title": "Enterprise intelligence. Human accountability.",
+      "intro": "AGYNEXA is an AI systems engineering and automation practice for organizations worldwide. We connect business requirements with software, knowledge and operational tools to build custom systems with defined responsibilities and reviewable results.",
       "sections": [
         {
           "heading": "Why begin with the business?",
-          "body": "A model or framework does not establish what should happen in a process. We start with the context that makes information usable, the tool that holds the effect of execution, and the decision that belongs to its owner. This determines what needs language intelligence and what follows direct rules.",
+          "body": "A model or framework does not establish what should happen in a process. We start with the context that makes information usable, the tool that holds the effect of execution, and the decision that belongs to its owner. This determines what needs language intelligence and what follows direct rules.\n\nAI organizes. Humans decide. We treat this as an engineering rule: responsibility, permissions and review belong in the workflow, alongside models and tools. English is our primary international language, with complete Arabic experiences. Project scope, deployment location and data requirements are agreed for each organization.",
           "id": "about-section-1"
         },
         {
-          "heading": "Who leads Agentnexos?",
-          "body": "Agentnexos is led by Adham Younes, an AI Agent Solutions Engineer working on business automation and integrations. His focus is applications connecting business requirements with knowledge, tools, and execution boundaries, with Arabic and English experiences.",
+          "heading": "Who leads AGYNEXA?",
+          "body": "AGYNEXA is led by Adham Younes, an AI Agent Solutions Engineer working on business automation and integrations. His focus is applications connecting business requirements with knowledge, tools, and execution boundaries, with Arabic and English experiences.",
           "id": "about-section-2"
         },
         {
           "heading": "Working with your team",
-          "body": "The project identifies the process owner, technical representative, sources, permissions, and acceptance criteria. Delivery, updates, and operational responsibilities are agreed, and results are evaluated against domain cases before access expands.\n\nStart with a defined process or a knowledge or integration problem. [Engineering services](/en/services) describe the scopes, and the [delivery approach](/en/methodology) explains evaluation.\n\n[Contact us about a project](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "body": "The project identifies the process owner, technical representative, sources, permissions, and acceptance criteria. Delivery, updates, and operational responsibilities are agreed, and results are evaluated against domain cases before access expands.\n\nStart with a defined process or a knowledge or integration problem. [Engineering services](/en/services) describe the scopes, and the [delivery approach](/en/methodology) explains evaluation.\n\n[Contact us about a project](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "about-section-3"
         }
       ],
-      "seoTitle": "Agentnexos engineers enterprise agent systems | Agentnexos",
-      "seoDescription": "We develop AI systems around the knowledge, decisions, and actions on which an organization depends. The engineering approach connects process understanding, ap"
+      "seoTitle": "Enterprise intelligence. Human accountability. | AGYNEXA",
+      "seoDescription": "AGYNEXA is an AI systems engineering and automation practice for organizations worldwide. We connect business requirements with software, knowledge and operational tools to build custom systems with defined responsibilities and reviewable results."
     },
     "agentnexos": {
       "title": "System design assistant",
@@ -1057,7 +1077,7 @@
           "id": "agentnexos-section-3"
         }
       ],
-      "seoTitle": "System design assistant | Agentnexos",
+      "seoTitle": "System design assistant | AGYNEXA",
       "seoDescription": "Describe the process, systems you use, and intended output. The assistant helps organize requirements, propose a workflow, and identify data, permissions, and q"
     },
     "start": {
@@ -1076,15 +1096,15 @@
         },
         {
           "heading": "Review before sharing",
-          "body": "Check missing information and remove secrets or personal data. Download the brief for your team. “Open a project email” opens your email app addressed to adham@adham-agritech.com; you review and send it. The site does not send automatically.\n\n[Open a project email](mailto:adham@adham-agritech.com?subject=Agentnexos%20project)",
+          "body": "Check missing information and remove secrets or personal data. Download the brief for your team. “Open a project email” opens your email app addressed to adham@adham-agritech.com; you review and send it. The site does not send automatically.\n\n[Open a project email](mailto:adham@adham-agritech.com?subject=AGYNEXA%20project)",
           "id": "start-section-3"
         }
       ],
-      "seoTitle": "Define the system your work needs | Agentnexos",
+      "seoTitle": "Define the system your work needs | AGYNEXA",
       "seoDescription": "Prepare the process, sources, and intended output. The form remains in the browser page; review the brief, download it, or open an email to discuss it."
     },
     "privacy": {
-      "title": "Data when using Agentnexos",
+      "title": "Data when using AGYNEXA",
       "intro": "This notice describes the public experience and local brief. Enterprise processing, providers, and retention are defined in the project agreement before a customer system is connected.",
       "sections": [
         {
@@ -1113,12 +1133,12 @@
           "id": "privacy-section-5"
         }
       ],
-      "seoTitle": "Data when using Agentnexos | Agentnexos",
+      "seoTitle": "Data when using AGYNEXA | AGYNEXA",
       "seoDescription": "This notice describes the public experience and local brief. Enterprise processing, providers, and retention are defined in the project agreement before a custo"
     },
     "terms": {
       "title": "Using the public experience",
-      "intro": "Agentnexos provides a process design assistant and a local project brief. Using them does not establish a development contract, purchase order, or service booking.",
+      "intro": "AGYNEXA provides a process design assistant and a local project brief. Using them does not establish a development contract, purchase order, or service booking.",
       "sections": [
         {
           "heading": "Examples and outputs",
@@ -1141,8 +1161,8 @@
           "id": "terms-section-4"
         }
       ],
-      "seoTitle": "Using the public experience | Agentnexos",
-      "seoDescription": "Agentnexos provides a process design assistant and a local project brief. Using them does not establish a development contract, purchase order, or service booki"
+      "seoTitle": "Using the public experience | AGYNEXA",
+      "seoDescription": "AGYNEXA provides a process design assistant and a local project brief. Using them does not establish a development contract, purchase order, or service booki"
     }
   }
 }

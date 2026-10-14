@@ -1,13 +1,13 @@
 /** Public product copy: capabilities are grounded in the bounded planning preview. */
 export const cyberHome = {
   ar: {
-    eyebrow: "أنظمة وكلاء للمؤسسات · العربية أولًا",
+    eyebrow: "هندسة أنظمة الذكاء الاصطناعي وأتمتة الأعمال",
     headline: "أنظمة وكلاء.", emphasis: "على مقاس عملك.",
     intro: "نصمّم أنظمة وكلاء حول عمليات فريقك، من مراجعة طلبات الشراء إلى متابعة العملاء. نحدد البيانات التي يحتاجها كل طلب، ونرتب خطوات معالجته، ونضع المراجعة البشرية عند القرار. ابدأ هنا بتصميم أول مسار عمل.",
-    primary: "صمّم أول مسار عمل", secondary: "جهّز موجز مشروعك", note: "تجربة تخطيط ببيانات افتراضية · بلا تنفيذ على أنظمتك",
-    region: "للفرق في مصر والخليج والشرق الأوسط", scroll: "اكتشف ما يمكنك بناؤه",
+    primary: "صمّم أول مسار عمل", secondary: "جهّز موجز مشروعك", note: "الذكاء يرتّب. الإنسان يقرّر.",
+    region: "أنظمة مخصصة للمؤسسات حول العالم", scroll: "اكتشف ما يمكنك بناؤه",
     illustration: "مسار توضيحي · مراجعة مشتريات", request: "طلب جديد من فريق العمليات", requestDetail: "توريد أجهزة للفريق · مثال افتراضي", requestLabel: "المدخلات", check: "اجمع ما ينقص الطلب", checkDetail: "المواصفات، عرض المورد، وحد الاعتماد", checkLabel: "التحقق", review: "قرار المسؤول قبل الشراء", reviewDetail: "ملف منظم وملاحظات للمراجعة", reviewLabel: "المخرج", human: "نقطة قرار بشري", draft: "تصميم مسار، وليس تشغيلًا حيًا",
-    capabilitiesLabel: "ابدأ بالعمل الذي تعرفه", capabilitiesTitle: "ما الذي يتغير في يوم فريقك؟", capabilitiesEmphasis: "طلب أوضح. مراجعة أسهل.", capabilitiesIntro: "عندما تتوزع التفاصيل بين الرسائل والجداول، تتأخر المراجعة. يبدأ التصميم بجمع متطلبات الطلب وتحديد مصدر كل معلومة، ليصل إلى المسؤول مخرج يستطيع الحكم عليه.",
+    capabilitiesLabel: "هندسة تبدأ من عمليات مؤسستك", capabilitiesTitle: "معرفة المؤسسة.", capabilitiesEmphasis: "عمل منسّق.", capabilitiesIntro: "عندما تتوزع التفاصيل بين الرسائل والجداول، تتأخر المراجعة. يبدأ التصميم بجمع متطلبات الطلب وتحديد مصدر كل معلومة، ليصل إلى المسؤول مخرج يستطيع الحكم عليه.",
     capabilities: [
       { title: "طلبات تصل مكتملة", description: "حدد المعلومات التي يجب أن تصاحب كل طلب، وما يستدعي الرجوع إلى صاحبه. يصبح جمع النواقص خطوة في المسار بدل سلسلة رسائل متكررة.", detail: "النتيجة: خطوات واضحة وأسئلة محددة", icon: "workflow" },
       { title: "إجابات لها مصدر", description: "حدد السياسات والسجلات المعتمدة لكل مهمة، ومن يحق له الاطلاع عليها. عند اختلاف المصادر أو غيابها، يظهر ما يحتاج توضيحًا قبل اتخاذ القرار.", detail: "المصدر وحدود الوصول ضمن التصميم", icon: "shield" },
@@ -41,16 +41,16 @@ export const cyberHome = {
       ["هل تدعم التجربة العربية والإنجليزية؟", "نعم، الواجهة ومساعد تصميم العمليات متاحان باللغتين. يمكنك تبديل اللغة مع الاحتفاظ بمسار الصفحة. راجع أي مخرج قبل استخدامه في قرار عملي."],
       ["هل توجد أسعار أو نتائج توفير مضمونة؟", "لا توجد باقات شراء أو أرقام توفير منشورة. يتحدد نطاق المشروع وتكلفته بعد فهم البيانات والربط والاختبارات والدعم المطلوب. قياس العبء الحالي في الموجز ليس توقعًا للتوفير."],
     ],
-    ctaLabel: "الخطوة التالية", ctaTitle: "أي مهمة تتكرر", ctaEmphasis: "في يوم فريقك؟", ctaText: "صف كيف يبدأ الطلب وأين يتعطل. يساعدك المساعد على ترتيب الخطوات وتحديد المعلومات اللازمة لبداية عملية.", footerLine: "من فكرة الأتمتة إلى خطة يفهمها فريقك.", footerNav: "روابط المنصة", footerCopyright: "© 2026 Agentnexos. جميع الحقوق محفوظة.", footerLinks: [["platform", "المنصة"], ["solutions", "الحلول"], ["about", "منهجنا"], ["resources", "الأدلة"], ["security", "الأمان"], ["privacy", "الخصوصية"], ["terms", "الشروط"]],
+    ctaLabel: "الخطوة التالية", ctaTitle: "أي مهمة تتكرر", ctaEmphasis: "في يوم فريقك؟", ctaText: "صف كيف يبدأ الطلب وأين يتعطل. يساعدك المساعد على ترتيب الخطوات وتحديد المعلومات اللازمة لبداية عملية.", footerLine: "من فكرة الأتمتة إلى خطة يفهمها فريقك.", footerNav: "روابط المنصة", footerCopyright: "© 2026 AGYNEXA. جميع الحقوق محفوظة.", footerLinks: [["platform", "المنصة"], ["solutions", "الحلول"], ["about", "منهجنا"], ["resources", "الأدلة"], ["security", "الأمان"], ["privacy", "الخصوصية"], ["terms", "الشروط"]],
   },
   en: {
-    eyebrow: "ENTERPRISE AGENT SYSTEMS / ARABIC FIRST",
+    eyebrow: "ENTERPRISE AI / AUTOMATION ENGINEERING",
     headline: "Agent systems.", emphasis: "Built for your work.",
     intro: "We design custom agent systems around your team’s processes, from purchase reviews to customer follow-up. Define the information each request needs, organize the steps and keep people at decision points. Start here by designing your first workflow.",
-    primary: "Design your first workflow", secondary: "Prepare your project brief", note: "Planning preview with fictional data · no actions on your systems",
-    region: "For teams across Egypt, the Gulf and MENA", scroll: "Explore what you could build",
+    primary: "Design your first workflow", secondary: "Prepare your project brief", note: "AI organizes. Humans decide.",
+    region: "Custom systems for organizations worldwide", scroll: "Explore what you could build",
     illustration: "Illustrative workflow · purchase review", request: "A new operations request", requestDetail: "Equipment for the team · fictional example", requestLabel: "Input", check: "Bring the missing details together", checkDetail: "Specifications, supplier quote, approval threshold", checkLabel: "Check", review: "Owner review before purchase", reviewDetail: "An organized request with clear review notes", reviewLabel: "Output", human: "Human decision point", draft: "A workflow design, not a live run",
-    capabilitiesLabel: "Start with the work you know", capabilitiesTitle: "What changes in your working day?", capabilitiesEmphasis: "Clearer requests. Easier review.", capabilitiesIntro: "When details are scattered across messages and spreadsheets, review takes longer. Start by defining request requirements and the source for each input, so the owner receives an output they can assess.",
+    capabilitiesLabel: "ENGINEERED AROUND YOUR OPERATIONS", capabilitiesTitle: "Enterprise knowledge.", capabilitiesEmphasis: "Coordinated work.", capabilitiesIntro: "When details are scattered across messages and spreadsheets, review takes longer. Start by defining request requirements and the source for each input, so the owner receives an output they can assess.",
     capabilities: [
       { title: "More complete requests", description: "Define the details each request needs and when it should return to its owner. Collect missing information as a step in the workflow instead of another round of messages.", detail: "The result: clear steps and specific questions", icon: "workflow" },
       { title: "Answers with a source", description: "Choose the approved policies and records for each task and who may access them. Make conflicting or missing information visible before anyone decides.", detail: "Sources and access boundaries in the design", icon: "shield" },
@@ -84,6 +84,6 @@ export const cyberHome = {
       ["Does the preview support Arabic and English?", "Yes. The interface and workflow design assistant are available in both languages. You can switch language while keeping the current page path. Review any output before using it in a business decision."],
       ["Are there prices or guaranteed savings?", "There are no published purchase plans or savings claims. Project scope and cost depend on data, integrations, testing and support needs. Current workload calculations in the brief do not predict savings."],
     ],
-    ctaLabel: "Your next step", ctaTitle: "Which task keeps", ctaEmphasis: "your team busy?", ctaText: "Describe how it works today. Start with a clear question, then build a plan your team can review.", footerLine: "From an automation idea to a plan your team understands.", footerNav: "Platform links", footerCopyright: "© 2026 Agentnexos. All rights reserved.", footerLinks: [["platform", "Platform"], ["solutions", "Solutions"], ["about", "Our approach"], ["resources", "Guides"], ["security", "Security"], ["privacy", "Privacy"], ["terms", "Terms"]],
+    ctaLabel: "Your next step", ctaTitle: "Which task keeps", ctaEmphasis: "your team busy?", ctaText: "Describe how it works today. Start with a clear question, then build a plan your team can review.", footerLine: "From an automation idea to a plan your team understands.", footerNav: "Platform links", footerCopyright: "© 2026 AGYNEXA. All rights reserved.", footerLinks: [["platform", "Platform"], ["solutions", "Solutions"], ["about", "Our approach"], ["resources", "Guides"], ["security", "Security"], ["privacy", "Privacy"], ["terms", "Terms"]],
   },
 } as const;

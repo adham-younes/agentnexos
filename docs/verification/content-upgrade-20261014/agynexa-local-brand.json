@@ -1,0 +1,209 @@
+{
+  "base": "http://localhost:3018",
+  "checkedAt": "2026-10-14T20:12:36.366Z",
+  "viewports": [
+    {
+      "locale": "en",
+      "width": 390,
+      "headline": "Enterprise AI. Engineered to work.",
+      "overflow": false,
+      "font": "Newsreader, \"Newsreader Fallback\"",
+      "dir": "ltr",
+      "background": "rgb(5, 5, 5)",
+      "accent": "rgb(16, 185, 129)"
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "headline": "Enterprise AI. Engineered to work.",
+      "overflow": false,
+      "font": "Newsreader, \"Newsreader Fallback\"",
+      "dir": "ltr",
+      "background": "rgb(5, 5, 5)",
+      "accent": "rgb(16, 185, 129)"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "headline": "Enterprise AI. Engineered to work.",
+      "overflow": false,
+      "font": "Newsreader, \"Newsreader Fallback\"",
+      "dir": "ltr",
+      "background": "rgb(5, 5, 5)",
+      "accent": "rgb(16, 185, 129)"
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "headline": "ذكاء مؤسسي. مصمّم للعمل.",
+      "overflow": false,
+      "font": "\"Noto Naskh Arabic\", \"Noto Naskh Arabic Fallback\"",
+      "dir": "rtl",
+      "background": "rgb(5, 5, 5)",
+      "accent": "rgb(16, 185, 129)"
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "headline": "ذكاء مؤسسي. مصمّم للعمل.",
+      "overflow": false,
+      "font": "\"Noto Naskh Arabic\", \"Noto Naskh Arabic Fallback\"",
+      "dir": "rtl",
+      "background": "rgb(5, 5, 5)",
+      "accent": "rgb(16, 185, 129)"
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "headline": "ذكاء مؤسسي. مصمّم للعمل.",
+      "overflow": false,
+      "font": "\"Noto Naskh Arabic\", \"Noto Naskh Arabic Fallback\"",
+      "dir": "rtl",
+      "background": "rgb(5, 5, 5)",
+      "accent": "rgb(16, 185, 129)"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/platform",
+      "status": 200
+    },
+    {
+      "path": "/en/services",
+      "status": 200
+    },
+    {
+      "path": "/en/solutions",
+      "status": 200
+    },
+    {
+      "path": "/en/solutions/knowledge",
+      "status": 200
+    },
+    {
+      "path": "/en/solutions/procurement",
+      "status": 200
+    },
+    {
+      "path": "/en/solutions/receivables",
+      "status": 200
+    },
+    {
+      "path": "/en/solutions/customer-operations",
+      "status": 200
+    },
+    {
+      "path": "/en/industries",
+      "status": 200
+    },
+    {
+      "path": "/en/methodology",
+      "status": 200
+    },
+    {
+      "path": "/en/security",
+      "status": 200
+    },
+    {
+      "path": "/en/resources",
+      "status": 200
+    },
+    {
+      "path": "/en/about",
+      "status": 200
+    },
+    {
+      "path": "/en/agentnexos",
+      "status": 200
+    },
+    {
+      "path": "/en/start",
+      "status": 200
+    },
+    {
+      "path": "/en/privacy",
+      "status": 200
+    },
+    {
+      "path": "/en/terms",
+      "status": 200
+    },
+    {
+      "path": "/ar",
+      "status": 200
+    },
+    {
+      "path": "/ar/platform",
+      "status": 200
+    },
+    {
+      "path": "/ar/services",
+      "status": 200
+    },
+    {
+      "path": "/ar/solutions",
+      "status": 200
+    },
+    {
+      "path": "/ar/solutions/knowledge",
+      "status": 200
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "status": 200
+    },
+    {
+      "path": "/ar/solutions/receivables",
+      "status": 200
+    },
+    {
+      "path": "/ar/solutions/customer-operations",
+      "status": 200
+    },
+    {
+      "path": "/ar/industries",
+      "status": 200
+    },
+    {
+      "path": "/ar/methodology",
+      "status": 200
+    },
+    {
+      "path": "/ar/security",
+      "status": 200
+    },
+    {
+      "path": "/ar/resources",
+      "status": 200
+    },
+    {
+      "path": "/ar/about",
+      "status": 200
+    },
+    {
+      "path": "/ar/agentnexos",
+      "status": 200
+    },
+    {
+      "path": "/ar/start",
+      "status": 200
+    },
+    {
+      "path": "/ar/privacy",
+      "status": 200
+    },
+    {
+      "path": "/ar/terms",
+      "status": 200
+    }
+  ],
+  "failures": [],
+  "defaultLocale": {
+    "status": 307,
+    "location": "/en"
+  }
+}
