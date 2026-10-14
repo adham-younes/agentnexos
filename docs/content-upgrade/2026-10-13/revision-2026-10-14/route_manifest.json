@@ -1,0 +1,1385 @@
+{
+  "revision": "2026-10-14",
+  "pages": [
+    {
+      "locale": "ar",
+      "route": "/ar/about",
+      "file": "content/ar/about.md",
+      "title": "Agentnexos لهندسة الأنظمة الوكيلة",
+      "seoTitle": "Agentnexos لهندسة الأنظمة الوكيلة | Agentnexos",
+      "seoDescription": "نطوّر أنظمة ذكاء اصطناعي حول المعرفة والقرارات والإجراءات التي يعتمد عليها عمل المؤسسة. يجمع الاتجاه الهندسي بين فهم العملية وتطوير التطبيق والتكامل وتقييم السل",
+      "sections": [
+        {
+          "id": "about-section-1",
+          "heading": "لماذا تبدأ الهندسة من الأعمال؟",
+          "level": 2
+        },
+        {
+          "id": "about-section-2",
+          "heading": "من يقود Agentnexos؟",
+          "level": 2
+        },
+        {
+          "id": "about-section-3",
+          "heading": "التعاون مع فريقك",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/agentnexos",
+      "file": "content/ar/agentnexos.md",
+      "title": "مساعد تصميم الأنظمة",
+      "seoTitle": "مساعد تصميم الأنظمة | Agentnexos",
+      "seoDescription": "صف العملية التي تريد تطويرها، والأنظمة التي تستخدمها، والمخرج المطلوب. يساعدك المساعد على تنظيم المتطلبات، واقتراح مسار عمل، وتحديد البيانات والصلاحيات والأسئلة",
+      "sections": [
+        {
+          "id": "agentnexos-section-1",
+          "heading": "ابدأ من عمل يتكرر",
+          "level": 2
+        },
+        {
+          "id": "agentnexos-section-2",
+          "heading": "ما يمكن أن يقدمه هنا",
+          "level": 2
+        },
+        {
+          "id": "agentnexos-section-3",
+          "heading": "قبل الإرسال",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar",
+      "file": "content/ar/home.md",
+      "title": "أنظمة وكلاء مبنية على أعمالك",
+      "seoTitle": "أنظمة وكلاء مبنية على أعمالك | Agentnexos",
+      "seoDescription": "Agentnexos لهندسة أنظمة الذكاء الاصطناعي الوكيلة. نربط معرفة المؤسسة وأنظمتها بمهام يمكن للوكيل إنجازها، من البحث والتحليل إلى إعداد المخرجات وتنفيذ الإجراءات ا",
+      "sections": [
+        {
+          "id": "home-section-1",
+          "heading": "المعرفة التي تحتاجها المهمة، في موضع استخدامها",
+          "level": 2
+        },
+        {
+          "id": "home-section-2",
+          "heading": "من الطلب إلى نتيجة داخل سير العمل",
+          "level": 2
+        },
+        {
+          "id": "home-section-3",
+          "heading": "حلول حول القرارات التي تتكرر",
+          "level": 2
+        },
+        {
+          "id": "home-section-4",
+          "heading": "التحكم جزء من تصميم التنفيذ",
+          "level": 2
+        },
+        {
+          "id": "home-section-5",
+          "heading": "كيف يصل النظام إلى التشغيل",
+          "level": 2
+        },
+        {
+          "id": "home-section-6",
+          "heading": "استكشف Agentnexos",
+          "level": 2
+        },
+        {
+          "id": "home-section-7",
+          "heading": "ناقش النظام الذي يحتاجه فريقك",
+          "level": 2
+        },
+        {
+          "id": "home-section-8",
+          "heading": "أسئلة شائعة",
+          "level": 2
+        },
+        {
+          "id": "home-section-9",
+          "heading": "هل يمكن العمل مع أنظمتنا الحالية؟",
+          "level": 3
+        },
+        {
+          "id": "home-section-10",
+          "heading": "كيف تختارون النموذج والبنية؟",
+          "level": 3
+        },
+        {
+          "id": "home-section-11",
+          "heading": "هل يجب أن يعتمد الإنسان كل خطوة؟",
+          "level": 3
+        },
+        {
+          "id": "home-section-12",
+          "heading": "ما الذي يمكن تجربته هنا؟",
+          "level": 3
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/industries",
+      "file": "content/ar/industries.md",
+      "title": "حلول تتشكل وفق واقع القطاع",
+      "seoTitle": "حلول تتشكل وفق واقع القطاع | Agentnexos",
+      "seoDescription": "تختلف قيمة الوكيل باختلاف البيانات والقيود والمسؤولية داخل القطاع. نحدد العملية المستهدفة أولًا، ثم نختار المعرفة والأدوات ونقاط المراجعة التي تناسبها. الأمثلة ",
+      "sections": [
+        {
+          "id": "industries-section-1",
+          "heading": "التجارة والتوزيع",
+          "level": 2
+        },
+        {
+          "id": "industries-section-2",
+          "heading": "الطاقة والخدمات الصناعية",
+          "level": 2
+        },
+        {
+          "id": "industries-section-3",
+          "heading": "المقاولات وإدارة المشاريع",
+          "level": 2
+        },
+        {
+          "id": "industries-section-4",
+          "heading": "الخدمات المهنية",
+          "level": 2
+        },
+        {
+          "id": "industries-section-5",
+          "heading": "اللوجستيات وسلاسل الإمداد",
+          "level": 2
+        },
+        {
+          "id": "industries-section-6",
+          "heading": "اختيار البداية المناسبة",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/methodology",
+      "file": "content/ar/methodology.md",
+      "title": "تطوير يثبت كل خطوة قبل توسيع نطاقها",
+      "seoTitle": "تطوير يثبت كل خطوة قبل توسيع نطاقها | Agentnexos",
+      "seoDescription": "تبدأ هندسة الوكيل من العملية والنتيجة التي يحتاجها العميل. نحدد ما يعنيه نجاح المهمة وما الذي يجعلها غير مقبولة، ثم نبني النظام واختباراته حول هذا التعريف.",
+      "sections": [
+        {
+          "id": "methodology-section-1",
+          "heading": "تحديد نطاق العمل",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-2",
+          "heading": "فحص البيانات والأنظمة",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-3",
+          "heading": "بناء تجربة محدودة",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-4",
+          "heading": "تقييم مع أصحاب العملية",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-5",
+          "heading": "تشغيل تدريجي",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-6",
+          "heading": "تسليم قابل للاستخدام والتطوير",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/platform",
+      "file": "content/ar/platform.md",
+      "title": "المعرفة والأدوات وسير العمل، في نظام واحد",
+      "seoTitle": "المعرفة والأدوات وسير العمل، في نظام واحد | Agentnexos",
+      "seoDescription": "نبني النظام الوكيل حول طريقة عمل المؤسسة: مصادر المعرفة، وأدوار المستخدمين، وقواعد القرار، والأنظمة التي تحمل نتيجة التنفيذ. يرتبط النموذج بهذه المكونات عبر عقو",
+      "sections": [
+        {
+          "id": "platform-section-1",
+          "heading": "طبقة المعرفة والسياق",
+          "level": 2
+        },
+        {
+          "id": "platform-section-2",
+          "heading": "تنسيق الوكلاء وإدارة الحالة",
+          "level": 2
+        },
+        {
+          "id": "platform-section-3",
+          "heading": "أدوات تتصل بأنظمة العمل",
+          "level": 2
+        },
+        {
+          "id": "platform-section-4",
+          "heading": "موافقة مرتبطة بما سيحدث",
+          "level": 2
+        },
+        {
+          "id": "platform-section-5",
+          "heading": "ذاكرة تخدم العمل",
+          "level": 2
+        },
+        {
+          "id": "platform-section-6",
+          "heading": "رؤية التشغيل والتقييم",
+          "level": 2
+        },
+        {
+          "id": "platform-section-7",
+          "heading": "ما يُحدد لكل مشروع",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/privacy",
+      "file": "content/ar/privacy.md",
+      "title": "البيانات عند استخدام Agentnexos",
+      "seoTitle": "البيانات عند استخدام Agentnexos | Agentnexos",
+      "seoDescription": "يشرح هذا الإشعار استخدام التجربة العامة والموجز المحلي. تُحدد معالجة بيانات المؤسسة ونطاق مزوديها واحتفاظها ضمن اتفاق المشروع قبل ربط نظام عميل.",
+      "sections": [
+        {
+          "id": "privacy-section-1",
+          "heading": "الموجز المحلي",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-2",
+          "heading": "المحادثة العامة",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-3",
+          "heading": "سجلات التشغيل وحدود الاستخدام",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-4",
+          "heading": "القياس والمزودون",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-5",
+          "heading": "التواصل",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "proposed-legal-review"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/resources",
+      "file": "content/ar/resources.md",
+      "title": "أدوات عملية لتحديد المشروع واختبار نتيجته",
+      "seoTitle": "أدوات عملية لتحديد المشروع واختبار نتيجته | Agentnexos",
+      "seoDescription": "استخدم هذه النماذج لتجهيز نقاش بين صاحب العملية والفريق التقني. تعرض ما يحتاج تحديدًا قبل التطوير، وكيف يمكن تقييم المخرج دون الاعتماد على انطباع عام عن الإجابة",
+      "sections": [
+        {
+          "id": "resources-section-1",
+          "heading": "تحديد أول عملية",
+          "level": 2
+        },
+        {
+          "id": "resources-section-2",
+          "heading": "خطة اختبارات القبول",
+          "level": 2
+        },
+        {
+          "id": "resources-section-3",
+          "heading": "قراءة النتائج",
+          "level": 2
+        },
+        {
+          "id": "resources-section-4",
+          "heading": "جرّب بمثال افتراضي",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/security",
+      "file": "content/ar/security.md",
+      "title": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته",
+      "seoTitle": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته | Agentnexos",
+      "seoDescription": "تزداد متطلبات التحكم حين ينتقل النظام من قراءة المعرفة إلى إرسال رسالة أو تعديل سجل. نصمم الهوية والصلاحيات والموافقة وإثبات الأثر حول هذه الأفعال، وفق بيانات ا",
+      "sections": [
+        {
+          "id": "security-section-1",
+          "heading": "الهوية ونطاق الوصول",
+          "level": 2
+        },
+        {
+          "id": "security-section-2",
+          "heading": "السياسات قبل التنفيذ",
+          "level": 2
+        },
+        {
+          "id": "security-section-3",
+          "heading": "الاعتماد البشري",
+          "level": 2
+        },
+        {
+          "id": "security-section-4",
+          "heading": "مصادر لا تتحول إلى تعليمات",
+          "level": 2
+        },
+        {
+          "id": "security-section-5",
+          "heading": "سجل يربط القرار بالأثر",
+          "level": 2
+        },
+        {
+          "id": "security-section-6",
+          "heading": "التعامل مع الفشل الجزئي",
+          "level": 2
+        },
+        {
+          "id": "security-section-7",
+          "heading": "البيانات وبيئة النشر",
+          "level": 2
+        },
+        {
+          "id": "security-section-8",
+          "heading": "التجربة العامة",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/services",
+      "file": "content/ar/services.md",
+      "title": "خدمات هندسة النظام من احتياج العمل إلى التشغيل",
+      "seoTitle": "خدمات هندسة النظام من احتياج العمل إلى التشغيل | Agentnexos",
+      "seoDescription": "يمكن أن يبدأ التعاون بتطوير عملية محددة، أو تجهيز المعرفة، أو إصلاح تكامل قائم. يُحدد نطاق العمل والمخرجات واختبارات قبولها قبل بناء النظام؛ وتختار المؤسسة مستو",
+      "sections": [
+        {
+          "id": "services-section-1",
+          "heading": "تصميم العملية والبنية",
+          "level": 2
+        },
+        {
+          "id": "services-section-2",
+          "heading": "تجهيز المعرفة المؤسسية",
+          "level": 2
+        },
+        {
+          "id": "services-section-3",
+          "heading": "تطوير الوكلاء وسير العمل",
+          "level": 2
+        },
+        {
+          "id": "services-section-4",
+          "heading": "ربط الأنظمة والأدوات",
+          "level": 2
+        },
+        {
+          "id": "services-section-5",
+          "heading": "التقييم والحوكمة",
+          "level": 2
+        },
+        {
+          "id": "services-section-6",
+          "heading": "التسليم والتشغيل",
+          "level": 2
+        },
+        {
+          "id": "services-section-7",
+          "heading": "ما نحتاجه لبدء تحديد النطاق",
+          "level": 3
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/solutions/customer-operations",
+      "file": "content/ar/solutions/customer-operations.md",
+      "title": "معالجة حالات العملاء بسياق متصل وحدود واضحة",
+      "seoTitle": "معالجة حالات العملاء بسياق متصل وحدود واضحة | Agentnexos",
+      "seoDescription": "عندما تتوزع الحالة بين نظام الدعم والطلبات والفوترة والمعرفة، يضطر الموظف إلى إعادة جمع السياق قبل كل خطوة. وقد ينتقل العميل بين فرق دون أن تنتقل معها الأسباب و",
+      "sections": [
+        {
+          "id": "solutions-customer-operations-section-1",
+          "heading": "من قصد العميل إلى مسار المعالجة",
+          "level": 2
+        },
+        {
+          "id": "solutions-customer-operations-section-2",
+          "heading": "ملف حالة يصلح لاستكمال العمل",
+          "level": 2
+        },
+        {
+          "id": "solutions-customer-operations-section-3",
+          "heading": "الاستقلالية حسب نوع الحالة",
+          "level": 2
+        },
+        {
+          "id": "solutions-customer-operations-section-4",
+          "heading": "معايير التقييم",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/solutions/knowledge",
+      "file": "content/ar/solutions/knowledge.md",
+      "title": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها",
+      "seoTitle": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها | Agentnexos",
+      "seoDescription": "توزع المعلومات بين السياسات والعقود والتقارير وقواعد البيانات يجعل السؤال الواحد رحلة بحث بين فرق وأنظمة. وقد يعثر الموظف على المستند دون أن يعرف إن كانت نسخته ",
+      "sections": [
+        {
+          "id": "solutions-knowledge-section-1",
+          "heading": "كيف يُبنى الحل",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-2",
+          "heading": "ما يستخدمه الفريق",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-3",
+          "heading": "الصلاحيات والتحديث",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-4",
+          "heading": "ما نختبره",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-5",
+          "heading": "نطاق التسليم",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/solutions/procurement",
+      "file": "content/ar/solutions/procurement.md",
+      "title": "مراجعة مشتريات تجمع شروط القرار في موضع واحد",
+      "seoTitle": "مراجعة مشتريات تجمع شروط القرار في موضع واحد | Agentnexos",
+      "seoDescription": "يصعب اختيار العرض المناسب عندما تختلف وصف البنود ووحدات القياس والشحن والضمان ومواعيد التسليم. ويزيد العبء حين تكون معلومات المورد وسجل التعامل والسياسة الشرائي",
+      "sections": [
+        {
+          "id": "solutions-procurement-section-1",
+          "heading": "من الطلب إلى المقارنة",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-2",
+          "heading": "سياق المورد والإنفاق",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-3",
+          "heading": "المخرج الذي يصل للمسؤول",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-4",
+          "heading": "الاستثناءات التي تُصمم من البداية",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-5",
+          "heading": "معيار القبول",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/solutions/receivables",
+      "file": "content/ar/solutions/receivables.md",
+      "title": "متابعة المستحقات وفق حالة كل فاتورة",
+      "seoTitle": "متابعة المستحقات وفق حالة كل فاتورة | Agentnexos",
+      "seoDescription": "قائمة الفواتير وحدها لا تكفي لتحديد التواصل التالي. قد تكون الفاتورة مسددة جزئيًا، أو محل نزاع، أو مرتبطة بوعد سداد، أو تحتاج مستندًا ناقصًا. جمع هذه التفاصيل ي",
+      "sections": [
+        {
+          "id": "solutions-receivables-section-1",
+          "heading": "صورة موحدة للحالة",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-2",
+          "heading": "المخرجات اليومية",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-3",
+          "heading": "فصل المتابعة عن التحصيل",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-4",
+          "heading": "التعامل مع التغير والفشل",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-5",
+          "heading": "ما نختبره",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/solutions",
+      "file": "content/ar/solutions.md",
+      "title": "حلول تربط معرفة المؤسسة بما يحتاج العمل إنجازه",
+      "seoTitle": "حلول تربط معرفة المؤسسة بما يحتاج العمل إنجازه | Agentnexos",
+      "seoDescription": "تتكرر الحاجة إلى الوكلاء عندما تعتمد المهمة على معلومات موزعة، وتحتاج تفسيرًا أو تنسيقًا قبل الوصول إلى قرار أو إجراء. نحدد الحل حول هذه المهمة، ثم نربطه بمصادر",
+      "sections": [
+        {
+          "id": "solutions-section-1",
+          "heading": "المعرفة المؤسسية",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-2",
+          "heading": "المشتريات وإدارة الموردين",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-3",
+          "heading": "متابعة المستحقات",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-4",
+          "heading": "عمليات خدمة العملاء",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-5",
+          "heading": "اختيار أول حل",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/start",
+      "file": "content/ar/start.md",
+      "title": "حدد النظام الذي يحتاجه عملك",
+      "seoTitle": "حدد النظام الذي يحتاجه عملك | Agentnexos",
+      "seoDescription": "جهّز وصفًا للعملية ومصادرها والمخرج المطلوب. يبقى النموذج في صفحة المتصفح، ويمكنك مراجعة الموجز وتنزيله أو فتح رسالة بريد لمناقشته.",
+      "sections": [
+        {
+          "id": "start-section-1",
+          "heading": "معلومات المشروع",
+          "level": 2
+        },
+        {
+          "id": "start-section-2",
+          "heading": "حدود التشغيل",
+          "level": 2
+        },
+        {
+          "id": "start-section-3",
+          "heading": "راجع قبل المشاركة",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "ar",
+      "route": "/ar/terms",
+      "file": "content/ar/terms.md",
+      "title": "استخدام التجربة العامة",
+      "seoTitle": "استخدام التجربة العامة | Agentnexos",
+      "seoDescription": "تقدم Agentnexos مساعدًا لتصميم العمليات وموجز مشروع محليًا. استخدام التجربة لا ينشئ عقد تطوير أو طلب شراء أو حجز خدمة.",
+      "sections": [
+        {
+          "id": "terms-section-1",
+          "heading": "الأمثلة والمخرجات",
+          "level": 2
+        },
+        {
+          "id": "terms-section-2",
+          "heading": "حدود التنفيذ",
+          "level": 2
+        },
+        {
+          "id": "terms-section-3",
+          "heading": "مسؤولية البيانات",
+          "level": 2
+        },
+        {
+          "id": "terms-section-4",
+          "heading": "مشاركة الموجز",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "proposed-legal-review"
+    },
+    {
+      "locale": "en",
+      "route": "/en/about",
+      "file": "content/en/about.md",
+      "title": "Agentnexos engineers enterprise agent systems",
+      "seoTitle": "Agentnexos engineers enterprise agent systems | Agentnexos",
+      "seoDescription": "We develop AI systems around the knowledge, decisions, and actions on which an organization depends. The engineering approach connects process understanding, ap",
+      "sections": [
+        {
+          "id": "about-section-1",
+          "heading": "Why begin with the business?",
+          "level": 2
+        },
+        {
+          "id": "about-section-2",
+          "heading": "Who leads Agentnexos?",
+          "level": 2
+        },
+        {
+          "id": "about-section-3",
+          "heading": "Working with your team",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/agentnexos",
+      "file": "content/en/agentnexos.md",
+      "title": "System design assistant",
+      "seoTitle": "System design assistant | Agentnexos",
+      "seoDescription": "Describe the process, systems you use, and intended output. The assistant helps organize requirements, propose a workflow, and identify data, permissions, and q",
+      "sections": [
+        {
+          "id": "agentnexos-section-1",
+          "heading": "Start with recurring work",
+          "level": 2
+        },
+        {
+          "id": "agentnexos-section-2",
+          "heading": "What it can provide here",
+          "level": 2
+        },
+        {
+          "id": "agentnexos-section-3",
+          "heading": "Before sending",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en",
+      "file": "content/en/home.md",
+      "title": "Agent systems built around your business",
+      "seoTitle": "Agent systems built around your business | Agentnexos",
+      "seoDescription": "Agentnexos engineers enterprise agent systems. We connect organizational knowledge and business systems to tasks an agent can complete, from research and analys",
+      "sections": [
+        {
+          "id": "home-section-1",
+          "heading": "The knowledge a task needs, where the work happens",
+          "level": 2
+        },
+        {
+          "id": "home-section-2",
+          "heading": "From a request to a result in the workflow",
+          "level": 2
+        },
+        {
+          "id": "home-section-3",
+          "heading": "Solutions for recurring decisions",
+          "level": 2
+        },
+        {
+          "id": "home-section-4",
+          "heading": "Control is part of execution design",
+          "level": 2
+        },
+        {
+          "id": "home-section-5",
+          "heading": "How the system reaches operation",
+          "level": 2
+        },
+        {
+          "id": "home-section-6",
+          "heading": "Explore Agentnexos",
+          "level": 2
+        },
+        {
+          "id": "home-section-7",
+          "heading": "Discuss the system your team needs",
+          "level": 2
+        },
+        {
+          "id": "home-section-8",
+          "heading": "Frequently asked questions",
+          "level": 2
+        },
+        {
+          "id": "home-section-9",
+          "heading": "Can you work with our existing systems?",
+          "level": 3
+        },
+        {
+          "id": "home-section-10",
+          "heading": "How do you choose models and architecture?",
+          "level": 3
+        },
+        {
+          "id": "home-section-11",
+          "heading": "Does a person approve every step?",
+          "level": 3
+        },
+        {
+          "id": "home-section-12",
+          "heading": "What can we try here?",
+          "level": 3
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/industries",
+      "file": "content/en/industries.md",
+      "title": "Solutions shaped by the sector's working context",
+      "seoTitle": "Solutions shaped by the sector's working context | Agentnexos",
+      "seoDescription": "Agent value depends on the data, constraints, and responsibilities of the sector. We define the process first, then choose its knowledge, tools, and review poin",
+      "sections": [
+        {
+          "id": "industries-section-1",
+          "heading": "Commerce and distribution",
+          "level": 2
+        },
+        {
+          "id": "industries-section-2",
+          "heading": "Energy and industrial services",
+          "level": 2
+        },
+        {
+          "id": "industries-section-3",
+          "heading": "Construction and project management",
+          "level": 2
+        },
+        {
+          "id": "industries-section-4",
+          "heading": "Professional services",
+          "level": 2
+        },
+        {
+          "id": "industries-section-5",
+          "heading": "Logistics and supply chains",
+          "level": 2
+        },
+        {
+          "id": "industries-section-6",
+          "heading": "Choose an appropriate start",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/methodology",
+      "file": "content/en/methodology.md",
+      "title": "Prove each step before expanding the scope",
+      "seoTitle": "Prove each step before expanding the scope | Agentnexos",
+      "seoDescription": "Agent engineering begins with the process and the result the customer needs. We define success and unacceptable outcomes, then build the system and its tests ar",
+      "sections": [
+        {
+          "id": "methodology-section-1",
+          "heading": "Define the work",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-2",
+          "heading": "Assess data and systems",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-3",
+          "heading": "Build a bounded pilot",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-4",
+          "heading": "Evaluate with process owners",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-5",
+          "heading": "Introduce operation gradually",
+          "level": 2
+        },
+        {
+          "id": "methodology-section-6",
+          "heading": "Deliver for use and further development",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/platform",
+      "file": "content/en/platform.md",
+      "title": "Knowledge, tools, and workflows in one system",
+      "seoTitle": "Knowledge, tools, and workflows in one system | Agentnexos",
+      "seoDescription": "We build an agent system around how the organization works: its knowledge sources, user roles, decision rules, and systems that hold the result of execution. Th",
+      "sections": [
+        {
+          "id": "platform-section-1",
+          "heading": "Knowledge and context",
+          "level": 2
+        },
+        {
+          "id": "platform-section-2",
+          "heading": "Agent coordination and state",
+          "level": 2
+        },
+        {
+          "id": "platform-section-3",
+          "heading": "Tools connected to business systems",
+          "level": 2
+        },
+        {
+          "id": "platform-section-4",
+          "heading": "Approval bound to the action",
+          "level": 2
+        },
+        {
+          "id": "platform-section-5",
+          "heading": "Memory that serves the work",
+          "level": 2
+        },
+        {
+          "id": "platform-section-6",
+          "heading": "Operational visibility and evaluation",
+          "level": 2
+        },
+        {
+          "id": "platform-section-7",
+          "heading": "Defined for each project",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/privacy",
+      "file": "content/en/privacy.md",
+      "title": "Data when using Agentnexos",
+      "seoTitle": "Data when using Agentnexos | Agentnexos",
+      "seoDescription": "This notice describes the public experience and local brief. Enterprise processing, providers, and retention are defined in the project agreement before a custo",
+      "sections": [
+        {
+          "id": "privacy-section-1",
+          "heading": "Local brief",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-2",
+          "heading": "Public conversations",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-3",
+          "heading": "Operational records and usage limits",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-4",
+          "heading": "Measurement and providers",
+          "level": 2
+        },
+        {
+          "id": "privacy-section-5",
+          "heading": "Contact",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "proposed-legal-review"
+    },
+    {
+      "locale": "en",
+      "route": "/en/resources",
+      "file": "content/en/resources.md",
+      "title": "Practical tools to scope the project and test its results",
+      "seoTitle": "Practical tools to scope the project and test its results | Agentnexos",
+      "seoDescription": "Use these templates to prepare a discussion between the process owner and technical team. They identify decisions needed before development and ways to evaluate",
+      "sections": [
+        {
+          "id": "resources-section-1",
+          "heading": "Define the first process",
+          "level": 2
+        },
+        {
+          "id": "resources-section-2",
+          "heading": "Acceptance test plan",
+          "level": 2
+        },
+        {
+          "id": "resources-section-3",
+          "heading": "Read the results",
+          "level": 2
+        },
+        {
+          "id": "resources-section-4",
+          "heading": "Try a fictional case",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/security",
+      "file": "content/en/security.md",
+      "title": "Governance that defines agent authority and verifies results",
+      "seoTitle": "Governance that defines agent authority and verifies results | Agentnexos",
+      "seoDescription": "Control requirements increase when a system moves from reading knowledge to sending a message or changing a record. Identity, permissions, approval, and effect ",
+      "sections": [
+        {
+          "id": "security-section-1",
+          "heading": "Identity and access scope",
+          "level": 2
+        },
+        {
+          "id": "security-section-2",
+          "heading": "Policy before execution",
+          "level": 2
+        },
+        {
+          "id": "security-section-3",
+          "heading": "Human authorization",
+          "level": 2
+        },
+        {
+          "id": "security-section-4",
+          "heading": "Sources remain data",
+          "level": 2
+        },
+        {
+          "id": "security-section-5",
+          "heading": "Records connect the decision to its effect",
+          "level": 2
+        },
+        {
+          "id": "security-section-6",
+          "heading": "Partial failure",
+          "level": 2
+        },
+        {
+          "id": "security-section-7",
+          "heading": "Data and deployment",
+          "level": 2
+        },
+        {
+          "id": "security-section-8",
+          "heading": "The public experience",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/services",
+      "file": "content/en/services.md",
+      "title": "Engineering services from business requirements to operation",
+      "seoTitle": "Engineering services from business requirements to operation | Agentnexos",
+      "seoDescription": "Engagements can begin with one process, knowledge preparation, or a failing integration. Scope, deliverables, and acceptance tests are defined before implementa",
+      "sections": [
+        {
+          "id": "services-section-1",
+          "heading": "Process and architecture design",
+          "level": 2
+        },
+        {
+          "id": "services-section-2",
+          "heading": "Enterprise knowledge preparation",
+          "level": 2
+        },
+        {
+          "id": "services-section-3",
+          "heading": "Agent and workflow development",
+          "level": 2
+        },
+        {
+          "id": "services-section-4",
+          "heading": "System and tool integration",
+          "level": 2
+        },
+        {
+          "id": "services-section-5",
+          "heading": "Evaluation and governance",
+          "level": 2
+        },
+        {
+          "id": "services-section-6",
+          "heading": "Delivery and operation",
+          "level": 2
+        },
+        {
+          "id": "services-section-7",
+          "heading": "What starts the scoping discussion",
+          "level": 3
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/solutions/customer-operations",
+      "file": "content/en/solutions/customer-operations.md",
+      "title": "Customer case handling with connected context and clear boundaries",
+      "seoTitle": "Customer case handling with connected context and clear boundaries | Agentnexos",
+      "seoDescription": "When a case spans support, order, billing, and knowledge systems, employees must rebuild context for each step. A customer may move between teams while previous",
+      "sections": [
+        {
+          "id": "solutions-customer-operations-section-1",
+          "heading": "From customer intent to a resolution path",
+          "level": 2
+        },
+        {
+          "id": "solutions-customer-operations-section-2",
+          "heading": "A case file that supports continuation",
+          "level": 2
+        },
+        {
+          "id": "solutions-customer-operations-section-3",
+          "heading": "Autonomy by case type",
+          "level": 2
+        },
+        {
+          "id": "solutions-customer-operations-section-4",
+          "heading": "Evaluation criteria",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/solutions/knowledge",
+      "file": "content/en/solutions/knowledge.md",
+      "title": "Enterprise knowledge with its context and sources",
+      "seoTitle": "Enterprise knowledge with its context and sources | Agentnexos",
+      "seoDescription": "Information spread across policies, contracts, reports, and databases makes a single question a search across teams and systems. Finding a document may still le",
+      "sections": [
+        {
+          "id": "solutions-knowledge-section-1",
+          "heading": "How the solution is built",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-2",
+          "heading": "What the team uses",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-3",
+          "heading": "Access and updates",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-4",
+          "heading": "What we test",
+          "level": 2
+        },
+        {
+          "id": "solutions-knowledge-section-5",
+          "heading": "Delivery scope",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/solutions/procurement",
+      "file": "content/en/solutions/procurement.md",
+      "title": "Procurement review with the decision inputs in one place",
+      "seoTitle": "Procurement review with the decision inputs in one place | Agentnexos",
+      "seoDescription": "Selecting an offer is difficult when item descriptions, measurement units, shipping, warranties, and delivery dates differ. The burden grows when supplier infor",
+      "sections": [
+        {
+          "id": "solutions-procurement-section-1",
+          "heading": "From request to comparison",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-2",
+          "heading": "Supplier and spending context",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-3",
+          "heading": "The output for the decision owner",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-4",
+          "heading": "Exceptions designed from the start",
+          "level": 2
+        },
+        {
+          "id": "solutions-procurement-section-5",
+          "heading": "Acceptance criteria",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/solutions/receivables",
+      "file": "content/en/solutions/receivables.md",
+      "title": "Receivables follow-up based on each invoice's status",
+      "seoTitle": "Receivables follow-up based on each invoice's status | Agentnexos",
+      "seoDescription": "An invoice list does not establish the next appropriate contact. An invoice may be partly paid, disputed, covered by a payment promise, or missing documentation",
+      "sections": [
+        {
+          "id": "solutions-receivables-section-1",
+          "heading": "A unified view of the case",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-2",
+          "heading": "Daily outputs",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-3",
+          "heading": "Separate follow-up from collection",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-4",
+          "heading": "Changes and failures",
+          "level": 2
+        },
+        {
+          "id": "solutions-receivables-section-5",
+          "heading": "What we test",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/solutions",
+      "file": "content/en/solutions.md",
+      "title": "Solutions that connect enterprise knowledge to completed work",
+      "seoTitle": "Solutions that connect enterprise knowledge to completed work | Agentnexos",
+      "seoDescription": "Agents are useful when a task depends on dispersed information and needs interpretation or coordination before reaching a decision or action. The solution is de",
+      "sections": [
+        {
+          "id": "solutions-section-1",
+          "heading": "Enterprise knowledge",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-2",
+          "heading": "Procurement and supplier management",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-3",
+          "heading": "Receivables operations",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-4",
+          "heading": "Customer operations",
+          "level": 2
+        },
+        {
+          "id": "solutions-section-5",
+          "heading": "Choose the first solution",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/start",
+      "file": "content/en/start.md",
+      "title": "Define the system your work needs",
+      "seoTitle": "Define the system your work needs | Agentnexos",
+      "seoDescription": "Prepare the process, sources, and intended output. The form remains in the browser page; review the brief, download it, or open an email to discuss it.",
+      "sections": [
+        {
+          "id": "start-section-1",
+          "heading": "Project information",
+          "level": 2
+        },
+        {
+          "id": "start-section-2",
+          "heading": "Operating boundaries",
+          "level": 2
+        },
+        {
+          "id": "start-section-3",
+          "heading": "Review before sharing",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "ready-for-implementation"
+    },
+    {
+      "locale": "en",
+      "route": "/en/terms",
+      "file": "content/en/terms.md",
+      "title": "Using the public experience",
+      "seoTitle": "Using the public experience | Agentnexos",
+      "seoDescription": "Agentnexos provides a process design assistant and a local project brief. Using them does not establish a development contract, purchase order, or service booki",
+      "sections": [
+        {
+          "id": "terms-section-1",
+          "heading": "Examples and outputs",
+          "level": 2
+        },
+        {
+          "id": "terms-section-2",
+          "heading": "Execution boundaries",
+          "level": 2
+        },
+        {
+          "id": "terms-section-3",
+          "heading": "Responsibility for data",
+          "level": 2
+        },
+        {
+          "id": "terms-section-4",
+          "heading": "Sharing the brief",
+          "level": 2
+        }
+      ],
+      "layout": "existing-cyber-serif-editorial",
+      "heroSource": "first title and opening paragraph; retain current geometry",
+      "status": "proposed-legal-review"
+    }
+  ],
+  "downloadRoutes": [
+    {
+      "route": "/downloads/agentnexos/workflow-brief-ar.md",
+      "source": "resources/workflow-brief-ar.md"
+    },
+    {
+      "route": "/downloads/agentnexos/workflow-brief-en.md",
+      "source": "resources/workflow-brief-en.md"
+    },
+    {
+      "route": "/downloads/agentnexos/acceptance-plan-ar.md",
+      "source": "resources/acceptance-plan-ar.md"
+    },
+    {
+      "route": "/downloads/agentnexos/acceptance-plan-en.md",
+      "source": "resources/acceptance-plan-en.md"
+    }
+  ]
+}

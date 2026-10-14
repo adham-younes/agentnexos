@@ -1,0 +1,5 @@
+{
+  "serverRenderedCases": 18,
+  "passed": true,
+  "limitations": "No browser geometry, click events or external operations verified."
+}

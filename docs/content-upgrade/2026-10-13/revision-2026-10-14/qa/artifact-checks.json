@@ -1,0 +1,29 @@
+{
+  "bilingualPages": 34,
+  "routePairs": 17,
+  "verifiedContentLinks": 90,
+  "invalidLinks": [],
+  "resourceFiles": 4,
+  "semanticEvalRecords": 36,
+  "agentEvalsExecuted": false,
+  "imageDimensions": {
+    "computational-graph-2.png": [
+      1280,
+      720
+    ],
+    "computational-graph-1.png": [
+      1280,
+      720
+    ],
+    "computational-graph-3.png": [
+      1280,
+      720
+    ],
+    "computational-graph-4.png": [
+      1280,
+      720
+    ]
+  },
+  "templateSha256": "efae0bb670c70a1d5dc1d280f2a173305f53713f536357225e18c29599a2498a",
+  "claim": "Static artifact validation, not production verification."
+}

@@ -4,7 +4,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 const base = new URL(process.argv[2] || process.env.SITE_URL || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Use an HTTP(S) site URL without credentials");
 
-const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start"];
+const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start", "services", "methodology", "solutions/knowledge", "solutions/procurement", "solutions/receivables", "solutions/customer-operations"];
 const report = { base: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAgentVerified: false };
 const requireCheck = (condition, message) => { if (!condition) throw Error(message); };
 const browser = await chromium.launch();
@@ -42,7 +42,7 @@ try {
       requireCheck(row.mainCount === 1 && !row.missingHashTargets.length, "Landmark or fragment failure");
       requireCheck(row.canonical?.endsWith(`/${locale}${route ? "/" + route : ""}`), "Wrong canonical");
       const known = new Set(routes.flatMap(path => ["ar", "en"].map(language => `/${language}${path ? "/" + path : ""}`)));
-      requireCheck(row.missingRoutes.every(path => known.has(path)), "Unknown internal route");
+      requireCheck(row.missingRoutes.every(path => known.has(path) || /^\/downloads\/agentnexos\/(workflow-brief|acceptance-plan)-(ar|en)\.md$/.test(path)), "Unknown internal route");
       if (!route) {
         requireCheck(await page.locator("h1").count() === 1, "Homepage needs one primary heading");
         requireCheck(await page.locator('img[src*="whale"], img[src*="bridge"], video').count() === 0, "Legacy template imagery remains");

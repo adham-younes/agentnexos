@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PublicPage } from "@/components/site/public-page";
-import { productPages } from "@/lib/content/product-pages";
+import { revisionMetadata } from "@/lib/content/revision";
+const productPages = { about: true, platform: true, industries: true, resources: true, services: true, methodology: true };
 import { isLocale } from "@/lib/i18n/config";
 
 type Props = { params: Promise<{ locale: string; page: string }> };
@@ -10,8 +11,7 @@ export function generateStaticParams() { return Object.keys(productPages).map(pa
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, page } = await params;
   if (!isLocale(locale) || !isProductPage(page)) notFound();
-  const c = productPages[page][locale];
-  return { title: `${c.title} | Agentnexos`, description: c.intro, alternates: { canonical: `/${locale}/${page}`, languages: { ar: `/ar/${page}`, en: `/en/${page}` } }, openGraph: { title: c.title, description: c.intro, url: `/${locale}/${page}` }, twitter: { title: c.title, description: c.intro } };
+  return revisionMetadata(page, locale);
 }
 export default async function Page({ params }: Props) {
   const { locale, page } = await params;

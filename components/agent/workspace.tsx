@@ -10,12 +10,15 @@ import { Message, MessageContent, MessageResponse } from "@/components/ai-elemen
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
+import { revision } from "@/lib/content/revision";
+import { ContentSections } from "@/components/site/content-body";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
 import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
 export function AgentWorkspace() {
   const locale = useLocale();
   const c = agentWorkspaceCopy[locale];
+  const reviewed = revision[locale].agentnexos;
   const [input, setInput] = useState("");
   const [ready, setReady] = useState<boolean | null>(null);
   const [phase, setPhase] = useState(-1);
@@ -93,8 +96,8 @@ export function AgentWorkspace() {
               {messages.length === 0 ? <div className="py-2 sm:py-5">
                 <div className="mb-7 flex size-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10"><Layers3 className="size-7 text-primary" /></div>
                 <p className="mb-3 text-xs font-medium text-primary">{c.badge}</p>
-                <h1 className="max-w-2xl text-3xl font-display leading-[1.4] tracking-tight sm:text-4xl">{c.title}</h1>
-                <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{c.intro}</p>
+                <h1 className="max-w-2xl text-3xl font-display leading-[1.4] tracking-tight sm:text-4xl">{reviewed.title}</h1>
+                <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{reviewed.intro}</p><details className="mt-6"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><ContentSections sections={reviewed.sections}/></details>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
                 <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "Agentnexos"}</div>
