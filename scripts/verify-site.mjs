@@ -51,7 +51,7 @@ try {
         requireCheck(await page.locator("[data-reveal]").evaluateAll(elements => elements.every(element => element.classList.contains("is-visible"))), "Scrolled content did not reveal");
 
         const headingFont = await page.locator("h1").evaluate(element => getComputedStyle(element).fontFamily);
-        requireCheck(headingFont.includes(locale === "ar" ? "Noto Naskh Arabic" : "Newsreader"), "Approved display font is not rendered");
+        requireCheck(headingFont.includes(locale === "ar" ? "IBM Plex Sans Arabic" : "Newsreader"), "Approved display font is not rendered");
         requireCheck(await page.locator("#availability table tbody tr").count() === 4, "Capability disclosure table is incomplete");
         requireCheck(await page.locator("#questions details").count() >= 4, "Pre-start questions are missing");
         requireCheck(await page.locator("#top a[href$='/agentnexos']").count() === 1 && await page.locator("#top a[href$='/start']").count() === 1, "Primary workflow and brief actions are missing");
