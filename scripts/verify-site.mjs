@@ -106,7 +106,7 @@ try {
       await page.locator("#brief-effect").selectOption("financial"); await page.locator("#brief-volume").fill("100"); await page.locator("#brief-minutes").fill("20");
       await page.locator("button[type=submit]").click();
       const result = page.locator("form section"); await result.waitFor();
-      const [download] = await Promise.all([page.waitForEvent("download"), result.locator("button").click()]);
+      const [download] = await Promise.all([page.waitForEvent("download"), result.getByRole("button", { name: /نزّل الموجز|Download Markdown/ }).click()]);
       requireCheck(download.suggestedFilename() === `agentnexos-brief-${locale}.md`, "Brief download failed");
       await page.getByRole("button", { name: locale === "ar" ? "امسح البيانات" : "Clear details", exact: true }).click();
       requireCheck(await page.locator("#brief-goal").inputValue() === "" && !await result.count() && !posts.length, "Brief reset or local-only boundary failed");

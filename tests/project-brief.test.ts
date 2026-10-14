@@ -1,3 +1,4 @@
+import { projectEmailDraft } from "../lib/project-brief";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { reviewBrief, quoteBriefValue } from "../lib/project-brief";
@@ -31,4 +32,20 @@ test("Arabic and Persian workload digits and decimal separators produce the same
 });
 test("localized zero, negatives and ambiguous grouped numbers stay invalid", () => {
   for (const volume of ["٠", "-١", "١٬٠٠٠", "١,٠٠٠", "١e٣", "١٠٠٠٠٠١"]) assert.equal(reviewBrief({ ...brief, volume }).ok, false);
+});
+
+test("project mail draft preserves complete short text and cannot inject recipients", () => {
+  const text = "# Brief\nA&B?subject=other\nComplete details";
+  const draft = projectEmailDraft(text, "en");
+  assert.equal(draft.requiresAttachment, false);
+  const url = new URL(draft.href);
+  assert.equal(url.pathname, "adham@adham-agritech.com");
+  assert.equal(url.searchParams.get("body"), text);
+  assert.equal(url.searchParams.get("subject"), "Agentnexos project discussion");
+});
+test("long Arabic mail draft requests the complete attachment without truncation", () => {
+  const draft = projectEmailDraft("تفاصيل المشروع ".repeat(500), "ar");
+  assert.equal(draft.requiresAttachment, true);
+  assert.ok(draft.href.length < 1800);
+  assert.match(new URL(draft.href).searchParams.get("body")!, /الموجز الكامل/);
 });
