@@ -48,7 +48,7 @@ export function CyberHome() {
           <div className="cyber-hero-copy">
             <Eyebrow>{c.eyebrow}</Eyebrow>
             <h1>{reviewed.title.split(" ").slice(0,2).join(" ")}{" "}<br/><em>{reviewed.title.split(" ").slice(2).join(" ")}</em></h1>
-            <div className="cyber-hero-intro">{reviewed.intro.split(/\n\s*\n/).map((paragraph,index)=><p key={index} className={index ? "mt-3" : undefined} lang={locale === "ar" && index > 0 ? "en" : undefined} dir={locale === "ar" && index > 0 ? "ltr" : undefined}>{paragraph}</p>)}</div>
+            <div className="cyber-hero-intro">{reviewed.intro.split(/\n\s*\n/).map((paragraph,index)=><p key={index} className={index ? "mt-3" : undefined}>{paragraph}</p>)}</div>
             <div className="cyber-actions"><Action href={`/${locale}/agentnexos`}>{c.primary}</Action><Action secondary href={`/${locale}/start`}>{c.secondary}</Action></div>
             <p className="cyber-note"><ShieldCheck className="size-3.5 shrink-0" aria-hidden="true" />{c.note}</p>
           </div>
