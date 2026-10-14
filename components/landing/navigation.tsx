@@ -82,7 +82,7 @@ export function Navigation() {
           {/* Logo */}
           <a href={`/${locale}`} tabIndex={isMobileMenuOpen ? -1 : undefined} className="flex items-center gap-2.5 group shrink-0">
             <span className="nexus-command" aria-hidden="true"><Command size={20} /></span>
-            <span className={`font-sans text-[22px] sm:text-[25px] font-semibold tracking-[-0.035em] leading-none transition-colors duration-500 ${isDark ? "text-white" : "text-foreground"}`}>Agentnexos</span>
+            <span className={`font-sans text-[22px] sm:text-[25px] font-semibold tracking-[-0.035em] leading-none transition-colors duration-500 ${isDark ? "text-white" : "text-foreground"}`}>AGYNEXA</span>
             <span className={`hidden sm:inline font-mono text-[9px] tracking-[0.12em] transition-colors duration-500 ${isDark ? "text-white/45" : "text-muted-foreground"}`}>AI</span>
           </a>
 

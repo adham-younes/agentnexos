@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteOrigin } from "@/lib/site";
 import { notFound } from "next/navigation";
 import {
   Inter,
@@ -56,13 +57,13 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   const title = isAr
-    ? "Agentnexos — أنظمة وكيلة للمؤسسات"
-    : "Agentnexos — Enterprise Agent Systems";
+    ? "AGYNEXA — هندسة أنظمة الذكاء الاصطناعي وأتمتة الأعمال"
+    : "AGYNEXA — Enterprise AI Systems & Automation Engineering";
   const description = isAr
-    ? "أنظمة وكلاء مخصصة لعمليات المؤسسات في مصر والخليج والشرق الأوسط. اكتشف حالات الاستخدام ومنهج ربط المعرفة والأدوات والموافقات، واستكشف مثال عمل توضيحيًا."
-    : "Custom agent systems for enterprise workflows in Egypt, the Gulf, and MENA. Explore use cases, our approach to knowledge, tools and approvals, and an illustrative workflow.";
+    ? "هندسة أنظمة ذكاء اصطناعي مخصصة للمؤسسات حول العالم، تربط المعرفة والتطبيقات والأدوات بسير عمل محدد الصلاحيات وخاضع للإشراف البشري."
+    : "Custom enterprise AI systems and automation engineering for organizations worldwide. Connect knowledge, applications and tools with governed workflows and human oversight.";
 
-  const baseUrl = "https://compute-the-platform-to-build-six-fawn.vercel.app";
+  const baseUrl = siteOrigin;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -79,7 +80,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${baseUrl}/${locale}`,
-      siteName: "Agentnexos",
+      siteName: "AGYNEXA",
       locale: isAr ? "ar_AR" : "en_US",
       type: "website",
     },

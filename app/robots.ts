@@ -1,6 +1,7 @@
+import { siteOrigin } from "@/lib/site";
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://compute-the-platform-to-build-six-fawn.vercel.app";
+const BASE_URL = siteOrigin;
 
 export default function robots(): MetadataRoute.Robots {
   return {

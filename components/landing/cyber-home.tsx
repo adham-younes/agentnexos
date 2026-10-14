@@ -54,7 +54,7 @@ export function CyberHome() {
           </div>
           <WorkflowConsole locale={locale} />
         </div>
-        <div className="cyber-container cyber-hero-foot"><p><span className="cyber-small-rule" aria-hidden="true" />{locale === "ar" ? "هندسة المعرفة والأدوات وسير العمل" : "Knowledge, tools and workflow engineering"}</p><a href="#features">{c.scroll}<ArrowDown className="size-3.5" aria-hidden="true" /></a></div>
+        <div className="cyber-container cyber-hero-foot"><p><span className="cyber-small-rule" aria-hidden="true" />{locale === "ar" ? "أنظمة مخصصة للمؤسسات حول العالم" : "Custom systems for organizations worldwide"}</p><a href="#features">{c.scroll}<ArrowDown className="size-3.5" aria-hidden="true" /></a></div>
       </section>
 
       <section id="features" className="cyber-section cyber-container">
