@@ -1,109 +1,50 @@
-Current owner-directed repair (15 October 2026): `docs/verification/green-reference-repair/repair-release.md` and the root `design-qa.md` supersede the rejected mint implementation and its historical QA. Approved identity: #050505 background, #0b0b0b marketing cards, #ebebeb text, #10b981 limited accents/focus; original neutral --primary. Preserve bilingual copy, Radix/shadcn behavior and fail-closed APIs. Use normal PR/main publication only.
+# Agentnexos — Agent Instructions (updated 2026-10-15)
 
-Latest owner-authorized visual direction: `docs/verification/green-reference/design-audit.md` and `docs/verification/green-reference/release.md` (15 October 2026), with comparison evidence in `design-qa.md`. The owner explicitly selected five green/black references for the platform, agent workspace, login gateway and original imagery. This supersedes the historical Cyber Serif and older visual-preservation rules for this redesign. Preserve the current bilingual content and functional boundaries; runtime safety, no invented claims, normal PR merge and verified main production remain mandatory. Publication evidence is maintained in PR #50; a local build alone is not production proof.
+These are repository-specific instructions for Codex and other coding agents, **not** an OpenAI system prompt. The owner's current task and explicit recent decisions take priority over historical plans, while security requirements always apply.
 
-Latest release handoff: read `docs/UPGRADE-HANDOFF-2026-10-01.md` and its production evidence before continuing. Historical pending statuses are not current deployment state.
+## Product and current decisions
 
-Current comprehensive upgrade: read `docs/COMPREHENSIVE-UPGRADE-2026-09-30.md` and current UPGRADE reports first. The owner's latest request explicitly authorizes successive automated whole-app stages, preserving the template, images and colors, with independent verified production publication per stage. This supersedes earlier one-stage-per-request restrictions. It does not authorize fabricating runtime capabilities, secret export, unrelated databases or bypassing branch protections.
+Agentnexos is an Arabic-first enterprise agentic AI platform for Egypt and the GCC, integrating business tools and workflows with scoped permissions, human approval for sensitive actions, auditability, and verifiable results. Do not present a design demo as a working production integration.
 
-# Agentnexos — Project Rules
+Current owner-approved visual direction (15 October 2026): matte **#050505** background, **#0b0b0b** marketing cards, **#ebebeb** text, restrained **#10b981** accents/focus; preserve neutral `--primary`, bilingual copy, Radix/shadcn behavior, and fail-closed APIs. Current repair/release evidence: `docs/verification/green-reference-repair/repair-release.md`, `docs/verification/green-reference/design-audit.md`, and `design-qa.md`. Read only the evidence relevant to the task, not every design report.
 
-Current repair: read `docs/REPAIR-PLAN-2026-09-30.md` and `docs/phases/REPAIR-01-2026-09-30.md` before continuing. They record the owner-requested repair scope and observed state. Historical phase completion claims are not evidence of live capabilities.
+Older plans, handoffs and audits in `docs/` are **historical references**, not mandatory startup reading or permission to undo the latest approved design. In particular, do not re-open disabled `/api/chat`, `/api/approvals`, or `/api/telemetry` routes without the actual authentication, persistence, permissions and safety requirements. `/api/agentnexos` is a bounded, read-only design demo. Qwen remains Preview unless live verification proves otherwise.
 
-Current upgrade: `docs/phases/UPGRADE-03-2026-09-30.md` records the later owner-authorized visual/content/chat scope. Its current-state evidence supersedes the historical audit below. `/api/agentnexos` is an independently bounded read-only public design demo, not an exception reopening `/api/chat`, `/api/approvals` or `/api/telemetry`. Never apply the old enterprise migrations blindly to production or describe the quota table as enterprise memory. Qwen is Preview; do not claim production-grade availability or an implemented fallback without tests.
+## Work scope and context budget
 
-1. Before editing, read docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md and docs/GUARDRAILS.md.
-2. Follow the user's current request; the master plan overrides older conflicting project documents.
-3. Work on one requested phase only; list its scope and acceptance criteria before editing.
-4. Preserve the approved template, images, animations, fonts, section order, and proportions.
-5. Inspect existing code and reuse its patterns before adding files, dependencies, or abstractions.
-6. Make small, focused changes; preserve unrelated work and review the diff before committing.
-7. Use documentation matching installed versions; verify uncertain APIs with official sources.
-8. Keep Arabic and English equivalent; verify RTL/LTR and all changed user-facing states.
-9. Never invent implemented features, customers, metrics, integrations, or successful test results.
-10. Keep secrets server-side and out of source code, logs, screenshots, and documentation.
-11. For defects: reproduce, identify the cause, apply a focused fix, and verify the original symptom.
-12. Run pnpm typecheck, pnpm i18n:check, pnpm build, and relevant tests; report failures honestly.
-13. For UI changes, compare before/after at 390, 768, and 1440px in Arabic and English.
-14. Finish with changed files, verification evidence, remaining issues, and the next planned step.
+1. Clarify the requested change from the owner's latest instruction; make the smallest complete change. Preserve unrelated behavior and the current visual identity.
+2. Inspect `AGENTS.md`, the directly relevant source files, and **only the documentation needed for the task**. Do not repeatedly ingest all handoffs, old phases, the entire repository or the whole `node_modules` tree.
+3. Read framework docs only for an affected API or when uncertain. For Next.js changes, consult the relevant version-specific guide under `node_modules/next/dist/docs/`.
+4. Reuse existing patterns; do not install tools, add abstractions, or spawn subagents for work a single agent can handle. Delegate only independent, bounded tasks with an explicit deliverable.
+5. Preserve Arabic/English meaning, RTL/LTR, secrets, permissions, and approved design. Never invent implemented features, customers, metrics, integration success or test outcomes.
+
+## Proportional verification: no redundant test loops
+
+**Do not run the entire test suite after every edit.** Choose verification by risk and the files actually changed:
+
+- **Documentation, prompts or `AGENTS.md` only:** inspect the diff, links and wording. No `pnpm build`, typecheck, i18n suite, browser audit or deployment required.
+- **Small component or isolated logic change:** run the narrow relevant test, lint or typecheck as applicable **after a meaningful edit batch**. Prefer focused commands/results over a whole-project sweep.
+- **Translation or RTL-related changes:** run `pnpm i18n:check` and inspect only affected Arabic/English states.
+- **Significant UI/layout changes:** inspect affected screens in both languages, and check 390/768/1440px at the relevant milestone. Do not repeat full screenshot sweeps after every cosmetic edit.
+- **Auth, data, API, permissions, external actions or migrations:** verify the changed behavior, relevant regression and fail-closed paths; never bypass safeguards or apply historical migrations blindly.
+- **Before merging/releasing application-code changes:** after the implementation is stable, run `pnpm typecheck`, `pnpm i18n:check`, `pnpm build`, and pertinent tests **once as a final gate**. Fix actual failures and rerun only the affected check first; rerun the full gate only when a change could invalidate it. Never claim a check passed unless it ran successfully.
+
+**Hard stop against loops:**
+- Never rerun an unchanged failing test or command without a concrete diagnosis, relevant code/config change, or evidence of a transient issue.
+- If the same failure recurs after one reasoned fix-and-retry, **stop**, report the cause/evidence and what is blocked; request direction rather than launching an open-ended repair loop.
+- Do not repeat successful checks without a relevant intervening change. Never run autonomous exhaustive code reviews, repetitive test sweeps or parallel subagent verification unless the owner expressly requests them.
+- If a tool reaches an unclear or expensive state, stop and summarize progress instead of consuming the remaining budget.
+- Prefer small, filtered tool responses; avoid dumping entire repositories, logs and documents into context.
+
+## Safety, review and publication
+
+- Never expose secrets, write to external systems outside approved scope, or execute sensitive operations without appropriately scoped permissions, idempotency, audit trail and human approval.
+- If a missing owner decision would materially change scope or safety, mark `BLOCKED: requires owner decision` for that portion; finish independent safe work.
+- Use normal branch → PR → permitted merge-to-`main` workflow. Production is `https://compute-the-platform-to-build-six-fawn.vercel.app/` via Vercel project `compute-the-platform-to-build`; do **not** claim deployment from a local build or Preview.
+- When application code is deployed, verify the changed routes/flows in production, bilingual where relevant, and record the commit SHA. **Instructions-only edits do not warrant an application deployment.**
+- End with files changed, checks actually run/skipped, outstanding risks, and concrete result. Do not repeatedly reread all documentation or restart passed tests while writing the report.
 
 ---
-
-# AGENTS.md — تعليمات إلزامية لأي وكيل يعمل على Agentnexos
-
-هذه التعليمات حاكمة على Codex وGemini وGoogle Antigravity وv0 وأي وكيل آخر. اقرأ بالترتيب:
-
-1. `AGENTS.md`
-2. `docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md`
-3. `docs/ANTIGRAVITY-HANDOFF.md`
-4. `docs/GUARDRAILS.md`
-5. سجل المرحلة الجاري تنفيذها في `docs/phases/`
-
-عند تعارض وثيقة قديمة مع الخطة الرئيسية المؤرخة 2026-09-29، تكون الخطة الرئيسية هي المرجع. ملفات الخطط الأقدم سجل تاريخي وليست تصريحًا بإعادة تعريف المنتج.
-
-## تعريف المنتج الثابت
-
-Agentnexos منصة عربية أولًا لبناء وتشغيل أنظمة وكلاء مؤسسية مخصصة لمصر والخليج والشرق الأوسط. تربط بيانات المؤسسة وأنظمتها وأدواتها بسير عمل قابل للتتبع، بصلاحيات محددة، وموافقات بشرية قبل الأفعال الحساسة، ودليل نتيجة قابل للمراجعة. ليست روبوت دردشة عامًا، وليست منصة لمعالجة المستندات فقط.
-
-## قواعد عدم الاختراع
-
-- لا تغيّر الرؤية أو النصوص المعتمدة أو ترتيب المراحل من عندك.
-- لا تعِد بعميل أو رقم أداء أو شهادة أو امتثال أو تكامل أو سعر غير منفذ وقابل للتحقق.
-- لا تعتبر واجهة وهمية، زرًا، أو متغير بيئة دليلًا على أن الميزة تعمل.
-- لا تضف مكتبة أو إطارًا أو خدمة لمجرد أنها شائعة؛ اكتب سبب الحاجة والتكلفة والبديل.
-- لا تستخدم أسرارًا في الكود أو التوثيق أو السجلات. يُسمح بأسماء المتغيرات فقط.
-- لا تنفذ أدوات كتابة خارجية من دون صلاحيات ضيقة، idempotency، سجل تدقيق، وموافقة عند الخطر.
-- إذا كانت معلومة ناقصة وتغيّر القرار، اكتب `BLOCKED: requires owner decision` وتوقف في هذا الجزء بدل التخمين.
-
-## حماية القالب
-
-- القالب الحالي وصوره وحركته ونظامه البصري أساس ملزم، وليس مادة لإعادة التصميم.
-- أي تغيير بصري يكون موضعيًا وله سبب ومقارنة قبل/بعد.
-- لا تستبدل الصور، Hero، ترتيب الأقسام، الخطوط، أو نسب الشبكة إلا بطلب صريح من المالك.
-- افحص العربية والإنجليزية عند 390 و768 و1440 بكسل، وRTL/LTR، والتمرير والقائمة والحالات التفاعلية.
-- إذا شوّه التعديل القالب أو سبّب قصًا أو تمددًا أو عدم تماثل، ألغِ التعديل قبل أي عمل آخر.
-
-## حدود المرحلة
-
-- نفّذ مرحلة واحدة فقط في كل دفعة.
-- لا تبدأ المرحلة التالية لأن الوقت متاح أو لأن الوكيل يراها أفضل.
-- كل مرحلة: فرع واضح، تغييرات محدودة، اختبارات، Preview، فحص بصري، دمج إلى `main`، انتظار إنتاج `READY`، ثم فحص الرابط الإنتاجي وتوثيق SHA.
-- لا تقل «تم النشر» بسبب نجاح `build` محليًا أو Preview. الإنتاج وحده هو `main` مع تحقق حي.
-
-## أوامر تحقق إلزامية
-
-```bash
-pnpm typecheck
-pnpm i18n:check
-pnpm build
-```
-
-ESLint مثبت. افحص الملفات المتأثرة وسجل ديون الفحص العام. لا تخفِ التحذيرات ولا تغيّر إعدادات TypeScript لتجاوز الفشل.
-
-## التعريب والاتجاه
-
-- كل معنى ظاهر للمستخدم موجود بالعربية والإنجليزية.
-- كل `t("x.y", "Fallback")` له مفتاح فعلي في `lib/i18n/dictionaries.ts`.
-- راجع `translate-x` و`left/right` و`ml/mr` والتدرجات في RTL؛ المتصفح لا يعكس النية البصرية تلقائيًا.
-- الخط العربي مربوط عبر `--font-arabic` داخل `:lang(ar)`؛ لا تغيّر خط الإنجليزية ضمن إصلاح عربي.
-
-## حالة التنفيذ الحالية — تدقيق 2026-09-30
-
-- خط أساس الإنتاج المفحوص: commit `5889dce`؛ توجد ملفات Runtime وAPI ومخطط Supabase وتبعيات AI SDK. لا يوجد Mastra في package.json.
-- الـcoordinator الحالي يصوغ نصًا ثابتًا، ولا يثبت استدعاء النماذج بوجود إعداداتها. نتائج enterprise-lookup معرفة ثابتة داخل الكود.
-- الموافقات والتدقيق والذاكرة تعتمد مخازن في الذاكرة. وجود migrations لا يثبت تطبيقها أو عزل المؤسسات في قاعدة إنتاجية.
-- أدوات الإجراءات تولد إيصالات محلية دون إرسال خارجي. لا يوصف ذلك كتصدير حقيقي أو سجل غير قابل للتعديل.
-- مساحة الوكيل مثال محلي معلن. دفعة REPAIR-02 توقف chat وapprovals وtelemetry برد 503 حتى اكتمال الهوية والحفظ والتحقق. لا تضف علم بيئة يتجاوز هذا الحظر بلا تنفيذ الصلاحيات.
-- فرع المرحلة التاسعة المحلي محفوظ في `preserved/local-phase-9-2026-09-30`، ولم يُدمج في الإصلاح.
-- أسماء مفاتيح Groq المبلغ عنها: `GROQ_API_KEY`, `GROQ_API_KEY1`, `GROQ_API_KEY2`. الوجود لا يثبت تنفيذ API؛ لا تُطبع القيم.
-
-## النشر
-
-- GitHub: `https://github.com/adham-younes/agentnexos`
-- مشروع Vercel: `compute-the-platform-to-build`
-- الإنتاج من فرع `main` فقط.
-- رابط الإنتاج الحالي: `https://compute-the-platform-to-build-six-fawn.vercel.app/`
-- بعد كل نشر، اختبر `/ar` و`/en` والرحلة التي غيّرتها وسجّل commit ووقت التحقق.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
