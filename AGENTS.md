@@ -1,4 +1,6 @@
-Latest owner-authorized visual release: `docs/verification/cyber-serif/release.md` (13 October 2026). The current owner explicitly selected Cyber Serif and requested its adaptation across Agentnexos; this supersedes historical template/font/color/section preservation rules only for this redesign. Runtime safety, bilingual parity, no invented claims, normal PR merge, and verified main production remain mandatory.
+Current owner-directed repair (15 October 2026): `docs/verification/green-reference-repair/repair-release.md` and the root `design-qa.md` supersede the rejected mint implementation and its historical QA. Approved identity: #050505 background, #0b0b0b marketing cards, #ebebeb text, #10b981 limited accents/focus; original neutral --primary. Preserve bilingual copy, Radix/shadcn behavior and fail-closed APIs. Use normal PR/main publication only.
+
+Latest owner-authorized visual direction: `docs/verification/green-reference/design-audit.md` and `docs/verification/green-reference/release.md` (15 October 2026), with comparison evidence in `design-qa.md`. The owner explicitly selected five green/black references for the platform, agent workspace, login gateway and original imagery. This supersedes the historical Cyber Serif and older visual-preservation rules for this redesign. Preserve the current bilingual content and functional boundaries; runtime safety, no invented claims, normal PR merge and verified main production remain mandatory. Publication evidence is maintained in PR #50; a local build alone is not production proof.
 
 Latest release handoff: read `docs/UPGRADE-HANDOFF-2026-10-01.md` and its production evidence before continuing. Historical pending statuses are not current deployment state.
 
@@ -107,8 +109,8 @@ ESLint مثبت. افحص الملفات المتأثرة وسجل ديون ال
 
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
-This block is written and re-added by `next dev`; committing it keeps the tree clean.
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->

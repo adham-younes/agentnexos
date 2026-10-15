@@ -1,0 +1,286 @@
+{
+  "origin": "http://localhost:3001",
+  "checkedAt": "2026-10-15T17:23:56.803Z",
+  "pages": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-home-390.png"
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-agentnexos-390.png"
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "route": "login",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-login-390.png"
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-home-768.png"
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-agentnexos-768.png"
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "route": "login",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-login-768.png"
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-home-1440.png"
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-agentnexos-1440.png"
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "route": "login",
+      "errors": [],
+      "overflow": false,
+      "dir": "rtl",
+      "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-ar-login-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Anybody, \"Anybody Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-home-390.png"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Inter, \"Inter Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-agentnexos-390.png"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "login",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Inter, \"Inter Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-login-390.png"
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Anybody, \"Anybody Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-home-768.png"
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Inter, \"Inter Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-agentnexos-768.png"
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "route": "login",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Inter, \"Inter Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-login-768.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Anybody, \"Anybody Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-home-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "agentnexos",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Inter, \"Inter Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-agentnexos-1440.png"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "login",
+      "errors": [],
+      "overflow": false,
+      "dir": "ltr",
+      "font": "Inter, \"Inter Fallback\", sans-serif",
+      "status": 200,
+      "screenshot": "output/green-reference-repair/final/final-en-login-1440.png"
+    }
+  ],
+  "interactions": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "workspaceSuggestionAndReset": true,
+      "composerInViewport": true
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "passwordVisibility": true,
+      "honestSignInFailure": true,
+      "realAuthRequests": 0
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "workspaceSuggestionAndReset": true,
+      "composerInViewport": true
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "passwordVisibility": true,
+      "honestSignInFailure": true,
+      "realAuthRequests": 0
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "workspaceSuggestionAndReset": true,
+      "composerInViewport": true
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "passwordVisibility": true,
+      "honestSignInFailure": true,
+      "realAuthRequests": 0
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "workspaceSuggestionAndReset": true,
+      "composerInViewport": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "passwordVisibility": true,
+      "honestSignInFailure": true,
+      "realAuthRequests": 0
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "workspaceSuggestionAndReset": true,
+      "composerInViewport": true
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "passwordVisibility": true,
+      "honestSignInFailure": true,
+      "realAuthRequests": 0
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "workspaceSuggestionAndReset": true,
+      "composerInViewport": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "passwordVisibility": true,
+      "honestSignInFailure": true,
+      "realAuthRequests": 0
+    }
+  ],
+  "failures": [],
+  "liveAuthenticationVerified": false
+}

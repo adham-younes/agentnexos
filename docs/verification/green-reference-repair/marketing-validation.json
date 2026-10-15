@@ -1,0 +1,366 @@
+{
+  "origin": "http://localhost:3001",
+  "checkedAt": "2026-10-15T13:09:05.990Z",
+  "cases": [
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "skipLinkFocused": true,
+      "mainInert": true,
+      "focusRestored": true,
+      "paletteAndFonts": {
+        "primary": "lab(93.066% -.0116825 1.90769)",
+        "background": "#050505",
+        "card": "#0b0b0b",
+        "foreground": "#ebebeb",
+        "ring": "#10b981",
+        "display": "Anybody, \"Anybody Fallback\", sans-serif",
+        "weight": "700",
+        "thin": "200",
+        "fontSynthesis": "none",
+        "loadedFonts": [
+          {
+            "family": "Inter",
+            "weight": "100 900",
+            "stretch": "normal"
+          },
+          {
+            "family": "Newsreader",
+            "weight": "200 800",
+            "stretch": "normal"
+          },
+          {
+            "family": "Space Grotesk",
+            "weight": "300 700",
+            "stretch": "normal"
+          },
+          {
+            "family": "Anybody",
+            "weight": "100 900",
+            "stretch": "50% 150%"
+          }
+        ],
+        "animation": "none"
+      },
+      "zoomOverflow": false,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "skipLinkFocused": true,
+      "mainInert": true,
+      "focusRestored": true,
+      "paletteAndFonts": {
+        "primary": "lab(93.066% -.0116825 1.90769)",
+        "background": "#050505",
+        "card": "#0b0b0b",
+        "foreground": "#ebebeb",
+        "ring": "#10b981",
+        "display": "Anybody, \"Anybody Fallback\", sans-serif",
+        "weight": "700",
+        "thin": "200",
+        "fontSynthesis": "none",
+        "loadedFonts": [
+          {
+            "family": "Inter",
+            "weight": "100 900",
+            "stretch": "normal"
+          },
+          {
+            "family": "Newsreader",
+            "weight": "200 800",
+            "stretch": "normal"
+          },
+          {
+            "family": "Space Grotesk",
+            "weight": "300 700",
+            "stretch": "normal"
+          },
+          {
+            "family": "Anybody",
+            "weight": "100 900",
+            "stretch": "50% 150%"
+          }
+        ],
+        "animation": "none"
+      },
+      "zoomOverflow": false,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "skipLinkFocused": true,
+      "paletteAndFonts": {
+        "primary": "lab(93.066% -.0116825 1.90769)",
+        "background": "#050505",
+        "card": "#0b0b0b",
+        "foreground": "#ebebeb",
+        "ring": "#10b981",
+        "display": "Anybody, \"Anybody Fallback\", sans-serif",
+        "weight": "700",
+        "thin": "200",
+        "fontSynthesis": "none",
+        "loadedFonts": [
+          {
+            "family": "Inter",
+            "weight": "100 900",
+            "stretch": "normal"
+          },
+          {
+            "family": "Space Grotesk",
+            "weight": "300 700",
+            "stretch": "normal"
+          },
+          {
+            "family": "Anybody",
+            "weight": "100 900",
+            "stretch": "50% 150%"
+          }
+        ],
+        "animation": "none"
+      },
+      "zoomOverflow": false,
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "width": 390,
+      "height": 900,
+      "skipLinkFocused": true,
+      "mainInert": true,
+      "focusRestored": true,
+      "paletteAndFonts": {
+        "primary": "lab(93.066% -.0116825 1.90769)",
+        "background": "#050505",
+        "card": "#0b0b0b",
+        "foreground": "#ebebeb",
+        "ring": "#10b981",
+        "display": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+        "weight": "700",
+        "thin": "300",
+        "fontSynthesis": "none",
+        "loadedFonts": [
+          {
+            "family": "Inter",
+            "weight": "100 900",
+            "stretch": "normal"
+          },
+          {
+            "family": "Space Grotesk",
+            "weight": "300 700",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "300",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "300",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "400",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "400",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "500",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "500",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "700",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "700",
+            "stretch": "normal"
+          }
+        ],
+        "animation": "none"
+      },
+      "zoomOverflow": false,
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "height": 900,
+      "skipLinkFocused": true,
+      "mainInert": true,
+      "focusRestored": true,
+      "paletteAndFonts": {
+        "primary": "lab(93.066% -.0116825 1.90769)",
+        "background": "#050505",
+        "card": "#0b0b0b",
+        "foreground": "#ebebeb",
+        "ring": "#10b981",
+        "display": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+        "weight": "700",
+        "thin": "300",
+        "fontSynthesis": "none",
+        "loadedFonts": [
+          {
+            "family": "Inter",
+            "weight": "100 900",
+            "stretch": "normal"
+          },
+          {
+            "family": "Space Grotesk",
+            "weight": "300 700",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "300",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "300",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "400",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "400",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "500",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "500",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "700",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "700",
+            "stretch": "normal"
+          }
+        ],
+        "animation": "none"
+      },
+      "zoomOverflow": false,
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "height": 900,
+      "skipLinkFocused": true,
+      "paletteAndFonts": {
+        "primary": "lab(93.066% -.0116825 1.90769)",
+        "background": "#050505",
+        "card": "#0b0b0b",
+        "foreground": "#ebebeb",
+        "ring": "#10b981",
+        "display": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+        "weight": "700",
+        "thin": "300",
+        "fontSynthesis": "none",
+        "loadedFonts": [
+          {
+            "family": "Inter",
+            "weight": "100 900",
+            "stretch": "normal"
+          },
+          {
+            "family": "Space Grotesk",
+            "weight": "300 700",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "300",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "300",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "400",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "400",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "500",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "500",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "700",
+            "stretch": "normal"
+          },
+          {
+            "family": "IBM Plex Sans Arabic",
+            "weight": "700",
+            "stretch": "normal"
+          }
+        ],
+        "animation": "none"
+      },
+      "zoomOverflow": false,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "motion": "normal",
+      "revealed": 11,
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "motion": "normal",
+      "revealed": 11,
+      "passed": true
+    }
+  ],
+  "failures": []
+}

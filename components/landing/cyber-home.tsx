@@ -9,7 +9,6 @@ import { revision } from "@/lib/content/revision";
 import { cyberHome } from "@/lib/content/cyber-home";
 import { Navigation } from "./navigation";
 import { CyberEffects, Glass as Spotlight } from "@/components/cyber/effects";
-import { WorkflowConsole } from "@/components/cyber/console";
 import { Lightning } from "@/components/cyber/lightning";
 import { CyberFooter } from "@/components/cyber/footer";
 
@@ -42,8 +41,8 @@ export function CyberHome() {
     <Navigation />
     <main id="main-content" tabIndex={-1}>
       <section id="top" className="cyber-hero">
+        <div className="reference-ribbon" aria-hidden="true" />
         <Lightning />
-        <div className="cyber-ambient" aria-hidden="true" />
         <div className="cyber-container cyber-hero-grid">
           <div className="cyber-hero-copy">
             <Eyebrow>{c.eyebrow}</Eyebrow>
@@ -52,13 +51,16 @@ export function CyberHome() {
             <div className="cyber-actions"><Action href={`/${locale}/agentnexos`}>{c.primary}</Action><Action secondary href={`/${locale}/start`}>{c.secondary}</Action></div>
             <p className="cyber-note"><ShieldCheck className="size-3.5 shrink-0" aria-hidden="true" />{c.note}</p>
           </div>
-          <WorkflowConsole locale={locale} />
         </div>
         <div className="cyber-container cyber-hero-foot"><p><span className="cyber-small-rule" aria-hidden="true" />{locale === "ar" ? "أنظمة مخصصة للمؤسسات حول العالم" : "Custom systems for organizations worldwide"}</p><a href="#features">{c.scroll}<ArrowDown className="size-3.5" aria-hidden="true" /></a></div>
       </section>
 
       <section id="features" className="cyber-section cyber-container">
-        <div className="cyber-section-heading" data-reveal><div><Eyebrow>{c.capabilitiesLabel}</Eyebrow><h2>{c.capabilitiesTitle}<br /><em>{c.capabilitiesEmphasis}</em></h2></div><p>{c.capabilitiesIntro}</p></div>
+        <div className="cyber-section-heading" data-reveal><div><Eyebrow>{c.capabilitiesLabel}</Eyebrow><h2>{c.capabilitiesTitle}<br /><em>{c.capabilitiesEmphasis}</em></h2></div></div>
+        <div className="reference-about-visual">
+          <div className="reference-about-copy"><h3>{c.casesTitle}</h3><p>{c.capabilitiesIntro}</p><Link href={`/${locale}/platform`} className="cyber-text-link">{locale === "ar" ? "اكتشف المنصة" : "Explore the platform"}<ArrowUpRight className="size-4 rtl:-rotate-90" aria-hidden="true" /></Link></div>
+          <ol className="reference-workflow" aria-label={c.illustration}>{[[c.requestLabel,c.request,c.requestDetail],[c.checkLabel,c.check,c.checkDetail],[c.reviewLabel,c.review,c.reviewDetail]].map(([label,title,detail],i)=><li key={label}><span className="cyber-meta">0{i+1} · {label}</span><h3>{title}</h3><p>{detail}</p></li>)}<li className="reference-workflow-notice"><ShieldCheck className="size-4" aria-hidden="true"/><span>{c.draft}</span></li></ol>
+        </div>
         <div className="cyber-capabilities">{sections.slice(0,2).map((section,index) => { const Icon = icons[index]; return <Spotlight key={section.id} className="cyber-capability"><section id={section.id}><div className="cyber-card-top"><span className="cyber-icon"><Icon className="size-5" aria-hidden="true"/></span><span className="cyber-meta">0{index+1}</span></div><h3>{section.heading}</h3><ContentBody text={section.body}/></section></Spotlight>; })}<Spotlight className="cyber-capability"><div className="cyber-card-top"><span className="cyber-icon"><CheckCheck className="size-5" aria-hidden="true"/></span><span className="cyber-meta">03</span></div><h3>{c.capabilities[2].title}</h3><p>{c.capabilities[2].description}</p><div className="cyber-card-detail"><Check className="size-3.5" aria-hidden="true"/>{c.capabilities[2].detail}</div></Spotlight></div>
       </section>
 

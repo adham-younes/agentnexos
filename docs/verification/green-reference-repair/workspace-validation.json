@@ -1,0 +1,1981 @@
+{
+  "realProviderStreaming": "BLOCKED locally: no provider credentials copied or enabled. Simulated readiness and SSE tests are explicitly marked.",
+  "runs": [
+    {
+      "origin": "http://localhost:3000",
+      "mode": "dev",
+      "checkedAt": "2026-10-15T13:06:22.143Z",
+      "pages": [
+        {
+          "locale": "ar",
+          "width": 390,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {
+            "failClosed503AndRetryRestore": true,
+            "longSSE": {
+              "documentOverflow": false,
+              "composerBottom": 824.4375,
+              "contextDisplay": "block",
+              "conversationScrollHeight": 6968,
+              "conversationClientHeight": 627,
+              "actualProviderCalled": false
+            }
+          },
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "rtl",
+            "lang": "ar",
+            "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 14,
+            "y": 714.84375,
+            "width": 362,
+            "height": 109.59375,
+            "bottom": 824.4375
+          },
+          "context": {
+            "x": 14,
+            "y": 832.4375,
+            "width": 362,
+            "height": 16.1875,
+            "bottom": 848.625
+          },
+          "privacy": {
+            "x": 14,
+            "y": 855.625,
+            "width": 362,
+            "height": 32.375,
+            "bottom": 888
+          },
+          "railPercent": 0,
+          "composerPercent": 92.82051282051282,
+          "screenshot": "/tmp/workspace-dev-ar-390.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 525.625
+          }
+        },
+        {
+          "locale": "ar",
+          "width": 768,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {
+            "failClosed503AndRetryRestore": true,
+            "longSSE": {
+              "documentOverflow": false,
+              "composerBottom": 834.625,
+              "contextDisplay": "block",
+              "conversationScrollHeight": 3348,
+              "conversationClientHeight": 634,
+              "actualProviderCalled": false
+            }
+          },
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "rtl",
+            "lang": "ar",
+            "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 39,
+            "y": 725.03125,
+            "width": 690,
+            "height": 109.59375,
+            "bottom": 834.625
+          },
+          "context": {
+            "x": 39,
+            "y": 842.625,
+            "width": 690,
+            "height": 16.1875,
+            "bottom": 858.8125
+          },
+          "privacy": {
+            "x": 39,
+            "y": 865.8125,
+            "width": 690,
+            "height": 16.1875,
+            "bottom": 882
+          },
+          "railPercent": 0,
+          "composerPercent": 89.84375,
+          "screenshot": "/tmp/workspace-dev-ar-768.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 541.8125
+          }
+        },
+        {
+          "locale": "ar",
+          "width": 1440,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {
+            "failClosed503AndRetryRestore": true,
+            "longSSE": {
+              "documentOverflow": false,
+              "composerBottom": 834.625,
+              "contextDisplay": "block",
+              "conversationScrollHeight": 2804,
+              "conversationClientHeight": 636,
+              "actualProviderCalled": false
+            }
+          },
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 1229.765625,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 1229.765625,
+            "y": 0,
+            "width": 210.234375,
+            "height": 900,
+            "bottom": 900
+          },
+          "composer": {
+            "x": 251.015625,
+            "y": 725.03125,
+            "width": 727.734375,
+            "height": 109.59375,
+            "bottom": 834.625
+          },
+          "context": {
+            "x": 251.015625,
+            "y": 842.625,
+            "width": 727.734375,
+            "height": 16.1875,
+            "bottom": 858.8125
+          },
+          "privacy": {
+            "x": 251.015625,
+            "y": 865.8125,
+            "width": 727.734375,
+            "height": 16.1875,
+            "bottom": 882
+          },
+          "railPercent": 14.599609375,
+          "composerPercent": 59.17667238421955,
+          "screenshot": "/tmp/workspace-dev-ar-1440.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 541.8125
+          }
+        },
+        {
+          "locale": "en",
+          "width": 390,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {
+            "failClosed503AndRetryRestore": true,
+            "longSSE": {
+              "documentOverflow": false,
+              "composerBottom": 808.25,
+              "contextDisplay": "block",
+              "conversationScrollHeight": 11768,
+              "conversationClientHeight": 611,
+              "actualProviderCalled": false
+            }
+          },
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "ltr",
+            "lang": "en",
+            "font": "Inter, \"Inter Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 14,
+            "y": 698.65625,
+            "width": 362,
+            "height": 109.59375,
+            "bottom": 808.25
+          },
+          "context": {
+            "x": 14,
+            "y": 816.25,
+            "width": 362,
+            "height": 16.1875,
+            "bottom": 832.4375
+          },
+          "privacy": {
+            "x": 14,
+            "y": 839.4375,
+            "width": 362,
+            "height": 48.5625,
+            "bottom": 888
+          },
+          "railPercent": 0,
+          "composerPercent": 92.82051282051282,
+          "screenshot": "/tmp/workspace-dev-en-390.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 509.4375
+          }
+        },
+        {
+          "locale": "en",
+          "width": 768,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {
+            "failClosed503AndRetryRestore": true,
+            "longSSE": {
+              "documentOverflow": false,
+              "composerBottom": 818.4375,
+              "contextDisplay": "block",
+              "conversationScrollHeight": 5076,
+              "conversationClientHeight": 618,
+              "actualProviderCalled": false
+            }
+          },
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "ltr",
+            "lang": "en",
+            "font": "Inter, \"Inter Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 39,
+            "y": 708.84375,
+            "width": 690,
+            "height": 109.59375,
+            "bottom": 818.4375
+          },
+          "context": {
+            "x": 39,
+            "y": 826.4375,
+            "width": 690,
+            "height": 16.1875,
+            "bottom": 842.625
+          },
+          "privacy": {
+            "x": 39,
+            "y": 849.625,
+            "width": 690,
+            "height": 32.375,
+            "bottom": 882
+          },
+          "railPercent": 0,
+          "composerPercent": 89.84375,
+          "screenshot": "/tmp/workspace-dev-en-768.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 525.625
+          }
+        },
+        {
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {
+            "failClosed503AndRetryRestore": true,
+            "longSSE": {
+              "documentOverflow": false,
+              "composerBottom": 818.4375,
+              "contextDisplay": "block",
+              "conversationScrollHeight": 4148,
+              "conversationClientHeight": 620,
+              "actualProviderCalled": false
+            }
+          },
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 210.234375,
+            "y": 0,
+            "width": 1229.765625,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 210.234375,
+            "height": 900,
+            "bottom": 900
+          },
+          "composer": {
+            "x": 461.25,
+            "y": 708.84375,
+            "width": 727.734375,
+            "height": 109.59375,
+            "bottom": 818.4375
+          },
+          "context": {
+            "x": 461.25,
+            "y": 826.4375,
+            "width": 727.734375,
+            "height": 16.1875,
+            "bottom": 842.625
+          },
+          "privacy": {
+            "x": 461.25,
+            "y": 849.625,
+            "width": 727.734375,
+            "height": 32.375,
+            "bottom": 882
+          },
+          "railPercent": 14.599609375,
+          "composerPercent": 59.17667238421955,
+          "screenshot": "/tmp/workspace-dev-en-1440.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 525.625
+          }
+        }
+      ],
+      "failures": [],
+      "visualStatus": "SUPERSEDED: owner rejected the charcoal palette; historical interaction evidence only."
+    },
+    {
+      "origin": "http://localhost:3001",
+      "mode": "production-build",
+      "checkedAt": "2026-10-15T13:08:23.277Z",
+      "pages": [
+        {
+          "locale": "ar",
+          "width": 390,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "rtl",
+            "lang": "ar",
+            "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 14,
+            "y": 714.84375,
+            "width": 362,
+            "height": 109.59375,
+            "bottom": 824.4375
+          },
+          "context": {
+            "x": 14,
+            "y": 832.4375,
+            "width": 362,
+            "height": 16.1875,
+            "bottom": 848.625
+          },
+          "privacy": {
+            "x": 14,
+            "y": 855.625,
+            "width": 362,
+            "height": 32.375,
+            "bottom": 888
+          },
+          "railPercent": 0,
+          "composerPercent": 92.82051282051282,
+          "screenshot": "output/green-reference-repair/workspace-ar-390.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 525.625
+          }
+        },
+        {
+          "locale": "ar",
+          "width": 768,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "rtl",
+            "lang": "ar",
+            "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 39,
+            "y": 725.03125,
+            "width": 690,
+            "height": 109.59375,
+            "bottom": 834.625
+          },
+          "context": {
+            "x": 39,
+            "y": 842.625,
+            "width": 690,
+            "height": 16.1875,
+            "bottom": 858.8125
+          },
+          "privacy": {
+            "x": 39,
+            "y": 865.8125,
+            "width": 690,
+            "height": 16.1875,
+            "bottom": 882
+          },
+          "railPercent": 0,
+          "composerPercent": 89.84375,
+          "screenshot": "output/green-reference-repair/workspace-ar-768.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 541.8125
+          }
+        },
+        {
+          "locale": "ar",
+          "width": 1440,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 1229.765625,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 1229.765625,
+            "y": 0,
+            "width": 210.234375,
+            "height": 900,
+            "bottom": 900
+          },
+          "composer": {
+            "x": 251.015625,
+            "y": 725.03125,
+            "width": 727.734375,
+            "height": 109.59375,
+            "bottom": 834.625
+          },
+          "context": {
+            "x": 251.015625,
+            "y": 842.625,
+            "width": 727.734375,
+            "height": 16.1875,
+            "bottom": 858.8125
+          },
+          "privacy": {
+            "x": 251.015625,
+            "y": 865.8125,
+            "width": 727.734375,
+            "height": 16.1875,
+            "bottom": 882
+          },
+          "railPercent": 14.599609375,
+          "composerPercent": 59.17667238421955,
+          "screenshot": "output/green-reference-repair/workspace-ar-1440.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 541.8125
+          }
+        },
+        {
+          "locale": "en",
+          "width": 390,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "ltr",
+            "lang": "en",
+            "font": "Inter, \"Inter Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 14,
+            "y": 698.65625,
+            "width": 362,
+            "height": 109.59375,
+            "bottom": 808.25
+          },
+          "context": {
+            "x": 14,
+            "y": 816.25,
+            "width": 362,
+            "height": 16.1875,
+            "bottom": 832.4375
+          },
+          "privacy": {
+            "x": 14,
+            "y": 839.4375,
+            "width": 362,
+            "height": 48.5625,
+            "bottom": 888
+          },
+          "railPercent": 0,
+          "composerPercent": 92.82051282051282,
+          "screenshot": "output/green-reference-repair/workspace-en-390.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 509.4375
+          }
+        },
+        {
+          "locale": "en",
+          "width": 768,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "ltr",
+            "lang": "en",
+            "font": "Inter, \"Inter Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 39,
+            "y": 708.84375,
+            "width": 690,
+            "height": 109.59375,
+            "bottom": 818.4375
+          },
+          "context": {
+            "x": 39,
+            "y": 826.4375,
+            "width": 690,
+            "height": 16.1875,
+            "bottom": 842.625
+          },
+          "privacy": {
+            "x": 39,
+            "y": 849.625,
+            "width": 690,
+            "height": 32.375,
+            "bottom": 882
+          },
+          "railPercent": 0,
+          "composerPercent": 89.84375,
+          "screenshot": "output/green-reference-repair/workspace-en-768.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 525.625
+          }
+        },
+        {
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "main": {
+            "x": 210.234375,
+            "y": 0,
+            "width": 1229.765625,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 210.234375,
+            "height": 900,
+            "bottom": 900
+          },
+          "composer": {
+            "x": 461.25,
+            "y": 708.84375,
+            "width": 727.734375,
+            "height": 109.59375,
+            "bottom": 818.4375
+          },
+          "context": {
+            "x": 461.25,
+            "y": 826.4375,
+            "width": 727.734375,
+            "height": 16.1875,
+            "bottom": 842.625
+          },
+          "privacy": {
+            "x": 461.25,
+            "y": 849.625,
+            "width": 727.734375,
+            "height": 32.375,
+            "bottom": 882
+          },
+          "railPercent": 14.599609375,
+          "composerPercent": 59.17667238421955,
+          "screenshot": "output/green-reference-repair/workspace-en-1440.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 525.625
+          }
+        }
+      ],
+      "failures": [],
+      "visualStatus": "SUPERSEDED: owner rejected the charcoal palette; historical interaction evidence only."
+    },
+    {
+      "origin": "http://localhost:3000",
+      "mode": "platform-black-dev",
+      "checkedAt": "2026-10-15T16:55:50.952Z",
+      "pages": [
+        {
+          "locale": "ar",
+          "width": 390,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "rtl",
+            "lang": "ar",
+            "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "background": "rgb(5, 5, 5)",
+          "card": "#0b0b0b",
+          "muted": "#b3b3b3",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 14,
+            "y": 705.625,
+            "width": 362,
+            "height": 113.375,
+            "bottom": 819
+          },
+          "context": {
+            "x": 14,
+            "y": 827,
+            "width": 362,
+            "height": 18,
+            "bottom": 845
+          },
+          "privacy": {
+            "x": 14,
+            "y": 852,
+            "width": 362,
+            "height": 36,
+            "bottom": 888
+          },
+          "railPercent": 0,
+          "composerPercent": 92.82051282051282,
+          "screenshot": "output/green-reference-repair/workspace-ar-390.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 522
+          },
+          "short400": {
+            "display": "block",
+            "bottom": 352
+          }
+        },
+        {
+          "locale": "ar",
+          "width": 768,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "rtl",
+            "lang": "ar",
+            "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "background": "rgb(5, 5, 5)",
+          "card": "#0b0b0b",
+          "muted": "#b3b3b3",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 39,
+            "y": 717.625,
+            "width": 690,
+            "height": 113.375,
+            "bottom": 831
+          },
+          "context": {
+            "x": 39,
+            "y": 839,
+            "width": 690,
+            "height": 18,
+            "bottom": 857
+          },
+          "privacy": {
+            "x": 39,
+            "y": 864,
+            "width": 690,
+            "height": 18,
+            "bottom": 882
+          },
+          "railPercent": 0,
+          "composerPercent": 89.84375,
+          "screenshot": "output/green-reference-repair/workspace-ar-768.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 540
+          },
+          "short400": {
+            "display": "block",
+            "bottom": 370
+          }
+        },
+        {
+          "locale": "ar",
+          "width": 1440,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "rtl",
+          "documentOverflow": false,
+          "font": "\"IBM Plex Sans Arabic\", \"IBM Plex Sans Arabic Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "background": "rgb(5, 5, 5)",
+          "card": "#0b0b0b",
+          "muted": "#b3b3b3",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 1229.765625,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 1229.765625,
+            "y": 0,
+            "width": 210.234375,
+            "height": 900,
+            "bottom": 900
+          },
+          "composer": {
+            "x": 251.015625,
+            "y": 717.625,
+            "width": 727.734375,
+            "height": 113.375,
+            "bottom": 831
+          },
+          "context": {
+            "x": 251.015625,
+            "y": 839,
+            "width": 727.734375,
+            "height": 18,
+            "bottom": 857
+          },
+          "privacy": {
+            "x": 251.015625,
+            "y": 864,
+            "width": 727.734375,
+            "height": 18,
+            "bottom": 882
+          },
+          "railPercent": 14.599609375,
+          "composerPercent": 59.17667238421955,
+          "screenshot": "output/green-reference-repair/workspace-ar-1440.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 540
+          },
+          "short400": {
+            "display": "block",
+            "bottom": 370
+          }
+        },
+        {
+          "locale": "en",
+          "width": 390,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "ltr",
+            "lang": "en",
+            "font": "Inter, \"Inter Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "background": "rgb(5, 5, 5)",
+          "card": "#0b0b0b",
+          "muted": "#b3b3b3",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 14,
+            "y": 687.625,
+            "width": 362,
+            "height": 113.375,
+            "bottom": 801
+          },
+          "context": {
+            "x": 14,
+            "y": 809,
+            "width": 362,
+            "height": 18,
+            "bottom": 827
+          },
+          "privacy": {
+            "x": 14,
+            "y": 834,
+            "width": 362,
+            "height": 54,
+            "bottom": 888
+          },
+          "railPercent": 0,
+          "composerPercent": 92.82051282051282,
+          "screenshot": "output/green-reference-repair/workspace-en-390.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 504
+          },
+          "short400": {
+            "display": "block",
+            "bottom": 334
+          }
+        },
+        {
+          "locale": "en",
+          "width": 768,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "sheet": {
+            "tabTrap": true,
+            "escapeRestoresMenu": true,
+            "dir": "ltr",
+            "lang": "en",
+            "font": "Inter, \"Inter Fallback\", sans-serif",
+            "reducedAnimationDuration": "1e-05s"
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "background": "rgb(5, 5, 5)",
+          "card": "#0b0b0b",
+          "muted": "#b3b3b3",
+          "main": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0
+          },
+          "composer": {
+            "x": 39,
+            "y": 699.625,
+            "width": 690,
+            "height": 113.375,
+            "bottom": 813
+          },
+          "context": {
+            "x": 39,
+            "y": 821,
+            "width": 690,
+            "height": 18,
+            "bottom": 839
+          },
+          "privacy": {
+            "x": 39,
+            "y": 846,
+            "width": 690,
+            "height": 36,
+            "bottom": 882
+          },
+          "railPercent": 0,
+          "composerPercent": 89.84375,
+          "screenshot": "output/green-reference-repair/workspace-en-768.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 522
+          },
+          "short400": {
+            "display": "block",
+            "bottom": 352
+          }
+        },
+        {
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "errors": [],
+          "simulatedTests": {},
+          "realLocalReadiness": {
+            "ready": false,
+            "sendDisabled": true,
+            "enterBlocked": true,
+            "retryIssuedGet": true,
+            "postCount": 0
+          },
+          "resetAndComposerFocus": true,
+          "httpStatus": 200,
+          "direction": "ltr",
+          "documentOverflow": false,
+          "font": "Inter, \"Inter Fallback\", sans-serif",
+          "primary": "#ebebeb",
+          "background": "rgb(5, 5, 5)",
+          "card": "#0b0b0b",
+          "muted": "#b3b3b3",
+          "main": {
+            "x": 210.234375,
+            "y": 0,
+            "width": 1229.765625,
+            "height": 900,
+            "bottom": 900
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "width": 210.234375,
+            "height": 900,
+            "bottom": 900
+          },
+          "composer": {
+            "x": 461.25,
+            "y": 699.625,
+            "width": 727.734375,
+            "height": 113.375,
+            "bottom": 813
+          },
+          "context": {
+            "x": 461.25,
+            "y": 821,
+            "width": 727.734375,
+            "height": 18,
+            "bottom": 839
+          },
+          "privacy": {
+            "x": 461.25,
+            "y": 846,
+            "width": 727.734375,
+            "height": 36,
+            "bottom": 882
+          },
+          "railPercent": 14.599609375,
+          "composerPercent": 59.17667238421955,
+          "screenshot": "output/green-reference-repair/workspace-en-1440.png",
+          "shortContext": {
+            "display": "block",
+            "bottom": 522
+          },
+          "short400": {
+            "display": "block",
+            "bottom": 352
+          }
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "verificationNotes": [
+    "Initial diagnostic harness used an unscoped role=alert locator and matched the Next.js route announcer; scoped to workspace-message-list before final runs. This was a harness error, not an application failure.",
+    "An initial production-build run was interrupted during the Arabic/English matrix for the parent-requested final rebuild; only the completed final production-build run is acceptance evidence."
+  ],
+  "visualReview": {
+    "reviewedScreenshots": [
+      "output/green-reference-repair/workspace-ar-390.png",
+      "output/green-reference-repair/workspace-ar-768.png",
+      "output/green-reference-repair/workspace-ar-1440.png",
+      "output/green-reference-repair/workspace-en-390.png",
+      "output/green-reference-repair/workspace-en-768.png",
+      "output/green-reference-repair/workspace-en-1440.png"
+    ],
+    "findings": [
+      "Owner rejected the previous charcoal palette. Its CSS/screenshots/report are preserved in output/green-reference-repair/old-workspace-before-platform-black/.",
+      "Current six development screenshots were visually opened after the correction. Black application surfaces, raised neutral-black cards, clearer text and borders, localized emerald arrow details, and neutral composer surfaces replace the former washed charcoal treatment.",
+      "At1440px sidebar remains14.60% and composer59.18% of main area.",
+      "Current real local readiness is false/FEATURE_DISABLED. Send stays disabled with a legible neutral style; enabled send is styled white and focus uses emerald.",
+      "At390px and768px, larger genuine bilingual copy can require scrolling within the welcome/conversation region while composer/context/privacy stay visible. No content is deleted.",
+      "Actual bilingual introduction/scope/four suggestions differ from the Echo reference; exact visual matching is not claimed."
+    ],
+    "notCertification": "These checks cover the listed screens and interactions; they do not prove live provider availability or successful real-account authentication.",
+    "finalProductionBlackPaletteVerification": "Pending final rebuild; previous production-mode run predates owner correction."
+  },
+  "currentVisualDirection": "Owner correction: platform black #050505, card #0b0b0b, secondary #111111, text #ebebeb, muted #b3b3b3; emerald restricted to local details and focus.",
+  "lastHierarchyPolish": {
+    "checkedAt": "2026-10-15T16:58:50.184Z",
+    "change": "Removed literal duplicate of toolbar label from welcome; toolbar label retained once.",
+    "pages": [
+      {
+        "locale": "ar",
+        "width": 390,
+        "height": 900,
+        "tabTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true,
+        "overflow": false,
+        "badgeCount": 0,
+        "toolbarLabelCount": 1
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "height": 900,
+        "tabTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true,
+        "overflow": false,
+        "badgeCount": 0,
+        "toolbarLabelCount": 1
+      }
+    ]
+  },
+  "touchTargetPolish": {
+    "checkedAt": "2026-10-15T17:04:06.045Z",
+    "pages": [
+      {
+        "locale": "ar",
+        "width": 390,
+        "height": 900,
+        "overflow": false,
+        "targets": {
+          "menu": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "download": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "send": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "summary": [
+            {
+              "w": 161.015625,
+              "h": 44
+            }
+          ],
+          "retry": [
+            {
+              "w": 98.640625,
+              "h": 44
+            }
+          ],
+          "brand": [],
+          "signin": [],
+          "locale": [],
+          "new": []
+        },
+        "contextDisplay": "block",
+        "contextBottom": 845,
+        "privacyBottom": 888,
+        "disabledSend": true,
+        "sheetTargets": [
+          {
+            "text": "AGYNEXA",
+            "w": 94.09375,
+            "h": 44
+          },
+          {
+            "text": "إغلاق القائمة",
+            "w": 44,
+            "h": 44
+          },
+          {
+            "text": "محادثة جديدة",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "تسجيل الدخول",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "English",
+            "w": 45.9375,
+            "h": 44
+          },
+          {
+            "text": "العربية",
+            "w": 54.359375,
+            "h": 44
+          }
+        ],
+        "sheetTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "ar",
+        "width": 390,
+        "height": 500,
+        "overflow": false,
+        "targets": {
+          "menu": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "download": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "send": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "summary": [
+            {
+              "w": 161.015625,
+              "h": 44
+            }
+          ],
+          "retry": [
+            {
+              "w": 98.640625,
+              "h": 44
+            }
+          ],
+          "brand": [],
+          "signin": [],
+          "locale": [],
+          "new": []
+        },
+        "contextDisplay": "block",
+        "contextBottom": 452,
+        "privacyBottom": 492,
+        "disabledSend": true,
+        "sheetTargets": [
+          {
+            "text": "AGYNEXA",
+            "w": 94.09375,
+            "h": 44
+          },
+          {
+            "text": "إغلاق القائمة",
+            "w": 44,
+            "h": 44
+          },
+          {
+            "text": "محادثة جديدة",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "تسجيل الدخول",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "English",
+            "w": 45.9375,
+            "h": 44
+          },
+          {
+            "text": "العربية",
+            "w": 54.359375,
+            "h": 44
+          }
+        ],
+        "sheetTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "ar",
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "targets": {
+          "menu": [],
+          "download": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "send": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "summary": [
+            {
+              "w": 161.015625,
+              "h": 44
+            }
+          ],
+          "retry": [
+            {
+              "w": 98.640625,
+              "h": 44
+            }
+          ],
+          "brand": [
+            {
+              "w": 94.09375,
+              "h": 44
+            }
+          ],
+          "signin": [
+            {
+              "w": 179.234375,
+              "h": 44
+            }
+          ],
+          "locale": [
+            {
+              "w": 45.9375,
+              "h": 44
+            },
+            {
+              "w": 54.359375,
+              "h": 44
+            }
+          ],
+          "new": [
+            {
+              "w": 179.234375,
+              "h": 44
+            }
+          ]
+        },
+        "contextDisplay": "block",
+        "contextBottom": 857,
+        "privacyBottom": 882,
+        "disabledSend": true
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "height": 900,
+        "overflow": false,
+        "targets": {
+          "menu": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "download": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "send": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "summary": [
+            {
+              "w": 240.109375,
+              "h": 44
+            }
+          ],
+          "retry": [
+            {
+              "w": 141.671875,
+              "h": 44
+            }
+          ],
+          "brand": [],
+          "signin": [],
+          "locale": [],
+          "new": []
+        },
+        "contextDisplay": "block",
+        "contextBottom": 827,
+        "privacyBottom": 888,
+        "disabledSend": true,
+        "sheetTargets": [
+          {
+            "text": "AGYNEXA",
+            "w": 98.609375,
+            "h": 44
+          },
+          {
+            "text": "Close menu",
+            "w": 44,
+            "h": 44
+          },
+          {
+            "text": "New conversation",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "Sign in",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "English",
+            "w": 45.9375,
+            "h": 44
+          },
+          {
+            "text": "العربية",
+            "w": 54.359375,
+            "h": 44
+          }
+        ],
+        "sheetTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "height": 500,
+        "overflow": false,
+        "targets": {
+          "menu": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "download": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "send": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "summary": [
+            {
+              "w": 240.109375,
+              "h": 44
+            }
+          ],
+          "retry": [
+            {
+              "w": 141.671875,
+              "h": 44
+            }
+          ],
+          "brand": [],
+          "signin": [],
+          "locale": [],
+          "new": []
+        },
+        "contextDisplay": "block",
+        "contextBottom": 434,
+        "privacyBottom": 492,
+        "disabledSend": true,
+        "sheetTargets": [
+          {
+            "text": "AGYNEXA",
+            "w": 98.609375,
+            "h": 44
+          },
+          {
+            "text": "Close menu",
+            "w": 44,
+            "h": 44
+          },
+          {
+            "text": "New conversation",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "Sign in",
+            "w": 289,
+            "h": 44
+          },
+          {
+            "text": "English",
+            "w": 45.9375,
+            "h": 44
+          },
+          {
+            "text": "العربية",
+            "w": 54.359375,
+            "h": 44
+          }
+        ],
+        "sheetTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "targets": {
+          "menu": [],
+          "download": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "send": [
+            {
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "summary": [
+            {
+              "w": 240.109375,
+              "h": 44
+            }
+          ],
+          "retry": [
+            {
+              "w": 141.671875,
+              "h": 44
+            }
+          ],
+          "brand": [
+            {
+              "w": 98.609375,
+              "h": 44
+            }
+          ],
+          "signin": [
+            {
+              "w": 179.234375,
+              "h": 44
+            }
+          ],
+          "locale": [
+            {
+              "w": 45.9375,
+              "h": 44
+            },
+            {
+              "w": 54.359375,
+              "h": 44
+            }
+          ],
+          "new": [
+            {
+              "w": 179.234375,
+              "h": 44
+            }
+          ]
+        },
+        "contextDisplay": "block",
+        "contextBottom": 839,
+        "privacyBottom": 882,
+        "disabledSend": true
+      }
+    ]
+  },
+  "densityHierarchyPolish": {
+    "checkedAt": "2026-10-15T17:15:23.004Z",
+    "pages": [
+      {
+        "locale": "ar",
+        "width": 390,
+        "height": 900,
+        "overflow": false,
+        "cardCount": 4,
+        "cardsTop": 295.40625,
+        "cardsBottom": 589.40625,
+        "conversationTop": 56,
+        "conversationBottom": 634.625,
+        "allCardsVisible": true,
+        "contextBottom": 845,
+        "privacyBottom": 888,
+        "intro": "ما العملية التي تريد تحسينها؟",
+        "fullIntroVisible": true,
+        "fullIntroLength": 179,
+        "tabTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "ar",
+        "width": 390,
+        "height": 500,
+        "overflow": false,
+        "cardCount": 4,
+        "cardsTop": 270.1875,
+        "cardsBottom": 564.1875,
+        "conversationTop": 56,
+        "conversationBottom": 250.625,
+        "allCardsVisible": false,
+        "contextBottom": 452,
+        "privacyBottom": 492,
+        "intro": "ما العملية التي تريد تحسينها؟",
+        "fullIntroVisible": true,
+        "fullIntroLength": 179,
+        "tabTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "ar",
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "cardCount": 4,
+        "cardsTop": 409.0625,
+        "cardsBottom": 546.4375,
+        "conversationTop": 54,
+        "conversationBottom": 643.625,
+        "allCardsVisible": true,
+        "contextBottom": 857,
+        "privacyBottom": 882,
+        "intro": "ما العملية التي تريد تحسينها؟",
+        "fullIntroVisible": true,
+        "fullIntroLength": 179
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "height": 900,
+        "overflow": false,
+        "cardCount": 4,
+        "cardsTop": 264.515625,
+        "cardsBottom": 580.4375,
+        "conversationTop": 56,
+        "conversationBottom": 604.5625,
+        "allCardsVisible": true,
+        "contextBottom": 827,
+        "privacyBottom": 888,
+        "intro": "Which workflow would you improve?",
+        "fullIntroVisible": true,
+        "fullIntroLength": 192,
+        "tabTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "height": 500,
+        "overflow": false,
+        "cardCount": 4,
+        "cardsTop": 260.390625,
+        "cardsBottom": 576.3125,
+        "conversationTop": 56,
+        "conversationBottom": 220.5625,
+        "allCardsVisible": false,
+        "contextBottom": 434,
+        "privacyBottom": 492,
+        "intro": "Which workflow would you improve?",
+        "fullIntroVisible": true,
+        "fullIntroLength": 192,
+        "tabTrap": true,
+        "escapeRestore": true,
+        "resetFocus": true
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "cardCount": 4,
+        "cardsTop": 371.140625,
+        "cardsBottom": 533.703125,
+        "conversationTop": 54,
+        "conversationBottom": 602.9375,
+        "allCardsVisible": true,
+        "contextBottom": 839,
+        "privacyBottom": 882,
+        "intro": "Which workflow would you improve?",
+        "fullIntroVisible": true,
+        "fullIntroLength": 192
+      }
+    ],
+    "independentReview": {
+      "reviewer": "independent_audit",
+      "status": "No blocker in development; final production build verification pending.",
+      "evidence": "Reviewer opened the three latest mobile/desktop screenshots and both locales on dev3000; confirmed four complete cards at390x900 and the full introduction and sections inside details."
+    }
+  }
+}

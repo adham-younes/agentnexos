@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { ArrowUp, ArrowUpRight, Check, Command, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Check, Command, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow, Menu, X, LogIn } from "lucide-react";
 import { Conversation, ConversationContent, ConversationScrollButton, messagesToMarkdown } from "@/components/ai-elements/conversation";
 import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
@@ -13,6 +13,9 @@ import { projectConversation } from "@/lib/agents/context";
 import { revision } from "@/lib/content/revision";
 import { ContentSections } from "@/components/site/content-body";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetDescription, SheetClose } from "@/components/ui/sheet";
+import "./workspace.css";
 import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode } from "@/lib/agents/reservation";
 
 export function AgentWorkspace() {
@@ -29,6 +32,8 @@ export function AgentWorkspace() {
   const [notice, setNotice] = useState<"cancelled" | "copyError" | null>(null);
   const [readinessAttempt, setReadinessAttempt] = useState(0);
   const composer = useRef<HTMLTextAreaElement>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const focusComposerOnClose = useRef(false);
   const transport = useMemo(() => new DefaultChatTransport({
     api: "/api/agentnexos",
     fetch: async (input, init) => {
@@ -65,40 +70,51 @@ export function AgentWorkspace() {
     const url = URL.createObjectURL(new Blob([messagesToMarkdown(messages)], { type: "text/markdown;charset=utf-8" }));
     const link = document.createElement("a"); link.href = url; link.download = "agentnexos-conversation.md"; link.click(); URL.revokeObjectURL(url);
   }
+  function newConversation(fromDrawer = false) {
+    setMessages([]); clearError(); setNotice(null); setCopied(null); setInput(""); setPhase(-1);
+    if (fromDrawer) { focusComposerOnClose.current = true; setDrawerOpen(false); }
+    else composer.current?.focus();
+  }
+  function railContent(inDrawer = false) {
+    return <>
+      <div className="workspace-brand-row">
+        <Link href={`/${locale}`} className="workspace-brand" aria-label={c.home}><Command size={23} aria-hidden="true"/><span dir="ltr">AGYNEXA</span></Link>
+        {inDrawer && <SheetClose asChild><Button variant="ghost" size="icon" aria-label={locale === "ar" ? "إغلاق القائمة" : "Close menu"}><X size={18}/></Button></SheetClose>}
+      </div>
+      <Button variant="outline" disabled={busy} onClick={() => newConversation(inDrawer)} className="workspace-new"><Plus size={15} aria-hidden="true"/><span>{c.newChat}</span></Button>
+      <div className="workspace-rail-content">
+        <h2>{c.team}</h2>
+        <ol className="workspace-stages">{c.roles.map((role, i) => <li key={role} data-active={busy && phase === i}><span className="workspace-stage-number">{busy && phase === i ? <LoaderCircle size={14} className="animate-spin"/> : `0${i + 1}`}</span><div><p>{role}</p><p>{c.roleDescriptions[i]}</p></div></li>)}</ol>
+        <section className="workspace-capability"><h2>{c.capability}</h2><ul>{c.tools.map(tool => <li key={tool}><Workflow size={13} aria-hidden="true"/>{tool}</li>)}</ul></section>
+        <section className="workspace-boundary"><ShieldCheck size={16} aria-hidden="true"/><h2>{c.boundary}</h2><p>{c.boundaryText}</p></section>
+      </div>
+      <div className="workspace-account"><Link href={`/${locale}/login`}><LogIn size={15} aria-hidden="true"/>{locale === "ar" ? "تسجيل الدخول" : "Sign in"}</Link><LocaleSwitcher/></div>
+    </>;
+  }
   return (
-    <div className="agent-workspace nexus-workspace min-h-dvh bg-background text-foreground">
-      <header className="border-b border-border bg-card">
-        <div className="mx-auto flex min-h-20 max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
-          <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3" aria-label={c.home}>
-            <span className="flex size-10 items-center justify-center rounded-xl border border-border bg-secondary"><Command className="size-5" aria-hidden="true" /></span>
-            <span dir="ltr" className="text-xl font-semibold tracking-tight">AGYNEXA</span>
-          </Link>
-          <LocaleSwitcher />
-        </div>
-      </header>
-      <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[260px_minmax(0,1fr)]">
-        <aside className="hidden min-h-[calc(100dvh-81px)] flex-col border-e border-border bg-card p-6 lg:flex">
-          <button disabled={busy} onClick={() => {setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);composer.current?.focus();}} className="flex min-h-12 items-center justify-between rounded-xl border border-border bg-background px-4 text-sm font-medium hover:bg-secondary disabled:opacity-50"><span>{c.newChat}</span><Plus className="size-4" /></button>
-          <h2 className="mb-5 mt-10 text-xs font-medium text-muted-foreground">{c.team}</h2>
-          <ol className="space-y-6">
-            {c.roles.map((role, i) => <li key={role} className="flex items-start gap-3"><span className={`flex size-8 shrink-0 items-center justify-center rounded-full border ${busy && phase === i ? "border-primary bg-primary/10" : "border-border"}`}>{busy && phase === i ? <LoaderCircle className="size-4 animate-spin" /> : <span className="text-xs">0{i+1}</span>}</span><div><p className="text-sm font-medium">{role}</p><p className="mt-1 text-xs leading-6 text-muted-foreground">{c.roleDescriptions[i]}</p></div></li>)}
-          </ol>
-          <div className="mt-10 border-t border-border pt-6"><h2 className="text-xs font-medium text-muted-foreground">{c.capability}</h2><ul className="mt-4 space-y-3">{c.tools.map(tool => <li key={tool} className="flex items-center gap-2 text-xs"><Workflow className="size-3.5 text-primary" />{tool}</li>)}</ul></div>
-          <div className="mt-auto pt-12"><div className="rounded-xl bg-secondary p-4"><ShieldCheck className="mb-3 size-5 text-primary" /><h2 className="text-sm font-medium">{c.boundary}</h2><p className="mt-2 text-xs leading-6 text-muted-foreground">{c.boundaryText}</p></div></div>
-        </aside>
-        <main id="main-content" tabIndex={-1} className="flex h-[calc(100dvh-81px)] min-h-0 min-w-0 flex-col">
-          <div className="flex min-h-16 shrink-0 items-center justify-between gap-3 border-b border-border px-5 sm:px-9">
-            <div className="flex min-w-0 items-center gap-2"><span className="size-1.5 shrink-0 rounded-full bg-primary" /><p className="text-xs leading-5 text-muted-foreground">{c.label}</p></div>
-            <div className="flex gap-1"><button onClick={() => {setMessages([]);clearError();setNotice(null);setCopied(null);setInput("");setPhase(-1);composer.current?.focus();}} disabled={busy} aria-label={c.newChat} className="rounded-lg p-3 hover:bg-secondary lg:hidden"><Plus className="size-4" /></button><button disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="rounded-lg p-3 hover:bg-secondary disabled:opacity-30"><Download className="size-4" /></button></div>
+    <div className="agent-workspace nexus-workspace" lang={locale}>
+      <div className="workspace-shell">
+        <aside className="workspace-rail" aria-label={locale === "ar" ? "تنقل المساعد" : "Assistant navigation"}>{railContent()}</aside>
+        <main id="main-content" tabIndex={-1} className="workspace-main">
+          <div className="workspace-toolbar">
+            <Sheet open={drawerOpen} onOpenChange={setDrawerOpen}>
+              <SheetTrigger asChild><Button variant="ghost" size="icon" className="workspace-menu" aria-label={locale === "ar" ? "فتح قائمة المساعد" : "Open assistant menu"}><Menu size={19}/></Button></SheetTrigger>
+              <SheetContent lang={locale} side={locale === "ar" ? "right" : "left"} dir={locale === "ar" ? "rtl" : "ltr"} className="workspace-sheet" onCloseAutoFocus={event => {if(focusComposerOnClose.current){event.preventDefault();focusComposerOnClose.current=false;composer.current?.focus();}}}>
+                <SheetTitle className="sr-only">{locale === "ar" ? "قائمة المساعد" : "Assistant menu"}</SheetTitle>
+                <SheetDescription className="sr-only">{locale === "ar" ? "مراحل الطلب ونطاق المساعد وخيارات الحساب" : "Request stages, assistant scope and account options"}</SheetDescription>
+                {railContent(true)}
+              </SheetContent>
+            </Sheet>
+            <p className="workspace-label"><span aria-hidden="true"/>{c.label}</p>
+            <Button variant="ghost" size="icon" disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="workspace-download"><Download size={16}/></Button>
           </div>
           <Conversation key={messages.length ? "conversation" : "welcome"} className="min-h-0" initial={messages.length ? "smooth" : false} resize="smooth" aria-label={c.label}>
-            <ConversationContent className="mx-auto w-full max-w-4xl gap-8 px-5 py-8 sm:px-9 sm:py-12">
-              {messages.length === 0 ? <div className="py-2 sm:py-5">
-                <div className="mb-7 flex size-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10"><Layers3 className="size-7 text-primary" /></div>
-                <p className="mb-3 text-xs font-medium text-primary">{c.badge}</p>
-                <h1 className="max-w-2xl text-3xl font-display leading-[1.4] tracking-tight sm:text-4xl">{reviewed.title}</h1>
-                <p className="mt-5 max-w-2xl text-sm leading-8 text-muted-foreground sm:text-base">{reviewed.intro}</p><details className="mt-6"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><ContentSections sections={reviewed.sections}/></details>
-                <div className="mt-9 grid gap-3 sm:grid-cols-2">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="group min-w-0 rounded-2xl border border-border bg-card p-5 text-start transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary"><div className="flex items-center justify-between gap-3"><span className="text-xs text-primary">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="mt-4 text-sm font-semibold leading-7">{item.title}</h2><p className="mt-1 text-xs leading-6 text-muted-foreground">{item.detail}</p></button>)}</div>
+            <ConversationContent className="workspace-message-list">
+              {messages.length === 0 ? <div className="workspace-welcome">
+                <div className="workspace-emblem"><Layers3 className="size-7" /></div>
+                <h1 className="workspace-title">{reviewed.title}</h1>
+                <p className="workspace-intro">{c.title}</p><details className="workspace-scope"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><p className="workspace-scope-intro">{reviewed.intro}</p><ContentSections sections={reviewed.sections}/></details>
+                <div className="workspace-suggestions">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="workspace-suggestion"><div className="flex items-center justify-between gap-3"><span className="workspace-suggestion-number">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="workspace-suggestion-title">{item.title}</h2><p className="workspace-suggestion-detail">{item.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
                 <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "AGYNEXA"}</div>
                 <MessageContent className="w-full text-sm leading-8 group-[.is-user]:bg-secondary group-[.is-user]:text-foreground">
@@ -110,17 +126,17 @@ export function AgentWorkspace() {
               {error && <div role="alert" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm leading-7"><p>{ready === false ? c.offline : limitCode ? c.limits[limitCode] : c.error}</p>{limitCount !== null && <p>{c.budgetLabel} {limitCount} {c.dailyUnit}</p>}<button onClick={() => {const last=[...messages].reverse().find(m=>m.role==="user");const text=last?.parts.filter(p=>p.type==="text").map(p=>p.text).join("\n");if(text){setInput(text);clearError();setLimitCode(null);setLimitCount(null);composer.current?.focus();}}} className="mt-3 underline underline-offset-4">{c.retry}</button></div>}
               {notice && <p role="status" className="rounded-xl border border-border bg-secondary p-4 text-sm leading-7">{c[notice]}</p>}
             </ConversationContent>
-            <ConversationScrollButton aria-label={locale === "ar" ? "آخر رسالة" : "Latest message"} />
+            {messages.length > 0 && <ConversationScrollButton aria-label={locale === "ar" ? "آخر رسالة" : "Latest message"} />}
           </Conversation>
-          <div className="shrink-0 px-5 pb-5 pt-3 sm:px-9">
-            <div className="mx-auto max-w-4xl">
-              <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}{ready === true && dailyBudget !== null && <span className="block">{c.budgetLabel} {dailyBudget} {c.dailyUnit}</span>}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
-              <form onSubmit={e => {e.preventDefault();submit();}} className="rounded-2xl border border-border bg-card p-3 shadow-[0_8px_30px_-18px_#000000] focus-within:border-primary/70">
-                <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="max-h-40 min-h-16 w-full resize-y bg-transparent px-2 py-2 text-sm leading-7 outline-none placeholder:text-muted-foreground" />
-                <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <button type="button" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background"><Square className="size-4" /></button> : <button type="submit" disabled={!input.trim() || ready !== true} aria-label={c.send} className="flex size-10 items-center justify-center rounded-xl bg-foreground text-background hover:bg-primary disabled:opacity-30"><ArrowUp className="size-5" /></button>}</div>
+          <div className="workspace-composer">
+            <div className="workspace-composer-inner">
+              <div className="workspace-readiness"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}{ready === true && dailyBudget !== null && <span className="block">{c.budgetLabel} {dailyBudget} {c.dailyUnit}</span>}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
+              <form onSubmit={e => {e.preventDefault();submit();}} className="workspace-composer-form">
+                <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="workspace-textarea" />
+                <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <Button type="button" variant="outline" size="icon" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="workspace-send"><Square className="size-4" /></Button> : <Button type="submit" variant="outline" size="icon" disabled={!input.trim() || ready !== true} aria-label={c.send} className="workspace-send"><ArrowUp className="size-5" /></Button>}</div>
               </form>
-              <p className="mt-2 text-center text-[11px] leading-6 text-muted-foreground">{c.contextNotice}</p>
-              <p className="mt-3 text-center text-[11px] leading-6 text-muted-foreground">{c.privacy} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
+              <p className="workspace-context">{c.contextNotice}</p>
+              <p className="workspace-privacy">{c.privacy} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
             </div>
           </div>
         </main>
