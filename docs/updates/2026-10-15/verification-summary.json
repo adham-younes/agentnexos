@@ -1,0 +1,103 @@
+{
+  "preview_responsive": {
+    "base": "https://compute-the-platform-to-build-8ndmleglm-adhamlouxors-projects.vercel.app",
+    "checkedAt": "2026-10-15T00:32:18.112Z",
+    "failures": [],
+    "pages_count": 102,
+    "interactions_count": 2
+  },
+  "preview_content": {
+    "base": "https://compute-the-platform-to-build-8ndmleglm-adhamlouxors-projects.vercel.app",
+    "checkedAt": "2026-10-15T00:32:18.115Z",
+    "failures": [],
+    "pages_count": 30,
+    "downloads_count": 4
+  },
+  "production_content": {
+    "base": "https://compute-the-platform-to-build-six-fawn.vercel.app",
+    "checkedAt": "2026-10-15T00:35:39.387Z",
+    "failures": [],
+    "pages_count": 30,
+    "downloads_count": 4
+  },
+  "production_brand": {
+    "base": "https://compute-the-platform-to-build-six-fawn.vercel.app",
+    "checkedAt": "2026-10-15T00:35:36.525Z",
+    "failures": [],
+    "defaultLocale": {
+      "status": 307,
+      "location": "/en"
+    },
+    "routes_count": 34,
+    "viewports_count": 6
+  },
+  "reading_layout": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "overflow": false,
+      "columns": "292px",
+      "reduceMotion": true,
+      "sectionLinks": 6,
+      "keyboard": true
+    },
+    {
+      "locale": "ar",
+      "width": 768,
+      "overflow": false,
+      "columns": "658px",
+      "reduceMotion": true,
+      "sectionLinks": 6,
+      "keyboard": true
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "overflow": false,
+      "columns": "367.812px 788.172px",
+      "reduceMotion": true,
+      "sectionLinks": 6,
+      "keyboard": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "overflow": false,
+      "columns": "292px",
+      "reduceMotion": true,
+      "sectionLinks": 6,
+      "keyboard": true
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "overflow": false,
+      "columns": "658px",
+      "reduceMotion": true,
+      "sectionLinks": 6,
+      "keyboard": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "overflow": false,
+      "columns": "367.812px 788.172px",
+      "reduceMotion": true,
+      "sectionLinks": 6,
+      "keyboard": true
+    }
+  ],
+  "release": {
+    "application_sha": "f2714123464d0ef11bde7c1570f43c7d5266cfcd",
+    "deployment": "dpl_4hbBavmGD8SAbX3hSy4fAK6tEajH",
+    "state": "READY",
+    "target": "production",
+    "source_checks": {
+      "typecheck": "passed",
+      "i18n": "passed",
+      "build": "passed",
+      "lint_errors": 0,
+      "lint_existing_warnings": 5
+    }
+  }
+}
