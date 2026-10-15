@@ -4,7 +4,8 @@ import { mkdir, writeFile } from "node:fs/promises";
 const base = new URL(process.argv[2] || process.env.SITE_URL || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Use an HTTP(S) site URL without credentials");
 
-const routes = ["", "agentnexos", "login", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start", "services", "methodology", "solutions/knowledge", "solutions/procurement", "solutions/receivables", "solutions/customer-operations"];
+const allRoutes = ["", "agentnexos", "login", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start", "services", "methodology", "solutions/knowledge", "solutions/procurement", "solutions/receivables", "solutions/customer-operations"];
+const routes = process.argv.includes("--home-only") ? [""] : allRoutes;
 const report = { base: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAgentVerified: false };
 const requireCheck = (condition, message) => { if (!condition) throw Error(message); };
 const browser = await chromium.launch();
@@ -18,7 +19,7 @@ try {
       await page.locator("main").waitFor();
       if (route !== "agentnexos") await page.locator('[data-effects-ready="true"]').waitFor();
       await page.evaluate(() => document.fonts.ready);
-      await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { scrollTo({ top: y, behavior: "instant" }); await new Promise(resolve => setTimeout(resolve, 60)); } scrollTo({ top: 0, behavior: "instant" }); });
+      await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { scrollTo({ top: y, behavior: "instant" }); await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))); await new Promise(resolve => setTimeout(resolve, 60)); } scrollTo({ top: 0, behavior: "instant" }); });
       for (const image of await page.locator("img").all()) {
         if (!await image.evaluate(element => element.getBoundingClientRect().width > 0 && element.getBoundingClientRect().height > 0 && Number(getComputedStyle(element).opacity) > 0)) continue;
         await image.scrollIntoViewIfNeeded();
@@ -41,7 +42,7 @@ try {
       requireCheck(row.dir === (locale === "ar" ? "rtl" : "ltr") && row.lang.startsWith(locale), "Wrong language or direction");
       requireCheck(row.mainCount === 1 && !row.missingHashTargets.length, "Landmark or fragment failure");
       requireCheck(row.canonical?.endsWith(`/${locale}${route ? "/" + route : ""}`), "Wrong canonical");
-      const known = new Set(routes.flatMap(path => ["ar", "en"].map(language => `/${language}${path ? "/" + path : ""}`)));
+      const known = new Set(allRoutes.flatMap(path => ["ar", "en"].map(language => `/${language}${path ? "/" + path : ""}`)));
       requireCheck(row.missingRoutes.every(path => known.has(path) || /^\/downloads\/agentnexos\/(workflow-brief|acceptance-plan)-(ar|en)\.md$/.test(path)), "Unknown internal route");
       if (!route) {
         requireCheck(await page.locator("h1").count() === 1, "Homepage needs one primary heading");

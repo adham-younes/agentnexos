@@ -11,14 +11,16 @@ Owner-authorized scope, 15 October 2026 (Africa/Cairo): implement the five suppl
 - Fixed the existing reveal observer's proportional threshold, which could leave tall sections hidden.
 - Three original WebP assets total approximately 664 KB. No new dependency or lockfile change.
 
-## Validation status before PR review
+## Completed local and preview validation
 
 - Frozen installation repeated with Node 22.23.3 / pnpm 11.19.0.
 - Typecheck, i18n, 50/50 workflow/policy/brief tests and production Turbopack build passed.
 - Lint: zero errors, five existing warnings; no new warnings.
 - Production dependency audit: one existing moderate `sprintf-js` denial-of-service advisory. The audit recommends `>=1.1.4`, but `pnpm view sprintf-js@1.1.4` returned no published matching version. No suppression or speculative override was introduced.
-- Initial reference-specific verification: 18 pages and 12 interactions passed. A first test-harness locator matched Next's hidden route announcer as well as the login alert; the locator was scoped to the actual form and rerun successfully. Minor visual refinements were then rebuilt; final checks are recorded below when complete.
-- Full browser regression and final screenshots: running at the time this draft was prepared. Do not interpret this line as a passed check.
+- Final reference-specific verification: 18 pages and 12 interactions passed on the final local production build, and the same 18/12 passed on Vercel Preview. No horizontal overflow or JavaScript/hydration exceptions in those cases. Evidence: `reference-validation.json` and the comparison boards in this directory.
+- Full regression: 108 page cases completed, with 107 passing and one Arabic mobile homepage reveal timing failure; both complete interaction journeys passed. A standalone reproduction found no hidden content after rendering settled. The runner's rapid scrolling could outrun rendering under load, so it now waits for two actual animation frames per scroll step while retaining all assertions. The six homepage language/width cases and both interaction journeys were then rerun successfully, with zero failures. This is combined evidence from the complete run and affected-scope rerun, not a claim that the initial 108-case run passed.
+- The focused runner initially treated routes outside the selected test subset as unknown. The complete route catalog is now independent of the selected subset; link validation remains enabled. The final six-case rerun passed after that harness correction.
+- Final visual QA passed; desktop/phone/medium layouts, font hierarchy, actual imagery, controls and focused source/implementation comparisons are documented in root `design-qa.md`.
 - Live authentication and live model calls: not verified locally; no production secrets copied.
 
 ## Hosted CI limitation
@@ -35,4 +37,14 @@ Use a normal revert PR for the release merge commit, wait for Vercel Production 
 
 ## Final repository and deployment evidence
 
-Pending final browser/visual checks, normal PR review/merge and a matching-commit production deployment. No production publication is claimed at this draft stage.
+Implementation commit: `73639c6b7e9f7928c9c84f5319f0c6bcd4dbd54f`. Its Vercel Preview deployment `7091011919` completed successfully and the public preview passed the 18-page/12-interaction reference checks: https://compute-the-platform-to-build-g2dcfnom2-adhamlouxors-projects.vercel.app . Later verification/documentation changes do not change application rendering or dependencies.
+
+The final matching-head preview, normal merge commit, Vercel production deployment, timestamps and post-publication functional verification are maintained in [PR #50](https://github.com/adham-younes/agentnexos/pull/50). Read that live record for the actual publication outcome; this file does not infer publication from a successful local build or preview. The production origin is https://compute-the-platform-to-build-six-fawn.vercel.app/ .
+
+Before this change, production readiness returned `ready:true`, limits 1000 per connection / 10000 global / 24 hours. Post-publication readiness and legacy API status are checked independently and recorded in the PR. No live model answer or real account login is claimed without a specific corresponding test.
+
+## External blocker at the final push
+
+The implementation commit and draft PR #50 were successfully pushed, and their Vercel Preview passed the checks above. During the subsequent verification/documentation push, the existing GitHub authentication stopped working: GitHub API returned `401 Bad credentials`; ordinary Git push/read could no longer obtain accepted authentication. Read-only Git was also tried without token variables to check the existing native/proxy route, and failed. The managed environment remains connected, with no separately configured outbound identity available. No token value was inspected, exported or requested in chat.
+
+The final verification changes are committed locally on `redesign/green-reference-2026-10-15`. They still need a normal push, matching-head preview check, PR ready/ordinary merge, and matching-commit production verification after GitHub authorization is refreshed. The PR is still a draft and no new production publication is claimed. GitHub Actions billing is a separate pre-existing problem; refreshing authentication does not resolve that billing lock.

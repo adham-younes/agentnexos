@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 
 const base = new URL(process.argv[2] || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Expected an HTTP(S) origin without credentials");
-const directory = "output/green-reference";
+const directory = process.argv[3] || "output/green-reference";
 await mkdir(directory, { recursive: true });
 const report = { origin: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAuthenticationVerified: false };
 const check = (condition, message) => { if (!condition) throw Error(message); };
@@ -21,7 +21,10 @@ try {
       if (route !== "agentnexos") await page.locator('[data-effects-ready="true"]').waitFor();
       await page.evaluate(() => document.fonts.ready);
       if (route === "agentnexos") {
-        await page.getByRole("button", { name: locale === "ar" ? "إعادة فحص الاتصال" : "Check connection again" }).waitFor({ timeout: 15000 }).catch(() => {});
+        await page.waitForFunction(() => {
+          const status = document.querySelector('.echo-composer [role="status"]')?.textContent;
+          return status && !/^(Checking connection|فحص الاتصال)/.test(status);
+        }, null, { timeout: 15000 });
         const composer = page.locator("textarea");
         await page.locator(".echo-suggestions button").first().click();
         check((await composer.inputValue()).length > 30, "Suggestion did not populate composer");

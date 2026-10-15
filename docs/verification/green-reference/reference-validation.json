@@ -1,0 +1,37 @@
+{
+  "local": {
+    "checkedAt": "2026-10-15T11:12:27.645Z",
+    "pages": 18,
+    "interactions": 12,
+    "failures": [],
+    "liveAuthenticationVerified": false
+  },
+  "preview": {
+    "checkedAt": "2026-10-15T11:16:32.002Z",
+    "pages": 18,
+    "interactions": 12,
+    "failures": [],
+    "liveAuthenticationVerified": false
+  },
+  "fullRegressionInitial": {
+    "checkedAt": "2026-10-15T11:12:27.719Z",
+    "pages": 108,
+    "interactions": 2,
+    "failures": [
+      {
+        "locale": "ar",
+        "width": 390,
+        "route": "",
+        "failure": "page.waitForFunction: Timeout 5000ms exceeded."
+      }
+    ],
+    "liveAgentVerified": false
+  },
+  "homeRerunFinal": {
+    "checkedAt": "2026-10-15T11:26:14.872Z",
+    "pages": 6,
+    "interactions": 2,
+    "failures": [],
+    "liveAgentVerified": false
+  }
+}
