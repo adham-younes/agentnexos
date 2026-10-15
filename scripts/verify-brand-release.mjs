@@ -28,9 +28,9 @@ try{
   const path=`/${locale}${key==='home'?'':'/'+key}`,r=await fetch(base+path),html=await r.text();
   if(locale==='ar' && excerpts.some(item=>html.includes(item.quote)))report.failures.push({path,error:'English excerpt present on Arabic route'});
   if(r.status!==200||!html.includes('AGYNEXA')||(html.includes('Agentnexos')||html.includes('FIELD GUIDE / AGENTNEXOS')))report.failures.push({path,error:'HTTP or display-brand mismatch'});
-  const expectedQuotes=excerpts.filter(item=>item.placement===key);
-  for(const item of expectedQuotes){const quote=locale==='en'?item.quote:item.translationAr;if(!html.includes(quote))report.failures.push({path,error:'Contextual excerpt missing: '+item.source});if(!html.includes(item.url))report.failures.push({path,error:'Source attribution missing: '+item.source});}
-  report.routes.push({path,status:r.status,contextualExcerpts:expectedQuotes.length});
+  for(const item of excerpts){if(html.includes(item.url)||html.includes(item.source)||html.includes(item.quote))report.failures.push({path,error:'Competitor reference leaked: '+item.source});}
+  if(html.includes('مرجع من القطاع')||html.includes('Industry reference'))report.failures.push({path,error:'Reference label leaked'});
+  report.routes.push({path,status:r.status});
  }
 }catch(e){report.failures.push({global:e.message});}finally{await browser.close();}
 await writeFile(`output/agynexa-reference/${label}-brand.json`,JSON.stringify(report,null,2));console.log(JSON.stringify({viewports:report.viewports.length,routes:report.routes.length,defaultLocale:report.defaultLocale,failures:report.failures}));if(report.failures.length)process.exitCode=1;
