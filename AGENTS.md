@@ -29,6 +29,12 @@ Older plans, handoffs and audits in `docs/` are **historical references**, not m
 - **Auth, data, API, permissions, external actions or migrations:** verify the changed behavior, relevant regression and fail-closed paths; never bypass safeguards or apply historical migrations blindly.
 - **Before merging/releasing application-code changes:** after the implementation is stable, run `pnpm typecheck`, `pnpm i18n:check`, `pnpm build`, and pertinent tests **once as a final gate**. Fix actual failures and rerun only the affected check first; rerun the full gate only when a change could invalidate it. Never claim a check passed unless it ran successfully.
 
+**GitHub Actions failures before tests start (do not waste tokens):**
+- The owner uses GitHub Free; this repository is **public** and the CI job selects the standard `ubuntu-latest` runner. Standard GitHub-hosted runners are free for public repositories. Do not presume a paid subscription is required or advise paying without evidence.
+- If a GitHub Actions run fails within seconds with **zero job steps** and **no assigned runner**, this is **not evidence of a failing application test**. Inspect workflow syntax/metadata and the run summary **once**; possible causes include account/billing restrictions, disabled Actions, runner availability, or GitHub service issues.
+- When no tests were executed, **do not edit source, tests, dependencies, or CI repeatedly to 'fix' the failure**, and do not rerun identical workflows. Record the failed run URL, runner/step evidence, and the appropriate account/settings or GitHub Support follow-up. Account billing settings require owner action.
+- If a runner actually starts and a named test step fails, address that specific test under the proportional verification rules. Never claim CI is green if GitHub has not run the checks.
+
 **Hard stop against loops:**
 - Never rerun an unchanged failing test or command without a concrete diagnosis, relevant code/config change, or evidence of a transient issue.
 - If the same failure recurs after one reasoned fix-and-retry, **stop**, report the cause/evidence and what is blocked; request direction rather than launching an open-ended repair loop.
