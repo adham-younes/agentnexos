@@ -2,6 +2,7 @@
 
 import { useState, type KeyboardEvent, type ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Check, CheckCheck, ChevronDown, ShieldCheck, Workflow } from "lucide-react";
 import { useLocale } from "@/lib/i18n/use-t";
 import { ContentBody } from "@/components/site/content-body";
@@ -10,7 +11,6 @@ import { cyberHome } from "@/lib/content/cyber-home";
 import { Navigation } from "./navigation";
 import { CyberEffects, Glass as Spotlight } from "@/components/cyber/effects";
 import { WorkflowConsole } from "@/components/cyber/console";
-import { Lightning } from "@/components/cyber/lightning";
 import { CyberFooter } from "@/components/cyber/footer";
 
 function Eyebrow({ children }: { children: ReactNode }) {
@@ -42,8 +42,7 @@ export function CyberHome() {
     <Navigation />
     <main id="main-content" tabIndex={-1}>
       <section id="top" className="cyber-hero">
-        <Lightning />
-        <div className="cyber-ambient" aria-hidden="true" />
+        <div className="reference-ribbon" aria-hidden="true" />
         <div className="cyber-container cyber-hero-grid">
           <div className="cyber-hero-copy">
             <Eyebrow>{c.eyebrow}</Eyebrow>
@@ -52,13 +51,13 @@ export function CyberHome() {
             <div className="cyber-actions"><Action href={`/${locale}/agentnexos`}>{c.primary}</Action><Action secondary href={`/${locale}/start`}>{c.secondary}</Action></div>
             <p className="cyber-note"><ShieldCheck className="size-3.5 shrink-0" aria-hidden="true" />{c.note}</p>
           </div>
-          <WorkflowConsole locale={locale} />
         </div>
         <div className="cyber-container cyber-hero-foot"><p><span className="cyber-small-rule" aria-hidden="true" />{locale === "ar" ? "أنظمة مخصصة للمؤسسات حول العالم" : "Custom systems for organizations worldwide"}</p><a href="#features">{c.scroll}<ArrowDown className="size-3.5" aria-hidden="true" /></a></div>
       </section>
 
       <section id="features" className="cyber-section cyber-container">
         <div className="cyber-section-heading" data-reveal><div><Eyebrow>{c.capabilitiesLabel}</Eyebrow><h2>{c.capabilitiesTitle}<br /><em>{c.capabilitiesEmphasis}</em></h2></div><p>{c.capabilitiesIntro}</p></div>
+        <div className="reference-about-visual"><Image src="/images/redesign/green-neural-brain.webp" alt="" width={1024} height={1024} sizes="(max-width: 600px) 100vw, 45vw" /><WorkflowConsole locale={locale} /></div>
         <div className="cyber-capabilities">{sections.slice(0,2).map((section,index) => { const Icon = icons[index]; return <Spotlight key={section.id} className="cyber-capability"><section id={section.id}><div className="cyber-card-top"><span className="cyber-icon"><Icon className="size-5" aria-hidden="true"/></span><span className="cyber-meta">0{index+1}</span></div><h3>{section.heading}</h3><ContentBody text={section.body}/></section></Spotlight>; })}<Spotlight className="cyber-capability"><div className="cyber-card-top"><span className="cyber-icon"><CheckCheck className="size-5" aria-hidden="true"/></span><span className="cyber-meta">03</span></div><h3>{c.capabilities[2].title}</h3><p>{c.capabilities[2].description}</p><div className="cyber-card-detail"><Check className="size-3.5" aria-hidden="true"/>{c.capabilities[2].detail}</div></Spotlight></div>
       </section>
 

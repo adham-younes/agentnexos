@@ -4,7 +4,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 const base = new URL(process.argv[2] || process.env.SITE_URL || "http://localhost:3000");
 if (!["http:", "https:"].includes(base.protocol) || base.username || base.password) throw Error("Use an HTTP(S) site URL without credentials");
 
-const routes = ["", "agentnexos", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start", "services", "methodology", "solutions/knowledge", "solutions/procurement", "solutions/receivables", "solutions/customer-operations"];
+const routes = ["", "agentnexos", "login", "platform", "industries", "resources", "solutions", "security", "privacy", "terms", "about", "start", "services", "methodology", "solutions/knowledge", "solutions/procurement", "solutions/receivables", "solutions/customer-operations"];
 const report = { base: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAgentVerified: false };
 const requireCheck = (condition, message) => { if (!condition) throw Error(message); };
 const browser = await chromium.launch();
@@ -48,10 +48,10 @@ try {
         requireCheck(await page.locator('img[src*="whale"], img[src*="bridge"], video').count() === 0, "Legacy template imagery remains");
         const motion = await page.locator(".nexus-console-window").evaluate(element => ({ animation: getComputedStyle(element).animationName, border: getComputedStyle(element, "::after").animationName }));
         requireCheck(motion.animation === "nexus-float" && motion.border === "nexus-shimmer", "Template floating layers or shimmer are missing");
-        requireCheck(await page.locator("[data-reveal]").evaluateAll(elements => elements.every(element => element.classList.contains("is-visible"))), "Scrolled content did not reveal");
+        await page.waitForFunction(() => [...document.querySelectorAll("[data-reveal]")].every(element => element.classList.contains("is-visible")), null, { timeout: 5000 });
 
         const headingFont = await page.locator("h1").evaluate(element => getComputedStyle(element).fontFamily);
-        requireCheck(headingFont.includes(locale === "ar" ? "IBM Plex Sans Arabic" : "Newsreader"), "Approved display font is not rendered");
+        requireCheck(headingFont.includes(locale === "ar" ? "Tajawal" : "Michroma"), "Approved display font is not rendered");
         requireCheck(await page.locator("#availability table tbody tr").count() === 4, "Capability disclosure table is incomplete");
         requireCheck(await page.locator("#questions details").count() >= 4, "Pre-start questions are missing");
         requireCheck(await page.locator("#top a[href$='/agentnexos']").count() === 1 && await page.locator("#top a[href$='/start']").count() === 1, "Primary workflow and brief actions are missing");

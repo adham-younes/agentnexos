@@ -19,7 +19,7 @@ export function CyberEffects({ children, className = "" }: { children: ReactNode
       element!.classList.add("motion-ready");
       observer = new IntersectionObserver(entries => {
         entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer?.unobserve(entry.target); } });
-      }, { threshold: .08 });
+      }, { threshold: 0 });
       items.forEach(item => observer!.observe(item));
     }
     configure(); element.dataset.effectsReady = "true"; media.addEventListener("change", configure);

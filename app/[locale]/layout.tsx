@@ -3,13 +3,14 @@ import { siteOrigin } from "@/lib/site";
 import { notFound } from "next/navigation";
 import {
   Inter,
-  Newsreader,
+  Michroma,
   Space_Grotesk,
-  IBM_Plex_Sans_Arabic,
+  Tajawal,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import "../globals.css";
+import "../green-reference.css";
 import { LocaleProvider } from "@/lib/i18n/use-t";
 import {
   isLocale,
@@ -24,9 +25,9 @@ const instrumentSans = Inter({
   variable: "--font-instrument",
 });
 
-const instrumentSerif = Newsreader({
+const instrumentSerif = Michroma({
   subsets: ["latin"],
-  style: ["normal", "italic"],
+  weight: "400",
   variable: "--font-instrument-serif",
 });
 
@@ -35,10 +36,10 @@ const jetbrainsMono = Space_Grotesk({
   variable: "--font-jetbrains",
 });
 
-// Arabic companion: Newsreader has no Arabic glyphs. Keep joining and readable line height.
-const plexArabic = IBM_Plex_Sans_Arabic({
+// Genuine Arabic shaping with a light/heavy hierarchy beside geometric Latin type.
+const plexArabic = Tajawal({
   subsets: ["arabic", "latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "700", "800"],
   variable: "--font-arabic",
 });
 

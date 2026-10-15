@@ -102,6 +102,7 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+            <a href={`/${locale}/login`} className="reference-login-link">{locale === "ar" ? "الدخول" : "Sign in"}</a>
             <LocaleSwitcher inverted={isDark} />
             <Button asChild
               size="sm"
@@ -187,7 +188,7 @@ export function Navigation() {
                 variant="outline"
                 className="flex-1 rounded-full h-14 text-base"
               >
-                <a href={`/${locale}#how-it-works`} onClick={() => setIsMobileMenuOpen(false)}>{t("nav.signIn", "Our process")}</a>
+                <a href={`/${locale}/login`} onClick={() => setIsMobileMenuOpen(false)}>{locale === "ar" ? "تسجيل الدخول" : "Sign in"}</a>
               </Button>
               <Button asChild
                 className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
