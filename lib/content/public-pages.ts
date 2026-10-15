@@ -135,6 +135,7 @@ export const publicPages = {
       "intro": "يوضح هذا الإشعار نطاق التجربة الحالية. ستُنشر تفاصيل معالجة البيانات الخاصة بالتشغيل المؤسسي قبل إتاحته.",
       "notice": "لا تدخل مستندات حقيقية أو بيانات شخصية أو مفاتيح وصول في المثال.",
       "cards": [
+        ["قبل مشاركة التفاصيل", "استخدم أمثلة افتراضية في المساعد والموجز الأولي. تجهيز الموجز محليًا يختلف عن إرسال رسالة إلى المساعد؛ راجع تفاصيل المعالجة أدناه قبل إدخال معلومات."],
         ["موجز المشروع المحلي", "إجابات نموذج موجز المشروع تبقى في ذاكرة صفحة المتصفح. لا ترسل إلى خادم أو فريق؛ يمكنك تنزيل ملف ومراجعته قبل مشاركته. إغلاق الصفحة أو مسحها يزيل حالتها المحلية."],
         [
           "المثال الحالي",
@@ -165,6 +166,7 @@ export const publicPages = {
       "intro": "This notice describes the current example. Enterprise data-processing details must be published before enterprise access is enabled.",
       "notice": "Do not enter real documents, personal data, or credentials into the example.",
       "cards": [
+        ["Before sharing details", "Use fictional examples in the assistant and initial brief. Preparing a brief locally differs from sending a message to the assistant; review the processing details below before entering information."],
         ["Local project brief", "Project brief answers stay in the browser page memory. They are not sent to a server or team; you may download and review a file before sharing. Closing or clearing the page removes local state."],
         [
           "Current example",
@@ -197,6 +199,7 @@ export const publicPages = {
       "intro": "الموقع يقدم تعريفًا بالمشروع ومساعدًا لتصميم العمليات ببيانات افتراضية. التشغيل المؤسسي والتكاملات يخضعان لنطاق واتفاق مستقلين.",
       "notice": "الاقتراحات ليست تفويضًا أو تنفيذًا خارجيًا. لا توجد أدوات دفع أو شراء أو إرسال بريد في هذه التجربة.",
       "cards": [
+        ["حدود المناقشة الأولية", "المحادثة والموجز وسيلتان لتحديد الفكرة. يتطلب التنفيذ اتفاقًا يحدد النطاق والتسليمات والمسؤوليات والوصول إلى الأنظمة ومعايير القبول."],
         [
           "طبيعة المثال",
           "الأمثلة تعليمية ببيانات افتراضية. لا تعتمد عليها لاتخاذ قرار مالي أو قانوني أو لإصدار أمر شراء."
@@ -225,6 +228,7 @@ export const publicPages = {
       "intro": "The site introduces the project and a workflow-design assistant using fictional data. Enterprise operation and integrations require a separate agreed scope.",
       "notice": "Suggestions are not authorization or external execution. This preview has no payment, purchasing, or email-sending tools.",
       "cards": [
+        ["Scope of the initial discussion", "The conversation and brief help define an idea. Implementation requires an agreement covering scope, deliverables, responsibilities, system access and acceptance criteria."],
         [
           "Nature of the example",
           "Examples are educational and use fictional data. Do not rely on them for financial or legal decisions or purchase orders."

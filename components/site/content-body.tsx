@@ -22,5 +22,5 @@ export function ContentBody({ text }: { text: string }) {
   })}</>;
 }
 export function ContentSections({ sections }: { sections: readonly { id: string; heading: string; body: string }[] }) {
-  return <>{sections.map(section => <Fragment key={section.id}><section id={section.id} className="nexus-editorial-card"><h2>{section.heading}</h2><ContentBody text={section.body} /></section></Fragment>)}</>;
+  return <>{sections.map(section => <Fragment key={section.id}><section id={section.id} className="nexus-editorial-card"><h2>{section.heading}</h2><div className="nexus-editorial-copy"><ContentBody text={section.body} /></div></section></Fragment>)}</>;
 }
