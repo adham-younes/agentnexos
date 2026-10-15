@@ -6,7 +6,7 @@
       "sections": [
         {
           "heading": "المعرفة التي يحتاجها فريقك لإنجاز العمل",
-          "body": "نجهز المستندات والسياسات وبيانات العمل للاسترجاع، مع الاحتفاظ بمرجع كل معلومة وإصدارها وصلاحية الوصول إليها. يوفّر الاسترجاع المعزز بالتوليد سياقًا مرتبطًا بالسؤال، ويحوّل الاستخراج المستند إلى حقول يستطيع مسار العمل فحصها.\n\nعند تعارض السياسات أو تقادم السجل أو نقص البيانات، يظهر ما يحتاج مراجعة. لا يستبدل النظام المعلومة الغائبة بإجابة محتملة. [معرفة المؤسسة](/ar/solutions/knowledge)",
+          "body": "نجهز المستندات والسياسات وبيانات العمل للاسترجاع، مع الاحتفاظ بمرجع كل معلومة وإصدارها وصلاحية الوصول إليها. يوفّر الاسترجاع المعزز بالتوليد سياقًا مرتبطًا بالسؤال، ويحوّل الاستخراج المستند إلى حقول يستطيع مسار العمل فحصها.\n\nعند تعارض السياسات أو تقادم السجل أو نقص البيانات، يظهر ما يحتاج مراجعة. لا يستبدل النظام المعلومة الغائبة بإجابة محتملة. [معرفة المؤسسة](/ar/solutions/knowledge)\n\nتبدأ المناقشة بمهمة متكررة: طلب يصل إلى الفريق، وسجلات يحتاجها لإنجازه، ونتيجة يستطيع المسؤول قبولها. نحول ذلك إلى نطاق هندسي محدد، ليتمكن فريقك من مراجعة المسار المقترح قبل تحديد أنظمة العمل التي سيجري ربطها.",
           "id": "home-section-1"
         },
         {
@@ -46,7 +46,7 @@
         }
       ],
       "seoTitle": "AGYNEXA | هندسة وكلاء الذكاء الاصطناعي وأتمتة الأعمال",
-      "seoDescription": "وكلاء ذكاء اصطناعي مخصصون للمؤسسات، وتكامل للأنظمة وأتمتة لسير العمل، بصلاحيات واضحة وإشراف بشري وتجربة عربية كاملة."
+      "seoDescription": "هندسة وكلاء الذكاء الاصطناعي وربط الأنظمة وأتمتة سير العمل حول احتياجات مؤسستك، بصلاحيات واضحة ومراجعة بشرية."
     },
     "platform": {
       "title": "معرفة مترابطة. عمل منسّق.",
@@ -79,7 +79,7 @@
         },
         {
           "heading": "رؤية التشغيل والتقييم",
-          "body": "يرتبط التشغيل بمعرفات للمهمة والخطوة والأداة. تُجمع النتائج والتكلفة والزمن وحالات الفشل ضمن سجل مناسب للبيئة، مع تقليل البيانات الحساسة. ويُراجع الأثر من النظام الذي نفذ الإجراء، لا من رسالة النجاح وحدها.\n\nتغطي التقييمات دقة الاسترجاع، وصحة اختيار الأداة، والالتزام بالصلاحيات، واكتمال المخرجات. تحدد حالات القبول من أمثلة المجال واللغتين اللتين يستخدمهما الفريق.",
+          "body": "يرتبط التشغيل بمعرفات للمهمة والخطوة والأداة. تُجمع النتائج والتكلفة والزمن وحالات الفشل ضمن سجل مناسب للبيئة، مع تقليل البيانات الحساسة. ويُراجع الأثر من النظام الذي نفذ الإجراء، لا من رسالة النجاح وحدها.\n\nتغطي التقييمات دقة الاسترجاع، وصحة اختيار الأداة، والالتزام بالصلاحيات، واكتمال المخرجات. تحدد حالات القبول من أمثلة المجال واللغتين اللتين يستخدمهما الفريق.\n\nتفرق واجهة التشغيل بين انتظار المعلومات وانتظار الاعتماد والتنفيذ والاكتمال والنتيجة غير المحسومة. يحتاج الاكتمال إلى المخرج المتوقع، وإلى دليل من النظام المستهدف إذا تضمن المسار إجراءً متصلًا. يظهر تعطل الاتصال مع طريق التعامل معه؛ ولا تصبح المهمة ناجحة لمجرد أن النموذج قدم إجابة.",
           "id": "platform-section-6"
         },
         {
@@ -89,7 +89,7 @@
         }
       ],
       "seoTitle": "معرفة مترابطة. عمل منسّق. | AGYNEXA",
-      "seoDescription": "نبني حول الأنظمة التي تستخدمها مؤسستك بالفعل. يجمع منهجنا بين المعرفة المصرح بها، والأدوات محددة النطاق، وسير العمل المنسق؛ وتكون الهوية وحالة المهمة ونقاط القرار البشري جزءًا من تصميم النظام."
+      "seoDescription": "اربط معرفة المؤسسة وأدواتها وحالة سير العمل في نظام ذكاء اصطناعي مخصص، بهوية وصلاحيات وموافقات واضحة."
     },
     "services": {
       "title": "هندسة العمليات التي يعتمد عليها فريقك.",
@@ -97,7 +97,7 @@
       "sections": [
         {
           "heading": "معمارية الذكاء الاصطناعي وتصميم العمليات",
-          "body": "نحدد ما يجب أن ينجزه النظام قبل اختيار النموذج. نفهم العملية وأصحاب القرار والأنظمة التي تحمل نتيجة التنفيذ، ثم نحدد أدوار الوكلاء والقواعد الثابتة وحدود التشغيل.\n\nالمخرج معمارية وعقد للمهمة يربط المدخلات بالأدوات والمسؤوليات وحالات القبول. يوضح ذلك ما سنبنيه وما يظل خارج النطاق الأول.",
+          "body": "نحدد ما يجب أن ينجزه النظام قبل اختيار النموذج. نفهم العملية وأصحاب القرار والأنظمة التي تحمل نتيجة التنفيذ، ثم نحدد أدوار الوكلاء والقواعد الثابتة وحدود التشغيل.\n\nالمخرج معمارية وعقد للمهمة يربط المدخلات بالأدوات والمسؤوليات وحالات القبول. يوضح ذلك ما سنبنيه وما يظل خارج النطاق الأول.\n\nنجمع مسؤول العملية والمسؤول التقني في مناقشة نطاق واحدة. نحدد بداية المهمة والمخرج المتوقع والأنظمة المرجعية والإجراءات المسموح بها والقرارات التي تبقى بشرية. وتوفر المواصفة مرجعًا مشتركًا للتنفيذ والقبول، يشمل الأعمال المؤجلة من الإصدار الأول وأسباب تأجيلها.",
           "id": "services-section-1"
         },
         {
@@ -127,7 +127,7 @@
         }
       ],
       "seoTitle": "هندسة الذكاء الاصطناعي، من المعمارية إلى التشغيل. | AGYNEXA",
-      "seoDescription": "حوّل متطلبات العمل إلى نظام يستطيع فريقك تشغيله وتقييمه. تشمل خدماتنا معمارية الذكاء الاصطناعي، ومعرفة المؤسسة، وتطوير الوكلاء، والتكامل، والتقييم التشغيلي. نحدد لكل مشروع مخرجاته وحدود الوصول ومعايير القبول قبل التنفيذ."
+      "seoDescription": "خدمات هندسة أنظمة الذكاء الاصطناعي: تصميم النظام ومعرفة المؤسسة ومعالجة المستندات وتنسيق الوكلاء وربط الأدوات والتقييم."
     },
     "solutions": {
       "title": "اربط الذكاء بالعمل الذي يهم مؤسستك.",
@@ -135,7 +135,7 @@
       "sections": [
         {
           "heading": "المعرفة المؤسسية",
-          "body": "استرجاع المعلومات المسموح بها، وفهم علاقاتها، وإعداد إجابة أو تحليل يعود إلى مصادره. يشمل التصميم الإصدارات والتعارض وغياب الدليل. [اقرأ تفاصيل الحل](/ar/solutions/knowledge)",
+          "body": "استرجاع المعلومات المسموح بها، وفهم علاقاتها، وإعداد إجابة أو تحليل يعود إلى مصادره. يشمل التصميم الإصدارات والتعارض وغياب الدليل. [اقرأ تفاصيل الحل](/ar/solutions/knowledge)\n\nاختر الحل بحسب العمل المطلوب إنجازه. قد ينتهي مسار المعرفة بإجابة ومصادرها، والمشتريات بمقارنة جاهزة للمراجعة، والمستحقات بمقترح متابعة يستند إلى حالة فواتير متحقق منها. يحدد مسؤول العملية المخرج المفيد والإجراءات التي تحتاج صلاحية مستقلة.",
           "id": "solutions-section-1"
         },
         {
@@ -160,7 +160,7 @@
         }
       ],
       "seoTitle": "اربط الذكاء بالعمل الذي يهم مؤسستك. | AGYNEXA",
-      "seoDescription": "انتقل من معلومات متفرقة إلى خطوة تالية واضحة. نصمم حلولًا لمعرفة المؤسسة والمشتريات والمستحقات وعمليات العملاء، تربط المصادر والأنظمة المناسبة مع إبقاء القرار لدى صاحبه."
+      "seoDescription": "اكتشف مسارات ذكاء اصطناعي مخصصة لمعرفة المؤسسة والمشتريات والمستحقات وعمليات العملاء، بمخرجات قابلة للمراجعة."
     },
     "solutions/knowledge": {
       "title": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها",
@@ -168,7 +168,7 @@
       "sections": [
         {
           "heading": "كيف يُبنى الحل",
-          "body": "نحدد المصادر المعتمدة وحقوق الوصول وإصدارات المحتوى، ثم نجهز البحث والاسترجاع حول لغة المؤسسة ومصطلحاتها. تُربط المادة المسترجعة بسياق السؤال، ويُعرض المصدر الذي يدعم كل نتيجة قابلة للإسناد.\n\nعندما يتطلب العمل فهم علاقات، مثل ارتباط مورد بعقد وفاتورة وطلب، نقيّم تمثيل الكيانات والعلاقات إلى جانب النص. يساعد ذلك على متابعة السياق بين السجلات، مع إبقاء الإحالة إلى الأصل الذي يمكن للمسؤول فحصه.",
+          "body": "نحدد المصادر المعتمدة وحقوق الوصول وإصدارات المحتوى، ثم نجهز البحث والاسترجاع حول لغة المؤسسة ومصطلحاتها. تُربط المادة المسترجعة بسياق السؤال، ويُعرض المصدر الذي يدعم كل نتيجة قابلة للإسناد.\n\nعندما يتطلب العمل فهم علاقات، مثل ارتباط مورد بعقد وفاتورة وطلب، نقيّم تمثيل الكيانات والعلاقات إلى جانب النص. يساعد ذلك على متابعة السياق بين السجلات، مع إبقاء الإحالة إلى الأصل الذي يمكن للمسؤول فحصه.\n\nابدأ بسجل للمصادر يحدد مالك المستند وإصداره المعتمد ومجموعة الوصول وتاريخ مراجعته. يحافظ تصميم الاسترجاع على هذه الحدود عند تقسيم المستند أو فهرسته أو تلخيصه. تتيح الإجابة المفيدة للموظف فحص المقطع المرجعي ومعرفة متى لا تكفي المصادر المتاحة لحسم السؤال.",
           "id": "solutions-knowledge-section-1"
         },
         {
@@ -193,7 +193,7 @@
         }
       ],
       "seoTitle": "معرفة مؤسسية تصل إلى الموظف بسياقها ومصدرها | AGYNEXA",
-      "seoDescription": "توزع المعلومات بين السياسات والعقود والتقارير وقواعد البيانات يجعل السؤال الواحد رحلة بحث بين فرق وأنظمة. وقد يعثر الموظف على المستند دون أن يعرف إن كانت نسخته"
+      "seoDescription": "صمم البحث واسترجاع معرفة المؤسسة من مصادر معتمدة، مع صلاحيات الوصول ومراجع المستندات وتقييم المعلومات الناقصة أو المتعارضة."
     },
     "solutions/procurement": {
       "title": "مراجعة مشتريات تجمع شروط القرار في موضع واحد",
@@ -206,7 +206,7 @@
         },
         {
           "heading": "سياق المورد والإنفاق",
-          "body": "يمكن أن يتضمن المشروع قراءة تاريخ التسليم والعقود والملاحظات المعتمدة، وربط المورد بالطلبات ذات الصلة. ويحتاج كشف الأسعار غير المعتادة أو مقارنة الأداء بيانات مرجعية ومعيارًا يوافق عليه الفريق؛ وجود اختلاف وحده لا يثبت خطأ أو احتيالًا.",
+          "body": "يمكن أن يتضمن المشروع قراءة تاريخ التسليم والعقود والملاحظات المعتمدة، وربط المورد بالطلبات ذات الصلة. ويحتاج كشف الأسعار غير المعتادة أو مقارنة الأداء بيانات مرجعية ومعيارًا يوافق عليه الفريق؛ وجود اختلاف وحده لا يثبت خطأ أو احتيالًا.\n\nيوحّد ملف المراجعة وصف الأصناف والكميات والوحدات وشروط التسليم والاستثناءات قبل مقارنة الأسعار. تدخل تكلفة الشحن الغائبة أو الضمان غير الواضح أو اختلاف الوحدة في قائمة الاستثناءات. ويستطيع المراجع الرجوع إلى عرض المورد لكل حقل، وطلب الإيضاح قبل اتخاذ التزام.",
           "id": "solutions-procurement-section-2"
         },
         {
@@ -226,7 +226,7 @@
         }
       ],
       "seoTitle": "مراجعة مشتريات تجمع شروط القرار في موضع واحد | AGYNEXA",
-      "seoDescription": "يصعب اختيار العرض المناسب عندما تختلف وصف البنود ووحدات القياس والشحن والضمان ومواعيد التسليم. ويزيد العبء حين تكون معلومات المورد وسجل التعامل والسياسة الشرائي"
+      "seoDescription": "جهّز طلبات الشراء ومقارنات الموردين بشروط موثقة واستثناءات واضحة ومراجعة بشرية قبل اتخاذ الالتزام التجاري."
     },
     "solutions/receivables": {
       "title": "متابعة المستحقات وفق حالة كل فاتورة",
@@ -239,7 +239,7 @@
         },
         {
           "heading": "المخرجات اليومية",
-          "body": "يعد النظام قائمة عمل تبين الحالة، ومصدرها، والمعلومة الناقصة، والخطوة المقترحة. يمكن تجهيز مسودة متابعة تستند إلى التفاصيل المصرح بها، ثم يعرضها على المسؤول وفق سياسة الإرسال.\n\nفي مثال افتراضي، يوجد سداد جزئي ونزاع مفتوح على بند. يبين المخرج الجزء المتبقي وما يتعلق بالنزاع، ويجهز إحالة للمسؤول بدل إرسال مطالبة بالمبلغ الكامل. تتوقف النتيجة على البيانات والسياسة الفعلية، لا على استنتاج النموذج وحده.",
+          "body": "يعد النظام قائمة عمل تبين الحالة، ومصدرها، والمعلومة الناقصة، والخطوة المقترحة. يمكن تجهيز مسودة متابعة تستند إلى التفاصيل المصرح بها، ثم يعرضها على المسؤول وفق سياسة الإرسال.\n\nفي مثال افتراضي، يوجد سداد جزئي ونزاع مفتوح على بند. يبين المخرج الجزء المتبقي وما يتعلق بالنزاع، ويجهز إحالة للمسؤول بدل إرسال مطالبة بالمبلغ الكامل. تتوقف النتيجة على البيانات والسياسة الفعلية، لا على استنتاج النموذج وحده.\n\nجهّز المتابعة من الوضع الحالي للحساب: مرجع الفاتورة والمبلغ المتبقي وحالة النزاع ووعد السداد وآخر تواصل. افصل الوقائع المؤكدة عن الرسالة المقترحة. يعيد تغير الرصيد أو وجود نزاع غير محسوم المسودة إلى المراجعة بدل إنتاج تذكير غير مناسب، ويظل الإرسال إجراءً يحتاج تفويضًا مستقلًا.",
           "id": "solutions-receivables-section-2"
         },
         {
@@ -259,7 +259,7 @@
         }
       ],
       "seoTitle": "متابعة المستحقات وفق حالة كل فاتورة | AGYNEXA",
-      "seoDescription": "قائمة الفواتير وحدها لا تكفي لتحديد التواصل التالي. قد تكون الفاتورة مسددة جزئيًا، أو محل نزاع، أو مرتبطة بوعد سداد، أو تحتاج مستندًا ناقصًا. جمع هذه التفاصيل ي"
+      "seoDescription": "جهّز متابعة المستحقات من حالات الفواتير والنزاعات والسداد، مع مسودات قابلة للمراجعة وإجراءات مفوضة بصورة مستقلة."
     },
     "solutions/customer-operations": {
       "title": "معالجة حالات العملاء بسياق متصل وحدود واضحة",
@@ -277,7 +277,7 @@
         },
         {
           "heading": "الاستقلالية حسب نوع الحالة",
-          "body": "يُحدد نطاق أولي للطلبات التي تملك بيانات وقواعد ومخرجات معلومة. تُفصل الحالات الحساسة والتغييرات المالية عن الاستفسارات الروتينية. ويمكن توسيع النطاق بعد قياس الجودة والتصعيد ونجاح الأدوات في تشغيل محدود.",
+          "body": "يُحدد نطاق أولي للطلبات التي تملك بيانات وقواعد ومخرجات معلومة. تُفصل الحالات الحساسة والتغييرات المالية عن الاستفسارات الروتينية. ويمكن توسيع النطاق بعد قياس الجودة والتصعيد ونجاح الأدوات في تشغيل محدود.\n\nحدد التصعيد وفق الحالة نفسها، لا صياغة الرسالة فقط. قد تحتاج المبالغ المستردة وتغييرات الحساب وطلبات التحقق من الهوية إلى مسار يختلف عن الاستعلام عن الحالة. يتسلم الموظف السياق المتحقق منه والقرار غير المحسوم، ويفرق التقرير بين إجابات الوكيل والإحالات البشرية والإجراءات المثبت أثرها.",
           "id": "solutions-customer-operations-section-3"
         },
         {
@@ -287,7 +287,7 @@
         }
       ],
       "seoTitle": "معالجة حالات العملاء بسياق متصل وحدود واضحة | AGYNEXA",
-      "seoDescription": "عندما تتوزع الحالة بين نظام الدعم والطلبات والفوترة والمعرفة، يضطر الموظف إلى إعادة جمع السياق قبل كل خطوة. وقد ينتقل العميل بين فرق دون أن تنتقل معها الأسباب و"
+      "seoDescription": "صمم مسارات خدمة عملاء متعددة اللغات تربط الطلب بالمعرفة والسجلات، مع تصعيد واضح وتسليم كامل للسياق إلى الموظف."
     },
     "industries": {
       "title": "نفهم القطاع. ونبني حول العمل.",
@@ -330,12 +330,12 @@
         },
         {
           "heading": "اختيار البداية المناسبة",
-          "body": "نبحث عن عملية لها حجم تكرار معلوم، وبيانات يمكن استخدامها، ومسؤول يستطيع تقييم النتيجة. قد يبدأ قطاعان بالحل الوظيفي نفسه، لكن قواعدهما ومصادرهما وحدود القرار تختلف.\n\n[الحلول](/ar/solutions) · [ناقش عملية من قطاعك](/ar/start)",
+          "body": "نبحث عن عملية لها حجم تكرار معلوم، وبيانات يمكن استخدامها، ومسؤول يستطيع تقييم النتيجة. قد يبدأ قطاعان بالحل الوظيفي نفسه، لكن قواعدهما ومصادرهما وحدود القرار تختلف.\n\n[الحلول](/ar/solutions) · [ناقش عملية من قطاعك](/ar/start)\n\nاتفق أثناء تحديد النطاق على المصطلحات وأنواع المستندات وقواعد الوصول والاستثناءات التي تميز القطاع. اختر حالات ممثلة مع الفريق الذي ينفذ العمل. تثبت التجربة الناجحة ملاءمة النطاق المحدد، ولا تثبت جاهزية النظام لكل عمليات القطاع أو متطلباته التنظيمية.",
           "id": "industries-section-6"
         }
       ],
       "seoTitle": "نفهم القطاع. ونبني حول العمل. | AGYNEXA",
-      "seoDescription": "سياق القطاع يحدد المعلومات المهمة، ومن يملك صلاحية التصرف، وكيف تُراجع النتيجة. نحدد نطاق الحلول وفق هذه المتطلبات، من العمليات التجارية والخدمات المهنية إلى سير العمل الصناعي والخدمات العامة. الأمثلة التالية نطاقات تطوير مقترحة، وليست ادعاءً بمشروعات قطاعية منفذة."
+      "seoDescription": "حدد نطاق الذكاء الاصطناعي وفق مصطلحات القطاع وأنظمته وقواعد قراره في التجارة والطاقة والخدمات اللوجستية والعمل المؤسسي."
     },
     "methodology": {
       "title": "من متطلبات العمل إلى تشغيل قابل للتحقق.",
@@ -363,7 +363,7 @@
         },
         {
           "heading": "تشغيل تدريجي",
-          "body": "يمكن أن يبدأ النظام في وضع قراءة أو إعداد مسودات، ثم تنفيذ بعد اعتماد، ثم أفعال مستقلة محدودة إذا أثبتت التقييمات والسياسة صلاحيتها. تُحدد شروط إيقاف النطاق أو الرجوع إلى المراجعة، ومسؤولية معالجة الاستثناء.",
+          "body": "يمكن أن يبدأ النظام في وضع قراءة أو إعداد مسودات، ثم تنفيذ بعد اعتماد، ثم أفعال مستقلة محدودة إذا أثبتت التقييمات والسياسة صلاحيتها. تُحدد شروط إيقاف النطاق أو الرجوع إلى المراجعة، ومسؤولية معالجة الاستثناء.\n\nيشمل القبول أمثلة العمل المعتاد والحالات الصعبة: نقص البيانات وتعارض المصادر ورفض الوصول وتغير الاعتماد وانقطاع الاتصال. سجل النتيجة المنتظرة قبل تشغيل الحالة، وراجع الدليل مع مسؤول العملية. ثم حدد قرار الإصدار أو تضييق النطاق أو إصلاح فشل بعينه.",
           "id": "methodology-section-5"
         },
         {
@@ -373,7 +373,7 @@
         }
       ],
       "seoTitle": "من متطلبات العمل إلى تشغيل قابل للتحقق. | AGYNEXA",
-      "seoDescription": "نحدد النتيجة، ونهندس مسار العمل، ونقيّم ما يحدث. يربط منهج التسليم بين فهم العملية والتكامل واختبارات القبول، لتستند كل زيادة في الاستقلالية إلى دليل ومسؤول واضح."
+      "seoDescription": "من فهم العملية إلى التجربة المحددة والتشغيل: حدد المخرج وصمم الاتصالات وتحقق من القبول مع مسؤول العمل."
     },
     "security": {
       "title": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته",
@@ -381,7 +381,7 @@
       "sections": [
         {
           "heading": "الهوية ونطاق الوصول",
-          "body": "تحدد هوية المستخدم وعضويته ما يمكنه قراءته وتنفيذه. ويُطبق نطاق المؤسسة والمشروع على البيانات والاسترجاع والأدوات. لا يُقبل معرف يرسله المتصفح وحده كإثبات صلاحية؛ ويُختبر فصل بيانات المؤسسات في التطبيق وقاعدة البيانات.",
+          "body": "تحدد هوية المستخدم وعضويته ما يمكنه قراءته وتنفيذه. ويُطبق نطاق المؤسسة والمشروع على البيانات والاسترجاع والأدوات. لا يُقبل معرف يرسله المتصفح وحده كإثبات صلاحية؛ ويُختبر فصل بيانات المؤسسات في التطبيق وقاعدة البيانات.\n\nاربط الوصول بعمليات وسجلات محددة. تختلف صلاحيات قراءة ملف عميل وتجهيز رد وتعديل حساب. حدد من يستطيع منح الوصول وإلغاءه، والأحداث التي تحتاج تسجيلًا، والبيانات التي يجب استبعادها من السجلات. تُتفق هذه الضوابط وتُتحقق داخل بيئة العميل.",
           "id": "security-section-1"
         },
         {
@@ -421,7 +421,7 @@
         }
       ],
       "seoTitle": "حوكمة تحدد ما يستطيع الوكيل فعله، وكيف يثبت نتيجته | AGYNEXA",
-      "seoDescription": "تزداد متطلبات التحكم حين ينتقل النظام من قراءة المعرفة إلى إرسال رسالة أو تعديل سجل. نصمم الهوية والصلاحيات والموافقة وإثبات الأثر حول هذه الأفعال، وفق بيانات ا"
+      "seoDescription": "صمم الهوية والوصول إلى السجلات والموافقات والتحقق من أثر الإجراءات حول مسار الذكاء الاصطناعي ومتطلبات مشروعك."
     },
     "resources": {
       "title": "أدوات عملية لتحديد المشروع واختبار نتيجته",
@@ -429,7 +429,7 @@
       "sections": [
         {
           "heading": "تحديد أول عملية",
-          "body": "يساعد نموذج اختيار العملية على جمع نقطة البداية، والمدخلات، ومصدر المعرفة، والمسؤول، والمخرج، وحالة النقص. ويطلب خط أساس للعمل إذا توفر، حتى تبقى مقارنة الأداء مرتبطة ببيانات فعلية.\n\n[حمّل نموذج تحديد العملية](/downloads/agentnexos/workflow-brief-ar.md)",
+          "body": "يساعد نموذج اختيار العملية على جمع نقطة البداية، والمدخلات، ومصدر المعرفة، والمسؤول، والمخرج، وحالة النقص. ويطلب خط أساس للعمل إذا توفر، حتى تبقى مقارنة الأداء مرتبطة ببيانات فعلية.\n\n[حمّل نموذج تحديد العملية](/downloads/agentnexos/workflow-brief-ar.md)\n\nاستخدم نموذج المسار مع مسؤول العملية، ثم راجع جرد الاتصالات مع المسؤول التقني. تسجل ورقة القبول المخرجات المنتظرة وحالات الفشل. استبعد السجلات الحساسة من الموجز الأولي؛ تكفي أمثلة افتراضية ممثلة لمناقشة بنية العمل ومتطلبات الوصول.",
           "id": "resources-section-1"
         },
         {
@@ -449,7 +449,7 @@
         }
       ],
       "seoTitle": "أدوات عملية لتحديد المشروع واختبار نتيجته | AGYNEXA",
-      "seoDescription": "استخدم هذه النماذج لتجهيز نقاش بين صاحب العملية والفريق التقني. تعرض ما يحتاج تحديدًا قبل التطوير، وكيف يمكن تقييم المخرج دون الاعتماد على انطباع عام عن الإجابة"
+      "seoDescription": "نزّل نماذج سير العمل والاتصالات والقبول لتجهيز مناقشة مشروع الذكاء الاصطناعي مع فريق العمل والفريق التقني."
     },
     "about": {
       "title": "ذكاء مؤسسي. مسؤولية بشرية.",
@@ -462,7 +462,7 @@
         },
         {
           "heading": "من يقود AGYNEXA؟",
-          "body": "يقود AGYNEXA أدهم يونس، مهندس حلول وكلاء الذكاء الاصطناعي وأتمتة الأعمال والتكاملات. يركز عمله على تطوير تطبيقات تربط احتياجات فرق الأعمال بالمعرفة والأدوات وحدود التنفيذ، مع تجربة عربية وإنجليزية.",
+          "body": "يقود AGYNEXA أدهم يونس، مهندس حلول وكلاء الذكاء الاصطناعي وأتمتة الأعمال والتكاملات. يركز عمله على تطوير تطبيقات تربط احتياجات فرق الأعمال بالمعرفة والأدوات وحدود التنفيذ، مع تجربة عربية وإنجليزية.\n\nيربط عملنا العملية التشغيلية بالبرمجيات التي تحتاجها. نحول متطلبات العمل إلى تعريفات للمهام ومواصفات للمصادر والأدوات وواجهات استخدام وأدلة قبول. ويحدد نطاق التعاقد المسؤوليات والتسليمات، ليتمكن العميل من تقييم النظام بوصفه مشروعًا هندسيًا واضحًا.",
           "id": "about-section-2"
         },
         {
@@ -472,7 +472,7 @@
         }
       ],
       "seoTitle": "ذكاء مؤسسي. مسؤولية بشرية. | AGYNEXA",
-      "seoDescription": "AGYNEXA ممارسة هندسية لأنظمة الذكاء الاصطناعي وأتمتة الأعمال، موجهة للمؤسسات حول العالم. نربط متطلبات العمل بالبرمجيات والمعرفة والأدوات التشغيلية لبناء أنظمة مخصصة، بمسؤوليات محددة ونتائج قابلة للمراجعة."
+      "seoDescription": "AGYNEXA متخصصة في هندسة أنظمة الذكاء الاصطناعي والأتمتة للمؤسسات عالميًا، وتربط متطلبات التشغيل بالبرمجيات والمعرفة."
     },
     "agentnexos": {
       "title": "مساعد تصميم الأنظمة",
@@ -480,7 +480,7 @@
       "sections": [
         {
           "heading": "ابدأ من عمل يتكرر",
-          "body": "- صمّم مسار مراجعة مشتريات.\n- جهّز متابعة للفواتير ذات الحالات المختلفة.\n- حدد مصادر مساعد معرفة داخلي.\n- راجع خطة ربط عملية بأنظمتك.",
+          "body": "- صمّم مسار مراجعة مشتريات.\n- جهّز متابعة للفواتير ذات الحالات المختلفة.\n- حدد مصادر مساعد معرفة داخلي.\n- راجع خطة ربط عملية بأنظمتك.\n\nاذكر في رسالتك بداية العملية والفريق المعني والأنظمة التي تحمل البيانات والمخرج المطلوب. مثلًا: يستقبل فريق المشتريات ثلاثة عروض ويحتاج مقارنة للاعتماد. استخدم تفاصيل افتراضية. يساعدك المساعد في تنظيم مناقشة التصميم؛ ولا يتصل بنظام مشترياتك أو يعتمد طلبًا.",
           "id": "agentnexos-section-1"
         },
         {
@@ -495,7 +495,7 @@
         }
       ],
       "seoTitle": "مساعد تصميم الأنظمة | AGYNEXA",
-      "seoDescription": "صف العملية التي تريد تطويرها، والأنظمة التي تستخدمها، والمخرج المطلوب. يساعدك المساعد على تنظيم المتطلبات، واقتراح مسار عمل، وتحديد البيانات والصلاحيات والأسئلة"
+      "seoDescription": "ناقش تصميم مسار عمل مع المساعد العام، ونظم المتطلبات الافتراضية والمصادر والصلاحيات والمخرجات المنتظرة."
     },
     "start": {
       "title": "حدد النظام الذي يحتاجه عملك",
@@ -503,7 +503,7 @@
       "sections": [
         {
           "heading": "معلومات المشروع",
-          "body": "اسم المشروع أو وصفه المختصر؛ المشكلة الحالية؛ صاحب العملية؛ ما يبدأ المهمة؛ المصادر والأنظمة؛ المخرج المطلوب؛ ما يعنيه نجاح النتيجة؛ ما يحدث عند النقص أو الفشل.",
+          "body": "اسم المشروع أو وصفه المختصر؛ المشكلة الحالية؛ صاحب العملية؛ ما يبدأ المهمة؛ المصادر والأنظمة؛ المخرج المطلوب؛ ما يعنيه نجاح النتيجة؛ ما يحدث عند النقص أو الفشل.\n\nصف عملية واحدة بوضوح بدل حصر كل الاستخدامات المحتملة للذكاء الاصطناعي. اذكر الطلب الذي يبدأها ومن يراجعها والمعلومات المطلوبة والمخرج المقبول. إذا لم تعرف حالة اتصال أو صلاحية، سجلها سؤالًا لتحديد النطاق. راجع الموجز الذي نزلته قبل مشاركته.",
           "id": "start-section-1"
         },
         {
@@ -518,7 +518,7 @@
         }
       ],
       "seoTitle": "حدد النظام الذي يحتاجه عملك | AGYNEXA",
-      "seoDescription": "جهّز وصفًا للعملية ومصادرها والمخرج المطلوب. يبقى النموذج في صفحة المتصفح، ويمكنك مراجعة الموجز وتنزيله أو فتح رسالة بريد لمناقشته."
+      "seoDescription": "جهّز موجز مشروع محليًا لمسار الذكاء الاصطناعي، وراجع المتطلبات ونزّل الملف وافتح مسودة بريد تراجعها وترسلها بنفسك."
     },
     "privacy": {
       "title": "البيانات عند استخدام AGYNEXA",
@@ -589,7 +589,7 @@
       "sections": [
         {
           "heading": "Give your agents the knowledge behind the work",
-          "body": "A useful answer starts with the records your team can trust. We prepare documents, policies and business data for retrieval, preserving source references, versions and access rights. RAG supplies relevant context; extraction turns a document into fields a workflow can check.\n\nThe system must also recognize what is missing. Conflicting policies, an outdated record or an unanswered question remain visible instead of being filled with a plausible guess. [Enterprise knowledge](/en/solutions/knowledge)",
+          "body": "A useful answer starts with the records your team can trust. We prepare documents, policies and business data for retrieval, preserving source references, versions and access rights. RAG supplies relevant context; extraction turns a document into fields a workflow can check.\n\nThe system must also recognize what is missing. Conflicting policies, an outdated record or an unanswered question remain visible instead of being filled with a plausible guess. [Enterprise knowledge](/en/solutions/knowledge)\n\nA first engagement starts with one recurring task: the request that arrives, the records needed to answer it and the result someone can accept. We turn that into a defined engineering scope. Your team can review the proposed workflow before deciding which business systems to connect.",
           "id": "home-section-1"
         },
         {
@@ -629,7 +629,7 @@
         }
       ],
       "seoTitle": "AGYNEXA | Enterprise AI Agents & Automation Engineering",
-      "seoDescription": "Custom enterprise AI agents, system integrations and workflow automation. English-first, with Arabic support and human-governed execution."
+      "seoDescription": "Enterprise AI agents, system integrations and workflow automation, engineered around your business with clear permissions and human oversight."
     },
     "platform": {
       "title": "Knowledge connected. Work coordinated.",
@@ -662,7 +662,7 @@
         },
         {
           "heading": "Operational visibility and evaluation",
-          "body": "Runs connect task, step, and tool identifiers. Results, costs, latency, and failures are recorded appropriately for the environment, with sensitive data minimized. An action is verified in the system that performed it, rather than by a success message alone.\n\nEvaluations cover retrieval accuracy, tool selection, permission compliance, and output completeness. Acceptance cases come from the team's domain and working languages.",
+          "body": "Runs connect task, step, and tool identifiers. Results, costs, latency, and failures are recorded appropriately for the environment, with sensitive data minimized. An action is verified in the system that performed it, rather than by a success message alone.\n\nEvaluations cover retrieval accuracy, tool selection, permission compliance, and output completeness. Acceptance cases come from the team's domain and working languages.\n\nThe operating view should distinguish waiting for input, waiting for approval, running, completed and unresolved. Completion requires the expected output and, for a connected action, evidence from the destination system. A failed connection remains visible with its recovery path; it does not become a successful run because a model produced an answer.",
           "id": "platform-section-6"
         },
         {
@@ -672,7 +672,7 @@
         }
       ],
       "seoTitle": "Knowledge connected. Work coordinated. | AGYNEXA",
-      "seoDescription": "Build around the systems your organization already uses. Our engineering approach combines authorized knowledge, bounded tools and coordinated workflows, with identity, state and human decision points defined as part of the system."
+      "seoDescription": "Connect enterprise knowledge, business tools and workflow state in a custom AI system with defined identity, approvals and operating visibility."
     },
     "services": {
       "title": "Streamline workflows",
@@ -680,7 +680,7 @@
       "sections": [
         {
           "heading": "AI architecture and process design",
-          "body": "Define what the system should accomplish before selecting a model. We examine the process, its decision owners and the systems that hold the result, then specify the agent roles, fixed rules and operating boundaries.\n\nThe deliverable is an architecture and task contract covering inputs, tools, responsibilities and acceptance cases. This establishes what to build and what remains outside the initial scope.",
+          "body": "Define what the system should accomplish before selecting a model. We examine the process, its decision owners and the systems that hold the result, then specify the agent roles, fixed rules and operating boundaries.\n\nThe deliverable is an architecture and task contract covering inputs, tools, responsibilities and acceptance cases. This establishes what to build and what remains outside the initial scope.\n\nBring the process owner and technical owner into the same scope discussion. We identify the trigger, expected output, source systems, permitted actions and decisions that must stay with people. The resulting specification gives implementation and acceptance a shared reference, including the work deliberately deferred from the first release.",
           "id": "services-section-1"
         },
         {
@@ -710,7 +710,7 @@
         }
       ],
       "seoTitle": "AI engineering, from architecture to operation. | AGYNEXA",
-      "seoDescription": "Turn a business requirement into a system your team can operate and evaluate. Our services span AI architecture, enterprise knowledge, agent development, integration and operational evaluation. Each engagement defines deliverables, access boundaries and acceptance criteria before implementation."
+      "seoDescription": "Enterprise AI systems engineering: architecture, RAG, document intelligence, agent orchestration, integrations and workflow evaluation."
     },
     "solutions": {
       "title": "Connect intelligence to the work that matters.",
@@ -718,7 +718,7 @@
       "sections": [
         {
           "heading": "Enterprise knowledge",
-          "body": "Retrieve permitted information, understand relationships, and prepare a sourced answer or analysis. The design covers versions, conflicts, and missing evidence. [Solution details](/en/solutions/knowledge)",
+          "body": "Retrieve permitted information, understand relationships, and prepare a sourced answer or analysis. The design covers versions, conflicts, and missing evidence. [Solution details](/en/solutions/knowledge)\n\nChoose a solution by the work it must complete. A knowledge workflow may end with an answer and its sources; procurement may end with a comparison ready for review; receivables may end with a contact proposal based on verified invoice status. The process owner defines which output is useful and which actions need separate authority.",
           "id": "solutions-section-1"
         },
         {
@@ -743,7 +743,7 @@
         }
       ],
       "seoTitle": "Connect intelligence to the work that matters. | AGYNEXA",
-      "seoDescription": "Move from scattered information to a clear next action. We design solutions for enterprise knowledge, procurement, receivables and customer operations, connecting the relevant sources and systems while preserving decision ownership."
+      "seoDescription": "Explore custom AI workflows for enterprise knowledge, procurement, receivables and customer operations, with reviewable outputs and clear ownership."
     },
     "solutions/knowledge": {
       "title": "Enterprise knowledge with its context and sources",
@@ -751,7 +751,7 @@
       "sections": [
         {
           "heading": "How the solution is built",
-          "body": "We establish approved sources, access rights, and content versions, then design retrieval around organizational terminology. Retrieved material is tied to the question's context, and each attributable result points to the source supporting it.\n\nWhen work requires relationships, such as a supplier linked to a contract, invoice, and request, we evaluate entities and relationships alongside text. Context can then be followed across records while preserving references to the originals.",
+          "body": "We establish approved sources, access rights, and content versions, then design retrieval around organizational terminology. Retrieved material is tied to the question's context, and each attributable result points to the source supporting it.\n\nWhen work requires relationships, such as a supplier linked to a contract, invoice, and request, we evaluate entities and relationships alongside text. Context can then be followed across records while preserving references to the originals.\n\nStart with a source register: document owner, approved version, access group and review date. The retrieval design must preserve those boundaries when a document is split, indexed or summarized. A useful answer lets the employee inspect the relevant passage and recognize when the available sources cannot settle the question.",
           "id": "solutions-knowledge-section-1"
         },
         {
@@ -776,7 +776,7 @@
         }
       ],
       "seoTitle": "Enterprise knowledge with its context and sources | AGYNEXA",
-      "seoDescription": "Information spread across policies, contracts, reports, and databases makes a single question a search across teams and systems. Finding a document may still le"
+      "seoDescription": "Design permission-aware enterprise search and RAG workflows with approved sources, document references and evaluation of conflicting or missing evidence."
     },
     "solutions/procurement": {
       "title": "Procurement review with the decision inputs in one place",
@@ -789,7 +789,7 @@
         },
         {
           "heading": "Supplier and spending context",
-          "body": "The project may include delivery history, contracts, approved notes, and related requests. Unusual-price detection and performance comparisons need reference data and an agreed criterion; a difference alone does not establish error or fraud.",
+          "body": "The project may include delivery history, contracts, approved notes, and related requests. Unusual-price detection and performance comparisons need reference data and an agreed criterion; a difference alone does not establish error or fraud.\n\nA review file should align item descriptions, quantities, units, delivery terms and exclusions before comparing prices. Missing freight, unclear warranty coverage or a different unit belongs in the exception list. The reviewer should be able to trace each comparison field to its offer and request clarification before making a commitment.",
           "id": "solutions-procurement-section-2"
         },
         {
@@ -809,7 +809,7 @@
         }
       ],
       "seoTitle": "Procurement review with the decision inputs in one place | AGYNEXA",
-      "seoDescription": "Selecting an offer is difficult when item descriptions, measurement units, shipping, warranties, and delivery dates differ. The burden grows when supplier infor"
+      "seoDescription": "Prepare purchase requests and supplier comparisons with traceable terms, visible exceptions and human approval before a commercial commitment."
     },
     "solutions/receivables": {
       "title": "Receivables follow-up based on each invoice's status",
@@ -822,7 +822,7 @@
         },
         {
           "heading": "Daily outputs",
-          "body": "The system prepares a work queue with case status, source, missing information, and a proposed step. It can draft a message based on authorized details, then present it to the responsible person under the sending policy.\n\nIn a fictional example, a partial payment and an open line-item dispute exist. The output distinguishes the remaining amount from the disputed component and prepares a referral instead of demanding the full amount. The result depends on actual data and policy, not the model's inference alone.",
+          "body": "The system prepares a work queue with case status, source, missing information, and a proposed step. It can draft a message based on authorized details, then present it to the responsible person under the sending policy.\n\nIn a fictional example, a partial payment and an open line-item dispute exist. The output distinguishes the remaining amount from the disputed component and prepares a referral instead of demanding the full amount. The result depends on actual data and policy, not the model's inference alone.\n\nPrepare follow-up from the current account position: invoice reference, outstanding amount, dispute status, payment promise and last contact. Separate confirmed facts from the proposed message. A changed balance or unresolved dispute should return the draft for review rather than trigger an unsuitable reminder. Sending remains a separately authorized action.",
           "id": "solutions-receivables-section-2"
         },
         {
@@ -842,7 +842,7 @@
         }
       ],
       "seoTitle": "Receivables follow-up based on each invoice's status | AGYNEXA",
-      "seoDescription": "An invoice list does not establish the next appropriate contact. An invoice may be partly paid, disputed, covered by a payment promise, or missing documentation"
+      "seoDescription": "Prepare receivables follow-up from verified invoice, dispute and payment context, with reviewable drafts and separately authorized actions."
     },
     "solutions/customer-operations": {
       "title": "Customer case handling with connected context and clear boundaries",
@@ -860,7 +860,7 @@
         },
         {
           "heading": "Autonomy by case type",
-          "body": "The initial scope covers requests with known data, rules, and outcomes. Sensitive cases and financial changes are separate from routine inquiries. Scope can expand after quality, escalation, and tool success are measured in bounded operation.",
+          "body": "The initial scope covers requests with known data, rules, and outcomes. Sensitive cases and financial changes are separate from routine inquiries. Scope can expand after quality, escalation, and tool success are measured in bounded operation.\n\nDefine escalation by the case, not just the wording of a message. Refunds, account changes and identity-sensitive requests may need a different path from routine status questions. The employee receives the verified context and the unresolved decision, while service reporting distinguishes agent responses, human referrals and actions whose effects were confirmed.",
           "id": "solutions-customer-operations-section-3"
         },
         {
@@ -870,7 +870,7 @@
         }
       ],
       "seoTitle": "Customer case handling with connected context and clear boundaries | AGYNEXA",
-      "seoDescription": "When a case spans support, order, billing, and knowledge systems, employees must rebuild context for each step. A customer may move between teams while previous"
+      "seoDescription": "Design multilingual customer workflows that connect intent, knowledge and records, with clear escalation and complete human handover."
     },
     "industries": {
       "title": "Built around your industry. Defined by your work.",
@@ -913,12 +913,12 @@
         },
         {
           "heading": "Choose an appropriate start",
-          "body": "Look for recurring work, usable data, and an owner who can evaluate the result. Two sectors may start with the same functional solution while their rules, sources, and decision boundaries differ.\n\n[Solutions](/en/solutions) · [Discuss your sector's process](/en/start)",
+          "body": "Look for recurring work, usable data, and an owner who can evaluate the result. Two sectors may start with the same functional solution while their rules, sources, and decision boundaries differ.\n\n[Solutions](/en/solutions) · [Discuss your sector's process](/en/start)\n\nDuring scoping, agree which terminology, document types, access rules and exceptions make the sector different. Select representative cases with the team that performs the work. A successful pilot supports that defined scope; it does not establish readiness for every process or regulatory requirement in the sector.",
           "id": "industries-section-6"
         }
       ],
       "seoTitle": "Built around your industry. Defined by your work. | AGYNEXA",
-      "seoDescription": "Industry context determines which information matters, who can act and how a result is checked. We scope custom solutions around those requirements, from commercial operations and professional services to industrial and public-sector workflows. The examples below are development scopes, not claims of existing sector deployments."
+      "seoDescription": "Scope enterprise AI around industry terminology, source systems and decision rules across commerce, energy, logistics and institutional operations."
     },
     "methodology": {
       "title": "From business intent to verified operation.",
@@ -946,7 +946,7 @@
         },
         {
           "heading": "Introduce operation gradually",
-          "body": "A system may start in reading or drafting mode, then perform approved actions, then bounded autonomous actions where evaluation and policy support them. Conditions for suspension or returning to human review and exception ownership are defined.",
+          "body": "A system may start in reading or drafting mode, then perform approved actions, then bounded autonomous actions where evaluation and policy support them. Conditions for suspension or returning to human review and exception ownership are defined.\n\nAcceptance uses examples of normal work and difficult cases: missing data, conflicting sources, denied access, changed approvals and interrupted connections. Record the expected result before running the case. Review the evidence with the process owner, then decide whether to release, narrow the scope or correct a specific failure.",
           "id": "methodology-section-5"
         },
         {
@@ -956,7 +956,7 @@
         }
       ],
       "seoTitle": "From business intent to verified operation. | AGYNEXA",
-      "seoDescription": "Define the result. Engineer the workflow. Evaluate what happens. Our delivery method connects process discovery, integration and acceptance testing so each increase in autonomy is supported by evidence and an accountable owner."
+      "seoDescription": "From process discovery to bounded pilot and operation: define the output, engineer connections and verify acceptance with the process owner."
     },
     "security": {
       "title": "Governance that defines agent authority and verifies results",
@@ -964,7 +964,7 @@
       "sections": [
         {
           "heading": "Identity and access scope",
-          "body": "User identity and membership determine what can be read and executed. Organizational and project scope applies to data, retrieval, and tools. A browser-supplied identifier alone is not proof of authority; isolation is tested in both the application and database.",
+          "body": "User identity and membership determine what can be read and executed. Organizational and project scope applies to data, retrieval, and tools. A browser-supplied identifier alone is not proof of authority; isolation is tested in both the application and database.\n\nMap access to specific operations and records. Reading a customer file, preparing a reply and changing an account require different permissions. Define the people who can grant and revoke access, the events worth recording and the data that should stay out of logs. These controls are agreed and verified for the customer environment.",
           "id": "security-section-1"
         },
         {
@@ -1004,7 +1004,7 @@
         }
       ],
       "seoTitle": "Governance that defines agent authority and verifies results | AGYNEXA",
-      "seoDescription": "Control requirements increase when a system moves from reading knowledge to sending a message or changing a record. Identity, permissions, approval, and effect "
+      "seoDescription": "Design identity, record access, approvals and effect verification around your AI workflow, with security requirements agreed for each project."
     },
     "resources": {
       "title": "Practical tools to scope the project and test its results",
@@ -1012,7 +1012,7 @@
       "sections": [
         {
           "heading": "Define the first process",
-          "body": "The workflow brief records the trigger, inputs, knowledge source, owner, output, and incomplete-input path. It asks for a baseline when available so performance comparisons use actual information.\n\n[Download the workflow brief](/downloads/agentnexos/workflow-brief-en.md)",
+          "body": "The workflow brief records the trigger, inputs, knowledge source, owner, output, and incomplete-input path. It asks for a baseline when available so performance comparisons use actual information.\n\n[Download the workflow brief](/downloads/agentnexos/workflow-brief-en.md)\n\nUse the workflow template with the person responsible for the process, then review the connection inventory with the technical owner. The acceptance worksheet records expected outputs and failure cases. Keep sensitive records out of the initial brief; representative fictional examples are enough to discuss structure and access requirements.",
           "id": "resources-section-1"
         },
         {
@@ -1032,7 +1032,7 @@
         }
       ],
       "seoTitle": "Practical tools to scope the project and test its results | AGYNEXA",
-      "seoDescription": "Use these templates to prepare a discussion between the process owner and technical team. They identify decisions needed before development and ways to evaluate"
+      "seoDescription": "Download workflow, connection and acceptance templates to prepare an enterprise AI engineering discussion with your business and technical teams."
     },
     "about": {
       "title": "Enterprise intelligence. Human accountability.",
@@ -1045,7 +1045,7 @@
         },
         {
           "heading": "Who leads AGYNEXA?",
-          "body": "AGYNEXA is led by Adham Younes, an AI Agent Solutions Engineer working on business automation and integrations. His focus is applications connecting business requirements with knowledge, tools, and execution boundaries, with Arabic and English experiences.",
+          "body": "AGYNEXA is led by Adham Younes, an AI Agent Solutions Engineer working on business automation and integrations. His focus is applications connecting business requirements with knowledge, tools, and execution boundaries, with Arabic and English experiences.\n\nOur work sits between the business process and the software that must support it. We translate operational requirements into task definitions, source and tool contracts, user interfaces and acceptance evidence. Commercial scope identifies responsibilities and deliverables so the client can assess the system as an engineering engagement.",
           "id": "about-section-2"
         },
         {
@@ -1055,7 +1055,7 @@
         }
       ],
       "seoTitle": "Enterprise intelligence. Human accountability. | AGYNEXA",
-      "seoDescription": "AGYNEXA is an AI systems engineering and automation practice for organizations worldwide. We connect business requirements with software, knowledge and operational tools to build custom systems with defined responsibilities and reviewable results."
+      "seoDescription": "AGYNEXA engineers custom enterprise AI systems and automation for organizations worldwide, connecting operational needs with software and knowledge."
     },
     "agentnexos": {
       "title": "System design assistant",
@@ -1063,7 +1063,7 @@
       "sections": [
         {
           "heading": "Start with recurring work",
-          "body": "- Design a procurement review process.\n- Prepare follow-up for invoices in different states.\n- Define sources for an internal knowledge assistant.\n- Review a plan connecting a process to your systems.",
+          "body": "- Design a procurement review process.\n- Prepare follow-up for invoices in different states.\n- Define sources for an internal knowledge assistant.\n- Review a plan connecting a process to your systems.\n\nA useful starting message names the trigger, the team involved, the systems holding the data and the output you need. For example: a purchasing team receives three offers and needs a comparison for approval. Use fictional details. The assistant can help shape the design discussion; it does not connect to your purchasing system or approve an order.",
           "id": "agentnexos-section-1"
         },
         {
@@ -1078,7 +1078,7 @@
         }
       ],
       "seoTitle": "System design assistant | AGYNEXA",
-      "seoDescription": "Describe the process, systems you use, and intended output. The assistant helps organize requirements, propose a workflow, and identify data, permissions, and q"
+      "seoDescription": "Explore an enterprise workflow with the public design assistant. Organize fictional requirements, sources, permissions and expected outputs."
     },
     "start": {
       "title": "Define the system your work needs",
@@ -1086,7 +1086,7 @@
       "sections": [
         {
           "heading": "Project information",
-          "body": "Project name or short description; current problem; process owner; task trigger; sources and systems; intended output; acceptance criteria; handling of missing information or failure.",
+          "body": "Project name or short description; current problem; process owner; task trigger; sources and systems; intended output; acceptance criteria; handling of missing information or failure.\n\nDescribe one process clearly rather than listing every possible use of AI. Include the request that starts it, the people who review it, the information they need and the output they accept. If a connection or permission is unknown, mark it as a question for scoping. Review the downloaded brief before sharing it.",
           "id": "start-section-1"
         },
         {
@@ -1101,7 +1101,7 @@
         }
       ],
       "seoTitle": "Define the system your work needs | AGYNEXA",
-      "seoDescription": "Prepare the process, sources, and intended output. The form remains in the browser page; review the brief, download it, or open an email to discuss it."
+      "seoDescription": "Prepare a local project brief for your AI workflow. Review requirements, download the file and open an email draft that you send yourself."
     },
     "privacy": {
       "title": "Data when using AGYNEXA",
