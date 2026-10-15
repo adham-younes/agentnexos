@@ -1,3 +1,5 @@
+> Historical rejected implementation. The owner rejected the mint palette and fidelity judgment recorded here. This document is retained as evidence, not current approval. See `../green-reference-repair/repair-release.md` and the root `design-qa.md` for the repair and fresh evidence.
+
 # Green reference redesign — 15 October 2026
 
 ## Owner request and scope

@@ -1,56 +1,48 @@
-# Green reference design QA
+# Reference repair design QA — 15 October 2026
 
 final result: passed
 
-## Source and implementation evidence
+The owner rejected the earlier charcoal workspace palette in screenshot `1000109850.jpg`; its pass remains withdrawn. This current verdict covers the subsequent black revision (#050505/#0b0b0b/#ebebeb), clearer text, raised dark suggestions/composer, removal of the repeated badge, and measured44px touch areas. The final independent review recaptured all six workspace AR/EN widths, drawers and short scrolled states. It is a new review, not a reinstatement of the rejected palette. It is not owner acceptance, pixel identity, live authentication success or production publication. The previous verdict for `73639c6` and its “no actionable P0/P1/P2” claim are explicitly **withdrawn**. That rejected report remains unchanged apart from a withdrawal banner at [historical assessment](docs/verification/green-reference/design-qa-rejected-20261015.md).
 
-Owner-selected references: AI.Now composite `1000109824.png` (1600×1200), AI.Now full page `1000109825.png` (752×3517), Echo workspace `1000109821.jpg` (1280×1000), Nexora login `1000109822.jpg` (853×1280), and AgentFlow artwork `1000109820.png` (752×564). Original attachments were opened and visually inspected in this task; their exact task-local paths are recorded in the conversation.
+## Reference and implementation evidence
 
-Browser-rendered implementation: Next production build at the current local instance, Chromium 153, deviceScaleFactor 1, empty/default states, reduced motion for stable captures. Additional standard captures cover Arabic and English at 390, 768 and 1440 CSS pixels with 900px height.
+The five original supplied images were opened visually: AI.Now composite `1000109824.png` (1600×1200), AI.Now full page `1000109825.png` (752×3517), Echo `1000109821.jpg` (1280×1000), Nexora `1000109822.jpg` (853×1280), and AgentFlow `1000109820.png` (752×564). The source files are local attachments under `/tmp/codex-remote-attachments/01a13fa1-5dc9-714d-91af-f2d41bc47066/`.
 
-Combined source/implementation inputs, opened together before judging:
+The final Next.js production build, rebuilt after the black palette and touch-area corrections, was served at `http://localhost:3001`. Chromium captures use density 1, loaded self-hosted fonts, default/empty state and reduced motion unless explicitly noted. Arabic and English were captured at 390/768/1440×900; login also at 853×1280. Workspace short-height tests include 400px and 570px. Source and final result were opened together before judging these boards, source on the left:
 
-- [Hero comparison](docs/verification/green-reference/hero-comparison.webp): source hero cropped to 981×633, implementation captured at 1440×929. Equal panel widths normalize the presentation board; the original source's actual CSS viewport is unknown. No pixel-exact source font identification is claimed.
-- [Workspace comparison](docs/verification/green-reference/workspace-comparison.webp): source app interior cropped to 1130×798 to remove the light presentation canvas; implementation captured at 1440×1017. These share the same aspect ratio, normalized by width, without stretching.
-- [Login comparison](docs/verification/green-reference/login-comparison.webp): source and implementation both 853×1280 pixels / CSS viewport at density 1. The implementation is captured after readiness and before interaction.
-- [Focused field comparison](docs/verification/green-reference/login-fields-comparison.webp): enlarged source and implementation email/password/action regions. Labels, icon placement, inset surfaces, rounded corners, spacing, visibility control and raised action were checked at readable scale.
+- [Hero](docs/verification/green-reference-repair/hero-comparison.webp): source crop x44/y44/981×633; app viewport1440×929, normalized to the same panel width and aspect, with subpixel rounding only. The presentation canvas is excluded.
+- [Owner feedback before/after](docs/verification/green-reference-repair/workspace-owner-feedback-comparison.webp): supplied555×1280 screenshot and final390×900 state normalized into555×1280 panels with subpixel rounding; this directly shows the rejected washed surface versus platform black.
+- [Workspace](docs/verification/green-reference-repair/workspace-comparison.webp): Echo app interior x74/y100/1130×798; app1440×900, normalized by width into the same panel with black padding below; no aspect stretching.
+- [Login](docs/verification/green-reference-repair/login-comparison.webp): both853×1280, no aspect normalization.
+- [Fields](docs/verification/green-reference-repair/login-fields-comparison.webp): source390×340 and app372×345 enlarged into equal panels. This focused board deliberately normalizes field width/height for inspection; exact60/64px measurements are separate DOM evidence.
+- [Full page](docs/verification/green-reference-repair/full-page-comparison.webp): each page normalized to600px wide, preserving its own height; black padding only below the shorter panel. This compares section rhythm and content differences, not equal content length.
 
-Raw implementation captures: `output/green-local-final/qa-en.png`, `qa-en-agentnexos.png`, `qa-en-login.png`; standard mobile/desktop and below-fold captures use the `final-{locale}-{route}-{width}.png` names in the same directory. Runtime reports are separate from the normalized comparison boards.
+## Corrections and independent review
 
-## Comparison history and fixes
+Removed `app/green-reference.css` completely, including its global mint tokens and route-specific green surfaces. The new marketing stylesheet has no global token overrides. Restored neutral primary, original Newsreader for other editorial pages and IBM Plex Sans Arabic, while marketing uses a dedicated geometric Anybody family with real700/200 English weights and real700/300 Arabic faces. The source font name is unknown; no identification is claimed.
 
-1. **P2, Arabic mobile hero:** the heavy heading wrapped into two rows above its light companion, unlike the intended two-line hierarchy. Reduced the Arabic mobile display size to 44px. Post-fix `final-ar-home-390.png` visibly retains “ذكاء اصطناعي” on one row and “من الأساس.” on its own light row; both actions remain visible.
-2. **P2, workspace density:** excessive welcome padding pushed suggestion details below the conversation viewport. Reduced content/welcome padding and compacted the side-rail rhythm. The matched-aspect workspace comparison now shows the complete emblem, heading, four actual suggestions and composer. The 18-case browser run checks composer bounds and functional suggestions/reset.
-3. **P2, login proportion:** the initial architectural area occupied about 40% of desktop width. Changed the split to approximately 32.5% / 67.5% and corrected intermediate-width padding. The 853×1280 comparison confirms the architectural strip and raised panel relationships.
-4. **P2, composer focus:** the browser's textarea outline created a second inner rectangle. Moved the visible focus outline to the enclosing form, retaining an explicit two-pixel keyboard indicator around the composer instead.
-5. **P2, lower-page reveal baseline defect:** tall sections could fail the proportional observer threshold. Changed to first intersection and retained the assertion that scrolled content becomes visible; the complete release suite reports this separately.
+The hero uses a trapezoid tray, black actions with emerald lower edges, a dark smoked ribbon and quiet existing lightning. About now pairs explanatory copy with small staggered actual workflow blocks. The huge brain/console pairing is removed; generated dark neural artwork belongs in the final CTA. Card/footer backgrounds are slanted independently of text and focusable content. Workspace uses a real Radix Sheet, scoped CSS, platform black surfaces, actual account/language routes in the rail and44px action targets. Login has isolated neutral surfaces, a raised dark card,60px fields and64px action.
 
-These corrections were rebuilt before final captures. Initial browser-harness issues (a broad alert locator matching Next's route announcer, and screenshots taken before hydration) were corrected by scoping the locator and waiting for actual client readiness. They are not represented as successful application tests before the rerun.
+Independent review found and then visually rechecked four P2 findings: tablet artwork clipping, a visible black brain rectangle, missing card/footer slopes, and duplicated about copy. All were corrected before the final recheck. See [independent review](docs/verification/green-reference-repair/independent-visual-review.md) for its exact evidence and limits.
 
-The full 108-case regression later found one intermittent Arabic mobile reveal-timing failure. Standalone reproduction showed every reveal visible after rendering; the runner now waits for two actual animation frames per scroll step instead of relying on a wall-clock delay alone. The final affected-scope rerun passed all six homepage cases and both complete interaction journeys, with the same visibility assertions retained. The complete route catalog is preserved when selecting only homepage cases.
+## Verified surfaces and deliberate adaptations
 
-## Required fidelity surfaces
-
-| Surface | Result and intentional adaptations |
+| Surface | Evidence / adaptation |
 | --- | --- |
-| Fonts / typography | Michroma closely follows the wide geometric Latin reference; Inter preserves small UI readability; genuine Tajawal Arabic supports joining, numerals and light/heavy hierarchy. The screenshot's original font cannot be conclusively identified from raster pixels. Marketing headlines are geometric; workspace/login retain the reference's calmer sans hierarchy. |
-| Spacing / rhythm | Centered hero, raised navigation tray, two primary actions, oblique dark cards, section labels, architectural split, inset fields and illuminated composer are present. Long approved product copy intentionally increases section heights. Mobile stacks preserve readable text and persistent composer access. |
-| Color / tokens | Black and deep green surfaces, mint/emerald highlights, white primary copy and muted secondary copy. Purple from Echo and copper from Nexora were deliberately replaced with the owner's green palette. |
-| Images | Three inspected original raster assets: continuous glossy glass ribbon, emerald neural anatomy and dark stone architecture with green lighting. WebP compression preserves fine detail and black edge blending. No generated text, CSS illustration substitute or foreign reference branding is used. |
-| Copy / content | Existing Arabic/English marketing and assistant content is retained. Four real suggestions replace the reference's three sample cards. Unsupported attachments, music, image generation, subscription upsells, fabricated history, social auth and fake testimonials are deliberately absent. The login gateway discloses unavailable/rejected sign-in honestly. |
+| Color | Original background#050505/card#0b0b0b/text#ebebeb/ring#10b981 retained. Workspace now uses the exact platform black surfaces per the latest owner correction; Echo supplies geometry, and emerald stays local. Neutral primary is not replaced with green. |
+| Type | Actual browser-loaded Anybody variable100–900/wdth50–150; Inter UI; IBM Plex Arabic joining and real weights. No synthetic bold or scaled glyphs. |
+| Workspace | Rail14.60%; composer59.18% of main. Four actual suggestions, truthful scope/status and request stages replace the reference's fictional history/tools. Welcome is higher and wider because current product content remains. |
+| Login | Scene32.5%; fields60px; action64px. Card is shorter and lower than Nexora because no unsupported OAuth row is copied. Existing public assistant/brief links remain. |
+| Graphics | Image Gen assets saved as WebP and visually inspected: smoked ribbon and dark neural brain. Existing architectural artwork reused. No Superdesign canvas result is claimed: CLI preflight reported unauthenticated. |
+| Interaction | 18 page cases/12 interactions; separate workspace Sheet/focus/retry/short-height checks; login visibility/validation/missing configuration; marketing keyboard tabs/FAQ/menu/skip link/reveals. |
+| Responsive / motion | AR/EN390/768/1440, normal-motion reveals and reduced-motion captures. Text scaling200% checked separately; this is not a browser zoom or screen-reader certification. |
 
-Calculated sRGB token contrast: login action text 11.22:1, field labels 11.87:1, input placeholders 4.73:1 and green section headings 13.56:1 against their specified solid surfaces. These checks support the inspected controls; they do not constitute a complete accessibility audit of every state or image background.
+No actionable P1/P2 visual defect remains **in the positions and states rechecked**, not every possible application state. Full approved product copy makes some sections taller than AI.Now; testimonials/newsletter/OAuth/history were not invented. Mobile omits the large decorative CTA brain intentionally. Real Supabase sign-in and live provider streaming remain unverified locally; browser SSE/error cases are explicitly simulated. Build/test success is recorded separately from this visual verdict.
 
-## Behavior and responsive evidence
+## Final measurement review
 
-`scripts/verify-green-reference.mjs` completed 18 page cases and 12 interactions with no failures on the final built styles. It checks HTTP, RTL/LTR, loaded heading fonts, horizontal overflow, JavaScript/hydration exceptions, visible composer bounds, suggestion population, new-conversation reset, password show/hide, and rejected/unconfigured sign-in without sending credentials to a real account service. The screenshot state is reset after interactions. Live authentication remains unverified.
+Better Design inspect-spacing completed on actual AR/EN DOM at390/1440/1728. The initial report found touch targets below44px; those defects were fixed and recaptured. Final report has no touch-target finding, but still records0 critical/8 serious/6 moderate heuristic findings. Independent review documents why the remaining auto-margin/semantic-group gaps and unequal text wrapping inside equal-height buttons are not release-blocking defects; it does **not** claim an automated tool pass. Both reports remain beside the independent review. Contrast arithmetic: #ebebeb on#05050517.10:1, #b3b3b3 on#0b0b0b9.39:1, and #10b981 on#0b0b0b7.76:1. This is token contrast evidence, not comprehensive WCAG certification.
 
-The existing release regression additionally covers public routes, real internal links, images, canonical metadata, menus, focus containment, Escape, skip links, reduced motion, keyboard tabs/FAQ, local brief validation/download/reset and legacy API closure. Its final outcomes and hosted checks are recorded in `docs/verification/green-reference/release.md`.
+The final density repair displays all four suggestion frames at390×900 in both languages, and EN768×900. The existing short question is visible; the complete original introduction remains inside the scope disclosure. At short heights conversation scrolling remains available and context/privacy stay visible.
 
-## Residual P3 differences
-
-- Generated artwork is an original close art-direction match rather than the reference author's exact mesh or photograph.
-- The original screenshot's font name is unknown; freely available matching typography is used and documented.
-- Existing product scope and copy mean section counts, suggestion counts, labels and account options differ deliberately from the reference products. No unsupported feature is added to imitate decorative chrome.
-
-No actionable P0/P1/P2 visual finding remains in the inspected target states. This is visual/interaction QA, not a claim of live account access, comprehensive WCAG certification or production publication.
+Latest measured spacing report: `spacing-review-density-final.json` (0 critical/7 serious/6 moderate heuristics, zero touch-target findings). The same independent reasoning applies to the remaining intentional auto-margins, semantic groups and differing text lengths. Final production-build density and disclosure lengths are in `workspace-final-density.json`. No further local tests are planned after the owner’s instruction to proceed to release.

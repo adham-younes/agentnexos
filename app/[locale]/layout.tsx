@@ -3,14 +3,15 @@ import { siteOrigin } from "@/lib/site";
 import { notFound } from "next/navigation";
 import {
   Inter,
-  Michroma,
+  Newsreader,
+  Anybody,
   Space_Grotesk,
-  Tajawal,
+  IBM_Plex_Sans_Arabic,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import "../globals.css";
-import "../green-reference.css";
+import "../marketing-reference.css";
 import { LocaleProvider } from "@/lib/i18n/use-t";
 import {
   isLocale,
@@ -25,9 +26,9 @@ const instrumentSans = Inter({
   variable: "--font-instrument",
 });
 
-const instrumentSerif = Michroma({
+const instrumentSerif = Newsreader({
   subsets: ["latin"],
-  weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-instrument-serif",
 });
 
@@ -36,14 +37,20 @@ const jetbrainsMono = Space_Grotesk({
   variable: "--font-jetbrains",
 });
 
-// Genuine Arabic shaping with a light/heavy hierarchy beside geometric Latin type.
-const plexArabic = Tajawal({
+// Original Arabic UI family; real light/heavy faces also support marketing.
+const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic", "latin"],
-  weight: ["300", "400", "500", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-arabic",
 });
 
 
+// Expanded geometric display face, not an identification of the reference font.
+const marketingDisplay = Anybody({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-marketing-display",
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -118,7 +125,7 @@ export default async function LocaleLayout({
   return (
     <html lang={localeBcp47[typed]} dir={localeDir[typed]}>
       <body
-        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} font-sans antialiased`}
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} ${marketingDisplay.variable} font-sans antialiased`}
       >
         <a href="#main-content" className="skip-link">{locale === "ar" ? "انتقل إلى المحتوى" : "Skip to content"}</a>
         <LocaleProvider locale={typed}>{children}</LocaleProvider>

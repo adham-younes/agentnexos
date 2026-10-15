@@ -1,0 +1,60 @@
+{
+  "origin": "http://localhost:3001",
+  "checkedAt": "2026-10-15T17:24:10.200Z",
+  "cases": [
+    {
+      "locale": "ar",
+      "width": 390,
+      "fullIntroLength": 179,
+      "density": {
+        "cardsBottom": 589.40625,
+        "regionBottom": 634.625
+      }
+    },
+    {
+      "locale": "ar",
+      "width": 1440,
+      "fullIntroLength": 179,
+      "density": {
+        "cardsBottom": 546.4375,
+        "regionBottom": 643.625
+      }
+    },
+    {
+      "locale": "ar",
+      "width": 1728,
+      "fullIntroLength": 179,
+      "density": {
+        "cardsBottom": 546.546875,
+        "regionBottom": 643.625
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "fullIntroLength": 192,
+      "density": {
+        "cardsBottom": 595.5,
+        "regionBottom": 604.5625
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "fullIntroLength": 192,
+      "density": {
+        "cardsBottom": 533.703125,
+        "regionBottom": 602.9375
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1728,
+      "fullIntroLength": 192,
+      "density": {
+        "cardsBottom": 554.1875,
+        "regionBottom": 643.625
+      }
+    }
+  ]
+}

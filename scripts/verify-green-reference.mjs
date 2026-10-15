@@ -7,7 +7,7 @@ const directory = process.argv[3] || "output/green-reference";
 await mkdir(directory, { recursive: true });
 const report = { origin: base.origin, checkedAt: new Date().toISOString(), pages: [], interactions: [], failures: [], liveAuthenticationVerified: false };
 const check = (condition, message) => { if (!condition) throw Error(message); };
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {});
 try {
   for (const locale of ["ar", "en"]) for (const width of [390, 768, 1440]) for (const route of ["", "agentnexos", "login"]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, reducedMotion: "reduce" });
@@ -18,24 +18,25 @@ try {
     try {
       const response = await page.goto(`${base.origin}/${locale}/${route}`, { waitUntil: "domcontentloaded" });
       await page.locator("h1").waitFor();
-      if (route !== "agentnexos") await page.locator('[data-effects-ready="true"]').waitFor();
+      if (!route) await page.locator('[data-effects-ready="true"]').waitFor();
       await page.evaluate(() => document.fonts.ready);
       if (route === "agentnexos") {
         await page.waitForFunction(() => {
-          const status = document.querySelector('.echo-composer [role="status"]')?.textContent;
+          const status = document.querySelector('.workspace-composer [role="status"]')?.textContent;
           return status && !/^(Checking connection|فحص الاتصال)/.test(status);
         }, null, { timeout: 15000 });
         const composer = page.locator("textarea");
-        await page.locator(".echo-suggestions button").first().click();
+        await page.locator(".workspace-suggestions button").first().click();
         check((await composer.inputValue()).length > 30, "Suggestion did not populate composer");
         const bounds = await composer.boundingBox();
         check(bounds && bounds.x >= 0 && bounds.x + bounds.width <= width + 1 && bounds.y + bounds.height <= 900, "Composer is not reachable in viewport");
         const reset = page.getByRole("button", { name: locale === "ar" ? "محادثة جديدة" : "New conversation", exact: true });
+        if (width <= 900) await page.locator(".workspace-menu").click();
         await reset.filter({ visible: true }).click();
         check(await composer.inputValue() === "", "New conversation did not reset composer");
         report.interactions.push({ locale, width, workspaceSuggestionAndReset: true, composerInViewport: true });
         await page.reload();
-        await page.locator(".echo-welcome h1").waitFor();
+        await page.locator(".workspace-welcome h1").waitFor();
         await page.evaluate(() => document.fonts.ready);
       }
       if (route === "login") {
@@ -56,7 +57,7 @@ try {
         await page.locator("#login-email").clear();
         await page.locator("#login-password").clear();
         await page.reload();
-        await page.locator('[data-effects-ready="true"]').waitFor();
+        await page.locator("h1").waitFor();
         await page.evaluate(() => document.fonts.ready);
       }
       Object.assign(row, await page.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth, dir: document.documentElement.dir, font: getComputedStyle(document.querySelector("h1")).fontFamily })));

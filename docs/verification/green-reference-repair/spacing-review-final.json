@@ -1,0 +1,1086 @@
+{
+  "status": "completed",
+  "score": 0,
+  "summary": {
+    "critical": 0,
+    "serious": 8,
+    "moderate": 6,
+    "total": 14
+  },
+  "findings": [
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "workspace-ar-390",
+      "severity": "moderate",
+      "message": "workspace-ar-390 uses 9 off-scale spacing values across 18 elements: 6px, 10px, 14px, 18px, 22px, 28px, 82.14px, 140px, 168px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(2)@13",
+        "div:nth-of-type(1)@20",
+        "div:nth-of-type(1)@21",
+        "div:nth-of-type(1)@22",
+        "summary:nth-of-type(1)@30",
+        "div:nth-of-type(2)@31",
+        "button:nth-of-type(1)@32",
+        "h2:nth-of-type(1)@38",
+        "button:nth-of-type(2)@40",
+        "h2:nth-of-type(1)@46",
+        "button:nth-of-type(3)@48",
+        "h2:nth-of-type(1)@54",
+        "button:nth-of-type(4)@56",
+        "h2:nth-of-type(1)@62",
+        "div:nth-of-type(3)@64",
+        "div:nth-of-type(1)@66",
+        "button:nth-of-type(1)@68"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@5 padding right",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 padding left",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "تحميل المحادثة margin right",
+          "value": 168,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding top",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding right",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding bottom",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding left",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 row gap",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 column gap",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@21 padding top",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@22 margin right",
+          "value": 140,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@22 margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@22 margin left",
+          "value": 140,
+          "unit": "px"
+        },
+        {
+          "label": "نطاق المساعد وقبل الإرسال padding top",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "نطاق المساعد وقبل الإرسال padding bottom",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "نطاق المساعد وقبل الإرسال margin right",
+          "value": 82.14,
+          "unit": "px"
+        },
+        {
+          "label": "نطاق المساعد وقبل الإرسال margin left",
+          "value": 82.16,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@31 row gap",
+          "value": 10,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-1"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "workspace-ar-390",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@5 has inconsistent sibling gaps: 174px, 6px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(1)@6",
+        "p:nth-of-type(1)@11",
+        "button:nth-of-type(2)@13"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 174,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 6,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-2"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "workspace-ar-1440",
+      "severity": "moderate",
+      "message": "workspace-ar-1440 uses 15 off-scale spacing values across 28 elements: 6px, 10px, 18px, 22px, 27px, 30px, 35px, 37.84px, 45px, 105px, 139.88px, 223.02px, 345.14px, 398px, 1017.77px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "a:nth-of-type(1)@6",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "h2:nth-of-type(1)@16",
+        "ol:nth-of-type(1)@17",
+        "section:nth-of-type(1)@33",
+        "h2:nth-of-type(1)@34",
+        "section:nth-of-type(2)@51",
+        "svg:nth-of-type(1)@52",
+        "div:nth-of-type(1)@67",
+        "button:nth-of-type(2)@70",
+        "div:nth-of-type(1)@77",
+        "div:nth-of-type(1)@78",
+        "div:nth-of-type(1)@79",
+        "h1:nth-of-type(1)@84",
+        "p:nth-of-type(1)@85",
+        "summary:nth-of-type(1)@87",
+        "div:nth-of-type(2)@88",
+        "h2:nth-of-type(1)@95",
+        "h2:nth-of-type(1)@103",
+        "h2:nth-of-type(1)@111",
+        "h2:nth-of-type(1)@119",
+        "div:nth-of-type(3)@121",
+        "div:nth-of-type(1)@122",
+        "div:nth-of-type(1)@123",
+        "button:nth-of-type(1)@125"
+      ],
+      "evidence": [
+        {
+          "label": "تنقل المساعد padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "تنقل المساعد padding bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "العودة للمنصة row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "العودة للمنصة column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "محادثة جديدة row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "محادثة جديدة column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@15 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "مراحل معالجة الطلب margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 row gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 column gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "ما يساعدك على إعداده margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(2)@51 margin top",
+          "value": 35,
+          "unit": "px"
+        },
+        {
+          "label": "svg:nth-of-type(1)@52 margin bottom",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding right",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding left",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "تحميل المحادثة margin right",
+          "value": 1017.77,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@77 padding top",
+          "value": 28,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-3"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "workspace-ar-1440",
+      "severity": "serious",
+      "message": "تنقل المساعد has inconsistent sibling gaps: 18px, 30px, 12px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "div:nth-of-type(3)@57"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 3",
+          "value": 12,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-4"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "workspace-ar-1728",
+      "severity": "moderate",
+      "message": "workspace-ar-1728 uses 15 off-scale spacing values across 28 elements: 6px, 10px, 18px, 22px, 27px, 30px, 35px, 37.73px, 45px, 105px, 264px, 286px, 345.14px, 398px, 1266px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "a:nth-of-type(1)@6",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "h2:nth-of-type(1)@16",
+        "ol:nth-of-type(1)@17",
+        "section:nth-of-type(1)@33",
+        "h2:nth-of-type(1)@34",
+        "section:nth-of-type(2)@51",
+        "svg:nth-of-type(1)@52",
+        "div:nth-of-type(1)@67",
+        "button:nth-of-type(2)@70",
+        "div:nth-of-type(1)@77",
+        "div:nth-of-type(1)@78",
+        "div:nth-of-type(1)@79",
+        "h1:nth-of-type(1)@84",
+        "p:nth-of-type(1)@85",
+        "summary:nth-of-type(1)@87",
+        "div:nth-of-type(2)@88",
+        "h2:nth-of-type(1)@95",
+        "h2:nth-of-type(1)@103",
+        "h2:nth-of-type(1)@111",
+        "h2:nth-of-type(1)@119",
+        "div:nth-of-type(3)@121",
+        "div:nth-of-type(1)@122",
+        "div:nth-of-type(1)@123",
+        "button:nth-of-type(1)@125"
+      ],
+      "evidence": [
+        {
+          "label": "تنقل المساعد padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "تنقل المساعد padding bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "العودة للمنصة row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "العودة للمنصة column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "محادثة جديدة row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "محادثة جديدة column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@15 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "مراحل معالجة الطلب margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 row gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 column gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "ما يساعدك على إعداده margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(2)@51 margin top",
+          "value": 35,
+          "unit": "px"
+        },
+        {
+          "label": "svg:nth-of-type(1)@52 margin bottom",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding right",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding left",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "تحميل المحادثة margin right",
+          "value": 1266,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@77 padding top",
+          "value": 28,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-5"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "workspace-ar-1728",
+      "severity": "serious",
+      "message": "تنقل المساعد has inconsistent sibling gaps: 18px, 30px, 12px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "div:nth-of-type(3)@57"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 3",
+          "value": 12,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-6"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "workspace-en-390",
+      "severity": "moderate",
+      "message": "workspace-en-390 uses 9 off-scale spacing values across 18 elements: 6px, 10px, 14px, 18px, 22px, 28px, 36.14px, 133px, 140px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(2)@13",
+        "div:nth-of-type(1)@20",
+        "div:nth-of-type(1)@21",
+        "div:nth-of-type(1)@22",
+        "summary:nth-of-type(1)@30",
+        "div:nth-of-type(2)@31",
+        "button:nth-of-type(1)@32",
+        "h2:nth-of-type(1)@38",
+        "button:nth-of-type(2)@40",
+        "h2:nth-of-type(1)@46",
+        "button:nth-of-type(3)@48",
+        "h2:nth-of-type(1)@54",
+        "button:nth-of-type(4)@56",
+        "h2:nth-of-type(1)@62",
+        "div:nth-of-type(3)@64",
+        "div:nth-of-type(1)@66",
+        "button:nth-of-type(1)@68"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@5 padding right",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 padding left",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "Download conversation margin left",
+          "value": 133,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding top",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding right",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding bottom",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 padding left",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 row gap",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@20 column gap",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@21 padding top",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@22 margin right",
+          "value": 140,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@22 margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@22 margin left",
+          "value": 140,
+          "unit": "px"
+        },
+        {
+          "label": "Assistant scope and before sending padding top",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "Assistant scope and before sending padding bottom",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "Assistant scope and before sending margin right",
+          "value": 36.16,
+          "unit": "px"
+        },
+        {
+          "label": "Assistant scope and before sending margin left",
+          "value": 36.14,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@31 row gap",
+          "value": 10,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-7"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "workspace-en-390",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@5 has inconsistent sibling gaps: 6px, 139px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(1)@6",
+        "p:nth-of-type(1)@11",
+        "button:nth-of-type(2)@13"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 139,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-8"
+    },
+    {
+      "ruleId": "spacing/ragged-text-row",
+      "state": "workspace-en-390",
+      "severity": "serious",
+      "message": "2 text blocks share a row but wrap to 2, 3 lines, so p:nth-of-type(1)@39 ends short, leaves a gap under it, and the row's bottom edge is ragged.",
+      "fix": "Give every block in the row the tallest block's height, or shorten the copy so they all wrap alike.",
+      "elementIds": [
+        "p:nth-of-type(1)@39",
+        "p:nth-of-type(1)@47"
+      ],
+      "evidence": [
+        {
+          "label": "p:nth-of-type(1)@39",
+          "value": 43.19,
+          "unit": "px"
+        },
+        {
+          "label": "p:nth-of-type(1)@47",
+          "value": 64.78,
+          "unit": "px"
+        },
+        {
+          "label": "p:nth-of-type(1)@39 lines",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "label": "p:nth-of-type(1)@47 lines",
+          "value": 3,
+          "unit": "count"
+        }
+      ],
+      "id": "spacing-9"
+    },
+    {
+      "ruleId": "spacing/ragged-text-row",
+      "state": "workspace-en-390",
+      "severity": "serious",
+      "message": "2 text blocks share a row but wrap to 3, 2 lines, so Start with your existing systems ends short, leaves a gap under it, and the row's bottom edge is ragged.",
+      "fix": "Give every block in the row the tallest block's height, or shorten the copy so they all wrap alike.",
+      "elementIds": [
+        "h2:nth-of-type(1)@54",
+        "h2:nth-of-type(1)@62"
+      ],
+      "evidence": [
+        {
+          "label": "Build an internal knowledge assistant",
+          "value": 70.17,
+          "unit": "px"
+        },
+        {
+          "label": "Start with your existing systems",
+          "value": 46.78,
+          "unit": "px"
+        },
+        {
+          "label": "Build an internal knowledge assistant lines",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "label": "Start with your existing systems lines",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "id": "spacing-10"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "workspace-en-1440",
+      "severity": "moderate",
+      "message": "workspace-en-1440 uses 14 off-scale spacing values across 27 elements: 6px, 10px, 18px, 22px, 27px, 30px, 35px, 45px, 105px, 139.88px, 223.02px, 299.14px, 398px, 982.77px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "a:nth-of-type(1)@6",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "h2:nth-of-type(1)@16",
+        "ol:nth-of-type(1)@17",
+        "section:nth-of-type(1)@33",
+        "h2:nth-of-type(1)@34",
+        "section:nth-of-type(2)@51",
+        "svg:nth-of-type(1)@52",
+        "div:nth-of-type(1)@67",
+        "button:nth-of-type(2)@70",
+        "div:nth-of-type(1)@77",
+        "div:nth-of-type(1)@79",
+        "h1:nth-of-type(1)@84",
+        "p:nth-of-type(1)@85",
+        "summary:nth-of-type(1)@87",
+        "div:nth-of-type(2)@88",
+        "h2:nth-of-type(1)@95",
+        "h2:nth-of-type(1)@103",
+        "h2:nth-of-type(1)@111",
+        "h2:nth-of-type(1)@119",
+        "div:nth-of-type(3)@121",
+        "div:nth-of-type(1)@122",
+        "div:nth-of-type(1)@123",
+        "button:nth-of-type(1)@125"
+      ],
+      "evidence": [
+        {
+          "label": "Assistant navigation padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "Assistant navigation padding bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "Back to the platform row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "Back to the platform column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "New conversation row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "New conversation column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@15 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "Request stages margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 row gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 column gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "What you can prepare margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(2)@51 margin top",
+          "value": 35,
+          "unit": "px"
+        },
+        {
+          "label": "svg:nth-of-type(1)@52 margin bottom",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding right",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding left",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "Download conversation margin left",
+          "value": 982.77,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@77 padding top",
+          "value": 28,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-11"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "workspace-en-1440",
+      "severity": "serious",
+      "message": "Assistant navigation has inconsistent sibling gaps: 18px, 30px, 12px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "div:nth-of-type(3)@57"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 3",
+          "value": 12,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-12"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "workspace-en-1728",
+      "severity": "moderate",
+      "message": "workspace-en-1728 uses 14 off-scale spacing values across 28 elements: 6px, 10px, 17.75px, 22px, 27px, 30px, 35px, 45px, 105px, 264px, 286px, 299.14px, 398px, 1231px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "a:nth-of-type(1)@6",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "h2:nth-of-type(1)@16",
+        "ol:nth-of-type(1)@17",
+        "section:nth-of-type(1)@33",
+        "h2:nth-of-type(1)@34",
+        "section:nth-of-type(2)@51",
+        "svg:nth-of-type(1)@52",
+        "div:nth-of-type(1)@67",
+        "button:nth-of-type(2)@70",
+        "div:nth-of-type(1)@77",
+        "div:nth-of-type(1)@78",
+        "div:nth-of-type(1)@79",
+        "h1:nth-of-type(1)@84",
+        "p:nth-of-type(1)@85",
+        "summary:nth-of-type(1)@87",
+        "div:nth-of-type(2)@88",
+        "h2:nth-of-type(1)@95",
+        "h2:nth-of-type(1)@103",
+        "h2:nth-of-type(1)@111",
+        "h2:nth-of-type(1)@119",
+        "div:nth-of-type(3)@121",
+        "div:nth-of-type(1)@122",
+        "div:nth-of-type(1)@123",
+        "button:nth-of-type(1)@125"
+      ],
+      "evidence": [
+        {
+          "label": "Assistant navigation padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "Assistant navigation padding bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@5 margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "Back to the platform row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "Back to the platform column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "New conversation row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "New conversation column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@15 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "Request stages margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 row gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "ol:nth-of-type(1)@17 column gap",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 padding top",
+          "value": 22,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(1)@33 margin top",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "What you can prepare margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "section:nth-of-type(2)@51 margin top",
+          "value": 35,
+          "unit": "px"
+        },
+        {
+          "label": "svg:nth-of-type(1)@52 margin bottom",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding right",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding left",
+          "value": 27,
+          "unit": "px"
+        },
+        {
+          "label": "Download conversation margin left",
+          "value": 1231,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@77 padding top",
+          "value": 28,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-13"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "workspace-en-1728",
+      "severity": "serious",
+      "message": "Assistant navigation has inconsistent sibling gaps: 18px, 30px, 12px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "div:nth-of-type(1)@5",
+        "button:nth-of-type(1)@10",
+        "div:nth-of-type(2)@15",
+        "div:nth-of-type(3)@57"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 3",
+          "value": 12,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-14"
+    }
+  ],
+  "capturedWidths": [
+    390,
+    1440,
+    1728
+  ],
+  "missingWidths": [],
+  "rubricStatus": "loaded"
+}

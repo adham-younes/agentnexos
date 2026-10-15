@@ -7,7 +7,7 @@ import { ArrowRight, Command, Eye, EyeOff, LoaderCircle, LockKeyhole, Mail, Shie
 import { createClient } from "@/lib/supabase/client";
 import { useLocale } from "@/lib/i18n/use-t";
 import { LocaleSwitcher } from "./locale-switcher";
-import { CyberEffects } from "@/components/cyber/effects";
+import "@/components/auth/login-gateway.css";
 
 export function LoginGateway() {
   const locale = useLocale(), ar = locale === "ar";
@@ -30,10 +30,10 @@ export function LoginGateway() {
       setNotice(ar ? "تعذّر الاتصال بخدمة الحسابات. حاول مرة أخرى لاحقًا." : "The account service could not be reached. Please try again later.");
     } finally { setBusy(false); }
   }
-  return <CyberEffects className="login-gateway">
+  return <div className="login-gateway">
     <aside className="login-scene">
       <Link href={`/${locale}`} className="login-brand" dir="ltr"><Command aria-hidden="true" size={27}/>AGYNEXA</Link>
-      <div className="login-welcome"><h2>{ar ? <>مرحبًا<br/>بعودتك.</> : <>Welcome<br/>back.</>}</h2><p>{ar ? "مساحة واضحة لتصميم خطوتك التالية." : "A clear space to design your next step."}</p></div>
+      <div className="login-welcome"><h2>{ar ? <>مرحبًا<br/>{" "}بعودتك.</> : <>Welcome<br/>{" "}back.</>}</h2><p>{ar ? "مساحة واضحة لتصميم خطوتك التالية." : "A clear space to design your next step."}</p></div>
       <span className="login-copyright" dir="ltr">© 2026 AGYNEXA</span>
     </aside>
     <main id="main-content" tabIndex={-1} className="login-main">
@@ -48,7 +48,7 @@ export function LoginGateway() {
           <label htmlFor="login-password">{ar ? "كلمة المرور" : "Password"}</label>
           <div className="login-field"><LockKeyhole size={19} aria-hidden="true"/><input id="login-password" name="password" type={visible ? "text" : "password"} autoComplete="current-password" required maxLength={256} placeholder="••••••••" disabled={busy}/><button type="button" onClick={() => setVisible(value => !value)} aria-label={visible ? (ar ? "إخفاء كلمة المرور" : "Hide password") : (ar ? "إظهار كلمة المرور" : "Show password")} aria-pressed={visible}>{visible ? <EyeOff size={18}/> : <Eye size={18}/>}</button></div>
           <p className="login-help">{ar ? "تحتاج مساعدة؟ " : "Need help? "}<Link href={`/${locale}/start`}>{ar ? "تواصل مع الفريق" : "Contact the team"}</Link></p>
-          <button className="login-submit" type="submit" disabled={busy}>{busy ? <LoaderCircle size={18} className="animate-spin"/> : <>{ar ? "تسجيل الدخول" : "Login"}<ArrowRight size={19} className="rtl:rotate-180" aria-hidden="true"/></>}</button>
+          <button className="login-submit" type="submit" disabled={busy} aria-busy={busy} aria-label={ar ? "تسجيل الدخول" : "Login"}>{busy ? <LoaderCircle size={18} className="animate-spin"/> : <>{ar ? "تسجيل الدخول" : "Login"}<ArrowRight size={19} className="rtl:rotate-180" aria-hidden="true"/></>}</button>
           {notice && <p role="alert" className="login-notice">{notice}</p>}
         </form>
         <div className="login-divider"><span>{ar ? "أو ابدأ دون حساب" : "or start without an account"}</span></div>
@@ -57,5 +57,5 @@ export function LoginGateway() {
       </section>
       <p className="login-footnote"><ShieldCheck size={17} aria-hidden="true"/>{ar ? "حافظ على سرية بيانات حسابك." : "Keep your account details private."}<Link href={`/${locale}/privacy`}>{ar ? "الخصوصية" : "Privacy"}</Link></p>
     </main>
-  </CyberEffects>;
+  </div>;
 }
