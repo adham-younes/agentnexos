@@ -10,7 +10,7 @@ function workspace(locale: Locale) {
 }
 export const revision = { ar: { ...content.ar, agentnexos: workspace('ar') }, en: { ...content.en, agentnexos: workspace('en') } };
 export const revisionRoutes = ['', ...masterRoutes.filter(x => !['privacy', 'terms'].includes(x)), 'privacy', 'terms', 'agentnexos'];
-export function revisionMetadata(page: RevisionPage | 'engagements', locale: Locale): Metadata {
+export function revisionMetadata(page: RevisionPage | 'engagements' | 'login', locale: Locale): Metadata {
     const approved = masterPage(locale, page), legacy = content[locale][page as RevisionPage];
     const heading = page === 'home' ? masterValue(masterHome(locale).groups[0].fields, 'العنوان', 'Title') : approved?.title || legacy?.title;
     const title = approved?.seoTitle || heading || 'AGYNEXA', description = approved?.seoDescription || approved?.intro || legacy?.seoDescription;
