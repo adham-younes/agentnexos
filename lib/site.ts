@@ -1,5 +1,13 @@
-/** Set NEXT_PUBLIC_SITE_URL to https://agynexa.si after domain/DNS verification.
- * Keep the working production origin until the intended domain is connected. */
-export const siteOrigin = process.env.NEXT_PUBLIC_SITE_URL || "https://compute-the-platform-to-build-six-fawn.vercel.app";
-export const plannedOrigin = "https://agynexa.si";
-export const brandName = "AGYNEXA";
+/** Public identity is stable across production, aliases and previews. */
+export const publicIdentity = {
+  brandName: 'AGYNEXA',
+  canonicalOrigin: 'https://agynexa.si',
+  contactEmail: 'adham@agynexa.si',
+  supportedLocales: ['ar', 'en'],
+} as const;
+export const siteOrigin = publicIdentity.canonicalOrigin;
+export const plannedOrigin = siteOrigin;
+export const brandName = publicIdentity.brandName;
+export const contactEmail = publicIdentity.contactEmail;
+export const isPreview = process.env.VERCEL_ENV === 'preview';
+export const contentUpdatedAt = '2026-10-16T00:00:00.000Z';

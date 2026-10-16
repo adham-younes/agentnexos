@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteOrigin } from "@/lib/site";
+import { siteOrigin, isPreview, contactEmail } from "@/lib/site";
 import { notFound } from "next/navigation";
 import {
   Inter,
@@ -12,6 +12,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 import "../globals.css";
 import "../marketing-reference.css";
+import "../upgrade-20261016.css";
 import { LocaleProvider } from "@/lib/i18n/use-t";
 import {
   isLocale,
@@ -88,8 +89,9 @@ export async function generateMetadata({
       description,
       url: `${baseUrl}/${locale}`,
       siteName: "AGYNEXA",
-      locale: isAr ? "ar_AR" : "en_US",
+      locale: isAr ? "ar_EG" : "en_US",
       type: "website",
+      images: [{ url: `${baseUrl}/og`, width: 1200, height: 630, alt: isAr ? "AGYNEXA — أنظمة الوكلاء وأتمتة العمليات" : "AGYNEXA — AI agent systems and workflow automation" }],
     },
     twitter: {
       card: "summary_large_image",
@@ -97,7 +99,7 @@ export async function generateMetadata({
       description,
     },
     robots: {
-      index: true,
+      index: !isPreview,
       follow: true,
     },
     icons: {
@@ -128,7 +130,7 @@ export default async function LocaleLayout({
         className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} ${marketingDisplay.variable} font-sans antialiased`}
       >
         <a href="#main-content" className="skip-link">{locale === "ar" ? "انتقل إلى المحتوى" : "Skip to content"}</a>
-        <LocaleProvider locale={typed}>{children}</LocaleProvider>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: "AGYNEXA", url: siteOrigin, logo: `${siteOrigin}/icon.svg`, email: contactEmail }).replace(/</g, "\u003c") }}/><LocaleProvider locale={typed}>{children}</LocaleProvider>
         <Analytics />
       </body>
     </html>

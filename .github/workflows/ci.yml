@@ -1,70 +1,36 @@
-name: CI
-
+name: Production verification
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
+  workflow_dispatch:
+    inputs:
+      released_commit:
+        description: '40-character commit SHA already deployed to agynexa.si; run once per release'
+        required: true
+        type: string
+permissions:
+  contents: read
 jobs:
-  verify:
-    name: Verify Quality Gates
+  production:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.released_commit }}
+      - uses: pnpm/action-setup@v4
         with:
           version: 11.19.0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: "pnpm"
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Audit production dependencies
-        run: pnpm audit --prod
-
-      - name: Typecheck
-        run: pnpm run typecheck
-
-      - name: i18n Check
-        run: pnpm run i18n:check
-
-      - name: Agent workflow and API boundary tests
-        run: pnpm run test:agentnexos
-
-      - name: Lint
-        run: pnpm run lint
-
-      - name: Build
-        run: pnpm run build
-
-      - name: Install browser for release verification
-        run: pnpm exec playwright install --with-deps chromium
-
-      - name: Verify built pages and complete browser journeys
-        shell: bash
-        run: |
-          pnpm start --port 3000 > /tmp/agentnexos-server.log 2>&1 &
-          agentnexos_server_pid=$!
-          trap 'kill "$agentnexos_server_pid"' EXIT
-          for attempt in {1..30}; do
-            if curl --fail --silent http://localhost:3000/ar > /dev/null; then break; fi
-            sleep 1
-          done
-          pnpm verify:site http://localhost:3000
-
-      - name: Preserve browser verification report
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: One scoped production run
+        env:
+          RELEASED_COMMIT: ${{ inputs.released_commit }}
+        run: pnpm verify:production --commit "$RELEASED_COMMIT"
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: release-verification
-          path: output/release-verification/report.json
+          name: production-verification
+          path: output/upgrade-r01/
           if-no-files-found: ignore

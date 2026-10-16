@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { localeLabel, locales, type Locale } from "@/lib/i18n/config";
+import { locales, type Locale } from "@/lib/i18n/config";
 import { useLocale } from "@/lib/i18n/use-t";
 
 /** Swaps the locale segment of the current path, preserving everything else. */
@@ -16,7 +16,7 @@ export function LocaleSwitcher({ inverted = false, compact = false }: { inverted
   const pathname = usePathname() || "/";
 
   return (
-    <div className="flex items-center gap-1 font-mono text-xs">
+    <div className="upgrade-locale-switcher">
       {locales.filter(l => !compact || l !== locale).map((l) => {
         const active = l === locale;
         return (
@@ -25,6 +25,7 @@ export function LocaleSwitcher({ inverted = false, compact = false }: { inverted
             href={swapLocale(pathname, l)}
             onClick={event => { event.currentTarget.search = window.location.search; event.currentTarget.hash = window.location.hash; }}
             onAuxClick={event => { event.currentTarget.search = window.location.search; event.currentTarget.hash = window.location.hash; }}
+            lang={l} aria-label={l === "ar" ? "العربية" : "English"}
             aria-current={active ? "true" : undefined}
             className={
               active
@@ -36,7 +37,7 @@ export function LocaleSwitcher({ inverted = false, compact = false }: { inverted
                   : "text-muted-foreground hover:text-foreground transition-colors"
             }
           >
-            {localeLabel[l]}
+            {l === "ar" ? "ع" : "EN"}
           </a>
         );
       })}

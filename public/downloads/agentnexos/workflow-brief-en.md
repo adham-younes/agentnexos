@@ -1,32 +1,18 @@
-# First workflow brief
+# Workflow brief
+Use fictional data when sharing this file through a public channel.
 
-## Goal and ownership
-Process name: 
-Process owner and output reviewer: 
-Trigger: 
-Required output and where it will be used: 
-
-## Current process
-Current steps and systems: 
-Case volume, source and measurement period: 
-Current review time, if measured: 
-Recurring errors and exceptions: 
-
-## Knowledge and data
-Approved sources, owners and versions: 
-Access permissions and data sharing limits: 
-Required inputs: 
-Response to missing or conflicting inputs: 
-
-## Actions
-Permitted reads: 
-Permitted drafts: 
-Permitted changes and authority: 
-Required approval and authorized reviewer: 
-Evidence of effect and duplicate prevention: 
-
-## First trial
-Trial boundaries and fictional cases: 
-Observable acceptance criteria: 
-Stop and escalation conditions: 
-This is a local worksheet. Review it before sharing.
+Goal:
+Trigger:
+Process owner:
+Systems used:
+Required inputs:
+Permitted sources:
+Current steps:
+Proposed steps:
+Actions requiring approval:
+Expected outputs:
+Exceptions and failure cases:
+Data and permission boundaries:
+Open questions:
+Acceptance criteria:
+Out of scope:

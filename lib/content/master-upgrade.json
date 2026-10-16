@@ -1,0 +1,1364 @@
+{
+  "ar": {
+    "home": {
+      "groups": [
+        {
+          "name": "الهيرو",
+          "fields": [
+            {
+              "heading": "العنوان",
+              "body": "وكلاء ذكاء اصطناعي لعمليات يعتمد عليها عملك."
+            },
+            {
+              "heading": "الفقرة",
+              "body": "نصمم أنظمة تربط معرفة المؤسسة بأدواتها وخطوات العمل فيها. نبدأ بعملية محددة، ونوضح ما ينفذه الوكيل، وما يحتاج اعتماد فريقك، وكيف تُراجع النتيجة قبل توسيع الاستخدام."
+            },
+            {
+              "heading": "الزر الرئيسي",
+              "body": "ناقش مشروعك"
+            },
+            {
+              "heading": "الزر الثانوي",
+              "body": "جرّب مساعد تصميم العمليات"
+            },
+            {
+              "heading": "النص المساند",
+              "body": "التجربة العامة تساعدك على تصميم العملية ببيانات افتراضية. ربط أنظمتك وتنفيذ الإجراءات يُحدَّدان ضمن مشروع مستقل."
+            }
+          ]
+        },
+        {
+          "name": "مثال العمل",
+          "fields": [
+            {
+              "heading": "العنوان",
+              "body": "من الطلب إلى إجراء يمكن مراجعته."
+            },
+            {
+              "heading": "الفقرة",
+              "body": "في مثال مشتريات توضيحي، يبدأ المسار بطلب داخلي. تُراجع البيانات المطلوبة والسياسة ذات الصلة، ثم يُعد اقتراح للخطوة التالية. يراجع المسؤول الإجراء قبل أي التزام، وتُسجّل نتيجة التنفيذ عند ربط النظام فعليًا."
+            },
+            {
+              "heading": "عناوين الخطوات",
+              "body": "طلب وارد | مراجعة البيانات | اقتراح الإجراء | اعتماد المسؤول | التحقق من النتيجة"
+            },
+            {
+              "heading": "وسم المثال",
+              "body": "مثال توضيحي ببيانات افتراضية؛ لا ينشئ طلب شراء فعليًا."
+            }
+          ]
+        },
+        {
+          "name": "القدرات",
+          "fields": [
+            {
+              "heading": "العنوان",
+              "body": "صمّم النظام حول ما يحتاجه العمل."
+            },
+            {
+              "heading": "المعرفة والسياق",
+              "body": "حدّد المصادر التي يحق للوكيل استخدامها، وطريقة إظهار المرجع، وما يحدث عندما تكون المعلومة ناقصة أو قديمة."
+            },
+            {
+              "heading": "الإجراءات والصلاحيات",
+              "body": "اربط كل أداة بدور ونطاق استخدام. الإجراءات الحساسة تحتاج قرارًا واضحًا، لا تفسيرًا فضفاضًا لرسالة في المحادثة."
+            },
+            {
+              "heading": "متابعة التنفيذ",
+              "body": "اجعل الخطوات والنتائج وحالات الفشل ظاهرة لفريقك، حتى يعرف ما اكتمل وما يحتاج تدخلًا."
+            },
+            {
+              "heading": "رابط القسم",
+              "body": "استكشف تصميم المنصة"
+            }
+          ]
+        },
+        {
+          "name": "أمثلة الحلول",
+          "fields": [
+            {
+              "heading": "العنوان",
+              "body": "ابدأ بعملية تتكرر داخل فريقك."
+            },
+            {
+              "heading": "المعرفة الداخلية",
+              "body": "مساعدة الموظف على الوصول إلى إجابة مرتبطة بمصدر مسموح، مع توضيح ما لم يجد له النظام دليلًا."
+            },
+            {
+              "heading": "المشتريات",
+              "body": "مراجعة اكتمال الطلب، وتجهيز مقارنة قابلة للفحص، وتحديد الاعتماد المطلوب قبل إنشاء أي التزام."
+            },
+            {
+              "heading": "متابعة المستحقات",
+              "body": "تنظيم متابعة الفواتير والحالات المتنازع عليها، وإعداد خطوات يراجعها المسؤول قبل التواصل الخارجي."
+            },
+            {
+              "heading": "رابط القسم",
+              "body": "شاهد نطاقات الحلول"
+            },
+            {
+              "heading": "ملاحظة",
+              "body": "هذه أمثلة لنطاقات يمكن تصميمها، وليست نتائج منشورة لعملاء."
+            }
+          ]
+        },
+        {
+          "name": "طريقة البداية",
+          "fields": [
+            {
+              "heading": "العنوان",
+              "body": "اختبر النطاق قبل توسيع التنفيذ."
+            },
+            {
+              "heading": "الفقرة",
+              "body": "نحدد العملية والأنظمة والأدوار، ثم نبني تجربة محدودة بمعايير قبول مكتوبة. نتائج الاختبار تحدد ما يصلح للتشغيل، وما يحتاج تعديلًا، وما ينبغي أن يبقى بيد الفريق."
+            },
+            {
+              "heading": "الرابط",
+              "body": "تعرّف على منهجية العمل"
+            },
+            {
+              "heading": "العنوان الختامي",
+              "body": "ما العملية التي تريد تحسينها؟"
+            },
+            {
+              "heading": "الفقرة",
+              "body": "اشرح لنا أين يبدأ الطلب، وأي أنظمة يمر بها، وأين يتوقف العمل اليوم. سنستخدم هذه التفاصيل لتحديد نطاق المناقشة."
+            },
+            {
+              "heading": "الزر",
+              "body": "ناقش مشروعك"
+            },
+            {
+              "heading": "التواصل المباشر",
+              "body": "adham@agynexa.si"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "هل التجربة العامة متصلة بأنظمة شركتي؟",
+          "answer": "لا. التجربة مخصصة لتصميم سير العمل باستخدام بيانات افتراضية. أي اتصال بأنظمة شركتك يحتاج نطاقًا وصلاحيات وإعدادًا منفصلًا."
+        },
+        {
+          "question": "هل يمكن البدء بعملية واحدة؟",
+          "answer": "نعم. تحديد عملية واحدة يساعد على اختبار البيانات والقرارات ومعايير النجاح قبل إضافة عمليات أخرى."
+        },
+        {
+          "question": "هل يمكنني إدخال ملفات أو بيانات عملاء في التجربة؟",
+          "answer": "استخدم بيانات افتراضية فقط. يمكن مناقشة التعامل مع بيانات حقيقية ضمن بيئة مخصصة وشروط معالجة متفق عليها."
+        },
+        {
+          "question": "كيف تُحدَّد تكلفة المشروع؟",
+          "answer": "بحسب نطاق العملية والتكاملات ومتطلبات التشغيل والدعم. تكاليف مزودي النماذج والاستضافة تُوضح ضمن العرض."
+        }
+      ],
+      "seoTitle": "AGYNEXA: أنظمة الوكلاء وأتمتة العمليات",
+      "seoDescription": "هندسة أنظمة وكلاء تربط المعرفة بالأدوات وخطوات العمل، مع نطاق واضح ومراجعة بشرية ومعايير قبول لكل مشروع."
+    },
+    "platform": {
+      "title": "بنية تربط المعرفة والقرار والتنفيذ.",
+      "intro": "نظام الوكلاء يحتاج أكثر من واجهة محادثة. نحدد كيف تصل المعلومة، ومن يملك صلاحية استخدامها، وأي إجراء يمكن تنفيذه، وكيف يعرف الفريق أن النتيجة صحيحة.",
+      "sections": [
+        {
+          "heading": "المعرفة المصرح بها",
+          "body": "تبدأ الإجابة من المصادر التي حددتها المؤسسة. تصميم الاسترجاع يشمل صلاحيات الوثائق وحداثتها وإظهار المرجع، مع معالجة الحالات التي لا تتوفر فيها إجابة موثوقة."
+        },
+        {
+          "heading": "الأدوات ضمن نطاق معلوم",
+          "body": "لكل تكامل وظائف محددة ومدخلات يمكن التحقق منها. تُفصل صلاحية قراءة البيانات عن تعديلها، وتُحدد الموافقة المطلوبة قبل الإجراء."
+        },
+        {
+          "heading": "سير عمل له حالة واضحة",
+          "body": "يحتاج الفريق إلى معرفة الفرق بين خطوة جارية، وطلب ينتظر اعتمادًا، ونتيجة اكتملت، وأثر لم يُتحقق منه. يُصمم سجل التنفيذ حول هذه الحالات."
+        },
+        {
+          "heading": "اختبار قبل التوسع",
+          "body": "نستخدم حالات اختبار تشمل الطلب الطبيعي ونقص البيانات وتعطل الأداة وتعارض الصلاحيات. التقييم يحدد ما يمكن تشغيله وما يحتاج مراجعة.\n\nما الذي تتيحه النسخة العامة؟\nتساعدك التجربة على إعداد تصور لعملية وموجز أولي. القدرات المتصلة بالأنظمة والبيانات الخاصة تُحدد وتُختبر في نطاق مشروعك."
+        },
+        {
+          "heading": "الزر",
+          "body": "حدّد نطاق مشروعك"
+        }
+      ],
+      "seoTitle": "تصميم أنظمة الوكلاء · AGYNEXA",
+      "seoDescription": "تعرّف على تصميم المعرفة المصرح بها والأدوات والموافقات وتتبع النتائج ضمن نظام وكلاء قابل للمراجعة."
+    },
+    "services": {
+      "title": "هندسة أنظمة الوكلاء من تحديد النطاق إلى التشغيل.",
+      "intro": "نعمل على العملية كاملة: احتياج الفريق، البيانات المتاحة، التكاملات، قرارات الاعتماد، وتجربة الاستخدام. لكل مرحلة تسليمات ومعيار يوضح متى يمكن الانتقال إلى التالية.",
+      "sections": [
+        {
+          "heading": "تحديد العملية والمتطلبات",
+          "body": "نرسم المسار الحالي، ونعرف أين تتكرر الخطوات أو تتعطل، ونحدد نطاقًا مناسبًا للاختبار. التسليم يشمل المتطلبات والافتراضات ومعايير القبول."
+        },
+        {
+          "heading": "بناء التجربة والتكاملات",
+          "body": "نطور سير العمل والواجهات اللازمة، ونربط الأدوات المحددة ضمن الصلاحيات المتفق عليها. تبدأ التجربة ببيئة اختبار ونطاق محدود."
+        },
+        {
+          "heading": "تقييم السلوك والاعتمادية",
+          "body": "نراجع جودة النتائج، وحالات الفشل، والتكلفة، واستجابة النظام للبيانات الناقصة أو الطلبات غير المسموح بها."
+        },
+        {
+          "heading": "التسليم والتحسين",
+          "body": "يشمل التسليم توثيق التشغيل والحدود المعروفة وطريقة المتابعة. يمكن الاتفاق على صيانة وتحسينات دورية بحسب احتياج المشروع."
+        },
+        {
+          "heading": "الزر الرئيسي",
+          "body": "ناقش نطاق العمل"
+        },
+        {
+          "heading": "الرابط الثانوي",
+          "body": "قارن باقات العمل"
+        }
+      ],
+      "seoTitle": "خدمات هندسة الوكلاء · AGYNEXA",
+      "seoDescription": "خدمات تحديد النطاق وبناء التجارب والتكاملات وتقييم السلوك والتسليم التشغيلي لأنظمة الوكلاء."
+    },
+    "solutions": {
+      "title": "اختر العملية قبل اختيار الوكيل.",
+      "intro": "أفضل نقطة بداية هي عملية لها مدخلات معروفة ومسؤول واضح ونتيجة يمكن اختبارها. هذه النطاقات توضح كيف يمكن بناء تجربة مناسبة لعملك.",
+      "sections": [
+        {
+          "heading": "المعرفة الداخلية",
+          "body": "إجابات مرتبطة بمصادر مسموحة، مع إظهار المراجع وحدود الإجابة."
+        },
+        {
+          "heading": "المشتريات",
+          "body": "مراجعة الطلبات وتجهيز المقارنة ومسار الاعتماد."
+        },
+        {
+          "heading": "متابعة المستحقات",
+          "body": "ترتيب المتابعة وإظهار الاستثناءات وإعداد إجراء قابل للمراجعة."
+        },
+        {
+          "heading": "عمليات العملاء",
+          "body": "ربط الطلب بسياقه وتوجيهه إلى الخطوة أو الفريق المناسب."
+        },
+        {
+          "heading": "الفقرة الختامية",
+          "body": "تُحدد المصادر والتكاملات والصلاحيات لكل مشروع. الأمثلة المنشورة توضح منهج التصميم ولا تعني وجود اتصال جاهز بأنظمتك."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش حالة استخدام"
+        }
+      ],
+      "seoTitle": "حلول سير العمل · AGYNEXA",
+      "seoDescription": "استكشف نطاقات عمل للمعرفة الداخلية والمشتريات ومتابعة المستحقات وعمليات العملاء."
+    },
+    "solutions/knowledge": {
+      "title": "إجابات يمكن الرجوع إلى مصدرها.",
+      "intro": "عندما تتوزع السياسات والإجراءات على ملفات وأنظمة مختلفة، يحتاج الموظف إلى إجابة يعرف مصدرها وحدود استخدامها.",
+      "sections": [
+        {
+          "heading": "نطاق البداية",
+          "body": "نختار مجموعة وثائق مصرحًا بها وحالات أسئلة متكررة. نحدد صلاحيات الوصول، وطريقة تحديث الوثائق، وما يحدث عند غياب الدليل أو تعارضه."
+        },
+        {
+          "heading": "سير العمل",
+          "body": "يستقبل النظام السؤال، ويبحث داخل المصادر المسموحة، ثم يقدم إجابة مرتبطة بمرجع. إذا لم يكفِ الدليل، يوضح النقص بدل تقديم معلومة غير مسندة."
+        },
+        {
+          "heading": "ما نختبره",
+          "body": "صحة المرجع، وملاءمة الإجابة للسؤال، واحترام صلاحيات الوثيقة، والتعامل مع النسخ القديمة والأسئلة التي لا تملك إجابة."
+        },
+        {
+          "heading": "نقطة المراجعة",
+          "body": "القرارات التي تحتاج تفسيرًا مهنيًا أو اعتمادًا رسميًا تبقى لدى المسؤول المختص."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش مصادر المعرفة لديك"
+        }
+      ],
+      "seoTitle": "معرفة داخلية مرتبطة بالمصادر · AGYNEXA",
+      "seoDescription": "تصميم إجابات مرتبطة بمصادر مسموحة، مع مراجعة صلاحيات الوثائق وحداثتها وحدود الدليل."
+    },
+    "solutions/procurement": {
+      "title": "طلبات شراء أوضح قبل الاعتماد.",
+      "intro": "يبدأ العمل بمعلومات مكتملة ومسار مسؤوليات مفهوم. يمكن تصميم نظام يراجع الطلب ويجهز البيانات للمقارنة، بينما يبقى قرار الالتزام لدى صاحب الصلاحية.",
+      "sections": [
+        {
+          "heading": "المدخلات",
+          "body": "طلب داخلي، وسياسة شراء معتمدة، وعروض أو بيانات موردين يسمح المشروع باستخدامها."
+        },
+        {
+          "heading": "المخرجات",
+          "body": "قائمة بالنواقص، ومقارنة قابلة للفحص، وتوصية بالخطوة التالية مع سببها ومصدرها."
+        },
+        {
+          "heading": "حد التنفيذ",
+          "body": "إنشاء أمر شراء أو إرساله إلى نظام خارجي يحتاج تكاملًا مصرحًا به واعتمادًا مطابقًا لسياسة المؤسسة. المثال العام لا ينفذ ذلك."
+        },
+        {
+          "heading": "معيار التجربة",
+          "body": "يكتشف المسار النواقص، ويعرض المقارنة دون اختلاق أسعار أو شروط، ويمنع الالتزام قبل الاعتماد."
+        },
+        {
+          "heading": "الزر",
+          "body": "صمّم مسار مشتريات"
+        }
+      ],
+      "seoTitle": "تصميم سير عمل المشتريات · AGYNEXA",
+      "seoDescription": "حدد مدخلات طلب الشراء والمقارنة ونقطة الاعتماد قبل إنشاء أي التزام أو ربط إنتاجي."
+    },
+    "solutions/receivables": {
+      "title": "متابعة المستحقات بسياق واضح لكل حالة.",
+      "intro": "تتطلب المتابعة معرفة حالة الفاتورة، وما سبق من تواصل، وما إذا كان هناك اعتراض أو اتفاق قائم. يمكن تصميم مسار يجمع هذا السياق ويجهز خطوة متابعة يراجعها المسؤول.",
+      "sections": [
+        {
+          "heading": "نطاق العمل",
+          "body": "قراءة بيانات مصرح بها، وتصنيف الحالات وفق قواعد محددة، وإظهار النواقص والتعارضات، وإعداد مسودة تواصل عند الحاجة."
+        },
+        {
+          "heading": "مراجعة الإنسان",
+          "body": "تغيير الشروط أو الإقرار بتسوية أو إرسال مطالبة لا يتم اعتمادًا على اقتراح النموذج وحده. تحدد المؤسسة صاحب الصلاحية لكل إجراء."
+        },
+        {
+          "heading": "معيار التجربة",
+          "body": "عدم الخلط بين مدين وآخر، وعدم تجاهل نزاع قائم أو سداد مسجل، وإبقاء الرسائل في حالة مسودة حتى الاعتماد."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش مسار المتابعة"
+        }
+      ],
+      "seoTitle": "تصميم متابعة المستحقات · AGYNEXA",
+      "seoDescription": "صمّم متابعة للفواتير تراعي حالة السداد والنزاعات والمراجعة قبل التواصل الخارجي."
+    },
+    "solutions/customer-operations": {
+      "title": "اربط طلب العميل بالخطوة المناسبة.",
+      "intro": "بعض الطلبات تحتاج إجابة، وبعضها يحتاج معلومات إضافية أو إجراءً أو تدخل فريق آخر. نبدأ بتحديد هذه الفروق قبل تصميم الردود.",
+      "sections": [
+        {
+          "heading": "سير العمل",
+          "body": "يُصنف الطلب، ويُسترجع السياق المسموح، ثم تُجهز إجابة أو مسودة إجراء أو إحالة واضحة. تظهر الحالات التي لا يملك النظام صلاحية حسمها."
+        },
+        {
+          "heading": "اللغة والسياق",
+          "body": "تُراجع صياغة العربية والإنجليزية على حالات فعلية مصرح بها، مع الحفاظ على أرقام الطلبات والأسماء والمواعيد كما وردت."
+        },
+        {
+          "heading": "حدود الإجراء",
+          "body": "الاسترداد المالي، وتعديل بيانات الحساب، وتغيير الالتزامات تحتاج سياسة وصلاحية واضحة. لا تُنفذ من مجرد رغبة العميل المكتوبة في المحادثة."
+        },
+        {
+          "heading": "الزر",
+          "body": "حدّد أنواع طلبات العملاء"
+        }
+      ],
+      "seoTitle": "تصميم عمليات العملاء · AGYNEXA",
+      "seoDescription": "اربط طلب العميل بسياقه والخطوة المناسبة، مع حدود واضحة للإجابات والإجراءات والإحالة."
+    },
+    "industries": {
+      "title": "متطلبات القطاع تبدأ من طريقة عمله.",
+      "intro": "تختلف البيانات والمسؤوليات وحدود القرار من مؤسسة لأخرى. نستخدم أمثلة القطاعات لطرح الأسئلة المناسبة، ثم نحدد نطاق المشروع وفق الواقع.",
+      "sections": [
+        {
+          "heading": "التجارة والتوزيع",
+          "body": "طلبات شراء، وحالة توريد، وفواتير تحتاج متابعة. يبدأ التصميم بتحديد الأنظمة التي تحمل السجل الصحيح ومن يملك اعتماد التغييرات."
+        },
+        {
+          "heading": "الخدمات المهنية",
+          "body": "معرفة داخلية، ومستندات مشروع، وطلبات متكررة من العملاء. الأولوية لصلاحيات الوثائق وربط الإجابات بمصادرها."
+        },
+        {
+          "heading": "الزراعة والأعمال المرتبطة بها",
+          "body": "سجلات تشغيل ومعلومات تحتاج تنظيمًا لدعم التخطيط والمتابعة. أي ربط بحساسات أو أجهزة ميدانية يحتاج نطاقًا تقنيًا مستقلًا؛ الموقع لا يدّعي وجود هذا الربط."
+        },
+        {
+          "heading": "ملاحظة",
+          "body": "المجالات أعلاه أمثلة لنطاقات تطوير محتملة، وليست قائمة عملاء أو عمليات نشر قطاعية."
+        },
+        {
+          "heading": "الزر",
+          "body": "اشرح سياق مؤسستك"
+        }
+      ],
+      "seoTitle": "نطاقات العمل حسب القطاع · AGYNEXA",
+      "seoDescription": "أمثلة لنطاقات تطوير في التجارة والخدمات والزراعة، تُراجع وفق بيانات المؤسسة ومسؤولياتها."
+    },
+    "methodology": {
+      "title": "كل مرحلة تنتهي بنتيجة يمكن مراجعتها.",
+      "intro": "يبدأ المشروع من العملية التي يريد الفريق تحسينها. نثبت المدخلات والمسؤوليات ومعيار النجاح قبل توسيع قدرات النظام.",
+      "sections": [
+        {
+          "heading": "1. تحديد النطاق",
+          "body": ""
+        },
+        {
+          "heading": "نوثق الخطوات الحالية والأنظمة ومواطن التعطل. الناتج",
+          "body": "نطاق تجربة وافتراضات وأسئلة تحتاج حسمًا."
+        },
+        {
+          "heading": "2. تصميم المسار",
+          "body": ""
+        },
+        {
+          "heading": "نحدد المصادر والأدوات والصلاحيات ونقاط المراجعة. الناتج",
+          "body": "مخطط واضح وعقود مدخلات ومخرجات."
+        },
+        {
+          "heading": "3. بناء تجربة محدودة",
+          "body": ""
+        },
+        {
+          "heading": "ننفذ المسار في بيئة مناسبة ببيانات مصرح بها. الناتج",
+          "body": "نسخة يمكن اختبارها، مع توضيح ما لا تدعمه."
+        },
+        {
+          "heading": "4. التقييم",
+          "body": ""
+        },
+        {
+          "heading": "نختبر الحالات الطبيعية والاستثناءات والفشل. الناتج",
+          "body": "أدلة قبول، ومشكلات مفتوحة، وقرار الانتقال أو التعديل."
+        },
+        {
+          "heading": "5. التشغيل والتسليم",
+          "body": ""
+        },
+        {
+          "heading": "نضبط المراقبة وإجراءات التعافي ونوثق الإدارة والاستخدام. الناتج",
+          "body": "تسليم يستطيع الفريق تشغيله ومراجعته ضمن الحدود المتفق عليها."
+        },
+        {
+          "heading": "الزر",
+          "body": "ابدأ بتحديد النطاق"
+        }
+      ],
+      "seoTitle": "منهجية التصميم والتنفيذ · AGYNEXA",
+      "seoDescription": "تعرّف على مراحل تحديد النطاق والتصميم والتجربة والتقييم والتشغيل، وتسليمات كل مرحلة."
+    },
+    "security": {
+      "title": "الصلاحيات والبيانات جزء من تصميم المشروع.",
+      "intro": "قبل ربط نظام ببيانات مؤسسة، يجب تحديد من يستخدمه، وما يمكنه قراءته أو تغييره، وما الذي يُسجَّل، وكيف يتوقف عند الفشل.",
+      "sections": [
+        {
+          "heading": "ما نراجعه في كل مشروع",
+          "body": "مصادر البيانات وصلاحياتها، ومزودي المعالجة، وحدود الأدوات، ونقاط الاعتماد، والاحتفاظ بالسجلات، وطريقة التحقيق في نتيجة غير متوقعة."
+        },
+        {
+          "heading": "قبل تشغيل إجراء حساس",
+          "body": "نحدد صاحب الصلاحية ونطاق القرار، ونعرض أثر الإجراء للمراجعة. تعتمد تفاصيل التنفيذ على النظام المتصل ومتطلبات المؤسسة."
+        },
+        {
+          "heading": "حدود التجربة العامة",
+          "body": "استخدم بيانات افتراضية فقط. التجربة المنشورة ليست قناة لإرسال ملفات سرية أو بيانات عملاء، ولا تعني أن ضوابط مشروعك الخاص قد أُعدّت بالفعل."
+        },
+        {
+          "heading": "مناقشة المتطلبات",
+          "body": "يمكنك إرسال وصف عام لاحتياجات الأمان إلى adham@agynexa.si. لا ترسل مفاتيح وصول أو كلمات مرور أو بيانات حساسة بالبريد."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش متطلبات الأمان"
+        },
+        {
+          "heading": "الرابط",
+          "body": "اقرأ إشعار الخصوصية"
+        }
+      ],
+      "seoTitle": "الأمان وحدود البيانات · AGYNEXA",
+      "seoDescription": "تعرّف على متطلبات مراجعة الصلاحيات والأدوات والبيانات، وحدود التجربة العامة."
+    },
+    "resources": {
+      "title": "ابدأ بموجز يمكن البناء عليه.",
+      "intro": "استخدم القوالب لتوضيح العملية والمدخلات والأنظمة وحدود القرار قبل بدء التنفيذ.",
+      "sections": [
+        {
+          "heading": "موجز سير العمل",
+          "body": "قالب لتحديد الهدف وبداية الطلب والبيانات والخطوات ونقطة اعتماد الإنسان. استخدم أسماء وبيانات افتراضية عند مشاركته عبر القنوات العامة."
+        },
+        {
+          "heading": "زر",
+          "body": "نزّل قالب موجز سير العمل"
+        },
+        {
+          "heading": "خطة القبول",
+          "body": "قالب لتسجيل سيناريو الاختبار والنتيجة المتوقعة ودليل النجاح والحالات التي تمنع التشغيل."
+        },
+        {
+          "heading": "زر",
+          "body": "نزّل قالب خطة القبول"
+        },
+        {
+          "heading": "مساعد التصميم",
+          "body": "إذا لم يكن لديك مخطط أولي، تساعدك التجربة العامة على تنظيم وصف العملية وإظهار الأسئلة الناقصة."
+        },
+        {
+          "heading": "زر",
+          "body": "افتح مساعد تصميم العمليات"
+        }
+      ],
+      "seoTitle": "قوالب سير العمل والقبول · AGYNEXA",
+      "seoDescription": "قوالب تساعد على توثيق سير العمل ومعايير القبول قبل بدء مشروع أنظمة وكلاء."
+    },
+    "about": {
+      "title": "هندسة تبدأ بفهم العمل.",
+      "intro": "أسس أدهم يونس AGYNEXA للتركيز على بناء أنظمة وكلاء وأتمتة عمليات يمكن تحديد مسؤولياتها ومراجعة نتائجها. يبدأ العمل بفهم العملية، ثم اختيار الأدوات والبيانات المناسبة لها.",
+      "sections": [
+        {
+          "heading": "عنوان المؤسس",
+          "body": "أدهم يونس"
+        },
+        {
+          "heading": "الصفة",
+          "body": "المؤسس ومهندس أنظمة الوكلاء"
+        },
+        {
+          "heading": "النبذة",
+          "body": "أنا أدهم يونس، مطور برمجيات ومهندس أنظمة وكلاء من مصر. بدأت بمشروعات مستقلة في الزراعة الذكية، مستفيدًا من خبرتي العملية بالزراعة لفهم احتياجات التخطيط والمتابعة. مع تطور عملي، اتجهت إلى بناء تطبيقات وأدوات تربط الذكاء الاصطناعي بالبيانات وواجهات الأنظمة وسير العمل.\n\nأركز اليوم على تطوير تطبيقات الويب، وتكامل واجهات البرمجة، واسترجاع المعرفة، وتصميم مسارات للوكيل توضّح متى يقترح ومتى ينفذ ومتى يرجع إلى الإنسان. أعمل على تحويل احتياج التشغيل إلى متطلبات وواجهات واختبارات قبول، وأراجع سلوك التطبيق وحدوده أثناء التطوير.\n\nضمن مشروعاتي المستقلة، استكشفت Adham AgriTech لدعم التخطيط الزراعي، وعملت على Agentnexos لتطوير تجربة أنظمة الوكلاء. تختلف درجة اكتمال كل مشروع، وتُعرض قدراته وفق ما تم تنفيذه والتحقق منه."
+        },
+        {
+          "heading": "كيف أعمل",
+          "body": "أفضّل نطاقًا واضحًا يمكن اختباره، وتواصلًا مباشرًا حول القرارات والمشكلات، وتسليمًا موثقًا يعرف معه صاحب المشروع ما يعمل وما يحتاج متابعة."
+        },
+        {
+          "heading": "التواصل",
+          "body": "adham@agynexa.si"
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش مشروعك مع أدهم"
+        }
+      ],
+      "seoTitle": "أدهم يونس ومشروع AGYNEXA",
+      "seoDescription": "تعرّف على أدهم يونس، مؤسس AGYNEXA، وخلفيته في المشروعات المستقلة وتطوير أنظمة الوكلاء."
+    },
+    "agentnexos": {
+      "title": "صمّم سير العمل قبل بناء الوكيل.",
+      "intro": "صف عملية متكررة باستخدام بيانات افتراضية. تساعدك التجربة على ترتيب المدخلات والخطوات والأدوار ونقاط الاعتماد، ثم إعداد موجز تناقشه قبل التنفيذ.",
+      "sections": [
+        {
+          "heading": "تنبيه ملاصق لحقل الإدخال",
+          "body": "استخدم بيانات افتراضية فقط. قد تُرسل رسالتك إلى مزوّد النموذج لتوليد الرد. لا تُدخل أسرارًا أو بيانات عملاء."
+        },
+        {
+          "heading": "حقل الرسالة",
+          "body": "ما العملية التي تريد تصميمها؟"
+        },
+        {
+          "heading": "المثال الإرشادي",
+          "body": "لدينا طلبات شراء داخلية تمر على مسؤول القسم ثم المشتريات. نريد تحديد البيانات الناقصة ونقطة الاعتماد قبل إنشاء الطلب."
+        },
+        {
+          "heading": "الأمثلة الجاهزة",
+          "body": "- صمّم مراجعة طلب شراء ببيانات افتراضية.\n- نظّم البحث في دليل إجراءات داخلي تجريبي.\n- اقترح مسار متابعة فواتير دون إرسال رسائل."
+        },
+        {
+          "heading": "زر البداية",
+          "body": "أنشئ مخططًا أوليًا"
+        },
+        {
+          "heading": "عنوان النتيجة",
+          "body": "مخطط العملية المقترح"
+        },
+        {
+          "heading": "وصف النتيجة",
+          "body": "راجع الافتراضات والأسئلة المفتوحة قبل استخدام هذا المخطط في مشروع فعلي."
+        },
+        {
+          "heading": "الإجراءات",
+          "body": "عدّل الموجز | نزّل الموجز | ناقش التنفيذ"
+        },
+        {
+          "heading": "ملاحظة الحدود",
+          "body": "هذه التجربة لا تربط أنظمة شركتك ولا تنفذ إجراءات عليها."
+        }
+      ],
+      "seoTitle": "مساعد تصميم العمليات · AGYNEXA",
+      "seoDescription": "صِف عملية ببيانات افتراضية وأعد مخططًا أوليًا للخطوات والأدوار ونقاط الاعتماد."
+    },
+    "start": {
+      "title": "حدثنا عن العملية التي تريد تحسينها.",
+      "intro": "نحتاج وصفًا عامًا للعملية والأنظمة التي تستخدمها. لا ترسل ملفات سرية أو بيانات عملاء أو مفاتيح وصول في هذه الخطوة.",
+      "sections": [
+        {
+          "heading": "الحقول",
+          "body": "الاسم  \nبريد العمل  \nاسم الشركة، اختياري  \nما العملية التي تريد تحسينها؟  \nالأنظمة المستخدمة، اختياري"
+        },
+        {
+          "heading": "نص المساعدة",
+          "body": "اذكر أين يبدأ الطلب، وما الخطوات التي يمر بها، وأين يحتاج الفريق إلى متابعة يدوية."
+        },
+        {
+          "heading": "للمسار المحلي الحالي",
+          "body": "جهّز موجزك هنا، ثم نزّله أو افتح مسودة بريد لمراجعته وإرساله بنفسك. لا ترسل هذه الصفحة الموجز تلقائيًا."
+        },
+        {
+          "heading": "الأزرار",
+          "body": "راجع الموجز  \nنزّل الموجز  \nافتح مسودة بريد  \nامسح الموجز"
+        },
+        {
+          "heading": "التواصل المباشر",
+          "body": "يمكنك الكتابة مباشرة إلى adham@agynexa.si."
+        }
+      ],
+      "seoTitle": "ناقش مشروعك · AGYNEXA",
+      "seoDescription": "اشرح العملية والأنظمة التي تستخدمها لبدء مناقشة نطاق مشروع مع AGYNEXA."
+    },
+    "login": {
+      "title": "الدخول إلى مساحة العملاء.",
+      "intro": "هذه المساحة مخصصة للمستخدمين المدعوين إلى مشروع. إذا كنت تستكشف AGYNEXA، يمكنك استخدام مساعد تصميم العمليات دون حساب.",
+      "sections": [
+        {
+          "heading": "الحقول",
+          "body": "البريد الإلكتروني | كلمة المرور"
+        },
+        {
+          "heading": "الزر",
+          "body": "تسجيل الدخول"
+        },
+        {
+          "heading": "الرابط الثانوي",
+          "body": "افتح مساعد تصميم العمليات"
+        },
+        {
+          "heading": "المساعدة",
+          "body": "للاستفسار عن الوصول، راسل adham@agynexa.si."
+        }
+      ],
+      "seoTitle": "مساحة العملاء · AGYNEXA",
+      "seoDescription": "الدخول المخصص للمستخدمين المدعوين إلى مساحة المشروع."
+    },
+    "engagements": {
+      "title": "اختر نطاق العمل المناسب لمرحلتك.",
+      "intro": "يمكن البدء بتحديد العملية، أو بتجربة محدودة إذا كان النطاق واضحًا. يوضح كل عرض ما سنبنيه، وكيف سيُختبر، وما يحتاجه التشغيل بعد التسليم.",
+      "sections": [
+        {
+          "heading": "تحديد النطاق",
+          "body": "للفرق التي تعرف موضع التعطل وتحتاج تحويله إلى متطلبات قابلة للتنفيذ. يشمل تحليل عملية واحدة، وخريطة البيانات والأدوار، ومعايير تجربة أولية."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش مرحلة تحديد النطاق"
+        },
+        {
+          "heading": "تجربة محددة",
+          "body": "لاختبار حالة استخدام واحدة قبل التوسع. تشمل مسارًا محدودًا في بيئة اختبار، وحالات قبول، وتقريرًا يوضح النتائج والقيود."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش تجربة محددة"
+        },
+        {
+          "heading": "تنفيذ تشغيلي",
+          "body": "لتحويل النطاق الذي تم التحقق منه إلى نظام يعمل ضمن بيئة وصلاحيات متفق عليها. يشمل التكاملات المطلوبة والتوثيق والمراقبة وإجراءات التسليم وفق العرض."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش متطلبات التنفيذ"
+        },
+        {
+          "heading": "تشغيل وتحسين",
+          "body": "لمتابعة نظام منشور ومراجعة جودته وتكلفته وإجراء تحسينات محددة. تُتفق حصة العمل ومواعيد المتابعة وحدود الدعم مسبقًا."
+        },
+        {
+          "heading": "الزر",
+          "body": "ناقش احتياجات المتابعة"
+        },
+        {
+          "heading": "السعر",
+          "body": "يُحدَّد السعر بعد مراجعة النطاق. تُوضح تكاليف النماذج والاستضافة والخدمات الخارجية في العرض، ولا تُعامل على أنها استخدام غير محدود."
+        },
+        {
+          "heading": "الفقرة الختامية",
+          "body": "يمكن إضافة تكاملات أو مصادر معرفة أو متطلبات وصول خاصة ضمن نطاق منفصل. لا تحتاج شراء جميع المراحل مسبقًا لبدء المناقشة."
+        }
+      ],
+      "seoTitle": "باقات العمل · AGYNEXA",
+      "seoDescription": "قارن تحديد النطاق والتجربة المحددة والتنفيذ التشغيلي والمتابعة، مع تسعير حسب نطاق المشروع."
+    },
+    "privacy": {
+      "seoTitle": "إشعار الخصوصية · AGYNEXA",
+      "seoDescription": "معلومات استخدام البيانات والتواصل وحدود معالجة البيانات في تجربة AGYNEXA العامة."
+    },
+    "terms": {
+      "seoTitle": "شروط التجربة العامة · AGYNEXA",
+      "seoDescription": "الغرض من التجربة العامة وحدود المخرجات والاستخدام وشروط مناقشة المشروعات المدفوعة."
+    }
+  },
+  "en": {
+    "home": {
+      "groups": [
+        {
+          "name": "Hero",
+          "fields": [
+            {
+              "heading": "Title",
+              "body": "AI agents for the work your business runs on."
+            },
+            {
+              "heading": "Body",
+              "body": "We design systems that connect your organization’s knowledge, tools, and workflows. Each project starts with a defined process: what the agent can do, where your team approves an action, and how the result will be checked before use expands."
+            },
+            {
+              "heading": "Primary",
+              "body": "Discuss your project"
+            },
+            {
+              "heading": "Secondary",
+              "body": "Try the workflow design assistant"
+            },
+            {
+              "heading": "Supporting text",
+              "body": "The public assistant helps you design a workflow using fictional data. System connections and live actions are scoped as a separate project."
+            }
+          ]
+        },
+        {
+          "name": "Workflow example",
+          "fields": [
+            {
+              "heading": "Title",
+              "body": "From a request to an action your team can review."
+            },
+            {
+              "heading": "Body",
+              "body": "In this illustrative procurement workflow, an internal request is checked against the required information and relevant policy. The system prepares a proposed next step. A responsible person reviews it before any commitment, and the execution result is recorded when a live system is connected."
+            },
+            {
+              "heading": "Steps",
+              "body": "Incoming request | Information check | Proposed action | Human approval | Result verification"
+            },
+            {
+              "heading": "Label",
+              "body": "Illustrative workflow using fictional data. No purchase order is created."
+            }
+          ]
+        },
+        {
+          "name": "Capabilities",
+          "fields": [
+            {
+              "heading": "Title",
+              "body": "Build around what the work requires."
+            },
+            {
+              "heading": "Knowledge and context",
+              "body": "Define which sources the agent may use, how references are shown, and what happens when information is missing or out of date."
+            },
+            {
+              "heading": "Actions and permissions",
+              "body": "Give each tool a defined role and scope. Sensitive actions need a clear decision, not an assumption drawn from a conversation."
+            },
+            {
+              "heading": "Execution visibility",
+              "body": "Make steps, outcomes, and failures visible so your team knows what completed and what needs attention."
+            },
+            {
+              "heading": "Link",
+              "body": "Explore the platform design"
+            }
+          ]
+        },
+        {
+          "name": "Solution examples",
+          "fields": [
+            {
+              "heading": "Title",
+              "body": "Start with a process your team repeats."
+            },
+            {
+              "heading": "Internal knowledge",
+              "body": "Help employees find answers tied to an authorized source, with gaps in the evidence made clear."
+            },
+            {
+              "heading": "Procurement",
+              "body": "Check request completeness, prepare a reviewable comparison, and identify the approval needed before a commitment is made."
+            },
+            {
+              "heading": "Receivables follow-up",
+              "body": "Organize invoice follow-up and disputed cases, with proposed steps reviewed before external contact."
+            },
+            {
+              "heading": "Link",
+              "body": "Explore solution scopes"
+            },
+            {
+              "heading": "Note",
+              "body": "These are examples of possible project scopes, not published client results."
+            }
+          ]
+        },
+        {
+          "name": "Getting started",
+          "fields": [
+            {
+              "heading": "Title",
+              "body": "Test the scope before expanding the system."
+            },
+            {
+              "heading": "Body",
+              "body": "We map the process, systems, and responsibilities, then build a limited pilot with written acceptance criteria. The results show what is ready for operation, what needs work, and what should stay with your team."
+            },
+            {
+              "heading": "Link",
+              "body": "See the delivery method"
+            },
+            {
+              "heading": "Closing title",
+              "body": "Which process do you want to improve?"
+            },
+            {
+              "heading": "Body",
+              "body": "Tell us where a request starts, which systems it passes through, and where work gets stuck today. Those details give the project discussion a useful starting point."
+            },
+            {
+              "heading": "Button",
+              "body": "Discuss your project"
+            },
+            {
+              "heading": "Direct contact",
+              "body": "adham@agynexa.si"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the public assistant connected to my company’s systems?",
+          "answer": "No. It is for designing workflows with fictional data. Connections to your systems require a separate scope, permissions, and setup."
+        },
+        {
+          "question": "Can we start with one process?",
+          "answer": "Yes. A single process lets us test the data, decisions, and acceptance criteria before adding more workflows."
+        },
+        {
+          "question": "Can I enter client files or business data in the public assistant?",
+          "answer": "Use fictional data only. Real business data can be discussed for a dedicated environment with agreed processing terms."
+        },
+        {
+          "question": "How is a project priced?",
+          "answer": "Pricing depends on the workflow scope, integrations, operating requirements, and support. Model-provider and hosting costs are identified in the proposal."
+        }
+      ],
+      "seoTitle": "AGYNEXA: AI agent systems and workflow automation",
+      "seoDescription": "AI agent systems that connect knowledge, tools, and workflows, with defined scope, human review, and project acceptance criteria."
+    },
+    "platform": {
+      "title": "A structure for knowledge, decisions, and execution.",
+      "intro": "An agent system needs more than a conversation interface. We define how information enters the workflow, who may use it, which actions are permitted, and how your team checks the result.",
+      "sections": [
+        {
+          "heading": "Authorized knowledge",
+          "body": "Answers start with sources selected by the organization. Retrieval design covers document permissions, freshness, references, and cases where a reliable answer is unavailable."
+        },
+        {
+          "heading": "Tools with a defined scope",
+          "body": "Each integration has specific functions and validated inputs. Read access is separated from write access, with approval requirements set before an action is taken."
+        },
+        {
+          "heading": "Visible workflow states",
+          "body": "Your team needs to distinguish work in progress, an action awaiting approval, a completed result, and an outcome that still needs verification. Execution records are designed around those states."
+        },
+        {
+          "heading": "Testing before expansion",
+          "body": "Test cases include routine requests, missing information, tool failures, and permission conflicts. Evaluation establishes what can run and what needs review.\n\nWhat is available publicly?\nThe assistant helps you prepare a workflow concept and an initial brief. Connections to private systems and data are scoped and tested for your project."
+        },
+        {
+          "heading": "Button",
+          "body": "Define your project scope"
+        }
+      ],
+      "seoTitle": "Agent system design · AGYNEXA",
+      "seoDescription": "Explore the design of authorized knowledge, tools, approvals, and reviewable execution outcomes."
+    },
+    "services": {
+      "title": "Engineering AI workflows around your operations.",
+      "intro": "We work through the process as a whole: the team’s needs, available data, integrations, approval decisions, and user experience. Each stage has deliverables and a clear condition for moving forward.",
+      "sections": [
+        {
+          "heading": "Process and requirements",
+          "body": "We map the current workflow, identify repeated steps and bottlenecks, and define a scope that can be tested. Deliverables include requirements, assumptions, and acceptance criteria."
+        },
+        {
+          "heading": "Pilot and integrations",
+          "body": "We build the workflow and the interfaces it needs, connecting selected tools within agreed permissions. Work starts in a test environment with a limited scope."
+        },
+        {
+          "heading": "Behavior and reliability evaluation",
+          "body": "We assess output quality, failure handling, cost, and the system’s response to incomplete information or unauthorized requests."
+        },
+        {
+          "heading": "Handover and improvement",
+          "body": "Delivery includes operating documentation, known limits, and a way to monitor the system. Maintenance and further improvements can be agreed around the project’s needs."
+        },
+        {
+          "heading": "Primary",
+          "body": "Discuss the scope"
+        },
+        {
+          "heading": "Secondary",
+          "body": "Compare engagement options"
+        }
+      ],
+      "seoTitle": "AI workflow engineering services · AGYNEXA",
+      "seoDescription": "Scoping, pilots, integrations, behavior evaluation, and operational handover for agent systems."
+    },
+    "solutions": {
+      "title": "Choose the workflow before choosing the agent.",
+      "intro": "A useful starting point has known inputs, a responsible owner, and an outcome that can be tested. These scopes show how a pilot could fit your operations.",
+      "sections": [
+        {
+          "heading": "Internal knowledge",
+          "body": "Answers tied to permitted sources, with references and clear limits."
+        },
+        {
+          "heading": "Procurement",
+          "body": "Request checks, reviewable comparisons, and an approval path."
+        },
+        {
+          "heading": "Receivables follow-up",
+          "body": "Prioritized follow-up, visible exceptions, and proposed actions for review."
+        },
+        {
+          "heading": "Customer operations",
+          "body": "Requests connected to their context and routed to the appropriate next step or team."
+        },
+        {
+          "heading": "Closing",
+          "body": "Sources, integrations, and permissions are defined for each project. These examples explain the design approach; they do not imply an existing connection to your systems."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss a use case"
+        }
+      ],
+      "seoTitle": "Workflow solutions · AGYNEXA",
+      "seoDescription": "Explore workflow scopes for internal knowledge, procurement, receivables follow-up, and customer operations."
+    },
+    "solutions/knowledge": {
+      "title": "Answers your team can trace to a source.",
+      "intro": "When policies and procedures are spread across files and systems, employees need answers with a clear source and limits on how they should be used.",
+      "sections": [
+        {
+          "heading": "Starting scope",
+          "body": "We select an authorized document set and recurring questions. The scope covers access permissions, document updates, and cases where evidence is missing or conflicting."
+        },
+        {
+          "heading": "Workflow",
+          "body": "The system receives a question, searches permitted sources, and prepares an answer with references. If the evidence is insufficient, it states the gap rather than filling it with an unsupported claim."
+        },
+        {
+          "heading": "What we test",
+          "body": "Reference accuracy, relevance to the question, document permissions, outdated versions, and questions with no supported answer."
+        },
+        {
+          "heading": "Review point",
+          "body": "Decisions requiring professional interpretation or formal approval stay with the responsible person."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss your knowledge sources"
+        }
+      ],
+      "seoTitle": "Source-linked internal knowledge · AGYNEXA",
+      "seoDescription": "Design answers tied to permitted sources, with document permissions, freshness, and evidence limits."
+    },
+    "solutions/procurement": {
+      "title": "Clearer purchase requests before approval.",
+      "intro": "The work starts with complete information and clear responsibilities. A system can check a request and prepare a comparison while the authorized person retains the decision to commit.",
+      "sections": [
+        {
+          "heading": "Inputs",
+          "body": "An internal request, an approved purchasing policy, and supplier information the project is permitted to use."
+        },
+        {
+          "heading": "Outputs",
+          "body": "Missing-information checks, a reviewable comparison, and a proposed next step with its reason and source."
+        },
+        {
+          "heading": "Execution boundary",
+          "body": "Creating or sending a purchase order requires an authorized integration and approval under the organization’s policy. The public example does not perform this action."
+        },
+        {
+          "heading": "Pilot criterion",
+          "body": "The workflow identifies missing information, compares offers without inventing prices or terms, and prevents a commitment before approval."
+        },
+        {
+          "heading": "Button",
+          "body": "Design a procurement workflow"
+        }
+      ],
+      "seoTitle": "Procurement workflow design · AGYNEXA",
+      "seoDescription": "Define purchase-request inputs, comparisons, and approval points before a commitment or live integration."
+    },
+    "solutions/receivables": {
+      "title": "Receivables follow-up with context for each case.",
+      "intro": "Follow-up depends on the invoice status, previous communication, and any dispute or existing agreement. A workflow can bring that context together and prepare a next step for review.",
+      "sections": [
+        {
+          "heading": "Scope",
+          "body": "Read authorized records, classify cases using defined rules, surface missing or conflicting information, and prepare a communication draft when needed."
+        },
+        {
+          "heading": "Human review",
+          "body": "Changes to terms, settlement commitments, and outgoing demands cannot rely on a model’s suggestion alone. The organization assigns authority for each action."
+        },
+        {
+          "heading": "Pilot criterion",
+          "body": "The workflow keeps accounts separate, recognizes recorded payments and active disputes, and leaves messages in draft until approved."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss your follow-up process"
+        }
+      ],
+      "seoTitle": "Receivables follow-up workflows · AGYNEXA",
+      "seoDescription": "Design invoice follow-up that accounts for payments, disputes, and review before external contact."
+    },
+    "solutions/customer-operations": {
+      "title": "Connect a customer request to the right next step.",
+      "intro": "Some requests need an answer. Others need more information, an action, or another team. We define those differences before designing responses.",
+      "sections": [
+        {
+          "heading": "Workflow",
+          "body": "Classify the request, retrieve permitted context, and prepare a response, proposed action, or clear handoff. Cases outside the system’s authority remain visible."
+        },
+        {
+          "heading": "Language and context",
+          "body": "Arabic and English responses are reviewed against authorized examples, preserving order numbers, names, and dates from the source."
+        },
+        {
+          "heading": "Action boundaries",
+          "body": "Refunds, account changes, and changes to commitments require explicit policies and permissions. A request in a conversation is not enough to authorize them."
+        },
+        {
+          "heading": "Button",
+          "body": "Define your customer request types"
+        }
+      ],
+      "seoTitle": "Customer operations workflows · AGYNEXA",
+      "seoDescription": "Connect customer requests to context and the right next step, with clear response, action, and handoff boundaries."
+    },
+    "industries": {
+      "title": "Sector requirements start with how the work is done.",
+      "intro": "Data, responsibilities, and decision boundaries differ across organizations. Sector examples help frame the right questions; the project scope follows the actual operation.",
+      "sections": [
+        {
+          "heading": "Trade and distribution",
+          "body": "Purchase requests, supply status, and invoice follow-up. Design starts by identifying the system of record and who may approve changes."
+        },
+        {
+          "heading": "Professional services",
+          "body": "Internal knowledge, project documents, and recurring client requests. Document permissions and source-linked answers come first."
+        },
+        {
+          "heading": "Agriculture and related businesses",
+          "body": "Operational records and information that support planning and follow-up. Sensor or field-device connections require a separate technical scope; this site does not claim those connections are active."
+        },
+        {
+          "heading": "Note",
+          "body": "These are examples of potential development scopes, not a list of clients or sector deployments."
+        },
+        {
+          "heading": "Button",
+          "body": "Describe your operating context"
+        }
+      ],
+      "seoTitle": "Industry workflow scopes · AGYNEXA",
+      "seoDescription": "Example development scopes in trade, services, and agriculture, shaped by organizational data and responsibilities."
+    },
+    "methodology": {
+      "title": "Every stage ends with something you can review.",
+      "intro": "A project starts with the process the team wants to improve. Inputs, responsibilities, and acceptance criteria are established before the system’s scope expands.",
+      "sections": [
+        {
+          "heading": "1. Define the scope",
+          "body": ""
+        },
+        {
+          "heading": "Document the current steps, systems, and bottlenecks. Output",
+          "body": "a pilot scope, assumptions, and unresolved questions."
+        },
+        {
+          "heading": "2. Design the workflow",
+          "body": ""
+        },
+        {
+          "heading": "Specify sources, tools, permissions, and review points. Output",
+          "body": "a clear workflow and input/output contracts."
+        },
+        {
+          "heading": "3. Build a limited pilot",
+          "body": "Implement the workflow in a suitable environment with authorized data. Output: a testable version with explicit limits."
+        },
+        {
+          "heading": "4. Evaluate",
+          "body": ""
+        },
+        {
+          "heading": "Test routine cases, exceptions, and failures. Output",
+          "body": "acceptance evidence, open issues, and a decision to proceed or revise."
+        },
+        {
+          "heading": "5. Operate and hand over",
+          "body": ""
+        },
+        {
+          "heading": "Set up monitoring, recovery procedures, and documentation. Output",
+          "body": "a system the team can operate and review within the agreed scope."
+        },
+        {
+          "heading": "Button",
+          "body": "Start with the scope"
+        }
+      ],
+      "seoTitle": "Design and delivery method · AGYNEXA",
+      "seoDescription": "See the stages of scoping, design, piloting, evaluation, and operation, with deliverables for each stage."
+    },
+    "security": {
+      "title": "Permissions and data are part of the project design.",
+      "intro": "Before connecting a system to business data, define who uses it, what it may read or change, what is recorded, and how it stops when something fails.",
+      "sections": [
+        {
+          "heading": "What we review",
+          "body": "Data sources and permissions, processing providers, tool boundaries, approval points, record retention, and investigation of unexpected outcomes."
+        },
+        {
+          "heading": "Before a sensitive action",
+          "body": "We identify the authorized decision-maker, define the scope, and present the proposed effect for review. Implementation depends on the connected system and the organization’s requirements."
+        },
+        {
+          "heading": "Public demo limits",
+          "body": "Use fictional data only. The public assistant is not a channel for confidential files or client data, and it does not imply that controls for your private project have been configured."
+        },
+        {
+          "heading": "Discuss your requirements",
+          "body": "Send a general description of your security needs to adham@agynexa.si. Do not email access keys, passwords, or sensitive data."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss security requirements"
+        },
+        {
+          "heading": "Link",
+          "body": "Read the privacy notice"
+        }
+      ],
+      "seoTitle": "Security and data boundaries · AGYNEXA",
+      "seoDescription": "Review permission, tool, and data-design requirements and the limits of the public demo."
+    },
+    "resources": {
+      "title": "Start with a brief you can build on.",
+      "intro": "Use these templates to define the workflow, inputs, systems, and decision boundaries before implementation.",
+      "sections": [
+        {
+          "heading": "Workflow brief",
+          "body": "A template for the goal, trigger, data, steps, and human approval point. Use fictional names and data when sharing through public channels."
+        },
+        {
+          "heading": "Button",
+          "body": "Download the workflow brief"
+        },
+        {
+          "heading": "Acceptance plan",
+          "body": "A template for test scenarios, expected outcomes, evidence of success, and conditions that prevent release."
+        },
+        {
+          "heading": "Button",
+          "body": "Download the acceptance plan"
+        },
+        {
+          "heading": "Design assistant",
+          "body": "If you do not yet have a workflow outline, the public assistant can help organize the process and identify missing questions."
+        },
+        {
+          "heading": "Button",
+          "body": "Open the workflow design assistant"
+        }
+      ],
+      "seoTitle": "Workflow and acceptance templates · AGYNEXA",
+      "seoDescription": "Templates for documenting a workflow and acceptance criteria before an agent systems project."
+    },
+    "about": {
+      "title": "Engineering starts with understanding the work.",
+      "intro": "Adham Younes founded AGYNEXA to focus on agent systems and workflow automation with defined responsibilities and reviewable outcomes. The work starts with the process, followed by the tools and data it needs.",
+      "sections": [
+        {
+          "heading": "Founder heading",
+          "body": "Adham Younes"
+        },
+        {
+          "heading": "Role",
+          "body": "Founder & Agentic Systems Engineer"
+        },
+        {
+          "heading": "Bio",
+          "body": "I’m Adham Younes, a software developer and agent systems engineer based in Egypt. I started with independent smart agriculture projects, drawing on practical farming experience to understand planning and day-to-day operational needs. My work developed toward applications that connect AI with data, APIs, and business workflows.\n\nToday, I focus on web applications, API integrations, knowledge retrieval, and agent workflows that make clear when the system proposes an action, when it may execute, and when a person must decide. I translate operating needs into requirements, interfaces, and acceptance tests, and review application behavior and limits throughout development.\n\nMy independent projects include Adham AgriTech, which explores agricultural planning tools, and Agentnexos, which explores agent systems. Their stages of development differ, and each project’s capabilities should be understood through what has been implemented and verified."
+        },
+        {
+          "heading": "How I work",
+          "body": "I favor a clear, testable scope, direct communication about decisions and problems, and documented handover that shows what works and what still needs attention."
+        },
+        {
+          "heading": "Contact",
+          "body": "adham@agynexa.si"
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss your project with Adham"
+        }
+      ],
+      "seoTitle": "Adham Younes and AGYNEXA",
+      "seoDescription": "Meet Adham Younes, founder of AGYNEXA, and learn about his independent projects and agent systems work."
+    },
+    "agentnexos": {
+      "title": "Design the workflow before building the agent.",
+      "intro": "Describe a recurring process using fictional data. The assistant helps organize inputs, steps, responsibilities, and approval points, then prepares a brief you can review before implementation.",
+      "sections": [
+        {
+          "heading": "Notice beside the input",
+          "body": "Use fictional data only. Your message may be sent to the model provider to generate a response. Do not enter secrets or client data."
+        },
+        {
+          "heading": "Input label",
+          "body": "Which workflow do you want to design?"
+        },
+        {
+          "heading": "Example",
+          "body": "Internal purchase requests go through a department manager and then procurement. We want to identify missing information and the approval point before creating an order."
+        },
+        {
+          "heading": "Example prompts",
+          "body": "- Design a purchase-request review using fictional data.\n- Organize search across a sample internal procedures guide.\n- Outline invoice follow-up without sending messages."
+        },
+        {
+          "heading": "Start button",
+          "body": "Create an initial workflow"
+        },
+        {
+          "heading": "Result heading",
+          "body": "Proposed workflow"
+        },
+        {
+          "heading": "Result description",
+          "body": "Review the assumptions and open questions before using this outline for a live project."
+        },
+        {
+          "heading": "Actions",
+          "body": "Edit the brief | Download the brief | Discuss implementation"
+        },
+        {
+          "heading": "Boundary notice",
+          "body": "This assistant does not connect to or take actions in your company’s systems."
+        }
+      ],
+      "seoTitle": "Workflow design assistant · AGYNEXA",
+      "seoDescription": "Describe a process with fictional data and prepare an initial outline of steps, roles, and approval points."
+    },
+    "start": {
+      "title": "Tell us which process you want to improve.",
+      "intro": "Share a general description of the workflow and the systems you use. Do not include confidential files, client data, or access keys at this stage.",
+      "sections": [
+        {
+          "heading": "Fields",
+          "body": "Name  \nWork email  \nCompany, optional  \nWhich process do you want to improve?  \nSystems used, optional"
+        },
+        {
+          "heading": "Helper",
+          "body": "Describe where the request starts, the steps it passes through, and where the team needs manual follow-up."
+        },
+        {
+          "heading": "For the current local flow",
+          "body": "Prepare your brief here, then download it or open an email draft to review and send yourself. This page does not submit the brief automatically."
+        },
+        {
+          "heading": "Buttons",
+          "body": "Review brief  \nDownload brief  \nOpen email draft  \nClear brief"
+        },
+        {
+          "heading": "Direct contact",
+          "body": "You can email adham@agynexa.si directly."
+        }
+      ],
+      "seoTitle": "Discuss your project · AGYNEXA",
+      "seoDescription": "Describe your process and systems to start a project-scope discussion with AGYNEXA."
+    },
+    "login": {
+      "title": "Sign in to the client workspace.",
+      "intro": "This space is for users invited to a project. If you are exploring AGYNEXA, you can use the workflow design assistant without an account.",
+      "sections": [
+        {
+          "heading": "Fields",
+          "body": "Email | Password"
+        },
+        {
+          "heading": "Button",
+          "body": "Sign in"
+        },
+        {
+          "heading": "Secondary",
+          "body": "Open the workflow design assistant"
+        },
+        {
+          "heading": "Help",
+          "body": "For access questions, email adham@agynexa.si."
+        }
+      ],
+      "seoTitle": "Client workspace · AGYNEXA",
+      "seoDescription": "Access for users invited to a project workspace."
+    },
+    "engagements": {
+      "title": "Choose the engagement that fits your stage.",
+      "intro": "Start by defining the process, or with a limited pilot if the scope is clear. Each proposal explains what will be built, how it will be tested, and what operation requires after handover.",
+      "sections": [
+        {
+          "heading": "Discovery",
+          "body": "For teams that know where work gets stuck and need to turn that problem into implementable requirements. Covers one process, its data and responsibilities, and initial acceptance criteria."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss discovery"
+        },
+        {
+          "heading": "Scoped pilot",
+          "body": "Test one use case before expanding. Includes a limited workflow in a test environment, acceptance cases, and a report on results and constraints."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss a pilot"
+        },
+        {
+          "heading": "Production delivery",
+          "body": "Turn a validated scope into a system operating within agreed environments and permissions. Includes the specified integrations, documentation, monitoring, and handover procedures."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss delivery requirements"
+        },
+        {
+          "heading": "Ongoing improvement",
+          "body": "Review the quality and cost of a deployed system and make defined improvements. Work allocation, review frequency, and support boundaries are agreed in advance."
+        },
+        {
+          "heading": "Button",
+          "body": "Discuss ongoing support"
+        },
+        {
+          "heading": "Pricing",
+          "body": "Quoted after scope review. Model, hosting, and external service costs are identified in the proposal; they are not presented as unlimited usage."
+        },
+        {
+          "heading": "Closing",
+          "body": "Additional integrations, knowledge sources, or access requirements can be scoped separately. You do not need to commit to every stage to begin a discussion."
+        }
+      ],
+      "seoTitle": "Engagement options · AGYNEXA",
+      "seoDescription": "Compare discovery, scoped pilots, production delivery, and ongoing support, with pricing based on project scope."
+    },
+    "privacy": {
+      "seoTitle": "Privacy notice · AGYNEXA",
+      "seoDescription": "Information about data use, contact, and processing boundaries in the AGYNEXA public demo."
+    },
+    "terms": {
+      "seoTitle": "Public demo terms · AGYNEXA",
+      "seoDescription": "The purpose of the public demo, output and use limits, and the basis for discussing paid projects."
+    }
+  }
+}

@@ -34,7 +34,7 @@ export function quoteBriefValue(value: string) {
 /** Open a user-reviewed draft; long briefs are attached manually, never truncated. */
 export function projectEmailDraft(markdown: string, locale: "ar" | "en") {
   const subject = locale === "ar" ? "مناقشة مشروع AGYNEXA" : "AGYNEXA project discussion";
-  const prefix = `mailto:adham@adham-agritech.com?subject=${encodeURIComponent(subject)}&body=`;
+  const prefix = `mailto:adham@agynexa.si?subject=${encodeURIComponent(subject)}&body=`;
   const full = prefix + encodeURIComponent(markdown);
   if (full.length <= 1800) return { href: full, requiresAttachment: false };
   const attachmentNote = locale === "ar"
