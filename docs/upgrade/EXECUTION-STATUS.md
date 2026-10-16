@@ -61,3 +61,7 @@
 - التشغيل: أزيل تشغيل CI التلقائي المتكرر على PR/main امتثالًا لتوجيه المالك؛ التحقق الوحيد للحزمة يكون على الإنتاج ويُحفظ تقريره. لا تعد إشارة workflow يدوي مجردة دليل نجاح اختبار.
 - التراجع: إعادة نشر dpl_CjmYmWZyh7Kny7tAUBRRveCaBvA6 أو revert دفعة R01؛ لا migrations أو آثار بريد/شراء ضمن الحزمة.
 - الخطوة التالية: PR → دمج main → بناء Vercel الإنتاجي → جولة تحقق واحدة على agynexa.si → سجل إصدار بنتائج وحدود صريحة.
+
+### R01 build correction
+
+The first production build dpl_J1uTVe75eQZoohB9E1aQLNB7dpAW failed before release: missing JSX expression delimiter in the sign-out handler. The handler was extracted into a readable named function; changed TypeScript source was formatted for review. No test run occurred and no new version was promoted by that failed build. One corrected deployment attempt follows.
