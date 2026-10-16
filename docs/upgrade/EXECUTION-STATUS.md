@@ -65,3 +65,5 @@
 ### R01 build correction
 
 The first production build dpl_J1uTVe75eQZoohB9E1aQLNB7dpAW failed before release: missing JSX expression delimiter in the sign-out handler. The handler was extracted into a readable named function; changed TypeScript source was formatted for review. No test run occurred and no new version was promoted by that failed build. One corrected deployment attempt follows.
+
+A separate build-time type issue was then identified in dpl_5qfuf48FuA7k6NJ2WQHX9kiimjUG: the new login metadata caller was missing from the metadata helper's route union. Added that explicit route; no repeated unchanged build or test run. Production verification remains unstarted.
