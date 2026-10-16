@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { siteOrigin } from "@/lib/site";
 import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
 
 /**
@@ -8,6 +9,9 @@ import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
 export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
+  if(process.env.VERCEL_ENV === 'production' && request.nextUrl.hostname === 'compute-the-platform-to-build-six-fawn.vercel.app') {
+    return NextResponse.redirect(new URL(pathname + search, siteOrigin), 308);
+  }
   const first = pathname.split("/")[1];
   if (isLocale(first)) return NextResponse.next();
 
@@ -23,7 +27,7 @@ export const config = {
      * Skip: API routes, Next internals, and any path with a file extension
      * (static assets, images, fonts, robots, sitemap...).
      */
-    "/((?!api|_next|.*\\..*).*)",
+    "/((?!api|og(?:/|$)|_next|.*\\..*).*)",
   ],
 };
 

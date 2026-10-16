@@ -7,12 +7,12 @@ import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useT, useLocale } from "@/lib/i18n/use-t";
 
 const navLinks = [
-  { key: "nav.capabilities", name: "Platform", href: "/platform" },
-  { key: "nav.solutions", name: "Solutions", href: "/solutions" },
-  { key: "nav.process", name: "Process", href: "#how-it-works" },
-  { key: "nav.infra", name: "Industries", href: "/industries" },
-  { key: "nav.security", name: "Security", href: "/security" },
-  { key: "nav.agentSpace", name: "Design assistant", href: "/agentnexos" },
+ { key: 'nav.capabilities', ar: 'المنصة', name: 'Platform', href: '/platform' },
+ { key: 'nav.solutions', ar: 'الحلول', name: 'Solutions', href: '/solutions' },
+ { key: 'nav.services', ar: 'الخدمات', name: 'Services', href: '/services' },
+ { key: 'nav.process', ar: 'المنهجية', name: 'Methodology', href: '/methodology' },
+ { key: 'nav.resources', ar: 'الموارد', name: 'Resources', href: '/resources' },
+ { key: 'nav.about', ar: 'من نحن', name: 'About', href: '/about' },
 ];
 
 export function Navigation() {
@@ -52,7 +52,7 @@ export function Navigation() {
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
       }
     };
-    const closeOnDesktop = () => { if (window.innerWidth >= 1024) setIsMobileMenuOpen(false); };
+    const closeOnDesktop = () => { if (window.innerWidth >= 1280) setIsMobileMenuOpen(false); };
     window.addEventListener("keydown", closeOnEscape);
     window.addEventListener("resize", closeOnDesktop);
     return () => {
@@ -75,7 +75,7 @@ export function Navigation() {
         className="nexus-nav-inner"
       >
         <div
-          className={`flex items-center justify-between transition-all duration-500 px-4 sm:px-6 lg:px-8 ${
+          className={`flex items-center justify-between transition-all duration-500 px-4 sm:px-6 xl:px-8 ${
             isScrolled ? "h-16" : "h-[72px]"
           }`}
         >
@@ -87,39 +87,39 @@ export function Navigation() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-7 xl:gap-10">
+          <div className="hidden xl:flex items-center gap-7 xl:gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.key}
                 href={resolveHref(link.href)}
                 className={`text-[13px] xl:text-sm font-medium transition-colors duration-300 relative group ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}
               >
-                {t(link.key, link.name)}
+                {(locale === "ar" ? link.ar : link.name)}
                 <span className="absolute -bottom-1.5 start-0 w-0 h-px bg-[#10b981] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
-            <a href={`/${locale}/login`} className="reference-login-link">{locale === "ar" ? "الدخول" : "Sign in"}</a>
+          <div className="hidden xl:flex items-center gap-3 xl:gap-4">
+            <a href={`/${locale}/login`} className="reference-login-link">{locale === "ar" ? "مساحة العملاء" : "Client workspace"}</a>
             <LocaleSwitcher inverted={isDark} />
             <Button asChild
               size="sm"
               className="nexus-nav-cta"
             >
-              <a href={`/${locale}/start`}>{t("nav.deployAgent", "Prepare a brief")}</a>
+              <a href={`/${locale}/start`}>{(locale === "ar" ? "ناقش مشروعك" : "Discuss your project")}</a>
             </Button>
           </div>
 
-          <div className="nexus-mobile-actions lg:hidden"><div inert={isMobileMenuOpen} aria-hidden={isMobileMenuOpen || undefined}><LocaleSwitcher inverted={isDark} compact /></div>
+          <div className="nexus-mobile-actions xl:hidden"><div inert={isMobileMenuOpen} aria-hidden={isMobileMenuOpen || undefined}><LocaleSwitcher inverted={isDark} compact /></div>
           {/* Mobile Menu Button */}
           <button
             id="mobile-menu-toggle"
             ref={toggleRef}
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden w-10 h-10 inline-flex items-center justify-center rounded-full border transition-colors duration-500 ${isDark ? "border-white/20 text-white hover:bg-white/10" : "border-foreground/15 text-foreground hover:bg-foreground/5"}`}
+            className={`xl:hidden w-10 h-10 inline-flex items-center justify-center rounded-full border transition-colors duration-500 ${isDark ? "border-white/20 text-white hover:bg-white/10" : "border-foreground/15 text-foreground hover:bg-foreground/5"}`}
             aria-label={t("nav.toggleMenu", "Toggle menu")}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
@@ -145,7 +145,7 @@ export function Navigation() {
         aria-owns={isMobileMenuOpen ? "mobile-menu-toggle" : undefined}
         inert={!isMobileMenuOpen}
         aria-hidden={!isMobileMenuOpen}
-        className={`lg:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${
+        className={`xl:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -167,7 +167,7 @@ export function Navigation() {
                 }`}
                 style={{ transitionDelay: isMobileMenuOpen ? `${i * 75}ms` : "0ms" }}
               >
-                {t(link.key, link.name)}
+                {(locale === "ar" ? link.ar : link.name)}
               </a>
             ))}
           </div>
@@ -193,7 +193,7 @@ export function Navigation() {
               <Button asChild
                 className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
               >
-                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{t("nav.deployAgent", "Prepare a brief")}</a>
+                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{(locale === "ar" ? "ناقش مشروعك" : "Discuss your project")}</a>
               </Button>
             </div>
           </div>

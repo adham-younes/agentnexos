@@ -4,14 +4,16 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { ArrowUp, ArrowUpRight, Check, Command, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow, Menu, X, LogIn } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Check, Command, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow, Menu, X } from "lucide-react";
 import { Conversation, ConversationContent, ConversationScrollButton, messagesToMarkdown } from "@/components/ai-elements/conversation";
 import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
+import {masterPage,masterValue} from "@/lib/content/master";
 import { revision } from "@/lib/content/revision";
 import { ContentSections } from "@/components/site/content-body";
+import { AccountStatus } from "@/components/auth/account-status";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetDescription, SheetClose } from "@/components/ui/sheet";
@@ -22,6 +24,9 @@ export function AgentWorkspace() {
   const locale = useLocale();
   const c = agentWorkspaceCopy[locale];
   const reviewed = revision[locale].agentnexos;
+  const approved = masterPage(locale,'agentnexos');
+  const promptLabel=masterValue(approved.sections,'تسمية الإدخال','حقل الإدخال','حقل الرسالة','نص الإدخال','Input label');
+  const approvedSuggestions=masterValue(approved.sections,'الأمثلة الجاهزة','Example prompts').split('\n').filter(Boolean).map(text=>text.replace(/^- /,''));
   const [input, setInput] = useState("");
   const [ready, setReady] = useState<boolean | null>(null);
   const [phase, setPhase] = useState(-1);
@@ -88,7 +93,7 @@ export function AgentWorkspace() {
         <section className="workspace-capability"><h2>{c.capability}</h2><ul>{c.tools.map(tool => <li key={tool}><Workflow size={13} aria-hidden="true"/>{tool}</li>)}</ul></section>
         <section className="workspace-boundary"><ShieldCheck size={16} aria-hidden="true"/><h2>{c.boundary}</h2><p>{c.boundaryText}</p></section>
       </div>
-      <div className="workspace-account"><Link href={`/${locale}/login`}><LogIn size={15} aria-hidden="true"/>{locale === "ar" ? "تسجيل الدخول" : "Sign in"}</Link><LocaleSwitcher/></div>
+      <div className="workspace-account"><AccountStatus locale={locale}/><LocaleSwitcher/></div>
     </>;
   }
   return (
@@ -113,8 +118,8 @@ export function AgentWorkspace() {
               {messages.length === 0 ? <div className="workspace-welcome">
                 <div className="workspace-emblem"><Layers3 className="size-7" /></div>
                 <h1 className="workspace-title">{reviewed.title}</h1>
-                <p className="workspace-intro">{c.title}</p><details className="workspace-scope"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><p className="workspace-scope-intro">{reviewed.intro}</p><ContentSections sections={reviewed.sections}/></details>
-                <div className="workspace-suggestions">{c.suggestions.map((item, i) => <button key={item.title} onClick={() => { setInput(item.prompt); composer.current?.focus(); }} className="workspace-suggestion"><div className="flex items-center justify-between gap-3"><span className="workspace-suggestion-number">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="workspace-suggestion-title">{item.title}</h2><p className="workspace-suggestion-detail">{item.detail}</p></button>)}</div>
+                <p className="workspace-intro">{reviewed.intro}</p><details className="workspace-scope"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><p className="workspace-scope-intro">{reviewed.intro}</p><ContentSections sections={reviewed.sections}/></details>
+                <div className="workspace-suggestions">{approvedSuggestions.map((title, i) => <button key={title} onClick={() => { setInput(title); composer.current?.focus(); }} className="workspace-suggestion"><div className="flex items-center justify-between gap-3"><span className="workspace-suggestion-number">0{i+1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100" /></div><h2 className="workspace-suggestion-title">{title}</h2></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
                 <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "AGYNEXA"}</div>
                 <MessageContent className="w-full text-sm leading-8 group-[.is-user]:bg-secondary group-[.is-user]:text-foreground">
@@ -132,11 +137,11 @@ export function AgentWorkspace() {
             <div className="workspace-composer-inner">
               <div className="workspace-readiness"><p role="status" className="text-xs leading-6 text-muted-foreground">{ready === null ? c.checking : ready ? c.ready : c.offline}{ready === true && dailyBudget !== null && <span className="block">{c.budgetLabel} {dailyBudget} {c.dailyUnit}</span>}</p>{ready === false && <button type="button" onClick={() => {setReady(null);setReadinessAttempt(value => value + 1);}} className="text-xs underline underline-offset-4">{c.checkConnection}</button>}</div>
               <form onSubmit={e => {e.preventDefault();submit();}} className="workspace-composer-form">
-                <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="workspace-textarea" />
+                <textarea ref={composer} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();submit();}}} maxLength={4000} rows={2} aria-label={promptLabel || c.placeholder} placeholder={promptLabel || c.placeholder} className="workspace-textarea" />
                 <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <Button type="button" variant="outline" size="icon" onClick={()=>{void stop();setNotice("cancelled");setPhase(-1);}} aria-label={c.stop} className="workspace-send"><Square className="size-4" /></Button> : <Button type="submit" variant="outline" size="icon" disabled={!input.trim() || ready !== true} aria-label={c.send} className="workspace-send"><ArrowUp className="size-5" /></Button>}</div>
               </form>
               <p className="workspace-context">{c.contextNotice}</p>
-              <p className="workspace-privacy">{c.privacy} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
+              <p className="workspace-privacy">{masterValue(approved.sections,'تنبيه ملاصق لحقل الإدخال','Notice beside the input')} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
             </div>
           </div>
         </main>
