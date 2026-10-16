@@ -1,9 +1,9 @@
 /** Public identity is stable across production, aliases and previews. */
 export const publicIdentity = {
-  brandName: 'AGYNEXA',
-  canonicalOrigin: 'https://agynexa.si',
-  contactEmail: 'adham@agynexa.si',
-  supportedLocales: ['ar', 'en'],
+    brandName: 'AGYNEXA',
+    canonicalOrigin: 'https://agynexa.si',
+    contactEmail: 'adham@agynexa.si',
+    supportedLocales: ['ar', 'en'],
 } as const;
 export const siteOrigin = publicIdentity.canonicalOrigin;
 export const plannedOrigin = siteOrigin;
