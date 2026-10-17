@@ -39,7 +39,7 @@ test("project mail draft preserves complete short text and cannot inject recipie
   const draft = projectEmailDraft(text, "en");
   assert.equal(draft.requiresAttachment, false);
   const url = new URL(draft.href);
-  assert.equal(url.pathname, "adham@adham-agritech.com");
+  assert.equal(url.pathname, "adham@agynexa.si");
   assert.equal(url.searchParams.get("body"), text);
   assert.equal(url.searchParams.get("subject"), "AGYNEXA project discussion");
 });

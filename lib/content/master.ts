@@ -1,8 +1,14 @@
 import content from './master-upgrade.json';
 import type { Locale } from '@/lib/i18n/config';
 export type MasterSection = {
+    id?: string;
     heading: string;
     body: string;
+    deliverable?: string;
+    link?: { label: string; path: string };
+    boundary?: boolean;
+    includes?: string[];
+    outcome?: string;
 };
 export type MasterPage = {
     title: string;
@@ -10,6 +16,12 @@ export type MasterPage = {
     sections: MasterSection[];
     seoTitle?: string;
     seoDescription?: string;
+    primaryAction?: { label: string; path: string };
+    secondaryAction?: { label: string; path: string };
+    closing?: string;
+    faq?: { question: string; answer: string }[];
+    founder?: { name: string; role: string; bio: string };
+    projects?: { heading: string; items: MasterSection[]; note: string };
 };
 export type MasterHome = {
     groups: {
