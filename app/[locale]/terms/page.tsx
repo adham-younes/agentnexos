@@ -1,3 +1,4 @@
+import { revisionMetadata } from "@/lib/content/revision";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PublicPage } from "@/components/site/public-page";
@@ -10,7 +11,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const content = publicPages.terms[locale];
-  return { title: `${content.title} | AGYNEXA`, description: content.intro, alternates: { canonical: `/${locale}/terms`, languages: { ar: "/ar/terms", en: "/en/terms" } }, openGraph: { title: content.title, description: content.intro, url: `/${locale}/terms` }, twitter: { title: content.title, description: content.intro } };
+  const metadata = revisionMetadata('terms', locale);
+  return { ...metadata, title: `${content.title} | AGYNEXA`, description: content.intro,
+    openGraph: { ...metadata.openGraph, title: content.title, description: content.intro },
+    twitter: { ...metadata.twitter, title: content.title, description: content.intro } };
 }
 
 export default async function Page({ params }: Props) {

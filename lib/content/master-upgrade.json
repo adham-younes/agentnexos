@@ -61,7 +61,7 @@
             },
             {
               "heading": "الإجراءات والصلاحيات",
-              "body": "اربط كل أداة بدور ونطاق استخدام. الإجراءات الحساسة تحتاج قرارًا واضحًا، لا تفسيرًا فضفاضًا لرسالة في المحادثة."
+              "body": "اربط كل أداة بدور ونطاق استخدام، وحدد الإجراءات التي تحتاج اعتماد المسؤول قبل تنفيذها."
             },
             {
               "heading": "متابعة التنفيذ",
@@ -575,7 +575,7 @@
     },
     "start": {
       "title": "حدثنا عن العملية التي تريد تحسينها.",
-      "intro": "نحتاج وصفًا عامًا للعملية والأنظمة التي تستخدمها. لا ترسل ملفات سرية أو بيانات عملاء أو مفاتيح وصول في هذه الخطوة.",
+      "intro": "اشرح أين يبدأ الطلب، وأي أنظمة يمر بها، وأين يحتاج فريقك إلى متابعة يدوية. استخدم وصفًا عامًا دون ملفات سرية أو بيانات عملاء.",
       "sections": [
         {
           "heading": "الحقول",
@@ -744,7 +744,7 @@
             },
             {
               "heading": "Actions and permissions",
-              "body": "Give each tool a defined role and scope. Sensitive actions need a clear decision, not an assumption drawn from a conversation."
+              "body": "Give each tool a defined role and scope, and specify which actions require approval before execution."
             },
             {
               "heading": "Execution visibility",
@@ -1254,7 +1254,7 @@
     },
     "start": {
       "title": "Tell us which process you want to improve.",
-      "intro": "Share a general description of the workflow and the systems you use. Do not include confidential files, client data, or access keys at this stage.",
+      "intro": "Describe where a request starts, which systems it passes through, and where your team needs manual follow-up. Use a general description without confidential files or client data.",
       "sections": [
         {
           "heading": "Fields",

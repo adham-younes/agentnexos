@@ -13,7 +13,8 @@ export const revisionRoutes = ['', ...masterRoutes.filter(x => !['privacy', 'ter
 export function revisionMetadata(page: RevisionPage | 'engagements' | 'login', locale: Locale): Metadata {
     const approved = masterPage(locale, page), legacy = content[locale][page as RevisionPage];
     const heading = page === 'home' ? masterValue(masterHome(locale).groups[0].fields, 'العنوان', 'Title') : approved?.title || legacy?.title;
-    const title = approved?.seoTitle || heading || 'AGYNEXA', description = approved?.seoDescription || approved?.intro || legacy?.seoDescription;
+    const seo = page === 'home' ? masterHome(locale) : approved;
+    const title = seo?.seoTitle || heading || 'AGYNEXA', description = seo?.seoDescription || approved?.intro || legacy?.seoDescription;
     const path = page === 'home' ? '' : `/${page}`, url = `${siteOrigin}/${locale}${path}`;
     return { title, description, alternates: { canonical: url, languages: { ar: `${siteOrigin}/ar${path}`, en: `${siteOrigin}/en${path}` } }, robots: { index: !isPreview, follow: true }, openGraph: { title: heading || title, description, url, siteName: 'AGYNEXA', type: 'website', locale: locale === 'ar' ? 'ar_EG' : 'en_US', images: [{ url: `${siteOrigin}/og`, width: 1200, height: 630, alt: title }] }, twitter: { card: 'summary_large_image', title, description, images: [`${siteOrigin}/og`] } };
 }
