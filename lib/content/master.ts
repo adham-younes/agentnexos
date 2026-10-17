@@ -4,6 +4,8 @@ export type MasterSection = {
     heading: string;
     body: string;
     deliverable?: string;
+    link?: { label: string; path: string };
+    boundary?: boolean;
 };
 export type MasterPage = {
     title: string;

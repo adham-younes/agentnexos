@@ -126,3 +126,32 @@ A separate build-time type issue was then identified in dpl_5qfuf48FuA7k6NJ2WQHX
 | من نحن EN | [لقطة](../../output/batch-2/en-about-390.png) | [لقطة](../../output/batch-2/en-about-1440.png) |
 
 الملفات: `lib/content/master-upgrade.json`، `lib/content/master.ts`، `components/site/editorial-page.tsx` (جديد)، `components/site/public-page.tsx`، `app/upgrade-20261016.css`، وهذا السجل. التراجع: عكس فرق الدفعة فقط؛ لا migrations أو تغيير بيانات. لا build إنتاجي أو نشر أو تحقق إنتاجي لهذه الدفعة؛ تفويض النشر السابق كان للدفعة الأولى. توقفت بعد اكتمال النطاق المطلوب.
+
+
+## BATCH-03 — 17 أكتوبر 2026: صفحة الحلول والتفاصيل الأربع
+
+**IMPLEMENTED محليًا؛ غير منشور.** مصدر التفويض: تكليف المالك الأحدث بالصفحات الخمس AR/EN، والنصوص الحرفية والتصميم والتنقل وmetadata والفحوص المحددة. قاعدة الانطلاق commit `e17860b` (الدفعة الثانية المحلية)؛ حُفظت نتائج الدفعتين السابقتين. لا تفويض نشر لهذه الدفعة، ولا تنفيذ لبقية المراحل.
+
+- الفحص الأولي: `/solutions` شبكة من ثلاثة أعمدة، والتفاصيل داخل بطاقات ضيقة؛ المستحقات تفتقد النتيجة المقترحة، وعمليات العملاء تفتقد معيار التجربة. أدلة قبل التعديل في `output/batch-3/before-*.png`.
+- استُبدلت بيانات الصفحات العشر داخل `master-upgrade.json` بالنصوص المرفقة حرفيًا، دون إبقاء الأقسام القديمة معروضة. اختيار الحلول أصبح شبكة 2×2 على المكتب وعمودًا على الموبايل، مع روابط وصفية مستقلة ومحاذاة أسفل كل صف تسمح بنمو النص.
+- التفاصيل الأربع تستخدم بنية مشتركة: رجوع للحلول، عنوان ومقدمة وتنبيه نطاق المشروع المخصص، أربعة أقسام مختلفة بحسب الحل، ودعوة تواصل واحدة. استُخدمت صفوف القراءة وtokens والخطوط المعتمدة من الدفعة الثانية. إبراز حدود الإجراء والمراجعة بخط القراءة نفسه وبحافة خضراء داخل القسم المعني، لا في تذييل بعيد. لا محاكاة محادثة أو dashboard أو أرقام أو شعارات أو مكتبات أو حركة جديدة.
+- الرجوع إلى `/ar/solutions` أو `/en/solutions`، وروابط الاختيار إلى المسارات القائمة، وجميع الأزرار إلى `/{locale}/start` دون query parameters. لا تغيير في ملفات المسارات أو الإرسال أو المصادقة أو الوكيل أو التكاملات أو قاعدة البيانات.
+- SEO: title/description للصفحات العشر مطابقان للتكليف؛ canonical وog:url وhreflang على `https://agynexa.si` والمسار المناظر. خريطة الموقع تضم مسارات الحلول العشرة، دون نطاق Vercel أو صفحات دخول.
+- الفحوص المنفذة: TypeScript وESLint للملفات المعدلة وi18n audit نجحت من الجولة الأولى. مطابقة مفاتيح المحتوى AR/EN نجحت؛ المقارنة مع HEAD تثبت أن التعديل محصور في بيانات الحلول العشر، وأن بيانات الرئيسية و/start والخدمات والمنهجية ومن نحن وبقية الصفحات لم تتغير.
+- تحقق المتصفح المحلي: 30 حالة (10 صفحات × 390/1440/320px) دون overflow أو قص فعلي أو pageerrors؛ مطابقة النصوص وmetadata، أربعة اختيارات/أقسام بلا بطاقات قديمة، دعوة تواصل واحدة، تنبيه النطاق قبل التفاصيل، شبكة 2×2 وروابط متحاذية على المكتب، وعمود واحد على الموبايل. 36 تحققًا للتنقل: 10 لتبديل اللغة مع إبقاء الحل، و10 للوصول إلى /start باستخدام Tab/Enter وتركيز ظاهر 2px، و8 لروابط الاختيار، و8 للرجوع. لا بريد حقيقي أو حساب أو طلب نموذج أو كتابة بيانات. لم تُكرر الفحوص الناجحة أو تُشغّل اختبارات خارج النطاق.
+- [نتائج التحقق المحلية](../../output/batch-3/results.json). التُقطت الصور التالية من التطبيق المحلي الفعلي بالخطوط المحملة وreduced motion؛ قد يظهر مؤشر Next.js التطويري.
+
+| الصفحة | 390px | 1440px |
+|---|---|---|
+| الحلول AR | [لقطة](../../output/batch-3/ar-solutions-390.png) | [لقطة](../../output/batch-3/ar-solutions-1440.png) |
+| المعرفة AR | [لقطة](../../output/batch-3/ar-solutions-knowledge-390.png) | [لقطة](../../output/batch-3/ar-solutions-knowledge-1440.png) |
+| المشتريات AR | [لقطة](../../output/batch-3/ar-solutions-procurement-390.png) | [لقطة](../../output/batch-3/ar-solutions-procurement-1440.png) |
+| المستحقات AR | [لقطة](../../output/batch-3/ar-solutions-receivables-390.png) | [لقطة](../../output/batch-3/ar-solutions-receivables-1440.png) |
+| عمليات العملاء AR | [لقطة](../../output/batch-3/ar-solutions-customer-operations-390.png) | [لقطة](../../output/batch-3/ar-solutions-customer-operations-1440.png) |
+| الحلول EN | [لقطة](../../output/batch-3/en-solutions-390.png) | [لقطة](../../output/batch-3/en-solutions-1440.png) |
+| المعرفة EN | [لقطة](../../output/batch-3/en-solutions-knowledge-390.png) | [لقطة](../../output/batch-3/en-solutions-knowledge-1440.png) |
+| المشتريات EN | [لقطة](../../output/batch-3/en-solutions-procurement-390.png) | [لقطة](../../output/batch-3/en-solutions-procurement-1440.png) |
+| المستحقات EN | [لقطة](../../output/batch-3/en-solutions-receivables-390.png) | [لقطة](../../output/batch-3/en-solutions-receivables-1440.png) |
+| عمليات العملاء EN | [لقطة](../../output/batch-3/en-solutions-customer-operations-390.png) | [لقطة](../../output/batch-3/en-solutions-customer-operations-1440.png) |
+
+الملفات المعدلة: `lib/content/master-upgrade.json`، `lib/content/master.ts`، `lib/content/public-copy.ts`، `components/site/solutions-page.tsx` (جديد)، `components/site/public-page.tsx`، `app/upgrade-20261016.css`، وهذا السجل. التراجع: عكس فرق الدفعة الثالثة فقط دون المساس بالدفعتين السابقتين؛ لا migrations. لم يُشغّل build إنتاجي أو نشر أو تحقق إنتاجي، ولا تعني نتائج localhost إصلاح النسخة الحية. انتهت الدفعة؛ الباقات والموارد ومساحة الوكيل خارج نطاقها.

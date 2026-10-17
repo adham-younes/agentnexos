@@ -223,33 +223,46 @@
     },
     "solutions": {
       "title": "اختر العملية قبل اختيار الوكيل.",
-      "intro": "أفضل نقطة بداية هي عملية لها مدخلات معروفة ومسؤول واضح ونتيجة يمكن اختبارها. هذه النطاقات توضح كيف يمكن بناء تجربة مناسبة لعملك.",
+      "intro": "أفضل نقطة بداية هي عملية لها مدخلات معروفة ومسؤول واضح ونتيجة يمكن اختبارها. استكشف النطاقات التالية لتحديد ما يناسب طريقة عمل فريقك.",
       "sections": [
         {
           "heading": "المعرفة الداخلية",
-          "body": "إجابات مرتبطة بمصادر مسموحة، مع إظهار المراجع وحدود الإجابة."
+          "body": "مساعدة الموظفين على الوصول إلى إجابات مرتبطة بمصادر مسموحة، مع إظهار المراجع وتوضيح ما لا تتوفر له إجابة موثوقة.",
+          "link": {
+            "label": "استكشف حل المعرفة الداخلية",
+            "path": "solutions/knowledge"
+          }
         },
         {
           "heading": "المشتريات",
-          "body": "مراجعة الطلبات وتجهيز المقارنة ومسار الاعتماد."
+          "body": "مراجعة اكتمال الطلبات، وتجهيز مقارنات قابلة للفحص، وتحديد مسار الاعتماد قبل إنشاء أي التزام.",
+          "link": {
+            "label": "استكشف مسار المشتريات",
+            "path": "solutions/procurement"
+          }
         },
         {
           "heading": "متابعة المستحقات",
-          "body": "ترتيب المتابعة وإظهار الاستثناءات وإعداد إجراء قابل للمراجعة."
+          "body": "جمع حالة الفاتورة وسجل المتابعة والاستثناءات، ثم إعداد خطوة يراجعها المسؤول قبل التواصل الخارجي.",
+          "link": {
+            "label": "استكشف متابعة المستحقات",
+            "path": "solutions/receivables"
+          }
         },
         {
           "heading": "عمليات العملاء",
-          "body": "ربط الطلب بسياقه وتوجيهه إلى الخطوة أو الفريق المناسب."
-        },
-        {
-          "heading": "الفقرة الختامية",
-          "body": "تُحدد المصادر والتكاملات والصلاحيات لكل مشروع. الأمثلة المنشورة توضح منهج التصميم ولا تعني وجود اتصال جاهز بأنظمتك."
-        },
-        {
-          "heading": "الزر",
-          "body": "ناقش حالة استخدام"
+          "body": "ربط الطلب بسياقه، وتحديد ما إذا كان يحتاج إجابة أو معلومات إضافية أو إجراءً أو إحالة إلى الفريق المختص.",
+          "link": {
+            "label": "استكشف عمليات العملاء",
+            "path": "solutions/customer-operations"
+          }
         }
       ],
+      "closing": "تُحدد المصادر والتكاملات والصلاحيات لكل مشروع. هذه أمثلة لنطاقات يمكن تصميمها، وليست نتائج منشورة لعملاء أو اتصالات جاهزة بأنظمتك.",
+      "primaryAction": {
+        "label": "ناقش حالة استخدام",
+        "path": "start"
+      },
       "seoTitle": "حلول سير العمل · AGYNEXA",
       "seoDescription": "استكشف نطاقات عمل للمعرفة الداخلية والمشتريات ومتابعة المستحقات وعمليات العملاء."
     },
@@ -262,7 +275,7 @@
           "body": "نختار مجموعة وثائق مصرحًا بها وحالات أسئلة متكررة. نحدد صلاحيات الوصول، وطريقة تحديث الوثائق، وما يحدث عند غياب الدليل أو تعارضه."
         },
         {
-          "heading": "سير العمل",
+          "heading": "سير العمل المقترح",
           "body": "يستقبل النظام السؤال، ويبحث داخل المصادر المسموحة، ثم يقدم إجابة مرتبطة بمرجع. إذا لم يكفِ الدليل، يوضح النقص بدل تقديم معلومة غير مسندة."
         },
         {
@@ -271,13 +284,14 @@
         },
         {
           "heading": "نقطة المراجعة",
-          "body": "القرارات التي تحتاج تفسيرًا مهنيًا أو اعتمادًا رسميًا تبقى لدى المسؤول المختص."
-        },
-        {
-          "heading": "الزر",
-          "body": "ناقش مصادر المعرفة لديك"
+          "body": "القرارات التي تحتاج تفسيرًا مهنيًا أو اعتمادًا رسميًا تبقى لدى المسؤول المختص.",
+          "boundary": true
         }
       ],
+      "primaryAction": {
+        "label": "ناقش مصادر المعرفة لديك",
+        "path": "start"
+      },
       "seoTitle": "معرفة داخلية مرتبطة بالمصادر · AGYNEXA",
       "seoDescription": "تصميم إجابات مرتبطة بمصادر مسموحة، مع مراجعة صلاحيات الوثائق وحداثتها وحدود الدليل."
     },
@@ -295,17 +309,18 @@
         },
         {
           "heading": "حد التنفيذ",
-          "body": "إنشاء أمر شراء أو إرساله إلى نظام خارجي يحتاج تكاملًا مصرحًا به واعتمادًا مطابقًا لسياسة المؤسسة. المثال العام لا ينفذ ذلك."
+          "body": "إنشاء أمر شراء أو إرساله إلى نظام خارجي يحتاج تكاملًا مصرحًا به واعتمادًا مطابقًا لسياسة المؤسسة. المثال العام لا ينفذ ذلك.",
+          "boundary": true
         },
         {
           "heading": "معيار التجربة",
           "body": "يكتشف المسار النواقص، ويعرض المقارنة دون اختلاق أسعار أو شروط، ويمنع الالتزام قبل الاعتماد."
-        },
-        {
-          "heading": "الزر",
-          "body": "صمّم مسار مشتريات"
         }
       ],
+      "primaryAction": {
+        "label": "ناقش مسار المشتريات",
+        "path": "start"
+      },
       "seoTitle": "تصميم سير عمل المشتريات · AGYNEXA",
       "seoDescription": "حدد مدخلات طلب الشراء والمقارنة ونقطة الاعتماد قبل إنشاء أي التزام أو ربط إنتاجي."
     },
@@ -318,18 +333,23 @@
           "body": "قراءة بيانات مصرح بها، وتصنيف الحالات وفق قواعد محددة، وإظهار النواقص والتعارضات، وإعداد مسودة تواصل عند الحاجة."
         },
         {
+          "heading": "النتيجة المقترحة",
+          "body": "ملخص للحالة يوضح وضع الفاتورة وآخر متابعة والاستثناءات، مع خطوة تالية قابلة للمراجعة."
+        },
+        {
           "heading": "مراجعة الإنسان",
-          "body": "تغيير الشروط أو الإقرار بتسوية أو إرسال مطالبة لا يتم اعتمادًا على اقتراح النموذج وحده. تحدد المؤسسة صاحب الصلاحية لكل إجراء."
+          "body": "تغيير الشروط أو الإقرار بتسوية أو إرسال مطالبة لا يتم اعتمادًا على اقتراح النموذج وحده. تحدد المؤسسة صاحب الصلاحية لكل إجراء.",
+          "boundary": true
         },
         {
           "heading": "معيار التجربة",
-          "body": "عدم الخلط بين مدين وآخر، وعدم تجاهل نزاع قائم أو سداد مسجل، وإبقاء الرسائل في حالة مسودة حتى الاعتماد."
-        },
-        {
-          "heading": "الزر",
-          "body": "ناقش مسار المتابعة"
+          "body": "عدم الخلط بين حسابات العملاء، وعدم تجاهل نزاع قائم أو سداد مسجل، وإبقاء الرسائل في حالة مسودة حتى الاعتماد."
         }
       ],
+      "primaryAction": {
+        "label": "ناقش مسار المتابعة",
+        "path": "start"
+      },
       "seoTitle": "تصميم متابعة المستحقات · AGYNEXA",
       "seoDescription": "صمّم متابعة للفواتير تراعي حالة السداد والنزاعات والمراجعة قبل التواصل الخارجي."
     },
@@ -338,22 +358,27 @@
       "intro": "بعض الطلبات تحتاج إجابة، وبعضها يحتاج معلومات إضافية أو إجراءً أو تدخل فريق آخر. نبدأ بتحديد هذه الفروق قبل تصميم الردود.",
       "sections": [
         {
-          "heading": "سير العمل",
+          "heading": "سير العمل المقترح",
           "body": "يُصنف الطلب، ويُسترجع السياق المسموح، ثم تُجهز إجابة أو مسودة إجراء أو إحالة واضحة. تظهر الحالات التي لا يملك النظام صلاحية حسمها."
         },
         {
           "heading": "اللغة والسياق",
-          "body": "تُراجع صياغة العربية والإنجليزية على حالات فعلية مصرح بها، مع الحفاظ على أرقام الطلبات والأسماء والمواعيد كما وردت."
+          "body": "تُراجع صياغة العربية والإنجليزية على حالات مصرح باستخدامها، مع الحفاظ على أرقام الطلبات والأسماء والمواعيد كما وردت."
         },
         {
           "heading": "حدود الإجراء",
-          "body": "الاسترداد المالي، وتعديل بيانات الحساب، وتغيير الالتزامات تحتاج سياسة وصلاحية واضحة. لا تُنفذ من مجرد رغبة العميل المكتوبة في المحادثة."
+          "body": "الاسترداد المالي، وتعديل بيانات الحساب، وتغيير الالتزامات تحتاج سياسة وصلاحية واضحة. لا تُنفذ من مجرد رغبة العميل المكتوبة في المحادثة.",
+          "boundary": true
         },
         {
-          "heading": "الزر",
-          "body": "حدّد أنواع طلبات العملاء"
+          "heading": "معيار التجربة",
+          "body": "فهم نوع الطلب، واستخدام سياق العميل الصحيح، وإحالته عند الحاجة دون تقديم وعد أو تنفيذ إجراء خارج الصلاحية."
         }
       ],
+      "primaryAction": {
+        "label": "ناقش عمليات العملاء",
+        "path": "start"
+      },
       "seoTitle": "تصميم عمليات العملاء · AGYNEXA",
       "seoDescription": "اربط طلب العميل بسياقه والخطوة المناسبة، مع حدود واضحة للإجابات والإجراءات والإحالة."
     },
@@ -899,33 +924,46 @@
     },
     "solutions": {
       "title": "Choose the workflow before choosing the agent.",
-      "intro": "A useful starting point has known inputs, a responsible owner, and an outcome that can be tested. These scopes show how a pilot could fit your operations.",
+      "intro": "A useful starting point has known inputs, a responsible owner, and an outcome that can be tested. Explore these scopes to identify what fits the way your team works.",
       "sections": [
         {
           "heading": "Internal knowledge",
-          "body": "Answers tied to permitted sources, with references and clear limits."
+          "body": "Help employees find answers tied to permitted sources, with references and a clear explanation when reliable evidence is unavailable.",
+          "link": {
+            "label": "Explore internal knowledge",
+            "path": "solutions/knowledge"
+          }
         },
         {
           "heading": "Procurement",
-          "body": "Request checks, reviewable comparisons, and an approval path."
+          "body": "Check request completeness, prepare reviewable comparisons, and define the approval path before a commitment is made.",
+          "link": {
+            "label": "Explore procurement workflows",
+            "path": "solutions/procurement"
+          }
         },
         {
           "heading": "Receivables follow-up",
-          "body": "Prioritized follow-up, visible exceptions, and proposed actions for review."
+          "body": "Bring together invoice status, communication history, and exceptions, then prepare a next step for review before external contact.",
+          "link": {
+            "label": "Explore receivables follow-up",
+            "path": "solutions/receivables"
+          }
         },
         {
           "heading": "Customer operations",
-          "body": "Requests connected to their context and routed to the appropriate next step or team."
-        },
-        {
-          "heading": "Closing",
-          "body": "Sources, integrations, and permissions are defined for each project. These examples explain the design approach; they do not imply an existing connection to your systems."
-        },
-        {
-          "heading": "Button",
-          "body": "Discuss a use case"
+          "body": "Connect requests to their context and determine whether they need an answer, more information, an action, or a handoff to the appropriate team.",
+          "link": {
+            "label": "Explore customer operations",
+            "path": "solutions/customer-operations"
+          }
         }
       ],
+      "closing": "Sources, integrations, and permissions are defined for each project. These are examples of possible scopes, not published client results or existing connections to your systems.",
+      "primaryAction": {
+        "label": "Discuss a use case",
+        "path": "start"
+      },
       "seoTitle": "Workflow solutions · AGYNEXA",
       "seoDescription": "Explore workflow scopes for internal knowledge, procurement, receivables follow-up, and customer operations."
     },
@@ -938,7 +976,7 @@
           "body": "We select an authorized document set and recurring questions. The scope covers access permissions, document updates, and cases where evidence is missing or conflicting."
         },
         {
-          "heading": "Workflow",
+          "heading": "Proposed workflow",
           "body": "The system receives a question, searches permitted sources, and prepares an answer with references. If the evidence is insufficient, it states the gap rather than filling it with an unsupported claim."
         },
         {
@@ -947,13 +985,14 @@
         },
         {
           "heading": "Review point",
-          "body": "Decisions requiring professional interpretation or formal approval stay with the responsible person."
-        },
-        {
-          "heading": "Button",
-          "body": "Discuss your knowledge sources"
+          "body": "Decisions requiring professional interpretation or formal approval stay with the responsible person.",
+          "boundary": true
         }
       ],
+      "primaryAction": {
+        "label": "Discuss your knowledge sources",
+        "path": "start"
+      },
       "seoTitle": "Source-linked internal knowledge · AGYNEXA",
       "seoDescription": "Design answers tied to permitted sources, with document permissions, freshness, and evidence limits."
     },
@@ -971,17 +1010,18 @@
         },
         {
           "heading": "Execution boundary",
-          "body": "Creating or sending a purchase order requires an authorized integration and approval under the organization’s policy. The public example does not perform this action."
+          "body": "Creating or sending a purchase order requires an authorized integration and approval under the organization’s policy. The public example does not perform this action.",
+          "boundary": true
         },
         {
           "heading": "Pilot criterion",
           "body": "The workflow identifies missing information, compares offers without inventing prices or terms, and prevents a commitment before approval."
-        },
-        {
-          "heading": "Button",
-          "body": "Design a procurement workflow"
         }
       ],
+      "primaryAction": {
+        "label": "Discuss your procurement workflow",
+        "path": "start"
+      },
       "seoTitle": "Procurement workflow design · AGYNEXA",
       "seoDescription": "Define purchase-request inputs, comparisons, and approval points before a commitment or live integration."
     },
@@ -994,18 +1034,23 @@
           "body": "Read authorized records, classify cases using defined rules, surface missing or conflicting information, and prepare a communication draft when needed."
         },
         {
+          "heading": "Proposed result",
+          "body": "A case summary showing invoice status, the latest follow-up, and exceptions, with a reviewable next step."
+        },
+        {
           "heading": "Human review",
-          "body": "Changes to terms, settlement commitments, and outgoing demands cannot rely on a model’s suggestion alone. The organization assigns authority for each action."
+          "body": "Changes to terms, settlement commitments, and outgoing demands cannot rely on a model’s suggestion alone. The organization assigns authority for each action.",
+          "boundary": true
         },
         {
           "heading": "Pilot criterion",
-          "body": "The workflow keeps accounts separate, recognizes recorded payments and active disputes, and leaves messages in draft until approved."
-        },
-        {
-          "heading": "Button",
-          "body": "Discuss your follow-up process"
+          "body": "The workflow keeps customer accounts separate, recognizes recorded payments and active disputes, and leaves messages in draft until approved."
         }
       ],
+      "primaryAction": {
+        "label": "Discuss your follow-up process",
+        "path": "start"
+      },
       "seoTitle": "Receivables follow-up workflows · AGYNEXA",
       "seoDescription": "Design invoice follow-up that accounts for payments, disputes, and review before external contact."
     },
@@ -1014,7 +1059,7 @@
       "intro": "Some requests need an answer. Others need more information, an action, or another team. We define those differences before designing responses.",
       "sections": [
         {
-          "heading": "Workflow",
+          "heading": "Proposed workflow",
           "body": "Classify the request, retrieve permitted context, and prepare a response, proposed action, or clear handoff. Cases outside the system’s authority remain visible."
         },
         {
@@ -1023,13 +1068,18 @@
         },
         {
           "heading": "Action boundaries",
-          "body": "Refunds, account changes, and changes to commitments require explicit policies and permissions. A request in a conversation is not enough to authorize them."
+          "body": "Refunds, account changes, and changes to commitments require explicit policies and permissions. A request in a conversation is not enough to authorize them.",
+          "boundary": true
         },
         {
-          "heading": "Button",
-          "body": "Define your customer request types"
+          "heading": "Pilot criterion",
+          "body": "Identify the request type, use the correct customer context, and hand off when needed without making commitments or taking actions beyond the assigned authority."
         }
       ],
+      "primaryAction": {
+        "label": "Discuss customer operations",
+        "path": "start"
+      },
       "seoTitle": "Customer operations workflows · AGYNEXA",
       "seoDescription": "Connect customer requests to context and the right next step, with clear response, action, and handoff boundaries."
     },
