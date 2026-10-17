@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!isLocale(locale) || !isIndustrySlug(industry)) notFound();
     const copy = getIndustry(locale, industry);
     const url = `${siteOrigin}${publicPath(`/industries/${industry}`)}`;
-    const title = `${copy.name} | AGYNEXA`;
+    const title = copy.seoTitle;
     return {
         title,
         description: copy.summary,

@@ -35,15 +35,20 @@ export function EditorialPage({ page, locale }: { page: EditorialRoute; locale: 
                         <p className="editorial-role">{copy.founder.role}</p>
                         <a className="upgrade-text-link" href={`mailto:${contactEmail}`} dir="ltr"><bdi>{contactEmail}</bdi></a>
                     </section>}
-                </> : page === 'methodology' ? <ol className="editorial-stages">
-                    {copy.sections.map((stage, index) => <li className="editorial-row" key={stage.heading}>
-                        <h2><span className="editorial-number"><bdi>{String(index + 1).padStart(2, '0')} —</bdi></span>{' '}{stage.heading}</h2>
-                        <div className="editorial-prose"><p>{stage.body}</p><p className="editorial-deliverable">{stage.deliverable}</p></div>
+                </> : page === 'methodology' ? <ol className="editorial-timeline">
+                    {copy.sections.map((stage, index) => <li className="editorial-timeline-stage" key={stage.heading}>
+                        <span className="editorial-timeline-marker" aria-hidden="true"><bdi>{String(index + 1).padStart(2, '0')}</bdi></span>
+                        <section className="editorial-timeline-copy" aria-labelledby={`method-stage-${index + 1}`}>
+                            <h2 id={`method-stage-${index + 1}`}>{stage.heading}</h2><p>{stage.body}</p>{stage.deliverable && <p className="editorial-timeline-output">{stage.deliverable}</p>}
+                        </section>
                     </li>)}
-                </ol> : <div className="editorial-services">
-                    {copy.sections.map(service => <section className="editorial-row" key={service.heading}>
-                        <h2>{service.heading}</h2>
-                        <div className="editorial-prose"><p>{service.body}</p><p className="editorial-deliverable">{service.deliverable}</p></div>
+                </ol> : <div className="editorial-service-list">
+                    {copy.sections.map((service, index) => <section className="editorial-service-offering" key={service.heading} aria-labelledby={`service-offering-${index + 1}`}>
+                        <span className="editorial-service-number" aria-hidden="true"><bdi>{String(index + 1).padStart(2, '0')}</bdi></span>
+                        <div className="editorial-service-content">
+                            <h2 id={`service-offering-${index + 1}`}>{service.heading}</h2>
+                            <div className="editorial-service-description">{service.deliverable && <p className="editorial-service-output">{service.deliverable}</p>}<p>{service.body}</p></div>
+                        </div>
                     </section>)}
                 </div>}
                 <div className="editorial-closing">

@@ -290,3 +290,32 @@ A separate build-time type issue was then identified in dpl_5qfuf48FuA7k6NJ2WQHX
 - Mobile focus cause was observed in one scoped production diagnostic: first RAF ran while the link was still visibility:hidden; the same link accepted manual focus once visible. Source now waits for real visibility/successful focus with cleanup and1s scheduling bound. Existing trap/Escape/background isolation retained.
 - Login decorative photography removed; only the approved homepage cover is displayed. No new imagery or public content/route rewrite.
 - Corrective deployment and alias identity verification are next; no local/Preview tests or builds were run.
+
+### PREMIUM-PLATFORM-CORRECTION — deployed identity
+
+- PR60 merged as `7d9049d29984c6e97f89cacc3ebd4dd443b8d42e`; production `dpl_4vuyypnbooXMoKSu8MfSt8djvq97` READY. Reviewed source tree matches merged tree. Vercel get_alias confirms agynexa.si points to this exact deployment before any corrected acceptance request.
+- Targeted final acceptance is running once for the four previously failed semantic cases, mobile keyboard focus/menu and login cover-only styling. Earlier successful unchanged public/brief/account checks are reused rather than repeated.
+
+### PREMIUM-PLATFORM — final bounded acceptance result
+
+- Corrected menu/login production acceptance passed11/11: actual autofocus81ms, Tab/ShiftTab wrap, Escape focus/background restoration, link navigation, and4 AR/EN1440/390 login captures with no photograph/overflow. Almarai loaded. Prior unchanged public/brief/account successes retained.
+- Corrected assistant retry:1/4 semantic pass,3/4 fail. Review plan still invents an extra reviewer appointment and omits missing-data handling; amendment invents required fields; unknown-effect answer is rejected before display and no useful answer reaches user. Absent-approver case passes. `response_validated` proves shape checks, not truth/completeness; model semantic quality is NOT approved.
+- Exactly4 corrective calls and one metadata SELECT limited to their exact synthetic IDs. No more source edits/model calls on this failed path after the bounded correction. Owner direction requested for a new direct-model comparison/repair phase per AGENTS.md hard-stop rule.
+- Production/public/account upgrades are released; overall comprehensive agent goal remains BLOCKED, not marked complete. Mail-confirmation/recovery and two actual authenticated users remain outside proven coverage because the provider blocked the second signup.
+
+### PREMIUM-PLATFORM — owner delivery decision
+
+- Final owner direction: deliver the website update with documented current agent limits; do not continue the proposed model comparison/repair phase. No further model calls or source changes on that path.
+- Delivery status: RELEASED_WITH_DOCUMENTED_LIMITS. Live production remains `7d9049d29984c6e97f89cacc3ebd4dd443b8d42e` / `dpl_4vuyypnbooXMoKSu8MfSt8djvq97`, agynexa.si alias verified. Website/content/sector/locale/account upgrades delivered; model semantic acceptance remains1 pass/3 failures and is not represented as fully fixed.
+- Proven scope:115 public observations/checks,16 bilingual brief-flow checks, single-account history/guards/cleanup,11 corrected menu/login checks, actual model routing and arithmetic. Not proven: two real authenticated users, delivered confirmation/recovery/PKCE. Grouped runtime error scan returned none in the selected30m, which does not establish model correctness.
+- Production code is committed/merged in PR59 and PR60. Final acceptance records are retained in this workspace and the merged PR descriptions, without another documentation-only deployment.
+
+## R04 — تحسين وضوح المحتوى والتصميم والبحث (17 أكتوبر 2026)
+
+- طلب المالك الأحدث: متابعة تحرير المحتوى والتصميم ثم النشر الإنتاجي مباشرة. يستمر إيقاف إصلاحات نماذج الوكيل؛ لا تغيير للحسابات أو البيانات أو البريد أو النطاق.
+- المرجع: مراجعات Chromium السابقة للمواقع العشرة في `/tmp/agynexa-benchmark-20261017`، مع قراءة حديثة للصفحات العامة ومراجعة نصوص الموقع الحالي. الاستفادة من عرض الفئة والمهام والمخرجات؛ النصوص الجديدة أصلية ولا تنقل ادعاءات العملاء أو المنتجات المنافسة.
+- التنفيذ: تعريف الخدمة في العنوان، إعادة تحرير الصفحات التجارية باللغتين، عناوين بحث خاصة بالمهام والقطاعات الستة، افتتاحية أقصر ومخطط توضيحي واحد وروابط قطاعات وخدمات وتسلسل منهجية أوضح. الحفاظ على المراعي والألوان والغلاف المعتمد وحده وبطاقة CEO المختصرة.
+- الموصلات: جرت محاولة تشخيص وتحرير نص عام عبر RewriteLy؛ الاثنتان أعادتا خطأ داخليًا ولم تنتجا نصًا. قُرئت تعليمات AI Humanizer؛ لا تُطبق تعليمات تتعارض مع شرط المالك للغة مهنية صحيحة. لا ادعاء بأن الموصل حرر النص المنشور.
+- الحالة: IMPLEMENTED / مراجعة المصدر جارية، النشر والتحقق الإنتاجي لم يكتملَا بعد. لا بناء أو اختبارات محلية/Preview. التحقق بعد النشر يقتصر على الصفحات والمظهر والبيانات الوصفية المتأثرة؛ لا إعادة لاختبارات النماذج والبريد والحسابات.
+- حدود SEO: تهيئة المحتوى والعناوين والروابط لا تضمن ترتيبًا. الإنجليزية هي النسخة الافتراضية القابلة للفهرسة؛ العربية تظل تفضيلًا على العنوان نفسه وفق قرار المالك، دون ادعاء عناوين عربية مستقلة للفهرسة.
+- التراجع: إعادة المصدر إلى نشر طلب الدمج السابق (60) دون أي تغيير مخطط أو بيانات.

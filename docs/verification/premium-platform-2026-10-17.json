@@ -1,11 +1,13 @@
 {
-  "status": "RELEASED_PUBLIC; TARGETED_AGENT_CORRECTION_IN_PROGRESS",
+  "status": "DELIVERED_WITH_OWNER_ACCEPTED_DOCUMENTED_AGENT_LIMITS",
   "production": {
-    "commit": "faf4dc63cf0f3619ebe7a71204f78009331652bb",
-    "deployment": "dpl_9h4asVmEEZaRvk6FiMme3bMgPRJ1",
+    "commit": "7d9049d29984c6e97f89cacc3ebd4dd443b8d42e",
+    "deployment": "dpl_4vuyypnbooXMoKSu8MfSt8djvq97",
     "url": "https://agynexa.si",
-    "pullRequest": "https://github.com/adham-younes/agentnexos/pull/59",
-    "aliasVerified": true
+    "pullRequest": "https://github.com/adham-younes/agentnexos/pull/60",
+    "aliasVerified": true,
+    "previousCommit": "faf4dc63cf0f3619ebe7a71204f78009331652bb",
+    "previousDeployment": "dpl_9h4asVmEEZaRvk6FiMme3bMgPRJ1"
   },
   "database": {
     "migration": "20261017140344_explicit_owned_conversation_save",
@@ -30,8 +32,14 @@
     "transportAndModelRoutingVerified": true,
     "exactSyntheticRunsOnly": 5,
     "arithmetic": "PASS",
-    "semanticScopeAndGrounding": "4 constrained cases require correction; not approved",
-    "correction": "Typed internal response constraints and final-only user-grounded generation are in progress. No canned business answers."
+    "semanticScopeAndGrounding": "NOT_APPROVED: review plan invents reviewer appointment and misses missing-data path; amendment invents required fields; unknown-effect case fails closed with no answer. Absent-approver case passes.",
+    "correction": "Typed internal response constraints and final-only user-grounded generation are in progress. No canned business answers.",
+    "correctionReleased": true,
+    "correctionSemanticPassed": 1,
+    "correctionSemanticFailed": 3,
+    "providerSchemaCompatibility": "Two English constrained replies and Arabic constrained reply generated/validated. Unknown rejection cause not classified from metadata alone.",
+    "boundedStop": "Owner chose delivery with documented current limits. No further model calls/comparison/repair.",
+    "evidence": "/tmp/agynexa-upgrade-implementation-20261017/engine-correction-7d9049d29984c6e97f89cacc3ebd4dd443b8d42e/report.json"
   },
   "accountAcceptance": {
     "controlledFixtureA": "Created and SQL-confirmed for bounded own-account tests",
@@ -50,7 +58,7 @@
     "brief": "16 checks passed AR/EN after driver hydration-readiness correction: complete generate/copy/download, manual-mailto semantics, clear and engagement query synchronization.",
     "apiWrites": 0,
     "pageRuntimeErrors": 0,
-    "mobileMenu": "Opens visually; initial keyboard focus handoff failed. Source diagnosis/fix in progress; dependent focus-trap/Escape/link-close checks not yet run.",
+    "mobileMenu": "PASS on corrected release: focus enters visible menu, Tab/ShiftTab wrap, Escape restores focus/inert/overflow and sector navigation closes menu.",
     "heroExplore": "Native anchor passed."
   },
   "visualReview": {
@@ -60,8 +68,24 @@
       1440,
       390
     ],
-    "knownException": "Existing login decorative photo, removed in pending correction.",
+    "knownException": "Resolved: login decorative photo removed; all4 AR/EN desktop/mobile login captures show no media/backgroundURL.",
     "otherObservedBlockers": 0,
-    "evidence": "/tmp/agynexa-upgrade-implementation-20261017/production-visual-review-faf4dc63.json"
-  }
+    "evidence": "/tmp/agynexa-upgrade-implementation-20261017/production-visual-review-faf4dc63.json",
+    "targetedCorrectionChecks": {
+      "passed": 11,
+      "failed": 0,
+      "evidence": "/tmp/agynexa-upgrade-implementation-20261017/corrected-navigation-login-acceptance.json"
+    }
+  },
+  "unchangedEvidenceReuse": "Public pages/brief/account behavior retain earlier successful production evidence; correction is limited to four constrained response modes, menu focus, and login decorative background.",
+  "runtimeErrorScan": {
+    "window": "30m",
+    "routes": [
+      "/api/agentnexos",
+      "/api/conversations"
+    ],
+    "result": "No grouped runtime errors returned",
+    "limit": "Does not prove semantic correctness or absence of response validation rejection."
+  },
+  "ownerFinalDirection": "Deliver the website update with current agent limitations documented; no further model comparison or repair requests."
 }
