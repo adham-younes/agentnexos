@@ -6,12 +6,13 @@ import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { useLocale } from '@/lib/i18n/use-t';
 import { publicPath } from '@/lib/i18n/routing';
 import { masterHome, masterValue } from '@/lib/content/master';
+import type { IndustrySlug } from '@/lib/content/industries';
 import { Navigation } from './navigation';
 import { CyberEffects } from '@/components/cyber/effects';
 import { CyberFooter } from '@/components/cyber/footer';
 import { contactEmail } from '@/lib/site';
 
-export function CyberHome() {
+export function CyberHome({ industries }: { industries: { slug: IndustrySlug; name: string }[] }) {
     const locale = useLocale();
     const ar = locale === 'ar';
     const c = masterHome(locale);
@@ -21,9 +22,9 @@ export function CyberHome() {
     const steps = value(workflow, 'عناوين الخطوات', 'Steps').split('|').map(step => step.trim()).filter(Boolean);
     const solutionPaths = ['/solutions/knowledge', '/solutions/procurement', '/solutions/receivables', '/solutions/customer-operations'];
     const exampleFields = [
-        { label: ar ? 'الطلب' : 'Request', body: value(workflow, 'Example input') },
-        { label: ar ? 'المعلومة الناقصة' : 'Missing information', body: value(workflow, 'Example missing') },
-        { label: ar ? 'النتيجة المقترحة' : 'Proposed output', body: value(workflow, 'Example output') },
+        { heading: steps[0] || (ar ? 'الطلب' : 'Request'), body: value(workflow, 'Example input') },
+        { heading: steps[1] || (ar ? 'المعلومة الناقصة' : 'Missing information'), body: value(workflow, 'Example missing') },
+        { heading: steps[2] || (ar ? 'الخطوة التالية' : 'Next action'), body: value(workflow, 'Example output') },
     ].filter(field => field.body);
 
     return <CyberEffects className="upgrade-site upgrade-home premium-home">
@@ -34,7 +35,7 @@ export function CyberHome() {
                     <Image className="premium-hero-image" src="/images/premium/enterprise-port-hero.webp" alt="" fill sizes="100vw" preload />
                 </div>
                 <div className="premium-hero-shade" aria-hidden="true" />
-                <div className="nexus-wrap">
+                <div className="premium-hero-content nexus-wrap">
                     <div className="premium-hero-copy">
                         <p className="upgrade-eyebrow">{ar ? 'هندسة أنظمة الوكلاء' : 'AI AGENT SYSTEMS ENGINEERING'}</p>
                         <h1 id="home-title">{value(hero, 'العنوان', 'Title')}</h1>
@@ -60,45 +61,51 @@ export function CyberHome() {
                     <div><p className="upgrade-eyebrow">01 / {ar ? 'من العمل إلى نتيجة واضحة' : 'FROM THE WORK TO A CLEAR RESULT'}</p><h2 id="workflow-heading">{value(workflow, 'العنوان', 'Title')}</h2></div>
                     <p>{value(workflow, 'الفقرة', 'Body')}</p>
                 </div>
-                <div className="premium-workflow-story">
-                    <ol className="premium-workflow-steps">
-                        {steps.map((step, index) => <li key={step}><span className="upgrade-step">{String(index + 1).padStart(2, '0')}</span><h3>{step}</h3></li>)}
+                {exampleFields.length > 0 && <figure className="premium-schematic">
+                    <p className="premium-schematic-label">{value(workflow, 'Example label') || (ar ? 'مثال على تصميم المسار' : 'An illustrative workflow')}</p>
+                    <ol className="premium-schematic-path">
+                        {exampleFields.map((field, index) => <li key={field.heading}>
+                            <span className="premium-schematic-node" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                            <div><h3>{field.heading}</h3><p>{field.body}</p></div>
+                        </li>)}
                     </ol>
-                    {exampleFields.length > 0 && <div className="premium-output">
-                        <p className="premium-output-title">{value(workflow, 'Example label') || (ar ? 'مقتطف من الموجز' : 'Inside the review brief')}</p>
-                        <dl>{exampleFields.map(field => <div key={field.label}><dt>{field.label}</dt><dd>{field.body}</dd></div>)}</dl>
-                    </div>}
-                </div>
-                <p className="upgrade-caption">{value(workflow, 'وسم المثال', 'Label')}</p>
-                <p className="premium-workflow-scope">{value(hero, 'النص المساند', 'Supporting text')}</p>
+                    <figcaption className="upgrade-caption">{value(workflow, 'وسم المثال', 'Label')}</figcaption>
+                </figure>}
             </section>
 
-            <section className="upgrade-section nexus-wrap" aria-labelledby="capabilities-heading">
-                <div className="upgrade-section-head"><p className="upgrade-eyebrow">02 / {ar ? 'القدرات' : 'CAPABILITIES'}</p><h2 id="capabilities-heading">{value(capabilities, 'العنوان', 'Title')}</h2></div>
-                <div className="premium-capabilities">
-                    {cardFields(capabilities, ['العنوان', 'Title', 'رابط القسم', 'Link']).map((field, index) => <article className="premium-capability" key={field.heading}>
-                        <span className="upgrade-step">{String(index + 1).padStart(2, '0')}</span><h3>{field.heading}</h3><p>{field.body}</p>
-                    </article>)}
+            <section className="premium-foundations nexus-wrap" aria-labelledby="capabilities-heading">
+                <div className="premium-foundations-heading">
+                    <h2 id="capabilities-heading">{value(capabilities, 'العنوان', 'Title')}</h2>
+                    <Link className="upgrade-text-link" href={publicPath('/platform')}>{value(capabilities, 'رابط القسم', 'Link')}<ArrowUpRight size={18} aria-hidden="true" /></Link>
                 </div>
-                <Link className="upgrade-text-link" href={publicPath('/platform')}>{value(capabilities, 'رابط القسم', 'Link')}<ArrowUpRight size={18} aria-hidden="true" /></Link>
+                <dl className="premium-foundation-list">
+                    {cardFields(capabilities, ['العنوان', 'Title', 'رابط القسم', 'Link']).map(field => <div key={field.heading}><dt>{field.heading}</dt><dd>{field.body}</dd></div>)}
+                </dl>
             </section>
 
-            <section className="upgrade-section nexus-wrap" aria-labelledby="solutions-heading">
-                <div className="upgrade-section-head"><p className="upgrade-eyebrow">03 / {ar ? 'الحلول' : 'SOLUTIONS'}</p><h2 id="solutions-heading">{value(solutions, 'العنوان', 'Title')}</h2></div>
-                <div className="premium-home-solutions">
-                    {cardFields(solutions, ['العنوان', 'Title', 'رابط القسم', 'Link', 'ملاحظة', 'Note']).map((field, index) => <Link href={publicPath(solutionPaths[index] ?? '/solutions')} className="upgrade-card upgrade-card-link" key={field.heading}>
-                        <ArrowUpRight size={22} aria-hidden="true" /><h3>{field.heading}</h3><p>{field.body}</p>
-                    </Link>)}
+            <section className="upgrade-section premium-workareas nexus-wrap" aria-labelledby="solutions-heading">
+                <div className="premium-workareas-heading">
+                    <div><p className="upgrade-eyebrow">02 / {ar ? 'مجالات العمل' : 'AREAS OF WORK'}</p><h2 id="solutions-heading">{value(solutions, 'العنوان', 'Title')}</h2></div>
+                    <Link className="upgrade-text-link" href={publicPath('/solutions')}>{value(solutions, 'رابط القسم', 'Link')}<ArrowUpRight size={18} aria-hidden="true" /></Link>
                 </div>
-                <div className="upgrade-row"><Link className="upgrade-text-link" href={publicPath('/solutions')}>{value(solutions, 'رابط القسم', 'Link')}<ArrowUpRight size={18} aria-hidden="true" /></Link><p className="upgrade-caption">{value(solutions, 'ملاحظة', 'Note')}</p></div>
+                <ul className="premium-workarea-list">
+                    {cardFields(solutions, ['العنوان', 'Title', 'رابط القسم', 'Link', 'ملاحظة', 'Note']).map((field, index) => <li key={field.heading}><Link href={publicPath(solutionPaths[index] ?? '/solutions')} className="premium-workarea">
+                        <span className="premium-workarea-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><h3>{field.heading}</h3><p>{field.body}</p><ArrowUpRight size={22} aria-hidden="true" />
+                    </Link></li>)}
+                </ul>
+                <p className="upgrade-caption">{value(solutions, 'ملاحظة', 'Note')}</p>
+                <nav className="premium-sector-index" aria-labelledby="home-industries-heading">
+                    <h3 id="home-industries-heading"><Link href={publicPath('/industries')}>{ar ? 'القطاعات' : 'Industries'}<ArrowUpRight size={18} aria-hidden="true" /></Link></h3>
+                    <ul>{industries.map(industry => <li key={industry.slug}><Link href={publicPath(`/industries/${industry.slug}`)}>{industry.name}<ArrowUpRight size={15} aria-hidden="true" /></Link></li>)}</ul>
+                </nav>
             </section>
 
-            <section className="upgrade-section nexus-wrap">
-                <div className="upgrade-split-card"><div><p className="upgrade-eyebrow">04 / {ar ? 'طريقة البداية' : 'GETTING STARTED'}</p><h2>{value(start, 'العنوان', 'Title')}</h2></div><div><p>{value(start, 'الفقرة', 'Body')}</p><Link className="upgrade-text-link" href={publicPath('/methodology')}>{value(start, 'الرابط', 'Link')}<ArrowUpRight size={18} aria-hidden="true" /></Link></div></div>
+            <section className="premium-delivery" aria-labelledby="delivery-heading">
+                <div className="premium-delivery-inner nexus-wrap"><div><p className="upgrade-eyebrow">03 / {ar ? 'من التصميم إلى التسليم' : 'FROM DESIGN TO DELIVERY'}</p><h2 id="delivery-heading">{value(start, 'العنوان', 'Title')}</h2></div><div><p>{value(start, 'الفقرة', 'Body')}</p><Link className="upgrade-text-link" href={publicPath('/methodology')}>{value(start, 'الرابط', 'Link')}<ArrowUpRight size={18} aria-hidden="true" /></Link></div><p className="premium-project-scope">{value(hero, 'النص المساند', 'Supporting text')}</p></div>
             </section>
 
             <section className="upgrade-section nexus-wrap upgrade-faq">
-                <div><p className="upgrade-eyebrow">{ar ? 'قبل أن تبدأ' : 'BEFORE YOU START'}</p><h2>{ar ? 'أسئلة قبل البداية' : 'Questions before you start'}</h2></div>
+                <div><p className="upgrade-eyebrow">{ar ? 'حول مشروعك' : 'YOUR PROJECT'}</p><h2>{ar ? 'أسئلة عن العمل معًا' : 'Working with AGYNEXA'}</h2></div>
                 <div>{c.faq.map(item => <details key={item.question}><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div>
             </section>
 

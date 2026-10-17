@@ -3,7 +3,8 @@
   "git": {
     "deploymentEnabled": {
       "codex/premium-platform-upgrade": false,
-      "codex/premium-platform-correction": false
+      "codex/premium-platform-correction": false,
+      "codex/content-design-clarity": false
     }
   }
 }
