@@ -1,0 +1,22 @@
+{
+  "routes_per_locale": 21,
+  "localized_routes": 42,
+  "total_sections_per_locale": 88,
+  "words_including_UI_and_metadata": {
+    "ar": 6609,
+    "en": 7081
+  },
+  "internal_link_check": "pass",
+  "errors": [],
+  "legal_pages_requiring_reconciliation": [
+    "privacy",
+    "terms"
+  ],
+  "new_app_behaviors_requiring_implementation": [
+    "full brief preview",
+    "print/PDF via browser",
+    "numeric brief validation",
+    "new assistant prompt text"
+  ],
+  "review_scope": "Editorial and structured-content checks. No application build or deployment performed."
+}

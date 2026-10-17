@@ -1,0 +1,26 @@
+{
+  "pdf_pages": 38,
+  "chapter_start_pages": {
+    "home": 3,
+    "services": 6,
+    "solutions": 8,
+    "industries": 9,
+    "methodology": 10,
+    "about": 12,
+    "governance": 13,
+    "solutions/procurement": 15,
+    "solutions/receivables": 17,
+    "solutions/knowledge": 19,
+    "solutions/customer-operations": 21,
+    "industries/commerce": 23,
+    "industries/professional-services": 24,
+    "industries/logistics": 25,
+    "resources": 26,
+    "resources/first-workflow": 27,
+    "resources/acceptance-testing": 29,
+    "privacy": 30,
+    "terms": 32,
+    "start": 33,
+    "agentnexos": 36
+  }
+}

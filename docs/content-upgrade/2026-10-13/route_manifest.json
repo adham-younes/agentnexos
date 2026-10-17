@@ -1,0 +1,188 @@
+{
+  "locales": [
+    "ar",
+    "en"
+  ],
+  "routes": [
+    {
+      "slug": "",
+      "kind": "marketing",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "home"
+    },
+    {
+      "slug": "services",
+      "kind": "service_offer",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "services"
+    },
+    {
+      "slug": "solutions",
+      "kind": "marketing",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "solutions"
+    },
+    {
+      "slug": "industries",
+      "kind": "marketing",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "industries"
+    },
+    {
+      "slug": "methodology",
+      "kind": "service_offer",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "methodology"
+    },
+    {
+      "slug": "about",
+      "kind": "marketing",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "about"
+    },
+    {
+      "slug": "governance",
+      "kind": "service_offer",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "governance"
+    },
+    {
+      "slug": "solutions/procurement",
+      "kind": "solution",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "solutions/procurement"
+    },
+    {
+      "slug": "solutions/receivables",
+      "kind": "solution",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "solutions/receivables"
+    },
+    {
+      "slug": "solutions/knowledge",
+      "kind": "solution",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "solutions/knowledge"
+    },
+    {
+      "slug": "solutions/customer-operations",
+      "kind": "solution",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "solutions/customer-operations"
+    },
+    {
+      "slug": "industries/commerce",
+      "kind": "sector",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "industries/commerce"
+    },
+    {
+      "slug": "industries/professional-services",
+      "kind": "sector",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "industries/professional-services"
+    },
+    {
+      "slug": "industries/logistics",
+      "kind": "sector",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "industries/logistics"
+    },
+    {
+      "slug": "resources",
+      "kind": "resource_index",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "resources"
+    },
+    {
+      "slug": "resources/first-workflow",
+      "kind": "guide",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "resources/first-workflow"
+    },
+    {
+      "slug": "resources/acceptance-testing",
+      "kind": "guide",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "resources/acceptance-testing"
+    },
+    {
+      "slug": "privacy",
+      "kind": "legal",
+      "publication": "requires_runtime_and_controller_review",
+      "source": "content/site_content.json",
+      "id": "privacy"
+    },
+    {
+      "slug": "terms",
+      "kind": "legal",
+      "publication": "requires_service_provider_and_legal_review",
+      "source": "content/site_content.json",
+      "id": "terms"
+    },
+    {
+      "slug": "start",
+      "kind": "interactive",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "start"
+    },
+    {
+      "slug": "agentnexos",
+      "kind": "interactive",
+      "publication": "ready_for_implementation",
+      "source": "content/site_content.json",
+      "id": "agentnexos"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/{locale}/platform",
+      "destination": "/{locale}/services",
+      "permanent": true
+    },
+    {
+      "source": "/{locale}/security",
+      "destination": "/{locale}/governance",
+      "permanent": true
+    }
+  ],
+  "legacy_home_anchors": {
+    "features": "work",
+    "solutions": "solutions",
+    "how-it-works": "delivery",
+    "availability": "demo",
+    "questions": "faq",
+    "contact": "next",
+    "main-content": "main-content",
+    "top": "top"
+  },
+  "primary_conversion": "local_project_brief",
+  "contact_channel_status": "not_provided",
+  "noindex": [
+    "start",
+    "agentnexos"
+  ],
+  "sitemap_exclude_redirects": true,
+  "publication_gates": {
+    "privacy": "Verify actual runtime behavior, data controller and privacy-request channel. Keep the existing live notice until reconciled.",
+    "terms": "Confirm service-provider identity and legal terms. Preserve the current notice pending approval."
+  }
+}

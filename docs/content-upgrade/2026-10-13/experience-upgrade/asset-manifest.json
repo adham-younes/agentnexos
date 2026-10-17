@@ -1,0 +1,120 @@
+{
+  "generated_utc_date": "2026-10-13",
+  "flow_id": "i4hire5WgyvZlqBZqBNX",
+  "image_model": "flux-2-pro",
+  "image_generations": 4,
+  "image_credits": 1090.8,
+  "video_model": "kling-2.5-turbo",
+  "video_generations": 1,
+  "video_estimated_credits": 2121,
+  "video_estimate_note": "Generation was run once; estimate is not a billing statement.",
+  "concept_ids": [
+    "qaFeBzJdrBUjTSWgwHsI",
+    "tBFpDrNZI8QCpyoIy3gk",
+    "r8tRMeq1DwQkfOOKUcEB",
+    "t6htAxVBAzKpcXZ9HZCV"
+  ],
+  "film_generation_id": "DRLas6HR5WF2Wnw4BdbR",
+  "selection_note": "Hero uses concept3. Film visually animates the concept4 family selected by the wired multi-take image node. The two are separate members of one visual family, not an exact frame-match.",
+  "ownership_note": "Generated for the owner-authorized Agentnexos project; no competitor assets or logos used.",
+  "assets": [
+    {
+      "path": "assets/concept-1.webp",
+      "bytes": 114088,
+      "sha256": "dcd48ebf647daf3a49f0de9027bac8e2e26954523ae7104cb7682307e2e940ed",
+      "role": "alternative_concept",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1920,
+      "height": 1072,
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/concept-2.webp",
+      "bytes": 148744,
+      "sha256": "561279002b8f984ee0bf85110ab87e81e38e5bb6758dc04df0f034e35082fda2",
+      "role": "alternative_concept",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1920,
+      "height": 1072,
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/concept-3.webp",
+      "bytes": 131718,
+      "sha256": "4fb93f339f79ae4fb3cbc1e269625ed82ce6cc8cd9885f0cbfe1ba454f48c7e4",
+      "role": "alternative_concept",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1920,
+      "height": 1072,
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/concept-4.webp",
+      "bytes": 121606,
+      "sha256": "fe5412aed4fda1e46f73d3607a9e7bb85e0485c7fa68da481103e3bee985d9ee",
+      "role": "alternative_concept",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1920,
+      "height": 1072,
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/neural-detail.webp",
+      "bytes": 109558,
+      "sha256": "2c2ad3f243e0cab10d5f30d3a774567fe77aa18d87013bb0f7f63c79107a8b45",
+      "role": "detail_image",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1920,
+      "height": 1072,
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/neural-film-poster.webp",
+      "bytes": 48820,
+      "sha256": "b95598319cd3307749eb750f1d0e0037635a3daf64b2f45d6cfbbd198fbb69b3",
+      "role": "video_poster",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1280,
+      "height": 716,
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/neural-film.mp4",
+      "bytes": 1030996,
+      "sha256": "0b3cf508a652f35b47b9b8a93e49c93f0852ede617729893b311e5134f9e2a18",
+      "role": "brand_film",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1280,
+      "height": 716,
+      "duration_seconds": 5.041667,
+      "audio": false,
+      "loop": false
+    },
+    {
+      "path": "assets/neural-hero.webp",
+      "bytes": 130406,
+      "sha256": "bd85a555e28219284f947acfaf89e503daf129fde14c3966817df583e3de4b28",
+      "role": "hero_image",
+      "provider": "ElevenLabs Creative",
+      "status": "generated_and_downloaded",
+      "note": "Decorative brand imagery; no operational capability implied.",
+      "width": 1920,
+      "height": 1072,
+      "format": "WEBP"
+    }
+  ]
+}

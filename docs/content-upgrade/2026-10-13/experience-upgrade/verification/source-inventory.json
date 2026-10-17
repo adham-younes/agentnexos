@@ -1,0 +1,77 @@
+{
+  "commit": "49f4627ec934bba066294cb0740ad6ea0f21a80a",
+  "read_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "0eb1f8d4e0b374d7c5e2c5e51c40531ff7bac9c9b76cd4f519e8c235897bd82e"
+    },
+    {
+      "path": "app/api/agentnexos/route.ts",
+      "sha256": "4c6228deb5b977af360edfce0090ee90bd09667e3d61f99795a89e9d23581ea1"
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "d33e260e475b903f22a52e1449cb998af42b699d73f2966fc3c238bc0ccbd420"
+    },
+    {
+      "path": "components/agent/workspace.tsx",
+      "sha256": "fa626d36ea26e21436c1f79167a2ba642e4a7bbe338e21a42a961f4500af6cbf"
+    },
+    {
+      "path": "components/landing/cyber-home.tsx",
+      "sha256": "58d3b1b19513093536ad8eb3fc090901c0b6e866c26981c5c0c950744ec0b39d"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "sha256": "27a75f2462980d74714104d024aed7e8b903c804413e390e34bc567ce4c48a27"
+    },
+    {
+      "path": "components/ui/tabs.tsx",
+      "sha256": "5b1fb76a24708234eed2af2116e965e80111d84fcabc82ee1d2a2f9e12900ed3"
+    },
+    {
+      "path": "docs/GUARDRAILS.md",
+      "sha256": "a4ca0e12e7965654d8c125529cb324559f03ab0fb9a8a91f147d615e469b84be"
+    },
+    {
+      "path": "docs/MASTER-PLAN-AND-HANDOFF-2026-09-29.md",
+      "sha256": "399e1c2a80c491d94a47a085a68dc9ae60067f835c5bd7d61f957e9c993bb52d"
+    },
+    {
+      "path": "docs/UPGRADE-HANDOFF-2026-10-01.md",
+      "sha256": "c940c3ac52d6c8bc55580b12487febed350a9089de7d9a9bc8077e22cbc3abec"
+    },
+    {
+      "path": "lib/agents/context.ts",
+      "sha256": "e1dece7ecc245dfa94754714afa407cf71d9f73db63e6ba22cfde4fcd718057d"
+    },
+    {
+      "path": "lib/agents/contract.ts",
+      "sha256": "5201d6ceeb6e79f12b58de568a10dddca19f36926427e4ec1cec8d20484e1139"
+    },
+    {
+      "path": "lib/agents/policy.ts",
+      "sha256": "47e421cbf32f2bd309bf30e8015d8f46dd8dd787c8adb5be16e03e1f88b261f2"
+    },
+    {
+      "path": "lib/agents/prompts.ts",
+      "sha256": "a80cbf609e4781e32f637164730fc0bbc04ac7ad081f6e96efefe95eb05f6be9"
+    },
+    {
+      "path": "lib/agents/tools.ts",
+      "sha256": "a7ce7bf48ad0ee4c217b5eaefee00a5130ff2630bf44f43bfd41fdfa1bc32ffb"
+    },
+    {
+      "path": "lib/agents/workflow.ts",
+      "sha256": "1f3064f7ab816b2716e356aeeaac3ba36defb3b2fbdf97eba2badc305d0f7f41"
+    },
+    {
+      "path": "lib/content/agent-workspace.ts",
+      "sha256": "8290846676456cc84a369e6e395d05406f6fda7ece506e2246be5e3d1196fe19"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d9dd567b32d5c40c72d4bb2bba6f28909fb6c497b72f07452a4ca43fffb57489"
+    }
+  ]
+}
