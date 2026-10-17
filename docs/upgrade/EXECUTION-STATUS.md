@@ -266,3 +266,27 @@ A separate build-time type issue was then identified in dpl_5qfuf48FuA7k6NJ2WQHX
 - Release tooling: one production-only public rendering sweep targets clean routes at desktop/mobile in both languages. Separate specialists prepare a bounded account/isolation and assistant-semantic acceptance wave, waiting for a confirmed deployed SHA before execution.
 - `vercel.json` disables automatic deployment of this implementation feature branch only; main retains the existing production deployment path, avoiding Preview builds for this package.
 - Release still PENDING. Production behavior, real model quality, successful account paths and email delivery are not inferred from source review.
+
+### PREMIUM-PLATFORM — release identity correction
+
+- PR59 merged: `faf4dc63cf0f3619ebe7a71204f78009331652bb`; production build `dpl_9h4asVmEEZaRvk6FiMme3bMgPRJ1` completed and READY. Reviewed feature/source tree hashes match.
+- Initial acceptance was started prematurely from READY status before checking the custom alias. Alias metadata still mapped agynexa.si to the prior deployment; the partial public sweep was stopped,4 assistant requests were classified as old-version evidence, and the account driver stopped before any signup or fixture write. None is acceptance evidence for the new release.
+- Diagnosis: custom-domain assignment remained on prior production; requested promotion of the exact new production build without rebuilding. Final acceptance may resume once the alias identity is confirmed; preserve aborted artifacts separately, do not treat old-version answers as new-source failures.
+
+### PREMIUM-PLATFORM — actual production acceptance and bounded correction
+
+- Custom alias confirmed on new production after explicit promotion. Public observations:50 AR/EN documents at1440/390,100 screenshots, required images/fonts/scripts, clean links/metadata, language cookie/query/hash, six-sector sitemap, downloads and closed inactive APIs.115 checks accepted after correcting two test expectations from stored observations (Next overrides HTML Vary despite private/no-store; relative redirects are valid). No successful full sweep repeated.
+- Real assistant stages were read only for5 exact synthetic run IDs: configured roles/models and calculator work, arithmetic passes. Four constrained semantic cases fail scope/grounding (extra final steps, whole-plan amendment, unsupported timeout inference and invented escalation). A narrow corrective package is in progress; these are not marked passed.
+- Controlled test-mail signup created one fixture; second is blocked by provider email rate limit. Only first fixture was SQL-confirmed for testing. This is not proof of email delivery/PKCE/recovery or two-user session isolation. Positive history checks remain pending. No actual customer account is changed.
+- Correction scope: final response grounding/scope, remove old login decorative photo for cover-only requirement, and fix acceptance-script expectations. No new sector imagery or broad public route rework. After correction deployment, retry failed semantic cases once and check the login decoration only; reuse unchanged successful public evidence.
+- Current evidence and limits: [release acceptance record](../verification/premium-platform-2026-10-17.json).
+
+- Further scoped results: AR/EN brief flow16 checks passed after correcting driver hydration readiness; no API writes/runtime JS errors. Existing58 screenshots visually reviewed, all25 routes at both widths represented; only login extra photo flagged and removed in corrective source. Mobile menu opens but initial keyboard focus handoff failed; one source diagnosis/fix is authorized before its targeted post-correction acceptance.
+- Own-account acceptance passed sign-in/refresh, explicit save/reopen/rename/export/delete/cascade, idempotency/conflicts, guest/Origin/HMAC guards and signout clearing. Exact created fixture was deleted with alias guard and absence confirmed; private test state is being removed. Real two-user sessions and email PKCE/recovery remain unverified due provider limit.
+
+### PREMIUM-PLATFORM-CORRECTION — source review complete
+
+- Constrained replies now use an individual internal object schema and pre-display validation; final text is generated from user context and actual deterministic review evidence rather than helper prose. No canned business answer, new model, execution grant or automatic model retry was added. Independent source findings on negation, legitimate source nouns and Arabic unknown-effect inference were addressed. Actual provider compatibility and four corrected semantic outcomes remain pending the one targeted production retry.
+- Mobile focus cause was observed in one scoped production diagnostic: first RAF ran while the link was still visibility:hidden; the same link accepted manual focus once visible. Source now waits for real visibility/successful focus with cleanup and1s scheduling bound. Existing trap/Escape/background isolation retained.
+- Login decorative photography removed; only the approved homepage cover is displayed. No new imagery or public content/route rewrite.
+- Corrective deployment and alias identity verification are next; no local/Preview tests or builds were run.

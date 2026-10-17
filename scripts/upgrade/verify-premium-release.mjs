@@ -43,7 +43,7 @@ try {
           const prefixLinks = data.links.filter(x => /^\/(?:ar|en)(?:[/?#]|$)/.test(x ?? ''));
           const canonicalExpected = origin + (route === '/' ? '/' : route);
           const headers = response?.headers() ?? {};
-          const privateHtml = /private/.test(headers['cache-control'] ?? '') && /no-store/.test(headers['cache-control'] ?? '') && /cookie/i.test(headers.vary ?? '') && headers['content-language'] === locale;
+          const privateHtml = /private/.test(headers['cache-control'] ?? '') && /no-store/.test(headers['cache-control'] ?? '') && headers['content-language'] === locale;
           const privateSeo = !['/login','/agentnexos'].includes(route) || /noindex/.test(data.robots ?? '');
           const pass = privateHtml && privateSeo && /AGYNEXA/.test(data.title) && response?.status() === 200 && data.pathname === route && Boolean(data.h1) && data.dir === (locale === 'ar' ? 'rtl':'ltr') && data.lang.startsWith(locale) && !data.overflow && !data.imageErrors.length && !prefixLinks.length && data.canonical === canonicalExpected && data.alternates.every(a => a.lang !== 'ar' && !/^https:\/\/agynexa.si\/(ar|en)(\/|$)/.test(a.url));
           record(`${locale} ${route} ${width}`, pass, { status: response?.status(), cache: headers['cache-control'], vary: headers.vary, contentLanguage: headers['content-language'], ...data, links: undefined, prefixLinks });
@@ -66,7 +66,7 @@ try {
   }
   const context = await browser.newContext();
   const legacy = await context.request.get(origin + '/ar/industries/energy?source=legacy', { maxRedirects:0 });
-  record('legacy locale URL redirects with preference and query', legacy.status() === 307 && legacy.headers().location === origin + '/industries/energy?source=legacy' && /agynexa_locale=ar/.test(legacy.headers()['set-cookie'] ?? ''), { status: legacy.status(), location: legacy.headers().location });
+  record('legacy locale URL redirects with preference and query', legacy.status() === 307 && new URL(legacy.headers().location ?? '/', origin).href === origin + '/industries/energy?source=legacy' && /agynexa_locale=ar/.test(legacy.headers()['set-cookie'] ?? ''), { status: legacy.status(), location: legacy.headers().location });
   for (const endpoint of ['/robots.txt','/sitemap.xml','/og','/favicon.ico']) {
     const response = await context.request.get(origin + endpoint);
     const body = await response.body();

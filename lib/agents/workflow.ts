@@ -1,11 +1,12 @@
 import { createStep, createWorkflow } from "@mastra/core/workflows";
-import { ToolLoopAgent, isStepCount, type LanguageModel } from "ai";
+import { ToolLoopAgent, Output, isStepCount, type LanguageModel } from "ai";
 import { z } from "zod/v4";
 import { getAnalystModel, getOrchestratorModel, getVerifierModel, MODEL_LIMITS } from "@/lib/ai/models";
 import { createDemoTools } from "./tools";
 import { publicResponseConstraints } from "./public-boundary";
 import type { SessionTaskState } from "./context";
-import { agentInstructions } from "./prompts";
+import { agentInstructions, constrainedFinalInstructions } from "./prompts";
+import { constrainedResponseSchema, validateAndRenderResponse, type ConstrainedResponseMode } from "./contract";
 import { classifyTask, discoverTools, type RuntimeEvent } from "./policy";
 
 const context = z.object({ conversation: z.string().max(12000), locale: z.enum(["ar", "en"]), analysis: z.string().default(""), plan: z.string().default(""), reviewNotes: z.string().default("") });
@@ -26,6 +27,7 @@ export async function runAgentWorkflow(options: {
   onStage?: (stage: { role: string; model: string; tokens: number | undefined }) => void;
   models?: { analyst: LanguageModel; planner: LanguageModel; reviewer: LanguageModel };
   taskState?: SessionTaskState;
+  userStatements?: string[];
 }) {
   options.signal.throwIfAborted();
   const startedAt = Date.now();
@@ -43,6 +45,9 @@ export async function runAgentWorkflow(options: {
   // Policy governs capabilities; business questions receive contextual model work.
   const constraints = publicResponseConstraints(latestRequest, options.previousRequest);
   const reviewBasis = { constraints, taskState: options.taskState, requestedAction: task };
+  const constrainedMode: ConstrainedResponseMode | undefined = constraints.unknownWriteEffect ? "unknown_write"
+    : constraints.approverUnavailable ? "absent_approver" : constraints.amendmentOnly ? "amendment_only"
+    : constraints.reviewOnly ? "review_only" : undefined;
   const analystModel = options.models?.analyst ?? getAnalystModel();
   const plannerModel = options.models?.planner ?? getOrchestratorModel();
   const reviewerModel = options.models?.reviewer ?? getVerifierModel();
@@ -53,9 +58,36 @@ export async function runAgentWorkflow(options: {
     prepareStep: ({ stepNumber }) => task === "workflow" && stepNumber === 0 ? { toolChoice: { type: "tool", toolName: "review_workflow_design" } } : {},
   });
   const reviewer = new ToolLoopAgent({ id: "result-reviewer", model: reviewerModel, temperature: MODEL_LIMITS.gptOss.temperature, instructions: instructions.reviewer, maxOutputTokens: 3000, maxRetries: 0, stopWhen: isStepCount(1) });
+  async function constrainedAnswer(reviewNotes: string) {
+    if (!constrainedMode || !reviewerModel) throw new Error("RESPONSE_MODE_UNAVAILABLE");
+    const writer = new ToolLoopAgent({ id: "result-reviewer", model: reviewerModel,
+      temperature: MODEL_LIMITS.gptOss.temperature, maxOutputTokens: 3000, maxRetries: 0, stopWhen: isStepCount(1),
+      instructions: `${instructions.reviewer}\n${constrainedFinalInstructions(constrainedMode)}`,
+      output: Output.object({ schema: constrainedResponseSchema(constrainedMode) }),
+    });
+    options.onPhase(2);
+    await emit({ kind: "model_started", role: "reviewer", model: modelId(reviewerModel) });
+    try {
+      // No analyst/planner prose: user facts and actual review receipts govern this answer.
+      const result = await writer.generate({ prompt: reviewContext(options.conversation, latestRequest, "", "", reviewNotes), abortSignal: options.signal });
+      const tokens = result.totalUsage.totalTokens;
+      await emit({ kind: "model_completed", role: "reviewer", model: modelId(reviewerModel), tokens });
+      const text = validateAndRenderResponse(result.output, constrainedMode, options.userStatements ?? [options.previousRequest ?? "", latestRequest], options.locale);
+      output.parse({ text });
+      await emit({ kind: "response_validated", reason: constrainedMode });
+      options.signal.throwIfAborted();
+      options.onText(text);
+      options.onStage?.({ role: "reviewer", model: modelId(reviewerModel), tokens });
+      return { text };
+    } catch (error) {
+      if (!options.signal.aborted) await emit({ kind: "response_rejected", reason: "PUBLIC_RESPONSE_VALIDATION_FAILED" });
+      throw error;
+    }
+  }
   // Small requests use one reviewer; workflow design uses the full team.
   const needsTeam = task === "workflow" || task === "calculation" || task === "technical" || allowedTools.length > 0;
   if (!needsTeam) {
+    if (constrainedMode) return constrainedAnswer(JSON.stringify(reviewBasis));
     options.onPhase(2);
     await emit({ kind: "model_started", role: "reviewer", model: modelId(reviewerModel) });
     const result = await reviewer.stream({ prompt: reviewContext(options.conversation, latestRequest, "", "", JSON.stringify(reviewBasis)), abortSignal: options.signal });
@@ -87,6 +119,7 @@ export async function runAgentWorkflow(options: {
     return { ...inputData, plan: `${result.text}\n\nActual tool receipts (empty means nothing retrieved):\n${JSON.stringify(evidence)}`, reviewNotes };
   }});
   const review = createStep({ id: "review", inputSchema: context, outputSchema: output, execute: async ({ inputData }) => {
+    if (constrainedMode) return constrainedAnswer(inputData.reviewNotes);
     options.onPhase(2); await emit({ kind: "model_started", role: "reviewer", model: modelId(reviewerModel) }); const result = await reviewer.stream({ prompt: reviewContext(inputData.conversation, latestRequest, inputData.analysis, inputData.plan, inputData.reviewNotes), abortSignal: options.signal });
     let text = "";
     for await (const chunk of result.textStream) { text += chunk; options.onText(chunk); }

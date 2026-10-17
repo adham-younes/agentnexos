@@ -40,7 +40,25 @@ export function Navigation() {
         document.body.style.overflow = 'hidden';
         const background = [...document.querySelectorAll<HTMLElement>('#main-content, #site-footer')].map(element => ({ element, inert: element.inert }));
         background.forEach(({ element }) => { element.inert = true; });
-        const focusFrame = requestAnimationFrame(() => menuRef.current?.querySelector<HTMLElement>('a[href]')?.focus());
+        const menu = menuRef.current;
+        let focusFrame = 0;
+        let focusSettled = false;
+        const focusDeadline = performance.now() + 1000;
+        const focusFirstVisibleLink = () => {
+            if (focusSettled || !menu || menu.inert) return;
+            if (menu.contains(document.activeElement)) {
+                focusSettled = true;
+                return;
+            }
+            const firstLink = menu.querySelector<HTMLElement>('a[href]');
+            // The opening visibility transition can still be hidden on the first frame.
+            if (firstLink && getComputedStyle(firstLink).visibility === 'visible' && firstLink.getClientRects().length > 0) {
+                firstLink.focus({ preventScroll: true });
+                focusSettled = document.activeElement === firstLink;
+            }
+            if (!focusSettled && performance.now() < focusDeadline) focusFrame = requestAnimationFrame(focusFirstVisibleLink);
+        };
+        focusFrame = requestAnimationFrame(focusFirstVisibleLink);
         const closeOnEscape = (event: KeyboardEvent) => {
             if (event.key === 'Escape') setIsMobileMenuOpen(false);
             if (event.key === 'Tab') {
@@ -60,6 +78,7 @@ export function Navigation() {
         window.addEventListener('keydown', closeOnEscape);
         window.addEventListener('resize', closeOnDesktop);
         return () => {
+            focusSettled = true;
             cancelAnimationFrame(focusFrame);
             document.body.style.overflow = previousOverflow;
             background.forEach(({ element, inert }) => { element.inert = inert; });
