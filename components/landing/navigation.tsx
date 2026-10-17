@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Command } from "lucide-react";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useT, useLocale } from "@/lib/i18n/use-t";
+import { publicCopy } from "@/lib/content/public-copy";
 const navLinks = [
     { key: 'nav.capabilities', ar: 'المنصة', name: 'Platform', href: '/platform' },
     { key: 'nav.solutions', ar: 'الحلول', name: 'Solutions', href: '/solutions' },
@@ -15,6 +16,7 @@ const navLinks = [
 export function Navigation() {
     const t = useT();
     const locale = useLocale();
+    const copy = publicCopy[locale];
     const resolveHref = (href: string) => href.startsWith("#") ? `/${locale}${href}` : `/${locale}${href}`;
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -89,10 +91,10 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden xl:flex items-center gap-3 xl:gap-4">
-            <a href={`/${locale}/login`} className="reference-login-link">{locale === "ar" ? "مساحة العملاء" : "Client workspace"}</a>
+            <a href={`/${locale}/login`} className="reference-login-link">{copy.signIn}</a>
             <LocaleSwitcher inverted={isDark}/>
             <Button asChild size="sm" className="nexus-nav-cta">
-              <a href={`/${locale}/start`}>{(locale === "ar" ? "ناقش مشروعك" : "Discuss your project")}</a>
+              <a href={`/${locale}/start`}>{copy.discussProject}</a>
             </Button>
           </div>
 
@@ -127,12 +129,12 @@ export function Navigation() {
             {/* Switcher sits on its own row: sharing the CTA row overflowed the
             viewport on narrow screens once a third item was added. */}
             <LocaleSwitcher />
-            <div className="flex items-center gap-4 mt-4">
+            <div className="flex flex-wrap items-center gap-4 mt-4">
               <Button asChild variant="outline" className="flex-1 rounded-full h-14 text-base">
-                <a href={`/${locale}/login`} onClick={() => setIsMobileMenuOpen(false)}>{locale === "ar" ? "تسجيل الدخول" : "Sign in"}</a>
+                <a href={`/${locale}/login`} onClick={() => setIsMobileMenuOpen(false)}>{copy.signIn}</a>
               </Button>
               <Button asChild className="flex-1 bg-foreground text-background rounded-full h-14 text-base">
-                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{(locale === "ar" ? "ناقش مشروعك" : "Discuss your project")}</a>
+                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{copy.discussProject}</a>
               </Button>
             </div>
           </div>

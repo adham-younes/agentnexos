@@ -67,3 +67,26 @@
 The first production build dpl_J1uTVe75eQZoohB9E1aQLNB7dpAW failed before release: missing JSX expression delimiter in the sign-out handler. The handler was extracted into a readable named function; changed TypeScript source was formatted for review. No test run occurred and no new version was promoted by that failed build. One corrected deployment attempt follows.
 
 A separate build-time type issue was then identified in dpl_5qfuf48FuA7k6NJ2WQHX9kiimjUG: the new login metadata caller was missing from the metadata helper's route union. Added that explicit route; no repeated unchanged build or test run. Production verification remains unstarted.
+
+## BATCH-01 — 17 أكتوبر 2026: الموقع العام وSEO
+
+**الحالة: IMPLEMENTED محليًا، مراجع بصريًا ووظيفيًا ضمن النطاق؛ غير منشور.** توجيه المالك في هذه المهمة يطلب صراحة الاختبارات واللقطات؛ نُفذ هذا الاستثناء الأحدث من سياسة تأجيل الاختبارات، دون تفويض نشر أو تغيير بيانات/مصادقة/وكيل/اشتراكات. لا تعني هذه الدفعة إغلاق M0–M4 كاملة.
+
+- تثبيت M0 المحدود: استعلام Vercel عن `agynexa.si` أعاد `dpl_CjmYmWZyh7Kny7tAUBRRveCaBvA6`، READY، production، SHA `d285e1629a37086631905bb9b28f9214c11e511b`. المصدر المحلي بدأ عند `9a9ce85`. القراءة الحية وجدت نطاق Vercel القديم في canonical وog:url وsitemap وrobots، و`/og` أعاد 404. لم تُغيّر سجلات النشر التاريخية.
+- M1 ضمن الدفعة: إعداد النطاق والبريد الموحد في `lib/site.ts` موجود مسبقًا محليًا؛ تحقق توليد 36 مسارًا عامًا مع canonical وog:url وhreflang على `https://agynexa.si`، واستبعاد الدخول والمسارات الخاصة من sitemap. `/robots.txt` يشير إلى الخريطة الصحيحة. `/og` المحلي صورة PNG فعلية 1200×630 من الهوية السوداء والخضراء، دون لوحة بيانات. أصلحت وراثة OG لصفحات الخصوصية والشروط، وحدّثت تاريخ المحتوى.
+- M2 ضمن الدفعة: الهيرو وعناوين SEO والتذييل والبريد ونص حدود الموجز كانت مطابقة في المصدر؛ حُفظت. طُبق نص الإجراءات والصلاحيات ومقدمة `/start` المرفقان حرفيًا في العربية والإنجليزية. أُصلح اختيار حقول SEO للرئيسية من مصدرها الفعلي. عبارة chatbots القديمة ليست في الرئيسية النشطة؛ لم يُمس المصدر القديم غير المعروض أو الصفحات المتخصصة.
+- الدخول: فحص المصدر يثبت تدفق مصادقة يؤدي إلى مساعد التصميم العام، وليس مساحة عملاء مستقلة ذات بيانات وصلاحيات مثبتة. لذلك وُحّدت تسمية الرابط إلى «تسجيل الدخول / Sign in» دون الادعاء بوجود Client workspace، ودون تغيير المصادقة أو تفعيل تسجيل جديد. لا تسجيل دخول فعلي أو إرسال بريد ضمن التحقق.
+- M3 ضمن الدفعة: tokens مشتركة للقراءة (AR 18px/1.8، EN 17px/1.65)، الأزرار والتنقل 15px، الملاحظات المهمة 14px، هوامش موبايل 22px. النص قبل الصورة على الموبايل، التفاف طبيعي بلا فواصل ثابتة، وعزل بريد LTR، وتركيز ظاهر واحترام reduced motion. أُصلحت فجوة ظهور قائمة الموبايل عند 1024–1279px. لا جدول مقارنة في الصفحتين المطلوبتين يستلزم حاوية إضافية.
+- التحقق الفعلي مرة واحدة: TypeScript وi18n audit وESLint للملفات المعدلة نجحت. فحص Playwright محلي لـ`/ar` و`/en` و`/ar/start` و`/en/start` عند 390/1440/320px (12 حالة) دون overflow أو صور مكسورة أو أخطاء pageerror. 20 تحققًا لتبديل اللغة وأزرار الهيرو وقائمة الموبايل وEscape واستعادة التركيز. تحقق إضافي للموجز باللغتين: تنزيل الملف الصحيح ورابط مسودة إلى `adham@agynexa.si` دون POST، focus 2px أخضر، transition 0s مع reduced motion. لا إرسال رسالة فعلية. قياس التباين: القراءة 11.08:1، القراءة على البطاقة 10.70:1، الأخضر 8.03:1، الزر 17.10:1.
+- الأدلة المحلية: [نتائج العرض وSEO](../../output/batch-1/results.json)، [نتائج الموجز](../../output/batch-1/brief-results.json)، [صورة OG](../../output/batch-1/og.png). الصور ملتقطة من dev فعلي بالخطوط المحملة، وقد يظهر مؤشر Next.js التطويري.
+
+| الصفحة | 390px | 1440px |
+|---|---|---|
+| الرئيسية AR | [لقطة](../../output/batch-1/ar-home-390.png) | [لقطة](../../output/batch-1/ar-home-1440.png) |
+| الرئيسية EN | [لقطة](../../output/batch-1/en-home-390.png) | [لقطة](../../output/batch-1/en-home-1440.png) |
+| /start AR | [لقطة](../../output/batch-1/ar-start-390.png) | [لقطة](../../output/batch-1/ar-start-1440.png) |
+| /start EN | [لقطة](../../output/batch-1/en-start-390.png) | [لقطة](../../output/batch-1/en-start-1440.png) |
+
+الملفات المعدلة: `lib/site.ts`، `lib/content/revision.ts`، `lib/content/master-upgrade.json`، `lib/content/public-copy.ts` (جديد)، `components/landing/navigation.tsx`، `components/cyber/footer.tsx`، `app/upgrade-20261016.css`، `app/[locale]/privacy/page.tsx`، `app/[locale]/terms/page.tsx`، وهذا السجل.
+
+النشر: لم يُنفذ، ولم يُشغّل build إنتاجي. قبول الإنتاج المتعلق بإزالة نطاق Vercel القديم يبقى معلقًا حتى نشر مأذون؛ نجاح localhost لا يثبت إصلاح الموقع الحي. التراجع: عكس فرق هذه الدفعة فقط؛ لا migrations أو تغيير بيانات. لا تبدأ الدفعة التالية تلقائيًا.
