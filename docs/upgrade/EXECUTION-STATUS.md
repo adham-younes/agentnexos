@@ -90,3 +90,15 @@ A separate build-time type issue was then identified in dpl_5qfuf48FuA7k6NJ2WQHX
 الملفات المعدلة: `lib/site.ts`، `lib/content/revision.ts`، `lib/content/master-upgrade.json`، `lib/content/public-copy.ts` (جديد)، `components/landing/navigation.tsx`، `components/cyber/footer.tsx`، `app/upgrade-20261016.css`، `app/[locale]/privacy/page.tsx`، `app/[locale]/terms/page.tsx`، وهذا السجل.
 
 النشر: لم يُنفذ، ولم يُشغّل build إنتاجي. قبول الإنتاج المتعلق بإزالة نطاق Vercel القديم يبقى معلقًا حتى نشر مأذون؛ نجاح localhost لا يثبت إصلاح الموقع الحي. التراجع: عكس فرق هذه الدفعة فقط؛ لا migrations أو تغيير بيانات. لا تبدأ الدفعة التالية تلقائيًا.
+
+### BATCH-01 — نشر الإنتاج المأذون، 17 أكتوبر 2026
+
+**RELEASED — منشور ومتحقق على الإنتاج ضمن نطاق الدفعة.** هذا التحديث يحل محل حالة «غير منشور» أعلاه؛ التوجيه الأحدث من المالك: «أنشر الدفعة الأولى نشر انتاجي».
+
+- المسار: branch → [PR #57](https://github.com/adham-younes/agentnexos/pull/57) → squash إلى `main`؛ commit الإنتاج `195a3982c19f6af6bb3818ac0d17c346148221e9`.
+- المشروع `compute-the-platform-to-build` / `prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf`، الفريق `team_FWfSZ1vGknqWNQ52Y4bmoHlU`، target `production`، deployment `dpl_8nvhBPTZaDC88ioJmrMtqpeRMXW8`، الحالة READY. نجح بناء Vercel وفحص TypeScript المضمن. [النشر](https://vercel.com/adhamlouxors-projects/compute-the-platform-to-build/8nvhBPTZaDC88ioJmrMtqpeRMXW8).
+- كان alias `agynexa.si` مثبتًا يدويًا على `dpl_CjmYmWZyh7Kny7tAUBRRveCaBvA6` رغم وجود نشر main أحدث. أُسند إلى النشر الجديد بعد READY، وأكد استعلام alias الارتباط الجديد. لم تُغيّر DNS أو الأسرار أو البيانات.
+- جولة تحقق إنتاجية واحدة على `https://agynexa.si`: 12 حالة للرئيسية و/start باللغتين عند 390/1440/320px؛ 20 تحقق تنقل/لغة/قائمة/تركيز؛ 36 صفحة عامة مع canonical وog:url وhreflang صحيح ودون نطاق Vercel في metadata. sitemap وrobots صحيحان، والدخول والخاص خارج sitemap، وOG PNG متاحة. لا overflow أو صور مكسورة أو pageerrors. الموجز باللغتين يُنزّل الملف الصحيح ويجهز mailto إلى البريد المطلوب بلا POST أو إرسال تلقائي؛ التركيز وreduced motion صحيحان.
+- لا اختبارات إضافية خارج الدفعة، ولا تسجيل حساب أو إرسال بريد حقيقي أو طلب نموذج أو كتابة قاعدة بيانات. لم تُكرر الفحوص المحلية الناجحة أو تُشغّل جولة GitHub Actions موازية.
+- الأدلة: [هوية الإصدار](../../output/batch-1-production/release.json)، [نتائج العرض وSEO](../../output/batch-1-production/results.json)، [نتائج الموجز](../../output/batch-1-production/brief-results.json)، [الرئيسية AR 1440](../../output/batch-1-production/ar-home-1440.png)، [الرئيسية EN 390](../../output/batch-1-production/en-home-390.png)، [/start AR 390](../../output/batch-1-production/ar-start-390.png)، [/start EN 1440](../../output/batch-1-production/en-start-1440.png). بقية المقاسات محفوظة في مجلد الأدلة نفسه.
+- التراجع المحدد: إعادة alias `agynexa.si` إلى `dpl_CjmYmWZyh7Kny7tAUBRRveCaBvA6` عند الحاجة؛ لم يُنفذ تراجع. سجل ما بعد النشر والأدلة محليان، بلا نشر تطبيق ثانٍ لمجرد تحديث التوثيق. انتهت الدفعة الأولى، ولا تبدأ مرحلة أخرى تلقائيًا.
