@@ -91,6 +91,7 @@ export async function POST(request: Request) {
         writer.write({ type: "text-start", id: "answer" });
         await runAgentWorkflow({ conversation,
           taskState: sessionTaskState(parsed.data.messages),
+          userStatements: parsed.data.messages.filter(message => message.role === "user").map(message => message.parts.map(part => part.text).join("\n")),
           latestRequest: parsed.data.messages.at(-1)!.parts.map(part => part.text).join("\n"),
           previousRequest: [...parsed.data.messages.slice(0, -1)].reverse().find(message => message.role === "user")?.parts.map(part => part.text).join("\n"),
           locale: parsed.data.locale, signal,

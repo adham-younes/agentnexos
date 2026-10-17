@@ -5,13 +5,14 @@ import { simulateReadableStream } from "ai";
 import { createDemoTools } from "../lib/agents/tools";
 import { classifyTask, createToolGate, demoPolicy, discoverTools, type RuntimeEvent } from "../lib/agents/policy";
 import { publicResponseConstraints } from "../lib/agents/public-boundary";
-import { reviewDesignContract } from "../lib/agents/contract";
+import { reviewDesignContract, validateAndRenderResponse } from "../lib/agents/contract";
 import { projectConversation, conversationText, contextLimits, sessionTaskState } from "../lib/agents/context";
 import { createRunJournal } from "../lib/agents/journal";
 import { runAgentWorkflow, reviewContext } from "../lib/agents/workflow";
 const executeOptions = { toolCallId: "eval", messages: [], context: {} };
 const usage = { inputTokens: { total: 10, noCache: 10, cacheRead: undefined, cacheWrite: undefined }, outputTokens: { total: 20, text: 20, reasoning: undefined } };
 function model() { return new MockLanguageModelV4({ doGenerate: async () => ({ content: [{ type: "text", text: "Proposed plan" }], finishReason: { unified: "stop", raw: undefined }, usage, warnings: [] }), doStream: async () => ({ stream: simulateReadableStream({ chunks: [{ type: "stream-start", warnings: [] }, { type: "text-start", id: "a" }, { type: "text-delta", id: "a", delta: "Reviewed plan" }, { type: "text-end", id: "a" }, { type: "finish", finishReason: { unified: "stop", raw: undefined }, usage }] }) }) }); }
+function structuredModel(value: unknown) { return new MockLanguageModelV4({ doGenerate: async () => ({ content: [{ type: "text", text: JSON.stringify(value) }], finishReason: { unified: "stop", raw: undefined }, usage, warnings: [] }) }); }
 
 test("routing bilingual task cases; history and length do not force a team", () => {
   for (const [input, expected] of [["مرحبا", "conversation"], ["Thanks", "conversation"], ["احسب ٣٠٠ × ١٢ دقيقة", "calculation"], ["Calculate workload", "calculation"], ["صمم سير عمل للمشتريات", "workflow"], ["Design a purchase review", "workflow"], ["Read Supabase documentation", "technical"], ["اقرأ توثيق تقني", "technical"]]) assert.equal(classifyTask(input), expected);
@@ -162,13 +163,13 @@ test("reviewer uses configured low sampling temperature", async () => {
 
 test("unknown external effect constrains a contextual answer without opening tools", async () => {
  for(const [locale,request] of [["en","The ERP timed out after submitting an update. Retry?"],["ar","الاتصال فصل بعد إرسال تحديث للفاتورة؛ هل أعيد الطلب؟"]] as const){
-  const provider=model(),events:RuntimeEvent[]=[],chunks:string[]=[];
+  const provider=structuredModel({mode:"unknown_write",outcome:"unknown",retryAuthorized:false,nextStep:"Reconcile the final invoice record with authoritative operation evidence.",ifUnverifiable:"If that evidence is unavailable, the outcome remains unknown; do not retry.",question:""}),events:RuntimeEvent[]=[],chunks:string[]=[];
   await runAgentWorkflow({conversation:request,latestRequest:request,locale,signal:new AbortController().signal,models:{analyst:provider,planner:provider,reviewer:provider},onPhase:()=>{},onText:text=>chunks.push(text),onEvent:event=>{events.push(event)}});
-  assert.equal(provider.doStreamCalls.length,1);assert.equal(provider.doGenerateCalls.length,0);
-  assert.match(JSON.stringify(provider.doStreamCalls[0].prompt),/unknownWriteEffect.*true/);
-  assert.match(JSON.stringify(provider.doStreamCalls[0].prompt),/externalExecution.*false/);
+  assert.equal(provider.doStreamCalls.length,0);assert.equal(provider.doGenerateCalls.length,1);
+  assert.match(JSON.stringify(provider.doGenerateCalls[0].prompt),/unknownWriteEffect.*true/);
+  assert.match(JSON.stringify(provider.doGenerateCalls[0].prompt),/externalExecution.*false/);
   assert.equal(events.some(event=>event.kind==="tool_allowed"),false);
-  assert.equal(chunks.join(""),"Reviewed plan");
+  assert.match(chunks.join(""),/outcome remains unknown/);assert.ok(events.some(event=>event.kind==="response_validated"));
  }
 });
 
@@ -183,15 +184,60 @@ test("public constraints preserve review/amendment scope without supplying canne
 });
 
 test("a missing-data amendment reaches the writer with its actual supplied context",async()=>{
- const analyst=model(),planner=model(),reviewer=model();
+ const analyst=model(),planner=model(),reviewer=structuredModel({mode:"amendment_only",title:"Missing-information step",replacement:"List the actual missing fields for the requester.",whenIncomplete:"Keep the request pending while any required field is missing.",whenComplete:"Recheck supplied fields and resume the existing review."});
  const request="Change only the missing-data step: return incomplete requests to their requester.";
  await runAgentWorkflow({conversation:"user: Owner is the operations lead; source is the request form.\nassistant: Receive, check, review.\nuser: "+request,latestRequest:request,previousRequest:"Owner is the operations lead; source is the request form.",locale:"en",signal:new AbortController().signal,models:{analyst,planner,reviewer},onPhase:()=>{},onText:()=>{}});
- assert.equal(analyst.doGenerateCalls.length,0);assert.equal(planner.doGenerateCalls.length,0);assert.equal(reviewer.doStreamCalls.length,1);
- assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/operations lead/);assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/return incomplete requests/);
+ assert.equal(analyst.doGenerateCalls.length,0);assert.equal(planner.doGenerateCalls.length,0);assert.equal(reviewer.doGenerateCalls.length,1);assert.equal(reviewer.doStreamCalls.length,0);
+ assert.match(JSON.stringify(reviewer.doGenerateCalls[0].prompt),/operations lead/);assert.match(JSON.stringify(reviewer.doGenerateCalls[0].prompt),/return incomplete requests/);
 });
 
 test("session context keeps exact user corrections and skips an oversized prior answer",()=>{
  const messages=[{role:"user",parts:[{type:"text",text:"Owner is the operations lead."}]},{role:"assistant",parts:[{type:"text",text:"x".repeat(5000)}]},{role:"user",parts:[{type:"text",text:"Correction: source is the request form. Change only the review step."}]}];
  const projected=projectConversation(messages);const state=sessionTaskState(projected);
  assert.equal(projected.length,2);assert.match(conversationText(projected),/Owner is the operations lead/);assert.deepEqual(state.correctionTurns,[2]);assert.equal(state.assistantTurnsAreProposals,true);assert.ok(conversationText(projected).length<=contextLimits.characters);
+});
+
+test("review-only final shape ends at recommendation and grounds owner/source in user facts",()=>{
+ const user="The owner is the operations lead; source of truth is the approved request form. Check item specification and quantity. End with a review recommendation.";
+ const response={mode:"review_only",owner:"operations lead",source:"approved request form",steps:[{action:"check",text:"Check item specification and quantity.",basisQuote:"Check item specification and quantity"},{action:"recommendation",text:"Prepare the review recommendation. Do not archive or send messages.",basisQuote:"End with a review recommendation"}],acceptanceCheck:"A missing quantity keeps the request pending.",question:""};
+ const text=validateAndRenderResponse(response,"review_only",[user],"en");assert.match(text,/operations lead/);assert.match(text,/Do not archive/);
+ assert.throws(()=>validateAndRenderResponse({...response,owner:"a procurement committee"},"review_only",[user],"en"));
+ assert.throws(()=>validateAndRenderResponse({...response,steps:[...response.steps,{action:"check",text:"Archive the result.",basisQuote:"review recommendation"}]},"review_only",[user],"en"));
+ assert.throws(()=>validateAndRenderResponse({...response,steps:[{...response.steps[0],text:"Require a future date matched against a catalog."},response.steps[1]]},"review_only",[user],"en"));
+});
+
+test("narrow replacement rejects a restated plan but allows warnings to preserve other steps",()=>{
+ const response={mode:"amendment_only",title:"Missing information",replacement:"List the missing fields for the requester.",whenIncomplete:"Keep the request pending.",whenComplete:"Recheck the fields. Do not change the existing acceptance check."};
+ assert.match(validateAndRenderResponse(response,"amendment_only",[],"en"),/existing acceptance check/);
+ assert.throws(()=>validateAndRenderResponse({...response,whenComplete:"1. Intake\n2. Check\n3. Archive"},"amendment_only",[],"en"));
+});
+
+test("unknown effect rejects missing-log inference and invented safe-retry support",()=>{
+ const response={mode:"unknown_write",outcome:"unknown",retryAuthorized:false,nextStep:"Check the final record with authoritative operation evidence.",ifUnverifiable:"A missing log entry does not prove failure. Keep the outcome unknown and do not retry.",question:""};
+ assert.match(validateAndRenderResponse(response,"unknown_write",[],"en"),/does not prove failure/);
+ assert.throws(()=>validateAndRenderResponse({...response,ifUnverifiable:"If no log entry exists, the update was not applied."},"unknown_write",[],"en"));
+ assert.throws(()=>validateAndRenderResponse({...response,nextStep:"Include a unique external reference so the ERP will prevent duplicates."},"unknown_write",[],"en"));
+ assert.throws(()=>validateAndRenderResponse({...response,nextStep:"Retry after verified log is absent."},"unknown_write",[],"en"));
+ assert.throws(()=>validateAndRenderResponse({...response,nextStep:"عدم وجود سجل يعني أن التعديل لم ينفذ"},"unknown_write",[],"ar"));
+ assert.match(validateAndRenderResponse({...response,nextStep:"تحقق من السجل النهائي باستخدام دليل موثوق.",ifUnverifiable:"عدم وجود سجل لا يعني أن التعديل لم ينفذ. تبقى النتيجة غير معروفة."},"unknown_write",[],"ar"),/لا يعني/);
+});
+
+test("absent-approver guidance rejects new authority/messages but allows explicit warnings",()=>{
+ const response={mode:"absent_approver",approvalStatus:"pending",substituteAuthorized:false,availableReviewWork:"Check the existing request material. Do not notify anyone or appoint a substitute.",pendingDecision:"Keep binding approval pending for the authorized approver.",question:""};
+ assert.match(validateAndRenderResponse(response,"absent_approver",[],"en"),/approval pending/);
+ assert.throws(()=>validateAndRenderResponse({...response,availableReviewWork:"Notify a governance committee."},"absent_approver",[],"en"));
+ assert.throws(()=>validateAndRenderResponse({...response,availableReviewWork:"No extra review is needed, send the order."},"absent_approver",[],"en"));
+ assert.match(validateAndRenderResponse({...response,availableReviewWork:"Review the existing message."},"absent_approver",[],"en"),/existing message/);
+});
+
+test("a factual email-inbox source is not mistaken for an email-sending action",()=>{
+ const response={mode:"review_only",owner:"operations lead",source:"email inbox",steps:[{action:"check",text:"Review the existing message.",basisQuote:"Review the existing message"},{action:"recommendation",text:"Prepare the review recommendation.",basisQuote:"review recommendation"}],acceptanceCheck:"",question:""};
+ assert.match(validateAndRenderResponse(response,"review_only",["Owner: operations lead. Source: email inbox. Review the existing message and prepare a review recommendation."],"en"),/Source: email inbox/);
+});
+
+test("invalid constrained output is rejected before any business text becomes visible",async()=>{
+ const writer=structuredModel({mode:"unknown_write",outcome:"unknown",retryAuthorized:false,nextStep:"If no log entry exists, the update was not applied.",ifUnverifiable:"Retry the invoice update.",question:""});
+ const chunks:string[]=[],events:RuntimeEvent[]=[];
+ await assert.rejects(runAgentWorkflow({conversation:"The ERP timed out after submitting an update.",latestRequest:"The ERP timed out after submitting an update.",locale:"en",signal:new AbortController().signal,models:{analyst:writer,planner:writer,reviewer:writer},onPhase:()=>{},onText:text=>chunks.push(text),onEvent:event=>{events.push(event)}}),/PUBLIC_RESPONSE_SCOPE_REJECTED/);
+ assert.equal(chunks.length,0);assert.equal(writer.doGenerateCalls.length,1);assert.ok(events.some(event=>event.kind==="response_rejected"));
 });

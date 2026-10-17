@@ -1,4 +1,4 @@
-/* Nexora composition, with the platform's neutral surfaces and emerald light. */
+/* Platform account composition: neutral surfaces and restrained emerald light. */
 .login-gateway {
   display: grid;
   grid-template-columns: minmax(0, 32.5fr) minmax(0, 67.5fr);
@@ -14,7 +14,7 @@
   flex-direction: column;
   min-width: 0;
   padding: 48px clamp(24px, 3.3vw, 52px);
-  background: #050505 url('/images/redesign/green-architecture-login.webp') 55% center / cover no-repeat;
+  background: radial-gradient(ellipse at 15% 20%, #10b98112 0%, transparent 60%), linear-gradient(135deg, #0b0b0b, #050505);
 }
 .login-gateway .login-scene::before {
   content: "";

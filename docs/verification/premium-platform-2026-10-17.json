@@ -1,0 +1,67 @@
+{
+  "status": "RELEASED_PUBLIC; TARGETED_AGENT_CORRECTION_IN_PROGRESS",
+  "production": {
+    "commit": "faf4dc63cf0f3619ebe7a71204f78009331652bb",
+    "deployment": "dpl_9h4asVmEEZaRvk6FiMme3bMgPRJ1",
+    "url": "https://agynexa.si",
+    "pullRequest": "https://github.com/adham-younes/agentnexos/pull/59",
+    "aliasVerified": true
+  },
+  "database": {
+    "migration": "20261017140344_explicit_owned_conversation_save",
+    "applied": true,
+    "historicalMigrationsReplayed": false,
+    "customerRowsReadOrReset": false
+  },
+  "publicAcceptance": {
+    "documents": 50,
+    "widths": [
+      1440,
+      390
+    ],
+    "screenshots": 100,
+    "checksPassed": 115,
+    "checksFailed": 0,
+    "basis": "Recorded production observations re-evaluated after correcting tester assumptions: private/no-store prevents shared storage; Next replaces HTML Vary; relative Location is valid. No complete browser sweep repeated.",
+    "evidence": "output/premium-platform/faf4dc63cf0f3619ebe7a71204f78009331652bb/public-acceptance-reviewed.json",
+    "limits": "Public rendering and metadata do not prove account isolation or model semantics."
+  },
+  "agentAcceptance": {
+    "transportAndModelRoutingVerified": true,
+    "exactSyntheticRunsOnly": 5,
+    "arithmetic": "PASS",
+    "semanticScopeAndGrounding": "4 constrained cases require correction; not approved",
+    "correction": "Typed internal response constraints and final-only user-grounded generation are in progress. No canned business answers."
+  },
+  "accountAcceptance": {
+    "controlledFixtureA": "Created and SQL-confirmed for bounded own-account tests",
+    "fixtureB": "Not created: provider email sending rate limit",
+    "emailDeliveryPkceRecovery": "NOT_VERIFIED",
+    "positiveHistory": "PASS: own account sign-in/refresh, explicit UI save/list/reopen/rename/export/delete, cascade, idempotency/stale conflicts, guest/Origin/account-binding rejection and signout state clearing.",
+    "twoLiveAuthenticatedIdentities": "BLOCKED_PROVIDER_EMAIL_LIMIT",
+    "fixtureCleanup": "Exact fixture UUID+alias deleted; exact ID absence confirmed. No customer account touched.",
+    "privateCleanup": "8 protected private files removed;2 generic drivers sanitized; retained-text scan reported no embedded owner mailbox."
+  },
+  "imagery": "Approved homepage cover only; sector photography withdrawn and old login decoration being removed. No people images.",
+  "testPolicy": "No local or Preview tests/builds/lint/typecheck. Vercel production build and bounded production-only acceptance.",
+  "wrongAliasAttempt": "Partial original run reached prior deployment, was aborted and preserved separately; it is not validation of the new release.",
+  "secrets": "No credentials, auth states, tokens or personal test aliases stored in this record.",
+  "publicFlows": {
+    "brief": "16 checks passed AR/EN after driver hydration-readiness correction: complete generate/copy/download, manual-mailto semantics, clear and engagement query synchronization.",
+    "apiWrites": 0,
+    "pageRuntimeErrors": 0,
+    "mobileMenu": "Opens visually; initial keyboard focus handoff failed. Source diagnosis/fix in progress; dependent focus-trap/Escape/link-close checks not yet run.",
+    "heroExplore": "Native anchor passed."
+  },
+  "visualReview": {
+    "imagesInspected": 58,
+    "logicalRoutes": 25,
+    "widths": [
+      1440,
+      390
+    ],
+    "knownException": "Existing login decorative photo, removed in pending correction.",
+    "otherObservedBlockers": 0,
+    "evidence": "/tmp/agynexa-upgrade-implementation-20261017/production-visual-review-faf4dc63.json"
+  }
+}
