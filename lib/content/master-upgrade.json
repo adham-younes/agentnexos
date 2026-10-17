@@ -486,27 +486,27 @@
       "sections": [
         {
           "heading": "موجز سير العمل",
-          "body": "قالب لتحديد الهدف وبداية الطلب والبيانات والخطوات ونقطة اعتماد الإنسان. استخدم أسماء وبيانات افتراضية عند مشاركته عبر القنوات العامة."
+          "body": "قالب لتحديد الهدف وبداية الطلب والبيانات والخطوات ونقطة اعتماد الإنسان. استخدم أسماء وبيانات افتراضية عند مشاركته عبر القنوات العامة.",
+          "link": {
+            "label": "نزّل قالب موجز سير العمل",
+            "path": "/downloads/agentnexos/workflow-brief-ar.md"
+          }
         },
         {
-          "heading": "زر",
-          "body": "نزّل قالب موجز سير العمل"
+          "heading": "خطة قبول التجربة",
+          "body": "قالب لتسجيل سيناريو الاختبار والنتيجة المتوقعة ودليل النجاح والحالات التي تمنع التشغيل.",
+          "link": {
+            "label": "نزّل قالب خطة القبول",
+            "path": "/downloads/agentnexos/acceptance-plan-ar.md"
+          }
         },
         {
-          "heading": "خطة القبول",
-          "body": "قالب لتسجيل سيناريو الاختبار والنتيجة المتوقعة ودليل النجاح والحالات التي تمنع التشغيل."
-        },
-        {
-          "heading": "زر",
-          "body": "نزّل قالب خطة القبول"
-        },
-        {
-          "heading": "مساعد التصميم",
-          "body": "إذا لم يكن لديك مخطط أولي، تساعدك التجربة العامة على تنظيم وصف العملية وإظهار الأسئلة الناقصة."
-        },
-        {
-          "heading": "زر",
-          "body": "افتح مساعد تصميم العمليات"
+          "heading": "مساعد تصميم العمليات",
+          "body": "إذا لم يكن لديك مخطط أولي، تساعدك التجربة العامة على تنظيم وصف العملية وإظهار الأسئلة التي تحتاج إجابة.",
+          "link": {
+            "label": "افتح مساعد تصميم العمليات",
+            "path": "agentnexos"
+          }
         }
       ],
       "seoTitle": "قوالب سير العمل والقبول · AGYNEXA",
@@ -648,44 +648,78 @@
       "intro": "يمكن البدء بتحديد العملية، أو بتجربة محدودة إذا كان النطاق واضحًا. يوضح كل عرض ما سنبنيه، وكيف سيُختبر، وما يحتاجه التشغيل بعد التسليم.",
       "sections": [
         {
+          "id": "discovery",
           "heading": "تحديد النطاق",
-          "body": "للفرق التي تعرف موضع التعطل وتحتاج تحويله إلى متطلبات قابلة للتنفيذ. يشمل تحليل عملية واحدة، وخريطة البيانات والأدوار، ومعايير تجربة أولية."
+          "body": "للفرق التي تعرف موضع التعطل وتحتاج تحويله إلى متطلبات قابلة للتنفيذ.",
+          "includes": [
+            "تحليل عملية واحدة وخطواتها الحالية.",
+            "تحديد البيانات والأنظمة والأدوار.",
+            "توثيق الافتراضات والأسئلة المفتوحة.",
+            "إعداد نطاق تجربة ومعايير قبول أولية."
+          ],
+          "outcome": "موجز تنفيذي يحدد ما يستحق الاختبار وما يحتاج حسمًا قبل البناء.",
+          "link": {
+            "label": "ناقش مرحلة تحديد النطاق",
+            "path": "start?engagement=discovery"
+          }
         },
         {
-          "heading": "الزر",
-          "body": "ناقش مرحلة تحديد النطاق"
-        },
-        {
+          "id": "pilot",
           "heading": "تجربة محددة",
-          "body": "لاختبار حالة استخدام واحدة قبل التوسع. تشمل مسارًا محدودًا في بيئة اختبار، وحالات قبول، وتقريرًا يوضح النتائج والقيود."
+          "body": "لاختبار حالة استخدام واحدة قبل توسيع الاستثمار أو الصلاحيات.",
+          "includes": [
+            "مسارًا محدودًا في بيئة اختبار.",
+            "التكاملات المتفق عليها ضمن نطاق التجربة.",
+            "حالات قبول تشمل الاستخدام المعتاد والاستثناءات.",
+            "تقريرًا بالنتائج والقيود والخطوة المقترحة."
+          ],
+          "outcome": "أدلة تساعد على اتخاذ قرار الانتقال إلى التشغيل أو تعديل النطاق.",
+          "link": {
+            "label": "ناقش تجربة محددة",
+            "path": "start?engagement=pilot"
+          }
         },
         {
-          "heading": "الزر",
-          "body": "ناقش تجربة محددة"
-        },
-        {
+          "id": "production",
           "heading": "تنفيذ تشغيلي",
-          "body": "لتحويل النطاق الذي تم التحقق منه إلى نظام يعمل ضمن بيئة وصلاحيات متفق عليها. يشمل التكاملات المطلوبة والتوثيق والمراقبة وإجراءات التسليم وفق العرض."
+          "body": "لتحويل نطاق تم التحقق منه إلى نظام يعمل ضمن بيئة وصلاحيات متفق عليها.",
+          "includes": [
+            "بناء المسار والتكاملات المحددة في العرض.",
+            "إعداد الأدوار والموافقات المطلوبة.",
+            "المراقبة ومعالجة حالات الفشل.",
+            "توثيق التشغيل والتسليم."
+          ],
+          "outcome": "نظام يُسلَّم وفق معايير القبول، مع توضيح مسؤوليات التشغيل والحدود المعروفة.",
+          "link": {
+            "label": "ناقش متطلبات التنفيذ",
+            "path": "start?engagement=production"
+          }
         },
         {
-          "heading": "الزر",
-          "body": "ناقش متطلبات التنفيذ"
-        },
-        {
+          "id": "support",
           "heading": "تشغيل وتحسين",
-          "body": "لمتابعة نظام منشور ومراجعة جودته وتكلفته وإجراء تحسينات محددة. تُتفق حصة العمل ومواعيد المتابعة وحدود الدعم مسبقًا."
+          "body": "لمتابعة نظام منشور ومراجعة جودته وتكلفته وإجراء تحسينات محددة.",
+          "includes": [
+            "مراجعة دورية للنتائج والمشكلات.",
+            "صيانة ضمن نطاق متفق عليه.",
+            "تحسينات مرتبة حسب أثرها.",
+            "توثيق التغييرات ونتائج التحقق."
+          ],
+          "outcome": "متابعة منظمة بحصة عمل ومواعيد مراجعة وحدود دعم واضحة.",
+          "link": {
+            "label": "ناقش احتياجات المتابعة",
+            "path": "start?engagement=support"
+          }
+        }
+      ],
+      "faq": [
+        {
+          "question": "كيف يُحدد السعر؟",
+          "answer": "يُحدد السعر بعد مراجعة نطاق العملية والتكاملات ومتطلبات التشغيل والدعم. يوضح العرض تكاليف النماذج والاستضافة والخدمات الخارجية، وما يشمله التنفيذ وما يُسعّر بصورة منفصلة."
         },
         {
-          "heading": "الزر",
-          "body": "ناقش احتياجات المتابعة"
-        },
-        {
-          "heading": "السعر",
-          "body": "يُحدَّد السعر بعد مراجعة النطاق. تُوضح تكاليف النماذج والاستضافة والخدمات الخارجية في العرض، ولا تُعامل على أنها استخدام غير محدود."
-        },
-        {
-          "heading": "الفقرة الختامية",
-          "body": "يمكن إضافة تكاملات أو مصادر معرفة أو متطلبات وصول خاصة ضمن نطاق منفصل. لا تحتاج شراء جميع المراحل مسبقًا لبدء المناقشة."
+          "question": "هل يمكن توسيع النطاق لاحقًا؟",
+          "answer": "نعم. يمكن إضافة تكاملات أو مصادر معرفة أو عمليات أخرى بعد مراجعة المتطلبات وأثرها على التكلفة والتشغيل. لا تحتاج إلى الالتزام بجميع المراحل لبدء المناقشة."
         }
       ],
       "seoTitle": "باقات العمل · AGYNEXA",
@@ -1187,27 +1221,27 @@
       "sections": [
         {
           "heading": "Workflow brief",
-          "body": "A template for the goal, trigger, data, steps, and human approval point. Use fictional names and data when sharing through public channels."
+          "body": "A template for the goal, trigger, data, steps, and human approval point. Use fictional names and data when sharing through public channels.",
+          "link": {
+            "label": "Download the workflow brief",
+            "path": "/downloads/agentnexos/workflow-brief-en.md"
+          }
         },
         {
-          "heading": "Button",
-          "body": "Download the workflow brief"
+          "heading": "Pilot acceptance plan",
+          "body": "A template for test scenarios, expected outcomes, evidence of success, and conditions that prevent release.",
+          "link": {
+            "label": "Download the acceptance plan",
+            "path": "/downloads/agentnexos/acceptance-plan-en.md"
+          }
         },
         {
-          "heading": "Acceptance plan",
-          "body": "A template for test scenarios, expected outcomes, evidence of success, and conditions that prevent release."
-        },
-        {
-          "heading": "Button",
-          "body": "Download the acceptance plan"
-        },
-        {
-          "heading": "Design assistant",
-          "body": "If you do not yet have a workflow outline, the public assistant can help organize the process and identify missing questions."
-        },
-        {
-          "heading": "Button",
-          "body": "Open the workflow design assistant"
+          "heading": "Workflow design assistant",
+          "body": "If you do not yet have a workflow outline, the public assistant can help organize the process and identify questions that need answers.",
+          "link": {
+            "label": "Open the workflow design assistant",
+            "path": "agentnexos"
+          }
         }
       ],
       "seoTitle": "Workflow and acceptance templates · AGYNEXA",
@@ -1349,44 +1383,78 @@
       "intro": "Start by defining the process, or with a limited pilot if the scope is clear. Each proposal explains what will be built, how it will be tested, and what operation requires after handover.",
       "sections": [
         {
+          "id": "discovery",
           "heading": "Discovery",
-          "body": "For teams that know where work gets stuck and need to turn that problem into implementable requirements. Covers one process, its data and responsibilities, and initial acceptance criteria."
+          "body": "For teams that know where work gets stuck and need to turn that problem into implementable requirements.",
+          "includes": [
+            "Review of one process and its current steps.",
+            "Identification of data, systems, and responsibilities.",
+            "Documented assumptions and open questions.",
+            "A pilot scope and initial acceptance criteria."
+          ],
+          "outcome": "A practical brief identifying what is worth testing and what needs to be resolved before development.",
+          "link": {
+            "label": "Discuss discovery",
+            "path": "start?engagement=discovery"
+          }
         },
         {
-          "heading": "Button",
-          "body": "Discuss discovery"
-        },
-        {
+          "id": "pilot",
           "heading": "Scoped pilot",
-          "body": "Test one use case before expanding. Includes a limited workflow in a test environment, acceptance cases, and a report on results and constraints."
+          "body": "Test one use case before expanding investment or permissions.",
+          "includes": [
+            "A limited workflow in a test environment.",
+            "Integrations agreed within the pilot scope.",
+            "Acceptance cases covering routine use and exceptions.",
+            "A report on results, constraints, and the proposed next step."
+          ],
+          "outcome": "Evidence to support a decision to proceed to operation or revise the scope.",
+          "link": {
+            "label": "Discuss a pilot",
+            "path": "start?engagement=pilot"
+          }
         },
         {
-          "heading": "Button",
-          "body": "Discuss a pilot"
-        },
-        {
+          "id": "production",
           "heading": "Production delivery",
-          "body": "Turn a validated scope into a system operating within agreed environments and permissions. Includes the specified integrations, documentation, monitoring, and handover procedures."
+          "body": "Turn a validated scope into a system operating within agreed environments and permissions.",
+          "includes": [
+            "The workflow and integrations specified in the proposal.",
+            "Required roles and approvals.",
+            "Monitoring and failure handling.",
+            "Operating documentation and handover."
+          ],
+          "outcome": "A system delivered against acceptance criteria, with operating responsibilities and known limits documented.",
+          "link": {
+            "label": "Discuss delivery requirements",
+            "path": "start?engagement=production"
+          }
         },
         {
-          "heading": "Button",
-          "body": "Discuss delivery requirements"
-        },
-        {
+          "id": "support",
           "heading": "Ongoing improvement",
-          "body": "Review the quality and cost of a deployed system and make defined improvements. Work allocation, review frequency, and support boundaries are agreed in advance."
+          "body": "Review the quality and cost of a deployed system and make defined improvements.",
+          "includes": [
+            "Periodic review of results and issues.",
+            "Maintenance within an agreed scope.",
+            "Improvements prioritized by impact.",
+            "Documented changes and verification results."
+          ],
+          "outcome": "An organized support arrangement with defined work allocation, review dates, and support boundaries.",
+          "link": {
+            "label": "Discuss ongoing support",
+            "path": "start?engagement=support"
+          }
+        }
+      ],
+      "faq": [
+        {
+          "question": "How is pricing determined?",
+          "answer": "Pricing follows a review of the workflow, integrations, operating requirements, and support needs. The proposal identifies model, hosting, and external service costs, along with what is included and what is priced separately."
         },
         {
-          "heading": "Button",
-          "body": "Discuss ongoing support"
-        },
-        {
-          "heading": "Pricing",
-          "body": "Quoted after scope review. Model, hosting, and external service costs are identified in the proposal; they are not presented as unlimited usage."
-        },
-        {
-          "heading": "Closing",
-          "body": "Additional integrations, knowledge sources, or access requirements can be scoped separately. You do not need to commit to every stage to begin a discussion."
+          "question": "Can the scope expand later?",
+          "answer": "Yes. Additional integrations, knowledge sources, or workflows can be scoped after reviewing their requirements and effect on cost and operation. You do not need to commit to every stage to begin a discussion."
         }
       ],
       "seoTitle": "Engagement options · AGYNEXA",

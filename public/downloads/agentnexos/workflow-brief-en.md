@@ -1,4 +1,5 @@
 # Workflow brief
+
 Use fictional data when sharing this file through a public channel.
 
 Goal:

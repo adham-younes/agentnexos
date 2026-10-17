@@ -99,3 +99,22 @@ html:lang(ar){--public-reading-size:1.125rem;--public-reading-leading:1.8}
 .upgrade-solutions .solution-scope{font-size:var(--public-reading-size);line-height:var(--public-reading-leading);border-inline-start:2px solid #10b981;padding-inline-start:14px;margin-block-start:24px;color:#ebebeb;max-width:76ch}
 .solution-detail .solution-boundary .editorial-prose{border-inline-start:2px solid #10b981;padding-inline-start:20px}
 @media(max-width:767px){.solutions-grid{grid-template-columns:minmax(0,1fr);gap:20px}.solution-choice{padding:24px}.upgrade-solutions .solution-choice h2{font-size:26px}.solution-detail .solution-boundary .editorial-prose{padding-inline-start:16px}}
+
+/* Engineering engagements and downloadable resources share the existing tokens. */
+.engagement-grid,.resource-downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.engagement-card,.resource-file{min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:32px;border:1px solid #ffffff20;border-radius:18px;background:#0b0b0b}
+.upgrade-offerings :is(.engagement-card,.resource-file) h2{font-size:28px;line-height:1.4;margin-block-end:18px}
+.upgrade-offerings .engagement-label{color:#ebebeb;font-weight:600;margin-block:24px 10px}
+.engagement-card ul{list-style:disc;padding-inline-start:22px;margin:0}
+.engagement-card li+li{margin-block-start:8px}
+.engagement-outcome{margin-block-end:24px}
+.engagement-action{margin-block-start:auto;width:100%}
+.upgrade-offerings .upgrade-button{max-width:100%;white-space:normal}
+.engagement-questions{margin-block-start:48px}
+.resource-file>p:not(.resource-type){margin-block-end:28px}
+.resource-file .upgrade-button{margin-block-start:auto}
+.upgrade-offerings .resource-type{font-size:var(--public-note-size);color:#10b981;margin-block-end:20px}
+.resource-assistant{margin-block-start:48px}
+.upgrade-offerings :is(li,a){overflow-wrap:break-word}
+.upgrade-brief .brief-optional{font-size:var(--public-note-size);color:#bfbfbf;margin-inline-start:8px;font-weight:400}
+@media(max-width:767px){.engagement-grid,.resource-downloads{grid-template-columns:minmax(0,1fr);gap:20px}.engagement-card,.resource-file{padding:24px}.upgrade-offerings :is(.engagement-card,.resource-file) h2{font-size:26px}.engagement-questions,.resource-assistant{margin-block-start:32px}}

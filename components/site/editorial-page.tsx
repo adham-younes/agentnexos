@@ -4,6 +4,7 @@ import { CyberEffects } from '@/components/cyber/effects';
 import { CyberFooter } from '@/components/cyber/footer';
 import { masterPage } from '@/lib/content/master';
 import { contactEmail } from '@/lib/site';
+import { publicCopy } from '@/lib/content/public-copy';
 import type { Locale } from '@/lib/i18n/config';
 import { PageHeader } from './page-header';
 
@@ -55,6 +56,7 @@ export function EditorialPage({ page, locale }: { page: EditorialRoute; locale: 
                     <div className="upgrade-actions">
                         {copy.primaryAction && <Link className="upgrade-button" href={`/${locale}/${copy.primaryAction.path}`}>{copy.primaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
                         {copy.secondaryAction && <Link className="upgrade-text-link" href={`/${locale}/${copy.secondaryAction.path}`}>{copy.secondaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
+                        {page === 'services' && <Link className="upgrade-text-link" href={`/${locale}/engagements`}>{publicCopy[locale].engagementOptions}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
                         {page === 'about' && <a className="upgrade-text-link" href={`mailto:${contactEmail}`} dir="ltr"><bdi>{contactEmail}</bdi></a>}
                     </div>
                 </div>

@@ -7,6 +7,11 @@ export const publicCopy = {
         about: 'من نحن',
         allSolutions: 'جميع الحلول',
         solutionScope: 'نطاق مقترح لمشروع مخصص',
+        engagementOptions: 'باقات العمل',
+        engagementType: 'نوع التعاون',
+        optional: 'اختياري',
+        includes: 'يشمل:',
+        outcome: 'النتيجة:',
         footerDescription: 'AGYNEXA لهندسة أنظمة الوكلاء وأتمتة العمليات. نحدد سير العمل والبيانات والصلاحيات قبل الانتقال إلى التنفيذ.',
     },
     en: {
@@ -16,6 +21,11 @@ export const publicCopy = {
         about: 'About',
         allSolutions: 'All solutions',
         solutionScope: 'Proposed scope for a custom project',
+        engagementOptions: 'Engagement options',
+        engagementType: 'Engagement type',
+        optional: 'Optional',
+        includes: 'Includes:',
+        outcome: 'Outcome:',
         footerDescription: 'AGYNEXA designs AI agent systems and workflow automation. We define the workflow, data, and permissions before moving into implementation.',
     },
 } as const;
