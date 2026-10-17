@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-17",
+  "timezone": "Africa/Cairo",
+  "status": "REVIEW_AND_PROPOSAL_DELIVERED_WITH_OPEN_AVAILABILITY_BLOCKER",
+  "origin": "https://agynexa.si",
+  "commit": "fe6b70fb12aa6f204248ac4cd34544c181c84edd",
+  "authorization": "Owner-requested holistic production/repository/content/design/database/auth/availability review; current deliverable is diagnosis plus a proposed update, not a published redesign.",
+  "coverage": {
+    "localizedDocuments": 38,
+    "logicalRoutes": 19,
+    "desktopDocumentsVisuallyInspected": 38,
+    "completeDesktopCompositions": 37,
+    "incompleteCaptureAmbiguities": 1,
+    "representativeMobileCompositions": 5,
+    "editorialPages": 38,
+    "sourceMilestonesMapped": 10,
+    "originalFindingsMapped": 21,
+    "liveSupabaseReadOnlyCalls": 5,
+    "liveTablesRlsChecked": 5,
+    "fictionalLoginRejectionAttempts": 1,
+    "previousLiveAssistantRequests": 2,
+    "allMobileCombinationsClaimed": false,
+    "authenticatedUserRoundtripClaimed": false
+  },
+  "mainFindings": [
+    {
+      "priority": "P1",
+      "area": "Availability",
+      "status": "BLOCKED_ON_AFFECTED_RESPONSE",
+      "finding": "Site Unavailable is documented in a separate NEXA cloud browser but not reproduced in current public browser sessions. Failed-response headers are unavailable; the owner cannot provide them, and advanced Vercel request metrics are plan-restricted. Vercel lists unexpired certificates for the apex and www domains. No cause or fix claimed; do not repeat the same owner evidence request."
+    },
+    {
+      "priority": "P1",
+      "area": "Account disclosure",
+      "status": "CONFIRMED_SOURCE_GAP",
+      "finding": "Published privacy notice describes demo/brief/usage data but omits the implemented account signup, confirmation, recovery and session flow; factual configuration details must be established before legal text changes."
+    },
+    {
+      "priority": "P1",
+      "area": "Database lifecycle",
+      "status": "CONFIRMED_LIVE_GAPS",
+      "finding": "Database scheduling is absent and retention is request-triggered. Applied migration history and repository migrations require a reconciled baseline before schema or recovery work."
+    },
+    {
+      "priority": "P2",
+      "area": "Login social metadata",
+      "status": "CONFIRMED_IN_PRODUCTION",
+      "finding": "Account creation is offered in the page while OpenGraph/Twitter still describe invited client workspace access."
+    },
+    {
+      "priority": "P2",
+      "area": "Visual composition",
+      "status": "CONFIRMED_LIVE",
+      "finding": "Platform/industries/security use an unbalanced three-plus-one card arrangement. Mobile assistant renders long starters in two columns due to CSS specificity."
+    },
+    {
+      "priority": "P2",
+      "area": "Editorial content",
+      "status": "PROPOSED_UPGRADE",
+      "finding": "Current content is careful but abstract and repetitive about scope/review/permissions. Show buyer problems, concrete deliverables and labeled fictional examples."
+    },
+    {
+      "priority": "P2",
+      "area": "Strategy tracking",
+      "status": "CONFIRMED_SOURCE_GAP",
+      "finding": "Phase status table remains pending despite implemented public-site releases; update phase evidence without implying enterprise readiness."
+    }
+  ],
+  "confirmedStrengths": [
+    "Fresh public page sessions render in both languages.",
+    "Black/emerald identity and Arabic marketing typography are readable and worth preserving.",
+    "Supabase is ACTIVE_HEALTHY, all five public tables use RLS, effective anonymous access is denied, and ownership constraints are present.",
+    "Live fictional login was rejected correctly with a clear UI error.",
+    "Earlier bilingual assistant requests and brief/download journeys completed."
+  ],
+  "designProposal": {
+    "status": "PROPOSED_NOT_IMPLEMENTED",
+    "intent": "A clearer, more professional bilingual site that explains concrete operational work and shows reviewable outputs while preserving truthful capability boundaries.",
+    "direction": "Retain black/emerald palette and strong editorial rows. Make a labeled fictional procurement workflow and its reviewable output the central visual story. Vary composition by each page’s purpose.",
+    "heroArabic": {
+      "eyebrow": "AGYNEXA · هندسة أنظمة الوكلاء وأتمتة العمليات",
+      "title": "وكلاء ذكاء اصطناعي للمهام التي تتكرر كل يوم.",
+      "body": "طلب شراء يعود لنقص التفاصيل. معلومة موزعة بين ملفات. فاتورة تحتاج متابعة. نبدأ بعملية واحدة من عمل فريقك، ثم نصمّم ما يمكن للوكيل تجهيزه، وما يحتاج قرارًا من المسؤول، وكيف تُراجع النتيجة.",
+      "primaryCTA": {
+        "label": "ناقش مشروعك",
+        "destination": "/ar/start",
+        "support": "ابدأ بإعداد موجز تراجعه وترسله بنفسك."
+      },
+      "secondaryCTA": {
+        "label": "جرّب تصميم عملية",
+        "destination": "/ar/agentnexos"
+      },
+      "demoNotice": "المساعد العام لتخطيط العملية ببيانات افتراضية. ربط أنظمتك وتنفيذ الإجراءات يحتاجان مشروعًا مستقلًا."
+    },
+    "heroEnglish": {
+      "eyebrow": "AGYNEXA · AI agent systems and workflow automation",
+      "title": "AI agents for the work your team repeats every day.",
+      "body": "Purchase requests returned for missing details. Information scattered across files. Invoices waiting for follow-up. We start with one process, then define what an agent can prepare, where a person decides, and how the result will be checked.",
+      "primaryCTA": {
+        "label": "Discuss your project",
+        "destination": "/en/start",
+        "support": "Prepare a brief to review and send yourself."
+      },
+      "secondaryCTA": {
+        "label": "Try designing a workflow",
+        "destination": "/en/agentnexos"
+      },
+      "demoNotice": "The public assistant plans workflows using fictional data. System connections and live actions require a separate project."
+    },
+    "pageTreatment": [
+      "Home: buyer problem, worked workflow, output preview, deliverables, methodology, founder and next step.",
+      "Solutions: a different inspectable example artifact for each workflow.",
+      "Services/methodology/about: preserve editorial rows; reduce repeated narrative and clarify distinct purpose.",
+      "Platform/industries/security: balanced structural diagrams or rows; put boundary notes in contextual full-width text.",
+      "Resources: preview the real downloadable templates before download.",
+      "Engagements: concise stage comparison before detailed scope cards.",
+      "Legal: linear reading with fact-backed account data explanation.",
+      "Start: describe local preparation/manual sending before the first field.",
+      "Login: state optional account purpose and align visible/social copy.",
+      "Assistant: readable one-column phone starters, clearer hierarchy, and future typed output only when backend supports it."
+    ],
+    "firstImplementationPackage": [
+      "Unify account wording and social metadata using actual current capability.",
+      "Fix confirmed mobile/grid composition issues and place brief handoff explanation before fields.",
+      "Draft a revised homepage and one workflow detail with a clearly fictional output preview."
+    ],
+    "laterPackages": [
+      "Apply approved editorial/visual treatment to all supporting pages.",
+      "Reconcile migration baseline and choose approved retention scheduling before data/backend expansion.",
+      "Validate real-account/email/session and cross-user isolation with an authorized test setup; do not infer success from rejection-path checks."
+    ]
+  },
+  "writingApproach": "Professional, direct Arabic/English editing guided by current brand facts and owner preferences. No detector guarantees, manufactured metrics or testimonials. Conflicting low-quality rewriting settings are not used.",
+  "notVerified": [
+    "Successful real account creation, confirmation, login, recovery and session lifecycle.",
+    "SMTP/MFA/redirect configuration, mailbox delivery, backup/PITR or restore rehearsal.",
+    "Cross-user runtime authorization/isolation using two authenticated test clients.",
+    "Connected enterprise tools, approvals and resumable customer execution.",
+    "Root cause/fix of Site Unavailable in the affected separate NEXA runtime.",
+    "One English customer-operations complete-page capture remains ambiguous after its bounded correction."
+  ],
+  "reports": {
+    "repository": "repository-audit.json",
+    "content": "content-review.json",
+    "visual": "visual-review.json",
+    "supabase": "live-supabase-audit.json",
+    "auth": "live-auth-review.json",
+    "vercel": "live-vercel-review.json"
+  },
+  "sessionScreenshots": {
+    "manifest": "/tmp/agynexa-strategy-review-20261017/visual/captures-all.json",
+    "platform": "/tmp/agynexa-strategy-review-20261017/post-restart-platform-1440.png",
+    "assistant": "/tmp/agynexa-strategy-review-20261017/post-restart-agentnexos-390.png",
+    "ephemeral": true
+  },
+  "changes": "Review documents only; no application source, production data/schema, DNS, security policy, billing or deployment changed.",
+  "documentationResolution": {
+    "status": "UPDATED_IN_WORKTREE",
+    "changes": "Execution phase table now records partial implemented/live evidence and remaining gates; no milestone is declared fully closed.",
+    "file": "../../upgrade/EXECUTION-STATUS.md"
+  },
+  "ownerSteering": {
+    "availability": "Paused by owner after this audit; do not continue diagnostic requests or recommend a plan upgrade.",
+    "upgradeBrief": "../../upgrade/2026-10-17-competitive-upgrade.json",
+    "latestConstraints": "Premium Inception-inspired imagery within current colors/template; no rejected hero CTAs; natural unframed chat; remove canned business replies; broaden sectors and separate user conversations."
+  }
+}

@@ -126,3 +126,8 @@
 @media (prefers-reduced-motion: reduce) {
   .login-gateway *, .login-gateway *::before, .login-gateway *::after { transition: none !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+.login-gateway .login-password-note { margin-block: -10px 20px; color: #aaa; font-size: 13px; line-height: 1.8; }
+.login-gateway .login-recovery-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 20px; color: #10b981; font-size: 12px; line-height: 1.8; }
+.login-gateway .login-recovery-actions button { text-decoration: underline; text-underline-offset: 4px; }
+.login-gateway .login-submit:disabled { cursor: not-allowed; }

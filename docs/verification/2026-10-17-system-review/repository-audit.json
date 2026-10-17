@@ -1,0 +1,577 @@
+{
+  "review_date": "2026-10-17",
+  "repository": "/workspace/agentnexos/",
+  "commit": "fe6b70fb12aa6f204248ac4cd34544c181c84edd",
+  "scope": "Source-only application/repository architecture review against adopted strategy; analysis/proposal only. Existing public production evidence reused; no new tests, browser scans, installs, builds, production queries or application edits.",
+  "governing_references": [
+    "/workspace/agentnexos/AGENTS.md:5",
+    "/workspace/agentnexos/docs/upgrade/PRODUCTION-ENGINEERING.md:7",
+    "/workspace/agentnexos/docs/upgrade/AGYNEXA-CODEX-MASTER-UPGRADE-PLAN-AR-EN.md:103",
+    "/workspace/agentnexos/docs/upgrade/EXECUTION-STATUS.md:26"
+  ],
+  "skills_applied": [
+    "Supabase (source-only auth/schema/RLS security checklist)",
+    "Supabase Postgres best practices (source-only schema and query review)"
+  ],
+  "production_linkage": {
+    "basis": "Reused docs/verification/platform-review-2026-10-17.json, which says metadata was verified earlier in the owning session; this task did not independently re-query Vercel.",
+    "deployment": "dpl_DAyGmo5sjZWkF2ppWbiZg7JALwYV",
+    "origin": "https://agynexa.si",
+    "state": "READY / production",
+    "source_matches_current_checkout": true
+  },
+  "architecture": [
+    {
+      "layer": "Public marketing",
+      "current": "Next.js App Router locale routes; route metadata/revision adapters; adopted master JSON; dedicated editorial, solution and engagement renderers. Legal body deliberately stays in historical publicPages source.",
+      "evidence": [
+        "/workspace/agentnexos/app/[locale]/[page]/page.tsx:5",
+        "/workspace/agentnexos/lib/content/revision.ts:13",
+        "/workspace/agentnexos/components/site/public-page.tsx:20",
+        "/workspace/agentnexos/components/site/public-page.tsx:26"
+      ]
+    },
+    {
+      "layer": "Commercial brief",
+      "current": "Browser-memory form, engagement query whitelist, Markdown export/copy and mailto draft. No server submission, leads table or automatic mail sending.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/project-brief.tsx:36",
+        "/workspace/agentnexos/components/site/project-brief.tsx:56",
+        "/workspace/agentnexos/lib/project-brief.ts:34"
+      ]
+    },
+    {
+      "layer": "Public assistant",
+      "current": "Same-origin bounded API; HMAC-IP atomic quota RPC; metadata journal; task classification; deterministic tool allowlist; fixed references; Groq analyst/planner/reviewer; Mastra request-scoped steps; text stream/export.",
+      "evidence": [
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:47",
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:64",
+        "/workspace/agentnexos/lib/agents/workflow.ts:35",
+        "/workspace/agentnexos/lib/agents/tools.ts:23",
+        "/workspace/agentnexos/lib/ai/models.ts:12"
+      ]
+    },
+    {
+      "layer": "Auth",
+      "current": "Supabase browser signup/signin/reset/update-password plus server code exchange and account badge/signout. Auth does not gate public assistant API or grant enterprise access; that matches current declared scope. No full account lifecycle verified.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/login-gateway.tsx:38",
+        "/workspace/agentnexos/app/[locale]/auth/callback/route.ts:13",
+        "/workspace/agentnexos/components/auth/account-status.tsx:18",
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:47"
+      ]
+    },
+    {
+      "layer": "Data and RLS",
+      "current": "Five current agentnexos tables represented in Oct13 baseline: demo requests/limits, profiles, conversations, messages. Demo records/RPC service-only; own-user policies on account tables; composite conversation-owner FK. Active API saves run metadata, not conversations. Legacy generic organization schema remains in older migration history, not evidence that tenant runtime is deployed.",
+      "evidence": [
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:9",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:90",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:100",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:120",
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:80"
+      ]
+    },
+    {
+      "layer": "Inactive enterprise prototype",
+      "current": "Legacy coordinator/approvals/memory/audit/static lookup and action receipts are not imported by active app; chat/approvals/telemetry APIs return fail-closed 503. They must not be advertised as connected enterprise execution.",
+      "evidence": [
+        "/workspace/agentnexos/lib/ai/coordinator.ts:1",
+        "/workspace/agentnexos/lib/ai/approvals.ts:27",
+        "/workspace/agentnexos/app/api/chat/route.ts:5",
+        "/workspace/agentnexos/app/api/approvals/route.ts:5",
+        "/workspace/agentnexos/app/api/telemetry/route.ts:5"
+      ]
+    },
+    {
+      "layer": "Tests and release assurance",
+      "current": "Contract tests exist for context, routing, policy, quotas, references, journal, brief and mocked provider boundaries. Older runtime/actions/security scripts cover inactive prototypes. Manual CI invokes public production verifier; no workflow/test was run during this review.",
+      "evidence": [
+        "/workspace/agentnexos/tests/agent-policy.test.ts:16",
+        "/workspace/agentnexos/tests/agentnexos.test.ts:40",
+        "/workspace/agentnexos/tests/project-brief.test.ts:6",
+        "/workspace/agentnexos/.github/workflows/ci.yml:1",
+        "/workspace/agentnexos/scripts/upgrade/verify-production.mjs:1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M0",
+      "classification": "partial",
+      "current_state": "Production/source identity, route inventory, this source map and prior live baseline are established; capability closure and ledger reconciliation remain.",
+      "evidence": [
+        "/workspace/agentnexos/AGENTS.md:5",
+        "/workspace/agentnexos/docs/upgrade/EXECUTION-STATUS.md:194",
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:5",
+        "/workspace/agentnexos/docs/upgrade/00-baseline.md:5"
+      ]
+    },
+    {
+      "id": "M1",
+      "classification": "previously_live_verified",
+      "current_state": "Official origin/contact, canonical, reciprocal language metadata, robots/sitemap, OG PNG and favicon work in established live evidence. Localized OG artwork is still shared English artwork.",
+      "evidence": [
+        "/workspace/agentnexos/lib/site.ts:2",
+        "/workspace/agentnexos/lib/content/revision.ts:13",
+        "/workspace/agentnexos/app/sitemap.ts:4",
+        "/workspace/agentnexos/app/robots.ts:3",
+        "/workspace/agentnexos/app/og/route.tsx:2"
+      ]
+    },
+    {
+      "id": "M2",
+      "classification": "partial",
+      "current_state": "Approved bilingual public content, founder/independent projects, services/solutions/engagements and resources are rendered and were live reviewed. Legal approval/account-data disclosure and formal claims ledger are not complete.",
+      "evidence": [
+        "/workspace/agentnexos/lib/content/master.ts:1",
+        "/workspace/agentnexos/components/site/public-page.tsx:20",
+        "/workspace/agentnexos/components/site/editorial-page.tsx:28",
+        "/workspace/agentnexos/components/site/offerings-page.tsx:1",
+        "/workspace/agentnexos/lib/content/public-pages.ts:131"
+      ]
+    },
+    {
+      "id": "M3",
+      "classification": "partial",
+      "current_state": "Reading tokens, responsive layouts, focus/reduced-motion handling and bilingual public layouts exist. Prior browser evidence establishes reviewed widths/flows, not complete contrast/accessibility/performance conformance.",
+      "evidence": [
+        "/workspace/agentnexos/app/upgrade-20261016.css:2",
+        "/workspace/agentnexos/app/upgrade-20261016.css:39",
+        "/workspace/agentnexos/app/upgrade-20261016.css:43",
+        "/workspace/agentnexos/components/agent/workspace.tsx:130",
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:17"
+      ]
+    },
+    {
+      "id": "M4",
+      "classification": "previously_live_verified",
+      "current_state": "Local brief, optional engagement, validation, copy/download/clear, mail draft and direct contact are implemented and live verified. Server lead collection/email delivery is intentionally not implemented.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/project-brief.tsx:36",
+        "/workspace/agentnexos/components/site/project-brief.tsx:56",
+        "/workspace/agentnexos/components/site/project-brief.tsx:62",
+        "/workspace/agentnexos/lib/project-brief.ts:34",
+        "/workspace/agentnexos/lib/engagements.ts:1"
+      ]
+    },
+    {
+      "id": "M5",
+      "classification": "partial",
+      "current_state": "Public account signup/signin/reset and PKCE callback exist; source contains RLS-protected own-user tables and service-only demo records/RPC. No verified tenant workspace, full auth roundtrip, restore rehearsal or scheduled retention. Migration history is not replayable as a single chain.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/login-gateway.tsx:38",
+        "/workspace/agentnexos/app/[locale]/auth/callback/route.ts:13",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:100",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:120",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:228"
+      ],
+      "live_database_evidence": "Live RLS/grants/FKs independently confirmed by catalog; no auth row reads or user-session isolation execution. Migration history divergence and no database cron confirmed."
+    },
+    {
+      "id": "M6",
+      "classification": "partial",
+      "current_state": "Read-only public workflow, deterministic design review, request-scoped stage events, cancellation and Markdown export exist. Final assistant answer is text; no durable resume, client approvals, typed editable final artifact or connected execution.",
+      "evidence": [
+        "/workspace/agentnexos/lib/agents/workflow.ts:20",
+        "/workspace/agentnexos/lib/agents/contract.ts:4",
+        "/workspace/agentnexos/lib/agents/journal.ts:3",
+        "/workspace/agentnexos/components/agent/workspace.tsx:40",
+        "/workspace/agentnexos/components/agent/workspace.tsx:87",
+        "/workspace/agentnexos/app/api/chat/route.ts:5"
+      ]
+    },
+    {
+      "id": "M7",
+      "classification": "partial",
+      "current_state": "Input/context limits, same-origin check, server flag, fixed reference URLs, bounded calls/timeouts/no retries, atomic reservation quota and metadata-only traces exist. Header policy, cost/SLO alerts, scheduled retention monitoring and durable production execution remain planned.",
+      "evidence": [
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:15",
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:47",
+        "/workspace/agentnexos/lib/agents/policy.ts:2",
+        "/workspace/agentnexos/lib/agents/tools.ts:44",
+        "/workspace/agentnexos/lib/agents/workflow.ts:55",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:218",
+        "/workspace/agentnexos/next.config.mjs:1"
+      ]
+    },
+    {
+      "id": "M8",
+      "classification": "blocked",
+      "current_state": "Connected customer pilot requires authorized client/data/scope/connector/policy. Enterprise chat/approval/telemetry routes deliberately fail closed; no connected customer operation was verified.",
+      "evidence": [
+        "/workspace/agentnexos/app/api/chat/route.ts:5",
+        "/workspace/agentnexos/app/api/approvals/route.ts:5",
+        "/workspace/agentnexos/app/api/telemetry/route.ts:5",
+        "/workspace/agentnexos/lib/security/runtime-unavailable.ts:3",
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:166"
+      ]
+    },
+    {
+      "id": "M9",
+      "classification": "partial",
+      "current_state": "Production deployment/source linkage and bounded public live evidence exist; manual production-only workflow and verifier exist. Top-level phase ledger is stale, and verifier accepts a supplied SHA without independently comparing deployed SHA.",
+      "evidence": [
+        "/workspace/agentnexos/docs/upgrade/EXECUTION-STATUS.md:194",
+        "/workspace/agentnexos/.github/workflows/ci.yml:3",
+        "/workspace/agentnexos/.github/workflows/ci.yml:27",
+        "/workspace/agentnexos/scripts/upgrade/verify-production.mjs:5",
+        "/workspace/agentnexos/docs/upgrade/EXECUTION-STATUS.md:26"
+      ]
+    }
+  ],
+  "original_findings": [
+    {
+      "id": "F01",
+      "classification": "previously_live_verified",
+      "current_state": "Official self canonical generated for both locales.",
+      "evidence": [
+        "/workspace/agentnexos/lib/content/revision.ts:18"
+      ]
+    },
+    {
+      "id": "F02",
+      "classification": "previously_live_verified",
+      "current_state": "Official sitemap/robots; 36 indexed entries in reused live evidence; login excluded.",
+      "evidence": [
+        "/workspace/agentnexos/app/sitemap.ts:4",
+        "/workspace/agentnexos/app/robots.ts:3"
+      ]
+    },
+    {
+      "id": "F03",
+      "classification": "previously_live_verified",
+      "current_state": "Per-route language pairs and OG URL use official origin.",
+      "evidence": [
+        "/workspace/agentnexos/lib/content/revision.ts:18"
+      ]
+    },
+    {
+      "id": "F04",
+      "classification": "partial",
+      "current_state": "Actual branded PNG 1200x630 was verified; both locales still use one English-only artwork endpoint.",
+      "evidence": [
+        "/workspace/agentnexos/app/og/route.tsx:2",
+        "/workspace/agentnexos/lib/content/revision.ts:19"
+      ]
+    },
+    {
+      "id": "F05",
+      "classification": "confirmed_implemented",
+      "current_state": "Active identity and contact/mail draft use approved address; delivery not verified.",
+      "evidence": [
+        "/workspace/agentnexos/lib/site.ts:5",
+        "/workspace/agentnexos/lib/project-brief.ts:36"
+      ]
+    },
+    {
+      "id": "F06",
+      "classification": "partial",
+      "current_state": "Truthful demo processing/retention notice retained; account processing category and final controller/legal approval remain open.",
+      "evidence": [
+        "/workspace/agentnexos/lib/content/public-pages.ts:131",
+        "/workspace/agentnexos/lib/content/public-pages.ts:187",
+        "/workspace/agentnexos/components/site/login-gateway.tsx:38"
+      ]
+    },
+    {
+      "id": "F07",
+      "classification": "planned",
+      "current_state": "Retention only runs when reserving a new request, not on a schedule.",
+      "evidence": [
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:228",
+        "/workspace/agentnexos/lib/content/public-pages.ts:187"
+      ],
+      "live_database_evidence": "Live function has request-triggered 48h cleanup; pg_cron absent and cron.job missing. External schedulers not inspected by this agent."
+    },
+    {
+      "id": "F08",
+      "classification": "previously_live_verified",
+      "current_state": "Brief and direct contact are independent of assistant use.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/project-brief.tsx:58",
+        "/workspace/agentnexos/components/site/editorial-page.tsx:54"
+      ]
+    },
+    {
+      "id": "F09",
+      "classification": "confirmed_implemented",
+      "current_state": "Home renders approved master content instead of historical hero text.",
+      "evidence": [
+        "/workspace/agentnexos/components/landing/cyber-home.tsx:13",
+        "/workspace/agentnexos/lib/content/master.ts:39"
+      ]
+    },
+    {
+      "id": "F10",
+      "classification": "partial",
+      "current_state": "Services/methodology/about and solutions/offerings use dedicated page renderers; generic public pages still share a repeated card/CTA pattern. Editorial improvement remains a product opportunity.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/public-page.tsx:20",
+        "/workspace/agentnexos/components/site/editorial-page.tsx:17",
+        "/workspace/agentnexos/components/site/public-page.tsx:31"
+      ]
+    },
+    {
+      "id": "F11",
+      "classification": "partial",
+      "current_state": "Labeled fictional workflow and actual assistant Markdown export exist; no connected enterprise run artifact is claimed.",
+      "evidence": [
+        "/workspace/agentnexos/components/landing/cyber-home.tsx:20",
+        "/workspace/agentnexos/components/agent/workspace.tsx:87",
+        "/workspace/agentnexos/lib/agents/contract.ts:29"
+      ]
+    },
+    {
+      "id": "F12",
+      "classification": "partial",
+      "current_state": "Core reading/control/note tokens improved and reviewed layouts have no overflow; source alone does not close all font/zoom/contrast acceptance.",
+      "evidence": [
+        "/workspace/agentnexos/app/upgrade-20261016.css:2",
+        "/workspace/agentnexos/app/upgrade-20261016.css:3",
+        "/workspace/agentnexos/app/upgrade-20261016.css:40"
+      ]
+    },
+    {
+      "id": "F13",
+      "classification": "previously_live_verified",
+      "current_state": "Current offerings/solution renderers use responsive cards; prior public live evidence reports no horizontal overflow. Historical wide comparison table issue not reproduced in current routes.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/offerings-page.tsx:1",
+        "/workspace/agentnexos/components/site/solutions-page.tsx:1",
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:97"
+      ]
+    },
+    {
+      "id": "F14",
+      "classification": "partial",
+      "current_state": "Latest owner scope superseded invite-only language with public assistant accounts; UI/backend calls/callback exist, full email/session roundtrip remains unverified.",
+      "evidence": [
+        "/workspace/agentnexos/docs/upgrade/00-baseline.md:41",
+        "/workspace/agentnexos/components/site/login-gateway.tsx:85",
+        "/workspace/agentnexos/app/[locale]/auth/callback/route.ts:13"
+      ],
+      "editorial_followup": "Parallel content reviewer found login OG/Twitter metadata still inherits old invite-workspace copy. UI and metadata should be reconciled with optional public assistant accounts."
+    },
+    {
+      "id": "F15",
+      "classification": "confirmed_implemented",
+      "current_state": "Service title/intro/metadata come from adopted bilingual master content.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/editorial-page.tsx:18",
+        "/workspace/agentnexos/lib/content/revision.ts:14",
+        "/workspace/agentnexos/app/[locale]/[page]/page.tsx:15"
+      ]
+    },
+    {
+      "id": "F16",
+      "classification": "planned",
+      "current_state": "No application-configured CSP, frame, referrer, permissions or nosniff headers in Next config/proxy. Platform-injected headers were not inspected in this task, so no claim of a live vulnerability.",
+      "evidence": [
+        "/workspace/agentnexos/next.config.mjs:1",
+        "/workspace/agentnexos/proxy.ts:8"
+      ]
+    },
+    {
+      "id": "F17",
+      "classification": "partial",
+      "current_state": "Shared locale infrastructure, master content and paired metadata exist; prior live review covers both locales. Native editorial equivalence and every conditional message still require scoped editorial review.",
+      "evidence": [
+        "/workspace/agentnexos/lib/content/master.ts:38",
+        "/workspace/agentnexos/lib/content/revision.ts:19",
+        "/workspace/agentnexos/components/site/login-gateway.tsx:78"
+      ]
+    },
+    {
+      "id": "F18",
+      "classification": "partial",
+      "current_state": "Founder and independent projects are presented explicitly; no independently verified customer outcomes/certifications supplied.",
+      "evidence": [
+        "/workspace/agentnexos/components/site/editorial-page.tsx:28",
+        "/workspace/agentnexos/components/site/editorial-page.tsx:36"
+      ]
+    },
+    {
+      "id": "F19",
+      "classification": "previously_live_verified",
+      "current_state": "favicon.ico fallback returned 200 in reused production evidence.",
+      "evidence": [
+        "/workspace/agentnexos/app/[locale]/layout.tsx:82",
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:83"
+      ]
+    },
+    {
+      "id": "F20",
+      "classification": "previously_live_verified",
+      "current_state": "Prior audit covered 38 localized documents, downloads and fictional brief/assistant journeys; authenticated/connected flows excluded.",
+      "evidence": [
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:17",
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:97"
+      ]
+    },
+    {
+      "id": "F21",
+      "classification": "previously_live_verified",
+      "current_state": "Prior browser review reports no page JS errors in reviewed public pages/interactions, not proof of all authenticated/backend behavior.",
+      "evidence": [
+        "/workspace/agentnexos/docs/verification/platform-review-2026-10-17.json:97"
+      ]
+    }
+  ],
+  "actionable_findings": [
+    {
+      "id": "R01",
+      "priority": "high_before_schema_work",
+      "title": "Separate one-off consolidation from replayable migrations",
+      "classification": "confirmed_source_incompatibility",
+      "fact": "September migration creates agentnexos_demo_requests; October consolidation intentionally raises TARGET_NOT_EMPTY if any agentnexos table exists. Therefore sequential replay of all committed migrations stops, by inspection; no database reset was run.",
+      "impact": "Fresh environments, restores and future schema changes cannot safely rely on this directory as one linear history. It does not establish an outage of the current database.",
+      "next": "Establish the authoritative baseline/history and a non-destructive follow-up migration path before M5. Preserve existing production schema/data.",
+      "evidence": [
+        "/workspace/agentnexos/supabase/migrations/20260930023216_agentnexos_demo_quota.sql:3",
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:5"
+      ],
+      "live_database_followup": "Actual history contains only consolidation version 20261013003209; committed consolidation filename is 20261013003126. Public schema/policies correspond to that family."
+    },
+    {
+      "id": "R02",
+      "priority": "high_before_account_promotion",
+      "title": "Privacy notice lags public account functionality",
+      "classification": "confirmed_content_gap",
+      "fact": "Rendered privacy copy lists brief, model demo, hosting and request metadata. Signup, email confirmation, password recovery and browser session handling were added, but account-data processing is not described in that notice.",
+      "impact": "The public privacy explanation no longer covers every visible data flow. No legal-compliance determination or account defect is asserted.",
+      "next": "Document real Supabase Auth email/account/session processing, retention/deletion and responsible contact after owner confirms actual settings. Keep fictional-data guidance for demo prompts separate.",
+      "evidence": [
+        "/workspace/agentnexos/lib/content/public-pages.ts:131",
+        "/workspace/agentnexos/lib/content/public-pages.ts:163",
+        "/workspace/agentnexos/components/site/login-gateway.tsx:38",
+        "/workspace/agentnexos/components/auth/account-status.tsx:18"
+      ]
+    },
+    {
+      "id": "R03",
+      "priority": "high_before_customer_data",
+      "title": "Retention has no scheduled enforcement",
+      "classification": "confirmed_planned_capability",
+      "fact": "Reservation SQL deletes records older than 48 hours only on a new request. Source has no cron/job; live privacy notice accurately says there is no maximum deletion deadline.",
+      "impact": "Inactive sites can retain older quota/trace metadata beyond the nominal period.",
+      "next": "Implement an owner-approved scheduled cleanup with job result/oldest-row monitoring in its own authorized package. Do not change production data in this review.",
+      "evidence": [
+        "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:228",
+        "/workspace/agentnexos/lib/content/public-pages.ts:187"
+      ],
+      "live_database_followup": "Catalog confirms no pg_cron extension or cron.job relation, and live reservation function contains request-triggered 48-hour DELETE. External scheduler not inspected here."
+    },
+    {
+      "id": "R04",
+      "priority": "medium",
+      "title": "Public answer is text, not a typed editable deliverable",
+      "classification": "confirmed_partial_M6",
+      "fact": "A typed design contract exists as tool input/review, while reviewer streams final free text and UI exports conversation Markdown. There is no final WorkflowBrief schema/state store/resume contract.",
+      "impact": "A stronger public product can provide an editable process brief with sources, missing facts, risks, checks and precise connection status. Current read-only demo remains honest.",
+      "next": "Promote deterministic review results into a typed final draft and exportable artifact; keep external execution disabled.",
+      "evidence": [
+        "/workspace/agentnexos/lib/agents/contract.ts:4",
+        "/workspace/agentnexos/lib/agents/workflow.ts:90",
+        "/workspace/agentnexos/components/agent/workspace.tsx:87"
+      ]
+    },
+    {
+      "id": "R05",
+      "priority": "medium",
+      "title": "Phase ledger contradicts completed public releases",
+      "classification": "confirmed_documentation_gap",
+      "fact": "Top table retains M1–M8 PENDING while subsequent batch/review sections and current production source contain completed public work.",
+      "impact": "The next executor can repeat delivered work or overstate whole-stage completion.",
+      "next": "Reconcile per-capability status with source, deployment and reused evidence; leave enterprise gates open.",
+      "evidence": [
+        "/workspace/agentnexos/docs/upgrade/EXECUTION-STATUS.md:26",
+        "/workspace/agentnexos/docs/upgrade/EXECUTION-STATUS.md:194"
+      ]
+    },
+    {
+      "id": "R06",
+      "priority": "medium",
+      "title": "Header policy is not encoded in app configuration",
+      "classification": "planned_M7_unverified_live",
+      "fact": "Next config only configures images; proxy handles locale/alias redirects. No explicit CSP/frame/referrer/permissions/nosniff policy is defined there.",
+      "impact": "M7 hardening requirement is not closed by source. Platform headers may already supply a subset; their live state was not rechecked.",
+      "next": "Inventory actual response headers once in the next authorized release and introduce a compatible policy within owner testing rules.",
+      "evidence": [
+        "/workspace/agentnexos/next.config.mjs:1",
+        "/workspace/agentnexos/proxy.ts:8"
+      ]
+    },
+    {
+      "id": "R07",
+      "priority": "medium",
+      "title": "Inactive enterprise prototypes must remain separated from live capability claims",
+      "classification": "confirmed_architecture_boundary",
+      "fact": "Legacy coordinator, in-memory approvals/memory/idempotency and static enterprise lookup are reachable from test scripts but not active app/API imports. Enterprise endpoints are closed.",
+      "impact": "Their presence and passing historical tests do not establish tenant-safe durable approvals, real retrieval or execution.",
+      "next": "Retain fail-closed endpoints; label or archive prototype modules when implementation scope permits, and build M5/M6 contracts before activation.",
+      "evidence": [
+        "/workspace/agentnexos/lib/ai/coordinator.ts:1",
+        "/workspace/agentnexos/lib/ai/approvals.ts:27",
+        "/workspace/agentnexos/lib/ai/memory.ts:21",
+        "/workspace/agentnexos/lib/ai/tools/action-tools.ts:5",
+        "/workspace/agentnexos/lib/ai/tools/enterprise-lookup.ts:24",
+        "/workspace/agentnexos/app/api/approvals/route.ts:5"
+      ]
+    },
+    {
+      "id": "R08",
+      "priority": "medium",
+      "title": "Release verifier trusts its supplied commit label",
+      "classification": "confirmed_assurance_gap",
+      "fact": "Manual workflow checks out the entered released_commit and verifier records it, but the script has no deployment-metadata lookup/comparison. Current session deployment linkage exists separately in prior audit evidence.",
+      "impact": "A future successful run can be attributed to an incorrect input SHA unless release metadata is separately checked.",
+      "next": "Attach independently read deployment/domain/source linkage to each release manifest; do not rerun current checks.",
+      "evidence": [
+        "/workspace/agentnexos/.github/workflows/ci.yml:15",
+        "/workspace/agentnexos/scripts/upgrade/verify-production.mjs:5",
+        "/workspace/agentnexos/scripts/upgrade/verify-production.mjs:11"
+      ]
+    },
+    {
+      "id": "R09",
+      "priority": "low",
+      "title": "Arabic social shares use English artwork",
+      "classification": "confirmed_bilingual_polish_gap",
+      "fact": "All locale metadata points to one OG endpoint whose headline is English.",
+      "impact": "Arabic sharing is technically valid but falls short of the bilingual artwork requirement.",
+      "next": "Create locale-aware branded OG variants after content approval.",
+      "evidence": [
+        "/workspace/agentnexos/app/og/route.tsx:3",
+        "/workspace/agentnexos/lib/content/revision.ts:19"
+      ]
+    }
+  ],
+  "positive_controls": [
+    "Server feature flag and explicit provider/database readiness fail closed.",
+    "No browser service key in reviewed active client modules; secret reads are server-side.",
+    "API rejects cross-origin requests, non-JSON, oversized bodies, wrong roles/parts and excess context.",
+    "Quota is database-atomic across instances with HMAC subject, per-connection/global caps and active request lock.",
+    "Public tools never authorize external writes; fixed reference IDs/URLs reject redirects and enforce byte/time budgets.",
+    "Model/workflow retries are zero; per-call outputs, total deadline, tool calls and journal length are bounded.",
+    "Metadata journal persistence failure stops success; active public flow does not store raw prompt/answer text.",
+    "Current legal copy accurately distinguishes model requests from local brief and discloses on-demand retention."
+  ],
+  "limitations": [
+    "No new browser/API/SQL probes, tests, typecheck/lint/build, package installs, deployment or repository edits.",
+    "Live Vercel/DNS/firewall/account configuration was not re-read here; reuse earlier evidence and separate access investigation.",
+    "No authenticated account or production customer/tenant flow; auth email delivery and session roundtrip remain unverified.",
+    "Initial schema/RLS conclusions were source-only; authorized live follow-up now verifies catalog grants/policies/FKs and migration history. User-session behavior, live data and backups remain unverified.",
+    "No exploit or live security incident established. Missing application headers are a planned-hardening gap, not proof of a vulnerability.",
+    "Site Unavailable in separate NEXA cloud computer cannot be attributed to source from this review; no site-level outage reproduced in reused public evidence.",
+    "Visual/design quality and new professional copy proposal belong to parallel review; this artifact establishes truth boundaries for those recommendations."
+  ],
+  "live_database_followup": {
+    "artifact": "/tmp/agynexa-strategy-review-20261017/live-supabase-audit.json",
+    "scope": "Later owner authorization expanded review to a read-only live Supabase catalog audit. Five Supabase calls succeeded; no user/business rows, auth session records, secrets or changes.",
+    "confirmed": "ACTIVE_HEALTHY project; five public tables with RLS; six own-user policies; no effective anon table access; service-only demo records/RPCs; auth.users inaccessible to anon/authenticated; key ownership FKs match source.",
+    "gaps": "Live migration history has one consolidation with a different version from source; pg_cron and cron.job absent, while live reserve RPC retains request-triggered deletion.",
+    "advisor": "Only INFO no-policy notices for the two service-only demo tables; deliberate deny-all configuration, not a confirmed exposure.",
+    "not_verified": "Actual auth/email/session lifecycle, user identities/counts, production data, provider settings/SMTP/MFA, backups and external schedulers remain unverified."
+  }
+}

@@ -4,9 +4,9 @@ import { MockLanguageModelV4 } from "ai/test";
 import { simulateReadableStream } from "ai";
 import { createDemoTools } from "../lib/agents/tools";
 import { classifyTask, createToolGate, demoPolicy, discoverTools, type RuntimeEvent } from "../lib/agents/policy";
-import { publicBoundaryReply } from "../lib/agents/public-boundary";
+import { publicResponseConstraints } from "../lib/agents/public-boundary";
 import { reviewDesignContract } from "../lib/agents/contract";
-import { projectConversation, conversationText, contextLimits } from "../lib/agents/context";
+import { projectConversation, conversationText, contextLimits, sessionTaskState } from "../lib/agents/context";
 import { createRunJournal } from "../lib/agents/journal";
 import { runAgentWorkflow, reviewContext } from "../lib/agents/workflow";
 const executeOptions = { toolCallId: "eval", messages: [], context: {} };
@@ -17,7 +17,10 @@ test("routing bilingual task cases; history and length do not force a team", () 
   for (const [input, expected] of [["مرحبا", "conversation"], ["Thanks", "conversation"], ["احسب ٣٠٠ × ١٢ دقيقة", "calculation"], ["Calculate workload", "calculation"], ["صمم سير عمل للمشتريات", "workflow"], ["Design a purchase review", "workflow"], ["Read Supabase documentation", "technical"], ["اقرأ توثيق تقني", "technical"]]) assert.equal(classifyTask(input), expected);
   assert.equal(classifyTask("hello ".repeat(100)), "conversation");
   assert.deepEqual(discoverTools("workflow", "Review purchase approvals"), ["review_workflow_design"]);
-  assert.deepEqual(discoverTools("workflow", "Review 300 invoices"), ["review_workflow_design", "estimate_workload"]);
+  assert.deepEqual(discoverTools("workflow", "Review 300 invoices"), ["review_workflow_design"]);
+  assert.equal(classifyTask("Calculate total hours for 300 invoices at 12 minutes each"), "calculation");
+  assert.deepEqual(discoverTools("amendment", "Change volume to 120 and recalculate total hours"), ["estimate_workload"]);
+  assert.deepEqual(discoverTools("amendment", "Change only the missing-data step"), []);
 });
 test("unknown and ungranted capabilities fail before execution", async () => {
   const gate = createToolGate({ tools: [] });
@@ -109,11 +112,12 @@ test("untrusted design cannot add approval flags or unrecognized effects", () =>
 });
 
 
-test("referential followups inherit the previous user task while new greetings remain cheap", () => {
-  for (const request of ["ولو البيانات ناقصة؟", "وماذا لو تعطل الاتصال؟", "What happens if it fails?", "Expand the exception path"]) assert.equal(classifyTask(request, "Design a procurement workflow"), "workflow");
-  for (const request of ["Thanks", "شكرًا", "طيب شكرا", "كيف حالك؟", "How are you?", "Hello", "مرحبا", "Tell me a joke"]) assert.equal(classifyTask(request, "Design a procurement workflow"), "conversation");
+test("questions and narrow amendments retain context without forcing a new workflow", () => {
+  for (const request of ["ولو البيانات ناقصة؟", "وماذا لو تعطل الاتصال؟", "What happens if it fails?"]) assert.equal(classifyTask(request, "Design a procurement workflow"), "clarification");
+  assert.equal(classifyTask("Expand the exception path", "Design a procurement workflow"), "amendment");
+  for (const request of ["Thanks", "شكرًا", "طيب شكرا", "كيف حالك؟", "How are you?", "Hello", "مرحبا"]) assert.equal(classifyTask(request, "Design a procurement workflow"), "conversation");
   assert.equal(classifyTask("Read Supabase documentation", "Design a procurement workflow"), "technical");
-  assert.equal(classifyTask("What if it doubles?", "Calculate workload for 30 items"), "calculation");
+  assert.equal(classifyTask("What if it doubles?", "Calculate workload for 30 items"), "clarification");
   assert.equal(classifyTask("صمّم مساعد معرفة للموظفين"), "workflow");
   assert.equal(classifyTask("صمم مسار خدمة العملاء"), "workflow");
 });
@@ -129,14 +133,14 @@ test("missing required design tool fails before reviewer output",async()=>{
 test("tool receipts survive a bounded plan ending with a tool rather than text",async()=>{
  let call=0;const planner=new MockLanguageModelV4({doGenerate:async()=>({content:[{type:"tool-call",toolCallId:`review-${++call}`,toolName:"review_workflow_design",input:JSON.stringify({goal:"Review invoices",owner:"",sourceOfTruth:"",acceptanceCriteria:[],steps:[{title:"Review",effect:"read",decisionOwner:"",evidence:"",onFailure:""}]})}],finishReason:{unified:"tool-calls",raw:undefined},usage,warnings:[]})});
  const analyst=model(),reviewer=model();const events:RuntimeEvent[]=[];
- await runAgentWorkflow({conversation:"user: Design an invoice workflow\nuser: What if a document is missing?",latestRequest:"What if a document is missing?",previousRequest:"Design an invoice workflow",locale:"en",signal:new AbortController().signal,models:{analyst,planner,reviewer},onPhase:()=>{},onText:()=>{},onEvent:event=>{events.push(event)}});
+ await runAgentWorkflow({conversation:"user: Design an invoice workflow with a missing-document path",latestRequest:"Design an invoice workflow with a missing-document path",locale:"en",signal:new AbortController().signal,models:{analyst,planner,reviewer},onPhase:()=>{},onText:()=>{},onEvent:event=>{events.push(event)}});
  assert.equal(call,3);assert.equal(reviewer.doStreamCalls.length,1);assert.equal(events.filter(event=>event.kind==="tool_completed").length,3);
  assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/SOURCE_REQUIRED/);assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/executable/);
 });
 
 test("write-timeout state questions do not become invoice-planning workflows", () => {
   for (const request of ["الاتصال فصل بعد إرسال تحديث للفاتورة؛ هل أعيد الطلب فورًا؟", "The tool timed out after submitting an invoice update."]) {
-    assert.equal(classifyTask(request, "Design a purchase review workflow"), "conversation");
+    assert.equal(classifyTask(request, "Design a purchase review workflow"), "clarification");
     assert.deepEqual(discoverTools(classifyTask(request), request), []);
   }
   assert.equal(classifyTask("صمم سير عمل للتعامل مع انقطاع الاتصال بعد تحديث الفاتورة"), "workflow");
@@ -156,24 +160,38 @@ test("reviewer uses configured low sampling temperature", async () => {
   assert.equal(reviewer.doStreamCalls[0].temperature, 0.1);
 });
 
-test("unknown external effect is held by server policy before any model or tool", async () => {
+test("unknown external effect constrains a contextual answer without opening tools", async () => {
  for(const [locale,request] of [["en","The ERP timed out after submitting an update. Retry?"],["ar","الاتصال فصل بعد إرسال تحديث للفاتورة؛ هل أعيد الطلب؟"]] as const){
   const provider=model(),events:RuntimeEvent[]=[],chunks:string[]=[];
   await runAgentWorkflow({conversation:request,latestRequest:request,locale,signal:new AbortController().signal,models:{analyst:provider,planner:provider,reviewer:provider},onPhase:()=>{},onText:text=>chunks.push(text),onEvent:event=>{events.push(event)}});
-  assert.equal(provider.doStreamCalls.length,0);assert.equal(provider.doGenerateCalls.length,0);
-  assert.ok(events.some(event=>event.kind==="policy_response"&&event.reason==="unknown_write_effect"));assert.ok(chunks.join("").length>100);
+  assert.equal(provider.doStreamCalls.length,1);assert.equal(provider.doGenerateCalls.length,0);
+  assert.match(JSON.stringify(provider.doStreamCalls[0].prompt),/unknownWriteEffect.*true/);
+  assert.match(JSON.stringify(provider.doStreamCalls[0].prompt),/externalExecution.*false/);
+  assert.equal(events.some(event=>event.kind==="tool_allowed"),false);
+  assert.equal(chunks.join(""),"Reviewed plan");
  }
 });
 
-test("bounded public drafts preserve review scope and narrow follow-up in both languages", () => {
- const en=publicBoundaryReply("Design review of a purchase request only. No order should be placed.","en");
- const ar=publicBoundaryReply("صمم مسار مراجعة طلب شراء فقط، من غير إصدار أمر أو إرسال للمورد.","ar");
- assert.equal(en?.contract,"purchase_review_draft");assert.equal(ar?.contract,"purchase_review_draft");
- assert.match(en!.text,/End at that review result/);assert.match(ar!.text,/ينتهي المسار/);
- for(const [locale,request] of [["en","Change only the missing-data step."],["ar","عدّل خطوة البيانات الناقصة فقط، وباقي الخطوات كما هي."]] as const){
-  const reply=publicBoundaryReply(request,locale,"receive; check; review");assert.equal(reply?.contract,"missing_data_step_draft");assert.doesNotMatch(reply!.text,/1\.|2\.|3\./);
+test("public constraints preserve review/amendment scope without supplying canned answers", () => {
+ for (const request of ["Design review of a purchase request only. No order should be placed.","صمم مسار مراجعة طلب شراء فقط، من غير إصدار أمر أو إرسال للمورد."]) {
+  const constraints=publicResponseConstraints(request);assert.equal(constraints.reviewOnly,true);assert.equal(constraints.externalExecution,false);assert.equal("text" in constraints,false);
  }
- assert.equal(publicBoundaryReply("Design a workflow for a timeout after an update","en"),undefined);
- assert.equal(publicBoundaryReply("What is Agentnexos?","en"),undefined);
- assert.equal(publicBoundaryReply("Calculate 100 cases at 20 minutes","en"),undefined);
+ for(const request of ["Change only the missing-data step.","عدّل خطوة البيانات الناقصة فقط، وباقي الخطوات كما هي."]){
+  const constraints=publicResponseConstraints(request,"receive; check; review");assert.equal(constraints.amendmentOnly,true);assert.equal(constraints.approvalGranted,false);
+ }
+ assert.equal(publicResponseConstraints("Design a workflow for a timeout after an update").unknownWriteEffect,false);
+});
+
+test("a missing-data amendment reaches the writer with its actual supplied context",async()=>{
+ const analyst=model(),planner=model(),reviewer=model();
+ const request="Change only the missing-data step: return incomplete requests to their requester.";
+ await runAgentWorkflow({conversation:"user: Owner is the operations lead; source is the request form.\nassistant: Receive, check, review.\nuser: "+request,latestRequest:request,previousRequest:"Owner is the operations lead; source is the request form.",locale:"en",signal:new AbortController().signal,models:{analyst,planner,reviewer},onPhase:()=>{},onText:()=>{}});
+ assert.equal(analyst.doGenerateCalls.length,0);assert.equal(planner.doGenerateCalls.length,0);assert.equal(reviewer.doStreamCalls.length,1);
+ assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/operations lead/);assert.match(JSON.stringify(reviewer.doStreamCalls[0].prompt),/return incomplete requests/);
+});
+
+test("session context keeps exact user corrections and skips an oversized prior answer",()=>{
+ const messages=[{role:"user",parts:[{type:"text",text:"Owner is the operations lead."}]},{role:"assistant",parts:[{type:"text",text:"x".repeat(5000)}]},{role:"user",parts:[{type:"text",text:"Correction: source is the request form. Change only the review step."}]}];
+ const projected=projectConversation(messages);const state=sessionTaskState(projected);
+ assert.equal(projected.length,2);assert.match(conversationText(projected),/Owner is the operations lead/);assert.deepEqual(state.correctionTurns,[2]);assert.equal(state.assistantTurnsAreProposals,true);assert.ok(conversationText(projected).length<=contextLimits.characters);
 });

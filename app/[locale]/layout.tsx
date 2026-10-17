@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { siteOrigin, isPreview, contactEmail } from "@/lib/site";
 import { notFound } from "next/navigation";
-import { Inter, Newsreader, Anybody, Space_Grotesk, IBM_Plex_Sans_Arabic, } from "next/font/google";
+import { Inter, Newsreader, Anybody, Space_Grotesk, Almarai, } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 import "../marketing-reference.css";
 import "../upgrade-20261016.css";
+import "../premium-platform.css";
 import { LocaleProvider } from "@/lib/i18n/use-t";
 import { isLocale, localeBcp47, localeDir, locales, type Locale, } from "@/lib/i18n/config";
 const instrumentSans = Inter({
@@ -21,10 +22,11 @@ const jetbrainsMono = Space_Grotesk({
     subsets: ["latin"],
     variable: "--font-jetbrains",
 });
-// Original Arabic UI family; real light/heavy faces also support marketing.
-const plexArabic = IBM_Plex_Sans_Arabic({
-    subsets: ["arabic", "latin"],
-    weight: ["300", "400", "500", "600", "700"],
+// Owner-approved Arabic replacement; use its actual regular and bold faces.
+const arabicFont = Almarai({
+    subsets: ["arabic"],
+    weight: ["400", "700"],
+    display: "swap",
     variable: "--font-arabic",
 });
 // Expanded geometric display face, not an identification of the reference font.
@@ -33,6 +35,8 @@ const marketingDisplay = Anybody({
     axes: ["wdth"],
     variable: "--font-marketing-display",
 });
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
@@ -55,16 +59,16 @@ export async function generateMetadata({ params, }: {
         title,
         description,
         alternates: {
-            canonical: `/${locale}`,
+            canonical: "/",
             languages: {
-                ar: "/ar",
-                en: "/en",
+                en: "/",
+                "x-default": "/",
             },
         },
         openGraph: {
             title,
             description,
-            url: `${baseUrl}/${locale}`,
+            url: `${baseUrl}/`,
             siteName: "AGYNEXA",
             locale: isAr ? "ar_EG" : "en_US",
             type: "website",
@@ -100,7 +104,7 @@ export default async function LocaleLayout({ children, params, }: Readonly<{
         notFound();
     const typed: Locale = locale;
     return (<html lang={localeBcp47[typed]} dir={localeDir[typed]}>
-      <body className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${plexArabic.variable} ${marketingDisplay.variable} font-sans antialiased`}>
+      <body className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${arabicFont.variable} ${marketingDisplay.variable} font-sans antialiased`}>
         <a href="#main-content" className="skip-link">{locale === "ar" ? "انتقل إلى المحتوى" : "Skip to content"}</a>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: "AGYNEXA", url: siteOrigin, logo: `${siteOrigin}/icon.svg`, email: contactEmail }).replace(/</g, "\u003c") }}/><LocaleProvider locale={typed}>{children}</LocaleProvider>
         <Analytics />

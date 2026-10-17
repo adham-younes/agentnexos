@@ -1,3 +1,4 @@
+import { publicPath } from '@/lib/i18n/routing';
 import Link from 'next/link';
 import { ArrowUpRight, Download } from 'lucide-react';
 import { CyberEffects } from '@/components/cyber/effects';
@@ -25,7 +26,7 @@ export function OfferingsPage({ page, locale }: { page: 'engagements' | 'resourc
                             <p className="engagement-label">{shared.includes}</p>
                             <ul>{engagement.includes?.map(item => <li key={item}>{item}</li>)}</ul>
                             <div className="engagement-outcome"><p className="engagement-label">{shared.outcome}</p><p>{engagement.outcome}</p></div>
-                            <div className="engagement-action">{engagement.link && <Link className="upgrade-button" href={`/${locale}/${engagement.link.path}`}>{engagement.link.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}</div>
+                            <div className="engagement-action">{engagement.link && <Link className="upgrade-button" href={publicPath(`/${engagement.link.path}`)}>{engagement.link.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}</div>
                         </article>)}
                     </div>
                     <div className="engagement-questions">{copy.faq?.map(item => <section className="editorial-row" key={item.question}>
@@ -39,7 +40,7 @@ export function OfferingsPage({ page, locale }: { page: 'engagements' | 'resourc
                     </article>)}</div>
                     <section className="editorial-row resource-assistant">
                         <h2>{assistant.heading}</h2><div className="editorial-prose"><p>{assistant.body}</p>
-                            {assistant.link && <Link className="upgrade-text-link" href={`/${locale}/${assistant.link.path}`}>{assistant.link.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
+                            {assistant.link && <Link className="upgrade-text-link" href={publicPath(`/${assistant.link.path}`)}>{assistant.link.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
                         </div>
                     </section>
                 </>}

@@ -1,3 +1,4 @@
+import { publicPath } from '@/lib/i18n/routing';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft } from 'lucide-react';
 import { CyberEffects } from '@/components/cyber/effects';
@@ -19,7 +20,7 @@ export function SolutionsPage({ page, locale }: { page: SolutionPage; locale: Lo
         <PageHeader/>
         <main id="main-content" tabIndex={-1}>
             <section className="upgrade-page-hero nexus-wrap">
-                {index ? <p className="upgrade-eyebrow"><bdi>AGYNEXA</bdi></p> : <Link className="upgrade-text-link solutions-back" href={`/${locale}/solutions`}><ArrowLeft size={18} aria-hidden="true"/>{shared.allSolutions}</Link>}
+                {index ? <p className="upgrade-eyebrow"><bdi>AGYNEXA</bdi></p> : <Link className="upgrade-text-link solutions-back" href={publicPath(`/solutions`)}><ArrowLeft size={18} aria-hidden="true"/>{shared.allSolutions}</Link>}
                 <h1>{copy.title}</h1>
                 <p className="upgrade-lead">{copy.intro}</p>
                 {!index && <p className="solution-scope">{shared.solutionScope}</p>}
@@ -28,7 +29,7 @@ export function SolutionsPage({ page, locale }: { page: SolutionPage; locale: Lo
                 {index ? <div className="solutions-grid">
                     {copy.sections.map(solution => <article className="solution-choice" key={solution.heading}>
                         <h2>{solution.heading}</h2><p>{solution.body}</p>
-                        {solution.link && <Link className="upgrade-text-link" href={`/${locale}/${solution.link.path}`}>{solution.link.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
+                        {solution.link && <Link className="upgrade-text-link" href={publicPath(`/${solution.link.path}`)}>{solution.link.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
                     </article>)}
                 </div> : <div className="solution-sections">
                     {copy.sections.map(section => <section className={`editorial-row${section.boundary ? ' solution-boundary' : ''}`} key={section.heading}>
@@ -38,7 +39,7 @@ export function SolutionsPage({ page, locale }: { page: SolutionPage; locale: Lo
                 <div className="editorial-closing">
                     {copy.closing && <p>{copy.closing}</p>}
                     <div className="upgrade-actions">
-                        {copy.primaryAction && <Link className="upgrade-button" href={`/${locale}/${copy.primaryAction.path}`}>{copy.primaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
+                        {copy.primaryAction && <Link className="upgrade-button" href={publicPath(`/${copy.primaryAction.path}`)}>{copy.primaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
                     </div>
                 </div>
             </div>

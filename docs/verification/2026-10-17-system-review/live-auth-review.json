@@ -1,0 +1,60 @@
+{
+  "started": "2026-10-17T12:44:47.696Z",
+  "url": "https://agynexa.si/en/login",
+  "scope": "One fresh signed-out navigation and one deliberately nonexistent reserved-domain invalid-credentials attempt. No successful account/session or email roundtrip verification.",
+  "navigationCount": 1,
+  "authAttempts": 1,
+  "authResponses": [
+    {
+      "status": 400,
+      "code": "invalid_credentials"
+    }
+  ],
+  "findings": [
+    {
+      "id": "AUTH-SOCIAL-METADATA",
+      "severity": "P2",
+      "evidence": "Rendered social metadata retains invitation-only account/workspace messaging while visible login UI offers Create account.",
+      "socialMetadata": {
+        "title": "Sign in and create an account — AGYNEXA",
+        "description": "Create an account or sign in to the workflow design assistant. An account does not grant enterprise-system access.",
+        "ogTitle": "Sign in to the client workspace.",
+        "ogDescription": "Access for users invited to a project workspace.",
+        "twitterTitle": "Client workspace · AGYNEXA",
+        "twitterDescription": "Access for users invited to a project workspace."
+      },
+      "visibleWording": {
+        "heading": "Sign in",
+        "subtitle": "Create an account or sign in to use the assistant. An account does not grant access to enterprise systems.",
+        "modeLabels": [
+          "Sign in",
+          "Create account"
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "No sign-up, reset, recovery, email send, real account, or session retrieval.",
+    "A rejected fictional login cannot establish successful login, signup, email confirmation/recovery, session persistence, authorization or tenant isolation."
+  ],
+  "pageStatus": 200,
+  "renderedMetadata": {
+    "title": "Sign in and create an account — AGYNEXA",
+    "description": "Create an account or sign in to the workflow design assistant. An account does not grant enterprise-system access.",
+    "ogTitle": "Sign in to the client workspace.",
+    "ogDescription": "Access for users invited to a project workspace.",
+    "twitterTitle": "Client workspace · AGYNEXA",
+    "twitterDescription": "Access for users invited to a project workspace."
+  },
+  "visibleAccountWording": {
+    "heading": "Sign in",
+    "subtitle": "Create an account or sign in to use the assistant. An account does not grant access to enterprise systems.",
+    "modeLabels": [
+      "Sign in",
+      "Create account"
+    ]
+  },
+  "visibleAlert": "Incorrect email or password. Create an account first if you have not registered.",
+  "rejectionPathVerified": true,
+  "finished": "2026-10-17T12:44:52.157Z"
+}

@@ -1,0 +1,1218 @@
+{
+  "date": "2026-10-17",
+  "status": "ANALYSIS_AND_PROPOSAL_ONLY_NOT_DEPLOYED",
+  "ownerRequest": "مراجعة المحتوى والتصميم الحي وربط المقترح بالاستراتيجية المعتمدة، مع صياغة أكثر احترافية وطبيعية.",
+  "scope": {
+    "logicalRoutes": 19,
+    "localizedDocuments": 38,
+    "newFunctionalTests": 0,
+    "sourceEdits": 0,
+    "deployments": 0,
+    "technicalAuditReused": "docs/verification/platform-review-2026-10-17.json",
+    "freshVisualEvidenceReused": "/tmp/agynexa-strategy-review-20261017/visual/",
+    "claim": "المراجعة تحريرية تستند إلى المصدر النشط واللقطات الحالية؛ نجاح عرض الصفحة لا يثبت جودة المحتوى أو اتصالات مؤسسية."
+  },
+  "adoptedStrategy": {
+    "governingDocument": "docs/upgrade/PRODUCTION-ENGINEERING.md",
+    "source": "docs/upgrade/AGYNEXA-CODEX-MASTER-UPGRADE-PLAN-AR-EN.md",
+    "stages": [
+      "M2 message/copy/engagements/founder",
+      "M3 reading/composition/responsiveness",
+      "M4 project brief conversion"
+    ],
+    "preserve": [
+      "الأسود #050505 والبطاقات #0b0b0b والنص #ebebeb والأخضر #10b981 كهوية معتمدة",
+      "العربية أولًا مع تحرير إنجليزي مطابق للغرض",
+      "حدود التجربة والبيانات الافتراضية والمراجعة البشرية",
+      "عدم ادعاء عملاء أو نتائج أو شهادات أو تكاملات حية بلا دليل"
+    ],
+    "versionRule": "النص الحالي معتمد حرفيًا في الاستراتيجية. هذا طلب أحدث لإعداد اقتراح تحرير بديل؛ لا يُستبدل مصدر النص المعتمد تلقائيًا، ولا يُعد اعتماد الاستراتيجية تفويض نشر."
+  },
+  "executiveFindings": [
+    {
+      "priority": "P1",
+      "finding": "المحتوى الحالي ليس رديئًا أو غير مهني؛ التحسن الأكبر يأتي من تقليل التجريد وإظهار الناتج الذي سيستلمه المشتري.",
+      "evidence": [
+        "services deliverable rows",
+        "solution detail inputs/outputs/acceptance",
+        "home repeated scope/review/permission phrases"
+      ]
+    },
+    {
+      "priority": "P1",
+      "finding": "وظيفة كل صفحة تحتاج فصلًا: الرئيسية لماذا تبدأ؛ الحلول أي مشكلة؛ الخدمات ماذا تستلم؛ المنهجية كيف نتخذ قرار الانتقال؛ الباقات من أين تبدأ وكيف يسعّر النطاق.",
+      "evidence": [
+        "master-upgrade.json routes services/methodology/engagements"
+      ]
+    },
+    {
+      "priority": "P1",
+      "finding": "الأدلة المناسبة الآن هي عينة افتراضية واضحة، مقتطف تسليم حقيقي من القوالب، ومؤسس مسمى. الشعارات والرسوم لا تعوض دليل العمل.",
+      "evidence": [
+        "home hero illustration",
+        "workflow step labels",
+        "resources downloads",
+        "about founder biography"
+      ]
+    },
+    {
+      "priority": "P0-copy-consistency",
+      "finding": "تسجيل الدخول يخلط ضرورة الحساب مع الاستخدام دون حساب؛ وOpenGraph الموروث يصف مساحة عملاء لا يثبتها التدفق الحالي.",
+      "evidence": [
+        "components/site/login-gateway.tsx subtitle/no-account link",
+        "app/[locale]/login/page.tsx metadata spread",
+        "lib/content/revision.ts revisionMetadata(login)"
+      ]
+    },
+    {
+      "priority": "P0-copy-clarity",
+      "finding": "زر مناقشة المشروع يقود إلى تجهيز موجز محلي. المسار صادق لكنه يحتاج بيان الخطوة التالية قبل أول حقل.",
+      "evidence": [
+        "components/site/project-brief.tsx local state/review/download/mailto"
+      ]
+    },
+    {
+      "priority": "P0-factual-review",
+      "finding": "إشعار الخصوصية الحالي لا يشرح مسار بيانات الحساب رغم وجود إنشاء حساب؛ يحتاج معلومات فعلية قبل أي صياغة قانونية.",
+      "evidence": [
+        "lib/content/public-pages.ts privacy",
+        "components/site/login-gateway.tsx signUp"
+      ]
+    }
+  ],
+  "toneRules": [
+    {
+      "rule": "ابدأ باسم مهمة أو مشكلة يفهمها المستخدم، ثم وضّح دور الذكاء الاصطناعي.",
+      "avoid": "منصة ثورية متكاملة تعيد تعريف المستقبل.",
+      "use": "تعود طلبات الشراء لنقص التفاصيل؛ نحدد ما يحتاجه المسؤول قبل المراجعة."
+    },
+    {
+      "rule": "اكتب بالعربية المهنية البسيطة، بجمل تتفاوت طبيعيًا حسب المعنى؛ بلا أخطاء مقصودة أو مصطلحات دعائية.",
+      "avoid": "حشو مرادفات، تكرار متعمد، أو عبارات تكسر الأسلوب لإرضاء كاشف AI.",
+      "use": "نراجع البيانات الناقصة ونوضح من يقرر الخطوة التالية."
+    },
+    {
+      "rule": "كل فقرة تؤدي وظيفة واحدة: مشكلة أو مخرج أو قرار أو حد.",
+      "avoid": "جمع المعرفة والأدوات والتكاملات والحوكمة والاعتمادية في كل وصف.",
+      "use": "سطر مشكلة، ثم سطر ما يستلمه المسؤول."
+    },
+    {
+      "rule": "استخدم فعلًا وفاعلًا واضحين عند المسؤولية.",
+      "avoid": "يتم تنفيذ ما يلزم وفق المتطلبات.",
+      "use": "يراجع مسؤول المشتريات النواقص قبل اعتماد الطلب."
+    },
+    {
+      "rule": "فرّق بين صيغة الخدمة المقترحة والحالة الحالية للتجربة.",
+      "avoid": "متصل بجميع أنظمتك، ينفذ الأوامر ويتحقق منها.",
+      "use": "يمكن تصميم الربط ضمن مشروع؛ التجربة الحالية تخطط ببيانات افتراضية."
+    },
+    {
+      "rule": "اجعل ادعاء الفائدة هدفًا أو معيار قبول حتى تثبته قياسات فعلية.",
+      "avoid": "نوفر 80% من الوقت ونضاعف الإنتاجية.",
+      "use": "نقيس زمن المراجعة قبل التجربة وبعدها وفق معيار متفق عليه."
+    },
+    {
+      "rule": "أظهر القيود قرب الإجراء الذي يهمها، واحتفظ بالتفاصيل في الأمان والخصوصية والشروط.",
+      "avoid": "إخفاء تنبيه البيانات أو تكراره داخل كل بطاقة تسويق.",
+      "use": "تنبيه ملاصق لزر التجربة ولحقل الإدخال؛ حد حل خاص قرب المثال."
+    },
+    {
+      "rule": "المصطلح مفهوم أولًا ومتسق ثانيًا.",
+      "avoid": "إجبار كل run على ترجمة واحدة، أو ازدواج حلول/منتجات دون تمييز.",
+      "use": "سير العمل، نطاق العمل، تجربة محددة، اعتماد، مصدر، سجل مراجعة بحسب السياق."
+    },
+    {
+      "rule": "الإنجليزية تعاد صياغتها للغرض نفسه ثم تطابق الحقائق وCTA والمخرجات والحدود.",
+      "avoid": "ترجمة كلمة بكلمة أو إدخال عربية في صفحة إنجليزية.",
+      "use": "AR: ما الذي تستلمه؟ / EN: What you receive."
+    },
+    {
+      "rule": "عرّف المسؤول الحقيقي عن المشروع مع حقائقه المعروفة.",
+      "avoid": "فريق عالمي وخبرة عقود وشهادات وعملاء لم يثبتوا.",
+      "use": "أسس أدهم يونس AGYNEXA؛ تُنسب المشروعات المستقلة إليه بمرحلتها الفعلية."
+    }
+  ],
+  "recommendedNarrative": [
+    {
+      "order": 1,
+      "section": "Hero",
+      "job": "مشكلة يومية + ماذا نصمم + CTA رئيسي + نطاق التجربة",
+      "visual": "نص واضح بجانبه مخرج افتراضي موسوم أو الرسم المعتمد بعد تقليل هيمنته؛ لا مؤشرات حية مصطنعة."
+    },
+    {
+      "order": 2,
+      "section": "Problem selector",
+      "job": "اختيار المعرفة أو المشتريات أو المستحقات أو عمليات العملاء",
+      "visual": "أربع بطاقات قصيرة لكل منها مشكلة ومخرج ورابط محدد."
+    },
+    {
+      "order": 3,
+      "section": "Worked example",
+      "job": "شرح قيمة العمل بمدخل ومعلومة ناقصة ومسؤول ومخرج",
+      "visual": "مخطط متصل وفرع طلب ناقص مع ملف مراجعة صغير؛ بيانات افتراضية واضحة."
+    },
+    {
+      "order": 4,
+      "section": "Deliverables",
+      "job": "تحويل الفكرة إلى أشياء يستلمها العميل",
+      "visual": "مخطط عملية وموجز نطاق ومعيار قبول، بعينات قصيرة."
+    },
+    {
+      "order": 5,
+      "section": "Method and engagement",
+      "job": "تحديد نقطة البداية وكيف يقرر الطرفان الانتقال والتسعير",
+      "visual": "مسار قصير وروابط تفاصيل، دون تكرار كامل صفحات المنهجية والباقات."
+    },
+    {
+      "order": 6,
+      "section": "Founder",
+      "job": "مسؤول واضح وخبرة موصوفة بدقة",
+      "visual": "نبذة وروابط مختارة إلى مشروعات حقيقية إن توفرت؛ لا صورة شخص مولدة."
+    },
+    {
+      "order": 7,
+      "section": "FAQ and next step",
+      "job": "معالجة سؤال الحساب والاتصالات والبيانات والتكلفة ثم تجهيز الموجز",
+      "visual": "أسئلة قليلة وإجراء نهائي واحد مع بيان أن الصفحة لا ترسل تلقائيًا."
+    }
+  ],
+  "pageMatrix": [
+    {
+      "routePattern": "/{locale}",
+      "localizedRoutes": [
+        "/ar",
+        "/en"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "هل تفهمون مشكلة فريقي، وما الذي يمكنني الحصول عليه؟",
+      "currentHeading": {
+        "ar": "وكلاء ذكاء اصطناعي لعمليات يعتمد عليها عملك.",
+        "en": "AI agents for the work your business runs on."
+      },
+      "currentStrength": "التموضع مفهوم وصادق، وCTA رئيسي وثانوي وحدود التجربة واضحة.",
+      "editorialIssues": [
+        "الافتتاح عن أنظمة الوكلاء قبل ذكر مشكلة يومية ملموسة.",
+        "مثال المشتريات يسرد أسماء خطوات دون إظهار بيانات تدخل أو نتيجة يستلمها المسؤول.",
+        "تكرار النطاق والاعتماد والمراجعة في الهيرو والقدرات والحلول والمنهجية والأسئلة، مع غياب نموذج تسليم ظاهر."
+      ],
+      "proposedAction": [
+        "ابدأ بمشكلات محددة يعرفها المشتري ثم عرّف الخدمة.",
+        "استبدل التفصيل العام بمثال مشتريات واحد بمدخل ومعلومة ناقصة ومراجعة مسؤول وملف نتيجة، موسوم ببيانات افتراضية.",
+        "أضف تعريفًا موجزًا بالمؤسس وتسليمًا قابلًا للفحص، ثم الباقات وطريقة البداية.",
+        "احتفظ بتنبيه مختصر ملاصق لزر التجربة، مع التفصيل في سياقه وعند الإدخال."
+      ],
+      "conversion": "رئيسي: ناقش مشروعك → /start مع بيان أن الخطوة التالية إعداد موجز محلي. ثانوي: جرّب تصميم عملية → /agentnexos.",
+      "bilingualParity": "المعنى متقابل بالفعل؛ العربية أصل مستقل والإنجليزية تحرير مطابق للغرض.",
+      "credibilityAndTruthfulness": "لا تحويل المثال إلى نتيجة عميل أو توفير محقق؛ ولا استخدام صورة أو مؤشرات تشغيل كدليل قدرة.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:home",
+        "components/landing/cyber-home.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-home-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "M4",
+        "16.2"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/platform",
+      "localizedRoutes": [
+        "/ar/platform",
+        "/en/platform"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "كيف سيتصرف النظام، وما الفرق بين الخدمة والتجربة العامة؟",
+      "currentHeading": {
+        "ar": "بنية تربط المعرفة والقرار والتنفيذ.",
+        "en": "A structure for knowledge, decisions, and execution."
+      },
+      "currentStrength": "المعرفة والأدوات والحالة والاختبار مغطاة دون ادعاء تشغيل مؤسسي.",
+      "editorialIssues": [
+        "العنوان والافتتاح تجريديان.",
+        "الزائر قد يقرأ كلمة المنصة بوصفها منتج SaaS متصلًا جاهزًا، بينما النص يصف هندسة مشروع.",
+        "عبارة أكثر من واجهة محادثة لا تشرح مخرجًا."
+      ],
+      "proposedAction": [
+        "وضح مبكرًا أن الصفحة تصف بنية مشروع مصمم حسب العملية.",
+        "استخدم تسلسلًا واحدًا: مصدر مسموح → اقتراح → اعتماد عند الحاجة → نتيجة مع دليل.",
+        "اربط كل عنصر بمثال عملي صغير وبسؤال يمكن للعميل طرحه."
+      ],
+      "conversion": "ناقش متطلبات نظامك → /start؛ رابط واضح إلى /agentnexos للتجربة المحدودة.",
+      "bilingualParity": "المحتوى متقابل؛ استبدل التعابير الحرفية الثقيلة في اللغتين بأمثلة متكافئة.",
+      "credibilityAndTruthfulness": "افصل ثلاثة مستويات: ما تفعله التجربة الآن، ما يمكن تصميمه في مشروع، وما يحتاج إثبات تشغيل.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:platform",
+        "components/site/public-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-platform-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.3",
+        "19.2"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/services",
+      "localizedRoutes": [
+        "/ar/services",
+        "/en/services"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "ماذا سأستلم مقابل العمل؟",
+      "currentHeading": {
+        "ar": "هندسة أنظمة الوكلاء من تحديد النطاق إلى التشغيل.",
+        "en": "Engineering AI workflows around your operations."
+      },
+      "currentStrength": "أربع خدمات لكل منها تسليم محدد؛ التكوين التحريري جيد.",
+      "editorialIssues": [
+        "تكرار مراحل المنهجية والباقات يجعل وظيفة الصفحة غير مميزة بما يكفي.",
+        "التسليمات موصوفة نصيًا دون عينة."
+      ],
+      "proposedAction": [
+        "احتفظ بالصفوف التحريرية.",
+        "اجعل كل خدمة تبدأ بحالة شراء: لديك مشكلة غير محددة / لديك نطاق واضح / لديك تجربة تحتاج تقييمًا / لديك نظام يحتاج تسليمًا.",
+        "أظهر مقتطفًا موسومًا من متطلبات أو خطة قبول؛ لا تعِد كتابة النص كله."
+      ],
+      "conversion": "ناقش نطاق العمل → /start؛ مسار للباقات لمن يريد اختيار نقطة البداية.",
+      "bilingualParity": "AR/EN متوازنتان، وعبارة ما تستلمه / What you receive فعالة وتحافظ على المقابلة.",
+      "credibilityAndTruthfulness": "التسليمات عروض خدمة؛ لا تعرضها بوصفها عمليات عميل منشورة أو تكاملات قائمة.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:services",
+        "components/site/editorial-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-services-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "14",
+        "16.4"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/solutions",
+      "localizedRoutes": [
+        "/ar/solutions",
+        "/en/solutions"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "أي عملية مناسبة للبداية؟",
+      "currentHeading": {
+        "ar": "اختر العملية قبل اختيار الوكيل.",
+        "en": "Choose the workflow before choosing the agent."
+      },
+      "currentStrength": "أربع حالات استخدام منفصلة وروابطها محددة، مع تنبيه صحيح أنها نطاقات مقترحة.",
+      "editorialIssues": [
+        "أوصاف الحلول تبدأ بالفعل التقني أكثر من المشكلة المحسوسة.",
+        "الفرق بين الحالات يحتاج مثالًا مبكرًا لما يصل للمسؤول."
+      ],
+      "proposedAction": [
+        "استخدم قالبًا موحدًا لكل حل: المشكلة المتكررة → النتيجة التي سيستلمها الفريق → ما يظل قرارًا بشريًا.",
+        "أضف سطر اختيار: إذا كان التحدي في الملفات اختر المعرفة؛ إذا كان في استكمال الطلب اختر المشتريات."
+      ],
+      "conversion": "أول CTA لكل بطاقة لصفحة الحل، ثم CTA نهائي لمناقشة حالة الاستخدام.",
+      "bilingualParity": "المعنى متقابل؛ اجعل كثافة المعلومات متساوية وظيفيًا لا بطول النص.",
+      "credibilityAndTruthfulness": "وسم النطاق المقترح يبقى قريبًا من الأمثلة، ولا يختلط بمراجع عملاء.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:solutions",
+        "components/site/solutions-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-solutions-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.5"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/solutions/knowledge",
+      "localizedRoutes": [
+        "/ar/solutions/knowledge",
+        "/en/solutions/knowledge"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "هل سيجد الموظف إجابة يعرف مصدرها وحدودها؟",
+      "currentHeading": {
+        "ar": "إجابات يمكن الرجوع إلى مصدرها.",
+        "en": "Answers your team can trace to a source."
+      },
+      "currentStrength": "مشكلة واضحة ونقطة بداية واختبارات وأدوار مراجعة صحيحة.",
+      "editorialIssues": [
+        "يفتقد مثال سؤال وإجابة قصيرة ومصدر تجريبي وحالة غياب الإجابة.",
+        "نطاق البداية يستخدم مصطلحات استرجاع دون إظهار أثرها."
+      ],
+      "proposedAction": [
+        "أضف عينة افتراضية: سؤال موظف → مقتطف سياسة تجريبية مع نسخة/تاريخ → إجابة بمرجع → حالة تحتاج مراجعة.",
+        "اجعل نطاق البداية محددًا بمثال نوع وثائق، دون نشر رقم دقة أو دعم ملفات غير مثبت."
+      ],
+      "conversion": "ناقش مصادر المعرفة لديك → /start؛ تجربة مساعد التصميم موضحة بأنها تخطط للحل ولا تبحث في مستندات المؤسسة.",
+      "bilingualParity": "مصطلح knowledge يقابله المعرفة الداخلية؛ لا تَعِد ببحث حي في وثائق لم تُربط.",
+      "credibilityAndTruthfulness": "لا إخراج تجريبي مُختلق على أنه استرجاع فعلي من مؤسسة؛ كل مصدر في العرض موسوم افتراضيًا.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:solutions/knowledge",
+        "components/site/solutions-page.tsx"
+      ],
+      "visualEvidence": [],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.6"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/solutions/procurement",
+      "localizedRoutes": [
+        "/ar/solutions/procurement",
+        "/en/solutions/procurement"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "كيف يصل طلب مكتمل للمسؤول قبل الشراء؟",
+      "currentHeading": {
+        "ar": "طلبات شراء أوضح قبل الاعتماد.",
+        "en": "Clearer purchase requests before approval."
+      },
+      "currentStrength": "المدخلات والمخرجات والاعتماد ومعيار التجربة محددة.",
+      "editorialIssues": [
+        "الصفحة تصف ملف المراجعة دون إظهاره.",
+        "عبارة مقارنة قابلة للفحص تحتاج تحديد عناصر المقارنة."
+      ],
+      "proposedAction": [
+        "اعرض طلبًا افتراضيًا صغيرًا مع مواصفة ناقصة وعرضي موردين تجريبيين؛ تظهر المقارنة بالنواقص والأسباب.",
+        "انتهِ بحالة جاهز لمراجعة المسؤول، دون علامة شراء ناجح."
+      ],
+      "conversion": "ناقش مسار المشتريات → /start مع نوع العملية مذكورًا في الموجز المقترح.",
+      "bilingualParity": "المحتوى متكافئ؛ ترجم missing specifications وapproval إلى أوصاف عمل طبيعية.",
+      "credibilityAndTruthfulness": "أي أسعار أو أسماء في العينة توضيحية فقط؛ لا شراء ولا التزام.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:solutions/procurement",
+        "components/site/solutions-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-procurement-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.7"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/solutions/receivables",
+      "localizedRoutes": [
+        "/ar/solutions/receivables",
+        "/en/solutions/receivables"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "كيف أرى حالة الفاتورة والخطوة التالية دون تجاهل السداد أو النزاع؟",
+      "currentHeading": {
+        "ar": "متابعة المستحقات بسياق واضح لكل حالة.",
+        "en": "Receivables follow-up with context for each case."
+      },
+      "currentStrength": "تغطية الاستثناءات والمسودات تمنع وعود التحصيل المضللة.",
+      "editorialIssues": [
+        "طول الافتتاح وكثرة المصادر/المراجعة تخفي النتيجة اليومية.",
+        "لا نموذج ملخص حالة."
+      ],
+      "proposedAction": [
+        "ابدأ بنتيجة ملموسة: ملخص الفاتورة وآخر تواصل والاستثناء والخطوة المقترحة.",
+        "أظهر فاتورة افتراضية عليها نزاع فتتوقف مسودة المتابعة حتى مراجعة المسؤول."
+      ],
+      "conversion": "ناقش مسار المتابعة → /start.",
+      "bilingualParity": "متقابل؛ احفظ معنى disputed وrecorded payments دون ترجمة مالية غامضة.",
+      "credibilityAndTruthfulness": "لا ادعاء تحصيل أو انخفاض تأخير، ولا إرسال آلي مثبت في التجربة.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:solutions/receivables",
+        "components/site/solutions-page.tsx"
+      ],
+      "visualEvidence": [],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.8"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/solutions/customer-operations",
+      "localizedRoutes": [
+        "/ar/solutions/customer-operations",
+        "/en/solutions/customer-operations"
+      ],
+      "priority": "P2",
+      "buyerQuestion": "متى يجيب النظام، ومتى يحيل الطلب لشخص؟",
+      "currentHeading": {
+        "ar": "اربط طلب العميل بالخطوة المناسبة.",
+        "en": "Connect a customer request to the right next step."
+      },
+      "currentStrength": "الافتتاح الحالي طبيعي ويشرح الفرق بين جواب/معلومة/إجراء/إحالة بوضوح؛ يُحفظ.",
+      "editorialIssues": [
+        "لا مثال يوضح هذه الفروق.",
+        "تبدو مشابهة لصفحات الحلول الأخرى دون سياق طلب."
+      ],
+      "proposedAction": [
+        "احتفظ بالافتتاح.",
+        "أضف طلب عميل افتراضيًا ثم مثال إجابة ومثال نقص معلومات ومثال إحالة لاسترداد مالي.",
+        "أظهر ما ينتقل للموظف عند الإحالة، مع عدم اختلاق تكامل تذاكر قائم."
+      ],
+      "conversion": "ناقش عمليات العملاء → /start.",
+      "bilingualParity": "ميزة عربية/إنجليزية مع حفظ الأسماء والأرقام موجودة؛ لا تحولها إلى وعد بكل اللغات أو دقة ثقافية غير مثبتة.",
+      "credibilityAndTruthfulness": "لا عرض رد أو refund كمهمة منفذة على سجل عميل حقيقي.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:solutions/customer-operations",
+        "components/site/solutions-page.tsx"
+      ],
+      "visualEvidence": [],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.9"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/industries",
+      "localizedRoutes": [
+        "/ar/industries",
+        "/en/industries"
+      ],
+      "priority": "P2",
+      "buyerQuestion": "هل تفهمون اختلاف عملي عن غيره؟",
+      "currentHeading": {
+        "ar": "متطلبات القطاع تبدأ من طريقة عمله.",
+        "en": "Sector requirements start with how the work is done."
+      },
+      "currentStrength": "ثلاثة قطاعات أمثلة، مع حدود صادقة ودون قائمة عملاء مختلقة.",
+      "editorialIssues": [
+        "النص عام ولا يُضيف كثيرًا فوق الحلول.",
+        "جملة الموقع لا يدعي وجود هذا الربط تضع حديث فريق النشر أمام الزائر.",
+        "الملاحظة العامة تظهر كبطاقة رابعة مماثلة للمحتوى."
+      ],
+      "proposedAction": [
+        "لكل قطاع: مهمة يومية واحدة + أنواع السجلات + قرار مهم + رابط الحل المناسب.",
+        "صياغة حد الأجهزة مباشرة: ربط الحساسات والأجهزة يُحدد ضمن نطاق تقني مستقل.",
+        "ضع ملاحظة نطاقات مقترحة كسطر هادئ شامل، مع بقائها ظاهرة."
+      ],
+      "conversion": "اشرح سياق مؤسستك → /start، وروابط مباشرة للحلول المعنية.",
+      "bilingualParity": "متقابل؛ لا إضافة أسماء دول أو متطلبات تنظيمية خاصة بلا دليل.",
+      "credibilityAndTruthfulness": "لا ادعاء خبرة قطاعية لعملاء؛ خبرة المؤسس الزراعية تُنسب له في عن المؤسس.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:industries",
+        "components/site/public-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-industries-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.10"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/methodology",
+      "localizedRoutes": [
+        "/ar/methodology",
+        "/en/methodology"
+      ],
+      "priority": "P2",
+      "buyerQuestion": "كيف أعرف أننا مستعدون للانتقال للمرحلة التالية؟",
+      "currentHeading": {
+        "ar": "كل مرحلة تنتهي بنتيجة يمكن مراجعتها.",
+        "en": "Every stage ends with something you can review."
+      },
+      "currentStrength": "خمس مراحل قصيرة مع تسليم محدد؛ من أوضح الصفحات الحالية.",
+      "editorialIssues": [
+        "قد يكرر وصف الخدمات دون إبراز قرار الانتقال.",
+        "معيار قبول مفهوم مهني يحتاج مثالًا بسيطًا لغير التقني."
+      ],
+      "proposedAction": [
+        "احتفظ بالتسلسل التحريري.",
+        "أضف سؤال قرار بعد كل مرحلة: هل المدخلات متاحة؟ هل النتيجة قابلة للفحص؟ هل الاستثناءات واضحة؟",
+        "اعرض مثال معيار قبول: تظهر المواصفة الناقصة ويعود الطلب لصاحبه قبل الشراء."
+      ],
+      "conversion": "ابدأ بتحديد النطاق → /start.",
+      "bilingualParity": "توازن جيد بين اللغتين، لا حاجة لتبديل المصطلحات المعتمدة.",
+      "credibilityAndTruthfulness": "المراحل أسلوب عمل مقترح للمشروعات، وليست قائمة مراحل أُغلقت في منتج المنشور.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:methodology",
+        "components/site/editorial-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-methodology-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.11"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/security",
+      "localizedRoutes": [
+        "/ar/security",
+        "/en/security"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "ما الذي تفعله التجربة الآن، وما الذي ستصممونه لحماية مشروعنا؟",
+      "currentHeading": {
+        "ar": "الصلاحيات والبيانات جزء من تصميم المشروع.",
+        "en": "Permissions and data are part of the project design."
+      },
+      "currentStrength": "النص يفرق بوضوح بين متطلبات مشروع وضوابط مفعلة، وينهى عن مشاركة أسرار.",
+      "editorialIssues": [
+        "الأفعال ما نراجعه/نحدد تحتاج فصلًا بصريًا عن حالة الخدمة العامة.",
+        "لا يوجد مسار ملخص للبيانات يقابل إشعار الخصوصية."
+      ],
+      "proposedAction": [
+        "قسمان واضحان: حدود التجربة الحالية؛ أسئلة الأمان قبل مشروع مخصص.",
+        "أضف رابط خصوصية فعليًا ضمن السياق؛ النص المعتمد لديه عنوان رابط لكن المكون العام لا يحوله لرابط داخلي هناك.",
+        "يُستخدم ملخص حقائقي صغير لتدفق المحادثة فقط بعد مطابقته للمصدر الحالي."
+      ],
+      "conversion": "ناقش متطلبات الأمان → /start بوصف عام؛ رابط مباشر /privacy.",
+      "bilingualParity": "متقابل، وتُحفظ حدود الاستخدام في اللغتين كاملة.",
+      "credibilityAndTruthfulness": "لا SOC 2 أو ISO أو تشفير شامل أو إقامة بيانات أو عزْل عملاء مثبت دون دليل؛ لا تحويل قائمة تصميم إلى شارة امتثال.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:security",
+        "components/site/public-page.tsx",
+        "lib/content/public-pages.ts:privacy"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-security-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.12",
+        "17"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/resources",
+      "localizedRoutes": [
+        "/ar/resources",
+        "/en/resources"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "هل توجد أداة عملية أبدأ بها الآن؟",
+      "currentHeading": {
+        "ar": "ابدأ بموجز يمكن البناء عليه.",
+        "en": "Start with a brief you can build on."
+      },
+      "currentStrength": "تنزيلان مناسبـان لكل لغة وروابط واضحة، وتم التحقق منهما في التقرير السابق.",
+      "editorialIssues": [
+        "صيغة Markdown قد تكون غير مألوفة للقارئ التجاري.",
+        "لا توجد معاينة لما يحتويه الملف."
+      ],
+      "proposedAction": [
+        "أضف معاينة حقيقية قصيرة من قالب كل لغة مع حقول الهدف/المدخل/المخرج/المراجع.",
+        "اشرح ببساطة: ملف نصي يمكنك فتحه وتعديله، دون وعد ببرنامج غير موجود.",
+        "وضح ترتيب الاستخدام: موجز أولًا، ثم خطة قبول."
+      ],
+      "conversion": "نزّل القالب ثم ناقش مشروعك؛ أو افتح المساعد إذا لم يكن لديك وصف أولي.",
+      "bilingualParity": "تنزيلات مستقلة AR/EN جيدة؛ تُستخدم مقتطفات من الملف الفعلي بلغته.",
+      "credibilityAndTruthfulness": "لا تحويل تنزيل قالب إلى تقديم طلب أو تواصل تم بالفعل؛ لا داعي لإرسال بيانات حقيقية.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:resources",
+        "components/site/offerings-page.tsx",
+        "public/downloads/agentnexos/"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-resources-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.13",
+        "19.4"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/about",
+      "localizedRoutes": [
+        "/ar/about",
+        "/en/about"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "من المسؤول عن العمل، وما خبرته ذات الصلة؟",
+      "currentHeading": {
+        "ar": "هندسة تبدأ بفهم العمل.",
+        "en": "Engineering starts with understanding the work."
+      },
+      "currentStrength": "نبذة مؤسس مسماة وصوت شخصي واضح، والمشروعات المستقلة موسومة دون مبالغة.",
+      "editorialIssues": [
+        "الهوية مؤسسة/فريق في بعض الصفحات مقابل المؤسس بصيغة أنا؛ يحتاج استعمالًا متسقًا.",
+        "عناوين المشروعات دون رابط أو أثر منشور لا تقدم دليلًا يُفتح للقارئ."
+      ],
+      "proposedAction": [
+        "احتفظ بالنص الشخصي والحقائق المعتمدة.",
+        "قدم AGYNEXA باعتبارها مشروعًا يقوده أدهم يونس، دون افتراض موظفين أو مكتب أو شركة مسجلة.",
+        "اربط مشروعًا مستقلًا بصفحة أو مستودع يختاره المالك ويثبت وصفه؛ إذا غاب الدليل يبقى الوصف المحدود."
+      ],
+      "conversion": "ناقش مشروعك مع أدهم → /start، والتواصل المباشر الحالي.",
+      "bilingualParity": "قريب جدًا؛ دور Agentic Systems Engineer يحرر إلى مصطلح موحد مع بقية الموقع، دون رفع مؤهل مهني.",
+      "credibilityAndTruthfulness": "لا اختلاق سنوات خبرة أو شهادات أو عملاء؛ صورة مؤسس حقيقية فقط إذا توفرت ووافق على استخدامها.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:about",
+        "components/site/editorial-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-about-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "16.14"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/agentnexos",
+      "localizedRoutes": [
+        "/ar/agentnexos",
+        "/en/agentnexos"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "ما الذي سأحصل عليه من كتابة عملية، وما حدود استخدام بياناتي؟",
+      "currentHeading": {
+        "ar": "صمّم سير العمل قبل بناء الوكيل.",
+        "en": "Design the workflow before building the agent."
+      },
+      "currentStrength": "مهمة التصميم واضحة وأمثلة افتراضية ومخرجات نصية وتصدير وحدود ظاهرة.",
+      "editorialIssues": [
+        "نسخة master وrevision وagent-workspace والمكون تتقاسم النص؛ يسهل انحراف التحرير إذا عُدّل ملف واحد فقط.",
+        "مقدمة الترحيب تتكرر داخل تفاصيل النطاق.",
+        "بعد الرد لا يوجد في المكون الحالي جسر ظاهر إلى /start؛ التصدير أيقونة في الشريط، رغم أن النسخة المعتمدة تتحدث عن ناقش التنفيذ."
+      ],
+      "proposedAction": [
+        "مقترح محتوى: شرح مخرجات بسيط قبل الإدخال: خطوات أولية، بيانات مطلوبة، أسئلة مفتوحة.",
+        "احتفظ بتنبيه البيانات ملاصقًا للإدخال وبإفصاح مزود المعالجة الفعلي في إشعار الخصوصية. نص agent-workspace.privacy الذي يسمّي Groq ليس هو مصدر التنبيه المعروض بجانب الإدخال؛ المكون يستعمل تنبيه master العام هناك.",
+        "أضف بعد مخرج قابل للمراجعة CTA واضحًا إلى إعداد موجز، مع انتقال بيانات فقط إذا نُفذ لاحقًا بحدود خصوصية واضحة.",
+        "توحيد ملكية النصوص أثناء التنفيذ بدل الاعتماد على نسخة master غير المعروضة."
+      ],
+      "conversion": "جرّب مثالًا → راجع الرد → نزّل المحادثة → جهّز موجز مشروعك في /start.",
+      "bilingualParity": "اللغتان متقاربتان؛ الإنجليزية Limited live preview لا ينبغي أن تصبح ادعاء منصة مؤسسية.",
+      "credibilityAndTruthfulness": "خطوات المعالجة مؤشر تشغيل وليست فرقًا بشرية؛ لا الإيحاء بوجود وصلات بريد/ERP/CRM/ذاكرة عميل.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:agentnexos",
+        "lib/content/revision.ts",
+        "lib/content/agent-workspace.ts",
+        "components/agent/workspace.tsx"
+      ],
+      "visualEvidence": [],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "M4",
+        "M6",
+        "16.15"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/start",
+      "localizedRoutes": [
+        "/ar/start",
+        "/en/start"
+      ],
+      "priority": "P0-copy-clarity",
+      "buyerQuestion": "كيف أبدأ مناقشة فعلية، وهل أرسل هذا النموذج؟",
+      "currentHeading": {
+        "ar": "حدثنا عن العملية التي تريد تحسينها.",
+        "en": "Tell us which process you want to improve."
+      },
+      "currentStrength": "التجهيز المحلي والنسخ والتنزيل وفتح مسودة البريد مذكورة بصدق؛ دليل الفحص السابق يؤكد لا إرسال تلقائي.",
+      "editorialIssues": [
+        "CTA ناقش مشروعك يوحي بوصول طلب بينما الصفحة تجهز ملفًا محليًا فقط.",
+        "شرح الخطوة التالية يظهر أسفل أجزاء من النموذج؛ قد لا يراه الزائر قبل الإدخال.",
+        "لا وعد زمن رد متحقق، ولا يجب اختلاقه."
+      ],
+      "proposedAction": [
+        "ضع فوق أول حقل: جهّز موجزًا أوليًا، ثم راجعه وأرسله من بريدك إذا رغبت. هذه الصفحة لا ترسل طلبًا.",
+        "اعرض ثلاث خطوات: اكتب → راجع/نزّل → افتح مسودة وأرسل بنفسك.",
+        "احتفظ بحقول الاختيار اختيارية وبحساب عبء العمل كخط أساس فقط.",
+        "لا رسالة نجاح توحي أن الفريق استلم الموجز."
+      ],
+      "conversion": "النجاح الحقيقي في الحالة الحالية: الموجز جاهز للمراجعة؛ لا إرساله للفريق.",
+      "bilingualParity": "التنبيه والنتيجة والأزرار يجب أن تتقابل وظيفيًا، وقد راجعها التقرير السابق؛ لا تغيير أعمال الخلفية بهذا المقترح.",
+      "credibilityAndTruthfulness": "لا وعد اتصال أو تقييم مجاني أو سعر أو زمن تنفيذ أو عائد توفير لم يعتمد.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:start",
+        "components/site/project-brief.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-start-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "M4",
+        "16.16",
+        "19.4"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/engagements",
+      "localizedRoutes": [
+        "/ar/engagements",
+        "/en/engagements"
+      ],
+      "priority": "P1",
+      "buyerQuestion": "أي عرض يناسب مرحلتي، وكيف أعرف السعر؟",
+      "currentHeading": {
+        "ar": "اختر نطاق العمل المناسب لمرحلتك.",
+        "en": "Choose the engagement that fits your stage."
+      },
+      "currentStrength": "أربعة عروض مع متضمنات ومخرج وروابط تحفظ اختيار العرض؛ لا سعر مختلق.",
+      "editorialIssues": [
+        "الخدمات والمنهجية والباقات تتقاطع لغويًا.",
+        "أربع بطاقات طويلة متكافئة بصريًا تجعل اختيار بداية مناسب أصعب."
+      ],
+      "proposedAction": [
+        "احتفظ بالمحتويات والمخرجات.",
+        "أضف جملة توجيه: إن لم يكن النطاق واضحًا ابدأ بتحديده؛ إذا كان محددًا ناقش تجربة.",
+        "اعرض المقارنة حول متى تختار/ما تستلم/ما نحتاج منك؛ هذه حقول محتوى مقترحة تحتاج تحديد المعلومات قبل النشر.",
+        "وضح أن باقات العمل عروض نطاق مخصص وليست اشتراك SaaS أو أسعارًا ثابتة."
+      ],
+      "conversion": "CTA خاص بكل عرض إلى /start مع الاختيار محفوظًا.",
+      "bilingualParity": "Discovery يقابله تحديد النطاق وظيفيًا؛ لا إلزام بترجمة حرفية.",
+      "credibilityAndTruthfulness": "السعر والمدة والتزامات الدعم لا تختلق؛ تكاليف المزودين تبقى واضحة في العرض.",
+      "activeSource": [
+        "lib/content/master-upgrade.json:engagements",
+        "components/site/offerings-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-engagements-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "14",
+        "16.18"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/login",
+      "localizedRoutes": [
+        "/ar/login",
+        "/en/login"
+      ],
+      "priority": "P0-copy-consistency",
+      "buyerQuestion": "هل أحتاج حسابًا، وماذا يضيف لي؟",
+      "currentHeading": {
+        "ar": "تسجيل الدخول (يتغير حسب وضع النموذج)",
+        "en": "Sign in (changes with form mode)"
+      },
+      "currentStrength": "التنبيه لا يمنح وصولًا لأنظمة مؤسسة صحيح، ويوجد دخول دون حساب.",
+      "editorialIssues": [
+        "العنوان الفرعي أنشئ حسابك أو سجّل الدخول لاستخدام المساعد يوحي بالاشتراط، ثم يظهر أو ابدأ دون حساب.",
+        "فائدة الحساب مقارنة بالزائر غير موضحة ولم يثبت حفظ محادثات أو workspace.",
+        "العنوان والوصف في metadata محدثان لكن openGraph الموروث عبر revisionMetadata لا يزال نص master لمساحة عملاء مدعوين."
+      ],
+      "proposedAction": [
+        "صياغة مقترحة: يمكنك تجربة المساعد دون حساب. إذا كان لديك حساب، سجّل الدخول من هنا.",
+        "لا تَعِد بحفظ أو فريق أو بيانات مؤسسة؛ حدد فائدة حساب فعلية قبل دفع الزائر للتسجيل.",
+        "وحّد metadata وOpenGraph مع الحالة الحالية: حساب المساعد، لا مساحة عملاء."
+      ],
+      "conversion": "الاستكشاف → مساعد دون حساب؛ الدخول مسار ثانوي لمن يحتاج حسابه.",
+      "bilingualParity": "التناقض والوراثة في اللغتين، لا فرق ترجمة جوهري.",
+      "credibilityAndTruthfulness": "إنشاء حساب لا يثبت عزل مؤسسة أو خدمة عملاء؛ نجاح البريد والمصادقة ليس ضمن دليل المراجعة السابق.",
+      "activeSource": [
+        "components/site/login-gateway.tsx",
+        "app/[locale]/login/page.tsx",
+        "lib/content/revision.ts",
+        "lib/content/master-upgrade.json:login"
+      ],
+      "visualEvidence": [],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "M5",
+        "16.17",
+        "19.1"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/privacy",
+      "localizedRoutes": [
+        "/ar/privacy",
+        "/en/privacy"
+      ],
+      "priority": "P0-factual-review",
+      "buyerQuestion": "ما البيانات التي تعالج أثناء الموجز والمساعد والحساب؟",
+      "currentHeading": {
+        "ar": "الخصوصية ومعالجة البيانات",
+        "en": "Privacy and data handling"
+      },
+      "currentStrength": "تفصيل محلي/خادم/مزود/سجل استخدام أكثر صدقًا من ضمانات عامة، والتقرير يميّز حذفًا عند طلب جديد عن حذف مجدول.",
+      "editorialIssues": [
+        "الإشعار الحالي يصف الموجز والمحادثة والاستضافة وسجلات الحد، ولا يشرح بيانات الحساب رغم وجود التسجيل/الدخول.",
+        "بيانات المسؤول وقناة حقوق الخصوصية ومواقع المعالجة والاحتفاظ النهائي تتطلب أدلة وقرارًا محددًا.",
+        "البطاقات المتجاورة تعيق قراءة الإشعار كسلسلة واحدة."
+      ],
+      "proposedAction": [
+        "لا إعادة صياغة حقائق أو مدد أو ضمانات قانونية في هذه الحزمة.",
+        "اطلب من مسار التنفيذ جمع خريطة معالجة فعلية للحساب والمزودين والاحتفاظ والجهة المسؤولة، ثم مراجعة قانونية/مالك قبل نشر إضافات.",
+        "اعرض النص الحالي في عمود قراءة وترتيب عناوين واضح دون محو التفاصيل."
+      ],
+      "conversion": "قناة خصوصية معتمدة حين تتوفر؛ لا توجيه لإرسال مستندات حساسة.",
+      "bilingualParity": "AR/EN متقابلتان في الحقائق المقروءة؛ يجب تحديث أي معلومة قانونية في اللغتين معًا.",
+      "credibilityAndTruthfulness": "غياب البيانات القانونية لا يُعالج باختلاق اسم كيان أو ولاية أو احتفاظ أو لا تدريب؛ تظل مسجلة كنقص دليل.",
+      "activeSource": [
+        "lib/content/public-pages.ts:privacy",
+        "components/site/public-page.tsx"
+      ],
+      "visualEvidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-privacy-1440.png"
+      ],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "M5",
+        "17"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "routePattern": "/{locale}/terms",
+      "localizedRoutes": [
+        "/ar/terms",
+        "/en/terms"
+      ],
+      "priority": "P2-legal-presentation",
+      "buyerQuestion": "ما حدود التجربة ومتى يبدأ اتفاق مشروع مدفوع؟",
+      "currentHeading": {
+        "ar": "شروط استخدام التجربة",
+        "en": "Example usage terms"
+      },
+      "currentStrength": "حدود التجربة وقرارات العمل والاتفاق المستقل موضحة دون ضمانات تنفيذ كاذبة.",
+      "editorialIssues": [
+        "عنوان Example usage terms في الإنجليزية أضعف تعريفيًا من Public demo terms، لكن أي تغيير قانوني يحتاج مراجعة.",
+        "نصوص البطاقات تتكرر في الشروط والأمان والخصوصية؛ التكرار القانوني لا يحذف تلقائيًا."
+      ],
+      "proposedAction": [
+        "حفظ الحقائق الحالية كاملة.",
+        "تحسين ترتيب القراءة بعمود واحد وروابط سياقية إلى الخصوصية، دون اختصار التزامات.",
+        "أي تعديل لمقدم الخدمة/ولاية/مسؤولية/عقد ينتظر حقائق معتمدة؛ لا يصاغ افتراضًا."
+      ],
+      "conversion": "فهم الحدود ثم العودة للمساعد أو مناقشة مشروع؛ لا CTA تجاري مهيمن داخل الشروط.",
+      "bilingualParity": "توجد مقابلة معنوية؛ غرض النص يجب أن يسمّى التجربة العامة باللغتين عند المراجعة القانونية.",
+      "credibilityAndTruthfulness": "لا اعتبار الشروط الحالية عقد خدمة تجارية مكتملًا، ولا اختلاق حدود مسؤولية أو اختصاص.",
+      "activeSource": [
+        "lib/content/public-pages.ts:terms",
+        "components/site/public-page.tsx"
+      ],
+      "visualEvidence": [],
+      "strategyReferences": [
+        "M2",
+        "M3",
+        "17"
+      ],
+      "proposalOnly": true
+    }
+  ],
+  "homepageProposal": {
+    "status": "PROPOSED_NOT_DEPLOYED",
+    "editorialDirection": "صوت شركة هندسة يقودها مؤسس معروف؛ يشرح العمل بلغة المشتري ويثبت الفهم بمخرجات افتراضية موسومة. يحافظ على الأسود والأخضر والحدود الصحيحة. لا يقدمها كمنصة مؤسسية متصلة جاهزة.",
+    "ar": {
+      "hero": {
+        "eyebrow": "AGYNEXA · هندسة أنظمة الوكلاء وأتمتة العمليات",
+        "title": "وكلاء ذكاء اصطناعي للمهام التي تتكرر كل يوم.",
+        "body": "طلب شراء يعود لنقص التفاصيل. معلومة موزعة بين ملفات. فاتورة تحتاج متابعة. نبدأ بعملية واحدة من عمل فريقك، ثم نصمّم ما يمكن للوكيل تجهيزه، وما يحتاج قرارًا من المسؤول، وكيف تُراجع النتيجة.",
+        "primaryCTA": {
+          "label": "ناقش مشروعك",
+          "destination": "/ar/start",
+          "support": "ابدأ بإعداد موجز تراجعه وترسله بنفسك."
+        },
+        "secondaryCTA": {
+          "label": "جرّب تصميم عملية",
+          "destination": "/ar/agentnexos"
+        },
+        "demoNotice": "المساعد العام لتخطيط العملية ببيانات افتراضية. ربط أنظمتك وتنفيذ الإجراءات يحتاجان مشروعًا مستقلًا."
+      },
+      "problemAndScope": {
+        "title": "ابدأ من المكان الذي يتعطل فيه العمل.",
+        "body": "ما الطلب الذي يعود أكثر من مرة؟ وما المعلومة التي يبحث عنها الفريق كل يوم؟ نستخدم هذه الأسئلة لاختيار بداية واضحة، ثم نحدد البيانات المطلوبة والنتيجة التي سيستلمها المسؤول.",
+        "cards": [
+          {
+            "title": "المعرفة الداخلية",
+            "body": "رتّب البحث في السياسات والإجراءات، وحدد كيف تظهر الإجابة ومصدرها ومتى يحتاج السؤال إلى مراجعة.",
+            "cta": "استكشف المعرفة الداخلية",
+            "destination": "/ar/solutions/knowledge"
+          },
+          {
+            "title": "المشتريات",
+            "body": "حدّد بيانات الطلب والمواصفات الناقصة وما يحتاجه المسؤول قبل اعتماد الشراء.",
+            "cta": "استكشف مسار المشتريات",
+            "destination": "/ar/solutions/procurement"
+          },
+          {
+            "title": "متابعة المستحقات",
+            "body": "اجمع حالة الفاتورة وآخر متابعة وأي نزاع في ملخص يمهّد للخطوة التالية.",
+            "cta": "استكشف متابعة المستحقات",
+            "destination": "/ar/solutions/receivables"
+          },
+          {
+            "title": "عمليات العملاء",
+            "body": "ميّز الطلب الذي يحتاج إجابة عن الطلب الذي يحتاج معلومات أو إجراءً أو إحالة إلى الفريق.",
+            "cta": "استكشف عمليات العملاء",
+            "destination": "/ar/solutions/customer-operations"
+          }
+        ],
+        "boundary": "نطاقات مقترحة لمشروعات مخصصة. تُحدد البيانات والتكاملات والصلاحيات لكل مشروع."
+      },
+      "workedExample": {
+        "label": "مثال توضيحي · بيانات افتراضية",
+        "title": "كيف يصل طلب شراء أوضح إلى المسؤول؟",
+        "intro": "في هذا المثال، يحتاج الفريق إلى مراجعة الطلب قبل الشراء. المطلوب تجهيز المعلومات والنواقص للمسؤول.",
+        "steps": [
+          {
+            "title": "يصل الطلب",
+            "body": "طلب داخلي لشراء جهازين، مع مواصفات ومرفقات تجريبية."
+          },
+          {
+            "title": "تظهر المعلومة الناقصة",
+            "body": "مدة الضمان غير مذكورة في أحد العرضين. تظهر كمعلومة تحتاج استكمالًا، وتظل المقارنة غير مكتملة."
+          },
+          {
+            "title": "يراجع المسؤول",
+            "body": "يتسلم ملخص الطلب ومصادر المعلومات وقائمة النواقص، ثم يقرر الخطوة التالية."
+          },
+          {
+            "title": "يُراجع أثر التنفيذ",
+            "body": "إذا شمل المشروع ربطًا مصرحًا به، يُتحقق من نتيجة الإجراء ضمن معايير القبول المتفق عليها."
+          }
+        ],
+        "artifact": {
+          "title": "ملف المراجعة المقترح",
+          "fields": [
+            "طلب: جهازان للاستخدام الداخلي",
+            "المعلومة الناقصة: مدة الضمان في العرض الثاني",
+            "الحالة: يحتاج استكمال المعلومات",
+            "الخطوة التالية: مراجعة مسؤول المشتريات"
+          ]
+        },
+        "notice": "هذا شرح لتصميم محتمل؛ لا ينشئ طلب شراء ولا يتصل بمورد أو نظام مؤسسة."
+      },
+      "deliverables": {
+        "title": "ما الذي تخرج به من المرحلة الأولى؟",
+        "body": "قبل توسيع العمل، تحتاج إلى أساس واضح يمكن مناقشته ومراجعته.",
+        "items": [
+          {
+            "title": "مخطط للعملية",
+            "body": "أين تبدأ، وما البيانات التي تمر بها، ومن يراجع كل خطوة."
+          },
+          {
+            "title": "نطاق قابل للتنفيذ",
+            "body": "ما الذي يشمله العمل، وما يحتاج حسمًا، وما يبقى خارج المرحلة."
+          },
+          {
+            "title": "معايير قبول",
+            "body": "أمثلة توضح النتيجة المتوقعة ومتى يتوقف المسار أو يرجع إلى الفريق."
+          }
+        ],
+        "cta": "تعرّف على الخدمات",
+        "destination": "/ar/services"
+      },
+      "method": {
+        "title": "نحدّد. نصمّم. نختبر. ثم نقرر الخطوة التالية.",
+        "body": "تبدأ المشروعات بنطاق محدد. بعد تصميم المسار وبناء تجربة مناسبة، تُراجع النتائج والقيود قبل الاتفاق على التشغيل أو التوسع. يوضح كل عرض التسليمات والتكاليف ومسؤوليات المتابعة.",
+        "primaryCTA": {
+          "label": "قارن باقات العمل",
+          "destination": "/ar/engagements"
+        },
+        "secondaryCTA": {
+          "label": "تعرّف على المنهجية",
+          "destination": "/ar/methodology"
+        }
+      },
+      "founder": {
+        "title": "من يقف وراء AGYNEXA؟",
+        "body": "أسس أدهم يونس AGYNEXA بعد مشروعات مستقلة في الزراعة الذكية، واتجه عمله إلى تطبيقات الويب وربط واجهات الأنظمة واسترجاع المعرفة. يركز على تحويل احتياجات التشغيل إلى مسار واضح يمكن لفريقك مراجعته.",
+        "cta": "تعرّف على أدهم وطريقة عمله",
+        "destination": "/ar/about"
+      },
+      "faq": [
+        {
+          "question": "هل أحتاج إلى حساب لتجربة المساعد؟",
+          "answer": "يمكنك استخدام مساعد تصميم العمليات دون حساب، وببيانات افتراضية فقط."
+        },
+        {
+          "question": "هل المساعد متصل بأنظمة شركتي؟",
+          "answer": "التجربة العامة تساعدك على تخطيط العملية. أي ربط ببيانات شركتك أو تنفيذ إجراء يحتاج نطاقًا وصلاحيات وإعدادًا مستقلًا."
+        },
+        {
+          "question": "كيف يتحدد سعر المشروع؟",
+          "answer": "بعد مراجعة العملية والتكاملات ومتطلبات التشغيل والدعم. يوضح العرض ما يشمله العمل وتكاليف المزودين والخدمات الخارجية."
+        }
+      ],
+      "closing": {
+        "title": "ما الخطوة التي تريد أن يقضي فيها فريقك وقتًا أقل؟",
+        "body": "صف العملية والأنظمة التي تستخدمها وأين يتكرر التعطل. جهّز موجزًا أوليًا، وراجعه، ثم أرسله من بريدك لبدء المناقشة.",
+        "primaryCTA": {
+          "label": "جهّز موجز مشروعك",
+          "destination": "/ar/start"
+        },
+        "secondaryCTA": {
+          "label": "تواصل مع أدهم",
+          "destination": "mailto:adham@agynexa.si"
+        },
+        "notice": "إعداد الموجز لا يرسله تلقائيًا."
+      }
+    },
+    "enMatchedKeyCopy": {
+      "hero": {
+        "eyebrow": "AGYNEXA · AI agent systems and workflow automation",
+        "title": "AI agents for the work your team repeats every day.",
+        "body": "Purchase requests returned for missing details. Information scattered across files. Invoices waiting for follow-up. We start with one process, then define what an agent can prepare, where a person decides, and how the result will be checked.",
+        "primaryCTA": {
+          "label": "Discuss your project",
+          "destination": "/en/start",
+          "support": "Prepare a brief to review and send yourself."
+        },
+        "secondaryCTA": {
+          "label": "Try designing a workflow",
+          "destination": "/en/agentnexos"
+        },
+        "demoNotice": "The public assistant plans workflows using fictional data. System connections and live actions require a separate project."
+      },
+      "problemTitle": "Start where work gets stuck.",
+      "exampleTitle": "What does a clearer purchase request look like?",
+      "exampleLabel": "Illustrative example · fictional data",
+      "exampleNotice": "A possible workflow design. It does not create a purchase order or connect to a supplier or business system.",
+      "deliverablesTitle": "What will you have after the first stage?",
+      "deliverableHeadings": [
+        "A workflow map",
+        "A defined scope",
+        "Acceptance criteria"
+      ],
+      "methodTitle": "Define. Design. Test. Then decide what comes next.",
+      "methodCTA": "Compare engagement options",
+      "founderCTA": "Meet Adham and see how he works",
+      "closingTitle": "Which task should take less of your team’s time?",
+      "closingBody": "Describe the process, the systems you use, and where work keeps getting stuck. Prepare a brief, review it, and send it from your email to start the discussion.",
+      "closingCTA": "Prepare your project brief",
+      "closingNotice": "Preparing a brief does not send it automatically."
+    }
+  },
+  "beforeAfterExamples": [
+    {
+      "location": "Homepage hero",
+      "before": {
+        "arTitle": "وكلاء ذكاء اصطناعي لعمليات يعتمد عليها عملك.",
+        "arBody": "نصمم أنظمة تربط معرفة المؤسسة بأدواتها وخطوات العمل فيها. نبدأ بعملية محددة، ونوضح ما ينفذه الوكيل، وما يحتاج اعتماد فريقك، وكيف تُراجع النتيجة قبل توسيع الاستخدام.",
+        "enTitle": "AI agents for the work your business runs on."
+      },
+      "after": {
+        "arTitle": "وكلاء ذكاء اصطناعي للمهام التي تتكرر كل يوم.",
+        "arBody": "طلب شراء يعود لنقص التفاصيل. معلومة موزعة بين ملفات. فاتورة تحتاج متابعة. نبدأ بعملية واحدة من عمل فريقك، ثم نصمّم ما يمكن للوكيل تجهيزه، وما يحتاج قرارًا من المسؤول، وكيف تُراجع النتيجة.",
+        "enTitle": "AI agents for the work your team repeats every day."
+      },
+      "why": "يبدأ بمشكلة يعرفها القارئ ويشرح دور الخدمة؛ لا يختلق نتيجة أو تكاملًا."
+    },
+    {
+      "location": "Platform introduction",
+      "before": {
+        "ar": "نظام الوكلاء يحتاج أكثر من واجهة محادثة. نحدد كيف تصل المعلومة، ومن يملك صلاحية استخدامها، وأي إجراء يمكن تنفيذه، وكيف يعرف الفريق أن النتيجة صحيحة.",
+        "en": "An agent system needs more than a conversation interface. We define how information enters the workflow, who may use it, which actions are permitted, and how your team checks the result."
+      },
+      "after": {
+        "ar": "نصمّم مسارًا يبدأ بمعلومة من مصدر مسموح، ويجهّز خطوة للمسؤول، ويوضح ما حدث بعد التنفيذ. لكل مشروع مصادره وأدواته وحدود صلاحياته، وتُحدد قبل ربط الأنظمة.",
+        "en": "We design workflows that start with a permitted source, prepare a next step for the right person, and make the result traceable. The sources, tools, and permissions are defined for each project before systems are connected."
+      },
+      "why": "يستبدل المقارنة العامة بترتيب يمكن تخيله، ويقدم البنية كخدمة تصميم."
+    },
+    {
+      "location": "Industries / agriculture boundary",
+      "before": {
+        "ar": "سجلات تشغيل ومعلومات تحتاج تنظيمًا لدعم التخطيط والمتابعة. أي ربط بحساسات أو أجهزة ميدانية يحتاج نطاقًا تقنيًا مستقلًا؛ الموقع لا يدّعي وجود هذا الربط.",
+        "en": "Operational records and information that support planning and follow-up. Sensor or field-device connections require a separate technical scope; this site does not claim those connections are active."
+      },
+      "after": {
+        "ar": "نبدأ بالسجلات التي يعتمد عليها التخطيط والمتابعة، ونحدد كيف يجمع الفريق المعلومات ويراجعها. ربط الحساسات أو الأجهزة الميدانية يُحدد ضمن نطاق تقني مستقل.",
+        "en": "Start with the records used for planning and day-to-day follow-up, and define how the team gathers and reviews that information. Sensor or field-device connections require a separate technical scope."
+      },
+      "why": "لغة مباشرة تحترم القارئ، وتحافظ على الحد الحقيقي دون تحويل تعليمات النشر إلى رسالة للزائر."
+    }
+  ],
+  "rolloutProposal": [
+    {
+      "package": "A — clarity and content contracts",
+      "scope": [
+        "لغة الحساب وفائدته وحدوده",
+        "OpenGraph الدخول",
+        "بيان مسار الموجز قبل الحقول",
+        "جمع حقائق مسار بيانات الحساب للإشعار القانوني"
+      ],
+      "strategy": [
+        "M2",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "package": "B — homepage and proof",
+      "scope": [
+        "النص المقترح بعد اعتماده",
+        "مثال مشتريات افتراضي موسوم",
+        "تسليمات وعينة من القوالب",
+        "نبذة المؤسس وروابط صحيحة"
+      ],
+      "strategy": [
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "package": "C — supporting pages",
+      "scope": [
+        "تمييز وظائف الخدمات والمنهجية والباقات",
+        "مثال خاص بكل حل",
+        "معاينات موارد",
+        "تحسين قراءة الأمان والقطاعات والقانوني دون تحريف الحقائق"
+      ],
+      "strategy": [
+        "M2",
+        "M3"
+      ]
+    }
+  ],
+  "acceptanceForFutureAuthorizedImplementation": [
+    "كل صفحة تجيب عن سؤال المشتري الخاص بها وتدل على خطوة واحدة تالية مفهومة.",
+    "مقابلة AR/EN تشمل الوعد والأفعال والمخرجات والبيانات والحدود، لا عدد الأحرف فقط.",
+    "لا عميل أو قياس أو شهادة أو نتيجة أو اتصال حي مضاف دون مصدر صالح.",
+    "كل عينة افتراضية موسومة، ولا حالة UI توحي بتنفيذ خارجي حقيقي.",
+    "زر الموجز ونتيجته لا يوحيان باستلام الفريق للطلب قبل إرسال المستخدم بنفسه.",
+    "النص الفعلي المعروض وmetadata متسقان مع مصدر المحتوى النشط؛ master غير المستعمل ليس دليل ظهور.",
+    "تبقى مراجعة المصدر/الفرق منفصلة عن اختبار إصدار الإنتاج؛ لم تُنفذ اختبارات أو تعديلات هنا."
+  ],
+  "limitations": [
+    "لا بيانات تحليلات تحويل أو مقابلات مستخدمين أو دراسات عميل في المواد المقروءة؛ ترتيب الأولوية حكم تحريري، لا تجربة A/B مثبتة.",
+    "اللقطات تغطي صفحات تمثيلية والتقرير السابق يغطي 38 وثيقة؛ لم أشغل جولة متصفح جديدة أو اختبار وظائف.",
+    "اقتراح الصفحة العربية كامل؛ الإنجليزية هنا أمثلة رئيسية مطابقة وليست ترجمة نهائية لكل المقترح.",
+    "لم تُغيّر حقائق الشروط والخصوصية أو تُختلق معلومات قانونية؛ فجوة مسار الحساب سجلت للمراجعة.",
+    "تشخيص Site Unavailable يملكه مسار الوصول لدى الوكيل الرئيسي؛ لا تُنسب له نتيجة من هذه المراجعة التحريرية."
+  ]
+}

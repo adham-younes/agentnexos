@@ -1,0 +1,450 @@
+{
+  "review_date": "2026-10-17",
+  "scope": "Authorized read-only live Supabase review; project identity/status, catalog-only permissions/RLS/functions/FKs/extensions, migration history and one security advisor call. No business/user rows, user emails, sessions, key retrieval, config blobs, mutation, provider calls or tests.",
+  "identity": {
+    "id": "yhjyaytbrsuwaefkqkqg",
+    "name": "supabase-teal-mountain",
+    "status": "ACTIVE_HEALTHY",
+    "region": "us-east-1",
+    "database_version": "17.6.1.166",
+    "postgres_engine": "17"
+  },
+  "tool_calls": {
+    "supabase_total": 5,
+    "failed": 0,
+    "retries": 0,
+    "sequence": [
+      "get_project",
+      "execute_sql: catalog RLS/grants/functions/extensions/auth.users accessibility",
+      "list_migrations",
+      "get_advisors:security",
+      "execute_sql: effective grants/FKs/retention signatures/cron existence"
+    ]
+  },
+  "catalog": {
+    "tables": [
+      {
+        "kind": "r",
+        "table": "agentnexos_conversations",
+        "schema": "public",
+        "rls_forced": false,
+        "rls_enabled": true
+      },
+      {
+        "kind": "r",
+        "table": "agentnexos_demo_limits",
+        "schema": "public",
+        "rls_forced": false,
+        "rls_enabled": true
+      },
+      {
+        "kind": "r",
+        "table": "agentnexos_demo_requests",
+        "schema": "public",
+        "rls_forced": false,
+        "rls_enabled": true
+      },
+      {
+        "kind": "r",
+        "table": "agentnexos_messages",
+        "schema": "public",
+        "rls_forced": false,
+        "rls_enabled": true
+      },
+      {
+        "kind": "r",
+        "table": "agentnexos_profiles",
+        "schema": "public",
+        "rls_forced": false,
+        "rls_enabled": true
+      }
+    ],
+    "policies": [
+      {
+        "name": "conversations_delete_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "agentnexos_conversations",
+        "using": "(( SELECT auth.uid() AS uid) = user_id)",
+        "command": "DELETE",
+        "with_check": null
+      },
+      {
+        "name": "conversations_select_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "agentnexos_conversations",
+        "using": "(( SELECT auth.uid() AS uid) = user_id)",
+        "command": "SELECT",
+        "with_check": null
+      },
+      {
+        "name": "messages_select_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "agentnexos_messages",
+        "using": "(( SELECT auth.uid() AS uid) = user_id)",
+        "command": "SELECT",
+        "with_check": null
+      },
+      {
+        "name": "profile_insert_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "agentnexos_profiles",
+        "using": null,
+        "command": "INSERT",
+        "with_check": "(( SELECT auth.uid() AS uid) = id)"
+      },
+      {
+        "name": "profile_select_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "agentnexos_profiles",
+        "using": "(( SELECT auth.uid() AS uid) = id)",
+        "command": "SELECT",
+        "with_check": null
+      },
+      {
+        "name": "profile_update_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "agentnexos_profiles",
+        "using": "(( SELECT auth.uid() AS uid) = id)",
+        "command": "UPDATE",
+        "with_check": "(( SELECT auth.uid() AS uid) = id)"
+      }
+    ],
+    "functions": [
+      {
+        "acl": "{postgres=X/postgres,service_role=X/postgres}",
+        "args": "p_user_id uuid, p_conversation_id uuid, p_request_id uuid, p_content text, p_locale text",
+        "name": "agentnexos_begin_turn",
+        "config": [
+          "search_path=\"\""
+        ],
+        "anon_execute": false,
+        "security_definer": false,
+        "authenticated_execute": false
+      },
+      {
+        "acl": "{postgres=X/postgres,service_role=X/postgres}",
+        "args": "",
+        "name": "agentnexos_demo_ready",
+        "config": [
+          "search_path=\"\""
+        ],
+        "anon_execute": false,
+        "security_definer": false,
+        "authenticated_execute": false
+      },
+      {
+        "acl": "{postgres=X/postgres,service_role=X/postgres}",
+        "args": "p_subject_hash text",
+        "name": "reserve_agentnexos_demo",
+        "config": [
+          "search_path=\"\""
+        ],
+        "anon_execute": false,
+        "security_definer": false,
+        "authenticated_execute": false
+      },
+      {
+        "acl": "{postgres=X/postgres,service_role=X/postgres}",
+        "args": "p_subject_hash text",
+        "name": "reserve_agentnexos_demo_v2",
+        "config": [
+          "search_path=\"\""
+        ],
+        "anon_execute": false,
+        "security_definer": false,
+        "authenticated_execute": false
+      },
+      {
+        "acl": "{postgres=X/postgres,service_role=X/postgres}",
+        "args": "p_subject_hash text",
+        "name": "reserve_agentnexos_demo_v3",
+        "config": [
+          "search_path=\"\""
+        ],
+        "anon_execute": false,
+        "security_definer": false,
+        "authenticated_execute": false
+      }
+    ],
+    "extensions": [
+      "pg_stat_statements",
+      "pgcrypto",
+      "plpgsql",
+      "supabase_vault",
+      "uuid-ossp"
+    ],
+    "table_grants": [
+      {
+        "table": "agentnexos_conversations",
+        "grantee": "authenticated",
+        "privilege": "DELETE"
+      },
+      {
+        "table": "agentnexos_conversations",
+        "grantee": "authenticated",
+        "privilege": "SELECT"
+      },
+      {
+        "table": "agentnexos_messages",
+        "grantee": "authenticated",
+        "privilege": "SELECT"
+      },
+      {
+        "table": "agentnexos_profiles",
+        "grantee": "authenticated",
+        "privilege": "INSERT"
+      },
+      {
+        "table": "agentnexos_profiles",
+        "grantee": "authenticated",
+        "privilege": "SELECT"
+      },
+      {
+        "table": "agentnexos_profiles",
+        "grantee": "authenticated",
+        "privilege": "UPDATE"
+      }
+    ],
+    "auth_user_relation": {
+      "exists": true,
+      "anon_select": false,
+      "rls_enabled": true,
+      "authenticated_select": false
+    }
+  },
+  "catalog_followup": {
+    "foreign_keys": [
+      {
+        "name": "agentnexos_conversations_user_id_fkey",
+        "table": "agentnexos_conversations",
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "agentnexos_messages_conversation_id_user_id_fkey",
+        "table": "agentnexos_messages",
+        "definition": "FOREIGN KEY (conversation_id, user_id) REFERENCES agentnexos_conversations(id, user_id) ON DELETE CASCADE"
+      },
+      {
+        "name": "agentnexos_profiles_id_fkey",
+        "table": "agentnexos_profiles",
+        "definition": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE CASCADE"
+      }
+    ],
+    "schema_usage": [
+      {
+        "role": "anon",
+        "auth_usage": true,
+        "public_usage": true
+      },
+      {
+        "role": "authenticated",
+        "auth_usage": true,
+        "public_usage": true
+      }
+    ],
+    "retention_function": {
+      "name": "reserve_agentnexos_demo_v3",
+      "has_advisory_lock": true,
+      "has_24_hour_limits": true,
+      "has_48_hour_delete": true
+    },
+    "effective_table_access": [
+      {
+        "role": "anon",
+        "table": "agentnexos_conversations",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "authenticated",
+        "table": "agentnexos_conversations",
+        "delete": true,
+        "insert": false,
+        "select": true,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "anon",
+        "table": "agentnexos_demo_limits",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "authenticated",
+        "table": "agentnexos_demo_limits",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "anon",
+        "table": "agentnexos_demo_requests",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "authenticated",
+        "table": "agentnexos_demo_requests",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "anon",
+        "table": "agentnexos_messages",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "authenticated",
+        "table": "agentnexos_messages",
+        "delete": false,
+        "insert": false,
+        "select": true,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "anon",
+        "table": "agentnexos_profiles",
+        "delete": false,
+        "insert": false,
+        "select": false,
+        "update": false,
+        "truncate": false
+      },
+      {
+        "role": "authenticated",
+        "table": "agentnexos_profiles",
+        "delete": false,
+        "insert": true,
+        "select": true,
+        "update": true,
+        "truncate": false
+      }
+    ],
+    "cron_job_relation_exists": false
+  },
+  "live_migrations": [
+    {
+      "version": "20261013003209",
+      "name": "consolidate_agentnexos_source_schema"
+    }
+  ],
+  "source_migration_comparison": {
+    "matched_schema_family": "Live public tables, own-user policies, RPCs and key ownership FKs correspond to the committed Oct13 consolidation baseline.",
+    "live_history": "Only 20261013003209 consolidate_agentnexos_source_schema is recorded.",
+    "source_file": "/workspace/agentnexos/supabase/migrations/20261013003126_consolidate_agentnexos_source_schema.sql:1",
+    "mismatch": "The committed baseline filename timestamp differs from the actual applied migration version, and older September/October migrations are not recorded in this live target. The committed directory is not one replayable linear history for this target.",
+    "source_replay_observation": "September migration creates agentnexos_demo_requests; Oct13 consolidation rejects any existing agentnexos table (TARGET_NOT_EMPTY). This is a source/history maintenance issue, not evidence that live DB is broken.",
+    "next_step": "Reconcile authoritative baseline and migration history non-destructively before M5; no repair was attempted."
+  },
+  "security_advisors": {
+    "call_count": 1,
+    "notices": [
+      {
+        "name": "rls_enabled_no_policy",
+        "title": "RLS Enabled No Policy",
+        "level": "INFO",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+        "count": 2,
+        "findings": [
+          {
+            "detail": "Table \\`public.agentnexos_demo_limits\\` has RLS enabled, but no policies exist",
+            "metadata": {
+              "name": "agentnexos_demo_limits",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-17T12:42:41.457Z"
+          },
+          {
+            "detail": "Table \\`public.agentnexos_demo_requests\\` has RLS enabled, but no policies exist",
+            "metadata": {
+              "name": "agentnexos_demo_requests",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-17T12:42:41.457Z"
+          }
+        ]
+      }
+    ],
+    "interpretation": "Only two INFO RLS-enabled/no-policy notices on demo_limits and demo_requests. Both tables have no effective anon/authenticated SELECT/INSERT/UPDATE/DELETE/TRUNCATE grants; service-only deny-all access is deliberate, so these notices do not establish exposure. Do not add public policies merely to clear the advisor.",
+    "remediation_reference": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy"
+  },
+  "confirmed_controls": [
+    "All five public tables have RLS enabled.",
+    "anon has no effective SELECT/INSERT/UPDATE/DELETE/TRUNCATE on any public table.",
+    "authenticated can SELECT/DELETE its own conversations, SELECT its own messages, and INSERT/SELECT/UPDATE its own profile, bounded by auth.uid ownership policies.",
+    "Profile UPDATE has both USING and WITH CHECK; a composite conversation_id,user_id FK binds message ownership to conversation ownership.",
+    "Both demo tables deny all checked operations to anon/authenticated; public RPCs deny EXECUTE to both roles.",
+    "All five public RPCs use invoker privileges with an empty search_path.",
+    "auth.users exists with RLS and denies SELECT to anon/authenticated. No auth-user records were read.",
+    "Live reservation function retains advisory locking, rolling 24-hour limits and request-triggered 48-hour deletion."
+  ],
+  "confirmed_gaps": [
+    {
+      "title": "Retention remains request-triggered",
+      "evidence": "Live reserve_agentnexos_demo_v3 contains the 48-hour DELETE; pg_cron extension is absent and cron.job does not exist.",
+      "impact": "Database-side scheduled cleanup is not configured. External schedulers were not inspected here; root handles Vercel/source context.",
+      "classification": "confirmed_operational_gap_against_M5"
+    },
+    {
+      "title": "Source and live migration history diverge",
+      "evidence": "Live records one Oct13 consolidation at a version different from the committed file; older committed migrations are absent from target history.",
+      "impact": "Future migration/recovery work needs a reconciled baseline before assuming sequential replay.",
+      "classification": "confirmed_history_gap"
+    }
+  ],
+  "actual_database_security_misconfigurations_confirmed": [],
+  "not_verified": [
+    "Real account creation, mailbox delivery, confirmation, signin, recovery, session refresh and logout roundtrip.",
+    "Counts, identities, emails, membership or business data of actual users; these were intentionally not queried.",
+    "Auth provider settings, MFA, email templates, redirect allowlist, SMTP, password policies, leaked-password protection or auth rate limits; secret-containing config endpoints were not read.",
+    "Actual TTL effectiveness and oldest row age; no data rows were inspected or deleted.",
+    "Cross-user runtime behavior through authenticated API clients; catalog policies were inspected without executing user sessions.",
+    "Backups/PITR/restore rehearsal, storage buckets, customer integrations, organization/tenant runtime or paid plan capabilities.",
+    "External Vercel cron or other scheduler; absence of database cron alone does not rule out an external scheduler."
+  ],
+  "claim_boundaries": [
+    "Live database catalog verifies current RLS and grant configuration, not end-to-end tenant/customer authorization.",
+    "auth.users access denial is evidence of table protection, not proof of a functioning login/email flow.",
+    "The app's public assistant remains independent of login and does not persist raw chats through the active API.",
+    "Enterprise routes remain disabled in source; database schema does not establish connected execution."
+  ]
+}

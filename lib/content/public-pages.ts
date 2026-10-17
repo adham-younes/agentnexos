@@ -4,250 +4,256 @@ export const publicPages = {
   ...productPages,
   "solutions": {
     "ar": {
-      "eyebrow": "عمليات يمكن البناء حولها",
-      "title": "ابدأ بعملية واضحة. وابنِ حولها نظامًا وكيلًا.",
-      "intro": "نحدد أين يتعطل العمل، وما البيانات المطلوبة، ومن يملك القرار. ثم نصمم تجربة محدودة قبل ربطها بأنظمة المؤسسة.",
-      "notice": "حالات استخدام مقترحة للدراسة والتطوير. التكاملات والتنفيذ الخارجي غير متاحين في المثال الحالي.",
+      "eyebrow": "AGYNEXA",
+      "title": "اختر المهمة التي تحتاج خطوة أفضل.",
+      "intro": "حلول تُصمّم حول معرفة المؤسسة وطلبات الشراء والمستحقات وعمليات العملاء. لكل نطاق مدخل واضح، ومخرج يفيد الفريق، وقرار يبقى لدى صاحبه.",
+      "notice": "هذه نطاقات لتصميم مشروعات مخصصة. تُحدد المصادر والتكاملات والبيانات المسموح بها وفق متطلبات كل مؤسسة.",
       "cards": [
         [
-          "المشتريات ومراجعة الطلبات",
-          "اجمع تفاصيل الطلب والمورد والمستندات، وحدد المعلومات الناقصة قبل وصول الطلب إلى المسؤول.",
-          "البيانات: طلب شراء، عروض موردين، وسياسة اعتماد المؤسسة.",
-          "القرار: مراجعة المسؤول قبل إنشاء أمر شراء.",
-          "النتيجة: ملف طلب منظم وملاحظات واضحة للمراجعة."
+          "المعرفة الداخلية",
+          "تتوزع السياسات والإجراءات والملفات بين مصادر مختلفة. نصمّم وصولًا إلى الإجابة ومصدرها، مع وضوح ما يستطيع كل مستخدم الاطلاع عليه وما يحتاج مراجعة."
         ],
         [
-          "المالية ومتابعة المستحقات",
-          "رتب الفواتير المستحقة وحدد الاستثناءات، وجهز مسودة متابعة تستند إلى بيانات معتمدة.",
-          "البيانات: سجل الفواتير، تواريخ الاستحقاق، وبيانات التواصل المصرح بها.",
-          "القرار: اعتماد المسودة قبل إرسالها.",
-          "النتيجة: قائمة متابعة ومسودات قابلة للمراجعة."
+          "المشتريات",
+          "يتأخر الطلب عندما تنقص مواصفة أو يصعب مقارنة عروض الموردين. نصمّم مسارًا يجمع المعلومات ويظهر الفروق والأسئلة أمام المسؤول قبل قرار الشراء."
         ],
         [
-          "خدمة العملاء والعمليات الداخلية",
-          "اربط السؤال بمعرفة المؤسسة، واقترح الخطوة التالية، وصعّد الحالات التي تحتاج قرارًا.",
-          "البيانات: مصادر معرفة معتمدة وسجل الحالة وصلاحيات الفريق.",
-          "القرار: تصعيد الاستثناءات وعدم تعديل السجلات دون تفويض.",
-          "النتيجة: رد مرتبط بمصدر وخطوة متابعة واضحة."
+          "متابعة المستحقات",
+          "تحتاج المتابعة إلى معرفة السداد وآخر تواصل وأي نزاع أو اتفاق قائم. نصمّم مسارًا يجمع هذا السياق في ملخص عملي، ويجهز خطوة يراجعها المسؤول."
+        ],
+        [
+          "عمليات العملاء",
+          "بعض الطلبات تحتاج إجابة، وبعضها يحتاج معلومة أو إجراءً أو فريقًا آخر. نصمّم مسارًا يميز هذه الحالات ويجهز ما يحتاجه الشخص المسؤول للمتابعة."
         ]
       ]
     },
     "en": {
-      "eyebrow": "Workflows to build around",
-      "title": "Start with a clear workflow. Build an agent system around it.",
-      "intro": "Identify where work stalls, which data is needed, and who owns each decision. Validate a focused pilot before connecting enterprise systems.",
-      "notice": "Proposed use cases for discovery and development. Integrations and external actions are not available in the current example.",
+      "eyebrow": "AGYNEXA",
+      "title": "Choose the work that needs a better next step.",
+      "intro": "Solutions designed around organizational knowledge, procurement, receivables and customer operations. Each scope starts with a clear input, a useful output and an accountable decision owner.",
+      "notice": "These are scopes for custom projects. Sources, integrations and permitted data are defined around each organization’s requirements.",
       "cards": [
         [
-          "Procurement and request review",
-          "Collect request details, supplier information, and supporting documents. Surface missing information before the owner reviews it.",
-          "Data: purchase request, supplier quotes, and the organization's approval policy.",
-          "Decision: owner review before creating a purchase order.",
-          "Outcome: an organized request with clear review notes."
+          "Internal knowledge",
+          "Policies, procedures and files sit across different sources. Design a way to find an answer and inspect its source, with clear access boundaries and review points."
         ],
         [
-          "Finance and receivables follow-up",
-          "Organize outstanding invoices, identify exceptions, and prepare a follow-up draft using approved records.",
-          "Data: invoice ledger, due dates, and authorized contact details.",
-          "Decision: approve the draft before sending.",
-          "Outcome: a prioritized follow-up list and reviewable drafts."
+          "Procurement",
+          "Requests slow down when specifications are missing or supplier quotes are hard to compare. Design a workflow that brings information, differences and questions together before the purchasing decision."
         ],
         [
-          "Customer service and internal operations",
-          "Connect a question to enterprise knowledge, propose the next step, and escalate cases requiring a decision.",
-          "Data: approved knowledge sources, case history, and team permissions.",
-          "Decision: escalate exceptions; change records only with authorization.",
-          "Outcome: a sourced answer and an explicit follow-up step."
+          "Receivables follow-up",
+          "Useful follow-up depends on payments, recent communication and any dispute or existing agreement. Design a workflow that brings the context into a practical summary and prepares a next step for review."
+        ],
+        [
+          "Customer operations",
+          "Some requests need an answer. Others need information, an action or another team. Design a workflow that distinguishes those cases and prepares what the responsible person needs to continue."
         ]
       ]
     }
   },
   "security": {
     "ar": {
-      "eyebrow": "الأمان والحوكمة",
-      "title": "حدود واضحة للبيانات والقرارات والتنفيذ.",
-      "intro": "نحدد ضوابط التشغيل مع المؤسسة قبل توصيل بياناتها أو منح أدواتها صلاحية التنفيذ. هذه متطلبات التصميم والتحقق، وليست شهادة امتثال.",
-      "notice": "التجربة العامة تصمم العمليات ببيانات افتراضية وأدوات قراءة محدودة. تنفيذ إجراءات المؤسسة يحتاج هوية موثقة وصلاحيات وعزلًا وموافقات محفوظة؛ هذه القدرات غير مفعلة هنا.",
+      "eyebrow": "AGYNEXA",
+      "title": "الأمان يبدأ بتحديد ما يستطيع النظام فعله.",
+      "intro": "نعالج الصلاحيات ومصادر البيانات والمراجعة والتعافي ضمن تصميم المشروع. ويظل استخدام المساعد العام منفصلًا عن تشغيل نظام متصل ببيانات المؤسسة.",
+      "notice": "استخدم بيانات افتراضية في المساعد العام.",
       "cards": [
         [
-          "هوية المستخدم وصلاحيات المؤسسة",
-          "يجب أن تُستمد الصلاحية من جلسة موثوقة وعضوية فعلية، لا من معرّف يرسله المتصفح. ويجب اختبار عزل المؤسسات على قاعدة البيانات."
+          "حدود المساعد العام",
+          "استخدم بيانات افتراضية فقط. يمكن للمساعد التحليل والتخطيط والحساب واستخدام مراجع تقنية محددة؛ البريد وCRM وERP وتنفيذ الكود غير متصلة به."
         ],
         [
-          "الموافقة قبل الأفعال الحساسة",
-          "تحدد المؤسسة الأفعال التي تتطلب موافقة. ترتبط الموافقة بالفعل ومعلماته وصاحب القرار ووقت انتهائها، وتُراجع قبل التنفيذ."
+          "الحساب والمحادثات المحفوظة",
+          "الحساب اختياري. تُحفظ المحادثة التي تختار حفظها في سجل خاص بحسابك، ويمكنك فتحها أو إعادة تسميتها أو حذفها. لا يمنح الحساب صلاحيات مؤسسة أو أدواتها."
         ],
         [
-          "سجل النتيجة ودليلها",
-          "نسجل الطلب والخطوات والقرارات ونتيجة النظام المتصل. بصمة التجزئة تساعد في مقارنة المحتوى؛ وحدها لا تشفر البيانات ولا تمنع تعديل السجل."
+          "قبل ربط نظام المؤسسة",
+          "نحدد مصادر البيانات وأصحابها وحدود القراءة والتعديل ومزودي المعالجة والاحتفاظ بالسجلات. الإجراءات ذات الأثر تحتاج صاحب صلاحية ونقطة اعتماد، وطريقة لفحص النتيجة والتعافي من الفشل."
         ],
         [
-          "بيانات مناسبة لكل خطوة",
-          "نقلل البيانات المرسلة ونحدد الموردين ومدة الاحتفاظ وموقع الاستضافة لكل نشر. لا ننشر ضمان سيادة أو امتثال دون تحقق خاص بالمشروع."
-        ],
-        [
-          "أدوات بصلاحيات محدودة",
-          "أدوات التجربة تتحقق من المدخلات عند التنفيذ وتلتزم بميزانية مشتركة للطلب. جلب المراجع مقصور على روابط رسمية محددة دون تحويلات. لا يوجد تنفيذ كود أو وصول لبيانات المؤسسة."
-        ],
-        [
-          "اختبار الفشل والتعافي",
-          "نختبر رفض الأدوات غير المصرح بها والحدود والإلغاء وفشل المصادر والتسجيل. التشغيل المؤسسي يحتاج أيضًا إثبات الاستئناف ومنع تكرار الأثر على النظام الفعلي."
+          "مناقشة المتطلبات",
+          "أرسل وصفًا عامًا لمتطلباتك إلى adham@agynexa.si. لا تُرسل كلمات مرور أو مفاتيح أو مستندات حساسة. يوضح [إشعار الخصوصية](/privacy) معالجة المساعد والحساب وسجل الاستخدام."
         ]
       ]
     },
     "en": {
-      "eyebrow": "Security and governance",
-      "title": "Clear boundaries for data, decisions, and execution.",
-      "intro": "Define operating controls with the organization before connecting its data or granting execution permissions. These are design and verification requirements, not a compliance certification.",
-      "notice": "The public preview designs workflows with fictional data and bounded read tools. Enterprise actions require verified identity, scoped permissions, isolation, and persisted approvals; those capabilities are not enabled here.",
+      "eyebrow": "AGYNEXA",
+      "title": "Security starts with what the system is allowed to do.",
+      "intro": "Permissions, data sources, review and recovery belong in the project design. Using the public assistant remains separate from operating a system connected to organizational data.",
+      "notice": "Use fictional data in the public assistant.",
       "cards": [
         [
-          "Identity and organization permissions",
-          "Authorization must come from a trusted session and verified membership, not an identifier supplied by the browser. Tenant isolation must be tested on the database."
+          "Public assistant boundaries",
+          "Use fictional data only. The assistant can support analysis, planning, calculations and selected technical references; email, CRM, ERP and code execution are not connected to it."
         ],
         [
-          "Approval before sensitive actions",
-          "The organization defines which actions need approval. Approval binds the action, parameters, decision owner, and expiry and is checked before execution."
+          "Accounts and saved conversations",
+          "An account is optional. Conversations you choose to save go into your private account history, where you can reopen, rename or delete them. An account does not grant access to enterprise systems or tools."
         ],
         [
-          "Result records and evidence",
-          "Record the request, steps, decisions, and connected-system result. A hash helps compare content; it does not encrypt data or independently prevent record changes."
+          "Before connecting business systems",
+          "Define data sources and owners, read/write boundaries, processing providers and record retention. Actions with consequences need an authorized owner, an approval point and a way to check the outcome and recover from failure."
         ],
         [
-          "Appropriate data for each step",
-          "Minimize transmitted data and specify providers, retention, and hosting location for each deployment. Residency or compliance claims require project-specific verification."
-        ],
-        [
-          "Tools with limited permissions",
-          "Preview tools validate inputs at execution and share a per-request budget. Reference retrieval uses fixed official URLs without redirects. There is no code execution or enterprise-data access."
-        ],
-        [
-          "Failure and recovery testing",
-          "Test capability denial, limits, cancellation, source outages, and recording failures. Enterprise rollout also requires proven resumption and duplicate-effect prevention against the actual target system."
+          "Discuss the requirements",
+          "Send a general description of your requirements to adham@agynexa.si. Do not send passwords, keys or sensitive documents. The [privacy notice](/privacy) explains assistant, account and usage-record processing."
         ]
       ]
     }
   },
   "privacy": {
     "ar": {
-      "eyebrow": "بياناتك أثناء الاستخدام",
-      "title": "الخصوصية ومعالجة البيانات",
-      "intro": "يوضح هذا الإشعار نطاق التجربة الحالية. ستُنشر تفاصيل معالجة البيانات الخاصة بالتشغيل المؤسسي قبل إتاحته.",
-      "notice": "لا تدخل مستندات حقيقية أو بيانات شخصية أو مفاتيح وصول في المثال.",
+      "eyebrow": "البيانات أثناء الاستخدام",
+      "title": "الخصوصية واستخدام البيانات",
+      "intro": "يوضح هذا الإشعار الفرق بين الموجز المحلي، والمحادثة مع المساعد، والحساب والمحادثات التي تختار حفظها. استخدم بيانات افتراضية عند استكشاف المساعد، ولا تشارك أسرارًا أو بيانات عملاء.",
+      "notice": "الحفظ في الحساب اختياري. معالجة الرسالة لتوليد الرد تختلف عن إضافتها إلى سجل المحادثات.",
       "cards": [
-        ["قبل مشاركة التفاصيل", "استخدم أمثلة افتراضية في المساعد والموجز الأولي. تجهيز الموجز محليًا يختلف عن إرسال رسالة إلى المساعد؛ راجع تفاصيل المعالجة أدناه قبل إدخال معلومات."],
-        ["موجز المشروع المحلي", "إجابات نموذج موجز المشروع تبقى في ذاكرة صفحة المتصفح. لا ترسل إلى خادم أو فريق؛ يمكنك تنزيل ملف ومراجعته قبل مشاركته. إغلاق الصفحة أو مسحها يزيل حالتها المحلية."],
         [
-          "المثال الحالي",
-          "عند تشغيل الاتصال الحي، يرسل طلبك وسياق المحادثة إلى خادم Vercel ثم نماذج Groq للتحليل والتخطيط والمراجعة. استخدم بيانات افتراضية فقط. المحادثة في ذاكرة التبويب ولا تحفظ في قاعدة بيانات التطبيق."
+          "الموجز المحلي",
+          "تبقى إجابات نموذج موجز المشروع في ذاكرة صفحة المتصفح. لا ترسل الصفحة الموجز إلى خادم أو فريق. يمكنك تنزيله أو فتح مسودة بريد ومراجعتها قبل الإرسال بنفسك. إغلاق الصفحة أو مسحها يزيل حالتها المحلية."
         ],
         [
-          "استضافة الموقع",
-          "يستضيف Vercel الموقع، وقد يعالج بيانات الاتصال الفنية اللازمة لتقديم الصفحات. توجد حزمة Vercel Analytics في الموقع؛ لا يعني عدم حفظ بيانات المثال عدم وجود بيانات استخدام تقنية."
+          "المحادثة دون حفظ",
+          "تُحفظ حالة المحادثة الجارية في ذاكرة التبويب. تُرسل رسالتك والسياق اللازم إلى خادم Vercel ثم إلى Groq لتوليد الرد، سواء كنت ضيفًا أو مسجل الدخول. لا تعني بقاء المحادثة في التبويب أن الرسالة لا تُعالج لدى مزود النموذج."
         ],
         [
-          "قبل ربط بيانات المؤسسة",
-          "يجب تحديد البيانات والغرض والموردين ومواقع المعالجة ومدة الاحتفاظ والحذف وجهة التواصل المسؤولة. لا يوجد ضمان عام بأن كل نشر سيبقى داخل بلد محدد."
+          "الحساب والجلسة",
+          "يدير Supabase بيانات المصادقة، ومنها البريد الإلكتروني وكلمة المرور والجلسة. يُستخدم الحساب للتحقق من هويتك وإتاحة سجلك الخاص. إنشاء الحساب لا يمنحك صلاحية أنظمة مؤسسة أو أدواتها."
         ],
         [
-          "النماذج ومورّدو الخدمات",
-          "Groq مزود معالجة نماذج التجربة. شروط المعالجة والاحتفاظ لديه تعتمد على الخطة والإعدادات والعقد؛ لا نقدّم وعدًا عامًا بعدم التدريب أو الاحتفاظ. جلب المراجع التقنية يتصل بمواقع رسمية محددة فقط."
+          "المحادثات التي تختار حفظها",
+          "تُضاف المحادثة إلى حسابك عندما تختار الحفظ بعد تسجيل الدخول. لا تُرفع محادثة الضيف تلقائيًا عند الدخول. يشمل الحفظ النص الظاهر من رسائل المستخدم وردود المساعد، ولا يشمل الاستدلال الداخلي أو بيانات الأدوات المخفية. يرتبط الوصول بصاحب الحساب، ويمكنه فتح محادثاته وإعادة تسميتها أو حذفها."
         ],
-        ["حدود الاستخدام وسجل التشغيل", "يحفظ Supabase بصمة HMAC لعنوان الاتصال ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز وقرارات سياسة الأدوات وتوقيت مراحل الطلب، دون نص الطلب أو الرد أو محتوى المراجع. يستخدم ذلك لمنع الإساءة. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حاليًا حذف مجدول يضمن موعدًا أقصى."],
         [
-          "حدود هذا الإشعار",
-          "هذا وصف للحالة الحالية وليس بديلًا عن اتفاق معالجة بيانات خاص بمشروع مؤسسي. قناة طلبات الخصوصية وبيانات الجهة المسؤولة تحتاج اعتماد المالك قبل استقبال بيانات العملاء."
+          "الاحتفاظ والحذف",
+          "تبقى المحادثات التي تحفظها حتى تحذفها. حذف محادثة من حسابك يحذف سجلها ورسائلها المرتبطة من قاعدة بيانات التطبيق. هذا لا يعني حذف النسخ الاحتياطية فورًا أو تغيير مدد الاحتفاظ لدى مزودي المعالجة. للاستفسار عن الحساب أو البيانات، راسل adham@agynexa.si دون إرسال كلمات مرور أو مفاتيح."
+        ],
+        [
+          "معالجة النموذج والمراجع",
+          "Groq مزود معالجة نماذج المساعد. تعتمد شروط المعالجة والاحتفاظ لديه على الخطة والإعدادات والعقد؛ لا نقدم وعدًا عامًا بعدم التدريب أو الاحتفاظ. يتصل جلب المراجع التقنية بمواقع رسمية محددة، ولا يمنح وصولًا إلى مصادر مؤسستك الخاصة."
+        ],
+        [
+          "الاستضافة وبيانات الاستخدام",
+          "يستضيف Vercel الموقع وقد يعالج بيانات الاتصال الفنية اللازمة لتقديم الخدمة. توجد حزمة Vercel Analytics في الموقع؛ عدم حفظ الموجز أو محادثة الضيف في قاعدة بيانات التطبيق لا يعني غياب بيانات استخدام تقنية."
+        ],
+        [
+          "حدود الاستخدام وسجل التشغيل",
+          "يحفظ Supabase بصمة HMAC لعنوان الاتصال ووقت الطلب وحالته وأدوار النماذج واستهلاك الرموز وقرارات سياسة الأدوات وتوقيت مراحل الطلب لمنع الإساءة. لا يتضمن هذا السجل نص الطلب أو الرد أو محتوى المراجع، وهو منفصل عن المحادثات التي تختار حفظها. تنظف سجلات أقدم من 48 ساعة عند حجز طلب جديد؛ لا يوجد حذف مجدول يضمن موعدًا أقصى للاحتفاظ."
+        ],
+        [
+          "قبل معالجة بيانات المؤسسة",
+          "يتطلب المشروع المتصل ببيانات المؤسسة تحديد الغرض والمصادر والصلاحيات والموردين ومواقع المعالجة ومدد الاحتفاظ والحذف والمسؤوليات في اتفاق مستقل. لا يقدم هذا الإشعار ضمانًا عامًا بإقامة البيانات في بلد معين أو شهادة امتثال. بيانات الجهة القانونية المسؤولة وتفاصيل معالجة المشروع تُحسم قبل استقبال بيانات مؤسسية."
         ]
       ]
     },
     "en": {
       "eyebrow": "Data during use",
-      "title": "Privacy and data handling",
-      "intro": "This notice describes the current example. Enterprise data-processing details must be published before enterprise access is enabled.",
-      "notice": "Do not enter real documents, personal data, or credentials into the example.",
+      "title": "Privacy and data use",
+      "intro": "This notice distinguishes the local brief, assistant processing, your account and conversations you choose to save. Use fictional data when exploring the assistant. Do not share secrets or customer data.",
+      "notice": "Account saving is optional. Processing a message to generate a response is different from adding it to conversation history.",
       "cards": [
-        ["Before sharing details", "Use fictional examples in the assistant and initial brief. Preparing a brief locally differs from sending a message to the assistant; review the processing details below before entering information."],
-        ["Local project brief", "Project brief answers stay in the browser page memory. They are not sent to a server or team; you may download and review a file before sharing. Closing or clearing the page removes local state."],
         [
-          "Current example",
-          "When the live connection is enabled, your request and conversation context go to the Vercel server and then Groq models for analysis, planning, and review. Use fictional data only. Conversation state lives in the browser tab and is not stored in the application's database."
+          "Local project brief",
+          "Project brief answers stay in the browser page’s memory. The page does not send the brief to a server or team. You can download it or open an email draft and review it before sending it yourself. Closing or clearing the page removes its local state."
         ],
         [
-          "Website hosting",
-          "Vercel hosts the site and may process technical connection data needed to deliver pages. Vercel Analytics is included; local example state does not imply an absence of technical usage data."
+          "Conversation without saving",
+          "The active conversation is held in tab memory. Your message and relevant context are sent to the Vercel server and then Groq to generate a response, whether you are a guest or signed in. Holding a conversation in the tab does not mean the model provider does not process the message."
         ],
         [
-          "Before connecting enterprise data",
-          "Specify the data, purpose, providers, processing locations, retention, deletion, and responsible contact. No universal in-country hosting guarantee is made."
+          "Account and session",
+          "Supabase manages authentication data, including your email address, password and session. The account verifies your identity and provides access to your private history. Creating an account does not grant access to an organization’s systems or tools."
         ],
         [
-          "Models and service providers",
-          "Groq processes the demo's model requests. Its processing and retention terms depend on the plan, configuration, and contract; no universal no-training or no-retention promise is made. Technical reference retrieval connects only to selected official sites."
+          "Conversations you choose to save",
+          "A conversation enters your account history when you choose to save it after signing in. Signing in does not automatically upload a guest conversation. Saved content includes visible user and assistant text, excluding internal reasoning and hidden tool payloads. Access is tied to the account owner, who can reopen, rename or delete their conversations."
         ],
-        ["Usage limits and execution records", "Supabase stores an HMAC fingerprint of the connection address, request time and status, model roles, token usage, tool-policy decisions, and stage timing—not prompt or response text or reference content—to prevent abuse. Records older than 48 hours are cleaned when a new request is reserved; there is currently no scheduled deletion guaranteeing a maximum retention deadline."],
         [
-          "Scope of this notice",
-          "This describes the current state and does not replace a project-specific data-processing agreement. Privacy contacts and controller details require owner approval before accepting customer data."
+          "Retention and deletion",
+          "Saved conversations remain until you delete them. Deleting a conversation from your account removes its record and related messages from the application database. This does not promise immediate backup removal or change processing providers’ retention periods. For account or data questions, email adham@agynexa.si without passwords or keys."
+        ],
+        [
+          "Model and reference processing",
+          "Groq processes assistant model requests. Its processing and retention terms depend on the plan, settings and contract; no universal no-training or no-retention promise is made. Technical reference retrieval connects to selected official sites and does not provide access to your organization’s private sources."
+        ],
+        [
+          "Hosting and technical usage data",
+          "Vercel hosts the site and may process technical connection data needed to provide it. Vercel Analytics is included. The absence of a saved brief or guest conversation in the application database does not imply an absence of technical usage data."
+        ],
+        [
+          "Usage limits and execution records",
+          "To prevent abuse, Supabase stores an HMAC fingerprint of the connection address, request time and status, model roles, token usage, tool-policy decisions and request-stage timing. These records exclude prompt, response and reference text and are separate from conversations you choose to save. Records older than 48 hours are cleaned when a new request is reserved; there is no scheduled deletion guaranteeing a maximum retention deadline."
+        ],
+        [
+          "Before processing enterprise data",
+          "A connected project requires an agreed purpose, sources, permissions, providers, processing locations, retention, deletion and responsibilities. This notice does not provide a universal in-country residency guarantee or compliance certification. Legal-controller details and project-specific processing arrangements must be established before enterprise data is accepted."
         ]
       ]
     }
   },
   "terms": {
     "ar": {
-      "eyebrow": "نطاق الاستخدام الحالي",
-      "title": "شروط استخدام التجربة",
-      "intro": "الموقع يقدم تعريفًا بالمشروع ومساعدًا لتصميم العمليات ببيانات افتراضية. التشغيل المؤسسي والتكاملات يخضعان لنطاق واتفاق مستقلين.",
-      "notice": "الاقتراحات ليست تفويضًا أو تنفيذًا خارجيًا. لا توجد أدوات دفع أو شراء أو إرسال بريد في هذه التجربة.",
+      "eyebrow": "نطاق الاستخدام",
+      "title": "شروط استخدام المنصة والمساعد",
+      "intro": "يعرّف الموقع بخدمات AGYNEXA ويتيح مساعدًا عامًا وحسابًا اختياريًا للمحادثات المحفوظة. يخضع بناء الأنظمة المتصلة والتشغيل المؤسسي لنطاق واتفاق مستقلين.",
+      "notice": "المقترحات والمسودات تحتاج مراجعة. لا توفر هذه التجربة أدوات دفع أو شراء أو إرسال بريد إلى أطراف خارجية.",
       "cards": [
-        ["حدود المناقشة الأولية", "المحادثة والموجز وسيلتان لتحديد الفكرة. يتطلب التنفيذ اتفاقًا يحدد النطاق والتسليمات والمسؤوليات والوصول إلى الأنظمة ومعايير القبول."],
         [
-          "طبيعة المثال",
-          "الأمثلة تعليمية ببيانات افتراضية. لا تعتمد عليها لاتخاذ قرار مالي أو قانوني أو لإصدار أمر شراء."
+          "استخدام المساعد",
+          "استخدم بيانات افتراضية ومعلومات تملك صلاحية مشاركتها. لا تدخل أسرارًا أو بيانات عملاء أو مفاتيح وصول، ولا تحاول الوصول إلى حساب أو بيانات تخص غيرك أو تعطيل الخدمة."
         ],
         [
-          "مسؤولية المراجعة",
-          "تحتاج المخرجات والقرارات إلى مراجعة الشخص المسؤول. عرض مسودة أو حالة اعتماد في المثال لا يثبت صحة عملية حقيقية."
+          "المخرجات والمراجعة",
+          "قد تكون الإجابة ناقصة أو غير دقيقة. راجع المعلومات والمصادر والافتراضات قبل الاعتماد عليها. المخرجات ليست قرارًا ماليًا أو قانونيًا أو تفويضًا بالشراء أو تنفيذ إجراء على أنظمة المؤسسة."
         ],
         [
-          "قبل التشغيل المؤسسي",
-          "يُحدد نطاق العمل ومصادر البيانات والصلاحيات والموافقات ومعايير القبول ومسؤولية الدعم في اتفاق المشروع."
+          "الحساب والمحادثات",
+          "الحساب اختياري، ويتيح حفظ المحادثات التي تختارها وفتحها وإعادة تسميتها وحذفها. حافظ على بيانات الدخول، وراجع محتوى المحادثة قبل حفظه. إنشاء الحساب لا يمنح صلاحيات مؤسسة أو اتصالًا بأدواتها. يوضح [إشعار الخصوصية](/privacy) معالجة البيانات والاحتفاظ والحذف."
+        ],
+        [
+          "الموجز والتواصل",
+          "إعداد الموجز أو تنزيله لا يعني وصول طلب إلى AGYNEXA. يفتح رابط البريد مسودة تراجعها وترسلها بنفسك. تبدأ مناقشة المشروع بعد مشاركة وصفه، ولا يحل محتوى الموقع أو المحادثة محل اتفاق عمل."
+        ],
+        [
+          "اتفاق المشروع",
+          "تُحدد التسليمات والتكاليف والملكية والترخيص ومعالجة البيانات والصلاحيات ومعايير القبول والدعم والمسؤوليات في اتفاق مستقل قبل بدء العمل المدفوع. يحتاج التوسع في البيانات أو التكاملات أو الإجراءات إلى مراجعة النطاق."
         ],
         [
           "الحدود الفنية",
-          "لا نضمن توفر تكامل أو استمرارية سجل أو منع تكرار إجراء خارجي قبل تنفيذ تلك القدرات واختبارها على النظام المتصل."
-        ],
-        [
-          "الاستخدام المقبول",
-          "لا تستخدم الموقع لإرسال أسرار أو بيانات لا تملك صلاحية معالجتها، أو محاولة الوصول إلى بيانات الغير. هذه الشروط تحتاج مراجعة قانونية قبل إطلاق الخدمة التجارية."
+          "قد تتأثر الخدمة بتوفر المزودين وحدود الاستخدام. لا يُفترض وجود تكامل أو تنفيذ إجراء أو منع تكرار أثر خارجي قبل تصميم هذه القدرات والتحقق منها على النظام المتصل. تُراجع المتطلبات القانونية والتشغيلية الخاصة بالمشروع قبل إتاحته."
         ]
       ]
     },
     "en": {
-      "eyebrow": "Current usage scope",
-      "title": "Example usage terms",
-      "intro": "The site introduces the project and a workflow-design assistant using fictional data. Enterprise operation and integrations require a separate agreed scope.",
-      "notice": "Suggestions are not authorization or external execution. This preview has no payment, purchasing, or email-sending tools.",
+      "eyebrow": "Scope of use",
+      "title": "Platform and assistant terms",
+      "intro": "The site introduces AGYNEXA’s services and provides a public assistant with an optional account for saved conversations. Connected systems and enterprise operation require a separate scope and agreement.",
+      "notice": "Proposals and drafts need review. This experience does not provide payment, purchasing or external email-sending tools.",
       "cards": [
-        ["Scope of the initial discussion", "The conversation and brief help define an idea. Implementation requires an agreement covering scope, deliverables, responsibilities, system access and acceptance criteria."],
         [
-          "Nature of the example",
-          "Examples are educational and use fictional data. Do not rely on them for financial or legal decisions or purchase orders."
+          "Using the assistant",
+          "Use fictional data and information you are authorized to share. Do not enter secrets, customer data or access keys, attempt to access another person’s account or data, or disrupt the service."
         ],
         [
-          "Review responsibility",
-          "Outputs and decisions require the responsible person's review. A draft or example approval status does not establish a valid real-world transaction."
+          "Outputs and review",
+          "Responses may be incomplete or inaccurate. Review information, sources and assumptions before relying on them. Outputs are not financial or legal decisions, purchase authorization or permission to act in organizational systems."
         ],
         [
-          "Before enterprise operation",
-          "Agree on scope, data sources, permissions, approvals, acceptance criteria, and support responsibilities in the project agreement."
+          "Accounts and conversations",
+          "An account is optional and lets you save conversations you choose, reopen, rename and delete them. Protect your credentials and review conversation content before saving. Creating an account does not provide enterprise permissions or tool connections. The [privacy notice](/privacy) explains processing, retention and deletion."
         ],
         [
-          "Technical limits",
-          "Integration availability, durable records, and duplicate-action prevention are not guaranteed until implemented and tested against the connected system."
+          "Briefs and contact",
+          "Preparing or downloading a brief does not submit a request to AGYNEXA. An email link opens a draft for you to review and send yourself. Project discussion begins after you share a description; website and conversation content do not replace a work agreement."
         ],
         [
-          "Acceptable use",
-          "Do not submit secrets or data you are not authorized to process, or attempt to access another party's data. These terms require legal review before commercial launch."
+          "Project agreement",
+          "Deliverables, cost, ownership, licensing, data processing, permissions, acceptance criteria, support and responsibilities are set in a separate agreement before paid work begins. Expanded data, connections or actions require a scope review."
+        ],
+        [
+          "Technical boundaries",
+          "Provider availability and usage limits may affect service. Do not assume an integration, an executed action or duplicate-action prevention before those capabilities are designed and verified on the connected system. Project-specific legal and operating requirements are reviewed before access is enabled."
         ]
       ]
     }

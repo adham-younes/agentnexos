@@ -1,0 +1,151 @@
+{
+  "reviewDate": "2026-10-17",
+  "timezone": "Africa/Cairo",
+  "origin": "https://agynexa.si",
+  "deploymentMetadataVerifiedEarlierInThisSession": {
+    "deploymentId": "dpl_DAyGmo5sjZWkF2ppWbiZg7JALwYV",
+    "commit": "fe6b70fb12aa6f204248ac4cd34544c181c84edd",
+    "target": "production",
+    "state": "READY"
+  },
+  "scope": "Production public-platform review from fresh Chromium sessions; authenticated customer operations excluded.",
+  "coverage": {
+    "newMarketingDocuments": 30,
+    "reusedHomeDocuments": 2,
+    "briefAndAssistantDocuments": 4,
+    "loginDocuments": 2,
+    "totalUniqueLocalizedDocuments": 38,
+    "marketingViewportMeasurements": 60,
+    "viewportWidths": [
+      1440,
+      390
+    ],
+    "resourceDownloads": 4,
+    "uniqueLinkTargets": 52,
+    "briefDownloads": 2,
+    "conversationExports": 2,
+    "fictionalAssistantRequests": 2,
+    "siteAssets": [
+      {
+        "path": "/robots.txt",
+        "pass": true,
+        "details": {
+          "status": 200,
+          "type": "text/plain; charset=utf-8",
+          "bytes": 160,
+          "officialSitemap": true
+        }
+      },
+      {
+        "path": "/sitemap.xml",
+        "pass": true,
+        "details": {
+          "status": 200,
+          "type": "application/xml",
+          "bytes": 12047,
+          "entries": 36,
+          "wrongOrigin": false,
+          "includesLogin": false
+        }
+      },
+      {
+        "path": "/og",
+        "pass": true,
+        "details": {
+          "status": 200,
+          "type": "image/png",
+          "bytes": 50825,
+          "dimensions": [
+            1200,
+            630
+          ]
+        }
+      },
+      {
+        "path": "/favicon.ico",
+        "pass": true,
+        "details": {
+          "status": 200,
+          "type": "image/vnd.microsoft.icon",
+          "bytes": 1339
+        }
+      }
+    ]
+  },
+  "findings": [],
+  "observations": {
+    "publicPages": "30 newly checked marketing documents returned 200, with correct canonical/hreflang and no page JavaScript errors or horizontal overflow. Two home documents reuse earlier successful evidence in this session.",
+    "brief": "Both locales generated, copied, downloaded and cleared complete fictional briefs without network submission; selection changes, numeric validation, mail draft links and locale navigation were checked.",
+    "assistant": "Both locales completed one fictional read-only workflow design request over the live API and exported the conversation. Mobile drawer close and focus return passed.",
+    "auth": "Both locale interfaces, form modes and local validation were checked without dispatching any authentication requests.",
+    "runtime": "No demonstrated application defect in the reviewed public flows."
+  },
+  "initialAssertionResolutions": [
+    {
+      "checks": [
+        "en language links keep engagement",
+        "ar language links keep engagement"
+      ],
+      "explanation": "Initial assertions inspected literal href values. Source appends search/hash on click. Targeted actual navigation in both directions preserved the edited support selection and hash.",
+      "targetedChecks": [
+        {
+          "name": "en locale navigation preserves edited selection and hash",
+          "pass": true,
+          "details": {
+            "url": "https://agynexa.si/ar/start?engagement=support#main-content",
+            "selection": "support"
+          }
+        },
+        {
+          "name": "ar locale navigation preserves selection and hash",
+          "pass": true,
+          "details": {
+            "url": "https://agynexa.si/en/start?engagement=support#main-content",
+            "selection": "support"
+          }
+        }
+      ]
+    },
+    {
+      "checks": [
+        "en assistant mobile drawer",
+        "ar assistant mobile drawer"
+      ],
+      "explanation": "Initial assertions checked DOM removal immediately after Escape. Targeted checks waited for dialog focus and close completion; Escape closed both dialogs and restored trigger focus.",
+      "targetedChecks": [
+        {
+          "name": "en assistant Escape closes dialog and restores focus",
+          "pass": true,
+          "details": {
+            "dialogCount": 0,
+            "focused": "Open assistant menu"
+          }
+        },
+        {
+          "name": "ar assistant Escape closes dialog and restores focus",
+          "pass": true,
+          "details": {
+            "dialogCount": 0,
+            "focused": "فتح قائمة المساعد"
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No authenticated session supplied; successful authentication, email delivery, recovery exchange and protected customer behavior cannot be verified.",
+    "No auth submissions, account creation, password resets, callback navigation or production configuration/data mutation.",
+    "Email/CRM/ERP connections and enterprise actions are not connected in this public demo; they were not activated or claimed verified.",
+    "The separate NEXA Agent cloud computer is inaccessible through the available tools; its reported Site Unavailable response remains unresolved.",
+    "The side-browser open request returned queued; actual panel opening and computer-control activation were not confirmed."
+  ],
+  "changes": "Audit evidence only. No application source, DNS, environment variables, authentication policy, or deployment was changed.",
+  "sessionEvidence": {
+    "public": "/tmp/agynexa-platform-review-20261017/public-results.json",
+    "auth": "/tmp/agynexa-platform-review-20261017/auth-results.json",
+    "journeys": "/tmp/agynexa-platform-review-20261017/journey-results.json",
+    "targetedFollowups": "/tmp/agynexa-platform-review-20261017/targeted-results.json",
+    "siteAssets": "/tmp/agynexa-platform-review-20261017/site-assets.json"
+  },
+  "reviewFinished": "2026-10-17T12:11:58.137Z"
+}
