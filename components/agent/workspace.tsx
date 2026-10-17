@@ -1,17 +1,16 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useChat } from "@ai-sdk/react";
-import { DefaultChatTransport } from "ai";
+import { DefaultChatTransport, type UIMessage } from "ai";
 import { ArrowUp, ArrowUpRight, Check, Command, Copy, Download, Layers3, LoaderCircle, Plus, ShieldCheck, Square, Workflow, Menu, X } from "lucide-react";
 import { Conversation, ConversationContent, ConversationScrollButton, messagesToMarkdown } from "@/components/ai-elements/conversation";
 import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { useLocale } from "@/lib/i18n/use-t";
 import { projectConversation } from "@/lib/agents/context";
-import { masterPage, masterValue } from "@/lib/content/master";
-import { revision } from "@/lib/content/revision";
-import { ContentSections } from "@/components/site/content-body";
+import { publicPath } from "@/lib/i18n/routing";
+import { PersonalHistory } from "./personal-history";
 import { AccountStatus } from "@/components/auth/account-status";
 import { agentWorkspaceCopy } from "@/lib/content/agent-workspace";
 import { Button } from "@/components/ui/button";
@@ -21,10 +20,6 @@ import { demoLimitCode, demoLimitCount, previewLimitsSchema, type DemoLimitCode 
 export function AgentWorkspace() {
     const locale = useLocale();
     const c = agentWorkspaceCopy[locale];
-    const reviewed = revision[locale].agentnexos;
-    const approved = masterPage(locale, 'agentnexos');
-    const promptLabel = masterValue(approved.sections, 'تسمية الإدخال', 'حقل الإدخال', 'حقل الرسالة', 'نص الإدخال', 'Input label');
-    const approvedSuggestions = masterValue(approved.sections, 'الأمثلة الجاهزة', 'Example prompts').split('\n').filter(Boolean).map(text => text.replace(/^- /, ''));
     const [input, setInput] = useState("");
     const [ready, setReady] = useState<boolean | null>(null);
     const [phase, setPhase] = useState(-1);
@@ -37,6 +32,7 @@ export function AgentWorkspace() {
     const composer = useRef<HTMLTextAreaElement>(null);
     const [drawerOpen, setDrawerOpen] = useState(false);
     const focusComposerOnClose = useRef(false);
+    const conversationEpoch = useRef(0);
     const transport = useMemo(() => new DefaultChatTransport({
         api: "/api/agentnexos",
         fetch: async (input, init) => {
@@ -63,6 +59,32 @@ export function AgentWorkspace() {
         },
     });
     const busy = status === "submitted" || status === "streaming";
+    const resetConversation = useCallback(() => {
+        conversationEpoch.current += 1;
+        void stop();
+        setMessages([]);
+        clearError();
+        setNotice(null);
+        setCopied(null);
+        setInput("");
+        setPhase(-1);
+        setLimitCode(null);
+        setLimitCount(null);
+    }, [stop, setMessages, clearError]);
+    const restoreConversation = useCallback((restored: UIMessage[]) => {
+        conversationEpoch.current += 1;
+        void stop();
+        clearError();
+        setNotice(null);
+        setCopied(null);
+        setInput("");
+        setPhase(-1);
+        setLimitCode(null);
+        setLimitCount(null);
+        // Restore directly: an intermediate empty store would clear the selected history item.
+        setMessages(restored);
+        composer.current?.focus();
+    }, [stop, clearError, setMessages]);
     useEffect(() => {
         const controller = new AbortController();
         const deadline = AbortSignal.timeout(10000);
@@ -82,7 +104,11 @@ export function AgentWorkspace() {
         setNotice(null);
         setPhase(-1);
         setInput("");
-        void sendMessage({ text: text.trim() }).catch(() => setInput(text));
+        const epoch = conversationEpoch.current;
+        void sendMessage({ text: text.trim() }).catch(() => {
+            // A cancelled request must not reinsert another account's question after reset.
+            if (conversationEpoch.current === epoch) setInput(text);
+        });
     }
     function download() {
         const url = URL.createObjectURL(new Blob([messagesToMarkdown(messages)], { type: "text/markdown;charset=utf-8" }));
@@ -93,12 +119,7 @@ export function AgentWorkspace() {
         URL.revokeObjectURL(url);
     }
     function newConversation(fromDrawer = false) {
-        setMessages([]);
-        clearError();
-        setNotice(null);
-        setCopied(null);
-        setInput("");
-        setPhase(-1);
+        resetConversation();
         if (fromDrawer) {
             focusComposerOnClose.current = true;
             setDrawerOpen(false);
@@ -109,7 +130,7 @@ export function AgentWorkspace() {
     function railContent(inDrawer = false) {
         return <>
       <div className="workspace-brand-row">
-        <Link href={`/${locale}`} className="workspace-brand" aria-label={c.home}><Command size={23} aria-hidden="true"/><span dir="ltr">AGYNEXA</span></Link>
+        <Link href={publicPath("/")} className="workspace-brand" aria-label={c.home}><Command size={23} aria-hidden="true"/><span dir="ltr">AGYNEXA</span></Link>
         {inDrawer && <SheetClose asChild><Button variant="ghost" size="icon" aria-label={locale === "ar" ? "إغلاق القائمة" : "Close menu"}><X size={18}/></Button></SheetClose>}
       </div>
       <Button variant="outline" disabled={busy} onClick={() => newConversation(inDrawer)} className="workspace-new"><Plus size={15} aria-hidden="true"/><span>{c.newChat}</span></Button>
@@ -142,26 +163,31 @@ export function AgentWorkspace() {
             <p className="workspace-label"><span aria-hidden="true"/>{c.label}</p>
             <Button variant="ghost" size="icon" disabled={!messages.length || busy} onClick={download} aria-label={c.download} className="workspace-download"><Download size={16}/></Button>
           </div>
+          <details className="workspace-history">
+            <summary>{c.history}</summary>
+            {/* Exactly one mount: account changes cannot trigger duplicate resets in the mobile drawer. */}
+            <PersonalHistory locale={locale} messages={messages} busy={busy} onRestore={restoreConversation} onStartNew={resetConversation}/>
+          </details>
           <Conversation key={messages.length ? "conversation" : "welcome"} className="min-h-0" initial={messages.length ? "smooth" : false} resize="smooth" aria-label={c.label}>
             <ConversationContent className="workspace-message-list">
               {messages.length === 0 ? <div className="workspace-welcome">
                 <div className="workspace-emblem"><Layers3 className="size-7"/></div>
-                <h1 className="workspace-title">{reviewed.title}</h1>
-                <p className="workspace-intro">{reviewed.intro}</p><details className="workspace-scope"><summary>{locale === "ar" ? "نطاق المساعد وقبل الإرسال" : "Assistant scope and before sending"}</summary><p className="workspace-scope-intro">{reviewed.intro}</p><ContentSections sections={reviewed.sections}/></details>
-                <div className="workspace-suggestions">{approvedSuggestions.map((title, i) => <button key={title} onClick={() => { setInput(title); composer.current?.focus(); }} className="workspace-suggestion"><div className="flex items-center justify-between gap-3"><span className="workspace-suggestion-number">0{i + 1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100"/></div><h2 className="workspace-suggestion-title">{title}</h2></button>)}</div>
+                <h1 className="workspace-title">{c.title}</h1>
+                <p className="workspace-intro">{c.intro}</p>
+                <div className="workspace-suggestions">{c.suggestions.slice(0, 3).map((suggestion, i) => <button key={suggestion.title} onClick={() => { setInput(suggestion.prompt); composer.current?.focus(); }} className="workspace-suggestion"><div className="flex items-center justify-between gap-3"><span className="workspace-suggestion-number">0{i + 1}</span><ArrowUpRight className="size-4 text-muted-foreground rtl:-scale-x-100"/></div><h2 className="workspace-suggestion-title">{suggestion.title}</h2><p className="workspace-suggestion-detail">{suggestion.detail}</p></button>)}</div>
               </div> : messages.map(message => <Message key={message.id} from={message.role} className="max-w-full">
                 <div className="mb-1 text-xs font-medium text-muted-foreground">{message.role === "user" ? (locale === "ar" ? "أنت" : "You") : "AGYNEXA"}</div>
-                <MessageContent className="w-full text-sm leading-8 group-[.is-user]:bg-secondary group-[.is-user]:text-foreground">
-                  {message.parts.map((part, i) => part.type === "text" ? <MessageResponse key={i} dir={locale === "ar" ? "rtl" : "ltr"} components={{ img: () => null }}>{part.text}</MessageResponse> : null)}
+                <MessageContent className="workspace-message-content w-full group-[.is-user]:bg-secondary group-[.is-user]:text-foreground">
+                  {message.parts.map((part, i) => part.type === "text" ? <MessageResponse key={i} dir={locale === "ar" ? "rtl" : "ltr"} controls={{ table: false }} components={{ img: () => null, table: ({ children }) => <div className="workspace-table-scroll" role="region" aria-label={locale === "ar" ? "جدول، يمكن تمريره أفقيًا" : "Table, scroll horizontally"} tabIndex={0}><table>{children}</table></div> }}>{part.text}</MessageResponse> : null)}
                 </MessageContent>
-                {message.role === "assistant" && !busy && <button className="flex w-fit items-center gap-2 rounded-lg p-2 text-xs text-muted-foreground hover:bg-secondary" onClick={async () => { try {
+                {message.role === "assistant" && !busy && <div className="workspace-response-actions"><button className="flex w-fit items-center gap-2 p-2 text-sm text-muted-foreground" onClick={async () => { try {
             await navigator.clipboard.writeText(message.parts.filter(p => p.type === "text").map(p => p.text).join("\n"));
             setCopied(message.id);
             setNotice(null);
         }
         catch {
             setNotice("copyError");
-        } }}>{copied === message.id ? <Check className="size-3.5"/> : <Copy className="size-3.5"/>}{copied === message.id ? c.copied : c.copy}</button>}
+        } }}>{copied === message.id ? <Check className="size-3.5"/> : <Copy className="size-3.5"/>}{copied === message.id ? c.copied : c.copy}</button><button type="button" onClick={() => { setInput(c.revisionPrompt); composer.current?.focus(); }}>{c.revise}</button></div>}
               </Message>)}
               {busy && <div role="status" className="flex items-center gap-3 text-sm text-muted-foreground"><LoaderCircle className="size-4 animate-spin"/>{phase >= 0 ? c.roles[phase] : c.preparing}</div>}
               {error && <div role="alert" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm leading-7"><p>{ready === false ? c.offline : limitCode ? c.limits[limitCode] : c.error}</p>{limitCount !== null && <p>{c.budgetLabel} {limitCount} {c.dailyUnit}</p>}<button onClick={() => { const last = [...messages].reverse().find(m => m.role === "user"); const text = last?.parts.filter(p => p.type === "text").map(p => p.text).join("\n"); if (text) {
@@ -182,11 +208,11 @@ export function AgentWorkspace() {
                 <textarea ref={composer} value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
         e.preventDefault();
         submit();
-    } }} maxLength={4000} rows={2} aria-label={promptLabel || c.placeholder} placeholder={promptLabel || c.placeholder} className="workspace-textarea"/>
+    } }} maxLength={4000} rows={2} aria-label={c.placeholder} placeholder={c.placeholder} className="workspace-textarea"/>
                 <div className="flex items-center justify-between gap-3 px-2"><span className="text-[11px] text-muted-foreground">{input.length}/4000</span>{busy ? <Button type="button" variant="outline" size="icon" onClick={() => { void stop(); setNotice("cancelled"); setPhase(-1); }} aria-label={c.stop} className="workspace-send"><Square className="size-4"/></Button> : <Button type="submit" variant="outline" size="icon" disabled={!input.trim() || ready !== true} aria-label={c.send} className="workspace-send"><ArrowUp className="size-5"/></Button>}</div>
               </form>
               <p className="workspace-context">{c.contextNotice}</p>
-              <p className="workspace-privacy">{masterValue(approved.sections, 'تنبيه ملاصق لحقل الإدخال', 'Notice beside the input')} <Link href={`/${locale}/privacy`} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
+              <p className="workspace-privacy">{c.privacy} <Link href={publicPath("/privacy")} className="underline underline-offset-4">{locale === "ar" ? "الخصوصية" : "Privacy"}</Link></p>
             </div>
           </div>
         </main>

@@ -1,0 +1,742 @@
+{
+  "status": "IMPLEMENTATION_AUTHORIZED_SINGLE_FINAL_PRODUCTION_RELEASE",
+  "date": "2026-10-17T16:15+03:00",
+  "purpose": "Upgrade AGYNEXA public website and chat quality comprehensively, using ten live comparators while preserving the current template and palette.",
+  "governingStrategy": "PRODUCTION-ENGINEERING.md; EXECUTION-STATUS.md is the single progress ledger.",
+  "ownerConstraints": {
+    "preservePalette": {
+      "background": "#050505",
+      "surface": "#0b0b0b",
+      "text": "#ebebeb",
+      "accent": "#10b981"
+    },
+    "preserveTemplate": true,
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "workspaceMeans": "Chat interface itself",
+    "assistantResponses": "Natural open chat with no framed answer bubble, result panel or canvas",
+    "heroImage": "Approved original photorealistic city/port scene blended full-bleed into homepage; replace the standalone brain tile.",
+    "availabilityInvestigation": "PAUSED_BY_OWNER; no further diagnostic requests or plan upgrades",
+    "heroActions": "No Discuss your project or Try workflow-design assistant buttons under the homepage headline; do not simply relabel those rejected actions there.",
+    "premiumReference": "Inception42 is the owner’s primary reference for an immersive photographic/video opening, considered spacing and professional geometry; apply within AGYNEXA black/emerald identity.",
+    "replyPolicy": "Remove canned business responses; provide context-aware useful replies. Keep deterministic permission and execution controls rather than fixed whole-answer business templates.",
+    "arabicFont": {
+      "approved": "Almarai",
+      "decision": "Owner selected third font in the revised preview."
+    },
+    "brandAndControls": "Increase desktop AGYNEXA wordmark prominence and improve button labels, sizes and spacing; keep brand colors and template.",
+    "institutionalAbout": "Present AGYNEXA as a global enterprise agentic-systems platform. Leadership card only Adham Younes / أدهم يونس, CEO / الرئيس التنفيذي, adham@agynexa.si. No Founder title, biography, unrelated agriculture projects or invented corporate proof.",
+    "positioning": "Global enterprise agentic AI systems for companies and institutions worldwide. No Egypt/GCC/Middle East restriction; Arabic/English are language support, not market limits.",
+    "publicUrls": "English by default at clean public URLs with no /en or /ar visible prefix; compact Arabic switch in header. No language-selection interstitial.",
+    "designSystem": "Consistent card/button/menu/input/type/spacing system using existing Next.js/React/Tailwind/Radix/shadcn stack and approved black/emerald palette.",
+    "delivery": "Implement all agreed work with specialized subagents, deploy one coordinated final production release, then perform one scoped final production verification; no local/Preview tests.",
+    "imagery": "Latest owner decision: publish approved homepage cover only. Withdraw all generated sector scenes; no further image work. No people or portraits anywhere. Sector layouts use typography, content and geometry."
+  },
+  "benchmark": [
+    {
+      "name": "Inception42",
+      "url": "https://inception42.ai/",
+      "referenceFor": "الرئيسية وتفاصيل الحلول",
+      "takeawayArabic": "مهمة محددة، ثم واجهة مرئية، ثم مخرجات قبل العمل وأثناءه وبعده.",
+      "observed": [
+        "Full-bleed changing hero photography/video occupies the entire composition with overlay typography and a small centered brand-grid motif. Image edges are not shown as a separate card or square.",
+        "Thin grid rules, generous space, asymmetrical feature panels, editorial bands, product image tiles, model presentation, partner strip and dated news create different visual rhythms instead of a page of matching cards.",
+        "Bright chartreuse actions and occasional purple panels are distinctive to this brand; they are not a recommendation to recolor AGYNEXA.",
+        "Named products have a short task descriptor; partner logos and dated announcements supply inspectable pointers to company-provided evidence."
+      ],
+      "limits": [
+        "Cookie banner overlays part of the hero and product screenshots. No cookie settings were changed.",
+        "Initial screenshot preceded the navigation entrance; one settled capture shows the navigation fully."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/visual-group/inception-home-settled-desktop.png",
+        "/tmp/agynexa-benchmark-20261017/visual-group/inception-home-settled-full.png"
+      ]
+    },
+    {
+      "name": "AIQ",
+      "url": "https://aiq.ae/",
+      "referenceFor": "صفحة القطاعات",
+      "takeawayArabic": "تقسيم بحسب العملية والقطاع، مع وصف قصير لمهمة كل منتج.",
+      "observed": "Capabilities navigation uses sector tabs with counts (Subsurface, Production, Asset Integrity, HSE, Drilling, Custom & Agentic AI). Each product row pairs a named product, one concrete outcome paragraph and a directional detail link.",
+      "limits": [
+        "Do not adopt heavy animation that delays a readable static hero. Do not import partner names, research claims or industrial product credentials."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/product-group/aiq-home-top.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/aiq-capabilities-top.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/aiq-capabilities-section.png"
+      ]
+    },
+    {
+      "name": "Presight",
+      "url": "https://www.presight.ai/",
+      "referenceFor": "العنوان وصفحات الحلول",
+      "takeawayArabic": "عنوان موجز يبدأ بالمشكلة التشغيلية قبل البنية التقنية.",
+      "observed": [
+        "The headline is large and short, supported by a compact body block and one clear gradient CTA.",
+        "Subtle arcs form a continuous dark hero background; artwork supports the text instead of appearing as a pasted object.",
+        "The first section after the hero is a restrained grayscale Trusted by logo strip."
+      ],
+      "limits": [
+        "The settled homepage and product hero paint correctly. Lower-page full screenshots remain largely blank under the site’s scroll/reveal behavior despite one bounded settled attempt. Visual conclusions are limited to the painted hero, visible Trusted by strip and product challenge heading.",
+        "Lower-page narrative details are text/DOM observations only, explicitly separated from visual observations. No further retries."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/visual-group/presight-home-settled-desktop.png",
+        "/tmp/agynexa-benchmark-20261017/visual-group/presight-home-settled-full.png"
+      ]
+    },
+    {
+      "name": "OnDemand",
+      "url": "https://on-demand.io/",
+      "referenceFor": "شرح المنتج ومساحة الدردشة",
+      "takeawayArabic": "عرض المدخل والخطوات والنتيجة؛ توضيح ما يحتاج إعدادًا أو حسابًا.",
+      "observed": "Homepage shows model selection, tools/plugins, example user request, working/execution display; separate flow canvas has Trigger → LLM → Output → Email. Describes editable artifacts, reusable prompts and configure-required hints. These were marketing demonstrations, not executed workflows.",
+      "limits": [
+        "Do not imitate its live integrations, email delivery, persistence, model choice, certifications or active workflow statuses unless AGYNEXA truly implements them. Preserve low-friction guest design assistant instead of copying account wall."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/product-group/ondemand-home-top.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/ondemand-workspace-top.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/ondemand-playground-section.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/ondemand-flow-section.png"
+      ]
+    },
+    {
+      "name": "Mozn",
+      "url": "https://www.mozn.ai/",
+      "referenceFor": "المنصة والخدمات والمنهجية",
+      "takeawayArabic": "الفصل بين الحل، ومخرجات المشروع، وطريقة تقديمه.",
+      "observed": "The hero is broad, but the section structure makes the intended buyer and domain choices explicit. Each solution card offers a short sequence of work rather than a long list of AI component names.",
+      "limits": [
+        "The captured Arabic document title remains the same English title as the English homepage. A code-fence-like fragment also appears in extracted Arabic body text; no claim about its visual prominence."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/content-group/mozn-home-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/mozn-product-section-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/mozn-arabic-viewport.png"
+      ]
+    },
+    {
+      "name": "Lucidya",
+      "url": "https://www.lucidya.com/",
+      "referenceFor": "الرئيسية والحلول",
+      "takeawayArabic": "وعد محدد بجانب واجهة أو عينة مخرج يمكن فحصها.",
+      "observed": "The strongest of these four as a reference for pairing a simple product job with a UI example. Industry cards name observable situations, such as routing urgent delivery complaints or monitoring guest reviews. This is more useful to AGYNEXA than its scale claims.",
+      "limits": [
+        "The hero interface illustration is absent from the captured Arabic frame; this may be timing or a variant difference. Only the captured state is established. An earlier menu extraction selected the separate Arabic help center; that page is excluded and the same-origin homepage was captured once afterward."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/content-group/lucidya-home-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/lucidya-product-section-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/lucidya-arabic-home-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/lucidya-product-aligned.png"
+      ]
+    },
+    {
+      "name": "Unifonic",
+      "url": "https://www.unifonic.com/en/",
+      "referenceFor": "مسار التحويل وعمليات العملاء",
+      "takeawayArabic": "فصل التواصل التجاري عن الاستكشاف، وتحديد الإحالة إلى المسؤول.",
+      "observed": "The lifecycle grouping helps the buyer choose an intended job: acquisition, support, onboarding/security or retention. Some action lists are broad, so AGYNEXA should use fewer jobs and more concrete output examples.",
+      "limits": [
+        "No full section-by-section translation or route-preservation audit."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/content-group/unifonic-home-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/unifonic-product-section-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/unifonic-arabic-viewport.png"
+      ]
+    },
+    {
+      "name": "DXwand / ORXTRA",
+      "url": "https://dxwand.com/",
+      "referenceFor": "اختيار الحالة والقطاع",
+      "takeawayArabic": "ربط حاجة المشتري بالحل والخطوة التالية؛ صفحة البناء المعروضة تسويقية.",
+      "observed": "Public Agent Builder page is descriptive feature cards and technical claims: visual editor, Multi-LLM, knowledge-driven agents, scripting, omni-channel, API integration. The reviewed page did not expose a hands-on builder or concrete editable workflow.",
+      "limits": [
+        "Do not import claimed customer logos, percentages, scale, compliance status or production-grade readiness. Prefer real AGYNEXA output samples over generic AI-head artwork and repeated feature grids."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/product-group/dxwand-home-top.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/dxwand-builder-top.png",
+        "/tmp/agynexa-benchmark-20261017/product-group/dxwand-builder-section.png"
+      ]
+    },
+    {
+      "name": "Widebot",
+      "url": "https://widebot.ai/",
+      "referenceFor": "تصنيف المحتوى",
+      "takeawayArabic": "الفصل بين النماذج والمنتجات والحلول؛ تجنب قوائم الادعاءات الطويلة.",
+      "observed": "The separation of models, products and use cases is useful information architecture for a mature platform. The actual body relies heavily on broad benefit words and large feature catalogs; it is a weak stylistic reference for AGYNEXA’s requested natural, precise writing.",
+      "limits": [
+        "No accessible-name determination or formal language-switch behavior test. The icon’s visible label is not a language name in the captured English frame."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/content-group/widebot-home-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/widebot-product-section-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/widebot-arabic-viewport.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/widebot-product-aligned.png",
+        "/tmp/agynexa-benchmark-20261017/content-group/widebot-proof-section-viewport.png"
+      ]
+    },
+    {
+      "name": "HUMAIN",
+      "url": "https://www.humain.com/",
+      "referenceFor": "الخلفية وإيقاع الصفحة",
+      "takeawayArabic": "رسم ممتد ضمن الخلفية ولغة بصرية مستمرة وصفوف تحريرية متنوعة.",
+      "observed": [
+        "Settled hero uses dark teal/green layered geometric depth across the whole background, extending behind navigation and copy. It reads as one environment, not a framed illustration.",
+        "Below the hero: editorial content carousel, a centered stack statement, compact named-allies strip, then four alternating image/text rows: Applications & Solutions, AI Models, Data Platform, Infrastructure.",
+        "A repeated abstract graphic language ties the four layer illustrations together. Generous whitespace and alternating axes keep the long story from becoming a repetitive grid.",
+        "A PIF-company mark is displayed in the footer; allies shown include named technology providers. These are publisher claims, not independently verified here."
+      ],
+      "limits": [
+        "The initial page captured before assets/hydration finished. One settled capture produced the actual imagery and lower-page content, while a consent modal still obscures the precise hero wording. No consent was accepted/rejected and no further retry was made.",
+        "Cookie-modal text dominates the extracted visible DOM text, so lower-page observations are derived directly from screenshot inspection.",
+        "No separate HUMAIN product page was visited; the homepage itself exposes the relevant stack composition."
+      ],
+      "evidence": [
+        "/tmp/agynexa-benchmark-20261017/visual-group/humain-home-settled-desktop.png",
+        "/tmp/agynexa-benchmark-20261017/visual-group/humain-home-settled-full.png"
+      ]
+    }
+  ],
+  "evidenceLimits": [
+    "Public rendered pages and selected product pages only; no authenticated competitor products or backend/integration tests.",
+    "AIQ homepage capture remained incomplete after one diagnosed retry; Capabilities was inspected.",
+    "Presight lower-page paint was incomplete; lower-page DOM text is not described as visual evidence.",
+    "HUMAIN cookie consent obscured exact hero wording.",
+    "Competitor metrics, certifications, customer relationships and product claims were not independently validated.",
+    "Screenshots referenced under /tmp are session evidence and may not persist."
+  ],
+  "recommendedDesign": {
+    "direction": "Premium editorial pages with an immersive cinematic opening, considered geometric alignment, consistent spacing and authentic product examples; preserve the existing template and black/emerald palette.",
+    "alternativeWithinBrand": "Use a bespoke still cinematic composition as the first release, then replace its background layer with suitable licensed motion footage after selecting the asset. Both share the same layout and poster fallback.",
+    "hero": "Use a full-section cinematic image or licensed muted video with a static poster and readable dark text zone. No separate image tile/card. The brain can become a secondary integrated visual if useful; it is no longer the sole homepage proof. Keep complete static content when animation is disabled.",
+    "imageryEvidence": "Current loaded asset is decoded and visible by DOM metrics, yet current live screenshot shows near-empty artwork area; source also uses a separate image column. Record visual/render ambiguity rather than claiming one universal cause.",
+    "hierarchy": "One compelling headline and a compact category explanation over a wide visual. No rejected project-discussion or process-design-trial buttons under the headline. Introduce a discreet exploration cue; place clear product/commercial entry points in the appropriate navigation and later page sections.",
+    "pageComposition": "Distinct compositions for purpose: home narrative; solution input/output example; industries hub and details; service deliverable rows; methodology stages; real resource previews; readable linear legal content.",
+    "heroCopy": {
+      "ar": {
+        "title": "نصمّم الذكاء حول طريقة عملك.",
+        "body": "نحوّل متطلبات مؤسستك إلى أنظمة وكلاء ومسارات عمل واضحة، تُبنى على مصادر موثوقة ومسؤوليات محددة.",
+        "explorationCue": "استكشف AGYNEXA"
+      },
+      "en": {
+        "title": "AI designed around the way you work.",
+        "body": "We turn your organization’s requirements into agent systems and clear workflows, built around trusted sources and defined responsibilities.",
+        "explorationCue": "Explore AGYNEXA"
+      },
+      "status": "Original draft for owner review, not published. Replaces the earlier repeated-task headline and rejected hero actions."
+    },
+    "contentRules": [
+      "Each page answers one buyer question and shows a specific deliverable.",
+      "Author natural Arabic and English with matching action/result expectations.",
+      "Use clearly labeled fictional examples and actual templates; no invented customer logos, metrics or production claims.",
+      "Explain local brief preparation and manual sending before the first form field; do not imply an automatic submission.",
+      "Review account privacy wording against actual collection, provider, retention and deletion behavior before publication."
+    ],
+    "navigation": {
+      "currentEvidence": "Header anchors already point to separate localized routes, not homepage fragments. Existing industries page is absent from the main navigation and covers only trade/distribution, services and agriculture.",
+      "proposed": "Expose Industries in navigation, keep the existing page families, and give each new sector a unique route, title, content, breadcrumbs and next step. Open destinations in the current tab at their own page, without stacking all page bodies on the home page. Preserve language/locale and mobile navigation usability."
+    },
+    "sectors": [
+      {
+        "slug": "logistics",
+        "ar": "اللوجستيات وسلاسل الإمداد",
+        "en": "Logistics and supply chain",
+        "example": "متابعة حالة الشحنات وتجميع الاستثناءات والمستندات الناقصة.",
+        "deliverable": "ملخص شحنة وقائمة متابعة يراجعها مسؤول العمليات.",
+        "proposedRoutes": [
+          "/ar/industries/logistics",
+          "/en/industries/logistics"
+        ]
+      },
+      {
+        "slug": "oil-gas",
+        "ar": "البترول والغاز",
+        "en": "Oil and gas",
+        "example": "فحص اكتمال طلبات الصيانة ومستندات الموردين.",
+        "deliverable": "ملف مراجعة يبين النواقص والمسؤول عن الاعتماد.",
+        "proposedRoutes": [
+          "/ar/industries/oil-gas",
+          "/en/industries/oil-gas"
+        ]
+      },
+      {
+        "slug": "foreign-trade",
+        "ar": "التجارة الخارجية",
+        "en": "Foreign trade",
+        "example": "مقارنة بيانات الفاتورة وقائمة التعبئة وتجميع نواقص مستندات الشحنة.",
+        "deliverable": "قائمة اختلافات ومستندات للمراجعة بواسطة المختص.",
+        "proposedRoutes": [
+          "/ar/industries/foreign-trade",
+          "/en/industries/foreign-trade"
+        ]
+      },
+      {
+        "slug": "energy",
+        "ar": "الطاقة",
+        "en": "Energy",
+        "example": "تنظيم مستندات المشروعات ومراجعة طلبات التوريد والمتابعة.",
+        "deliverable": "موجز حالة المشروع وعناصر تحتاج قرارًا أو استكمالًا.",
+        "proposedRoutes": [
+          "/ar/industries/energy",
+          "/en/industries/energy"
+        ]
+      },
+      {
+        "slug": "trade-distribution",
+        "ar": "التجارة والتوزيع",
+        "en": "Trade and distribution",
+        "example": "مراجعة طلبات الشراء وحالة التوريد والفواتير.",
+        "deliverable": "قائمة متابعة ومشروع خطوة تالية للمسؤول.",
+        "proposedRoutes": [
+          "/ar/industries/trade-distribution",
+          "/en/industries/trade-distribution"
+        ]
+      },
+      {
+        "slug": "professional-services",
+        "ar": "الخدمات المهنية",
+        "en": "Professional services",
+        "example": "الوصول إلى إجراء معتمد وتجهيز موجز مشروع أو رد قابل للمراجعة.",
+        "deliverable": "مسودة مرتبطة بمصادرها ونقاط تحتاج تأكيدًا.",
+        "proposedRoutes": [
+          "/ar/industries/professional-services",
+          "/en/industries/professional-services"
+        ]
+      }
+    ],
+    "sectorScopeNotice": "هذه أمثلة لمسارات عمل يمكن تصميمها وفق بيانات المؤسسة وصلاحياتها، وليست ادعاءً بوجود تشغيل قطاعي أو تكامل حي.",
+    "typography": {
+      "family": "Almarai",
+      "selection": "Explicitly approved after revised actual-font comparison.",
+      "heading": "Geometric and readable Arabic; avoid heavy text density and forced desktop line breaks.",
+      "body": "Readable medium-sized Arabic with comfortable line-height; adjust by screen, not by shrinking everything.",
+      "existingStack": "Next.js, React, Tailwind, Radix/shadcn-style components. Vercel hosting does not itself specify a visual design system. Reuse existing components rather than a framework replacement."
+    },
+    "header": {
+      "background": "Full viewport width",
+      "content": "Aligned inner geometry and adequate spacing; no cropped dropdown or compressed wordmark",
+      "wordmark": "Increase desktop prominence from current 22/25px; proposed desktop around 32px, responsive with menu and locale controls",
+      "controls": "Readable labels and comfortable hit areas; no rejected hero actions"
+    },
+    "aboutCopy": {
+      "status": "Proposed institutional wording using owner-provided title",
+      "title": "نصمّم أنظمة الذكاء الاصطناعي حول احتياجات العمل.",
+      "body": "AGYNEXA منصة لتصميم أنظمة الوكلاء ومسارات العمل التي تجمع المعرفة والأدوات والقرارات في عملية واضحة. نبدأ بفهم احتياجات المؤسسة، ثم نحدد البيانات والمسؤوليات والمخرجات قبل بناء الحل وتوسيعه.",
+      "leadershipName": "أدهم يونس",
+      "leadershipTitleArabic": "الرئيس التنفيذي",
+      "leadershipTitleEnglish": "CEO",
+      "leadershipEmail": "adham@agynexa.si"
+    }
+  },
+  "agentDiagnosis": {
+    "modelChain": {
+      "provider": "Groq OpenAI-compatible endpoint for every role; the @ai-sdk/openai adapter does not mean the reviewer is sent directly to OpenAI.",
+      "provider_url": "https://api.groq.com/openai/v1",
+      "roles": [
+        {
+          "role": "Process analyst",
+          "model_id": "qwen/qwen3.8-27b",
+          "credential_preference": [
+            "GROQ_API_KEY",
+            "GROQ_API_KEY1",
+            "GROQ_API_KEY2"
+          ],
+          "generation": "generate",
+          "max_output_tokens": 1200,
+          "temperature": 0.2,
+          "tools": "none",
+          "evidence": [
+            "/workspace/agentnexos/lib/ai/models.ts:14",
+            "/workspace/agentnexos/lib/ai/models.ts:27",
+            "/workspace/agentnexos/lib/agents/workflow.ts:55"
+          ]
+        },
+        {
+          "role": "Workflow planner",
+          "model_id": "qwen/qwen3.8-27b",
+          "credential_preference": [
+            "GROQ_API_KEY1",
+            "GROQ_API_KEY",
+            "GROQ_API_KEY2"
+          ],
+          "generation": "generate",
+          "max_output_tokens": 1800,
+          "temperature": 0.2,
+          "tools": "Dynamically selected subset of review_workflow_design, estimate_workload and read_technical_reference.",
+          "evidence": [
+            "/workspace/agentnexos/lib/ai/models.ts:30",
+            "/workspace/agentnexos/lib/ai/models.ts:43",
+            "/workspace/agentnexos/lib/agents/workflow.ts:56"
+          ]
+        },
+        {
+          "role": "Final reviewer",
+          "model_id": "openai/gpt-oss-120b",
+          "credential_preference": [
+            "GROQ_API_KEY2",
+            "GROQ_API_KEY",
+            "GROQ_API_KEY1"
+          ],
+          "generation": "stream",
+          "max_output_tokens": 3000,
+          "temperature": 0.1,
+          "tools": "none",
+          "evidence": [
+            "/workspace/agentnexos/lib/ai/models.ts:46",
+            "/workspace/agentnexos/lib/ai/models.ts:59",
+            "/workspace/agentnexos/lib/agents/workflow.ts:59"
+          ]
+        }
+      ],
+      "conclusion": "Three logical agents/roles are instantiated, but the source selects only two distinct model IDs. Analyst and planner share the same Qwen model. Three keys do not configure three model identities or establish three distinct provider accounts.",
+      "fallback": "Model helper functions fall back between credential names only. They do not switch model IDs or providers. The active API readiness path requires all three named keys, so the helper missing-key fallback is normally unreachable for admitted public requests.",
+      "model_configuration": "Model IDs are hard-coded, not selected from role-specific model environment variables. The active API does not supply the workflow's test-only models override.",
+      "limits_note": "MODEL_LIMITS maxTokensCap/defaultBudget are descriptive constants; active agents use the explicit 1200/1800/3000 maxOutputTokens in workflow.ts. No hidden extra model budget is established by the larger cap constants.",
+      "evidence": [
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:23",
+        "/workspace/agentnexos/app/api/agentnexos/route.ts:92",
+        "/workspace/agentnexos/lib/ai/models.ts:62",
+        "/workspace/agentnexos/lib/agents/workflow.ts:26"
+      ]
+    },
+    "productionEnvironmentMetadata": {
+      "readOnly": true,
+      "decrypted": false,
+      "scope": "Current project environment metadata, not credentials or proof of provider acceptance in a deployment",
+      "variables": [
+        {
+          "name": "GROQ_API_KEY2",
+          "target": [
+            "production"
+          ],
+          "type": "sensitive",
+          "gitBranch": null
+        },
+        {
+          "name": "GROQ_API_KEY1",
+          "target": [
+            "production"
+          ],
+          "type": "sensitive",
+          "gitBranch": null
+        },
+        {
+          "name": "GROQ_API_KEY",
+          "target": [
+            "production"
+          ],
+          "type": "sensitive",
+          "gitBranch": null
+        }
+      ]
+    },
+    "dispatch": [
+      {
+        "trigger": "One of four publicBoundaryReply regex matches",
+        "path": "routing metadata → policy_response metadata → fixed text → return",
+        "model_calls": "Zero model calls in this path, even though provider/database readiness and quota reservation occurred before runAgentWorkflow.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/workflow.ts:35",
+          "/workspace/agentnexos/lib/agents/workflow.ts:42",
+          "/workspace/agentnexos/app/api/agentnexos/route.ts:70"
+        ]
+      },
+      {
+        "trigger": "conversation classification",
+        "path": "Final reviewer only → streamed text",
+        "model_calls": "One reviewer stage; analyst/planner agents are created but not invoked.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/workflow.ts:60"
+        ]
+      },
+      {
+        "trigger": "calculation or technical classification",
+        "path": "Planner/tool work → final reviewer",
+        "model_calls": "Two sequential stages, not all three.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/workflow.ts:101"
+        ]
+      },
+      {
+        "trigger": "workflow classification",
+        "path": "Analyst → planner with required design-review tool → final reviewer",
+        "model_calls": "Three sequential stages; no parallel debate, consensus or reviewer-to-planner correction loop.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/workflow.ts:74",
+          "/workspace/agentnexos/lib/agents/workflow.ts:81",
+          "/workspace/agentnexos/lib/agents/workflow.ts:90",
+          "/workspace/agentnexos/lib/agents/workflow.ts:101"
+        ]
+      }
+    ],
+    "qualityFindings": [
+      {
+        "id": "Q01",
+        "priority": "first",
+        "kind": "confirmed_behavior",
+        "title": "Fixed business answers bypass the models",
+        "fact": "Missing-data revisions and initial review-only purchase designs can skip all three model roles and ignore supplied details.",
+        "impact": "A user can see the same generic response after different concrete requests despite having three configured credentials.",
+        "improvement": "Keep immutable safety decisions as structured constraints; allow the model to answer the actual design/amendment using supplied facts. Reserve hard-coded text for brief genuine boundary/error states, not whole useful business drafts.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/public-boundary.ts:25",
+          "/workspace/agentnexos/lib/agents/public-boundary.ts:35",
+          "/workspace/agentnexos/lib/agents/workflow.ts:42"
+        ]
+      },
+      {
+        "id": "Q02",
+        "priority": "first",
+        "kind": "confirmed_architecture",
+        "title": "Routing uses keywords rather than task intent/state",
+        "fact": "Terms such as invoice/approval/purchase route to workflow before calculation/technical checks. Follow-ups inherit only a preceding user request through prefix regexes.",
+        "impact": "An invoice calculation may invoke the full design chain; a nuanced question may force a design tool or lose the task frame. This is a mechanism, not a measured error rate.",
+        "improvement": "Use a bounded typed intent decision with explicit latest action (answer, clarify, calculate, design, amend, compare) and conversation task state, while server code retains tool allowlists. Preserve a cheap direct path for simple requests.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/policy.ts:30",
+          "/workspace/agentnexos/lib/agents/policy.ts:37",
+          "/workspace/agentnexos/lib/agents/workflow.ts:54"
+        ]
+      },
+      {
+        "id": "Q03",
+        "priority": "first",
+        "kind": "confirmed_prompt_constraint",
+        "title": "Duplicated instructions and special cases dominate each role",
+        "fact": "publicRoleInstructions supplies common boundary/role wording, then agentInstructions appends overlapping role text and many case-specific rules. Initial designs are capped at 4–6 steps/350 words; followups can receive a second hard 180-word/three-paragraph rule.",
+        "impact": "These rules can overfit safety cases and restrict a legitimate deep follow-up. They are a plausible contributor to stiff/repetitive output; no new evaluation establishes causality for every bad answer.",
+        "improvement": "Consolidate one capability policy plus concise role purpose, allowed proposals and response principles. Make length depend on the user's requested depth. Ask the one question that materially changes the task, not a mandatory generic intake question.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/instruction-templates.ts:7",
+          "/workspace/agentnexos/lib/agents/instruction-templates.ts:14",
+          "/workspace/agentnexos/lib/agents/prompts.ts:12",
+          "/workspace/agentnexos/lib/agents/prompts.ts:16",
+          "/workspace/agentnexos/lib/agents/prompts.ts:28"
+        ]
+      },
+      {
+        "id": "Q04",
+        "priority": "first",
+        "kind": "confirmed_architecture",
+        "title": "Reviewer completion checks only nonempty text",
+        "fact": "Analyst and planner state are strings, final output schema is {text:string}, and success checks require nonempty review text. Tool gaps reach reviewer as prompt text, not a validated final compliance/completeness contract.",
+        "impact": "A fluent answer can omit an important user requirement, tool gap, correction or requested deliverable and still be considered completed.",
+        "improvement": "Maintain a small typed task/requirements/draft state behind chat. Deterministically validate known constraints and output completeness before marking a useful result ready; render natural prose without forcing a visible result card.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/workflow.ts:10",
+          "/workspace/agentnexos/lib/agents/workflow.ts:83",
+          "/workspace/agentnexos/lib/agents/workflow.ts:90",
+          "/workspace/agentnexos/lib/agents/contract.ts:18"
+        ]
+      },
+      {
+        "id": "Q05",
+        "priority": "next",
+        "kind": "confirmed_limit",
+        "title": "Recent-message window has no stable decision memory",
+        "fact": "Client projection keeps at most twelve complete text messages and twelve thousand characters, then drops older turns. No canonical goal/decisions/open-questions object survives outside that window.",
+        "impact": "Long conversations can lose corrections, prior inputs and task decisions. There is no durable memory even when logged in.",
+        "improvement": "Keep a bounded session task state of user-confirmed goal, constraints, corrections, known facts and open questions; include it within the existing aggregate context budget. Distinguish user facts from assistant proposals.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/context.ts:2",
+          "/workspace/agentnexos/lib/agents/context.ts:12",
+          "/workspace/agentnexos/components/agent/workspace.tsx:51"
+        ]
+      },
+      {
+        "id": "Q06",
+        "priority": "next",
+        "kind": "confirmed_capability_boundary",
+        "title": "Tool set cannot fulfill general execution/research expectations",
+        "fact": "Only design review, workload arithmetic and three fixed official technical references are available. Reviewer has no tools. Public chat cannot browse arbitrary sources, run code, send email or access business systems.",
+        "impact": "The assistant must offer useful analysis/drafting within this scope, but cannot honestly execute tasks outside it. A key or extra role does not add tools.",
+        "improvement": "State relevant limitation once when needed, then deliver a concrete useful allowed result or ask a targeted question. Do not answer ordinary design questions with a broad catalogue of things unavailable.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/policy.ts:2",
+          "/workspace/agentnexos/lib/agents/tools.ts:6",
+          "/workspace/agentnexos/lib/agents/tools.ts:23",
+          "/workspace/agentnexos/lib/agents/instruction-templates.ts:10"
+        ]
+      },
+      {
+        "id": "Q07",
+        "priority": "next",
+        "kind": "confirmed_architecture",
+        "title": "Three-stage chain is not a quality feedback loop",
+        "fact": "Three roles pass prose forward sequentially; final reviewer has no tools and no bounded critique/revise step back to planner. Analyst and planner use the same model ID.",
+        "impact": "More stages/keys do not establish independent verification or better task completion.",
+        "improvement": "Define each role's contribution and acceptance evidence. Use one/two stages for simple work and full planning only when needed. Consider a bounded correction only when a specific completeness check fails; never add automatic loops or a third model merely for appearance.",
+        "evidence": [
+          "/workspace/agentnexos/lib/agents/workflow.ts:55",
+          "/workspace/agentnexos/lib/agents/workflow.ts:74",
+          "/workspace/agentnexos/lib/agents/workflow.ts:101"
+        ]
+      }
+    ],
+    "measuredModelStrength": "Not evaluated; keys and model size alone do not establish answer quality.",
+    "priorQualityEvidence": "The earlier fictional procurement response supplied a financial approval threshold not provided by the user and presented generated details as based on supplied data. This is a semantic-quality issue; earlier successful HTTP/stream/export checks did not prove answer quality."
+  },
+  "chatDesign": {
+    "presentation": "Retain rail and composer. Assistant prose flows directly on the dark canvas with readable headings, lists and discreet copy/export. Do not introduce a split result editor, framed answer card or forced full-answer Markdown code block.",
+    "frameSource": "Streamdown table wrapper adds rounded border, bg-sidebar and padding plus automatic controls. Scope any removal to the assistant rendering; retain horizontal scrolling for genuinely tabular content without an outer frame/fullscreen toolbar.",
+    "modelFlow": "Keep existing providers initially. Replace fixed business-draft responses with contextual generation while server-side safety constraints remain deterministic. Route by requested action and bounded task state; do not invoke all roles simply to use all keys.",
+    "memory": "Carry bounded user-confirmed facts, corrections and open questions in session task state; distinguish assistant proposals from facts. Preserve aggregate context limits and cancellation.",
+    "qualityGate": "Check that the requested output exists, uses supplied facts, preserves corrections, distinguishes assumptions, and respects actual tool results. Missing critical facts lead to one targeted question or an explicitly provisional useful draft, not a canned intake.",
+    "responseDepth": "Adapt length to request. A small amendment changes that step; a full redesign can be complete. Arithmetic uses supplied units and values. No invented SLA, financial threshold, source, owner or reported execution.",
+    "scope": "Useful planning, explanation, drafting and permitted calculations. A stronger model or account does not create access to company systems. Connected execution follows M8 with real authorization.",
+    "modelSelection": "Use a bounded task-based comparison of the configured candidate models before claiming one is best. Score Arabic clarity, supplied-fact grounding, follow-up consistency, requested deliverable completion, latency and cost. The current final response already comes from GPT-OSS 120B; no unmeasured model-strength claim or model/config change is made here."
+  },
+  "accountDesign": {
+    "guest": "Keep useful public assistant access without login; current session is not advertised as cloud-saved.",
+    "signedInValue": "A protected personal workspace can save and reopen private conversations, rename/export/delete them, and show clear saved/error/expired-session states.",
+    "authJourney": [
+      "create account",
+      "email confirmation",
+      "sign in",
+      "password recovery",
+      "session refresh",
+      "sign out"
+    ],
+    "ownership": "Derive identity on the server; verify session for every private operation and enforce own-user RLS. Signing up grants no enterprise membership.",
+    "dataPrerequisites": [
+      "Reconcile current agentnexos_* schema, migration history and legacy TypeScript types without resetting production or creating duplicate user tables.",
+      "Set actual retention and deletion rules before activating history; update privacy notice.",
+      "Validate the full positive account/email/session flow and two-user isolation within an authorized production release."
+    ],
+    "historyChoice": "Do not silently upload a guest conversation or enable raw-chat persistence. Clearly disclose and explicitly initiate saving. Separate structured draft/version requirements from existing plain-message tables; choose additive storage only for a real requirement.",
+    "productionBoundary": "No auth setting, schema, user record, retention scheduler or access policy changed during this comparison.",
+    "isolationRequirement": "Keep each signed-in user’s conversations separate using verified identity and ownership checks on every read/write/delete. Do not leak or reuse one customer’s history in another session; guest import requires an explicit action."
+  },
+  "implementationPackages": [
+    {
+      "name": "Website design and content",
+      "milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M9"
+      ],
+      "deliverables": [
+        "Integrated hero artwork and revised bilingual narrative across page families.",
+        "Industries hub plus six distinct sector detail routes and navigation, removing agriculture emphasis.",
+        "Balanced grids, clear template previews, linear legal reading and manual-brief disclosure.",
+        "Align login visible/social metadata."
+      ],
+      "acceptance": [
+        "Palette/template remain recognizable in both locales.",
+        "Every page/sector link has its own valid destination and distinct useful content.",
+        "No square artwork boundary or empty hero caused by required motion effects.",
+        "No false capability, customer or automatic-submission claim."
+      ]
+    },
+    {
+      "name": "Chat presentation and response quality",
+      "milestones": [
+        "M3",
+        "M6",
+        "M7",
+        "M9"
+      ],
+      "deliverables": [
+        "Open chat answers and flat tables without outer frame.",
+        "Contextual business drafts, focused clarification and corrected routing.",
+        "Bounded confirmed task memory and output-completeness checks.",
+        "Keep quotas, cancellation and fail-closed APIs."
+      ],
+      "acceptance": [
+        "Two different process descriptions yield answers grounded in their different supplied facts, not the same generic purchase/missing-data template.",
+        "An already supplied owner/source/correction is preserved and not asked again within available task context.",
+        "A missing fact yields a focused question or a clearly marked useful provisional draft; no blanket refusal of safe planning.",
+        "A requested amendment changes the specified step and preserves the rest, while an explicit request for a complete redesign is allowed to be complete.",
+        "An invoice arithmetic question returns the supplied arithmetic and units rather than an unrelated workflow.",
+        "Actual references, assumptions, proposed roles and unavailable facts are distinguished; no fake tools, connections, save or execution.",
+        "Final answer satisfies the user's requested deliverable and shows a brief practical basis without exposing private reasoning.",
+        "Guest generation and current quotas/cancellation remain; assistant responses have no framed answer bubble or separate result panel.",
+        "Unknown write effect, unauthorized approval, injection and forged tool/authority inputs remain contained by server controls."
+      ],
+      "schemaChange": "None required for initial chat quality fixes."
+    },
+    {
+      "name": "Accounts and user-owned persistence",
+      "milestones": [
+        "M5",
+        "M6",
+        "M7",
+        "M9"
+      ],
+      "deliverables": [
+        "Reconciled schema/types/migrations and agreed retention.",
+        "Complete auth/session/error journey.",
+        "Verified-identity private history operations with explicit saving and deletion.",
+        "Accurate privacy/account disclosure."
+      ],
+      "acceptance": [
+        "Positive create/confirm/signin/recovery/refresh/signout evidence.",
+        "Two users cannot access each other’s records.",
+        "Guest work is preserved locally when a session expires; save success follows a real acknowledgement.",
+        "No implicit enterprise membership or guest-chat upload."
+      ]
+    }
+  ],
+  "releasePolicy": "No local/Preview tests, builds or automated checks. Review source/diff outside release; deployment and one scoped bilingual production verification require the applicable release authorization. Research navigation/captures here are visual/content review, not application acceptance tests.",
+  "rollback": "Version each implementation package; reverse source changes or disable a new capability with a server flag. Do not reset/drop user data. Any additive data change requires its own compatible rollback and backup plan.",
+  "changesThisTurn": "Comparator/design artifacts and an original generated hero concept only. No product source, credentials, database, model configuration, production settings, DNS, plan or deployment changed.",
+  "nextStep": "Complete in-progress implementation, source integration review, narrow additive Supabase migration after reconciled live baseline, one coordinated production release, then final production verification.",
+  "mediaPlan": {
+    "heroConcept": {
+      "path": "/workspace/generated_images/exec-2ce72e14-3a3e-46a4-9435-9c0f98e99124.png",
+      "createdInCurrentThread": true,
+      "displayed": true,
+      "type": "Generated original illustrative still; not real footage or a client facility.",
+      "usage": "Review the immersive visual direction before using an approved production asset.",
+      "ownerFeedback": "Liked generated style and requested photorealistic sector-specific scenes and seamless page integration."
+    },
+    "homepage": "A wide aerial/industrial/coastal composition with matte-black text area; optional short silent licensed video, with lightweight poster, mobile still and reduced-motion fallback.",
+    "industries": "One coherent photographic family with sector-specific scenes, consistent crops and intentional alignment rather than generic AI-head illustrations.",
+    "platformAndSolutions": "Actual interface and real exported examples using fictional data; disclose example status. Show the useful result clearly.",
+    "sources": [
+      {
+        "name": "Pexels video",
+        "url": "https://www.pexels.com/videos/"
+      },
+      {
+        "name": "Unsplash photos",
+        "url": "https://unsplash.com/"
+      },
+      {
+        "name": "Adobe Stock video",
+        "url": "https://stock.adobe.com/video",
+        "paid": true
+      },
+      {
+        "name": "Original generated brand imagery",
+        "generated": true
+      }
+    ],
+    "licensing": "Select exact assets and confirm permitted website use before publication. No purchase, subscription or competitor-asset reuse occurred.",
+    "sectorConcepts": [
+      {
+        "sector": "energy",
+        "path": "/workspace/generated_images/exec-473d1e36-0013-48a7-9f75-cd5569f62760.png",
+        "status": "Owner approved revised clean-maintained facility concept",
+        "supersedes": "/workspace/generated_images/exec-c5243185-e82b-4f02-987a-f9a47152f45c.png",
+        "feedbackApplied": "Remove desert scrub/thorns/rough foreground and emphasize clean organized panel geometry."
+      },
+      {
+        "sector": "oil-gas",
+        "path": "/workspace/generated_images/exec-fb1c34a7-ecd4-4f5e-bfed-2e915175f602.png",
+        "status": "Generated and shown; no explicit separate approval recorded."
+      }
+    ],
+    "sourcePriority": "Original generated photorealistic illustrative imagery is accepted by owner. Use licensed real photography for exact named places; do not say generation is limited to previews by default."
+  }
+}

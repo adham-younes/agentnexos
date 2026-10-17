@@ -2,7 +2,7 @@ import { createHmac } from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
 import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
 import { z } from "zod/v4";
-import { conversationText, contextLimits } from "@/lib/agents/context";
+import { conversationText, contextLimits, sessionTaskState } from "@/lib/agents/context";
 import { demoPolicy } from "@/lib/agents/policy";
 import { createRunJournal } from "@/lib/agents/journal";
 import { runAgentWorkflow } from "@/lib/agents/workflow";
@@ -90,6 +90,7 @@ export async function POST(request: Request) {
         writer.write({ type: "start" });
         writer.write({ type: "text-start", id: "answer" });
         await runAgentWorkflow({ conversation,
+          taskState: sessionTaskState(parsed.data.messages),
           latestRequest: parsed.data.messages.at(-1)!.parts.map(part => part.text).join("\n"),
           previousRequest: [...parsed.data.messages.slice(0, -1)].reverse().find(message => message.role === "user")?.parts.map(part => part.text).join("\n"),
           locale: parsed.data.locale, signal,
@@ -114,5 +115,6 @@ export async function POST(request: Request) {
     },
     onError: () => "AGENT_REQUEST_FAILED",
   });
-  return createUIMessageStreamResponse({ stream, headers });
+  // Opaque correlation only. It grants no access to the private metadata row.
+  return createUIMessageStreamResponse({ stream, headers: { ...headers, "x-agynexa-run-id": runId } });
 }

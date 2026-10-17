@@ -1,0 +1,18 @@
+{
+  "kind": "original-generated-illustrative-assets",
+  "status": "homepage-cover-only-owner-latest-decision",
+  "people": "prohibited by owner",
+  "claims": "Generic original scenes; no named city, real client site, customer endorsement or operational deployment is implied.",
+  "assets": [
+    {
+      "purpose": "home",
+      "publicPath": "/images/premium/enterprise-port-hero.webp",
+      "original": "exec-2ce72e14-3a3e-46a4-9435-9c0f98e99124.png"
+    }
+  ],
+  "excluded": [
+    "exec-e6622dfe-59a0-4458-a86b-96d1e07329a5.png (people)",
+    "exec-c5243185-e82b-4f02-987a-f9a47152f45c.png (rejected energy foreground)"
+  ],
+  "sectorImages": "All sector images withdrawn from release by owner. Sector layouts use content, typography and geometry; no further generation."
+}

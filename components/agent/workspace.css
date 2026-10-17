@@ -124,3 +124,57 @@
 }
 @media (max-height: 570px) { .agent-workspace .workspace-context { margin-top: 4px; } .agent-workspace .workspace-privacy { margin-top: 4px; } .agent-workspace .workspace-readiness { margin-bottom: 5px; } .agent-workspace .workspace-composer { padding-bottom: max(8px, env(safe-area-inset-bottom)); } }
 @media (prefers-reduced-motion: reduce) { .agent-workspace, .agent-workspace *, .workspace-sheet, .workspace-sheet * { scroll-behavior: auto; animation-duration: .01ms; transition-duration: .01ms; } }
+
+/* The conversation is the workspace: open answers, with controls kept separate. */
+.agent-workspace .workspace-message-list { width: min(100%, 980px); gap: 32px; }
+.agent-workspace .is-assistant .workspace-message-content { width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
+.agent-workspace .workspace-message-content { font-size: 17px; line-height: 1.85; overflow-wrap: anywhere; }
+:lang(ar) .agent-workspace .workspace-message-content { font-size: 18px; line-height: 1.95; }
+.agent-workspace .workspace-message-content :is(h1,h2,h3) { font-family: inherit; line-height: 1.5; margin-block: 1.2em .55em; }
+.agent-workspace .workspace-message-content :is(p,ul,ol) { margin-block: .6em; }
+.agent-workspace .workspace-message-content :is(ul,ol) { padding-inline-start: 1.5em; }
+.agent-workspace .workspace-message-content li { margin-block: .35em; }
+.agent-workspace .workspace-table-scroll { width: 100%; max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; margin-block: 20px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.agent-workspace .workspace-table-scroll table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 15px; line-height: 1.75; }
+.agent-workspace .workspace-table-scroll :is(th,td) { padding: 12px 14px; border: 0; border-bottom: 1px solid #ffffff24; text-align: start; vertical-align: top; background: transparent; }
+.agent-workspace .workspace-table-scroll th { color: #ebebeb; font-weight: 700; }
+.agent-workspace .workspace-response-actions { display: flex; align-items: center; gap: 16px; color: #b3b3b3; font-size: 14px; }
+.agent-workspace .workspace-response-actions button { min-height: 44px; padding: 6px 0; cursor: pointer; }
+.agent-workspace :is(a,button,summary,.workspace-table-scroll):focus-visible { outline: 2px solid #10b981; outline-offset: 4px; }
+.agent-workspace .workspace-composer-inner { width: min(100%, 880px); }
+.agent-workspace .workspace-textarea { font-size: 16px; line-height: 1.8; }
+.agent-workspace .workspace-intro { font-size: 17px; line-height: 1.85; }
+.agent-workspace :is(.workspace-context,.workspace-privacy,.workspace-readiness p,.workspace-readiness button,.workspace-label) { font-size: 13px; line-height: 1.8; }
+:is(.agent-workspace,.workspace-sheet) .workspace-rail-content h2 { font-size: 14px; }
+:is(.agent-workspace,.workspace-sheet) .workspace-stages p { font-size: 14px; }
+:is(.agent-workspace,.workspace-sheet) :is(.workspace-stages p + p,.workspace-capability li,.workspace-boundary p) { font-size: 13px; }
+.agent-workspace .workspace-suggestions { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.agent-workspace .workspace-suggestion { min-height: 132px; box-shadow: none; background: #0b0b0b; }
+.agent-workspace .workspace-suggestion-title { font-size: 16px; }
+.agent-workspace .workspace-suggestion-detail { font-size: 14px; }
+.agent-workspace .workspace-history { flex-shrink: 0; margin-inline: 28px; padding-block: 0 8px; border-bottom: 1px solid #ffffff12; font-size: 14px; }
+.agent-workspace .workspace-history > summary { min-height: 44px; display: flex; align-items: center; gap: 8px; cursor: pointer; color: #b3b3b3; }
+.agent-workspace .workspace-history > summary::before { content: "+"; color: #10b981; }
+.agent-workspace .workspace-history[open] > summary::before { content: "−"; }
+.agent-workspace .personal-history { max-height: 250px; overflow-y: auto; padding-block: 8px 16px; display: grid; gap: 12px; }
+.agent-workspace .personal-history :is(button,a,input) { min-height: 44px; }
+.agent-workspace .personal-history button { cursor: pointer; text-align: start; padding: 8px 12px; border: 1px solid #ffffff24; border-radius: 8px; }
+.agent-workspace .personal-history button:disabled { opacity: .55; cursor: default; }
+.agent-workspace .personal-history input { max-width: 100%; border: 1px solid #ffffff24; border-radius: 8px; background: #0b0b0b; color: #ebebeb; padding: 8px 12px; font: inherit; }
+.agent-workspace .personal-history :is(ul,ol) { display: grid; gap: 10px; }
+.agent-workspace .personal-history li { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.agent-workspace .personal-history :is(.personal-history-heading,.personal-history-actions,.personal-history-rename,.personal-history-confirm,.personal-history-save) { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
+.agent-workspace .personal-history-list { list-style: none; padding: 0; }
+.agent-workspace .personal-history-open { flex: 1 1 160px; min-width: 0; overflow-wrap: anywhere; }
+.agent-workspace .personal-history-rename input { flex: 1 1 150px; min-width: 0; width: 100%; }
+@media(max-width:600px) {
+  .agent-workspace .workspace-suggestions { grid-template-columns: minmax(0,1fr); gap: 10px; }
+  .agent-workspace .workspace-suggestion { min-height: 0; padding: 15px 17px; }
+  .agent-workspace .workspace-suggestion-title { margin-top: 5px; font-size: 16px; }
+  .agent-workspace .workspace-suggestion-detail { margin-top: 4px; font-size: 14px; }
+  .agent-workspace .workspace-intro { font-size: 16px; }
+  .agent-workspace .workspace-history { margin-inline: 18px; font-size: 13px; }
+  .agent-workspace .workspace-message-content { font-size: 16px; }
+  :lang(ar) .agent-workspace .workspace-message-content { font-size: 17px; }
+  .agent-workspace .personal-history { max-height: 210px; }
+}

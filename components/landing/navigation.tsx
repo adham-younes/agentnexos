@@ -1,144 +1,102 @@
-"use client";
-import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Command } from "lucide-react";
-import { LocaleSwitcher } from "@/components/site/locale-switcher";
-import { useT, useLocale } from "@/lib/i18n/use-t";
-import { publicCopy } from "@/lib/content/public-copy";
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { Command, Menu, X } from 'lucide-react';
+import { LocaleSwitcher } from '@/components/site/locale-switcher';
+import { publicPath } from '@/lib/i18n/routing';
+import { useLocale, useT } from '@/lib/i18n/use-t';
+import { publicCopy } from '@/lib/content/public-copy';
+
 const navLinks = [
-    { key: 'nav.capabilities', ar: 'المنصة', name: 'Platform', href: '/platform' },
-    { key: 'nav.solutions', ar: 'الحلول', name: 'Solutions', href: '/solutions' },
-    { key: 'nav.services', ar: 'الخدمات', name: 'Services', href: '/services' },
-    { key: 'nav.process', ar: 'المنهجية', name: 'Methodology', href: '/methodology' },
-    { key: 'nav.resources', ar: 'الموارد', name: 'Resources', href: '/resources' },
-    { key: 'nav.about', ar: 'من نحن', name: 'About', href: '/about' },
+    { ar: 'المنصة', name: 'Platform', href: '/platform' },
+    { ar: 'الحلول', name: 'Solutions', href: '/solutions' },
+    { ar: 'القطاعات', name: 'Industries', href: '/industries' },
+    { ar: 'الخدمات', name: 'Services', href: '/services' },
+    { ar: 'الموارد', name: 'Resources', href: '/resources' },
+    { ar: 'من نحن', name: 'About', href: '/about' },
 ];
+
 export function Navigation() {
     const t = useT();
     const locale = useLocale();
     const copy = publicCopy[locale];
-    const resolveHref = (href: string) => href.startsWith("#") ? `/${locale}${href}` : `/${locale}${href}`;
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const isDark = !isScrolled && !isMobileMenuOpen;
     const headerRef = useRef<HTMLElement>(null);
     const toggleRef = useRef<HTMLButtonElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
+        const handleScroll = () => setIsScrolled(window.scrollY > 20);
         handleScroll();
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
     useEffect(() => {
-        if (!isMobileMenuOpen)
-            return;
+        if (!isMobileMenuOpen) return;
         const toggle = toggleRef.current;
         const previousOverflow = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
-        const background = [...document.querySelectorAll<HTMLElement>("#main-content, #site-footer")].map(element => ({ element, inert: element.inert }));
+        document.body.style.overflow = 'hidden';
+        const background = [...document.querySelectorAll<HTMLElement>('#main-content, #site-footer')].map(element => ({ element, inert: element.inert }));
         background.forEach(({ element }) => { element.inert = true; });
-        const focusFrame = requestAnimationFrame(() => menuRef.current?.querySelector<HTMLElement>("a[href]")?.focus());
+        const focusFrame = requestAnimationFrame(() => menuRef.current?.querySelector<HTMLElement>('a[href]')?.focus());
         const closeOnEscape = (event: KeyboardEvent) => {
-            if (event.key === "Escape")
-                setIsMobileMenuOpen(false);
-            if (event.key === "Tab") {
-                const controls = [...(headerRef.current?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? [])].filter(element => element.tabIndex >= 0 && element.offsetParent !== null && !element.closest("[inert]"));
-                const first = controls[0], last = controls.at(-1);
+            if (event.key === 'Escape') setIsMobileMenuOpen(false);
+            if (event.key === 'Tab') {
+                const controls = [...(headerRef.current?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])') ?? [])].filter(element => element.tabIndex >= 0 && element.offsetParent !== null && !element.closest('[inert]'));
+                const first = controls[0];
+                const last = controls.at(-1);
                 if (event.shiftKey && document.activeElement === first) {
                     event.preventDefault();
                     last?.focus();
-                }
-                else if (!event.shiftKey && document.activeElement === last) {
+                } else if (!event.shiftKey && document.activeElement === last) {
                     event.preventDefault();
                     first?.focus();
                 }
             }
         };
-        const closeOnDesktop = () => { if (window.innerWidth >= 1280)
-            setIsMobileMenuOpen(false); };
-        window.addEventListener("keydown", closeOnEscape);
-        window.addEventListener("resize", closeOnDesktop);
+        const closeOnDesktop = () => { if (window.innerWidth >= 1280) setIsMobileMenuOpen(false); };
+        window.addEventListener('keydown', closeOnEscape);
+        window.addEventListener('resize', closeOnDesktop);
         return () => {
             cancelAnimationFrame(focusFrame);
             document.body.style.overflow = previousOverflow;
             background.forEach(({ element, inert }) => { element.inert = inert; });
-            window.removeEventListener("keydown", closeOnEscape);
-            window.removeEventListener("resize", closeOnDesktop);
-            if (toggle?.isConnected)
-                toggle.focus();
+            window.removeEventListener('keydown', closeOnEscape);
+            window.removeEventListener('resize', closeOnDesktop);
+            if (toggle?.isConnected) toggle.focus();
         };
     }, [isMobileMenuOpen]);
-    return (<header ref={headerRef} className={`nexus-nav ${isScrolled ? "is-scrolled" : ""}`}>
-      <nav aria-label={t("nav.primary", "Primary navigation")} className="nexus-nav-inner">
-        <div className={`flex items-center justify-between transition-all duration-500 px-4 sm:px-6 xl:px-8 ${isScrolled ? "h-16" : "h-[72px]"}`}>
-          {/* Logo */}
-          <a href={`/${locale}`} tabIndex={isMobileMenuOpen ? -1 : undefined} className="flex items-center gap-2.5 group shrink-0">
-            <span className="nexus-command" aria-hidden="true"><Command size={20}/></span>
-            <span className={`font-sans text-[22px] sm:text-[25px] font-semibold tracking-[-0.035em] leading-none transition-colors duration-500 ${isDark ? "text-white" : "text-foreground"}`}>AGYNEXA</span>
-            <span className={`hidden sm:inline font-mono text-[9px] tracking-[0.12em] transition-colors duration-500 ${isDark ? "text-white/45" : "text-muted-foreground"}`}>AI</span>
-          </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center gap-7 xl:gap-10">
-            {navLinks.map((link) => (<a key={link.key} href={resolveHref(link.href)} className={`text-[13px] xl:text-sm font-medium transition-colors duration-300 relative group ${isDark ? "text-white/65 hover:text-white" : "text-foreground/65 hover:text-foreground"}`}>
-                {(locale === "ar" ? link.ar : link.name)}
-                <span className="absolute -bottom-1.5 start-0 w-0 h-px bg-[#10b981] transition-all duration-300 group-hover:w-full"/>
-              </a>))}
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden xl:flex items-center gap-3 xl:gap-4">
-            <a href={`/${locale}/login`} className="reference-login-link">{copy.signIn}</a>
-            <LocaleSwitcher inverted={isDark}/>
-            <Button asChild size="sm" className="nexus-nav-cta">
-              <a href={`/${locale}/start`}>{copy.discussProject}</a>
-            </Button>
-          </div>
-
-          <div className="nexus-mobile-actions xl:hidden"><div inert={isMobileMenuOpen} aria-hidden={isMobileMenuOpen || undefined}><LocaleSwitcher inverted={isDark} compact/></div>
-          {/* Mobile Menu Button */}
-          <button id="mobile-menu-toggle" ref={toggleRef} type="button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={`xl:hidden w-10 h-10 inline-flex items-center justify-center rounded-full border transition-colors duration-500 ${isDark ? "border-white/20 text-white hover:bg-white/10" : "border-foreground/15 text-foreground hover:bg-foreground/5"}`} aria-label={t("nav.toggleMenu", "Toggle menu")} aria-expanded={isMobileMenuOpen} aria-controls="mobile-navigation">
-            {isMobileMenuOpen ? (<X className="w-6 h-6"/>) : (<Menu className="w-6 h-6"/>)}
-          </button>
-          </div>
-        </div>
-
-      </nav>
-
-      {/* Mobile Menu - Full Screen Overlay */}
-      <div ref={menuRef} id="mobile-navigation" role="dialog" aria-label={t("nav.primary", "Primary navigation")} aria-modal={isMobileMenuOpen || undefined} aria-owns={isMobileMenuOpen ? "mobile-menu-toggle" : undefined} inert={!isMobileMenuOpen} aria-hidden={!isMobileMenuOpen} className={`xl:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"}`} style={{ top: 0 }}>
-        <div className="flex flex-col h-full overflow-y-auto px-6 sm:px-8 pt-32 pb-8">
-          {/* Navigation Links */}
-          <div className="flex-1 shrink-0 flex flex-col justify-center gap-5 sm:gap-8 pb-6">
-            {navLinks.map((link, i) => (<a key={link.key} href={resolveHref(link.href)} onClick={() => setIsMobileMenuOpen(false)} className={`text-4xl sm:text-5xl font-display text-foreground hover:text-muted-foreground transition-all duration-500 ${isMobileMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"}`} style={{ transitionDelay: isMobileMenuOpen ? `${i * 75}ms` : "0ms" }}>
-                {(locale === "ar" ? link.ar : link.name)}
-              </a>))}
-          </div>
-
-          {/* Bottom CTAs */}
-          <div className={`pt-8 border-t border-foreground/10 transition-all duration-500 ${isMobileMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-4"}`} style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}>
-            {/* Switcher sits on its own row: sharing the CTA row overflowed the
-            viewport on narrow screens once a third item was added. */}
-            <LocaleSwitcher />
-            <div className="flex flex-wrap items-center gap-4 mt-4">
-              <Button asChild variant="outline" className="flex-1 rounded-full h-14 text-base">
-                <a href={`/${locale}/login`} onClick={() => setIsMobileMenuOpen(false)}>{copy.signIn}</a>
-              </Button>
-              <Button asChild className="flex-1 bg-foreground text-background rounded-full h-14 text-base">
-                <a href={`/${locale}/start`} onClick={() => setIsMobileMenuOpen(false)}>{copy.discussProject}</a>
-              </Button>
+    return <header ref={headerRef} className={`nexus-nav premium-nav${isScrolled ? ' is-scrolled' : ''}${isMobileMenuOpen ? ' is-menu-open' : ''}`}>
+        <nav className="nexus-nav-inner" aria-label={t('nav.primary', 'Primary navigation')}>
+            <div className="premium-nav-layout">
+                <a href={publicPath('/')} tabIndex={isMobileMenuOpen ? -1 : undefined} className="premium-brand" aria-label={locale === 'ar' ? 'AGYNEXA — الرئيسية' : 'AGYNEXA — Home'}>
+                    <span className="premium-wordmark">AGYNEXA</span><Command className="premium-brand-icon" size={32} strokeWidth={1.5} aria-hidden="true" />
+                </a>
+                <div className="premium-desktop-links">
+                    {navLinks.map(link => <a key={link.href} href={publicPath(link.href)}>{locale === 'ar' ? link.ar : link.name}</a>)}
+                </div>
+                <div className="premium-desktop-actions"><a href={publicPath('/login')}>{copy.signIn}</a><LocaleSwitcher inverted /></div>
+                <div className="premium-mobile-actions">
+                    <div className="premium-mobile-account" inert={isMobileMenuOpen} aria-hidden={isMobileMenuOpen || undefined}>
+                        <a href={publicPath('/login')} className="premium-mobile-sign-in">{copy.signIn}</a><LocaleSwitcher inverted compact />
+                    </div>
+                    <button id="mobile-menu-toggle" ref={toggleRef} type="button" className="premium-menu-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label={t('nav.toggleMenu', 'Toggle menu')} aria-expanded={isMobileMenuOpen} aria-controls="mobile-navigation">
+                        {isMobileMenuOpen ? <X size={25} strokeWidth={1.5} aria-hidden="true" /> : <Menu size={25} strokeWidth={1.5} aria-hidden="true" />}
+                    </button>
+                </div>
             </div>
-          </div>
+        </nav>
+        <div ref={menuRef} id="mobile-navigation" role="dialog" aria-label={t('nav.primary', 'Primary navigation')} aria-modal={isMobileMenuOpen || undefined} aria-owns={isMobileMenuOpen ? 'mobile-menu-toggle' : undefined} inert={!isMobileMenuOpen} aria-hidden={!isMobileMenuOpen} className={`premium-mobile-menu${isMobileMenuOpen ? ' is-open' : ''}`}>
+            <div className="premium-menu-inner">
+                <div className="premium-menu-links">{navLinks.map(link => <a key={link.href} href={publicPath(link.href)} onClick={() => setIsMobileMenuOpen(false)}>{locale === 'ar' ? link.ar : link.name}</a>)}</div>
+                <div className="premium-menu-bottom">
+                    <LocaleSwitcher inverted />
+                    <div className="premium-menu-actions"><a href={publicPath('/login')} className="upgrade-button secondary" onClick={() => setIsMobileMenuOpen(false)}>{copy.signIn}</a><a href={publicPath('/start')} className="upgrade-button" onClick={() => setIsMobileMenuOpen(false)}>{copy.discussProject}</a></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </header>);
+    </header>;
 }

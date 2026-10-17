@@ -32,5 +32,5 @@ jobs:
         if: always()
         with:
           name: production-verification
-          path: output/upgrade-r01/
+          path: output/premium-platform/
           if-no-files-found: ignore

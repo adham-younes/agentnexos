@@ -9,7 +9,7 @@ export type RuntimeEvent = {
   sequence: number; elapsedMs: number;
   kind: "routing" | "policy_response" | "model_started" | "model_completed" | "tool_allowed" | "tool_denied" | "tool_completed" | "tool_failed";
   role?: string; model?: string; tokens?: number; tool?: DemoTool; latencyMs?: number;
-  task?: "conversation" | "calculation" | "technical" | "workflow"; reason?: string;
+  task?: TaskIntent; reason?: string;
 };
 export function createToolGate(options: { tools: readonly DemoTool[]; signal?: AbortSignal; onEvent?: (event: Omit<RuntimeEvent, "sequence" | "elapsedMs">) => Promise<void> | void }) {
   let calls = 0, references = 0;
@@ -27,32 +27,29 @@ export function createToolGate(options: { tools: readonly DemoTool[]; signal?: A
 function normalizeRequest(request: string) {
   return request.normalize("NFKC").replace(/[\u064B-\u065F\u0670\u0640]/g, "").replace(/[إأآ]/g, "ا").replace(/ى/g, "ي");
 }
-function directTask(request: string) {
-  if (/workflow|process|integration|procurement|invoice|approval|purchase|customer support|knowledge assistant|عملية|عمليه|مشتريات|فاتور|تكامل|سير عمل|اجراءات|اعتماد|خدمة العملاء|خدمه العملاء|مساعد معرفة|مساعد معرفه|طلبات العملاء/i.test(request)) return "workflow" as const;
-  if (/احسب|حساب|عبء|calculate|workload|minutes|دقيقة|دقائق/i.test(request)) return "calculation" as const;
-  if (/documentation|technical|AI SDK|Mastra|Supabase|تقني|توثيق/i.test(request)) return "technical" as const;
-  return "conversation" as const;
-}
-/** Only referential follow-ups inherit a previous USER request; greetings never do. */
-export function classifyTask(request: string, previousRequest?: string) {
-  const normalized = normalizeRequest(request);
-  // A reported timeout AFTER a write asks about unknown effects, not a new workflow.
-  // Avoid forcing a planning tool merely because the affected record is an invoice.
-  const explicitDesign = /\b(design|build|create|map|plan)\b|صمم|تصميم|ابن|ارسم|خطط|سير عمل/i.test(normalized);
-  const afterWriteTimeout = /timeout|timed out|time.?out|(?:الاتصال|اتصال).{0,20}(?:فصل|انقطع)|انقطاع الاتصال/i.test(normalized)
-    && /\bafter\b|بعد/i.test(normalized)
-    && /update|submit|write|تحديث|تعديل|ارسال/i.test(normalized);
-  if (afterWriteTimeout && !explicitDesign) return "conversation" as const;
-  const direct = directTask(normalized);
-  if (direct !== "conversation" || !previousRequest) return direct;
-  if (/^(?:(?:طيب|okay|ok)[ ،]*)?(?:شكرا|تمام|حاضر|thanks|thank you|hello|hi|مرحبا|اهلا|كيف حالك|how are you)[.!؟?\s،]*$/i.test(normalized.trim())) return "conversation";
-  const followup = /^(?:و?لو|وماذا|ماذا لو|ومين|ومن |كيف |طب |طيب |اكمل|كمل|عدّل|عدل|وضح|فصل|what if|what happens|and what|who |how |continue|expand|revise|update (?:it|that|the plan))/i.test(normalized.trim());
-  return followup ? directTask(normalizeRequest(previousRequest)) : direct;
+export type TaskIntent = "conversation" | "clarification" | "amendment" | "calculation" | "technical" | "workflow";
+/** Route the requested action, not a business noun such as invoice or approval. */
+export function classifyTask(request: string, previousRequest?: string): TaskIntent {
+  const text = normalizeRequest(request).trim();
+  if (/^(?:(?:طيب|okay|ok)[ ،]*)?(?:شكرا|تمام|حاضر|thanks|thank you|hello|hi|مرحبا|اهلا|كيف حالك|how are you)[.!؟?\s،]*$/i.test(text)) return "conversation";
+  const design = /\b(design|build|create|map|redesign)\b|صمم|تصميم|ابن|ارسم|خطط/i.test(text)
+    && !/\b(?:do not|don't|not asking (?:you )?to) (?:design|build|create)\b|لا (?:تصمم|تبن|تخطط)/i.test(text);
+  const fullRevision = /\b(?:full|complete|entire) (?:redesign|workflow|plan)\b|(?:كامل|بالكامل|من البداية|من جديد)/i.test(text);
+  if (previousRequest && !fullRevision && /\b(revise|amend|modify|replace|change|adjust|expand|continue)\b|عد.?ل|تعديل|استبدل|غير الخطوة|اكمل|كمل|وضح (?:الخطوة|النقطة)/i.test(text)) return "amendment";
+  const calculation = /\b(calculate|compute|workload|how many hours|total time)\b|احسب|حساب|عبء العمل|كام ساعة|كم ساعة/i.test(text);
+  if (calculation && !design && !/\bthen (?:design|plan|build)\b|ثم (?:صمم|خطط)|بعدين (?:صمم|خطط)/i.test(text)) return "calculation";
+  const process = /workflow|process|integration|procurement|invoice|approval|purchase|support|assistant|عملية|مشتريات|فاتور|تكامل|سير عمل|اجراءات|اعتماد|مساعد|طلبات العملاء/i.test(text);
+  if (design || (process && /\b(?:we need|we want|plan a|plan for|how can we (?:turn|automate|improve))\b|نريد|نحتاج|عايز|عاوز|كيف نحول/i.test(text))) return "workflow";
+  if (/documentation|technical|AI SDK|Mastra|Supabase|تقني|توثيق/i.test(text)) return "technical";
+  if (/\?|؟|^(?:what|why|how|who|can |could |is |does |ماذا|متى|كيف|لماذا|هل|ليه|ازاي|ايه|مين|ومين|وماذا|و?لو)/i.test(text) || previousRequest) return "clarification";
+  return "conversation";
 }
 export function discoverTools(task: ReturnType<typeof classifyTask>, request: string): DemoTool[] {
-  if (task === "conversation") return [];
+  const arithmetic = /احسب|حساب|عبء|(?:re)?calculat|(?:re)?compute|workload|total hours/i.test(request);
+  if (task === "amendment") return arithmetic ? ["estimate_workload"] : [];
+  if (task === "conversation" || task === "clarification") return [];
   const tools: DemoTool[] = task === "workflow" ? ["review_workflow_design"] : [];
-  if (task === "calculation" || /[0-9٠-٩۰-۹]|احسب|حساب|عبء|calculate|workload/i.test(request)) tools.push("estimate_workload");
+  if (task === "calculation" || arithmetic) tools.push("estimate_workload");
   if (task === "technical" || /documentation|technical|AI SDK|Mastra|Supabase|تقني|توثيق/i.test(request)) tools.push("read_technical_reference");
   return tools;
 }

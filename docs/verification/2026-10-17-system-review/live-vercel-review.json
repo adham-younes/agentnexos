@@ -1,0 +1,111 @@
+{
+  "reviewDate": "2026-10-17",
+  "scope": "Read-only production hosting and availability investigation",
+  "project": {
+    "id": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+    "name": "compute-the-platform-to-build",
+    "latestDeployment": {
+      "id": "dpl_DAyGmo5sjZWkF2ppWbiZg7JALwYV",
+      "url": "compute-the-platform-to-build-ei8xv6c5e-adhamlouxors-projects.vercel.app",
+      "createdAt": 1792202692565,
+      "readyState": "READY",
+      "target": "production"
+    },
+    "ssoProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "passwordProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "trustedIps": {
+      "enabled": false,
+      "deploymentType": null,
+      "addresses": [],
+      "protectionMode": null
+    }
+  },
+  "recentRuntimeErrors": {
+    "lookback": "30m",
+    "result": "## Runtime Errors\n\n**Project:** prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf\n\nNo runtime errors found in the selected time range.",
+    "limitation": "No returned runtime errors is not proof of no edge/proxy/visitor-specific failures."
+  },
+  "firewallConfigurationRead": {
+    "status": 404,
+    "message": "Vercel API request failed (404: not_found). Config not found",
+    "limitation": "Configuration unavailable. This does not prove absence of platform mitigations or visitor-specific blocking. One scoped correction from team slug to verified team ID returned the same not-found result; no further configuration attempts."
+  },
+  "failedRequestMetrics": {
+    "windowStart": "2026-10-17T11:18:08.284Z",
+    "windowEnd": "2026-10-17T12:48:08.284Z",
+    "metric": "vercel.request.count",
+    "status": 402,
+    "message": "Vercel API request failed (402: payment_required). Observability Plus is required to run this query for team adhamlouxors-projects and is available on Pro and Enterprise plans. Upgrade your plan to continue. Learn more: https://vercel.com/docs/observability/observability-plus",
+    "limitation": "Diagnostic query requires Observability Plus. No upgrade/purchase occurred; this query restriction does not establish a cause for public-site unavailability."
+  },
+  "earlierVerifiedDomainEvidence": {
+    "domain": "agynexa.si",
+    "projectVerified": true,
+    "dnsMisconfigured": false,
+    "publicResolversAgree": true,
+    "aliasDeploymentId": "dpl_DAyGmo5sjZWkF2ppWbiZg7JALwYV",
+    "scope": "Earlier read-only evidence from this session reused; no DNS writes."
+  },
+  "certificateMetadata": {
+    "source": "Read-only Vercel certificate listing scoped to the verified project team",
+    "certificates": [
+      {
+        "names": ["agynexa.si"],
+        "createdAt": "2026-10-16T02:28:22.431Z",
+        "expiresAt": "2027-01-14T01:29:49.000Z",
+        "withinValidityPeriodAtReview": true
+      },
+      {
+        "names": ["www.agynexa.si"],
+        "createdAt": "2026-10-16T02:28:26.045Z",
+        "expiresAt": "2027-01-14T01:29:53.000Z",
+        "withinValidityPeriodAtReview": true
+      }
+    ],
+    "limitation": "Provider certificate metadata rules out expiry of these listed certificates at review time; it does not capture the TLS chain or response actually received in the separate affected NEXA environment."
+  },
+  "freshLiveBrowserEvidence": [
+    {
+      "path": "/ar/platform",
+      "status": 200,
+      "screenshot": "/tmp/agynexa-strategy-review-20261017/post-restart-platform-1440.png"
+    },
+    {
+      "path": "/ar/agentnexos",
+      "status": 200,
+      "screenshot": "/tmp/agynexa-strategy-review-20261017/post-restart-agentnexos-390.png"
+    }
+  ],
+  "unavailableInvestigation": {
+    "status": "UNRESOLVED_NOT_REPRODUCED_IN_CURRENT_ENVIRONMENT",
+    "reportedAffectedEnvironment": "Separate NEXA Agent cloud browser",
+    "evidence": "Owner screenshot shows a generic Site Unavailable page. Current public browser sessions render the site; no failing response from the affected environment was captured.",
+    "missingEvidence": [
+      "HTTP status and safe response/error headers from the failed request in the affected environment",
+      "Request URL and occurrence window for correlation"
+    ],
+    "affectedEnvironmentEvidenceAvailable": false,
+    "ownerDeclinedEvidenceRequest": true,
+    "followUp": "Do not repeat the same evidence request. Available independent provider checks are documented; attribution remains blocked without new diagnostic evidence.",
+    "causeNotEstablished": true,
+    "noConfigurationFixApplied": true
+  },
+  "notChanged": [
+    "DNS",
+    "firewall/protection settings",
+    "production deployment",
+    "billing/plan",
+    "secrets"
+  ],
+  "sideBrowser": {
+    "latestUiEvidence": "Browser panel present with two tabs after client restart",
+    "openRequestStatus": "queued",
+    "limitation": "Available Codex panel tools expose opening/panel state, not page DOM, click/navigation control or the separate NEXA runtime. Actual live browser inspection used installed Chromium."
+  }
+}

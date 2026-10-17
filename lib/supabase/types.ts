@@ -36,7 +36,40 @@ export type AgentRole =
 export interface Database {
   public: {
     Tables: {
+      // Verified agentnexos source schema. Legacy enterprise declarations below
+      // remain compatibility types for inactive modules, not deployed capability.
+      agentnexos_profiles: {
+        Row: { id: string; display_name: string; created_at: string };
+        Insert: { id: string; display_name?: string; created_at?: string };
+        Update: { display_name?: string };
+        Relationships: [];
+      };
+      agentnexos_conversations: {
+        Row: { id: string; user_id: string; title: string; locale: 'ar' | 'en'; created_at: string; updated_at: string; revision: number; last_save_id: string | null; last_save_hash: string | null };
+        Insert: { id?: string; user_id: string; title: string; locale: 'ar' | 'en'; created_at?: string; updated_at?: string; revision?: number; last_save_id?: string | null; last_save_hash?: string | null };
+        Update: { title?: string; updated_at?: string; revision?: number; last_save_id?: string | null; last_save_hash?: string | null };
+        Relationships: [];
+      };
+      agentnexos_messages: {
+        Row: { id: string; conversation_id: string; user_id: string; request_id: string; role: 'user' | 'assistant'; content: string; sequence: number; created_at: string };
+        Insert: { id?: string; conversation_id: string; user_id: string; request_id: string; role: 'user' | 'assistant'; content: string; created_at?: string };
+        Update: never;
+        Relationships: [];
+      };
+      agentnexos_demo_requests: {
+        Row: { id: string; subject_hash: string; created_at: string; status: 'reserved' | 'running' | 'completed' | 'failed' | 'cancelled'; stages: Json; completed_at: string | null };
+        Insert: { id?: string; subject_hash: string; created_at?: string; status?: string; stages?: Json; completed_at?: string | null };
+        Update: { status?: string; stages?: Json; completed_at?: string | null };
+        Relationships: [];
+      };
+      agentnexos_demo_limits: {
+        Row: { singleton: boolean; connection_daily_limit: number; global_daily_limit: number };
+        Insert: { singleton?: boolean; connection_daily_limit: number; global_daily_limit: number };
+        Update: { connection_daily_limit?: number; global_daily_limit?: number };
+        Relationships: [];
+      };
       organizations: {
+        Relationships: [];
         Row: {
           id: string;
           name: string;
@@ -62,6 +95,7 @@ export interface Database {
         };
       };
       profiles: {
+        Relationships: [];
         Row: {
           id: string;
           full_name: string | null;
@@ -86,6 +120,7 @@ export interface Database {
         };
       };
       memberships: {
+        Relationships: [];
         Row: {
           id: string;
           organization_id: string;
@@ -105,6 +140,7 @@ export interface Database {
         };
       };
       agent_threads: {
+        Relationships: [];
         Row: {
           id: string;
           organization_id: string;
@@ -130,6 +166,7 @@ export interface Database {
         };
       };
       agent_messages: {
+        Relationships: [];
         Row: {
           id: string;
           thread_id: string;
@@ -154,6 +191,7 @@ export interface Database {
         };
       };
       agent_runs: {
+        Relationships: [];
         Row: {
           id: string;
           thread_id: string;
@@ -188,6 +226,7 @@ export interface Database {
         };
       };
       agent_steps: {
+        Relationships: [];
         Row: {
           id: string;
           run_id: string;
@@ -218,6 +257,7 @@ export interface Database {
         };
       };
       tool_calls: {
+        Relationships: [];
         Row: {
           id: string;
           run_id: string;
@@ -256,6 +296,7 @@ export interface Database {
         };
       };
       approvals: {
+        Relationships: [];
         Row: {
           id: string;
           run_id: string;
@@ -292,6 +333,7 @@ export interface Database {
         };
       };
       artifacts: {
+        Relationships: [];
         Row: {
           id: string;
           run_id: string;
@@ -321,6 +363,7 @@ export interface Database {
         };
       };
       audit_events: {
+        Relationships: [];
         Row: {
           id: string;
           organization_id: string;
@@ -348,6 +391,7 @@ export interface Database {
         Update: never; // Append-only immutable log
       };
       memories: {
+        Relationships: [];
         Row: {
           id: string;
           organization_id: string;
@@ -373,6 +417,7 @@ export interface Database {
         };
       };
       integration_connections: {
+        Relationships: [];
         Row: {
           id: string;
           organization_id: string;
@@ -397,5 +442,14 @@ export interface Database {
         };
       };
     };
+    Views: { [_ in never]: never };
+    Functions: {
+      agentnexos_save_conversation: {
+        Args: { p_user_id: string; p_conversation_id: string; p_expected_revision: number; p_request_id: string; p_title: string; p_locale: string; p_messages: Json; p_payload_hash: string };
+        Returns: { id: string; title: string; locale: 'ar' | 'en'; created_at: string; updated_at: string; revision: number }[];
+      };
+    };
+    Enums: { [_ in never]: never };
+    CompositeTypes: { [_ in never]: never };
   };
 }

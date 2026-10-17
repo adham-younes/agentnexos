@@ -1,0 +1,505 @@
+{
+  "review_type": "Human visual review of actual production screenshots plus directly relevant source; proposal only",
+  "site": "https://agynexa.si",
+  "date": "2026-10-17",
+  "scope": {
+    "new_compositions": 43,
+    "desktop_compositions": 38,
+    "mobile_compositions": 5,
+    "viewports": {
+      "desktop": "1440 x 1000; full page screenshots",
+      "mobile": "390 x 1000; full page screenshots"
+    },
+    "locale_coverage": "All 38 known localized public documents (19 logical routes × Arabic/English) individually captured and visually inspected at 1440px. Original 16 desktop images reused, only 22 missing localized documents added. Five representative 390px mobile images retained; no exhaustive mobile matrix. English customer-operations full-page capture remains incomplete after one correction and is expressly limited below.",
+    "families": [
+      "home",
+      "platform",
+      "services",
+      "methodology",
+      "about",
+      "industries",
+      "solutions listing",
+      "all four solution details (knowledge/procurement/receivables/customer operations)",
+      "engagements",
+      "resources",
+      "security",
+      "privacy",
+      "terms",
+      "start/project brief",
+      "login",
+      "workflow design assistant"
+    ],
+    "reused_evidence": [
+      "/tmp/agynexa-platform-review-20261017/public-results.json",
+      "/tmp/agynexa-platform-review-20261017/auth-ar-390.png",
+      "/tmp/agynexa-platform-review-20261017/ar-assistant.png"
+    ],
+    "limits": [
+      "No new functional/browser interaction/API/model/account/email/DNS tests.",
+      "No implementation or publishing.",
+      "No live customer workspace available in reviewed public surfaces.",
+      "The initial assistant screenshots show the transient connection-check label; no claim of a stuck or failing service is inferred.",
+      "Login screenshot corrected once after explicitly waiting for its CSS background image; initial missing background was capture timing, not a site defect.",
+      "English customer-operations full-page screenshot remains an incomplete paint after one correction. The image was inspected; header/footer/scope-label omission is a capture/render ambiguity, not established application failure. No further retries.",
+      "Two initially incomplete English solution screenshots received one screenshot-only correction each after explicit header/footer/two-frame readiness. Receivables corrected; customer operations remained incomplete. No functional checks added."
+    ],
+    "capture_manifest": "/tmp/agynexa-strategy-review-20261017/visual/captures-all.json",
+    "initial_compositions_preserved": 21,
+    "localized_extension": 22,
+    "desktop_localized_documents_inspected": 38,
+    "desktop_complete_compositions": 37,
+    "desktop_capture_ambiguities": 1,
+    "logical_routes": 19,
+    "extension_notes": {
+      "/ar/services": "Readable RTL editorial rows and deliverable callouts; no layout omission seen.",
+      "/ar/about": "Named first-person founder story; authentic-project evidence remains textual only.",
+      "/ar/solutions": "Balanced 2x2 choice grid, clear boundary below; no explanatory graphic.",
+      "/ar/solutions/knowledge": "Clean editorial scope/workflow/test/reviewer sequence; no sample sourced answer artifact.",
+      "/ar/solutions/receivables": "Clean editorial case-context/result/human-review/acceptance sequence; no case-summary artifact.",
+      "/ar/solutions/customer-operations": "Clean editorial workflow/language/boundaries/acceptance sequence; no handoff/response artifact.",
+      "/ar/engagements": "Readable 2x2 detailed offering cards; a concise starting-stage comparison would reduce reading effort.",
+      "/ar/terms": "Six two-column legal cards confirm the recommendation for a linear article.",
+      "/ar/security": "The fourth contact card is orphaned below a three-card row, confirming template finding.",
+      "/ar/login": "Full image/form RTL composition is present; public assistant access is visually secondary and repeated account guidance is small.",
+      "/en/platform": "Three-plus-one cards confirmed; last card combines testing and public-scope explanation.",
+      "/en/methodology": "Deliberate editorial stages with deliverable callouts; preserve this structure.",
+      "/en/industries": "Three sectors plus an equally prominent Note card; move note into a full-width boundary.",
+      "/en/solutions/knowledge": "Readable scope/workflow/testing/review rows; no sample cited result.",
+      "/en/solutions/procurement": "Readable input/output/boundary/acceptance rows; no comparison/checklist artifact.",
+      "/en/solutions/receivables": "Complete composition obtained after one corrective screenshot; readable editorial rows, no case-summary artifact.",
+      "/en/solutions/customer-operations": "Image inspected but incomplete paint persists after one correction: header/footer/scope and some labels absent in full-page image despite header-visible/footer-attached readiness. Capture/render ambiguity; not attributed to source or visitors without further evidence.",
+      "/en/resources": "Clear file type and two download actions; no template excerpt.",
+      "/en/privacy": "Eight two-column legal cards confirm linear-reading recommendation.",
+      "/en/terms": "Six two-column legal cards confirm linear-reading recommendation.",
+      "/en/start": "Clear field labels and optional fields; local/manual handoff explanation remains low in tall form.",
+      "/en/agentnexos": "Three welcome prompts, tiny operational/rail/privacy guidance; actual initial welcome only, no assistant call made."
+    },
+    "reviewed_desktop_routes": [
+      "/ar",
+      "/ar/about",
+      "/ar/agentnexos",
+      "/ar/engagements",
+      "/ar/industries",
+      "/ar/login",
+      "/ar/methodology",
+      "/ar/platform",
+      "/ar/privacy",
+      "/ar/resources",
+      "/ar/security",
+      "/ar/services",
+      "/ar/solutions",
+      "/ar/solutions/customer-operations",
+      "/ar/solutions/knowledge",
+      "/ar/solutions/procurement",
+      "/ar/solutions/receivables",
+      "/ar/start",
+      "/ar/terms",
+      "/en",
+      "/en/about",
+      "/en/agentnexos",
+      "/en/engagements",
+      "/en/industries",
+      "/en/login",
+      "/en/methodology",
+      "/en/platform",
+      "/en/privacy",
+      "/en/resources",
+      "/en/security",
+      "/en/services",
+      "/en/solutions",
+      "/en/solutions/customer-operations",
+      "/en/solutions/knowledge",
+      "/en/solutions/procurement",
+      "/en/solutions/receivables",
+      "/en/start",
+      "/en/terms"
+    ]
+  },
+  "governing_requirements": [
+    {
+      "file": "/workspace/agentnexos/docs/upgrade/AGYNEXA-CODEX-MASTER-UPGRADE-PLAN-AR-EN.md",
+      "line": 635
+    },
+    {
+      "file": "/workspace/agentnexos/docs/upgrade/AGYNEXA-CODEX-MASTER-UPGRADE-PLAN-AR-EN.md",
+      "line": 682
+    },
+    {
+      "file": "/workspace/agentnexos/AGENTS.md",
+      "line": 13
+    }
+  ],
+  "confirmed_strengths": [
+    {
+      "finding": "Matte black/emerald identity is coherent and restrained across public pages; neutral primary CTAs are legible. No evidence justifies changing the four owner-approved core colors.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-home-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-services-1440.png"
+      ]
+    },
+    {
+      "finding": "Arabic marketing body is already 18px with 32.4px line height, headings use natural RTL and no negative tracking. English body is 17px with 28.05px leading. Preserve these families and reading scale rather than replace fonts wholesale.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/captures.json",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-procurement-390.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 2
+        },
+        {
+          "file": "/workspace/agentnexos/app/[locale]/layout.tsx",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "finding": "Services, methodology and founder pages deliberately use editorial rows and clear deliverable callouts. This is intentional asymmetric composition, not missing card alignment.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-services-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-methodology-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-about-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/editorial-page.tsx",
+          "line": 17
+        },
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "finding": "Solutions and engagements grids offer a consistent comparison structure; resources clearly identify Markdown files; login visually separates account access from the public assistant.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-solutions-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-engagements-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-resources-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-login-1440.png"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "V01",
+      "priority": "high",
+      "type": "communication/design opportunity",
+      "title": "Home explains an engineering discipline more than it shows useful work",
+      "observed": "A large neural-brain illustration receives the strongest visual area. The only worked process is five uniform text boxes, each with a green check, with no connectors, approval branch, or sample result. The fictional-data label is present, so this is a storytelling weakness rather than an unqualified live-execution claim.",
+      "impact": "A visitor sees AI imagery before understanding what their team actually receives. On 390px the decorative image and repeated sections extend the journey before a concrete artifact appears.",
+      "proposal": "Keep the green art as a restrained supporting accent. Make a labeled fictional procurement example the main explanatory graphic: request → field/policy check → missing information or proposed comparison → named human review → reviewable brief. Show one small output artifact and neutral illustrative steps instead of every step appearing completed.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-home-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-home-390-reading-crop.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/landing/cyber-home.tsx",
+          "line": 19
+        },
+        {
+          "file": "/workspace/agentnexos/components/landing/cyber-home.tsx",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "id": "V02",
+      "priority": "high",
+      "type": "composition defect/opportunity",
+      "title": "Generic four-section pages fall into a visibly unbalanced three-plus-one layout",
+      "observed": "Platform, industries and security render a three-card row followed by a lone fourth card. Industries promotes a disclaimer titled Note/ملاحظة to a numbered card equal in weight to actual sectors. Platform combines a longer public-demo boundary with the fourth card.",
+      "impact": "Large blank areas and inconsistent semantic weight weaken the institutional presentation; the visitor cannot tell core offer from boundary note at a glance.",
+      "proposal": "Platform: a connected architecture overview plus four concise explanatory bands. Industries: three genuine sectors with a quiet full-width scope note and relevant workflow links. Security: grouped policy/permissions/data sections with a separate public-demo boundary. Do not simply force equal heights or stretch copy.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-platform-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-industries-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-security-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-platform-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-industries-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-security-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/public-page.tsx",
+          "line": 15
+        },
+        {
+          "file": "/workspace/agentnexos/components/site/public-page.tsx",
+          "line": 31
+        },
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "id": "V03",
+      "priority": "high",
+      "type": "mobile reading defect",
+      "title": "Assistant starter prompts remain cramped in two columns on a narrow phone",
+      "observed": "At 390px, three long Arabic prompts render as two cards plus an orphan, causing multiple short text lines. Sidebar/operational captions and privacy text are also much smaller than marketing reading text.",
+      "impact": "The public demo feels denser and less readable than the marketing site immediately before it.",
+      "proposal": "Use a single column of compact prompt rows on phones, a direct composer, and 14px minimum for meaningful supporting text. Keep decorative labels subordinate. Show an editable structured plan/result when produced; do not add fake run panels or unavailable client screens.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-agentnexos-390.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-agentnexos-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/agent/workspace.css",
+          "line": 69
+        },
+        {
+          "file": "/workspace/agentnexos/components/agent/workspace.css",
+          "line": 96
+        },
+        {
+          "file": "/workspace/agentnexos/components/agent/workspace.css",
+          "line": 91
+        },
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 50
+        }
+      ],
+      "source_diagnosis": "The higher-specificity .agent-workspace .workspace-suggestions two-column breakpoint overrides the lower-specificity .workspace-suggestions intended one-column mobile rule."
+    },
+    {
+      "id": "V04",
+      "priority": "medium",
+      "type": "information design opportunity",
+      "title": "Legal notices use marketing comparison cards for sequential reading",
+      "observed": "Privacy has eight sections and terms has six sections, both presented as numbered two-column card grids with repeated shield icons in both languages.",
+      "impact": "The visual order asks readers to alternate columns and gives every paragraph the same prominence; the generic marketing eyebrow is less useful than a clear notice title and contents.",
+      "proposal": "Use one readable article column, optional desktop contents navigation, section anchors, and a visible current-notice heading. Preserve factual notices and clearly separate present behavior from future terms; do not imply certification through decoration.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-privacy-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-privacy-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-terms-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-terms-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/public-page.tsx",
+          "line": 31
+        },
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 34
+        }
+      ]
+    },
+    {
+      "id": "V05",
+      "priority": "medium",
+      "type": "visual proof/content opportunity",
+      "title": "Solution detail is accurate but offers no visual example of its output",
+      "observed": "All four solution detail types in both languages use clean text-led editorial rows for scope/workflow/inputs/outputs/review boundaries/acceptance. None shows an example output artifact. The English customer-operations screenshot has an expressly recorded capture ambiguity.",
+      "impact": "A buyer must imagine what the reviewable comparison or handover actually looks like.",
+      "proposal": "Preserve the editorial structure and add one fictional annotated comparison/checklist fragment with a responsible reviewer and boundary label. Reuse the example across home/platform/detail with different zoom levels, not unrelated decorative AI imagery.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-procurement-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-procurement-390.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-knowledge-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-receivables-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-solutions-customer-operations-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-solutions-knowledge-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-solutions-receivables-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/solutions-page.tsx",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "id": "V06",
+      "priority": "medium",
+      "type": "conversion/readability opportunity",
+      "title": "Engagements are scannable on desktop but become a long serial comparison on mobile",
+      "observed": "Four detailed offerings become four tall consecutive cards at 390px. Buttons are clear and text is readable; this is not an overflow defect.",
+      "impact": "Choosing an appropriate starting point requires reading a large amount before comparing stages.",
+      "proposal": "Add a concise stage decision strip (unclear process → discovery; clear bounded process → pilot; validated process → delivery; deployed system → improvement), then retain full details below. Do not invent prices, durations, guarantees or popular-plan labels.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-engagements-390.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-engagements-390-reading-crop.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/offerings-page.tsx",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "id": "V07",
+      "priority": "medium",
+      "type": "information hierarchy opportunity",
+      "title": "Project-brief form explains its local/manual nature late in a tall panel",
+      "observed": "The start page presents large blank fields and a review action; explanation that this prepares a brief for download/manual email appears near the bottom. The form is readable and optional fields are labeled.",
+      "impact": "A visitor may infer a submitted project enquiry before reaching the explanation of what happens next.",
+      "proposal": "Place a compact three-step explanation above the form: write a brief, review/download it, send it yourself. Reduce optional-field visual weight and preserve the fictional example entry point. No backend-send promise until implemented.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-start-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-start-390.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-start-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/project-brief.tsx",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "id": "V08",
+      "priority": "medium",
+      "type": "trust/editorial opportunity",
+      "title": "Founder story is human but project evidence remains abstract",
+      "observed": "About uses a real named founder and a first-person bio, but independent projects appear as names and descriptive sentences only.",
+      "impact": "The strongest available human proof is not visually inspectable.",
+      "proposal": "Retain the voice and restrained editorial layout; add actual public project links and authentic artifact screenshots with accurate implementation-status captions when evidence exists. A genuine owner-provided portrait is optional, never a fabricated person or customer-logo wall.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/en-about-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-about-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/editorial-page.tsx",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "id": "V09",
+      "priority": "low",
+      "type": "information design opportunity",
+      "title": "Resources identify downloads but do not preview the resulting artifact",
+      "observed": "Each resource has a title, format, description and download action, but no excerpt showing the structure of the file.",
+      "impact": "The visitor cannot assess the usefulness of the brief or acceptance template without downloading it.",
+      "proposal": "Add a small preview from the actual Markdown template fields, preserving download type and the separate assistant route.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-resources-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-resources-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/components/site/offerings-page.tsx",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "id": "V10",
+      "priority": "low",
+      "type": "rhythm/hierarchy opportunity",
+      "title": "Repeated large boxed CTA and footer compete for visual emphasis",
+      "observed": "Several generic pages end in a wide rounded contact panel followed by a similarly wide rounded footer; frequent cards, borders and identical green numerical motifs flatten differences between explanation, evidence and action.",
+      "impact": "The page feels templated even when copy is specific. Empty space itself is not a defect; the problem is equal visual treatment of unrelated roles.",
+      "proposal": "Keep one strong page-level CTA, simplify the footer, use editorial bands, diagram regions and compact proof artifacts to vary rhythm within the existing palette.",
+      "evidence": [
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-platform-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/en-security-1440.png",
+        "/tmp/agynexa-strategy-review-20261017/visual/ar-home-1440.png"
+      ],
+      "source": [
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 32
+        },
+        {
+          "file": "/workspace/agentnexos/app/upgrade-20261016.css",
+          "line": 35
+        }
+      ]
+    }
+  ],
+  "proposed_direction": {
+    "name_ar": "AGYNEXA: سير العمل واضح من أول نظرة",
+    "name_en": "AGYNEXA: the work, made clear",
+    "principle": "A calm engineering identity built around a concrete workflow, human decision points, and a reviewable output. Keep the matte black/emerald brand; replace generic visual repetition with specific information design.",
+    "palette": {
+      "background": "#050505",
+      "surface": "#0b0b0b",
+      "text": "#ebebeb",
+      "accent": "#10b981",
+      "roles": "Accent for navigation emphasis, diagram connections, focus, and clearly labeled states; avoid green checks implying unperformed work. Neutral primary buttons remain."
+    },
+    "typography": "Preserve IBM Plex Sans Arabic and current 18px Arabic reading scale; preserve current English editorial serif plus sans reading hierarchy. Reduce overlong headlines through copy rather than smaller fonts or forced breaks. Use 14px or greater for meaningful guidance, 15–16px for controls. No negative Arabic letter-spacing.",
+    "graphics": "Use exact SVG/HTML diagrams and real fictional-data artifact excerpts. Existing green imagery remains atmospheric and subordinate; no stock robot replacement, generated text diagrams, imaginary product telemetry, fabricated clients or certifications.",
+    "home_sequence": [
+      "One plain operating outcome + primary project CTA and clearly secondary public-assistant CTA",
+      "One worked fictional procurement example with human approval and an inspectable result",
+      "Three concise capabilities tied to that example",
+      "Four workflow routes including customer operations",
+      "Delivery stages with one real example artifact",
+      "Named founder/authentic project evidence where available",
+      "Focused FAQ + one final next step"
+    ],
+    "family_treatment": {
+      "platform": "Connected knowledge → permission → proposal/review → outcome diagram plus reading bands; explicit scope boundary separate from architecture.",
+      "solutions_listing": "Preserve 2x2 comparison; give each workflow a distinct input/result cue, not decorative icon variation.",
+      "solutions_detail": "Preserve Inputs/Outputs/Boundary/Acceptance rows; add one annotated fictional artifact and related next step.",
+      "services_and_methodology": "Retain deliberate editorial rows and deliverable callouts; show one small artifact per relevant stage, avoiding a page of identical cards.",
+      "about": "Keep first-person founder story; add only authentic linked project evidence and optional real portrait.",
+      "industries": "Three sectors as scope examples; move caveat out of numbered cards; connect to relevant workflow routes.",
+      "engagements": "Stage selector/decision summary then complete details; no SaaS subscription framing or invented numbers.",
+      "resources": "Actual template excerpts alongside clear Markdown download actions.",
+      "security_and_legal": "Readable content hierarchy; factual current boundary separated from future project requirements. Legal gets a linear article format.",
+      "start": "Honest local/manual handoff explained at the start, concise fields, visible review/download/send-yourself sequence.",
+      "login": "Keep image/sidebar and form composition; make public assistant access easy to recognize and avoid suggesting the account unlocks client systems.",
+      "assistant": "One-column phone starter rows, readable guidance, composer priority; structured editable artifact when available; no invented enterprise workspace features."
+    }
+  },
+  "prioritized_delivery": [
+    {
+      "stage": "First reviewable design slice",
+      "scope": "Home + one procurement detail + assistant phone welcome",
+      "why": "Tests the narrative, diagram/artifact language, and handoff between marketing and public demo before broad propagation.",
+      "requires": "Fresh AR/EN copy and one clearly fictional artifact; no backend expansion."
+    },
+    {
+      "stage": "Template correction",
+      "scope": "Platform/industries/security generic layouts, legal article, engagements decision summary, resource previews",
+      "why": "Removes repetitive generic composition while reusing the approved system."
+    },
+    {
+      "stage": "Evidence and finishing",
+      "scope": "Authentic founder/project materials, footer simplification, consistent guidance/control scale",
+      "why": "Improves trust and polish without fabricated proof."
+    }
+  ],
+  "acceptance_criteria_for_authorized_release": [
+    "Preserve the four approved color values and AR/EN semantic parity; scope notices remain visible and honest.",
+    "Every main page answers: what work is improved, what the visitor receives, and what the next step does.",
+    "Home shows at least one inspectable labeled fictional workflow artifact and a visible human review boundary; no implied live run.",
+    "No generic 3+1 orphan-card composition for four equivalent items; caveats are notes, not offerings.",
+    "At 390px assistant starters are one column, composer remains clear, meaningful guidance is at least 14px, Arabic copy wraps naturally.",
+    "Legal is readable in a linear order with useful section navigation; no certification implied by icons.",
+    "Resources preview actual downloadable fields; engagement starting points can be compared before reading full cards.",
+    "Visual checks for the changed representative screens and full functional checks occur only in the owner-authorized release process; this review does not mark those future checks as passed."
+  ],
+  "not_claimed": [
+    "A full security/accessibility certification",
+    "A solved external-browser Site Unavailable cause",
+    "Implementation or publication of this proposal",
+    "Every localized route at every mobile/tablet viewport",
+    "A complete reliable full-page paint for English customer operations"
+  ],
+  "capture_ambiguities": [
+    {
+      "route": "/en/solutions/customer-operations",
+      "file": "/tmp/agynexa-strategy-review-20261017/visual/en-solutions-customer-operations-1440.png",
+      "status": "Unresolved screenshot/render ambiguity after one correction; no further retries",
+      "observed": "Headline and most prose paint; header, footer, scope marker, some labels and part of CTA do not paint in the full-page screenshot. Explicit header-visible/footer-attached readiness succeeded before corrected capture.",
+      "not_established": "No evidence yet attributing this to a persistent visitor-visible code defect.",
+      "correction_log": "/tmp/agynexa-strategy-review-20261017/visual/capture-corrections.json"
+    }
+  ]
+}

@@ -1,64 +1,202 @@
 export const productPages = {
- about:{
-  ar:{eyebrow:"عن AGYNEXA",title:"أنظمة وكلاء تبدأ من خبرة فريقك.",intro:"AGYNEXA ممارسة هندسية لأنظمة الذكاء الاصطناعي وأتمتة الأعمال للمؤسسات حول العالم. ننطلق من العملية كما يعيشها فريقك، ونحوّل متطلباتها إلى أدوار وأدوات ونقاط مراجعة. يمكنك استكشاف التصميم هنا قبل تحديد نطاق الربط والتشغيل.",notice:"المتاح حاليًا مساعد لتصميم العمليات وموجز مشروع محلي. بناء نظام متصل ببيانات مؤسسة يُحدد ويُختبر لكل مشروع على حدة.",cards:[
-   ["نبدأ من يوم العمل","طلب ناقص التفاصيل، فاتورة تحتاج مراجعة، أو سؤال تتكرر إجابته. نفهم كيف يتحرك العمل اليوم، ومن يتدخل، وأين يتوقف قبل أن نختار التقنية.","نخدم فرق العمل حول العالم، بالإنجليزية كلغة أساسية وتجربة عربية كاملة."],
-   ["نبني ما يحتاجه المسار","قد تحتاج العملية إلى استرجاع مستند، أو حساب، أو تجهيز مسودة. نضيف ما يخدم النتيجة، ونبقي الخطوات البسيطة بسيطة.","اختيار الوكيل أو الأداة يأتي بعد فهم المهمة، لا قبلها."],
-   ["نحترم معرفة الفريق","أصحاب العملية يعرفون استثناءاتها وقراراتها الحساسة. نبني حول هذه المعرفة، ونحدد أين يساعد النظام وأين يعود إلى الإنسان.","الهدف أن يصبح القرار أسهل في المراجعة، وأن يبقى المسؤول عنه واضحًا."],
-   ["نختبر على ما يهمك","لا تكفي إجابة مقنعة. نراجع اكتمال الطلب، ودقة المصدر، والتعامل مع النقص، والوقت الذي يحتاجه المسؤول للوصول إلى قرار.","نحدد معيار القبول قبل التجربة، ثم نقارن النتيجة به."],
-  ]},
-  en:{eyebrow:"About AGYNEXA",title:"Agent systems shaped by your team’s expertise.",intro:"AGYNEXA is an AI systems engineering and automation practice for organizations worldwide. Start with the process your team knows, then define the roles, tools and review points it needs. Explore the design here before scoping integration and operation.",notice:"Available today: a workflow design assistant and a local project brief. Systems connected to enterprise data are scoped and tested for each project.",cards:[
-   ["Start with a working day","An incomplete request, an invoice waiting for review, or a question someone answers every week. Understand how work moves, who intervenes, and where it stops before choosing technology.","English-first, with comprehensive Arabic localization for teams worldwide."],
-   ["Build what the workflow needs","A process might need document retrieval, a calculation, or a draft. Add what serves the outcome and keep straightforward steps straightforward.","The choice of agent or tool follows the task."],
-   ["Respect the team's knowledge","Process owners know the exceptions and sensitive decisions. Build around that knowledge and define when the system assists and when it returns to a person.","Make decisions easier to review and ownership easier to understand."],
-   ["Test what matters","A convincing answer is not enough. Review request completeness, source accuracy, missing information, and the effort required to reach a decision.","Define acceptance before the pilot, then compare results against it."],
-  ]}
- },
- platform:{
-  ar:{eyebrow:"هندسة النظام الوكيل",title:"كيف نبني النظام حول عمليتك؟",intro:"كل مسار يبدأ بطلب وينتهي بمخرج يراجعه شخص مسؤول. بينهما نحدد مصادر البيانات ودور كل وكيل والأداة المسموح بها. هذه هي مكونات التصميم الذي يناقشه فريق العمليات والتقنية قبل التنفيذ.",notice:"هذه مكونات تصميم الأنظمة المخصصة. التجربة العامة تساعدك على التخطيط والحساب؛ مصادر المؤسسة وأدواتها لا تتصل تلقائيًا.",cards:[
-   ["مدخل يفهمه الجميع","يبدأ المسار بطلب له غرض ومعلومات أساسية. نحدد ما يجب أن يصل مع الطلب، وما يمكن سؤاله لاحقًا، وما يستدعي إعادته لصاحبه.","مثال: طلب شراء يحدد الفئة والكمية والموعد والمسؤول."],
-   ["المعرفة المناسبة للطلب","ليست كل الملفات مفيدة لكل سؤال. نحدد المصادر المعتمدة وطريقة تحديثها ونطاق الوصول، ليجد النظام ما يتعلق بالمهمة فعلًا.","عندما يغيب المصدر أو يتعارض، يعود الطلب للمراجعة بدل اختراع إجابة."],
-   ["أدوار تعمل معًا","التحليل يرتب المدخلات، والتخطيط يقترح الخطوات، والمراجعة تختبر النتيجة. نستخدم ما تحتاجه المهمة من هذه الأدوار، دون سلسلة زائدة لكل سؤال.","السؤال البسيط يستحق طريقًا قصيرًا. القرار المركب يستحق مراجعة أعمق."],
-   ["أداة لخطوة محددة","قراءة سجل تختلف عن تعديله، وتجهيز رسالة يختلف عن إرسالها. نفصل هذه الأفعال ونحدد صلاحية كل خطوة وحدودها.","لكل اتصال مالك، ومدخلات واضحة، وطريقة للتحقق من النتيجة."],
-   ["الإنسان عند نقطة القرار","يرى المسؤول الطلب ومعطياته والأثر المتوقع قبل الاعتماد. نحدد أي تغيير يستدعي مراجعة جديدة، وكيف يعود المسار إلى صاحبه عند وجود استثناء.","الطلب المتغير يحتاج مراجعة جديدة؛ القرار السابق لا يغطي عملًا مختلفًا."],
-   ["نتيجة يمكن فحصها","يخرج المسار بملف أو إجابة أو مسودة لها معيار قبول. نختبر الحالات العادية والاستثناءات ونقص البيانات، ثم نقرر ما يستحق التوسع.","ابدأ بنطاق واحد يمكن مراجعته قبل إضافة مصادر أو صلاحيات أخرى."],
-  ]},
-  en:{eyebrow:"Inside an agent workflow",title:"How does an agent system fit your process?",intro:"Every workflow starts with a request and ends with an output someone reviews. Between them, define the data sources, each agent’s role and the tools it may use. These are the design decisions operations and technical teams agree on before implementation.",notice:"These are components of a custom system design. The public assistant supports planning and calculations; enterprise sources and tools are not connected automatically.",cards:[
-   ["An input everyone understands","Start with a request that has a purpose and essential details. Define what must arrive with it, what can be clarified later, and what should go back to its owner.","Example: a purchase request with category, quantity, deadline, and owner."],
-   ["Knowledge that fits the request","Not every file belongs in every answer. Define approved sources, refresh rules, and access boundaries so the system finds what actually relates to the task.","Missing or conflicting sources lead to review rather than an invented answer."],
-   ["Roles that work together","Analysis organizes inputs, planning proposes steps, and review tests the result. Use the roles the task needs without adding a long chain to every question.","Simple questions deserve a short path. Complex decisions deserve deeper review."],
-   ["A tool for a specific step","Reading a record differs from changing it. Preparing a message differs from sending it. Separate those actions and define the authority for each.","Every connection needs an owner, clear inputs, and a way to verify the outcome."],
-   ["People at decision points","Approval needs context. An owner should see the request, its changes, and the supporting evidence before authorizing an action with consequences.","A changed request needs a fresh review; an earlier decision does not cover different work."],
-   ["An outcome you can inspect","A workflow produces a file, answer, or draft with acceptance criteria. Test normal cases, exceptions, and missing data, then decide where to expand.","Begin with one reviewable scope before adding sources or permissions."],
-  ]}
- },
- industries:{
-  ar:{eyebrow:"مصمم لواقع فريقك",title:"مسارات عمل تناسب واقع قطاعك.",intro:"المشكلة قد تبدو واحدة: طلب يتأخر. لكن تأخر عرض سعر يختلف عن استثناء في شحنة أو فاتورة ناقصة. نبدأ من مصادر العمل ومسؤوليه، ونصمم مسارًا يناسب السياق.",notice:"أمثلة لنطاقات يمكن تصميمها وتطويرها، وليست منتجات قطاعية جاهزة أو نتائج عملاء منشورة.",cards:[
-   ["التجارة والتوزيع","يصل استفسار العميل قبل اكتمال المواصفات. يمكن تصميم مسار يجمع متطلبات الطلب، ويراجع الكتالوج المعتمد، ويجهز عرضًا يفهمه مسؤول المبيعات.","المصادر: المنتجات والأسعار والمخزون المصرح به.","يبقى اعتماد السعر وتأكيد الطلب عند الفريق."],
-   ["الخدمات المهنية","تنتقل المهمة بين المبيعات والتنفيذ، فتضيع بعض التفاصيل. نصمم نقطة استقبال تجمع النطاق والملفات والأسئلة الناقصة قبل تسليمها للفريق المسؤول.","المخرج: ملخص تسليم ومتطلبات منظمة وخطوة تالية واضحة.","التعهد التعاقدي ومشاركة الملفات يحتاجان اعتمادًا."],
-   ["اللوجستيات والعمليات","تتغير حالة الشحنة في أكثر من نظام. يمكن تنظيم الاستثناءات في ملخص يوضح آخر معلومة موثوقة، وما يحتاج متابعة، ومن يملك التصعيد.","المصادر: حالة حديثة من نظام تتبع معتمد.","تغيير المواعيد والتعليمات التشغيلية يبقى للمخولين."],
-   ["المالية والإدارة","المراجعة تتأخر عندما تُجمع الفاتورة والطلب والمرفقات يدويًا. نصمم مسارًا يرتب المستندات ويكشف النقص ويجهز ملفًا للمراجعة.","المخرج: قائمة فروق وأسئلة محددة للمسؤول.","لا يتحول إعداد الملف إلى دفع أو اعتماد مالي تلقائي."],
-  ]},
-  en:{eyebrow:"Built for your team's context",title:"Workflows grounded in your sector.",intro:"The problem may sound the same: a delayed request. But a quotation, a shipment exception, and an incomplete invoice need different information and different decisions. Begin with the actual sources and owners.",notice:"Examples of workflows to design and develop, not finished vertical products or published customer outcomes.",cards:[
-   ["Commerce and distribution","A customer enquiry arrives before the specifications are complete. Design a workflow that gathers requirements, checks the approved catalog, and prepares a quotation for the sales owner.","Sources: authorized product, price, and inventory information.","The team approves prices and confirms orders."],
-   ["Professional services","Details get lost between sales and delivery. Design an intake that collects scope, files, and missing questions before passing the work to its owner.","Output: a handover summary, organized requirements, and a clear next step.","Contractual commitments and document sharing require approval."],
-   ["Logistics and operations","Shipment status changes across systems. Organize exceptions into a summary of the latest reliable information, outstanding follow-up, and escalation ownership.","Sources: current status from an approved tracking system.","Authorized people retain scheduling and operational decisions."],
-   ["Finance and administration","Review slows down when invoices, requests, and attachments must be gathered manually. Design a workflow that organizes documents, identifies gaps, and prepares a review file.","Output: discrepancies and specific questions for the owner.","Preparing the file does not authorize a payment or financial approval."],
-  ]}
- },
- resources:{
-  ar:{eyebrow:"مكتبة العمل",title:"جهّز أول تجربة مع فريقك.",intro:"أدلة عملية للاجتماع الأول بين فريق العمليات والتقنية. استخدمها لاختيار المهمة، وتجهيز مصادرها، والاتفاق على نتيجة تستطيعون الحكم عليها معًا.",notice:"إرشادات لتصميم المشروع. راجع سياسات مؤسستك ومتطلبات الأمان قبل استخدام بيانات حقيقية أو توصيل أنظمتها.",cards:[
-   ["اختر أول عملية بعناية","ابحث عن مهمة تتكرر، لها بداية واضحة، ونتيجة يراجعها شخص معروف. المهمة الصغيرة المكتملة تعلّمك أكثر من محاولة أتمتة القسم كله.","اكتب: كيف يبدأ الطلب؟ ما أكثر معلومة تنقصه؟ ومن يحسم الاستثناء؟","ابدأ بالمراجعة أو تجهيز المسودات، ثم اختبر القيمة قبل توسيع الدور."],
-   ["ارسم خريطة البيانات","حدد أين توجد المعلومة المعتمدة، ومن يملكها، ومتى تتغير. ميّز ما يحتاجه النظام فعلًا عمّا اعتاد الفريق إرفاقه بلا استخدام.","اجمع أسماء المصادر وحقولها وملاكها وقواعد الوصول والتحديث.","بيانات أقل ومرتبطة بالمهمة أسهل في المراجعة من سياق واسع غير منظم."],
-   ["اتفق على معنى النجاح","اختر حالات يعرف الفريق نتيجتها مسبقًا. ضع معها طلبًا ناقصًا، ومصدرًا متعارضًا، وحالة تحتاج تصعيدًا، وانقطاع اتصال.","راجع اكتمال النتيجة ودقة الأدلة ووضوح التصعيد وزمن المراجعة.","سجّل النتيجة المتوقعة قبل التجربة؛ لا تغيّر المعيار ليوافق الرد."],
-   ["اجعل الصلاحيات جزءًا من التصميم","اكتب ما يقرأه النظام وما يقترحه وما يحتاج موافقة. تعامل مع الإرسال والتعديل والحذف كخطوات مستقلة، لكل منها صاحب قرار.","ابدأ بأقل صلاحية لازمة، وحدد ما يوقف التشغيل.","الموافقة الجيدة تعرض الفعل ومعلماته وآثاره، ولا تخفيها خلف عنوان عام."],
-   ["جهّز اليوم الذي تتعطل فيه الخدمة","قد ينقطع الاتصال بعد نجاح جزء من العمل. حدد كيف تعرف ما تم، ومن يراجع النتيجة، ومتى تعيد المحاولة.","احتفظ بمعرفات الطلبات، وتحقق من النظام النهائي قبل تكرار أي فعل.","خطة التعافي تُكتب قبل التشغيل، وتُختبر مع حالات القبول."],
-  ]},
-  en:{eyebrow:"Field notes",title:"Prepare your first pilot with your team.",intro:"Practical guides for the first conversation between operations and engineering. Choose a task, prepare its sources, and agree on an outcome you can evaluate together.",notice:"Project-design guidance. Review your organization's policies and security requirements before using real data or connecting systems.",cards:[
-   ["Choose the first workflow carefully","Look for a recurring task with a clear beginning and a result reviewed by a known owner. A small, complete workflow teaches more than trying to automate a whole department.","Write down how requests start, what is usually missing, and who resolves exceptions.","Begin with reviews or drafts and test value before expanding the role."],
-   ["Map the data","Identify the approved source, its owner, and how often it changes. Separate information the task needs from attachments the team includes out of habit.","Record source names, fields, owners, access rules, and refresh requirements.","A focused set of relevant data is easier to review than a wide, unstructured context."],
-   ["Agree on what success means","Choose cases with known outcomes. Add incomplete requests, conflicting sources, escalation cases, and a connection failure.","Evaluate completeness, evidence accuracy, escalation clarity, and review time.","Set expected results before the pilot; do not adjust the standard to fit the answer."],
-   ["Design permissions into the workflow","Write down what the system reads, proposes, and needs approval for. Treat sending, editing, and deleting as distinct steps with accountable owners.","Begin with the minimum permission and define what stops a run.","A useful approval shows the action, parameters, and consequences."],
-   ["Prepare for the day a service fails","A connection may fail after part of the work succeeds. Define how to find out what committed, who checks the result, and when to retry.","Preserve request identifiers and reconcile with the target system before repeating an action.","Write the recovery plan before operation and test it alongside acceptance cases."],
-  ]}
- }
+  "about": {
+    "ar": {
+      "eyebrow": "AGYNEXA",
+      "title": "هندسة الذكاء حول عمل المؤسسة.",
+      "intro": "AGYNEXA منصة لتصميم أنظمة الوكلاء وأتمتة العمليات. نجمع معرفة المؤسسة وأدواتها وقراراتها في مسارات لها مخرجات ومسؤوليات واضحة، ونربط تصميم الحل بمتطلبات تشغيله.",
+      "notice": "تُحدد البيانات والتكاملات ومعايير القبول وفق نطاق المشروع.",
+      "cards": [
+        [
+          "اتجاه المنصة",
+          "نطور تجربة تساعد المؤسسات على الانتقال من فكرة استخدام الذكاء الاصطناعي إلى متطلبات يمكن تنفيذها ومراجعتها. يتيح المساعد العام استكشاف المهمة، بينما يُحدد تصميم الأنظمة المتصلة وفق نطاق المشروع."
+        ],
+        [
+          "العمل قبل اختيار الأداة",
+          "تبدأ هندسة الحل بفهم كيف يتحرك الطلب، وأين توجد المعلومة، ومن يملك القرار. نختار الأدوات والأدوار التي تخدم النتيجة ونحدد ما يبقى بيد الفريق."
+        ],
+        [
+          "تسليم يمكن البناء عليه",
+          "المتطلبات الموثقة والمخرجات القابلة للفحص وحدود التشغيل الواضحة أساس كل مشروع. يحدد الاتفاق نطاق التنفيذ ومعايير القبول ومسؤوليات الدعم والتطوير."
+        ]
+      ]
+    },
+    "en": {
+      "eyebrow": "AGYNEXA",
+      "title": "AI engineering shaped around the organization.",
+      "intro": "AGYNEXA is a platform for agent systems engineering and workflow automation. We bring organizational knowledge, tools and decisions into workflows with clear outputs and responsibilities, connecting solution design with operating requirements.",
+      "notice": "Data, connections and acceptance criteria are defined for each project.",
+      "cards": [
+        [
+          "Our direction",
+          "We are developing an experience that helps organizations turn an AI use case into requirements they can implement and review. The public assistant supports exploration; connected systems are designed around an agreed project scope."
+        ],
+        [
+          "Understand the work",
+          "Solution engineering starts with how a request moves, where information lives and who owns each decision. Select the tools and roles that serve the outcome, and define what stays with the team."
+        ],
+        [
+          "A foundation for continued work",
+          "Documented requirements, inspectable outputs and clear operating boundaries provide the foundation for each project. The agreement defines delivery scope, acceptance criteria and ownership of support and improvement."
+        ]
+      ]
+    }
+  },
+  "platform": {
+    "ar": {
+      "eyebrow": "AGYNEXA",
+      "title": "معرفة وأدوات وقرارات، في مسار واحد.",
+      "intro": "AGYNEXA منصة لهندسة أنظمة الوكلاء حول العمليات التي تعتمد عليها المؤسسة. نحدد كيف تصل المعلومة إلى المهمة، وما الذي يمكن للأداة فعله، وأين يحتاج الفريق إلى المراجعة، وكيف يفحص المخرج.",
+      "notice": "تُحدد البيانات والتكاملات ومعايير القبول وفق نطاق المشروع.",
+      "cards": [
+        [
+          "معرفة مرتبطة بالمهمة",
+          "تبدأ الإجابة من مصادر معتمدة وصلاحيات واضحة. يشمل التصميم تحديث الوثائق، وإظهار المرجع، والتعامل مع معلومة ناقصة أو مصدرين متعارضين."
+        ],
+        [
+          "أدوات لها دور محدد",
+          "قراءة سجل وتجهيز مسودة وتعديل بيانات خطوات مختلفة. نحدد مدخلات كل أداة وما تسمح به، ونفصل الاقتراح عن الفعل الذي يحتاج اعتمادًا."
+        ],
+        [
+          "مسار يعرف الفريق حالته",
+          "يحتاج المسؤول إلى معرفة ما وصل، وما ينتظر معلومة أو قرارًا، وما اكتمل بالفعل. تُصمّم الحالات وسجل المراجعة حول هذا التسلسل، مع طريق واضح لمعالجة الاستثناءات."
+        ],
+        [
+          "مخرج يمكن الحكم عليه",
+          "لكل مسار نتيجة ومعيار قبول: إجابة لها مصدر، أو ملف مراجعة، أو مسودة قابلة للتعديل. تُراجع التجربة على الحالات المعتادة والنواقص والفشل قبل التوسع.\n\nالمتاح هنا\nيساعدك المساعد العام على التحليل وإعداد تصور أولي. ربط مصادر المؤسسة وأدواتها يُصمّم ويُتحقق منه ضمن نطاق مشروعك."
+        ]
+      ]
+    },
+    "en": {
+      "eyebrow": "AGYNEXA",
+      "title": "Knowledge, tools and decisions. One considered workflow.",
+      "intro": "AGYNEXA brings agent systems engineering to the processes an organization depends on. Define how information reaches a task, what a tool can do, where the team reviews a decision and how the output is checked.",
+      "notice": "Data, connections and acceptance criteria are defined for each project.",
+      "cards": [
+        [
+          "Knowledge that fits the task",
+          "Answers start with approved sources and defined access. The design covers document updates, visible references and what happens when information is missing or sources conflict."
+        ],
+        [
+          "Tools with a defined role",
+          "Reading a record, preparing a draft and changing data are different steps. Define each tool’s inputs and authority, separating a proposal from an action that needs approval."
+        ],
+        [
+          "A workflow the team can follow",
+          "The owner needs to know what arrived, what is waiting for information or a decision and what actually completed. States and review records follow that sequence, with a clear route for exceptions."
+        ],
+        [
+          "An output you can evaluate",
+          "Each workflow needs an output and acceptance criteria: a sourced answer, a review file or an editable draft. A pilot covers routine cases, missing information and failures before the scope expands.\n\nAvailable here\nThe public assistant supports analysis and an initial outline. Connections to organizational sources and tools are designed and verified within your project scope."
+        ]
+      ]
+    }
+  },
+  "industries": {
+    "ar": {
+      "eyebrow": "AGYNEXA",
+      "title": "حلول تُصمّم على معرفة القطاع.",
+      "intro": "اللوجستيات، والنفط والغاز، والتجارة الخارجية، والطاقة، والتجارة والتوزيع، والخدمات المهنية. نبدأ من السجلات والقرارات والمسؤوليات التي تميز كل قطاع، ثم نحدد مهمة قابلة للتطوير والمراجعة.",
+      "notice": "تُحدد البيانات والتكاملات ومعايير القبول وفق نطاق المشروع.",
+      "cards": [
+        [
+          "اللوجستيات",
+          "حالة الشحنة والمستندات والاستثناءات في ملخص يوضح ما يحتاج متابعة ومن يملك القرار."
+        ],
+        [
+          "النفط والغاز",
+          "إجراءات وسجلات معتمدة تدعم البحث ومراجعة الطلبات والإحالة إلى المختص، ضمن حدود السلامة والصلاحيات."
+        ],
+        [
+          "التجارة الخارجية",
+          "تجميع مستندات الشحنة ومتطلبات الصفقة، وإظهار النواقص والأسئلة قبل مراجعة فريق التجارة."
+        ],
+        [
+          "الطاقة",
+          "تنظيم أوامر العمل والمستندات الفنية وطلبات المتابعة، مع مسؤولية واضحة للمراجعة والتصعيد."
+        ],
+        [
+          "التجارة والتوزيع",
+          "طلبات وعروض ومعلومات منتجات تُجهز للمراجعة، مع إبقاء اعتماد السعر والالتزام لدى المخولين."
+        ],
+        [
+          "الخدمات المهنية",
+          "نقل سياق الطلب بين الفرق، والرجوع إلى المعرفة المعتمدة، وتجهيز متطلبات التسليم."
+        ]
+      ]
+    },
+    "en": {
+      "eyebrow": "AGYNEXA",
+      "title": "AI shaped by the work of each industry.",
+      "intro": "Logistics, oil and gas, foreign trade, energy, trade and distribution, and professional services. Start with the records, decisions and responsibilities that shape each industry, then define a task that can be developed and evaluated.",
+      "notice": "Data, connections and acceptance criteria are defined for each project.",
+      "cards": [
+        [
+          "Logistics",
+          "Shipment status, documents and exceptions brought into a summary of follow-up needs and decision ownership."
+        ],
+        [
+          "Oil and gas",
+          "Approved procedures and records supporting knowledge retrieval, request review and specialist handoff within defined safety and permission boundaries."
+        ],
+        [
+          "Foreign trade",
+          "Shipment documents and transaction requirements organized with visible gaps and questions for the trade team to review."
+        ],
+        [
+          "Energy",
+          "Work orders, technical documents and follow-up requests organized with clear review and escalation ownership."
+        ],
+        [
+          "Trade and distribution",
+          "Requests, quotations and product information prepared for review, with pricing and commitments left to authorized owners."
+        ],
+        [
+          "Professional services",
+          "Request context carried between teams, approved knowledge made accessible and delivery requirements prepared."
+        ]
+      ]
+    }
+  },
+  "resources": {
+    "ar": {
+      "eyebrow": "AGYNEXA",
+      "title": "أدوات عملية لتجهيز المشروع.",
+      "intro": "ابدأ بوصف واضح للعمل والنتيجة المطلوبة. يساعدك القالب الأول على تحديد النطاق، والثاني على الاتفاق على ما يثبت نجاح التجربة. الملفات نصية بصيغة Markdown ويمكن فتحها وتعديلها.",
+      "notice": "تُحدد البيانات والتكاملات ومعايير القبول وفق نطاق المشروع.",
+      "cards": [
+        [
+          "موجز سير العمل",
+          "يتضمن الهدف، وبداية الطلب، ومسؤول العملية، والأنظمة، والمدخلات والمصادر المسموحة، والخطوات الحالية والمقترحة، ونقاط الاعتماد، والمخرجات، والاستثناءات ومعايير القبول وما يقع خارج النطاق. استخدم بيانات افتراضية عند المشاركة العامة."
+        ],
+        [
+          "خطة قبول التجربة",
+          "تتضمن سيناريو الاختبار ومدخلاته والصلاحية المطلوبة والنتيجة المتوقعة والفعل الممنوع ودليل النجاح والنتيجة الفعلية. وتساعد على تسجيل قرار الانتقال، والمخاطر المفتوحة، والبديل اليدوي وصاحب الاعتماد."
+        ],
+        [
+          "ابدأ مع المساعد",
+          "استخدم مثالًا افتراضيًا لتوضيح المهمة والأسئلة التي تحتاج إجابة. راجع المخرجات قبل نقلها إلى موجز المشروع أو مشاركتها."
+        ]
+      ]
+    },
+    "en": {
+      "eyebrow": "AGYNEXA",
+      "title": "Practical tools to prepare your project.",
+      "intro": "Start with a clear description of the work and its intended result. The first template defines the scope; the second helps agree on evidence that the pilot works. Both are editable Markdown text files.",
+      "notice": "Data, connections and acceptance criteria are defined for each project.",
+      "cards": [
+        [
+          "Workflow brief",
+          "Covers the goal, trigger, process owner, systems, inputs, permitted sources, current and proposed steps, approvals, outputs, exceptions, acceptance criteria and what is out of scope. Use fictional data when sharing publicly."
+        ],
+        [
+          "Pilot acceptance plan",
+          "Covers each test scenario, its inputs, required permission, expected outcome, prohibited action, evidence and actual result. It also records the release decision, unresolved risks, manual fallback and decision owner."
+        ],
+        [
+          "Start with the assistant",
+          "Use a fictional example to clarify the task and the questions that need answers. Review the output before adding it to a project brief or sharing it."
+        ]
+      ]
+    }
+  }
 } as const;

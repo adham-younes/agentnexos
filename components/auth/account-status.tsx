@@ -1,42 +1,25 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 import type { Locale } from '@/lib/i18n/config';
+import { publicPath } from '@/lib/i18n/routing';
+import { useAccount } from '@/lib/auth/account-state';
 export function AccountStatus({ locale }: {
     locale: Locale;
 }) {
-    const [email, setEmail] = useState<string | null>(null);
+    const { ready, user } = useAccount();
     const [busy, setBusy] = useState(false);
     const [error, setError] = useState(false);
     const ar = locale === 'ar';
-    useEffect(() => {
-        if (!process.env.NEXT_PUBLIC_SUPABASE_URL)
-            return;
-        const client = createClient();
-        let active = true;
-        void client.auth.getUser().then(({ data }) => {
-            if (active)
-                setEmail(data.user?.email ?? null);
-        }).catch(() => { });
-        const { data } = client.auth.onAuthStateChange((_event, session) => {
-            if (active)
-                setEmail(session?.user?.email ?? null);
-        });
-        return () => {
-            active = false;
-            data.subscription.unsubscribe();
-        };
-    }, []);
     async function signOut() {
         setBusy(true);
         setError(false);
         try {
-            const { error: signOutError } = await createClient().auth.signOut();
+            window.dispatchEvent(new Event('agynexa:account-changing'));
+            const { error: signOutError } = await createClient().auth.signOut({ scope: 'local' });
             if (signOutError)
                 setError(true);
-            else
-                setEmail(null);
         }
         catch {
             setError(true);
@@ -45,12 +28,13 @@ export function AccountStatus({ locale }: {
             setBusy(false);
         }
     }
-    if (!email) {
-        return <Link href={`/${locale}/login`}>{ar ? 'تسجيل الدخول / إنشاء حساب' : 'Sign in / Create account'}</Link>;
+    if (!ready) return <span role="status">{ar ? 'جارٍ التحقق من الحساب…' : 'Checking account…'}</span>;
+    if (!user) {
+        return <Link href={publicPath('/login')} prefetch={false}>{ar ? 'تسجيل الدخول / إنشاء حساب' : 'Sign in / Create account'}</Link>;
     }
     return <div className="workspace-account">
-    <span dir="ltr">{email}</span>
-    <button type="button" disabled={busy} onClick={() => void signOut()}>{ar ? 'تسجيل الخروج' : 'Sign out'}</button>
+    <span dir="ltr">{user.email}</span>
+    <button type="button" disabled={busy} onClick={() => void signOut()}>{busy ? (ar ? 'جارٍ الخروج…' : 'Signing out…') : (ar ? 'الخروج من هذا الجهاز' : 'Sign out on this device')}</button>
     {error && <p role="alert">{ar ? 'تعذر تسجيل الخروج. حاول لاحقًا.' : 'Sign out failed. Try later.'}</p>}
   </div>;
 }

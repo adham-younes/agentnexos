@@ -6,6 +6,7 @@ import { masterPage } from '@/lib/content/master';
 import { contactEmail } from '@/lib/site';
 import { publicCopy } from '@/lib/content/public-copy';
 import type { Locale } from '@/lib/i18n/config';
+import { publicPath } from '@/lib/i18n/routing';
 import { PageHeader } from './page-header';
 
 type EditorialRoute = 'services' | 'methodology' | 'about';
@@ -26,19 +27,13 @@ export function EditorialPage({ page, locale }: { page: EditorialRoute; locale: 
             </section>
             <div className="upgrade-section nexus-wrap">
                 {page === 'about' ? <>
-                    {copy.founder && <section className="editorial-row editorial-founder" aria-labelledby="founder-name">
-                        <div><h2 id="founder-name">{copy.founder.name}</h2><p className="editorial-role">{copy.founder.role}</p></div>
-                        <div className="editorial-prose"><Paragraphs text={copy.founder.bio}/></div>
-                    </section>}
                     {copy.sections.map(section => <section className="editorial-row" key={section.heading}>
                         <h2>{section.heading}</h2><div className="editorial-prose"><Paragraphs text={section.body}/></div>
                     </section>)}
-                    {copy.projects && <section className="editorial-projects" aria-labelledby="independent-projects">
-                        <h2 id="independent-projects">{copy.projects.heading}</h2>
-                        <dl>{copy.projects.items.map(project => <div className="editorial-row" key={project.heading}>
-                            <dt><bdi lang="en">{project.heading}</bdi></dt><dd>{project.body}</dd>
-                        </div>)}</dl>
-                        <p className="editorial-project-note">{copy.projects.note}</p>
+                    {copy.founder && <section className="upgrade-card editorial-leadership" aria-labelledby="leadership-name">
+                        <h2 id="leadership-name">{copy.founder.name}</h2>
+                        <p className="editorial-role">{copy.founder.role}</p>
+                        <a className="upgrade-text-link" href={`mailto:${contactEmail}`} dir="ltr"><bdi>{contactEmail}</bdi></a>
                     </section>}
                 </> : page === 'methodology' ? <ol className="editorial-stages">
                     {copy.sections.map((stage, index) => <li className="editorial-row" key={stage.heading}>
@@ -54,10 +49,9 @@ export function EditorialPage({ page, locale }: { page: EditorialRoute; locale: 
                 <div className="editorial-closing">
                     {copy.closing && <p>{copy.closing}</p>}
                     <div className="upgrade-actions">
-                        {copy.primaryAction && <Link className="upgrade-button" href={`/${locale}/${copy.primaryAction.path}`}>{copy.primaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
-                        {copy.secondaryAction && <Link className="upgrade-text-link" href={`/${locale}/${copy.secondaryAction.path}`}>{copy.secondaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
-                        {page === 'services' && <Link className="upgrade-text-link" href={`/${locale}/engagements`}>{publicCopy[locale].engagementOptions}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
-                        {page === 'about' && <a className="upgrade-text-link" href={`mailto:${contactEmail}`} dir="ltr"><bdi>{contactEmail}</bdi></a>}
+                        {copy.primaryAction && <Link className="upgrade-button" href={publicPath(`/${copy.primaryAction.path}`)}>{copy.primaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
+                        {copy.secondaryAction && <Link className="upgrade-text-link" href={publicPath(`/${copy.secondaryAction.path}`)}>{copy.secondaryAction.label}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
+                        {page === 'services' && <Link className="upgrade-text-link" href={publicPath('/engagements')}>{publicCopy[locale].engagementOptions}<ArrowUpRight size={18} aria-hidden="true"/></Link>}
                     </div>
                 </div>
             </div>
