@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/i18n/config';
 export type MasterSection = {
     heading: string;
     body: string;
+    deliverable?: string;
 };
 export type MasterPage = {
     title: string;
@@ -10,6 +11,11 @@ export type MasterPage = {
     sections: MasterSection[];
     seoTitle?: string;
     seoDescription?: string;
+    primaryAction?: { label: string; path: string };
+    secondaryAction?: { label: string; path: string };
+    closing?: string;
+    founder?: { name: string; role: string; bio: string };
+    projects?: { heading: string; items: MasterSection[]; note: string };
 };
 export type MasterHome = {
     groups: {

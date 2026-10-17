@@ -56,3 +56,35 @@ html:lang(ar){--public-reading-size:1.125rem;--public-reading-leading:1.8}
 .upgrade-site .upgrade-step{font-size:var(--public-note-size)}
 .upgrade-site .upgrade-eyebrow{font-size:var(--public-note-size)!important}
 @media(max-width:767px){.upgrade-hero .upgrade-actions{align-items:stretch}.upgrade-hero .upgrade-button{width:100%}.upgrade-hero{min-height:0}.upgrade-footer-bottom{font-size:var(--public-note-size)}}
+
+/* Services, delivery method and founder: use the shared reading scale and edges. */
+.upgrade-editorial .upgrade-page-hero h1{max-width:28ch}
+.upgrade-editorial .upgrade-lead{max-width:76ch}
+.editorial-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:clamp(32px,6vw,96px);padding-block:38px;border-block-start:1px solid #ffffff20;align-items:start}
+.upgrade-editorial .editorial-row h2{font-size:clamp(24px,2.3vw,32px);line-height:1.4;letter-spacing:0}
+.editorial-prose{min-width:0;max-width:72ch}
+.editorial-prose p+p{margin-block-start:24px}
+.upgrade-editorial .editorial-deliverable{padding-block:18px;padding-inline:20px;border-inline-start:2px solid #10b981;background:#0b0b0b;color:#ebebeb;font-weight:500}
+.editorial-stages{list-style:none;margin:0;padding:0}
+.editorial-number{display:block;color:#10b981;font-size:var(--public-note-size);font-family:var(--font-jetbrains),monospace;font-weight:500;margin-block-end:12px}
+.editorial-role{margin-block-start:16px}
+.editorial-projects{padding-block-start:32px}
+.editorial-projects>h2{margin-block-end:30px}
+.editorial-projects dt{font-size:23px;color:#ebebeb;font-weight:500}
+.editorial-projects dd{max-width:72ch}
+.editorial-project-note{max-width:76ch;font-size:var(--public-note-size);margin-block-start:12px}
+.editorial-closing{border-block-start:1px solid #ffffff20;margin-block-start:16px;padding-block-start:32px}
+.editorial-closing>p{max-width:76ch}
+.editorial-closing .upgrade-actions{justify-content:flex-start;margin-block-end:0}
+.editorial-closing .upgrade-text-link{margin-block-start:0}
+.upgrade-editorial :is(h1,h2,p,dt,dd){overflow-wrap:break-word}
+@media(max-width:767px){
+ .editorial-row{grid-template-columns:minmax(0,1fr);gap:20px;padding-block:28px}
+ .upgrade-editorial .editorial-row h2{font-size:26px}
+ .editorial-prose p+p{margin-block-start:20px}
+ .upgrade-editorial .editorial-deliverable{padding-inline:16px}
+ .editorial-projects{padding-block-start:20px}
+ .editorial-closing .upgrade-actions{align-items:flex-start;flex-direction:column;gap:22px}
+ .editorial-closing .upgrade-button{max-width:100%;white-space:normal}
+}
+:lang(ar) .upgrade-editorial .upgrade-page-hero h1{line-height:1.5}

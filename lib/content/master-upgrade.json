@@ -187,35 +187,39 @@
     },
     "services": {
       "title": "هندسة أنظمة الوكلاء من تحديد النطاق إلى التشغيل.",
-      "intro": "نعمل على العملية كاملة: احتياج الفريق، البيانات المتاحة، التكاملات، قرارات الاعتماد، وتجربة الاستخدام. لكل مرحلة تسليمات ومعيار يوضح متى يمكن الانتقال إلى التالية.",
+      "intro": "نعمل على العملية كاملة: احتياج الفريق، والبيانات المتاحة، والتكاملات، وقرارات الاعتماد، وتجربة الاستخدام. لكل مرحلة تسليمات ومعيار يوضح متى يمكن الانتقال إلى التالية.",
       "sections": [
         {
           "heading": "تحديد العملية والمتطلبات",
-          "body": "نرسم المسار الحالي، ونعرف أين تتكرر الخطوات أو تتعطل، ونحدد نطاقًا مناسبًا للاختبار. التسليم يشمل المتطلبات والافتراضات ومعايير القبول."
+          "body": "نرسم المسار الحالي، ونعرف أين تتكرر الخطوات أو تتعطل، ونحدد نطاقًا مناسبًا للاختبار.",
+          "deliverable": "ما تستلمه: متطلبات موثقة، وافتراضات واضحة، ومعايير قبول للتجربة."
         },
         {
           "heading": "بناء التجربة والتكاملات",
-          "body": "نطور سير العمل والواجهات اللازمة، ونربط الأدوات المحددة ضمن الصلاحيات المتفق عليها. تبدأ التجربة ببيئة اختبار ونطاق محدود."
+          "body": "نطور سير العمل والواجهات اللازمة، ونربط الأدوات المحددة ضمن الصلاحيات المتفق عليها. تبدأ التجربة ببيئة اختبار ونطاق محدود.",
+          "deliverable": "ما تستلمه: مسار قابل للاختبار، مع توثيق التكاملات وحدود التنفيذ."
         },
         {
           "heading": "تقييم السلوك والاعتمادية",
-          "body": "نراجع جودة النتائج، وحالات الفشل، والتكلفة، واستجابة النظام للبيانات الناقصة أو الطلبات غير المسموح بها."
+          "body": "نراجع جودة النتائج، وحالات الفشل، والتكلفة، واستجابة النظام للبيانات الناقصة أو الطلبات غير المسموح بها.",
+          "deliverable": "ما تستلمه: نتائج اختبار، ومشكلات مرتبة حسب أثرها، وتوصية بالانتقال إلى التشغيل أو استكمال المعالجة."
         },
         {
           "heading": "التسليم والتحسين",
-          "body": "يشمل التسليم توثيق التشغيل والحدود المعروفة وطريقة المتابعة. يمكن الاتفاق على صيانة وتحسينات دورية بحسب احتياج المشروع."
-        },
-        {
-          "heading": "الزر الرئيسي",
-          "body": "ناقش نطاق العمل"
-        },
-        {
-          "heading": "الرابط الثانوي",
-          "body": "قارن باقات العمل"
+          "body": "يشمل التسليم توثيق التشغيل والحدود المعروفة وطريقة المتابعة. يمكن الاتفاق على صيانة وتحسينات دورية بحسب احتياج المشروع.",
+          "deliverable": "ما تستلمه: دليل تشغيل وتسليم، ونطاق واضح لأي دعم لاحق."
         }
       ],
       "seoTitle": "خدمات هندسة الوكلاء · AGYNEXA",
-      "seoDescription": "خدمات تحديد النطاق وبناء التجارب والتكاملات وتقييم السلوك والتسليم التشغيلي لأنظمة الوكلاء."
+      "seoDescription": "خدمات تحديد النطاق وبناء التجارب والتكاملات وتقييم السلوك والتسليم التشغيلي لأنظمة الوكلاء.",
+      "primaryAction": {
+        "label": "ناقش نطاق العمل",
+        "path": "start"
+      },
+      "secondaryAction": {
+        "label": "تعرّف على منهجية التنفيذ",
+        "path": "methodology"
+      }
     },
     "solutions": {
       "title": "اختر العملية قبل اختيار الوكيل.",
@@ -383,55 +387,41 @@
     },
     "methodology": {
       "title": "كل مرحلة تنتهي بنتيجة يمكن مراجعتها.",
-      "intro": "يبدأ المشروع من العملية التي يريد الفريق تحسينها. نثبت المدخلات والمسؤوليات ومعيار النجاح قبل توسيع قدرات النظام.",
+      "intro": "يبدأ المشروع من العملية التي يريد الفريق تحسينها. نحدد المدخلات والمسؤوليات ومعيار النجاح قبل توسيع قدرات النظام.",
       "sections": [
         {
-          "heading": "1. تحديد النطاق",
-          "body": ""
+          "heading": "تحديد النطاق",
+          "body": "نوثق الخطوات الحالية والأنظمة ومواطن التعطل.",
+          "deliverable": "التسليم: نطاق تجربة، وافتراضات، وأسئلة تحتاج حسمًا."
         },
         {
-          "heading": "نوثق الخطوات الحالية والأنظمة ومواطن التعطل. الناتج",
-          "body": "نطاق تجربة وافتراضات وأسئلة تحتاج حسمًا."
+          "heading": "تصميم المسار",
+          "body": "نحدد المصادر والأدوات والصلاحيات ونقاط المراجعة.",
+          "deliverable": "التسليم: مخطط للعملية يوضح المدخلات والمخرجات ومسؤولية كل خطوة."
         },
         {
-          "heading": "2. تصميم المسار",
-          "body": ""
+          "heading": "بناء تجربة محدودة",
+          "body": "ننفذ المسار في بيئة مناسبة ببيانات مصرح بها.",
+          "deliverable": "التسليم: نسخة قابلة للاختبار، مع توضيح ما تدعمه وما يقع خارج نطاقها."
         },
         {
-          "heading": "نحدد المصادر والأدوات والصلاحيات ونقاط المراجعة. الناتج",
-          "body": "مخطط واضح وعقود مدخلات ومخرجات."
+          "heading": "التقييم",
+          "body": "نختبر الحالات الطبيعية والاستثناءات والفشل، ونقارن النتائج بمعايير القبول.",
+          "deliverable": "التسليم: أدلة اختبار، ومشكلات مفتوحة، وقرار بالانتقال أو التعديل."
         },
         {
-          "heading": "3. بناء تجربة محدودة",
-          "body": ""
-        },
-        {
-          "heading": "ننفذ المسار في بيئة مناسبة ببيانات مصرح بها. الناتج",
-          "body": "نسخة يمكن اختبارها، مع توضيح ما لا تدعمه."
-        },
-        {
-          "heading": "4. التقييم",
-          "body": ""
-        },
-        {
-          "heading": "نختبر الحالات الطبيعية والاستثناءات والفشل. الناتج",
-          "body": "أدلة قبول، ومشكلات مفتوحة، وقرار الانتقال أو التعديل."
-        },
-        {
-          "heading": "5. التشغيل والتسليم",
-          "body": ""
-        },
-        {
-          "heading": "نضبط المراقبة وإجراءات التعافي ونوثق الإدارة والاستخدام. الناتج",
-          "body": "تسليم يستطيع الفريق تشغيله ومراجعته ضمن الحدود المتفق عليها."
-        },
-        {
-          "heading": "الزر",
-          "body": "ابدأ بتحديد النطاق"
+          "heading": "التشغيل والتسليم",
+          "body": "نضبط المراقبة وإجراءات التعافي ونوثق الإدارة والاستخدام.",
+          "deliverable": "التسليم: نظام يستطيع الفريق تشغيله ومراجعته ضمن الحدود المتفق عليها."
         }
       ],
       "seoTitle": "منهجية التصميم والتنفيذ · AGYNEXA",
-      "seoDescription": "تعرّف على مراحل تحديد النطاق والتصميم والتجربة والتقييم والتشغيل، وتسليمات كل مرحلة."
+      "seoDescription": "تعرّف على مراحل تحديد النطاق والتصميم والتجربة والتقييم والتشغيل، وتسليمات كل مرحلة.",
+      "closing": "نحدد نطاق المرحلة التالية بناءً على نتائج المرحلة السابقة. أي توسع في البيانات أو الصلاحيات أو التكاملات يدخل ضمن مراجعة واضحة للنطاق.",
+      "primaryAction": {
+        "label": "ابدأ بتحديد النطاق",
+        "path": "start"
+      }
     },
     "security": {
       "title": "الصلاحيات والبيانات جزء من تصميم المشروع.",
@@ -502,32 +492,35 @@
       "intro": "أسس أدهم يونس AGYNEXA للتركيز على بناء أنظمة وكلاء وأتمتة عمليات يمكن تحديد مسؤولياتها ومراجعة نتائجها. يبدأ العمل بفهم العملية، ثم اختيار الأدوات والبيانات المناسبة لها.",
       "sections": [
         {
-          "heading": "عنوان المؤسس",
-          "body": "أدهم يونس"
-        },
-        {
-          "heading": "الصفة",
-          "body": "المؤسس ومهندس أنظمة الوكلاء"
-        },
-        {
-          "heading": "النبذة",
-          "body": "أنا أدهم يونس، مطور برمجيات ومهندس أنظمة وكلاء من مصر. بدأت بمشروعات مستقلة في الزراعة الذكية، مستفيدًا من خبرتي العملية بالزراعة لفهم احتياجات التخطيط والمتابعة. مع تطور عملي، اتجهت إلى بناء تطبيقات وأدوات تربط الذكاء الاصطناعي بالبيانات وواجهات الأنظمة وسير العمل.\n\nأركز اليوم على تطوير تطبيقات الويب، وتكامل واجهات البرمجة، واسترجاع المعرفة، وتصميم مسارات للوكيل توضّح متى يقترح ومتى ينفذ ومتى يرجع إلى الإنسان. أعمل على تحويل احتياج التشغيل إلى متطلبات وواجهات واختبارات قبول، وأراجع سلوك التطبيق وحدوده أثناء التطوير.\n\nضمن مشروعاتي المستقلة، استكشفت Adham AgriTech لدعم التخطيط الزراعي، وعملت على Agentnexos لتطوير تجربة أنظمة الوكلاء. تختلف درجة اكتمال كل مشروع، وتُعرض قدراته وفق ما تم تنفيذه والتحقق منه."
-        },
-        {
           "heading": "كيف أعمل",
           "body": "أفضّل نطاقًا واضحًا يمكن اختباره، وتواصلًا مباشرًا حول القرارات والمشكلات، وتسليمًا موثقًا يعرف معه صاحب المشروع ما يعمل وما يحتاج متابعة."
-        },
-        {
-          "heading": "التواصل",
-          "body": "adham@agynexa.si"
-        },
-        {
-          "heading": "الزر",
-          "body": "ناقش مشروعك مع أدهم"
         }
       ],
       "seoTitle": "أدهم يونس ومشروع AGYNEXA",
-      "seoDescription": "تعرّف على أدهم يونس، مؤسس AGYNEXA، وخلفيته في المشروعات المستقلة وتطوير أنظمة الوكلاء."
+      "seoDescription": "تعرّف على أدهم يونس، مؤسس AGYNEXA، وخلفيته في المشروعات المستقلة وتطوير أنظمة الوكلاء.",
+      "founder": {
+        "name": "أدهم يونس",
+        "role": "المؤسس ومهندس أنظمة الوكلاء",
+        "bio": "أنا أدهم يونس، مطور برمجيات ومهندس أنظمة وكلاء من مصر. بدأت بمشروعات مستقلة في الزراعة الذكية، مستفيدًا من خبرتي العملية بالزراعة لفهم احتياجات التخطيط والمتابعة. مع تطور عملي، اتجهت إلى بناء تطبيقات وأدوات تربط الذكاء الاصطناعي بالبيانات وواجهات الأنظمة وسير العمل.\n\nأركز اليوم على تطوير تطبيقات الويب، وتكامل واجهات البرمجة، واسترجاع المعرفة، وتصميم مسارات للوكيل توضّح متى يقترح ومتى ينفذ ومتى يرجع إلى الإنسان. أحوّل احتياج التشغيل إلى متطلبات وواجهات واختبارات قبول، وأراجع سلوك التطبيق وحدوده أثناء التطوير."
+      },
+      "projects": {
+        "heading": "مشروعات مستقلة",
+        "items": [
+          {
+            "heading": "Adham AgriTech",
+            "body": "مشروع يستكشف أدوات التخطيط والمتابعة الزراعية، مستندًا إلى خبرة عملية باحتياجات العمل الزراعي."
+          },
+          {
+            "heading": "Agentnexos",
+            "body": "مشروع لتطوير تجربة أنظمة الوكلاء ومساحات العمل المرتبطة بها."
+          }
+        ],
+        "note": "تختلف مرحلة تطوير كل مشروع. تُعرض قدراته وفق ما تم تنفيذه والتحقق منه."
+      },
+      "primaryAction": {
+        "label": "ناقش مشروعك مع أدهم",
+        "path": "start"
+      }
     },
     "agentnexos": {
       "title": "صمّم سير العمل قبل بناء الوكيل.",
@@ -870,35 +863,39 @@
     },
     "services": {
       "title": "Engineering AI workflows around your operations.",
-      "intro": "We work through the process as a whole: the team’s needs, available data, integrations, approval decisions, and user experience. Each stage has deliverables and a clear condition for moving forward.",
+      "intro": "We work through the process as a whole: your team’s needs, available data, integrations, approval decisions, and user experience. Each stage has deliverables and a clear condition for moving forward.",
       "sections": [
         {
           "heading": "Process and requirements",
-          "body": "We map the current workflow, identify repeated steps and bottlenecks, and define a scope that can be tested. Deliverables include requirements, assumptions, and acceptance criteria."
+          "body": "We map the current workflow, identify repeated steps and bottlenecks, and define a scope that can be tested.",
+          "deliverable": "What you receive: documented requirements, explicit assumptions, and pilot acceptance criteria."
         },
         {
           "heading": "Pilot and integrations",
-          "body": "We build the workflow and the interfaces it needs, connecting selected tools within agreed permissions. Work starts in a test environment with a limited scope."
+          "body": "We build the workflow and the interfaces it needs, connecting selected tools within agreed permissions. Work starts in a test environment with a limited scope.",
+          "deliverable": "What you receive: a testable workflow, with documented integrations and execution boundaries."
         },
         {
           "heading": "Behavior and reliability evaluation",
-          "body": "We assess output quality, failure handling, cost, and the system’s response to incomplete information or unauthorized requests."
+          "body": "We assess output quality, failure handling, cost, and the system’s response to incomplete information or unauthorized requests.",
+          "deliverable": "What you receive: test results, issues ranked by impact, and a recommendation to proceed or address remaining gaps."
         },
         {
           "heading": "Handover and improvement",
-          "body": "Delivery includes operating documentation, known limits, and a way to monitor the system. Maintenance and further improvements can be agreed around the project’s needs."
-        },
-        {
-          "heading": "Primary",
-          "body": "Discuss the scope"
-        },
-        {
-          "heading": "Secondary",
-          "body": "Compare engagement options"
+          "body": "Delivery includes operating documentation, known limits, and a way to monitor the system. Maintenance and further improvements can be agreed around the project’s needs.",
+          "deliverable": "What you receive: an operating and handover guide, with a defined scope for any ongoing support."
         }
       ],
       "seoTitle": "AI workflow engineering services · AGYNEXA",
-      "seoDescription": "Scoping, pilots, integrations, behavior evaluation, and operational handover for agent systems."
+      "seoDescription": "Scoping, pilots, integrations, behavior evaluation, and operational handover for agent systems.",
+      "primaryAction": {
+        "label": "Discuss the scope",
+        "path": "start"
+      },
+      "secondaryAction": {
+        "label": "See the delivery method",
+        "path": "methodology"
+      }
     },
     "solutions": {
       "title": "Choose the workflow before choosing the agent.",
@@ -1066,51 +1063,41 @@
     },
     "methodology": {
       "title": "Every stage ends with something you can review.",
-      "intro": "A project starts with the process the team wants to improve. Inputs, responsibilities, and acceptance criteria are established before the system’s scope expands.",
+      "intro": "A project starts with the process your team wants to improve. We define inputs, responsibilities, and acceptance criteria before expanding the system’s scope.",
       "sections": [
         {
-          "heading": "1. Define the scope",
-          "body": ""
+          "heading": "Define the scope",
+          "body": "Document the current steps, systems, and bottlenecks.",
+          "deliverable": "Deliverable: a pilot scope, assumptions, and unresolved questions."
         },
         {
-          "heading": "Document the current steps, systems, and bottlenecks. Output",
-          "body": "a pilot scope, assumptions, and unresolved questions."
+          "heading": "Design the workflow",
+          "body": "Specify sources, tools, permissions, and review points.",
+          "deliverable": "Deliverable: a workflow showing inputs, outputs, and responsibility for each step."
         },
         {
-          "heading": "2. Design the workflow",
-          "body": ""
+          "heading": "Build a limited pilot",
+          "body": "Implement the workflow in a suitable environment with authorized data.",
+          "deliverable": "Deliverable: a testable version with a clear account of what it supports and what remains outside its scope."
         },
         {
-          "heading": "Specify sources, tools, permissions, and review points. Output",
-          "body": "a clear workflow and input/output contracts."
+          "heading": "Evaluate",
+          "body": "Test routine cases, exceptions, and failures against the acceptance criteria.",
+          "deliverable": "Deliverable: test evidence, open issues, and a decision to proceed or revise."
         },
         {
-          "heading": "3. Build a limited pilot",
-          "body": "Implement the workflow in a suitable environment with authorized data. Output: a testable version with explicit limits."
-        },
-        {
-          "heading": "4. Evaluate",
-          "body": ""
-        },
-        {
-          "heading": "Test routine cases, exceptions, and failures. Output",
-          "body": "acceptance evidence, open issues, and a decision to proceed or revise."
-        },
-        {
-          "heading": "5. Operate and hand over",
-          "body": ""
-        },
-        {
-          "heading": "Set up monitoring, recovery procedures, and documentation. Output",
-          "body": "a system the team can operate and review within the agreed scope."
-        },
-        {
-          "heading": "Button",
-          "body": "Start with the scope"
+          "heading": "Operate and hand over",
+          "body": "Set up monitoring, recovery procedures, and documentation.",
+          "deliverable": "Deliverable: a system the team can operate and review within the agreed scope."
         }
       ],
       "seoTitle": "Design and delivery method · AGYNEXA",
-      "seoDescription": "See the stages of scoping, design, piloting, evaluation, and operation, with deliverables for each stage."
+      "seoDescription": "See the stages of scoping, design, piloting, evaluation, and operation, with deliverables for each stage.",
+      "closing": "The next stage is scoped around the results of the previous one. Any expansion in data, permissions, or integrations goes through an explicit scope review.",
+      "primaryAction": {
+        "label": "Start with the scope",
+        "path": "start"
+      }
     },
     "security": {
       "title": "Permissions and data are part of the project design.",
@@ -1181,32 +1168,35 @@
       "intro": "Adham Younes founded AGYNEXA to focus on agent systems and workflow automation with defined responsibilities and reviewable outcomes. The work starts with the process, followed by the tools and data it needs.",
       "sections": [
         {
-          "heading": "Founder heading",
-          "body": "Adham Younes"
-        },
-        {
-          "heading": "Role",
-          "body": "Founder & Agentic Systems Engineer"
-        },
-        {
-          "heading": "Bio",
-          "body": "I’m Adham Younes, a software developer and agent systems engineer based in Egypt. I started with independent smart agriculture projects, drawing on practical farming experience to understand planning and day-to-day operational needs. My work developed toward applications that connect AI with data, APIs, and business workflows.\n\nToday, I focus on web applications, API integrations, knowledge retrieval, and agent workflows that make clear when the system proposes an action, when it may execute, and when a person must decide. I translate operating needs into requirements, interfaces, and acceptance tests, and review application behavior and limits throughout development.\n\nMy independent projects include Adham AgriTech, which explores agricultural planning tools, and Agentnexos, which explores agent systems. Their stages of development differ, and each project’s capabilities should be understood through what has been implemented and verified."
-        },
-        {
           "heading": "How I work",
           "body": "I favor a clear, testable scope, direct communication about decisions and problems, and documented handover that shows what works and what still needs attention."
-        },
-        {
-          "heading": "Contact",
-          "body": "adham@agynexa.si"
-        },
-        {
-          "heading": "Button",
-          "body": "Discuss your project with Adham"
         }
       ],
       "seoTitle": "Adham Younes and AGYNEXA",
-      "seoDescription": "Meet Adham Younes, founder of AGYNEXA, and learn about his independent projects and agent systems work."
+      "seoDescription": "Meet Adham Younes, founder of AGYNEXA, and learn about his independent projects and agent systems work.",
+      "founder": {
+        "name": "Adham Younes",
+        "role": "Founder & Agentic Systems Engineer",
+        "bio": "I’m Adham Younes, a software developer and agent systems engineer based in Egypt. I started with independent smart agriculture projects, drawing on practical farming experience to understand planning and day-to-day operational needs. My work developed toward applications that connect AI with data, APIs, and business workflows.\n\nToday, I focus on web applications, API integrations, knowledge retrieval, and agent workflows that make clear when the system proposes an action, when it may execute, and when a person must decide. I translate operating needs into requirements, interfaces, and acceptance tests, and review application behavior and limits throughout development."
+      },
+      "projects": {
+        "heading": "Independent projects",
+        "items": [
+          {
+            "heading": "Adham AgriTech",
+            "body": "A project exploring agricultural planning and operational tools, informed by practical farming experience."
+          },
+          {
+            "heading": "Agentnexos",
+            "body": "A project exploring agent systems and the workspaces around them."
+          }
+        ],
+        "note": "The projects are at different stages of development. Their capabilities are presented according to what has been implemented and verified."
+      },
+      "primaryAction": {
+        "label": "Discuss your project with Adham",
+        "path": "start"
+      }
     },
     "agentnexos": {
       "title": "Design the workflow before building the agent.",
